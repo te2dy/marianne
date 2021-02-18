@@ -171,15 +171,13 @@ if ( ! function_exists( 'marianne_the_categories' ) ) {
 						$i++;
 						?>
 							<li>
-								<a href="<?php echo esc_url( get_category_link( $category->cat_ID ) ); ?>">
-									<?php
-									echo esc_html( $category->cat_name );
+								<a href="<?php echo esc_url( get_category_link( $category->cat_ID ) ); ?>"><?php echo esc_html( $category->cat_name ); ?></a>
 
-									if ( $i !== $cat_count ) {
-										'&middot;';
-									}
-									?>
-								</a>
+								<?php
+								if ( $i !== $cat_count ) {
+									' &middot;';
+								}
+								?>
 							</li>
 						<?php
 					}
