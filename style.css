@@ -456,11 +456,6 @@ button:hover {
 	border: 1px solid #aaa;
 	padding: 1em;
 }
-.loop-meta {
-	font-size: .9em;
-	font-weight: 400;
-	margin: .5em 0;
-}
 .loop-title {
 	margin: .5em 0;
 }
@@ -491,6 +486,7 @@ button:hover {
 	table-layout: fixed;
 }
 .entry-meta {
+	font-size: .9em;
 	margin: .5em 0;
 }
 .meta-sticky {
@@ -504,7 +500,7 @@ button:hover {
 }
 .post-title,
 .page-title {
-	margin: 2em 0;
+	margin: 1em 0;
 }
 .entry-content p {
 	margin: 1em 0;
@@ -522,6 +518,15 @@ button:hover {
  */
 .post-date {
 	display: block;
+}
+.post-excerpt {
+	font-weight: 700;
+}
+.entry-thumbnail {
+	margin: 1em auto;
+}
+.entry-thumbnail .wp-caption-text {
+	text-align: left;
 }
 .post-content a,
 .page-content a {

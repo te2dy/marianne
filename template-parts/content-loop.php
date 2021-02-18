@@ -33,6 +33,14 @@
 				<?php the_title(); ?>
 			</a>
 		</h3>
+
+		<?php if ( has_post_thumbnail() ) : ?>
+			<div class="entry-thumbnail">
+				<a href="<?php the_permalink(); ?>">
+					<?php the_post_thumbnail(); ?>
+				</a>
+			</div>
+		<?php endif; ?>
 	</header>
 
 	<section class="entry-content loop-content">
