@@ -89,7 +89,7 @@ if ( ! function_exists( 'marianne_the_date' ) ) {
 
 if ( ! function_exists( 'marianne_loop_comments' ) ) {
 	/**
-	 * The pagination of the theme in the loop.
+	 * The link to comments in the loop.
 	 *
 	 * @return void
 	 */
@@ -132,13 +132,13 @@ if ( ! function_exists( 'marianne_loop_navigation' ) ) {
 				<div class="<?php echo esc_attr( $class ); ?>">
 					<?php if ( $nav_prev ) { ?>
 						<a href="<?php echo esc_url( get_previous_posts_page_link() ); ?>">
-							<?php esc_html_e( '&lsaquo;Previous page', 'marianne' ); ?>
+							<?php esc_html_e( '&lsaquo; Previous page', 'marianne' ); ?>
 						</a>
 					<?php } ?>
 
 					<?php if ( $nav_next ) { ?>
 						<a href="<?php echo esc_url( get_next_posts_page_link() ); ?>">
-							<?php esc_html_e( 'Next page&rsaquo;', 'marianne' ); ?>
+							<?php esc_html_e( 'Next page &rsaquo;', 'marianne' ); ?>
 						</a>
 					<?php } ?>
 
