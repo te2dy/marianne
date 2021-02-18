@@ -47,7 +47,7 @@
 						array(
 							'container'            => 'nav',
 							'container_id'         => 'menu-primary-container',
-							'container_aria_label' => esc_attr( 'Primary menu', 'marianne' ),
+							'container_aria_label' => esc_attr__( 'Primary menu', 'marianne' ),
 							'depth'                => 1,
 							'menu_class'           => 'navigation-menu',
 							'menu_id'              => 'menu-primary',
