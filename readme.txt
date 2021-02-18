@@ -20,8 +20,13 @@ It is the perfect theme for writers, journalists and intellectuals who want to p
 
 == Changelog ==
 
+=== 1.0.2 – February 18th, 2021 ===
+- Fixed: missing string translation.
+- Added: background color for the body.
+- Minors fixes.
+
 === 1.0.1 – February 18th, 2021 ===
-- Fixed: missing Theme URI and Description in the stylesheet
+- Fixed: missing Theme URI and Description in the stylesheet.
 
 === 1.0 – February 18th, 2021 ===
 - The first version available for download.
