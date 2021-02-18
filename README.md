@@ -19,7 +19,7 @@ It is the perfect theme for writers, journalists and intellectuals who want to p
 
 ## Changelog
 
-=== 1.0.2 – February 18th, 2021 ===
+**1.0.2 – February 18th, 2021**
 - Fixed: missing string translation.
 - Added: background color for the body.
 - Minors fixes.
