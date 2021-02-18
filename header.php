@@ -41,14 +41,17 @@
 				marianne_site_title();
 
 				marianne_site_description();
+				?>
 
+				<button id="menu-mobile-button">Menu</button>
+				<?php
 				if ( has_nav_menu( 'primary' ) ) {
 					wp_nav_menu(
 						array(
 							'container'            => 'nav',
 							'container_id'         => 'menu-primary-container',
 							'container_aria_label' => esc_attr( 'Primary menu', 'marianne' ),
-							'depth'                => 1,
+							'depth'                => 2,
 							'menu_class'           => 'navigation-menu',
 							'menu_id'              => 'menu-primary',
 							'theme_location'       => 'primary',

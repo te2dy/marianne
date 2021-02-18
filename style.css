@@ -406,12 +406,15 @@ button:hover {
 }
 .navigation-menu .menu-item {
 	display: inline-block;
-	margin: .1em 0;
+	margin: 0 0 .1em;
 }
-.navigation-menu .menu-item::after {
+.navigation-menu .menu-item:last-child {
+	margin-bottom: 0;
+}
+.navigation-menu > .menu-item::after {
 	content: " ⋅";
 }
-.navigation-menu .menu-item:last-child::after {
+.navigation-menu > .menu-item:last-child::after {
 	content: "";
 }
 
@@ -429,7 +432,7 @@ button:hover {
 	display: inline-block;
 }
 .site-title {
-	font-size:1.5em;
+	font-size: 1.5em;
 	font-weight: 900;
 	margin: 0;
 }
@@ -438,8 +441,101 @@ button:hover {
 	font-weight: 400;
 	margin: .5em 0 0;
 }
+
+/* Primary menu */
 #menu-primary-container {
 	margin: 2em 0;
+}
+#menu-primary .menu-item-has-children {
+	position: relative;
+}
+#menu-primary > .menu-item-has-children > a::after {
+	content: " +";
+}
+#menu-primary .sub-menu {
+	/* same as .screen-reader-text */
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	display: block;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal !important;
+}
+#menu-primary .menu-item-has-children:hover .sub-menu,
+#menu-primary .menu-item-has-children:focus .sub-menu {
+	/* same as .screen-reader-text:focus */
+	background-color: #fff;
+	border-left: 1px solid #aaa;
+	clip: auto !important;
+	clip-path: none;
+	display: block;
+	height: auto;
+	margin: 0;
+	padding: .25em .25em .25em .5em;
+	text-decoration: none;
+	width: auto;
+	z-index: 100000;
+}
+#menu-primary .sub-menu .menu-item {
+	margin-bottom: .25em;
+}
+#menu-primary .sub-menu .menu-item a {
+	display: block;
+}
+#menu-primary .sub-menu .menu-item:last-child {
+	margin-bottom: 0;
+}
+#menu-mobile-button {
+	display: none;
+}
+
+@media (hover: none) {
+	/* On touch screens */
+	#menu-mobile-button {
+		display: block;
+		margin-top: 2em;
+	}
+	#menu-primary-container {
+		border-left: 1px solid #aaa;
+		display: none;
+		margin-top: .5em;
+		padding-left: .5em;
+	}
+	#menu-primary .menu-item {
+		display: block;
+	}
+	#menu-primary > .menu-item::after,
+	#menu-primary > .menu-item-has-children > a::after {
+		content: "";
+	}
+	#menu-primary .sub-menu {
+		clip: auto;
+		clip-path: none;
+		height: auto;
+		margin: auto;
+		overflow: visible;
+		position: relative;
+		width: auto;
+	}
+	#menu-primary .menu-item-has-children:hover .sub-menu,
+	#menu-primary .menu-item-has-children:focus .sub-menu {
+		border: 0;
+		padding: 0;
+	}
+	#menu-primary .sub-menu .menu-item {
+		padding-left: 1em;
+	}
+	#menu-primary .sub-menu .menu-item a {
+		display: inline;
+	}
+	#menu-primary .sub-menu .menu-item a::before {
+		content: "— ";
+	}
 }
 
 /**

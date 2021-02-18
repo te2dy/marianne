@@ -134,6 +134,8 @@ if ( ! function_exists( 'marianne_styles_scripts' ) ) {
 		 */
 		wp_enqueue_style( 'stylesheet', esc_url( get_template_directory_uri() . "/style$min.css" ), array(), esc_attr( $theme_version ) );
 
+		wp_enqueue_script( 'navigation', esc_url( get_template_directory_uri() . "/js/navigation$min.js" ), array( 'jquery' ), esc_attr( $theme_version ), true );
+
 		// Threaded comment reply styles.
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
