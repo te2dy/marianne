@@ -1,11 +1,11 @@
 # Marianne Theme for WordPress
 
-Contributors: Teddy
-Requires at least: 5.3
-Tested up to: 5.6.1
-Requires PHP: 5.2
-License: GPLv3 or later
-License URI: https://www.gnu.org/licenses/gpl-3.0.html
+- Contributors: Teddy
+- Requires at least: 5.3
+- Tested up to: 5.6.1
+- Requires PHP: 5.2
+- License: GPLv3 or later
+- License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 A minimal, lightweight and eco-friendy theme, perfect for writers.
 
