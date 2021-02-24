@@ -89,15 +89,36 @@ if ( ! function_exists( 'marianne_the_date' ) ) {
 
 if ( ! function_exists( 'marianne_loop_comments' ) ) {
 	/**
-	 * The link to comments in the loop.
+	 * Link to comments
+	 *
+	 * @param string $container Wrap the link in a 'div' or 'footer' block… or nothing (default).
+	 * @param string $class     The class added to the container.
 	 *
 	 * @return void
 	 */
-	function marianne_loop_comments() {
+	function marianne_loop_comments( $container = '', $class = '' ) {
 		$comments_number = get_comments_number();
 
-		if ( is_int( $comments_number ) && 0 < $comments_number ) {
+		$allowed_containers = array( 'div', 'footer' );
+		$container_open     = '';
+		$container_close    = '';
+
+		if ( $comments_number && 0 < $comments_number ) :
 			?>
+
+			<?php
+			if ( $container && in_array( $container, $allowed_containers ) ) {
+				$container_open = '<' . esc_attr( $container );
+				if ( $class ) {
+					$container_open .= ' class="' . esc_attr( $class ) . '"';
+				}
+				$container_open .= '>';
+
+				$container_close = '</' . esc_attr( $container ) . '>';
+			}
+			?>
+
+			<?php echo $container_open; ?>
 				<a href="<?php echo esc_url( get_comments_link() ); ?>">
 					<?php
 					printf(
@@ -107,8 +128,10 @@ if ( ! function_exists( 'marianne_loop_comments' ) ) {
 					);
 					?>
 				</a>
+			<?php echo $container_open; ?>
+
 			<?php
-		}
+		endif;
 	}
 }
 

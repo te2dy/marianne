@@ -14,7 +14,7 @@
 	<header class="entry-header">
 		<div class="entry-meta-container">
 			<?php if ( is_sticky() ) : ?>
-				<div class="meta-sticky">
+				<div class="entry-meta meta-sticky">
 					<?php esc_html_e( 'Sticky post', 'marianne' ); ?>
 				</div>
 			<?php endif; ?>
@@ -33,6 +33,14 @@
 				<?php the_title(); ?>
 			</a>
 		</h3>
+
+		<?php if ( has_post_thumbnail() ) : ?>
+			<div class="entry-thumbnail loop-thumbnail">
+				<a href="<?php the_permalink(); ?>">
+					<?php the_post_thumbnail(); ?>
+				</a>
+			</div>
+		<?php endif; ?>
 	</header>
 
 	<section class="entry-content loop-content">
@@ -41,7 +49,5 @@
 		</a>
 	</section>
 
-	<footer class="entry-meta loop-meta text-secondary">
-		<?php marianne_loop_comments(); ?>
-	</footer>
+	<?php marianne_loop_comments( 'footer', 'entry-meta loop-meta text-secondary' ); ?>
 </article>
