@@ -89,11 +89,10 @@ if ( ! function_exists( 'marianne_the_date' ) ) {
 
 if ( ! function_exists( 'marianne_loop_comments' ) ) {
 	/**
-	 * The link to comments in the loop.
+	 * Link to comments
 	 *
-	 * @param string $container Wrap the link to the comments in a 'div'
-	 *                          or 'footer' block… or nothing.
-	 * @param string $class     If a container is set, adds class to it.
+	 * @param string $container Wrap the link in a 'div' or 'footer' block… or nothing (default).
+	 * @param string $class     The class added to the container.
 	 *
 	 * @return void
 	 */

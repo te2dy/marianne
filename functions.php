@@ -33,8 +33,6 @@ if ( ! function_exists( 'marianne_setup' ) ) {
 		 * Add support for custom logo.
 		 *
 		 * @link https://codex.wordpress.org/Theme_Logo
-		 *
-		 * @since Marianne 1.1
 		 */
 		add_theme_support(
 			'custom-logo',
@@ -59,9 +57,11 @@ if ( ! function_exists( 'marianne_setup' ) ) {
 		);
 
 		/*
-		 * Enable support for Post Thumbnails on posts and pages.
+		 * Enable support for Post Thumbnails on posts and pages
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+		 *
+		 * @since Marianne 1.1
 		 */
 		add_theme_support( 'post-thumbnails' );
 		set_post_thumbnail_size( 480, 360 );
