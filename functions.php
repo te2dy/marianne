@@ -185,3 +185,17 @@ if ( ! function_exists( 'marianne_widgets' ) ) {
 
 // Load required files.
 require_once get_template_directory() . '/inc/template-tags.php';
+
+/* POUR LE MENU */
+function twenty_twenty_one_add_sub_menu_toggle( $output, $item, $depth, $args ) {
+	if ( 0 === $depth && in_array( 'menu-item-has-children', $item->classes, true ) ) {
+
+		// Add toggle button.
+		$output .= '<button class="sub-menu-toggle" aria-expanded="false" onClick="twentytwentyoneExpandSubMenu(this)">';
+		$output .= '<span class="icon-plus">+</span>';
+		$output .= '<span class="screen-reader-text">' . esc_html__( 'Open submenu', 'twentytwentyone' ) . '</span>';
+		$output .= '</button>';
+	}
+	return $output;
+}
+add_filter( 'walker_nav_menu_start_el', 'twenty_twenty_one_add_sub_menu_toggle', 10, 4 );

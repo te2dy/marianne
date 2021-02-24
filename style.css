@@ -467,7 +467,8 @@ button:hover {
 	word-wrap: normal !important;
 }
 #menu-primary .menu-item-has-children:hover .sub-menu,
-#menu-primary .menu-item-has-children:focus .sub-menu {
+#menu-primary .menu-item-has-children:focus .sub-menu,
+#menu-primary .menu-item-has-children .sub-menu-toggle[aria-expanded="true"] .sub-menu {
 	/* same as .screen-reader-text:focus */
 	background-color: #fff;
 	border-left: 1px solid #aaa;
