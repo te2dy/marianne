@@ -449,7 +449,6 @@ button:hover {
 	margin-bottom: 4em;
 }
 .entry-loop .entry-meta-container {
-	font-size: .9em;
 	margin-bottom: .5em;
 }
 .entry-loop.sticky {
@@ -463,7 +462,7 @@ button:hover {
 	margin: .5em auto;
 }
 .entry-loop .entry-content p {
-	margin: .5em 0 0;
+	margin: 0;
 }
 .loop-pagination {
 	margin: 4em 0;
@@ -496,6 +495,7 @@ button:hover {
 	background-color: #000;
 	color: #fff;
 	display: inline-block;
+	margin: 0;
 	padding: .25rem;
 }
 .entry-title {

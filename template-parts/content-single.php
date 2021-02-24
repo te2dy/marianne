@@ -14,19 +14,19 @@
 	<header class="entry-header">
 		<div class="entry-meta-container">
 			<?php if ( is_sticky() ) : ?>
-				<div class="meta-sticky">
+				<div class="entry-meta meta-sticky">
 					<?php esc_html_e( 'Sticky post', 'marianne' ); ?>
 				</div>
 			<?php endif; ?>
 
-			<?php marianne_the_categories( 'entry-meta text-secondary' ); ?>
+			<?php
+			marianne_the_date( 'entry-meta post-date text-secondary' );
+
+			marianne_the_categories( 'entry-meta text-secondary' );
+			?>
 		</div>
 
 		<?php the_title( '<h1 class="entry-title post-title">', '</h1>' ); ?>
-
-		<div class="entry-meta-container">
-			<?php marianne_the_date( 'entry-meta post-date text-secondary' ); ?>
-		</div>
 
 		<?php if ( has_post_thumbnail() ) : ?>
 			<div class="entry-thumbnail post-thumbnail">

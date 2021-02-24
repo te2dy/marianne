@@ -14,7 +14,7 @@
 	<header class="entry-header">
 		<div class="entry-meta-container">
 			<?php if ( is_sticky() ) : ?>
-				<div class="meta-sticky">
+				<div class="entry-meta meta-sticky">
 					<?php esc_html_e( 'Sticky post', 'marianne' ); ?>
 				</div>
 			<?php endif; ?>
@@ -49,7 +49,5 @@
 		</a>
 	</section>
 
-	<footer class="entry-meta loop-meta text-secondary">
-		<?php marianne_loop_comments(); ?>
-	</footer>
+	<?php marianne_loop_comments( 'footer', 'entry-meta loop-meta text-secondary' ); ?>
 </article>
