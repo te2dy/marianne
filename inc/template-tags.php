@@ -93,7 +93,7 @@ if ( ! function_exists( 'marianne_loop_comments' ) ) {
 	 *
 	 * @param string $container Wrap the link to the comments in a 'div'
 	 *                          or 'footer' block… or nothing.
-	 * @param string $class     If a container is set, add class to it.
+	 * @param string $class     If a container is set, adds class to it.
 	 *
 	 * @return void
 	 */

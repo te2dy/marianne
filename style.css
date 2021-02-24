@@ -456,12 +456,15 @@ button:hover {
 	padding: 1em;
 }
 .loop-title {
-	margin: .5em 0;
+	margin: .5em 0 1em;
 }
 .loop-thumbnail {
 	margin: .5em auto;
 }
-.entry-loop .entry-content p {
+.loop-content {
+	margin: 1em 0;
+}
+.loop-content p {
 	margin: 0;
 }
 .loop-pagination {
@@ -505,7 +508,8 @@ button:hover {
 .page-title {
 	margin: 1em 0;
 }
-.entry-content p {
+.post-content p,
+.page-content p {
 	margin: 1em 0;
 }
 .entry-content,

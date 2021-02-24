@@ -33,6 +33,8 @@ if ( ! function_exists( 'marianne_setup' ) ) {
 		 * Add support for custom logo.
 		 *
 		 * @link https://codex.wordpress.org/Theme_Logo
+		 *
+		 * @since Marianne 1.1
 		 */
 		add_theme_support(
 			'custom-logo',
