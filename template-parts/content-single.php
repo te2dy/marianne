@@ -24,27 +24,12 @@
 
 		<?php the_title( '<h1 class="entry-title post-title">', '</h1>' ); ?>
 
-		<?php if ( has_excerpt() ) : ?>
-			<div class="entry-excerpt post-excerpt">
-				<?php the_excerpt(); ?>
-			</div>
-		<?php endif; ?>
-
 		<div class="entry-meta-container">
-			<div class="entry-meta text-secondary">
-				<?php
-				printf(
-					esc_html_x( 'By %s', 'The author of the post', 'marianne' ),
-					wp_kses_post( get_the_author_posts_link() )
-				);
-				?>
-			</div>
-
 			<?php marianne_the_date( 'entry-meta post-date text-secondary' ); ?>
 		</div>
 
 		<?php if ( has_post_thumbnail() ) : ?>
-			<div class="entry-thumbnail">
+			<div class="entry-thumbnail post-thumbnail">
 				<?php the_post_thumbnail(); ?>
 
 				<?php if ( wp_get_attachment_caption( get_post_thumbnail_id() ) ) : ?>

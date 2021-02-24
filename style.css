@@ -459,6 +459,9 @@ button:hover {
 .loop-title {
 	margin: .5em 0;
 }
+.loop-thumbnail {
+	margin: .5em auto;
+}
 .entry-loop .entry-content p {
 	margin: .5em 0 0;
 }
@@ -522,7 +525,7 @@ button:hover {
 .post-excerpt {
 	font-weight: 700;
 }
-.entry-thumbnail {
+.post-thumbnail {
 	margin: 1em auto;
 }
 .entry-thumbnail .wp-caption-text {

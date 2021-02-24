@@ -35,7 +35,7 @@
 		</h3>
 
 		<?php if ( has_post_thumbnail() ) : ?>
-			<div class="entry-thumbnail">
+			<div class="entry-thumbnail loop-thumbnail">
 				<a href="<?php the_permalink(); ?>">
 					<?php the_post_thumbnail(); ?>
 				</a>
