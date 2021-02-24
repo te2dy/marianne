@@ -187,15 +187,15 @@ if ( ! function_exists( 'marianne_widgets' ) ) {
 require_once get_template_directory() . '/inc/template-tags.php';
 
 /* POUR LE MENU */
-function twenty_twenty_one_add_sub_menu_toggle( $output, $item, $depth, $args ) {
+function marianne_add_sub_menu_toggle( $output, $item, $depth, $args ) {
 	if ( 0 === $depth && in_array( 'menu-item-has-children', $item->classes, true ) ) {
 
 		// Add toggle button.
-		$output .= '<button class="sub-menu-toggle" aria-expanded="false" onClick="twentytwentyoneExpandSubMenu(this)">';
+		$output .= '<button class="sub-menu-toggle" aria-expanded="false" onClick="marianneExpandSubMenu(this)">';
 		$output .= '<span class="icon-plus">+</span>';
 		$output .= '<span class="screen-reader-text">' . esc_html__( 'Open submenu', 'twentytwentyone' ) . '</span>';
 		$output .= '</button>';
 	}
 	return $output;
 }
-add_filter( 'walker_nav_menu_start_el', 'twenty_twenty_one_add_sub_menu_toggle', 10, 4 );
+add_filter( 'walker_nav_menu_start_el', 'marianne_add_sub_menu_toggle', 10, 4 );

@@ -3,13 +3,22 @@
  *
  * Handles toggling the navigation menu for small screens.
  */
+function marianneToggleAriaExpanded( el ) {
+	if ( 'true' !== el.getAttribute( 'aria-expanded' ) ) {
+		el.setAttribute( 'aria-expanded', 'true' );
+		el.addClass( 'submenu-show' );
+	} else {
+		el.setAttribute( 'aria-expanded', 'false' );
+		el.addClass( 'submenu-hide' );
+	}
+}
 
 /**
  * Handle clicks on submenu toggles.
  *
  * @param {Element} el - The element.
  */
-function twentytwentyoneExpandSubMenu( el ) {
+function marianneExpandSubMenu( el ) {
 	// Close other expanded items.
 	el.closest( 'nav' ).querySelectorAll( '.sub-menu-toggle' ).forEach( function( button ) {
 		if ( button !== el ) {
@@ -18,7 +27,7 @@ function twentytwentyoneExpandSubMenu( el ) {
 	} );
 
 	// Toggle aria-expanded on the button.
-	// twentytwentyoneToggleAriaExpanded( el, true );
+	marianneToggleAriaExpanded( el );
 
 	// On tab-away collapse the menu.
 	el.parentNode.querySelectorAll( 'ul > li:last-child > a' ).forEach( function( linkEl ) {
