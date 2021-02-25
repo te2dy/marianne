@@ -411,12 +411,6 @@ button:hover {
 .navigation-menu .menu-item:last-child {
 	margin-bottom: 0;
 }
-.navigation-menu > .menu-item::after {
-	content: " ⋅";
-}
-.navigation-menu > .menu-item:last-child::after {
-	content: "";
-}
 
 /**
  * Header
@@ -446,11 +440,20 @@ button:hover {
 #menu-primary-container {
 	margin: 2em 0;
 }
+#menu-primary > .menu-item {
+	border-bottom: 1px solid #aaa;
+	margin: 0 .25em .5em 0;
+	padding-bottom: .1rem;
+}
 #menu-primary .menu-item-has-children {
 	position: relative;
 }
-#menu-primary > .menu-item-has-children > a::after {
-	content: " +";
+#menu-primary .sub-menu-toggle {
+	background-color: transparent;
+	border: 0;
+	color: #000;
+	display: inline;
+	padding: 0;
 }
 #menu-primary .sub-menu {
 	/* same as .screen-reader-text */
@@ -466,27 +469,38 @@ button:hover {
 	width: 1px;
 	word-wrap: normal !important;
 }
+#menu-primary .sub-menu-toggle {
+	display: inline;
+	margin: 0 0 0 .2em;
+}
 #menu-primary .menu-item-has-children:hover .sub-menu,
 #menu-primary .menu-item-has-children:focus .sub-menu,
-#menu-primary .menu-item-has-children .sub-menu-toggle[aria-expanded="true"] .sub-menu {
+#menu-primary .menu-item-has-children .sub-menu-toggle[aria-expanded="true"] ~ .sub-menu {
 	/* same as .screen-reader-text:focus */
 	background-color: #fff;
-	border-left: 1px solid #aaa;
 	clip: auto !important;
 	clip-path: none;
 	display: block;
 	height: auto;
 	margin: 0;
-	padding: .25em .25em .25em .5em;
+	padding: 0;
 	text-decoration: none;
-	width: auto;
+	width: 100%;
 	z-index: 100000;
 }
-#menu-primary .sub-menu .menu-item {
-	margin-bottom: .25em;
+#menu-primary .sub-menu > .menu-item {
+	font-size: .9em;
+	margin-bottom: 1px;
+	width: 100%;
 }
-#menu-primary .sub-menu .menu-item a {
+#menu-primary .sub-menu > .menu-item:first-of-type {
+	margin-top: .5em;
+}
+#menu-primary .sub-menu > .menu-item > a {
+	background-color: #000;
+	color: #fff;
 	display: block;
+	padding: .2em;
 }
 #menu-primary .sub-menu .menu-item:last-child {
 	margin-bottom: 0;
@@ -708,6 +722,12 @@ button:hover {
 }
 .site-footer-block {
 	margin-top: 1em;
+}
+#menu-footer .menu-item::after {
+	content: " ·";
+}
+#menu-footer .menu-item:last-of-type::after {
+	content: "";
 }
 
 /**

@@ -2,14 +2,25 @@
  * navigation.js
  *
  * Handles toggling the navigation menu for small screens.
+ *
  */
-function marianneToggleAriaExpanded( el ) {
+
+/**
+ * Toggle an attribute's value
+ *
+ * @param {Element} el - The element.
+ */
+function marianneToggleAriaExpanded( el, withListeners ) {
 	if ( 'true' !== el.getAttribute( 'aria-expanded' ) ) {
 		el.setAttribute( 'aria-expanded', 'true' );
-		el.addClass( 'submenu-show' );
+		if ( withListeners ) {
+			document.addEventListener( 'click', marianneCollapseMenuOnClickOutside );
+		}
 	} else {
 		el.setAttribute( 'aria-expanded', 'false' );
-		el.addClass( 'submenu-hide' );
+		if ( withListeners ) {
+			document.addEventListener( 'click', marianneCollapseMenuOnClickOutside );
+		}
 	}
 }
 
@@ -19,15 +30,16 @@ function marianneToggleAriaExpanded( el ) {
  * @param {Element} el - The element.
  */
 function marianneExpandSubMenu( el ) {
+
 	// Close other expanded items.
 	el.closest( 'nav' ).querySelectorAll( '.sub-menu-toggle' ).forEach( function( button ) {
 		if ( button !== el ) {
 			button.setAttribute( 'aria-expanded', 'false' );
 		}
-	} );
+	});
 
 	// Toggle aria-expanded on the button.
-	marianneToggleAriaExpanded( el );
+	marianneToggleAriaExpanded( el, true );
 
 	// On tab-away collapse the menu.
 	el.parentNode.querySelectorAll( 'ul > li:last-child > a' ).forEach( function( linkEl ) {
@@ -37,6 +49,18 @@ function marianneExpandSubMenu( el ) {
 			}
 		} );
 	} );
+}
+
+/**
+ * Handle clicks on submenu toggles.
+ *
+ */
+function marianneCollapseMenuOnClickOutside( event ) {
+	if ( ! document.getElementById( 'menu-primary' ).contains( event.target ) ) {
+		document.getElementById( 'menu-primary' ).querySelectorAll( '.sub-menu-toggle' ).forEach( function( button ) {
+			button.setAttribute( 'aria-expanded', 'false' );
+		} );
+	}
 }
 
 (function ($) {
@@ -56,21 +80,14 @@ function marianneExpandSubMenu( el ) {
 	var menu_elements = $('#menu-primary .menu-item');
 	menu_elements.each(function(el, item) {
 		$(item).children('a').attr('role', 'menu-item');
-
-		var submenu = $(this).children('.sub-menu');
-		if (submenu.length > 0) {
-			$(item).children('a').attr('aria-haspopup', 'true');
-			$(item).children('a').attr('aria-expanded', 'false');
-		}
-
 		$(item).children('a').attr('tabindex', '-1');
 	});
 
 	// Change aria-expanded value on hover.
-	$('#menu-primary .menu-item-has-children a').hover(function(){
-		$(this).attr('aria-expanded', 'true');
+	$('#menu-primary .menu-item-has-children').hover(function(){
+		$(this).find('.sub-menu-toggle').attr('aria-expanded', 'true');
 	}, function(){
-		$(this).attr('aria-expanded', 'false');
+		$(this).find('.sub-menu-toggle').attr('aria-expanded', 'false');
 	});
 
 })(jQuery);
