@@ -543,6 +543,10 @@ button:hover {
 	border: 1px solid #aaa;
 	padding: .25em;
 }
+.post-content .post-page-numbers,
+.page-content .post-page-numbers {
+	text-decoration: none;
+}
 .post-page-numbers:hover {
 	background-color: #000;
 	border-color: #000;
