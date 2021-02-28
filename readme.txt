@@ -20,6 +20,10 @@ It is the perfect theme for writers, journalists and intellectuals who want to p
 
 == Changelog ==
 
+=== 1.2.1 – February 28th, 2021 ===
+- Fixed: one wrong text-domain.
+- Updated: French translation.
+
 === 1.2 – February 28th, 2021 ===
 - New: the primary menu becomes a drop-down menu.
 
