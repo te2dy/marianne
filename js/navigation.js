@@ -63,14 +63,12 @@ function marianneCollapseMenuOnClickOutside( event ) {
 	}
 }
 
-(function ($) {
-	"use strict";
-
+( function ( $ ) {
 	/**
 	 * Toogle the menu on click on small screens.
 	 */
-	$("#menu-mobile-button").click(function () {
-		$("#menu-primary-container").slideToggle(200);
+	$( '#menu-mobile-button' ).click( function () {
+		$( '#menu-primary-container' ).slideToggle( 200 );
 	});
 
 	/**
@@ -79,19 +77,19 @@ function marianneCollapseMenuOnClickOutside( event ) {
 	 * Adds the attributes aria-haspopup and aria-expanded
 	 * to links to submenus with their default values.
 	 */
-	var menu_elements = $('#menu-primary .menu-item');
-	menu_elements.each(function(el, item) {
-		$(item).children('a').attr('role', 'menu-item');
-		$(item).children('a').attr('tabindex', '-1');
+	var menu_elements = $( '#menu-primary .menu-item' );
+	menu_elements.each( function ( el, item ) {
+		$( item ).children( 'a' ).attr( 'role', 'menu-item' );
+		$( item ).children( 'a' ).attr( 'tabindex', '-1' );
 	});
 
 	/**
 	 * Change aria-expanded value on hover.
 	 */
-	$('#menu-primary .menu-item-has-children').hover(function(){
-		$(this).find('.sub-menu-toggle').attr('aria-expanded', 'true');
+	$( '#menu-primary .menu-item-has-children' ).hover( function () {
+		$( this ).find( '.sub-menu-toggle' ).attr( 'aria-expanded', 'true' );
 	}, function(){
-		$(this).find('.sub-menu-toggle').attr('aria-expanded', 'false');
+		$( this ).find( '.sub-menu-toggle' ).attr( 'aria-expanded', 'false' );
 	});
 
-})(jQuery);
+} )( jQuery );
