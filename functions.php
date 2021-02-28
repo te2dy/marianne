@@ -144,6 +144,8 @@ if ( ! function_exists( 'marianne_styles_scripts' ) ) {
 		 */
 		wp_enqueue_style( 'stylesheet', esc_url( get_template_directory_uri() . "/style$min.css" ), array(), esc_attr( $theme_version ) );
 
+		wp_enqueue_script( 'navigation', esc_url( get_template_directory_uri() . "/js/navigation$min.js" ), array( 'jquery' ), esc_attr( $theme_version ), true );
+
 		// Threaded comment reply styles.
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
@@ -193,3 +195,30 @@ if ( ! function_exists( 'marianne_widgets' ) ) {
 
 // Load required files.
 require_once get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Add a button to top-level menu items that has sub-menus.
+ * An icon is added using CSS depending on the value of aria-expanded.
+ *
+ * @since Twenty Twenty-One 1.0
+ *
+ * @param string $output Nav menu item start element.
+ * @param object $item   Nav menu item.
+ * @param int    $depth  Depth.
+ * @param object $args   Nav menu args.
+ *
+ * @return string Nav menu item start element.
+ */
+function marianne_add_sub_menu_toggle( $output, $item, $depth, $args ) {
+	if ( 0 === $depth && in_array( 'menu-item-has-children', $item->classes, true ) && 'primary' === $args->theme_location ) {
+
+		// Add toggle button.
+		$output .= '<button class="sub-menu-toggle" aria-haspopup="true" aria-expanded="false" onClick="marianneExpandSubMenu(this)">';
+		$output .= '<span class="icon-plus">+</span>';
+		$output .= '<span class="screen-reader-text">' . esc_html__( 'Open submenu', 'twentytwentyone' ) . '</span>';
+		$output .= '</button>';
+	}
+	return $output;
+	
+}
+add_filter( 'walker_nav_menu_start_el', 'marianne_add_sub_menu_toggle', 10, 4 );
