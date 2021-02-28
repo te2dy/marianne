@@ -3,6 +3,7 @@
  *
  * Handles toggling the navigation menu for small screens.
  *
+ * Based on the work of the WordPress team in the Twenty Twenty-One WordPress Theme.
  */
 
 /**
@@ -52,8 +53,7 @@ function marianneExpandSubMenu( el ) {
 }
 
 /**
- * Handle clicks on submenu toggles.
- *
+ * Collapse menu when the user clicks outside.
  */
 function marianneCollapseMenuOnClickOutside( event ) {
 	if ( ! document.getElementById( 'menu-primary' ).contains( event.target ) ) {
@@ -66,7 +66,9 @@ function marianneCollapseMenuOnClickOutside( event ) {
 (function ($) {
 	"use strict";
 
-	// Menu mobile.
+	/**
+	 * Toogle the menu on click on small screens.
+	 */
 	$("#menu-mobile-button").click(function () {
 		$("#menu-primary-container").slideToggle(200);
 	});
@@ -83,7 +85,9 @@ function marianneCollapseMenuOnClickOutside( event ) {
 		$(item).children('a').attr('tabindex', '-1');
 	});
 
-	// Change aria-expanded value on hover.
+	/**
+	 * Change aria-expanded value on hover.
+	 */
 	$('#menu-primary .menu-item-has-children').hover(function(){
 		$(this).find('.sub-menu-toggle').attr('aria-expanded', 'true');
 	}, function(){
