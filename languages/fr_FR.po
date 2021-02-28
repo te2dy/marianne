@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marianne\n"
-"POT-Creation-Date: 2021-02-18 18:25+0100\n"
-"PO-Revision-Date: 2021-02-18 18:25+0100\n"
+"POT-Creation-Date: 2021-02-28 19:38+0100\n"
+"PO-Revision-Date: 2021-02-28 19:38+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -60,19 +60,19 @@ msgstr "Menu principal"
 msgid "Footer Menu"
 msgstr "Menu du pied de page"
 
-#: functions.php:171
+#: functions.php:190
 msgid "Widgets"
 msgstr "Widgets"
+
+#: functions.php:225
+msgid "Open submenu"
+msgstr "Ouvrir le sous-menu"
 
 #: header.php:29
 msgid "Skip to content"
 msgstr "Aller au contenu"
 
-#: header.php:50
-msgid "Primary menu"
-msgstr "Menu principal"
-
-#: inc/template-tags.php:105
+#: inc/template-tags.php:126
 #, php-format
 msgctxt "Link to comments"
 msgid "%d comment"
@@ -80,11 +80,11 @@ msgid_plural "%d comments"
 msgstr[0] "%d commentaire"
 msgstr[1] "%d commentaires"
 
-#: inc/template-tags.php:135
+#: inc/template-tags.php:158
 msgid "&lsaquo; Previous page"
 msgstr "&lsaquo; Page précédente"
 
-#: inc/template-tags.php:141
+#: inc/template-tags.php:164
 msgid "Next page &rsaquo;"
 msgstr "Page suivante &rsaquo;"
 
@@ -120,6 +120,9 @@ msgstr "Il n’y a rien ici"
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 "On dirait que rien n’a été trouvé ici. Essayez peut-être une recherche&nbsp;?"
+
+#~ msgid "Primary menu"
+#~ msgstr "Menu principal"
 
 #~ msgid "WordPress"
 #~ msgstr "WordPress"

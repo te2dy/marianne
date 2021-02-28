@@ -222,7 +222,7 @@ function marianne_add_sub_menu_toggle( $output, $item, $depth, $args ) {
 		// Add toggle button.
 		$output .= '<button class="sub-menu-toggle" aria-haspopup="true" aria-expanded="false" onClick="marianneExpandSubMenu(this)">';
 		$output .= '<span class="icon-plus">+</span>';
-		$output .= '<span class="screen-reader-text">' . esc_html__( 'Open submenu', 'twentytwentyone' ) . '</span>';
+		$output .= '<span class="screen-reader-text">' . esc_html__( 'Open submenu', 'marianne' ) . '</span>';
 		$output .= '</button>';
 	}
 	return $output;
