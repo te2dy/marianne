@@ -139,11 +139,18 @@ if ( ! function_exists( 'marianne_styles_scripts' ) ) {
 		 * The main stylesheet.
 		 *
 		 * On production, the minified stylesheet is enqueued.
-		 *
 		 * @see marianne_minify()
 		 */
 		wp_enqueue_style( 'stylesheet', esc_url( get_template_directory_uri() . "/style$min.css" ), array(), esc_attr( $theme_version ) );
 
+		/**
+		 * The main menu navigation script.
+		 *
+		 * On production, the minified script is enqueued.
+		 * @see marianne_minify()
+		 *
+		 * @since Marianne 1.2
+		 */
 		wp_enqueue_script( 'navigation', esc_url( get_template_directory_uri() . "/js/navigation$min.js" ), array( 'jquery' ), esc_attr( $theme_version ), true );
 
 		// Threaded comment reply styles.

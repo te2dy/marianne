@@ -19,6 +19,9 @@ It is the perfect theme for writers, journalists and intellectuals who want to p
 
 ## Changelog
 
+**1.2 – February 28th, 2021**
+- New: the primary menu becomes a drop-down menu.
+
 **1.1 – February 24th, 2021**
 - New: Marianne now supports Featured Images.
 - Minor fixes.

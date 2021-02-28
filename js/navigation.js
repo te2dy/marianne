@@ -1,9 +1,12 @@
 /**
  * navigation.js
  *
- * Handles toggling the navigation menu for small screens.
+ * Handles dropdown for the primary menu
+ * and toggling it for small screens.
  *
  * Based on the work of the WordPress team in the Twenty Twenty-One WordPress Theme.
+ *
+ * @since Marianne 1.2
  */
 
 /**
