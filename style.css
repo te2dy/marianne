@@ -489,18 +489,17 @@ button:hover {
 	z-index: 100000;
 }
 #menu-primary .sub-menu > .menu-item {
-	font-size: .9em;
 	margin-bottom: 1px;
 	width: 100%;
 }
 #menu-primary .sub-menu > .menu-item:first-of-type {
-	margin-top: .5em;
+	margin-top: .25em;
 }
 #menu-primary .sub-menu > .menu-item > a {
 	background-color: #000;
 	color: #fff;
 	display: block;
-	padding: .2em;
+	padding: .25em;
 }
 #menu-primary .sub-menu .menu-item:last-child {
 	margin-bottom: 0;
