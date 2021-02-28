@@ -4,8 +4,8 @@ Theme URI: https://github.com/te2dy/marianne
 Author: Teddy
 Author URI: https://chezteddy.fr/
 Description: A minimal, lightweight and eco-friendy theme, perfect for writers.
-Tags: blog, one-column, custom-logo, custom-menu, sticky-post, theme-options, threaded-comments, translation-ready
-Version: 1.0.1
+Tags: blog, one-column, custom-logo, custom-menu, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
+Version: 1.1
 Requires at least: 5.3
 Tested up to: 5.6.1
 Requires PHP: 5.2
@@ -562,23 +562,23 @@ button:hover {
 	margin-bottom: 4em;
 }
 .entry-loop .entry-meta-container {
-	font-size: .9em;
 	margin-bottom: .5em;
 }
 .entry-loop.sticky {
 	border: 1px solid #aaa;
 	padding: 1em;
 }
-.loop-meta {
-	font-size: .9em;
-	font-weight: 400;
-	margin: .5em 0;
-}
 .loop-title {
-	margin: .5em 0;
+	margin: .5em 0 1em;
 }
-.entry-loop .entry-content p {
-	margin: .5em 0 0;
+.loop-thumbnail {
+	margin: .5em auto;
+}
+.loop-content {
+	margin: 1em 0;
+}
+.loop-content p {
+	margin: 0;
 }
 .loop-pagination {
 	margin: 4em 0;
@@ -604,12 +604,14 @@ button:hover {
 	table-layout: fixed;
 }
 .entry-meta {
+	font-size: .9em;
 	margin: .5em 0;
 }
 .meta-sticky {
 	background-color: #000;
 	color: #fff;
 	display: inline-block;
+	margin: 0;
 	padding: .25rem;
 }
 .entry-title {
@@ -617,9 +619,10 @@ button:hover {
 }
 .post-title,
 .page-title {
-	margin: 2em 0;
+	margin: 1em 0;
 }
-.entry-content p {
+.post-content p,
+.page-content p {
 	margin: 1em 0;
 }
 .entry-content,
@@ -636,6 +639,15 @@ button:hover {
 .post-date {
 	display: block;
 }
+.post-excerpt {
+	font-weight: 700;
+}
+.post-thumbnail {
+	margin: 1em auto;
+}
+.entry-thumbnail .wp-caption-text {
+	text-align: left;
+}
 .post-content a,
 .page-content a {
 	text-decoration: underline;
@@ -643,6 +655,10 @@ button:hover {
 .post-page-numbers {
 	border: 1px solid #aaa;
 	padding: .25em;
+}
+.post-content .post-page-numbers,
+.page-content .post-page-numbers {
+	text-decoration: none;
 }
 .post-page-numbers:hover {
 	background-color: #000;

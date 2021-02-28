@@ -14,7 +14,7 @@
 	<header class="entry-header">
 		<div class="entry-meta-container">
 			<?php if ( is_sticky() ) : ?>
-				<div class="meta-sticky">
+				<div class="entry-meta meta-sticky">
 					<?php esc_html_e( 'Sticky post', 'marianne' ); ?>
 				</div>
 			<?php endif; ?>
@@ -27,6 +27,18 @@
 		</div>
 
 		<?php the_title( '<h1 class="entry-title post-title">', '</h1>' ); ?>
+
+		<?php if ( has_post_thumbnail() ) : ?>
+			<div class="entry-thumbnail post-thumbnail">
+				<?php the_post_thumbnail(); ?>
+
+				<?php if ( wp_get_attachment_caption( get_post_thumbnail_id() ) ) : ?>
+					<figcaption class="wp-caption-text text-secondary">
+						<?php echo wp_kses_post( wp_get_attachment_caption( get_post_thumbnail_id() ) ); ?>
+					</figcaption>
+				<?php endif; ?>
+			</div>
+		<?php endif; ?>
 	</header>
 
 	<section class="entry-content post-content">

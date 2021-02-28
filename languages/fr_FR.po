@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marianne\n"
-"POT-Creation-Date: 2021-02-18 11:03+0100\n"
-"PO-Revision-Date: 2021-02-18 11:04+0100\n"
+"POT-Creation-Date: 2021-02-18 18:25+0100\n"
+"PO-Revision-Date: 2021-02-18 18:25+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -52,21 +52,25 @@ msgctxt "Site footer text"
 msgid "%1$s is proudly powered by %2$s and %3$s"
 msgstr "%1$s est fièrement propulsé par %2$s et %3$s"
 
-#: functions.php:56
+#: functions.php:54
 msgid "Primary Menu"
 msgstr "Menu principal"
 
-#: functions.php:57
+#: functions.php:55
 msgid "Footer Menu"
 msgstr "Menu du pied de page"
 
-#: functions.php:179
+#: functions.php:171
 msgid "Widgets"
 msgstr "Widgets"
 
 #: header.php:29
 msgid "Skip to content"
 msgstr "Aller au contenu"
+
+#: header.php:50
+msgid "Primary menu"
+msgstr "Menu principal"
 
 #: inc/template-tags.php:105
 #, php-format
@@ -77,12 +81,12 @@ msgstr[0] "%d commentaire"
 msgstr[1] "%d commentaires"
 
 #: inc/template-tags.php:135
-msgid "&lsaquo;Previous page"
-msgstr "&lsaquo;&nbsp;Page précédente"
+msgid "&lsaquo; Previous page"
+msgstr "&lsaquo; Page précédente"
 
 #: inc/template-tags.php:141
-msgid "Next page&rsaquo;"
-msgstr "Page suivante&nbsp;&rsaquo;"
+msgid "Next page &rsaquo;"
+msgstr "Page suivante &rsaquo;"
 
 #: search.php:22 search.php:65
 #, php-format
