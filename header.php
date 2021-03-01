@@ -52,6 +52,7 @@
 							'container_id'         => 'menu-primary-container',
 							'container_aria_label' => esc_attr( 'Primary menu', 'marianne' ),
 							'depth'                => 2,
+							'item_spacing'         => 'discard',
 							'menu_class'           => 'navigation-menu',
 							'menu_id'              => 'menu-primary',
 							'theme_location'       => 'primary',
