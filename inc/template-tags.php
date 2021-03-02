@@ -107,7 +107,7 @@ if ( ! function_exists( 'marianne_loop_comments' ) ) {
 			?>
 
 			<?php
-			if ( $container && in_array( $container, $allowed_containers ) ) {
+			if ( $container && in_array( $container, $allowed_containers, true ) ) {
 				$container_open = '<' . esc_attr( $container );
 				if ( $class ) {
 					$container_open .= ' class="' . esc_attr( $class ) . '"';
