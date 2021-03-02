@@ -572,15 +572,17 @@ button:hover {
 .entry-loop {
 	margin-bottom: 4em;
 }
-.entry-loop .entry-meta-container {
-	margin-bottom: .5em;
-}
 .entry-loop.sticky {
 	border: 1px solid #aaa;
-	padding: 1em;
+	margin-right: -1rem;
+	margin-left: -1rem;
+	padding: 1rem;
+}
+.loop-header {
+	margin-bottom: 1em;
 }
 .loop-title {
-	margin: .5em 0 1em;
+	margin: .5em 0;
 }
 .loop-thumbnail {
 	margin: .5em auto;
@@ -590,6 +592,10 @@ button:hover {
 }
 .loop-content p {
 	margin: 0;
+}
+.loop-footer {
+	font-size: .9em;
+	margin-top: 1em;
 }
 .loop-pagination {
 	margin: 4em 0;
