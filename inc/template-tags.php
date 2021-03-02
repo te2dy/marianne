@@ -128,7 +128,7 @@ if ( ! function_exists( 'marianne_loop_comments' ) ) {
 					);
 					?>
 				</a>
-			<?php echo $container_open; ?>
+			<?php echo $container_close; ?>
 
 			<?php
 		endif;
@@ -208,5 +208,55 @@ if ( ! function_exists( 'marianne_the_categories' ) ) {
 				</ul>
 			<?php
 		}
+	}
+}
+
+if ( ! function_exists( 'marianne_the_post_thumbnail' ) ) {
+	/**
+	 * The post thumbnail.
+	 *
+	 * @param string|array $args ?
+	 *
+	 * @return void
+	 */
+	function marianne_the_post_thumbnail( $class = '', $args = '' ) {
+		if ( has_post_thumbnail() ) :
+			if ( esc_attr( $class ) ) {
+				$class = ' class="' . esc_attr( $class ) . '"';
+			}
+
+			$allowed_args = array( 'link', 'caption' );
+
+			$options = array();
+
+			if ( ! is_array( $args ) ) {
+				if ( in_array( $args, $allowed_args ) ) {
+					$options[] = $args;
+				}
+			} else {
+				foreach ( $args as $option ) {
+					$options[] = $option;
+				}
+			}
+			?>
+				<figure<?php echo $class; ?>>
+					<?php if ( in_array( 'link', $options ) ) : ?>
+						<a href="<?php the_permalink(); ?>">
+					<?php endif; ?>
+
+					<?php the_post_thumbnail(); ?>
+
+					<?php if ( in_array( 'link', $options ) ) : ?>
+						</a>
+					<?php endif; ?>
+
+					<?php if ( in_array( 'caption', $options ) && wp_get_attachment_caption( get_post_thumbnail_id() ) ) : ?>
+						<figcaption class="wp-caption-text text-secondary">
+							<?php echo wp_kses_post( wp_get_attachment_caption( get_post_thumbnail_id() ) ); ?>
+						</figcaption>
+					<?php endif; ?>
+				</figure>
+			<?php
+		endif;
 	}
 }
