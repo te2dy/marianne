@@ -19,6 +19,10 @@ It is the perfect theme for writers, journalists and intellectuals who want to p
 
 ## Changelog
 
+**1.2.2 – March 2nd, 2021**
+- Updated: primary menu styles.
+- Updated: screenshot.png.
+
 **1.2.1 – February 28th, 2021**
 - Fixed: one wrong text-domain.
 - Updated: French translation.
