@@ -20,6 +20,11 @@ It is the perfect theme for writers, journalists and intellectuals who want to p
 
 == Changelog ==
 
+=== 1.2.3 – March 2nd, 2021 ===
+- Removed: Theme URI in the stylesheet.
+- Fixed: missing argument in a function.
+- Updated: functions documentation.
+
 === 1.2.2 – March 2nd, 2021 ===
 - Updated: primary menu styles.
 - Updated: screenshot.png.
