@@ -28,17 +28,7 @@
 
 		<?php the_title( '<h1 class="entry-title post-title">', '</h1>' ); ?>
 
-		<?php if ( has_post_thumbnail() ) : ?>
-			<div class="entry-thumbnail post-thumbnail">
-				<?php the_post_thumbnail(); ?>
-
-				<?php if ( wp_get_attachment_caption( get_post_thumbnail_id() ) ) : ?>
-					<figcaption class="wp-caption-text text-secondary">
-						<?php echo wp_kses_post( wp_get_attachment_caption( get_post_thumbnail_id() ) ); ?>
-					</figcaption>
-				<?php endif; ?>
-			</div>
-		<?php endif; ?>
+		<?php marianne_the_post_thumbnail( 'entry-thumbnail post-thumbnail', 'caption' ); ?>
 	</header>
 
 	<section class="entry-content post-content">

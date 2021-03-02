@@ -10,23 +10,21 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( array( 'entry-loop' ) ); ?>>
-	<header class="entry-header">
-		<div class="entry-meta-container">
-			<?php if ( is_sticky() ) : ?>
-				<div class="entry-meta meta-sticky">
-					<?php esc_html_e( 'Sticky post', 'marianne' ); ?>
-				</div>
-			<?php endif; ?>
-
-			<div class="entry-meta text-secondary">
-				<a href="<?php the_permalink(); ?>">
-					<?php marianne_the_date(); ?>
-				</a>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'entry-loop' ); ?>>
+	<header class="entry-header loop-header">
+		<?php if ( is_sticky() ) : ?>
+			<div class="entry-meta meta-sticky">
+				<?php esc_html_e( 'Sticky post', 'marianne' ); ?>
 			</div>
+		<?php endif; ?>
 
-			<?php marianne_the_categories( 'entry-meta text-secondary' ); ?>
+		<div class="entry-meta text-secondary">
+			<a href="<?php the_permalink(); ?>">
+				<?php marianne_the_date(); ?>
+			</a>
 		</div>
+
+		<?php marianne_the_categories( 'entry-meta text-secondary' ); ?>
 
 		<h3 class="entry-title loop-title">
 			<a href="<?php the_permalink(); ?>">
@@ -34,13 +32,7 @@
 			</a>
 		</h3>
 
-		<?php if ( has_post_thumbnail() ) : ?>
-			<div class="entry-thumbnail loop-thumbnail">
-				<a href="<?php the_permalink(); ?>">
-					<?php the_post_thumbnail(); ?>
-				</a>
-			</div>
-		<?php endif; ?>
+		<?php marianne_the_post_thumbnail( 'entry-thumbnail loop-thumbnail', 'link' ); ?>
 	</header>
 
 	<section class="entry-content loop-content">
@@ -49,5 +41,5 @@
 		</a>
 	</section>
 
-	<?php marianne_loop_comments( 'footer', 'entry-meta loop-meta text-secondary' ); ?>
+	<?php marianne_loop_comments( 'footer', 'loop-footer text-secondary' ); ?>
 </article>
