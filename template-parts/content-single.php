@@ -12,19 +12,17 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry-single' ); ?>>
 	<header class="entry-header">
-		<div class="entry-meta-container">
-			<?php if ( is_sticky() ) : ?>
-				<div class="entry-meta meta-sticky">
-					<?php esc_html_e( 'Sticky post', 'marianne' ); ?>
-				</div>
-			<?php endif; ?>
+		<?php if ( is_sticky() ) : ?>
+			<div class="entry-meta meta-sticky">
+				<?php esc_html_e( 'Sticky post', 'marianne' ); ?>
+			</div>
+		<?php endif; ?>
 
-			<?php
-			marianne_the_date( 'entry-meta post-date text-secondary' );
+		<?php
+		marianne_the_date( 'entry-meta post-date text-secondary' );
 
-			marianne_the_categories( 'entry-meta text-secondary' );
-			?>
-		</div>
+		marianne_the_categories( 'entry-meta text-secondary' );
+		?>
 
 		<?php the_title( '<h1 class="entry-title post-title">', '</h1>' ); ?>
 
