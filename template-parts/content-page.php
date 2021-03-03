@@ -16,8 +16,10 @@
 	</header>
 
 	<section class="entry-content page-content">
-		<?php the_content(); ?>
+		<?php
+		the_content();
 
-		<?php wp_link_pages(); ?>
+		wp_link_pages();
+		?>
 	</section>
 </article>

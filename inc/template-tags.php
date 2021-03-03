@@ -180,6 +180,7 @@ if ( ! function_exists( 'marianne_the_categories' ) ) {
 	 * @return void
 	 */
 	function marianne_the_categories( $class = '' ) {
+		// If a class is set, create the attribute with its value.
 		$class = 'list-inline ' . $class;
 
 		$categories = get_the_category( get_the_ID() );
@@ -215,18 +216,25 @@ if ( ! function_exists( 'marianne_the_post_thumbnail' ) ) {
 	/**
 	 * The post thumbnail.
 	 *
-	 * @param string|array $args ?
+	 * @param string       $class The class of the figure.
+	 * @param string|array $args  Options to activate.
+	 *                            'link' adds a clickable permalink to the image.
+	 *                            'caption' displays the caption below the image.
 	 *
 	 * @return void
 	 */
 	function marianne_the_post_thumbnail( $class = '', $args = '' ) {
 		if ( has_post_thumbnail() ) :
+
+			// If a class is set, create the attribute with its value.
 			if ( esc_attr( $class ) ) {
 				$class = ' class="' . esc_attr( $class ) . '"';
 			}
 
+			// Options available.
 			$allowed_args = array( 'link', 'caption' );
 
+			// Put the option(s) defined with $args in the array $options.
 			$options = array();
 
 			if ( ! is_array( $args ) ) {

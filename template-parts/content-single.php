@@ -22,17 +22,19 @@
 		marianne_the_date( 'entry-meta post-date text-secondary' );
 
 		marianne_the_categories( 'entry-meta text-secondary' );
+
+		the_title( '<h1 class="entry-title post-title">', '</h1>' );
+
+		marianne_the_post_thumbnail( 'entry-thumbnail post-thumbnail', 'caption' );
 		?>
-
-		<?php the_title( '<h1 class="entry-title post-title">', '</h1>' ); ?>
-
-		<?php marianne_the_post_thumbnail( 'entry-thumbnail post-thumbnail', 'caption' ); ?>
 	</header>
 
 	<section class="entry-content post-content">
-		<?php the_content(); ?>
+		<?php
+		the_content();
 
-		<?php wp_link_pages(); ?>
+		wp_link_pages();
+		?>
 	</section>
 
 	<?php if ( has_tag() ) : ?>
