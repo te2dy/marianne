@@ -19,6 +19,12 @@ It is the perfect theme for writers, journalists and intellectuals who want to p
 
 ## Changelog
 
+**1.2.4 – March 3rd, 2021**
+- New: function marianne_the_post_thumbnail().
+- Fixed: post footer tag not closed in the loop.
+- Updated: Theme Tags.
+- Updated: stylesheet.
+
 **1.2.3 – March 2nd, 2021**
 - Removed: Theme URI in the stylesheet.
 - Fixed: missing argument in a function.
