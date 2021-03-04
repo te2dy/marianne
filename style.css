@@ -865,6 +865,11 @@ button:hover {
 	.site-header {
 		margin-bottom: 1em;
 	}
+	.entry-loop.sticky {
+		margin-right: -.5rem;
+		margin-left: -.5rem;
+		padding: .5rem;
+	}
 }
 
 @media print {
