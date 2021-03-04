@@ -37,8 +37,11 @@ body {
 .site-header {
 	margin: 2em 0 4em;
 }
-.site-primary {
+.site-content {
 	margin: 4em 0;
+}
+.site-primary {
+	margin-bottom: 4em;
 }
 article,
 aside,
@@ -143,7 +146,7 @@ address {
 }
 abbr,
 acronym {
-	cursor: default;
+	cursor: help;
 	text-decoration: underline dotted;
 }
 abbr[title] {
@@ -461,7 +464,8 @@ button:hover {
 	transform: rotate(90deg);
 	vertical-align: middle;
 }
-#menu-primary .menu-item:hover .sub-menu-toggle {
+#menu-primary .menu-item:hover .sub-menu-toggle,
+#menu-primary .menu-item:focus .sub-menu-toggle {
 	transform: rotate(-90deg);
 }
 #menu-primary .sub-menu {
@@ -504,7 +508,8 @@ button:hover {
 	display: block;
 	padding: .25em;
 }
-#menu-primary .sub-menu > .menu-item > a:hover {
+#menu-primary .sub-menu > .menu-item > a:hover,
+#menu-primary .sub-menu > .menu-item > a:focus {
 	background-color: #000;
 	color: #fff;
 }
@@ -518,7 +523,7 @@ button:hover {
 @media (hover: none) or (max-width: 500px) {
 	#menu-mobile-button {
 		display: block;
-		margin-top: 2em;
+		margin-top: 1em;
 	}
 	#menu-primary-container {
 		border-left: 1px solid #aaa;
@@ -544,7 +549,9 @@ button:hover {
 		width: auto;
 	}
 	#menu-primary .menu-item-has-children:hover .sub-menu,
-	#menu-primary .menu-item-has-children:focus .sub-menu {
+	#menu-primary .menu-item-has-children:focus .sub-menu,
+	#menu-primary .menu-item-has-children .sub-menu-toggle[aria-expanded="true"] ~ .sub-menu {
+		background-color: transparent;
 		padding: 0;
 	}
 	#menu-primary .sub-menu .menu-item {
@@ -560,7 +567,8 @@ button:hover {
 	#menu-primary > .menu-item::after {
 		content: "";
 	}
-	#menu-primary .sub-menu > .menu-item > a {
+	#menu-primary .sub-menu > .menu-item > a:hover,
+	#menu-primary .sub-menu > .menu-item > a:focus {
 		background-color: transparent;
 		color: #000;
 	}
@@ -850,6 +858,12 @@ button:hover {
 	.site {
 		margin-right: 1em;
 		margin-left: 1em;
+	}
+	.site-content {
+		margin: 2em auto;
+	}
+	.site-header {
+		margin-bottom: 1em;
 	}
 }
 
