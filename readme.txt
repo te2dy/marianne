@@ -20,6 +20,11 @@ It is the perfect theme for writers, journalists and intellectuals who want to p
 
 == Changelog ==
 
+=== 1.2.5 – March 4th, 2021 ===
+- Updated: theme now fully responsive on mobile.
+- Updated: menu accessibility on mobile.
+- Removed: title of the front page.
+
 === 1.2.4 – March 3rd, 2021 ===
 - New: function marianne_the_post_thumbnail().
 - Fixed: post footer tag not closed in the loop.
