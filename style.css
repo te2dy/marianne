@@ -448,9 +448,6 @@ button:hover {
 #menu-primary-container {
 	margin: 2em 0;
 }
-#menu-primary a {
-	display: block;
-}
 #menu-primary > .menu-item {
 	margin: 0 .25em .5em 0;
 }
@@ -508,6 +505,7 @@ button:hover {
 	white-space: nowrap;
 }
 #menu-primary .sub-menu > .menu-item > a {
+	display: block;
 	padding: .5em;
 }
 #menu-primary .sub-menu > .menu-item > a:hover,
@@ -535,6 +533,9 @@ button:hover {
 		display: none;
 		margin-top: .5em;
 		padding-left: .5em;
+	}
+	#menu-primary a {
+		display: block;
 	}
 	#menu-primary .menu-item {
 		border: 0;
