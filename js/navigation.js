@@ -10,6 +10,17 @@
  */
 
 /**
+ * Collapse menu when the user clicks outside.
+ */
+function marianneCollapseMenuOnClickOutside( event ) {
+	if ( ! document.getElementById( 'menu-primary' ).contains( event.target ) ) {
+		document.getElementById( 'menu-primary' ).querySelectorAll( '.sub-menu-toggle' ).forEach( function( button ) {
+			button.setAttribute( 'aria-expanded', 'false' );
+		} );
+	}
+}
+
+/**
  * Toggle an attribute's value
  *
  * @param {Element} el - The element.
@@ -29,40 +40,33 @@ function marianneToggleAriaExpanded( el, withListeners ) {
 }
 
 /**
- * Handle clicks on submenu toggles.
+ * Handle clicks on submenu toggles except on small screens.
  *
  * @param {Element} el - The element.
  */
 function marianneExpandSubMenu( el ) {
 
-	// Close other expanded items.
-	el.closest( 'nav' ).querySelectorAll( '.sub-menu-toggle' ).forEach( function( button ) {
-		if ( button !== el ) {
-			button.setAttribute( 'aria-expanded', 'false' );
-		}
-	});
-
-	// Toggle aria-expanded on the button.
-	marianneToggleAriaExpanded( el, true );
-
-	// On tab-away collapse the menu.
-	el.parentNode.querySelectorAll( 'ul > li:last-child > a' ).forEach( function( linkEl ) {
-		linkEl.addEventListener( 'blur', function( event ) {
-			if ( ! el.parentNode.contains( event.relatedTarget ) ) {
-				el.setAttribute( 'aria-expanded', 'false' );
+	if ( window.matchMedia( "(min-width: 500px)" ).matches ) {
+		// Close other expanded items.
+		el.closest( 'nav' ).querySelectorAll( '.sub-menu-toggle' ).forEach( function( button ) {
+			if ( button !== el ) {
+				button.setAttribute( 'aria-expanded', 'false' );
 			}
-		} );
-	} );
-}
+		});
 
-/**
- * Collapse menu when the user clicks outside.
- */
-function marianneCollapseMenuOnClickOutside( event ) {
-	if ( ! document.getElementById( 'menu-primary' ).contains( event.target ) ) {
-		document.getElementById( 'menu-primary' ).querySelectorAll( '.sub-menu-toggle' ).forEach( function( button ) {
-			button.setAttribute( 'aria-expanded', 'false' );
-		} );
+		// Toggle aria-expanded on the button.
+		marianneToggleAriaExpanded( el, true );
+
+		// On tab-away collapse the menu.
+		el.parentNode.querySelectorAll( 'ul > li:last-child > a' ).forEach( function( linkEl ) {
+			linkEl.addEventListener( 'blur', function( event ) {
+				if ( ! el.parentNode.contains( event.relatedTarget ) ) {
+					el.setAttribute( 'aria-expanded', 'false' );
+				}
+			});
+		});
+	} else {
+		$( '.sub-menu-toggle' ).removeAttr( 'aria-haspopup' ).removeAttr( 'aria-expanded' );
 	}
 }
 
@@ -87,12 +91,16 @@ function marianneCollapseMenuOnClickOutside( event ) {
 	});
 
 	/**
-	 * Change aria-expanded value on hover.
+	 * Change aria-expanded value on hover except on small screens.
 	 */
-	$( '#menu-primary .menu-item-has-children' ).hover( function () {
-		$( this ).find( '.sub-menu-toggle' ).attr( 'aria-expanded', 'true' );
-	}, function(){
-		$( this ).find( '.sub-menu-toggle' ).attr( 'aria-expanded', 'false' );
-	});
+	if ( window.matchMedia( "(min-width: 500px)" ).matches ) {
+		$( '#menu-primary .menu-item-has-children' ).hover( function () {
+			$( this ).find( '.sub-menu-toggle' ).attr( 'aria-expanded', 'true' );
+		}, function(){
+			$( this ).find( '.sub-menu-toggle' ).attr( 'aria-expanded', 'false' );
+		});
+	} else {
+		$( '.sub-menu-toggle' ).removeAttr( 'aria-haspopup' ).removeAttr( 'aria-expanded' );
+	}
 
 } )( jQuery );
