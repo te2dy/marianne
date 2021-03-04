@@ -70,6 +70,19 @@ function marianneExpandSubMenu( el ) {
 	}
 }
 
+/**
+ * Handle clicks on mobile menu button.
+ *
+ * @param {Element} el - The element.
+ */
+function marianneExpandMobileMenu( el ) {
+	if ( 'true' !== el.getAttribute( 'aria-expanded' ) ) {
+		el.setAttribute( 'aria-expanded', 'true' );
+	} else {
+		el.setAttribute( 'aria-expanded', 'false' );
+	}
+}
+
 ( function ( $ ) {
 	/**
 	 * Toogle the menu on click on small screens.
@@ -101,6 +114,7 @@ function marianneExpandSubMenu( el ) {
 		});
 	} else {
 		$( '.sub-menu-toggle' ).removeAttr( 'aria-haspopup' ).removeAttr( 'aria-expanded' );
+		$( '#menu-mobile-button' ).attr( 'aria-haspopup', 'true' ).attr( 'aria-expanded', 'false' );
 	}
 
 } )( jQuery );
