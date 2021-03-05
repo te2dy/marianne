@@ -66,7 +66,7 @@ function marianneExpandSubMenu( el ) {
 			});
 		});
 	} else {
-		$( '.sub-menu-toggle' ).removeAttr( 'aria-haspopup' ).removeAttr( 'aria-expanded' );
+		el.removeAttribute( 'aria-haspopup' ).removeAttribute( 'aria-expanded' );
 	}
 }
 
