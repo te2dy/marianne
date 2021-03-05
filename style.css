@@ -76,6 +76,9 @@ figure {
 .text-secondary {
 	color: #595959;
 }
+.text-secondary a:hover {
+	color: #000;
+}
 
 /* Titles */
 h1,
@@ -255,12 +258,6 @@ kbd {
 .list-inline li {
 	display: inline-block;
 }
-.list-inline li::after {
-	content: " ⋅";
-}
-.list-inline li:last-child::after {
-	content: "";
-}
 
 /* Tables */
 table {
@@ -414,7 +411,8 @@ button:hover {
 	margin-bottom: 0;
 }
 .navigation-menu > .menu-item::after {
-	content: " ·";
+	content: " |";
+	color: #aaa;
 }
 .navigation-menu > .menu-item:last-of-type::after {
 	content: "";
