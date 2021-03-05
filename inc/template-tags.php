@@ -238,7 +238,7 @@ if ( ! function_exists( 'marianne_the_post_thumbnail' ) ) {
 			$options = array();
 
 			if ( ! is_array( $args ) ) {
-				if ( in_array( $args, $allowed_args ) ) {
+				if ( in_array( $args, $allowed_args, true ) ) {
 					$options[] = $args;
 				}
 			} else {
@@ -248,17 +248,17 @@ if ( ! function_exists( 'marianne_the_post_thumbnail' ) ) {
 			}
 			?>
 				<figure<?php echo $class; ?>>
-					<?php if ( in_array( 'link', $options ) ) : ?>
+					<?php if ( in_array( 'link', $options, true ) ) : ?>
 						<a href="<?php the_permalink(); ?>">
 					<?php endif; ?>
 
 					<?php the_post_thumbnail(); ?>
 
-					<?php if ( in_array( 'link', $options ) ) : ?>
+					<?php if ( in_array( 'link', $options, true ) ) : ?>
 						</a>
 					<?php endif; ?>
 
-					<?php if ( in_array( 'caption', $options ) && wp_get_attachment_caption( get_post_thumbnail_id() ) ) : ?>
+					<?php if ( in_array( 'caption', $options, true ) && wp_get_attachment_caption( get_post_thumbnail_id() ) ) : ?>
 						<figcaption class="wp-caption-text text-secondary">
 							<?php echo wp_kses_post( wp_get_attachment_caption( get_post_thumbnail_id() ) ); ?>
 						</figcaption>
