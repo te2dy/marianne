@@ -19,6 +19,10 @@ It is the perfect theme for writers, journalists and intellectuals who want to p
 
 ## Changelog
 
+**1.2.6 – March 5th, 2021**
+- Updated: primary menu style.
+- Fixed: error in navigation.js.
+
 **1.2.5 – March 4th, 2021**
 - Updated: theme now fully responsive on mobile.
 - Updated: menu accessibility on mobile.
