@@ -601,6 +601,7 @@ button:hover {
 	margin-bottom: 1em;
 }
 .loop-title {
+	font-size: 1.25em;
 	margin: .5em 0;
 }
 .loop-thumbnail {
@@ -650,11 +651,9 @@ button:hover {
 	margin: 0;
 	padding: .25rem;
 }
-.entry-title {
-	font-size: 1.25em;
-}
 .post-title,
 .page-title {
+	font-size: 1.5em;
 	margin: 1em 0;
 }
 .post-content p,
