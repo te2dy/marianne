@@ -19,6 +19,11 @@ It is the perfect theme for writers, journalists and intellectuals who want to p
 
 ## Changelog
 
+**1.2.7 – March 8th, 2021**
+- Updated: primary menu style.
+- Updated: screenshot.png.
+- Updated: title size of posts.
+
 **1.2.6 – March 5th, 2021**
 - Updated: primary menu style.
 - Fixed: error in navigation.js.
