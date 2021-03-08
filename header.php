@@ -43,7 +43,7 @@
 				marianne_site_description();
 				?>
 
-				<button id="menu-mobile-button" onclick="marianneExpandMobileMenu(this)">Menu</button>
+				<button id="menu-mobile-button" onclick="marianneExpandMobileMenu(this)"><?php esc_html_e( 'Menu', 'marianne' ); ?></button>
 				<?php
 				if ( has_nav_menu( 'primary' ) ) {
 					wp_nav_menu(
