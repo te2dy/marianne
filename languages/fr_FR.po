@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marianne\n"
-"POT-Creation-Date: 2021-02-28 19:38+0100\n"
-"PO-Revision-Date: 2021-02-28 19:38+0100\n"
+"POT-Creation-Date: 2021-03-09 11:55+0100\n"
+"PO-Revision-Date: 2021-03-09 11:55+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -60,17 +60,21 @@ msgstr "Menu principal"
 msgid "Footer Menu"
 msgstr "Menu du pied de page"
 
-#: functions.php:190
+#: functions.php:192
 msgid "Widgets"
 msgstr "Widgets"
 
-#: functions.php:225
+#: functions.php:227
 msgid "Open submenu"
 msgstr "Ouvrir le sous-menu"
 
 #: header.php:29
 msgid "Skip to content"
 msgstr "Aller au contenu"
+
+#: header.php:46
+msgid "Menu"
+msgstr "Menu"
 
 #: inc/template-tags.php:126
 #, php-format
@@ -108,7 +112,7 @@ msgstr "Aucun résultat"
 msgid "Maybe try a search?"
 msgstr "Peut-être devriez-vous tenter une recherche&nbsp;?"
 
-#: template-parts/content-loop.php:18 template-parts/content-single.php:18
+#: template-parts/content-loop.php:17 template-parts/content-single.php:17
 msgid "Sticky post"
 msgstr "Article sélectionné"
 
@@ -1246,9 +1250,6 @@ msgstr ""
 #, php-format
 #~ msgid "Tag: %s"
 #~ msgstr "Étiquette&nbsp;: %s"
-
-#~ msgid "Menu"
-#~ msgstr "Menu"
 
 #~ msgid "The maximum left and right margin width for images (default: 100)."
 #~ msgstr ""
