@@ -93,3 +93,6 @@ Marianne is based on the work of:
 
 Normalizing styles have been helped along thanks to [the fine work of
 Nicolas Gallagher and Jonathan Neal](https://necolas.github.io/normalize.css/)
+
+Screenshot image: [apple-desk-laptop-macbook-pro](https://www.flickr.com/photos/137643065@N06/23699397893), by pixellaphoto
+License: [CC0 1.0 Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/)
