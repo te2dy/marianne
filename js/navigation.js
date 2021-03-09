@@ -4,7 +4,7 @@
  * Handles dropdown for the primary menu
  * and toggling it for small screens.
  *
- * Based on the work of the WordPress team in the Twenty Twenty-One WordPress Theme.
+ * Based on the work of the WordPress team in the Twenty Twenty-One Theme.
  *
  * @since Marianne 1.2
  */
@@ -91,29 +91,55 @@ function marianneExpandMobileMenu( el ) {
 		$( '#menu-primary-container' ).slideToggle( 200 );
 	});
 
-	/**
-	 * Indicate submenus
-	 *
-	 * Adds the attributes aria-haspopup and aria-expanded
-	 * to links to submenus with their default values.
-	 */
 	var menu_elements = $( '#menu-primary .menu-item' );
 	menu_elements.each( function ( el, item ) {
 		$( item ).children( 'a' ).attr( 'role', 'menu-item' );
-		$( item ).children( 'a' ).attr( 'tabindex', '-1' );
+		$( item ).children( 'a' ).attr( 'tabindex', '0' );
 	});
 
 	/**
 	 * Change aria-expanded value on hover except on small screens.
+	 *
+	 * @param {Element} id - The id of the primary menu.
 	 */
 	if ( window.matchMedia( "(min-width: 500px)" ).matches ) {
-		$( '#menu-primary .menu-item-has-children' ).hover( function () {
+		var id = '#menu-primary';
+
+		id += ' ';
+
+		// On hover, set the aria-expanded attribute to true.
+		$( id + '.menu-item-has-children' ).hover( function () {
 			$( this ).find( '.sub-menu-toggle' ).attr( 'aria-expanded', 'true' );
 		}, function(){
 			$( this ).find( '.sub-menu-toggle' ).attr( 'aria-expanded', 'false' );
 		});
+
+		// On submenu element focus, set the aria-expanded attribute to true.
+		$( id + '.sub-menu a' ).focus( function( event ) {
+			$( this ).parents( '.menu-item-has-children' ).find( '.sub-menu-toggle' ).attr( 'aria-expanded', 'true' );
+		});
+		$( id + '.sub-menu a' ).blur(function() {
+			$( this ).parents( '.menu-item-has-children' ).find( '.sub-menu-toggle' ).attr( 'aria-expanded', 'false' );
+		});
+
+		// On submenu button focus, set the aria-expanded attribute to true.
+		$( id + '.sub-menu-toggle' ).focus( function( event ) {
+			$( this ).closest( '.menu-item-has-children' ).find( '.sub-menu-toggle' ).attr( 'aria-expanded', 'true' );
+		});
+		$( id + '.sub-menu-toggle' ).blur(function() {
+			$( this ).closest( '.menu-item-has-children' ).find( '.sub-menu-toggle' ).attr( 'aria-expanded', 'false' );
+		});
+
+		// When esc key is pressed, set the aria-expanded attribute to false.
+		document.addEventListener( 'keydown', function( event ) {
+			var escKey = event.keyCode === 27;
+			if ( escKey ) {
+				$( '.sub-menu-toggle' ).attr( 'aria-expanded', 'false' );
+			}
+		});
+
 	} else {
-		$( '.sub-menu-toggle' ).removeAttr( 'aria-haspopup' ).removeAttr( 'aria-expanded' );
+		$( id + '.sub-menu-toggle' ).removeAttr( 'aria-haspopup' ).removeAttr( 'aria-expanded' );
 		$( '#menu-mobile-button' ).attr( 'aria-haspopup', 'true' ).attr( 'aria-expanded', 'false' );
 	}
 

@@ -411,8 +411,8 @@ button:hover {
 .navigation-menu .menu-item {
 	border-right: 1px solid #aaa;
 	display: inline-block;
-	margin-right: .25rem;
-	padding-right: .25rem;
+	margin-right: .5rem;
+	padding-right: .5rem;
 }
 .navigation-menu .menu-item:first-child {
 	margin-left: 0;
@@ -451,7 +451,7 @@ button:hover {
 	margin: 2em 0;
 }
 #menu-primary > .menu-item {
-	margin: 0 .25em .5em 0;
+	margin-bottom: .5em;
 }
 #menu-primary .menu-item-has-children {
 	position: relative;
@@ -486,6 +486,8 @@ button:hover {
 }
 #menu-primary .menu-item-has-children:hover .sub-menu,
 #menu-primary .menu-item-has-children:focus .sub-menu,
+#menu-primary .menu-item-has-children .sub-menu-toggle:hover ~ .sub-menu,
+#menu-primary .menu-item-has-children .sub-menu-toggle:focus ~ .sub-menu,
 #menu-primary .menu-item-has-children .sub-menu-toggle[aria-expanded="true"] ~ .sub-menu {
 	/* same as .screen-reader-text:focus */
 	background-color: #eaeaea;
@@ -501,6 +503,7 @@ button:hover {
 	width: auto;
 	z-index: 100000;
 }
+
 #menu-primary .sub-menu > .menu-item {
 	display: block;
 	width: 100%;
