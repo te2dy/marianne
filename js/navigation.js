@@ -99,6 +99,7 @@ function marianneExpandMobileMenu( el ) {
 	function marianneAriaMenu( $id ) {
 		var id = $id + ' ';
 
+		// On screen wider than 500px.
 		if ( window.matchMedia( "(min-width: 500px)" ).matches ) {
 
 			// Reset if the mobile menu was first displayed.
@@ -154,6 +155,7 @@ function marianneExpandMobileMenu( el ) {
 				}
 			});
 
+		// On small screen.
 		} else {
 			$( id + '.sub-menu-toggle' ).removeAttr( 'aria-haspopup' );
 			$( id + '.sub-menu-toggle' ).removeAttr( 'aria-expanded' );
