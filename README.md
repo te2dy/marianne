@@ -19,6 +19,13 @@ It is the perfect theme for writers, journalists and intellectuals who want to p
 
 ## Changelog
 
+**1.2.8 – March 9th, 2021**
+- Fixed: keyboard navigation not working.
+- Fixed: missing translatable string.
+- Fixed: missing prefixes in functions.php.
+- Updated: French translation.
+- Updated: marianne_environment_type() function.
+
 **1.2.7 – March 8th, 2021**
 - Updated: primary menu style.
 - Updated: screenshot.png.
