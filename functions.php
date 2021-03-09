@@ -209,7 +209,7 @@ require_once get_template_directory() . '/inc/template-tags.php';
  * Add a button to top-level menu items that has sub-menus.
  * An icon is added using CSS depending on the value of aria-expanded.
  *
- * @since Twenty Twenty-One 1.0
+ * Based on the work of the WordPress team in the Twenty Twenty-One Theme.
  *
  * @param string $output Nav menu item start element.
  * @param object $item   Nav menu item.
@@ -223,7 +223,7 @@ function marianne_add_sub_menu_toggle( $output, $item, $depth, $args ) {
 
 		// Add toggle button.
 		$output .= '<button class="sub-menu-toggle" aria-haspopup="true" aria-expanded="false" onClick="marianneExpandSubMenu(this)">';
-		$output .= '<span class="icon-plus">›</span>';
+		$output .= '›';
 		$output .= '<span class="screen-reader-text">' . esc_html__( 'Open submenu', 'marianne' ) . '</span>';
 		$output .= '</button>';
 	}
