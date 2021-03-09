@@ -173,11 +173,11 @@ function marianneExpandMobileMenu( el ) {
 		}
 	}
 
-	$( window ).load(function() {
+	$( window ).on( 'load', function() {
 		marianneAriaMenu( '#menu-primary' );
 	});
 
-	$( window ).resize(function() {
+	$( window ).on( 'resize', function() {
 		marianneAriaMenu( '#menu-primary' );
 	});
 
