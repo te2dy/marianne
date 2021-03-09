@@ -84,10 +84,6 @@ function marianneExpandMobileMenu( el ) {
 }
 
 ( function ( $ ) {
-	// id = The menu id.
-	var id = '#menu-primary';
-	id += ' ';
-
 	// Adds role and tabindex to menu links.
 	var menu_elements = $( '#menu-primary .menu-item' );
 	menu_elements.each( function ( el, item ) {
@@ -98,9 +94,11 @@ function marianneExpandMobileMenu( el ) {
 	/**
 	 * Change aria-expanded value on hover and focus.
 	 *
-	 * @param {Element} id - The id of the primary menu.
+	 * @param $id - The id of the primary menu.
 	 */
 	function marianneAriaMenu( $id ) {
+		var id = $id + ' ';
+
 		if ( window.matchMedia( "(min-width: 500px)" ).matches ) {
 
 			// Reset if the mobile menu was first displayed.
