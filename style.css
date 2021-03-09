@@ -466,12 +466,10 @@ button:hover {
 	transform: rotate(90deg);
 	vertical-align: middle;
 }
-#menu-primary .menu-item:hover .sub-menu-toggle,
-#menu-primary .menu-item:focus .sub-menu-toggle {
+#menu-primary .sub-menu-toggle[aria-expanded="true"] {
 	transform: rotate(-90deg);
 }
 #menu-primary .sub-menu {
-	/* same as .screen-reader-text */
 	border-left: 1px solid #aaa;
 	clip: rect(1px, 1px, 1px, 1px);
 	clip-path: inset(50%);
@@ -484,12 +482,7 @@ button:hover {
 	width: 1px;
 	word-wrap: normal !important;
 }
-#menu-primary .menu-item-has-children:hover .sub-menu,
-#menu-primary .menu-item-has-children:focus .sub-menu,
-#menu-primary .menu-item-has-children .sub-menu-toggle:hover ~ .sub-menu,
-#menu-primary .menu-item-has-children .sub-menu-toggle:focus ~ .sub-menu,
 #menu-primary .menu-item-has-children .sub-menu-toggle[aria-expanded="true"] ~ .sub-menu {
-	/* same as .screen-reader-text:focus */
 	background-color: #eaeaea;
 	clip: auto !important;
 	clip-path: none;
@@ -533,9 +526,14 @@ button:hover {
 		display: block;
 		margin-top: 1em;
 	}
+	#menu-mobile-button ~ #menu-primary-container {
+		display: none;
+	}
+	#menu-mobile-button[aria-expanded="true"] ~ #menu-primary-container {
+		display: block;
+	}
 	#menu-primary-container {
 		border-left: 1px solid #aaa;
-		display: none;
 		margin-top: .5em;
 		padding-left: .5em;
 	}
@@ -546,6 +544,12 @@ button:hover {
 		border: 0;
 		display: block;
 		margin-right: 0;
+	}
+	#menu-primary .menu-item:last-of-type {
+		border: 0;
+		display: block;
+		margin-right: 0;
+		margin-bottom: 0;
 	}
 	#menu-primary .sub-menu-toggle {
 		display: none;
@@ -570,8 +574,10 @@ button:hover {
 		margin-bottom: .5em;
 	}
 	#menu-primary .sub-menu .menu-item {
+		padding-right: 0;
 		padding-left: 1em;
 		border: 0;
+		white-space: inherit;
 	}
 	#menu-primary .sub-menu .menu-item a {
 		display: inline-block;
@@ -840,6 +846,10 @@ button:hover {
 #commentform label {
 	font-size: .9em;
 }
+
+/**
+ * Accessibility
+ */
 
 /* Text meant only for screen readers. */
 .screen-reader-text {

@@ -84,13 +84,6 @@ function marianneExpandMobileMenu( el ) {
 }
 
 ( function ( $ ) {
-	/**
-	 * Toogle the menu on click on small screens.
-	 */
-	$( '#menu-mobile-button' ).click( function () {
-		$( '#menu-primary-container' ).slideToggle( 200 );
-	});
-
 	var menu_elements = $( '#menu-primary .menu-item' );
 	menu_elements.each( function ( el, item ) {
 		$( item ).children( 'a' ).attr( 'role', 'menu-item' );
@@ -102,11 +95,11 @@ function marianneExpandMobileMenu( el ) {
 	 *
 	 * @param {Element} id - The id of the primary menu.
 	 */
+	var id = '#menu-primary';
+
+	id += ' ';
+
 	if ( window.matchMedia( "(min-width: 500px)" ).matches ) {
-		var id = '#menu-primary';
-
-		id += ' ';
-
 		// On hover, set the aria-expanded attribute to true.
 		$( id + '.menu-item-has-children' ).hover( function () {
 			$( this ).find( '.sub-menu-toggle' ).attr( 'aria-expanded', 'true' );
@@ -139,8 +132,16 @@ function marianneExpandMobileMenu( el ) {
 		});
 
 	} else {
-		$( id + '.sub-menu-toggle' ).removeAttr( 'aria-haspopup' ).removeAttr( 'aria-expanded' );
+		$( id + '.sub-menu-toggle' ).remove();
 		$( '#menu-mobile-button' ).attr( 'aria-haspopup', 'true' ).attr( 'aria-expanded', 'false' );
+
+		// When esc key is pressed, hide menu.
+		document.addEventListener( 'keydown', function( event ) {
+			var escKey = event.keyCode === 27;
+			if ( escKey ) {
+				$( '#menu-mobile-button' ).attr( 'aria-expanded', 'false' );
+			}
+		});
 	}
 
 } )( jQuery );
