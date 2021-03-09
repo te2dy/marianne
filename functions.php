@@ -96,10 +96,10 @@ if ( ! function_exists( 'marianne_environment_type' ) ) {
 	 * @return string The environment type.
 	 */
 	function marianne_environment_type() {
-		$environment_type = 'production';
-
 		if ( function_exists( 'wp_get_environment_type' ) ) {
 			$environment_type = wp_get_environment_type();
+		} else {
+			$environment_type = 'production';
 		}
 
 		return $environment_type;
