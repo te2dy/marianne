@@ -23,6 +23,7 @@ It is the perfect theme for writers, journalists and intellectuals who want to p
 - Fixed: keyboard navigation not working.
 - Fixed: missing translatable string.
 - Fixed: missing prefixes in functions.php.
+- Updated: screenshot & credits.
 - Updated: French translation.
 - Updated: marianne_environment_type() function.
 
