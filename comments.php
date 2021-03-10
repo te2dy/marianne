@@ -28,15 +28,11 @@ if ( post_password_required() ) {
 		<?php
 		$marianne_comments_number = absint( get_comments_number() );
 
-		if ( ! have_comments() ) {
-			$marianne_comment_title = _x( 'Leave a comment', 'Comments title', 'marianne' );
-		} else {
-			$marianne_comment_title = sprintf(
-				/* translators: %s: comment count number. */
-				_nx( '%s comment', '%s comments', $marianne_comments_number, 'Comments title', 'marianne' ),
-				number_format_i18n( $marianne_comments_number )
-			);
-		}
+		$marianne_comment_title = sprintf(
+			/* translators: %s: comment count number. */
+			_nx( '%s comment', '%s comments', $marianne_comments_number, 'Comments title', 'marianne' ),
+			number_format_i18n( $marianne_comments_number )
+		);
 		?>
 
 		<h3 class="comments-title"><?php echo esc_html( $marianne_comment_title ); ?></h3>
