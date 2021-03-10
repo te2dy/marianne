@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marianne\n"
-"POT-Creation-Date: 2021-03-09 11:55+0100\n"
-"PO-Revision-Date: 2021-03-10 12:34+0100\n"
+"POT-Creation-Date: 2021-03-10 12:44+0100\n"
+"PO-Revision-Date: 2021-03-10 12:48+0100\n"
 "Last-Translator: \n"
 "Language-Team: Teddy\n"
 "Language: fr_FR\n"
@@ -19,12 +19,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: comments.php:32
-msgctxt "Comments title"
-msgid "Leave a comment"
-msgstr "Laisser un commentaire"
-
-#: comments.php:36
+#: comments.php:33
 #, php-format
 msgctxt "Comments title"
 msgid "%s comment"
@@ -32,12 +27,12 @@ msgid_plural "%s comments"
 msgstr[0] "%s commentaire"
 msgstr[1] "%s commentaires"
 
-#: comments.php:47
+#: comments.php:43
 msgctxt "Comments pagination"
 msgid "Older comments&rsaquo;"
 msgstr "Commentaires plus anciens &rsaquo;"
 
-#: comments.php:48
+#: comments.php:44
 msgctxt "Comments pagination"
 msgid "&lsaquo;Newer comments"
 msgstr "&lsaquo; Commentaires plus récents"
@@ -124,3 +119,7 @@ msgstr "Il n’y a rien ici"
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 "On dirait que rien n’a été trouvé ici. Essayez peut-être une recherche&nbsp;?"
+
+#~ msgctxt "Comments title"
+#~ msgid "Leave a comment"
+#~ msgstr "Laisser un commentaire"
