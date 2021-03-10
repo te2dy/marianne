@@ -224,8 +224,8 @@ function marianne_add_sub_menu_toggle( $output, $item, $depth, $args ) {
 		$output .= '<span class="screen-reader-text">' . esc_html__( 'Open submenu', 'marianne' ) . '</span>';
 		$output .= '</button>';
 	}
+
 	return $output;
-	
 }
 add_filter( 'walker_nav_menu_start_el', 'marianne_add_sub_menu_toggle', 10, 4 );
 
