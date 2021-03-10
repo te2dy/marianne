@@ -25,12 +25,7 @@ html {
 body {
 	background-color: #fff;
 	color: #000;
-
-	/* @https://systemfontstack.com/ */
-	/*font-family: "Iowan Old Style", "Apple Garamond", "Baskerville", "Times New Roman", "Droid Serif", Times, "Source Serif Pro", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	/*font-family: sans-serif;*/
-
 	font-size: 12pt;
 	margin: 0;
 }
