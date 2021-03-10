@@ -153,7 +153,7 @@ if ( ! function_exists( 'marianne_styles_scripts' ) ) {
 		 *
 		 * @since Marianne 1.2
 		 */
-		wp_enqueue_script( 'marianne-navigation', esc_url( get_template_directory_uri() . "/js/navigation$min.js" ), array( 'jquery' ), esc_attr( $theme_version ), true );
+		wp_enqueue_script( 'marianne-navigation', esc_url( get_template_directory_uri() . "/assets/js/navigation$min.js" ), array( 'jquery' ), esc_attr( $theme_version ), true );
 
 		// Threaded comment reply styles.
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -223,7 +223,7 @@ function marianne_add_sub_menu_toggle( $output, $item, $depth, $args ) {
 
 		// Add toggle button.
 		$output .= '<button class="sub-menu-toggle" aria-haspopup="true" aria-expanded="false" onClick="marianneExpandSubMenu(this)">';
-		$output .= '›';
+		$output .= '+';
 		$output .= '<span class="screen-reader-text">' . esc_html__( 'Open submenu', 'marianne' ) . '</span>';
 		$output .= '</button>';
 	}
