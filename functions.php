@@ -202,9 +202,6 @@ if ( ! function_exists( 'marianne_widgets' ) ) {
 	add_action( 'widgets_init', 'marianne_widgets' );
 }
 
-// Load required files.
-require_once get_template_directory() . '/inc/template-tags.php';
-
 /**
  * Add a button to top-level menu items that has sub-menus.
  * An icon is added using CSS depending on the value of aria-expanded.
@@ -231,3 +228,6 @@ function marianne_add_sub_menu_toggle( $output, $item, $depth, $args ) {
 	
 }
 add_filter( 'walker_nav_menu_start_el', 'marianne_add_sub_menu_toggle', 10, 4 );
+
+// Load required files.
+require_once get_template_directory() . '/inc/template-tags.php';
