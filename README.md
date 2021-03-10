@@ -10,14 +10,21 @@
 A minimal, lightweight and eco-friendy theme, perfect for writers.
 
 ## Description
-Marianne is a minimalist WordPress theme.
-It is mainly designed to make your content very readable and to minimize energy consumption of your visitors' device.
+Marianne is a minimalist WordPress theme. It is mainly designed to make your content very readable and to minimize energy consumption of your visitors' device.
 
-Marianne uses browser fonts and requires few resources.
-It uses minimal functionalities to focus on your texts.
-It is the perfect theme for writers, journalists and intellectuals who want to present their work.
+Marianne uses system fonts and requires few resources. It uses minimal functionalities to focus on your texts. It is the perfect theme for writers, journalists and intellectuals who want to present their work.
 
 ## Changelog
+
+**1.2.9 – March 10th, 2021**
+- Updated: Marianne now uses system fonts.
+- Updated: threaded comments style on mobile.
+- Updated: open submenu arrow icon to plus sign.
+- Updated: "tested up to" mention in readme & stylesheet files.
+- Fixed: redundant PHP statement in comments.php.
+- Fixed: comment meta alignment when avatars are hidden.
+- Updated: French translation files.
+- Moved: js folder to a new "assets" folder.
 
 **1.2.8 – March 9th, 2021**
 - Fixed: keyboard navigation not working.
