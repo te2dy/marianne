@@ -20,6 +20,9 @@ It is the perfect theme for writers, journalists and intellectuals who want to p
 
 == Changelog ==
 
+=== 1.2.10 – March 10th, 2021 ===
+- Fixed: unminified stylesheet.
+
 === 1.2.9 – March 10th, 2021 ===
 - Updated: Marianne now uses system fonts.
 - Updated: threaded comments style on mobile.

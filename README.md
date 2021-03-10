@@ -16,6 +16,9 @@ Marianne uses system fonts and requires few resources. It uses minimal functiona
 
 ## Changelog
 
+**1.2.10 – March 10th, 2021**
+- Fixed: unminified stylesheet.
+
 **1.2.9 – March 10th, 2021**
 - Updated: Marianne now uses system fonts.
 - Updated: threaded comments style on mobile.
