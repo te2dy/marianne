@@ -897,6 +897,9 @@ button:hover {
 		margin-left: -.5rem;
 		padding: .5rem;
 	}
+	.comment-list .parent .comment {
+		padding: .5em 0 0 .5em;
+	}
 }
 
 @media print {
