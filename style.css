@@ -679,7 +679,7 @@ button:focus {
 	border-left: 4px solid #595959;
 	display: inline-block;
 	padding-left: .25em;
-	margin: 0;
+	margin: 1em 0 .5em;
 }
 .post-title,
 .page-title {
