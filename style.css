@@ -378,17 +378,22 @@ input[type="checkbox"] {
 }
 input[type="submit"],
 button {
-	background-color: #000;
+	background-color: #eaeaea;
 	border: 1px solid #000;
-	color: #fff;
-	transition: all .2s ease-in-out;
+	color: inherit;
+	padding: .5em;
+	position: relative;
+	transition: all .2s ease-in-out .1s;
 }
 input[type="submit"]:hover,
-button:hover {
-	background-color: #fff;
-	color: #000;
+input[type="submit"]:focus,
+button:hover,
+button:focus {
+	background-color: transparent;
+	border-color: #0057B7;
+	color: #0057B7;
 	cursor: pointer;
-	transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out .1s;
 }
 .button-inline {
 	background-color: transparent;
@@ -671,11 +676,12 @@ button:hover {
 	margin: .5em 0;
 }
 .meta-sticky {
-	background-color: #000;
-	color: #fff;
+	background-color: #eaeaea;
+	color: inherit;
+	cursor: default;
 	display: inline-block;
 	margin: 0;
-	padding: .25rem;
+	padding: .25em;
 }
 .post-title,
 .page-title {
@@ -710,11 +716,13 @@ button:hover {
 	text-align: left;
 }
 .post-content a,
-.page-content a {
+.page-content,
+.comment-content a {
 	text-decoration: underline;
 }
 .post-content a:hover,
-.page-content a:hover {
+.page-content a:hover,
+.comment-content a:hover {
 	color: #0057B7;
 }
 .post-page-numbers {
