@@ -65,7 +65,7 @@ a {
 	transition: all .2s ease-in-out;
 }
 a:hover {
-	color: inherit;
+	color: #0057B7;
 	cursor: pointer;
 	text-decoration: inherit;
 	transition: all .2s ease-in-out;
@@ -75,9 +75,6 @@ figure {
 }
 .text-secondary {
 	color: #595959;
-}
-.text-secondary a:hover {
-	color: #000;
 }
 
 /* Titles */
@@ -450,8 +447,30 @@ button:hover {
 #menu-primary-container {
 	margin: 2em 0;
 }
+#menu-primary a:hover {
+	color: #000;
+}
 #menu-primary > .menu-item {
 	margin-bottom: .5em;
+}
+#menu-primary > .menu-item:not(.menu-item-has-children) > a {
+	position: relative;
+}
+#menu-primary > .menu-item:not(.menu-item-has-children) > a::before {
+	background-color: #0057B7;
+	content: "";
+	position: absolute;
+	top: 1.25em;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	visibility: hidden;
+	transition: all .2s ease-in-out .1s;
+}
+#menu-primary > .menu-item:not(.menu-item-has-children) > a:hover::before {
+	visibility: visible;
+	width: 100%;
 }
 #menu-primary .menu-item-has-children {
 	position: relative;
@@ -465,7 +484,6 @@ button:hover {
 	padding: 0;
 }
 #menu-primary .sub-menu {
-	border-left: 1px solid #aaa;
 	clip: rect(1px, 1px, 1px, 1px);
 	clip-path: inset(50%);
 	display: block;
@@ -694,6 +712,10 @@ button:hover {
 .post-content a,
 .page-content a {
 	text-decoration: underline;
+}
+.post-content a:hover,
+.page-content a:hover {
+	color: #0057B7;
 }
 .post-page-numbers {
 	border: 1px solid #aaa;
