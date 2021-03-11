@@ -77,6 +77,7 @@ if ( ! function_exists( 'marianne_setup' ) ) {
 				'comment-form',
 				'comment-list',
 				'gallery',
+				'navigation-widgets',
 				'script',
 				'search-form',
 				'style',
