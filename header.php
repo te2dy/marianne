@@ -31,33 +31,13 @@
 
 		<div id="page" class="site">
 			<header id="header" class="site-header" role="banner">
-				<?php if ( has_custom_logo() ) { ?>
-					<div class="site-logo">
-						<?php the_custom_logo(); ?>
-					</div>
-				<?php } ?>
-
 				<?php
+				marianne_logo();
+
 				marianne_site_title();
 
 				marianne_site_description();
-				?>
 
-				<button id="menu-mobile-button" onclick="marianneExpandMobileMenu(this)"><?php esc_html_e( 'Menu', 'marianne' ); ?></button>
-				<?php
-				if ( has_nav_menu( 'primary' ) ) {
-					wp_nav_menu(
-						array(
-							'container'            => 'nav',
-							'container_id'         => 'menu-primary-container',
-							'container_aria_label' => esc_attr( 'Primary menu', 'marianne' ),
-							'depth'                => 2,
-							'item_spacing'         => 'discard',
-							'menu_class'           => 'navigation-menu',
-							'menu_id'              => 'menu-primary',
-							'theme_location'       => 'primary',
-						)
-					);
-				}
+				marianne_menu_primary();
 				?>
 			</header>

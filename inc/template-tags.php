@@ -8,6 +8,21 @@
  * @since Marianne 1.0
  */
 
+if ( ! function_exists( 'marianne_logo' ) ) {
+	/**
+	 * The logo of the site.
+	 *
+	 * @return void
+	 */
+	function marianne_logo() {
+		if ( has_custom_logo() ) {
+			echo '<div class="site-logo">';
+			the_custom_logo();
+			echo '</div>';
+		}
+	}
+}
+
 if ( ! function_exists( 'marianne_site_title' ) ) {
 	/**
 	 * The title of the site
@@ -67,6 +82,32 @@ if ( ! function_exists( 'marianne_site_description' ) ) {
 		<?php endif; ?>
 
 		<?php
+	}
+}
+
+if ( ! function_exists( 'marianne_menu_primary' ) ) {
+	/**
+	 * The primary menu of the site.
+	 *
+	 * @return void
+	 */
+	function marianne_menu_primary() {
+		echo '<button id="menu-mobile-button" onclick="marianneExpandMobileMenu(this)">' . esc_html__( 'Menu', 'marianne' ) . '</button>';
+
+		if ( has_nav_menu( 'primary' ) ) {
+			wp_nav_menu(
+				array(
+					'container'            => 'nav',
+					'container_id'         => 'menu-primary-container',
+					'container_aria_label' => esc_attr( 'Primary menu', 'marianne' ),
+					'depth'                => 2,
+					'item_spacing'         => 'discard',
+					'menu_class'           => 'navigation-menu',
+					'menu_id'              => 'menu-primary',
+					'theme_location'       => 'primary',
+				)
+			);
+		}
 	}
 }
 
