@@ -20,6 +20,13 @@ It is the perfect theme for writers, journalists and intellectuals who want to p
 
 == Changelog ==
 
+=== 1.2.11 – March 11th, 2021 ===
+- Fixed: missing aria role for menus.
+- Updated: link and button style for accessibility.
+- Updated: sticky label style.
+- Updated: screenshot.
+- Updated: header functions for futur Theme Customizer.
+
 === 1.2.10 – March 10th, 2021 ===
 - Fixed: unminified stylesheet.
 

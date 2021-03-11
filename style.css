@@ -4,7 +4,7 @@ Author: Teddy
 Author URI: https://chezteddy.fr/
 Description: A minimal, lightweight and eco-friendy theme, perfect for writers.
 Tags: blog, one-column, custom-logo, custom-menu, featured-images, sticky-post, threaded-comments, translation-ready, wide-blocks
-Version: 1.2.10
+Version: 1.2.11
 Requires at least: 5.3
 Tested up to: 5.7
 Requires PHP: 5.2
@@ -416,6 +416,9 @@ button:focus {
 	margin-right: .5rem;
 	padding-right: .5rem;
 }
+.navigation-menu .menu-item a {
+	display: inline-block;
+}
 .navigation-menu .menu-item:first-child {
 	margin-left: 0;
 }
@@ -555,13 +558,17 @@ button:focus {
 		margin-top: .5em;
 		padding-left: .5em;
 	}
-	#menu-primary a {
-		display: block;
+	#menu-primary > .menu-item:not(.menu-item-has-children) > a:hover::before {
+		visibility: hidden;
 	}
 	#menu-primary .menu-item {
 		border: 0;
 		display: block;
 		margin-right: 0;
+	}
+	#menu-primary .menu-item a:hover,
+	#menu-primary .menu-item a:focus {
+		color: #0057B7;
 	}
 	#menu-primary .menu-item:last-of-type {
 		border: 0;
@@ -582,8 +589,6 @@ button:focus {
 		position: relative;
 		width: auto;
 	}
-	#menu-primary .menu-item-has-children:hover .sub-menu,
-	#menu-primary .menu-item-has-children:focus .sub-menu,
 	#menu-primary .menu-item-has-children .sub-menu-toggle[aria-expanded="true"] ~ .sub-menu {
 		background-color: transparent;
 		padding: 0;
@@ -612,7 +617,7 @@ button:focus {
 	#menu-primary .sub-menu > .menu-item > a:hover,
 	#menu-primary .sub-menu > .menu-item > a:focus {
 		background-color: transparent;
-		color: #000;
+		color: #0057B7;
 	}
 }
 
@@ -714,7 +719,7 @@ button:focus {
 	text-align: left;
 }
 .post-content a,
-.page-content,
+.page-content a,
 .comment-content a {
 	text-decoration: underline;
 }
