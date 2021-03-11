@@ -13,7 +13,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry-single' ); ?>>
 	<header class="entry-header">
 		<?php if ( is_sticky() ) : ?>
-			<div class="entry-meta meta-sticky">
+			<div class="entry-meta meta-sticky text-secondary">
 				<?php esc_html_e( 'Sticky post', 'marianne' ); ?>
 			</div>
 		<?php endif; ?>
