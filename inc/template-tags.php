@@ -99,12 +99,12 @@ if ( ! function_exists( 'marianne_menu_primary' ) ) {
 
 			wp_nav_menu(
 				array(
-					'container'            => '',
-					'depth'                => 2,
-					'item_spacing'         => 'discard',
-					'menu_class'           => 'navigation-menu',
-					'menu_id'              => 'menu-primary',
-					'theme_location'       => 'primary',
+					'container'      => '',
+					'depth'          => 2,
+					'item_spacing'   => 'discard',
+					'menu_class'     => 'navigation-menu',
+					'menu_id'        => 'menu-primary',
+					'theme_location' => 'primary',
 				)
 			);
 

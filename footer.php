@@ -39,11 +39,11 @@
 
 					wp_nav_menu(
 						array(
-							'container'       => '',
-							'depth'           => 1,
-							'menu_class'      => 'navigation-menu',
-							'menu_id'         => 'menu-footer',
-							'theme_location'  => 'footer',
+							'container'      => '',
+							'depth'          => 1,
+							'menu_class'     => 'navigation-menu',
+							'menu_id'        => 'menu-footer',
+							'theme_location' => 'footer',
 						)
 					);
 
