@@ -95,11 +95,11 @@ if ( ! function_exists( 'marianne_menu_primary' ) ) {
 		echo '<button id="menu-mobile-button" onclick="marianneExpandMobileMenu(this)">' . esc_html__( 'Menu', 'marianne' ) . '</button>';
 
 		if ( has_nav_menu( 'primary' ) ) {
+			echo '<nav id="menu-primary-container" role="navigation" aria-label="' . esc_attr__( 'Primary menu', 'marianne' ) . '">';
+
 			wp_nav_menu(
 				array(
-					'container'            => 'nav',
-					'container_id'         => 'menu-primary-container',
-					'container_aria_label' => esc_attr( 'Primary menu', 'marianne' ),
+					'container'            => '',
 					'depth'                => 2,
 					'item_spacing'         => 'discard',
 					'menu_class'           => 'navigation-menu',
@@ -107,6 +107,8 @@ if ( ! function_exists( 'marianne_menu_primary' ) ) {
 					'theme_location'       => 'primary',
 				)
 			);
+
+			echo '</nav>';
 		}
 	}
 }

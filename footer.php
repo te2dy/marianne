@@ -35,17 +35,19 @@
 
 				<?php
 				if ( has_nav_menu( 'footer' ) ) {
+					echo '<nav id="menu-footer-container" class="site-footer-block" role="navigation" aria-label="' . esc_attr__( 'Footer menu', 'marianne' ) . '">';
+
 					wp_nav_menu(
 						array(
-							'container'       => 'nav',
-							'container_id'    => 'menu-footer-container',
-							'container_class' => 'site-footer-block',
+							'container'       => '',
 							'depth'           => 1,
 							'menu_class'      => 'navigation-menu',
 							'menu_id'         => 'menu-footer',
 							'theme_location'  => 'footer',
 						)
 					);
+
+					echo '</nav>';
 				}
 				?>
 
