@@ -295,7 +295,7 @@ if ( ! function_exists( 'marianne_the_post_thumbnail' ) ) {
 						<a href="<?php the_permalink(); ?>">
 					<?php endif; ?>
 
-					<?php the_post_thumbnail(); ?>
+					<?php the_post_thumbnail( 'marianne-thumbnails' ); ?>
 
 					<?php if ( in_array( 'link', $options, true ) ) : ?>
 						</a>

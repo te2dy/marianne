@@ -64,7 +64,7 @@ if ( ! function_exists( 'marianne_setup' ) ) {
 		 * @since Marianne 1.1
 		 */
 		add_theme_support( 'post-thumbnails' );
-		set_post_thumbnail_size( 480, 360 );
+		add_image_size( 'marianne-thumbnails', 480 );
 
 		// Add support for responsive oEmbed content.
 		add_theme_support( 'responsive-embeds' );
