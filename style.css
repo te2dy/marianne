@@ -680,7 +680,7 @@ button:focus {
 	font-size: .9em;
 	margin: .5em 0;
 }
-.meta-sticky {
+.entry-sticky {
 	border-left: 4px solid #595959;
 	display: inline-block;
 	padding-left: .25em;
@@ -706,7 +706,7 @@ button:focus {
 /**
  * Posts
  */
-.post-date {
+.entry-date {
 	display: block;
 }
 .post-excerpt {

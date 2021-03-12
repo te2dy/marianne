@@ -19,7 +19,7 @@
 		<?php endif; ?>
 
 		<?php
-		marianne_the_date( 'entry-meta post-date text-secondary' );
+		marianne_the_date( 'entry-meta entry-date text-secondary' );
 
 		marianne_the_categories( 'entry-meta text-secondary' );
 

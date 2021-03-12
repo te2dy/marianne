@@ -121,7 +121,7 @@ if ( ! function_exists( 'marianne_the_date' ) ) {
 	 *
 	 * @return void
 	 */
-	function marianne_the_date( $class = 'post-date' ) {
+	function marianne_the_date( $class = 'entry-date' ) {
 		?>
 			<time class="<?php echo esc_attr( $class ); ?>" datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>">
 				<?php echo esc_html( get_the_date() ); ?>
