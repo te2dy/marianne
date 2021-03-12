@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marianne\n"
-"POT-Creation-Date: 2021-03-10 12:44+0100\n"
-"PO-Revision-Date: 2021-03-10 19:07+0100\n"
+"POT-Creation-Date: 2021-03-12 11:08+0100\n"
+"PO-Revision-Date: 2021-03-12 11:09+0100\n"
 "Last-Translator: \n"
 "Language-Team: Teddy\n"
 "Language: fr_FR\n"
@@ -47,6 +47,10 @@ msgctxt "Site footer text"
 msgid "%1$s is proudly powered by %2$s and %3$s"
 msgstr "%1$s est fièrement propulsé par %2$s et %3$s"
 
+#: footer.php:38
+msgid "Footer menu"
+msgstr "Menu du pied de page"
+
 #: functions.php:54
 msgid "Primary Menu"
 msgstr "Menu principal"
@@ -55,11 +59,11 @@ msgstr "Menu principal"
 msgid "Footer Menu"
 msgstr "Menu du pied de page"
 
-#: functions.php:192
+#: functions.php:193
 msgid "Widgets"
 msgstr "Widgets"
 
-#: functions.php:227
+#: functions.php:225
 msgid "Open submenu"
 msgstr "Ouvrir le sous-menu"
 
@@ -67,11 +71,15 @@ msgstr "Ouvrir le sous-menu"
 msgid "Skip to content"
 msgstr "Aller au contenu"
 
-#: header.php:46
+#: inc/template-tags.php:95
 msgid "Menu"
 msgstr "Menu"
 
-#: inc/template-tags.php:126
+#: inc/template-tags.php:98
+msgid "Primary menu"
+msgstr "Menu principal"
+
+#: inc/template-tags.php:169
 #, php-format
 msgctxt "Link to comments"
 msgid "%d comment"
@@ -79,11 +87,11 @@ msgid_plural "%d comments"
 msgstr[0] "%d commentaire"
 msgstr[1] "%d commentaires"
 
-#: inc/template-tags.php:158
+#: inc/template-tags.php:201
 msgid "&lsaquo; Previous page"
 msgstr "&lsaquo; Page précédente"
 
-#: inc/template-tags.php:164
+#: inc/template-tags.php:207
 msgid "Next page &rsaquo;"
 msgstr "Page suivante &rsaquo;"
 
