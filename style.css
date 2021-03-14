@@ -64,7 +64,8 @@ a {
 	text-decoration: none;
 	transition: all .2s ease-in-out;
 }
-a:hover {
+a:hover,
+a:focus {
 	color: #0057B7;
 	cursor: pointer;
 	text-decoration: inherit;
@@ -455,16 +456,17 @@ button:focus {
 #menu-primary-container {
 	margin: 2em 0;
 }
-#menu-primary a:hover {
+#menu-primary a:hover,
+#menu-primary a:focus {
 	color: #000;
 }
 #menu-primary > .menu-item {
 	margin-bottom: .5em;
 }
-#menu-primary > .menu-item:not(.menu-item-has-children) > a {
+#menu-primary > .menu-item > a {
 	position: relative;
 }
-#menu-primary > .menu-item:not(.menu-item-has-children) > a::before {
+#menu-primary > .menu-item > a::before {
 	background-color: #0057B7;
 	content: "";
 	position: absolute;
@@ -476,7 +478,8 @@ button:focus {
 	visibility: hidden;
 	transition: all .2s ease-in-out .1s;
 }
-#menu-primary > .menu-item:not(.menu-item-has-children) > a:hover::before {
+#menu-primary > .menu-item:not(.menu-item-has-children) > a:hover::before,
+#menu-primary > .menu-item > a:focus::before {
 	visibility: visible;
 	width: 100%;
 }
