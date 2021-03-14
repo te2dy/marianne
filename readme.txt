@@ -20,6 +20,12 @@ It is the perfect theme for writers, journalists and intellectuals who want to p
 
 == Changelog ==
 
+=== 1.2.12 – March 14th, 2021 ===
+- Fixed: thumbnails in portrait format were too small.
+- Fixed: links didn't have the same style on hover and focus.
+- Updated: French translation files.
+- Updated: some style property names.
+
 === 1.2.11 – March 11th, 2021 ===
 - Fixed: missing aria role for menus.
 - Updated: link and button style for accessibility.
