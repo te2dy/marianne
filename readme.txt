@@ -20,6 +20,9 @@ It is the perfect theme for writers, journalists and intellectuals who want to p
 
 == Changelog ==
 
+=== 1.2.14 – March 15th, 2021 ===
+- Fixed: unwanted message in the console.
+
 === 1.2.13 – March 15th, 2021 ===
 - Fixed: menu accessibility on Chrome.
 - Updated: sticky post style in the loop.

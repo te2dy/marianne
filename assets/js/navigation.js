@@ -101,7 +101,6 @@ function marianneExpandMobileMenu( el ) {
 
 		// On screen wider than 500px.
 		if ( ! window.matchMedia( '(max-width: 500px)' ).matches && ! window.matchMedia( '(hover: none)' ).matches ) {
-			console.log( 'test' );
 
 			// Reset if the mobile menu was first displayed.
 			if ( ! $( id + '.sub-menu-toggle' ).attr( 'aria-haspopup' ) || ! $( id + '.sub-menu-toggle' ).attr( 'aria-expended' ) ) {

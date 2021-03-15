@@ -16,6 +16,9 @@ Marianne uses system fonts and requires few resources. It uses minimal functiona
 
 ## Changelog
 
+**1.2.14 – March 15th, 2021**
+- Fixed: unwanted message in the console.
+
 **1.2.13 – March 15th, 2021**
 - Fixed: menu accessibility on Chrome.
 - Updated: sticky post style in the loop.
