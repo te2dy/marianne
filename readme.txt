@@ -26,6 +26,7 @@ It is the perfect theme for writers, journalists and intellectuals who want to p
 === 1.2.13 – March 15th, 2021 ===
 - Fixed: menu accessibility on Chrome.
 - Updated: sticky post style in the loop.
+- Updated: screenshot.png.
 
 === 1.2.12 – March 14th, 2021 ===
 - Fixed: thumbnails in portrait format were too small.
@@ -37,7 +38,7 @@ It is the perfect theme for writers, journalists and intellectuals who want to p
 - Fixed: missing aria role for menus.
 - Updated: link and button style for accessibility.
 - Updated: sticky label style.
-- Updated: screenshot.
+- Updated: screenshot.png.
 - Updated: header functions for futur Theme Customizer.
 
 === 1.2.10 – March 10th, 2021 ===
