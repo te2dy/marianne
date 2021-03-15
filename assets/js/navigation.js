@@ -100,12 +100,10 @@ function marianneExpandMobileMenu( el ) {
 		var id = $id + ' ';
 
 		// On screen wider than 500px.
-		if ( window.matchMedia( "(min-width: 500px)" ).matches ) {
+		if ( ! window.matchMedia( '(max-width: 500px)' ).matches && ! window.matchMedia( '(hover: none)' ).matches ) {
+			console.log( 'test' );
 
 			// Reset if the mobile menu was first displayed.
-			if ( ! $( id + '.sub-menu-toggle' ).is( ':visible' ) ) {
-				$( id + '.sub-menu-toggle' ).css( 'display', 'inline-block' );
-			}
 			if ( ! $( id + '.sub-menu-toggle' ).attr( 'aria-haspopup' ) || ! $( id + '.sub-menu-toggle' ).attr( 'aria-expended' ) ) {
 				$( id + '.sub-menu-toggle' ).attr( 'aria-haspopup', 'true' );
 				$( id + '.sub-menu-toggle' ).attr( 'aria-expanded', 'false' );
@@ -159,7 +157,6 @@ function marianneExpandMobileMenu( el ) {
 		} else {
 			$( id + '.sub-menu-toggle' ).removeAttr( 'aria-haspopup' );
 			$( id + '.sub-menu-toggle' ).removeAttr( 'aria-expanded' );
-			$( id + '.sub-menu-toggle' ).hide();
 
 			$( '#menu-mobile-button' ).attr( 'aria-haspopup', 'true' ).attr( 'aria-expanded', 'false' );
 
