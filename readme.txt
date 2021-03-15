@@ -20,6 +20,10 @@ It is the perfect theme for writers, journalists and intellectuals who want to p
 
 == Changelog ==
 
+=== 1.2.13 – March 15th, 2021 ===
+- Fixed: menu accessibility on Chrome.
+- Updated: sticky post style in the loop.
+
 === 1.2.12 – March 14th, 2021 ===
 - Fixed: thumbnails in portrait format were too small.
 - Fixed: links didn't have the same style on hover and focus.
