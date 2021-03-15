@@ -632,9 +632,11 @@ button:focus {
 }
 .entry-loop.sticky {
 	border: 1px solid #aaa;
+	padding: 1rem;
+}
+.entry-loop.sticky figure {
 	margin-right: -1rem;
 	margin-left: -1rem;
-	padding: 1rem;
 }
 .loop-header {
 	margin-bottom: 1em;
