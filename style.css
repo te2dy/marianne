@@ -306,7 +306,6 @@ figure {
 }
 img {
 	border-style: none; /* @source normalize.css */
-	display: block;
 	height: auto;
 	max-width: 100%;
 }
@@ -848,6 +847,25 @@ button:focus {
  */
 .site-secondary section {
 	margin: 2em 0;
+}
+
+/* RSS */
+.widget_rss li {
+	margin-bottom: 1em;
+}
+.widget_rss li:last-child {
+	margin-bottom: 0;
+}
+.rsswidget {
+	font-weight: 700;
+}
+.rss-date {
+	color: #595959;
+	font-size: .9em;
+}
+.rssSummary {
+	font-style: italic;
+	margin: .5em 0;
 }
 
 /* Calendar */
