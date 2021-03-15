@@ -542,7 +542,12 @@ button:focus {
 	display: none;
 }
 
-@media (hover: none) or (max-width: 500px) {
+@media (hover: none), (max-width: 500px) {
+	#menu-primary > .menu-item:not(.menu-item-has-children) > a:hover::before,
+	#menu-primary > .menu-item > a:focus::before {
+		visibility: hidden;
+		width: 100%;
+	}
 	.navigation-menu .menu-item {
 		margin-bottom: 0;
 	}
@@ -928,6 +933,10 @@ button:focus {
 		margin-right: -.5rem;
 		margin-left: -.5rem;
 		padding: .5rem;
+	}
+	.entry-loop.sticky figure {
+		margin-right: -.5rem;
+		margin-left: -.5rem;
 	}
 	.comment-list .parent .comment {
 		padding: .5em 0 0 .5em;
