@@ -1,0 +1,41 @@
+# Marianne Theme for WordPress
+
+- Contributors: Teddy
+- Requires at least: 5.3
+- Tested up to: 5.6.1
+- Requires PHP: 5.2
+- License: GPLv3 or later
+- License URI: https://www.gnu.org/licenses/gpl-3.0.html
+
+A minimal, lightweight and eco-friendy theme, perfect for writers.
+
+## Description
+Marianne is a minimalist WordPress theme. It is mainly designed to make your content very readable and to minimize energy consumption of your visitors' device.
+
+Marianne uses system fonts and requires few resources. It uses minimal functionalities to focus on your texts. It is the perfect theme for writers, journalists and intellectuals who want to present their work.
+
+## Copyright
+Marianne WordPress Theme, 2020 Teddy
+Marianne is distributed under the terms of the GNU GPL.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+Marianne is based on the work of:
+- Twenty Twenty-One WordPress Theme, 2020 WordPress.org
+  Twenty Twenty-One is distributed under the terms of the GNU GPL.
+- [neptune Wordpress Theme](https://github.com/neptune-greentech/neptune), 2020 Kairos Agency
+  neptune is distributed under the terms of the MIT License
+
+Normalizing styles have been helped along thanks to [the fine work of
+Nicolas Gallagher and Jonathan Neal](https://necolas.github.io/normalize.css/)
+
+Screenshot image: [apple-desk-laptop-macbook-pro](https://www.flickr.com/photos/137643065@N06/23699397893), by pixellaphoto
+License: [CC0 1.0 Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/)
