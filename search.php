@@ -70,7 +70,7 @@ get_header();
 
 				<div class="archive-description">
 					<p>
-						<?php esc_html_e( 'No results', 'marianne' ); ?>
+						<?php esc_html_e( 'No results.', 'marianne' ); ?>
 					</p>
 				</div>
 			</header>
@@ -90,5 +90,6 @@ get_header();
 
 	<?php get_sidebar(); ?>
 </div>
+
 <?php
 get_footer();

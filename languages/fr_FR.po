@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marianne\n"
-"POT-Creation-Date: 2021-03-17 10:41+0100\n"
-"PO-Revision-Date: 2021-03-17 12:34+0100\n"
+"POT-Creation-Date: 2021-03-17 12:57+0100\n"
+"PO-Revision-Date: 2021-03-17 12:57+0100\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -20,6 +20,71 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
+#. translators: %d: comment count number.
+#: comments.php:34 inc/template-tags.php:169
+#, php-format
+msgid "%d comment"
+msgid_plural "%d comments"
+msgstr[0] "%d commentaire"
+msgstr[1] "%d commentaires"
+
+#: comments.php:45
+msgid "Older comments &rsaquo;"
+msgstr "Commentaires plus anciens &rsaquo;"
+
+#: comments.php:46
+msgid "&lsaquo; Newer comments"
+msgstr "&lsaquo; Commentaires plus récents"
+
+#: footer.php:19
+msgid "https://wordpress.org/"
+msgstr "https://fr.wordpress.org/"
+
+#. translators: $1%s: WordPress. $2%s: Marianne
+#: footer.php:28
+#, php-format
+msgctxt "Site footer text"
+msgid "%1$s is proudly powered by %2$s and %3$s"
+msgstr "%1$s est fièrement propulsé par %2$s et %3$s"
+
+#: footer.php:38 functions.php:55
+msgid "Footer Menu"
+msgstr "Menu du pied de page"
+
+#: functions.php:54 inc/template-tags.php:96
+msgid "Primary Menu"
+msgstr "Menu principal"
+
+#: functions.php:193
+msgid "Widgets"
+msgstr "Widgets"
+
+#: functions.php:225
+msgid "Open submenu"
+msgstr "Ouvrir le sous-menu"
+
+#: header.php:29
+msgid "Skip to content"
+msgstr "Aller au contenu"
+
+#: inc/template-tags.php:98
+msgid "Menu"
+msgstr "Menu"
+
+#: inc/template-tags.php:201
+msgid "&lsaquo; Previous page"
+msgstr "&lsaquo; Page précédente"
+
+#: inc/template-tags.php:207
+msgid "Next page &rsaquo;"
+msgstr "Page suivante &rsaquo;"
+
+#. translators: %s: search term.
+#: search.php:22 search.php:65
+#, php-format
+msgid "Search for \"%s\""
+msgstr "Recherche de «&nbsp;%s&nbsp;»"
+
 #: search.php:35
 #, php-format
 msgid "%d result found:"
@@ -27,96 +92,23 @@ msgid_plural "%d results found:"
 msgstr[0] "%d résultat trouvé&nbsp;:"
 msgstr[1] "%d résultats trouvés&nbsp;:"
 
-#: inc/template-tags.php:201
-msgid "&lsaquo; Previous page"
-msgstr "&lsaquo; Page précédente"
-
-#: comments.php:44
-msgctxt "Comments pagination"
-msgid "&lsaquo;Newer comments"
-msgstr "&lsaquo; Commentaires plus récents"
-
-#: comments.php:43
-msgctxt "Comments pagination"
-msgid "Older comments&rsaquo;"
-msgstr "Commentaires plus anciens &rsaquo;"
-
-#: comments.php:33
-#, php-format
-msgctxt "Comments title"
-msgid "%s comment"
-msgid_plural "%s comments"
-msgstr[0] "%s commentaire"
-msgstr[1] "%s commentaires"
-
-#: footer.php:38 functions.php:55
-msgid "Footer Menu"
-msgstr "Menu du pied de page"
-
-#: footer.php:19
-msgid "https://wordpress.org/"
-msgstr "https://fr.wordpress.org/"
-
-#: template-parts/content-none.php:22
-msgid "It looks like nothing was found at this location. Maybe try a search?"
-msgstr ""
-"On dirait que rien n’a été trouvé ici. Essayez peut-être une recherche&nbsp;?"
-
-#: inc/template-tags.php:169
-#, php-format
-msgctxt "Link to comments"
-msgid "%d comment"
-msgid_plural "%d comments"
-msgstr[0] "%d commentaire"
-msgstr[1] "%d commentaires"
+#: search.php:73
+msgid "No results."
+msgstr "Aucun résultat."
 
 #: search.php:81
 msgid "Maybe try a search?"
 msgstr "Peut-être devriez-vous tenter une recherche&nbsp;?"
 
-#: inc/template-tags.php:95
-msgid "Menu"
-msgstr "Menu"
-
-#: inc/template-tags.php:207
-msgid "Next page &rsaquo;"
-msgstr "Page suivante &rsaquo;"
-
-#: search.php:73
-msgid "No results"
-msgstr "Aucun résultat"
+#: template-parts/content-loop.php:17 template-parts/content-single.php:17
+msgid "Sticky post"
+msgstr "Article sélectionné"
 
 #: template-parts/content-none.php:16
 msgid "Nothing here"
 msgstr "Il n’y a rien ici"
 
-#: functions.php:225
-msgid "Open submenu"
-msgstr "Ouvrir le sous-menu"
-
-#: functions.php:54 inc/template-tags.php:98
-msgid "Primary Menu"
-msgstr "Menu principal"
-
-#: search.php:22 search.php:65
-#, php-format
-msgid "Search for \"%s\""
-msgstr "Recherche de «&nbsp;%s&nbsp;»"
-
-#: footer.php:28
-#, php-format
-msgctxt "Site footer text"
-msgid "%1$s is proudly powered by %2$s and %3$s"
-msgstr "%1$s est fièrement propulsé par %2$s et %3$s"
-
-#: header.php:29
-msgid "Skip to content"
-msgstr "Aller au contenu"
-
-#: template-parts/content-loop.php:17 template-parts/content-single.php:17
-msgid "Sticky post"
-msgstr "Article sélectionné"
-
-#: functions.php:193
-msgid "Widgets"
-msgstr "Widgets"
+#: template-parts/content-none.php:22
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+"On dirait que rien n’a été trouvé ici. Essayez peut-être une recherche&nbsp;?"

@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: "
 "Marianne\n"
 "POT-Creation-Date: "
-"2021-03-17 10:50+0100\n"
+"2021-03-17 12:57+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Teddy\n"
 "Language-Team: Teddy\n"
@@ -41,26 +41,22 @@ msgstr ""
 "X-Poedit-"
 "SearchPath-0: .\n"
 
-#: comments.php:33
+#: comments.php:34
+#: inc/template-tags.php:169
 #, php-format
-msgctxt "Comments title"
-msgid "%s comment"
-msgid_plural "%s comments"
+msgid "%d comment"
+msgid_plural "%d comments"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:43
-msgctxt ""
-"Comments pagination"
+#: comments.php:45
 msgid ""
-"Older comments&rsaquo;"
+"Older comments &rsaquo;"
 msgstr ""
 
-#: comments.php:44
-msgctxt ""
-"Comments pagination"
+#: comments.php:46
 msgid ""
-"&lsaquo;Newer comments"
+"&lsaquo; Newer comments"
 msgstr ""
 
 #: footer.php:19
@@ -82,7 +78,7 @@ msgid "Footer Menu"
 msgstr ""
 
 #: functions.php:54
-#: inc/template-tags.php:98
+#: inc/template-tags.php:96
 msgid "Primary Menu"
 msgstr ""
 
@@ -98,17 +94,9 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/template-tags.php:95
+#: inc/template-tags.php:98
 msgid "Menu"
 msgstr ""
-
-#: inc/template-tags.php:169
-#, php-format
-msgctxt "Link to comments"
-msgid "%d comment"
-msgid_plural "%d comments"
-msgstr[0] ""
-msgstr[1] ""
 
 #: inc/template-tags.php:201
 msgid ""
@@ -134,7 +122,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: search.php:73
-msgid "No results"
+msgid "No results."
 msgstr ""
 
 #: search.php:81

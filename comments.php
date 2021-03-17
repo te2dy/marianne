@@ -29,8 +29,10 @@ if ( post_password_required() ) {
 		$marianne_comments_number = absint( get_comments_number() );
 
 		$marianne_comment_title = sprintf(
-			/* translators: %s: comment count number. */
-			_nx( '%s comment', '%s comments', $marianne_comments_number, 'Comments title', 'marianne' ),
+			esc_html(
+				/* translators: %d: comment count number. */
+				_n( '%d comment', '%d comments', $marianne_comments_number, 'marianne' )
+			),
 			number_format_i18n( $marianne_comments_number )
 		);
 		?>
@@ -40,8 +42,8 @@ if ( post_password_required() ) {
 		<?php
 		// Displays pagination for comments.
 		$marianne_nav_args = array(
-			'prev_text' => esc_html_x( 'Older comments&rsaquo;', 'Comments pagination', 'marianne' ),
-			'next_text' => esc_html_x( '&lsaquo;Newer comments', 'Comments pagination', 'marianne' ),
+			'prev_text' => esc_html__( 'Older comments &rsaquo;', 'marianne' ),
+			'next_text' => esc_html__( '&lsaquo; Newer comments', 'marianne' ),
 		);
 		the_comments_navigation( $marianne_nav_args );
 		?>

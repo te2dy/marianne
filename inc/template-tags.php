@@ -165,8 +165,8 @@ if ( ! function_exists( 'marianne_loop_comments' ) ) {
 				<a href="<?php echo esc_url( get_comments_link() ); ?>">
 					<?php
 					printf(
-						/* translators: $d: Comment count number */
-						esc_html( _nx( '%d comment', '%d comments', absint( $comments_number ), 'Link to comments', 'marianne' ) ),
+						/* translators: %d: comment count number. */
+						esc_html( _n( '%d comment', '%d comments', absint( $comments_number ), 'marianne' ) ),
 						absint( $comments_number )
 					);
 					?>
