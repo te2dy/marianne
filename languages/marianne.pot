@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: "
 "Marianne\n"
 "POT-Creation-Date: "
-"2021-03-17 12:57+0100\n"
+"2021-03-17 20:28+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Teddy\n"
 "Language-Team: Teddy\n"
@@ -41,30 +41,25 @@ msgstr ""
 "X-Poedit-"
 "SearchPath-0: .\n"
 
-#: comments.php:34
-#: inc/template-tags.php:169
+#: comments.php:32
+#: inc/template-tags.php:188
 #, php-format
 msgid "%d comment"
 msgid_plural "%d comments"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:45
+#: comments.php:43
 msgid ""
 "Older comments &rsaquo;"
 msgstr ""
 
-#: comments.php:46
+#: comments.php:44
 msgid ""
 "&lsaquo; Newer comments"
 msgstr ""
 
 #: footer.php:19
-msgid ""
-"https://wordpress.org/"
-msgstr ""
-
-#: footer.php:28
 #, php-format
 msgctxt "Site footer text"
 msgid ""
@@ -72,21 +67,26 @@ msgid ""
 "by %2$s and %3$s"
 msgstr ""
 
-#: footer.php:38
+#: footer.php:21
+msgid ""
+"https://wordpress.org/"
+msgstr ""
+
+#: footer.php:28
 #: functions.php:55
 msgid "Footer Menu"
 msgstr ""
 
 #: functions.php:54
-#: inc/template-tags.php:96
+#: inc/template-tags.php:105
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:193
+#: functions.php:185
 msgid "Widgets"
 msgstr ""
 
-#: functions.php:225
+#: functions.php:218
 msgid "Open submenu"
 msgstr ""
 
@@ -94,38 +94,39 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/template-tags.php:98
+#: inc/template-tags.php:106
 msgid "Menu"
 msgstr ""
 
-#: inc/template-tags.php:201
+#: inc/template-tags.php:220
 msgid ""
 "&lsaquo; Previous page"
 msgstr ""
 
-#: inc/template-tags.php:207
+#: inc/template-tags.php:226
 msgid "Next page &rsaquo;"
 msgstr ""
 
 #: search.php:22
-#: search.php:65
+#: search.php:64
 #, php-format
 msgid "Search for \"%s\""
 msgstr ""
 
 #: search.php:35
 #, php-format
+msgctxt "Search results"
 msgid "%d result found:"
 msgid_plural ""
 "%d results found:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: search.php:73
+#: search.php:71
 msgid "No results."
 msgstr ""
 
-#: search.php:81
+#: search.php:77
 msgid "Maybe try a search?"
 msgstr ""
 
@@ -138,7 +139,7 @@ msgstr ""
 msgid "Nothing here"
 msgstr ""
 
-#: template-parts/content-none.php:22
+#: template-parts/content-none.php:21
 msgid ""
 "It looks like nothing "
 "was found at this "

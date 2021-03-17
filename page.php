@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all single pages
+ * The template for displaying all single pages.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-page
  *

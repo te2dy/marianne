@@ -1,6 +1,6 @@
 <?php
 /**
- * The sidebar
+ * The template for displaying the sidebar.
  *
  * Displays the sidebar at the bottom of the page,
  * in the #content div and before the footer.

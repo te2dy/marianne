@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marianne\n"
-"POT-Creation-Date: 2021-03-17 12:57+0100\n"
-"PO-Revision-Date: 2021-03-17 12:57+0100\n"
+"POT-Creation-Date: 2021-03-17 20:28+0100\n"
+"PO-Revision-Date: 2021-03-17 20:29+0100\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -21,45 +21,46 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #. translators: %d: comment count number.
-#: comments.php:34 inc/template-tags.php:169
+#. translators: %d: Comment count number.
+#: comments.php:32 inc/template-tags.php:188
 #, php-format
 msgid "%d comment"
 msgid_plural "%d comments"
 msgstr[0] "%d commentaire"
 msgstr[1] "%d commentaires"
 
-#: comments.php:45
+#: comments.php:43
 msgid "Older comments &rsaquo;"
 msgstr "Commentaires plus anciens &rsaquo;"
 
-#: comments.php:46
+#: comments.php:44
 msgid "&lsaquo; Newer comments"
 msgstr "&lsaquo; Commentaires plus récents"
 
+#. translators: $1%s: Site name. $2%s: WordPress. $3%s: Marianne.
 #: footer.php:19
-msgid "https://wordpress.org/"
-msgstr "https://fr.wordpress.org/"
-
-#. translators: $1%s: WordPress. $2%s: Marianne
-#: footer.php:28
 #, php-format
 msgctxt "Site footer text"
 msgid "%1$s is proudly powered by %2$s and %3$s"
 msgstr "%1$s est fièrement propulsé par %2$s et %3$s"
 
-#: footer.php:38 functions.php:55
+#: footer.php:21
+msgid "https://wordpress.org/"
+msgstr "https://fr.wordpress.org/"
+
+#: footer.php:28 functions.php:55
 msgid "Footer Menu"
 msgstr "Menu du pied de page"
 
-#: functions.php:54 inc/template-tags.php:96
+#: functions.php:54 inc/template-tags.php:105
 msgid "Primary Menu"
 msgstr "Menu principal"
 
-#: functions.php:193
+#: functions.php:185
 msgid "Widgets"
 msgstr "Widgets"
 
-#: functions.php:225
+#: functions.php:218
 msgid "Open submenu"
 msgstr "Ouvrir le sous-menu"
 
@@ -67,36 +68,37 @@ msgstr "Ouvrir le sous-menu"
 msgid "Skip to content"
 msgstr "Aller au contenu"
 
-#: inc/template-tags.php:98
+#: inc/template-tags.php:106
 msgid "Menu"
 msgstr "Menu"
 
-#: inc/template-tags.php:201
+#: inc/template-tags.php:220
 msgid "&lsaquo; Previous page"
 msgstr "&lsaquo; Page précédente"
 
-#: inc/template-tags.php:207
+#: inc/template-tags.php:226
 msgid "Next page &rsaquo;"
 msgstr "Page suivante &rsaquo;"
 
 #. translators: %s: search term.
-#: search.php:22 search.php:65
+#: search.php:22 search.php:64
 #, php-format
 msgid "Search for \"%s\""
 msgstr "Recherche de «&nbsp;%s&nbsp;»"
 
 #: search.php:35
 #, php-format
+msgctxt "Search results"
 msgid "%d result found:"
 msgid_plural "%d results found:"
 msgstr[0] "%d résultat trouvé&nbsp;:"
 msgstr[1] "%d résultats trouvés&nbsp;:"
 
-#: search.php:73
+#: search.php:71
 msgid "No results."
 msgstr "Aucun résultat."
 
-#: search.php:81
+#: search.php:77
 msgid "Maybe try a search?"
 msgstr "Peut-être devriez-vous tenter une recherche&nbsp;?"
 
@@ -108,7 +110,7 @@ msgstr "Article sélectionné"
 msgid "Nothing here"
 msgstr "Il n’y a rien ici"
 
-#: template-parts/content-none.php:22
+#: template-parts/content-none.php:21
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 "On dirait que rien n’a été trouvé ici. Essayez peut-être une recherche&nbsp;?"

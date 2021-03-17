@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying search results pages
+ * The template for displaying search results pages.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
@@ -28,17 +28,18 @@ get_header();
 				<div class="archive-description">
 					<p>
 						<?php
-						printf(
+						$description = sprintf(
 							esc_html(
 								/* translators: %d: the number of search results. */
-								_n(
+								_nx(
 									'%d result found:',
 									'%d results found:',
-									absint( $wp_query->found_posts ),
+									(int) $wp_query->found_posts,
+									'Search results',
 									'marianne'
 								)
 							),
-							absint( $wp_query->found_posts )
+							(int) $wp_query->found_posts
 						);
 						?>
 					</p>
@@ -54,9 +55,7 @@ get_header();
 
 			marianne_loop_navigation();
 			?>
-
 		<?php else : ?>
-
 			<header class="archive-header">
 				<h1 class="page-title">
 					<?php
@@ -69,22 +68,17 @@ get_header();
 				</h1>
 
 				<div class="archive-description">
-					<p>
-						<?php esc_html_e( 'No results.', 'marianne' ); ?>
-					</p>
+					<p><?php esc_html_e( 'No results.', 'marianne' ); ?></p>
 				</div>
 			</header>
 
 			<article <?php post_class( 'entry-page' ); ?>>
 				<section class="entry-content page-content">
-					<p>
-						<?php esc_html_e( 'Maybe try a search?', 'marianne' ); ?>
-					</p>
+					<p><?php esc_html_e( 'Maybe try a search?', 'marianne' ); ?></p>
 
 					<?php get_search_form(); ?>
 				</section>
 			</article>
-
 		<?php endif; ?>
 	</main>
 

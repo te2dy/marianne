@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts in the loop
+ * Template part for displaying posts in the loop.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -19,20 +19,16 @@
 		<?php endif; ?>
 
 		<div class="entry-meta text-secondary">
-			<a href="<?php the_permalink(); ?>">
-				<?php marianne_the_date(); ?>
-			</a>
+			<a href="<?php the_permalink(); ?>"><?php marianne_the_date(); ?></a>
 		</div>
 
 		<?php marianne_the_categories( 'entry-meta text-secondary' ); ?>
 
 		<h3 class="entry-title loop-title">
-			<a href="<?php the_permalink(); ?>">
-				<?php the_title(); ?>
-			</a>
+			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 		</h3>
 
-		<?php marianne_the_post_thumbnail( 'entry-thumbnail loop-thumbnail', 'link' ); ?>
+		<?php marianne_the_post_thumbnail( 'entry-thumbnail loop-thumbnail', array( 'link' ) ); ?>
 	</header>
 
 	<section class="entry-content loop-content">
