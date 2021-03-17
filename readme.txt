@@ -20,6 +20,11 @@ It is the perfect theme for writers, journalists and intellectuals who want to p
 
 == Changelog ==
 
+=== 1.2.15 – ? ===
+- Added: .pot file for a more easily translatable theme.
+- Added: RSS widget styles.
+- Fixed: too large width (100%) of the date link in the loop.
+
 === 1.2.14 – March 15th, 2021 ===
 - Fixed: unwanted message in the console.
 
