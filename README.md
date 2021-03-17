@@ -22,6 +22,8 @@ It uses minimal functionalities to focus on your texts. It is the perfect theme 
 **1.2.15 – ?**
 - Added: .pot file for a more easily translatable theme.
 - Added: RSS widget styles.
+- Fixed: hide mobile menu on click outside.
+- Fixed: wrong mobile menu button color when the menu is expanded.
 - Fixed: too large width (100%) of the date link in the loop.
 
 **1.2.14 – March 15th, 2021**
