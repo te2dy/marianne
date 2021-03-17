@@ -10,9 +10,108 @@
 A minimal, lightweight and eco-friendy theme, perfect for writers.
 
 ## Description
-Marianne is a minimalist WordPress theme. It is mainly designed to make your content very readable and to minimize energy consumption of your visitors' device.
 
-Marianne uses system fonts and requires few resources. It uses minimal functionalities to focus on your texts. It is the perfect theme for writers, journalists and intellectuals who want to present their work.
+Marianne is a minimalist WordPress theme.
+It is mainly designed to make your content very readable and to minimize energy consumption of your visitors' device.
+
+Marianne uses system fonts and requires few resources.
+It uses minimal functionalities to focus on your texts. It is the perfect theme for writers, journalists and intellectuals who want to present their work.
+
+## Changelog
+
+**1.2.14 – March 15th, 2021**
+- Fixed: unwanted message in the console.
+
+**1.2.13 – March 15th, 2021**
+- Fixed: menu accessibility on Chrome.
+- Updated: sticky post style in the loop.
+- Updated: screenshot.png.
+
+**1.2.12 – March 14th, 2021**
+- Fixed: thumbnails in portrait format were too small.
+- Fixed: links didn't have the same style on hover and focus.
+- Updated: French translation files.
+- Updated: some style property names.
+
+**1.2.11 – March 11th, 2021**
+- Fixed: missing aria role for menus.
+- Updated: link and button style for accessibility.
+- Updated: sticky label style.
+- Updated: screenshot.
+- Updated: header functions for futur Theme Customizer.
+
+**1.2.10 – March 10th, 2021**
+- Fixed: unminified stylesheet.
+
+**1.2.9 – March 10th, 2021**
+- Updated: Marianne now uses system fonts.
+- Updated: threaded comments style on mobile.
+- Updated: open submenu arrow icon to plus sign.
+- Updated: "tested up to" mention in readme & stylesheet files.
+- Fixed: redundant PHP statement in comments.php.
+- Fixed: comment meta alignment when avatars are hidden.
+- Updated: French translation files.
+- Moved: js folder to a new "assets" folder.
+
+**1.2.8 – March 9th, 2021**
+- Fixed: keyboard navigation not working.
+- Fixed: missing translatable string.
+- Fixed: missing prefixes in functions.php.
+- Updated: screenshot & credits.
+- Updated: French translation.
+- Updated: marianne_environment_type() function.
+
+**1.2.7 – March 8th, 2021**
+- Updated: primary menu style.
+- Updated: screenshot.png.
+- Updated: title size of posts.
+
+**1.2.6 – March 5th, 2021**
+- Updated: primary menu style.
+- Fixed: error in navigation.js.
+- Fixed: missing PHP arguments.
+
+**1.2.5 – March 4th, 2021**
+- Updated: theme now fully responsive on mobile.
+- Updated: menu accessibility on mobile.
+- Removed: title of the front page.
+
+**1.2.4 – March 3rd, 2021**
+- New: function marianne_the_post_thumbnail().
+- Fixed: post footer tag not closed in the loop.
+- Updated: Theme Tags.
+- Updated: stylesheet.
+
+**1.2.3 – March 2nd, 2021**
+- Removed: Theme URI in the stylesheet.
+- Fixed: missing argument in a function.
+- Updated: functions documentation.
+
+**1.2.2 – March 2nd, 2021**
+- Updated: primary menu styles.
+- Updated: screenshot.png.
+
+**1.2.1 – February 28th, 2021**
+- Fixed: one wrong text-domain.
+- Updated: French translation.
+
+**1.2 – February 28th, 2021**
+- New: the primary menu becomes a drop-down menu.
+
+**1.1 – February 24th, 2021**
+- New: Marianne now supports Featured Images.
+- Minor fixes.
+
+**1.0.2 – February 18th, 2021**
+- Fixed: missing string translation.
+- Added: background color for the body.
+- Minor fixes.
+
+**1.0.1 – February 18th, 2021**
+- Fixed: missing Theme URI and Description in the stylesheet
+
+**1.0 – February 18th, 2021**
+- The first version available for download.
 
 ## Copyright
 Marianne WordPress Theme, 2020 Teddy
@@ -36,6 +135,3 @@ Marianne is based on the work of:
 
 Normalizing styles have been helped along thanks to [the fine work of
 Nicolas Gallagher and Jonathan Neal](https://necolas.github.io/normalize.css/)
-
-Screenshot image: [apple-desk-laptop-macbook-pro](https://www.flickr.com/photos/137643065@N06/23699397893), by pixellaphoto
-License: [CC0 1.0 Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/)
