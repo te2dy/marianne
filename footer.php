@@ -35,7 +35,7 @@
 
 				<?php
 				if ( has_nav_menu( 'footer' ) ) {
-					echo '<nav id="menu-footer-container" class="site-footer-block" role="navigation" aria-label="' . esc_attr__( 'Footer menu', 'marianne' ) . '">';
+					echo '<nav id="menu-footer-container" class="site-footer-block" role="navigation" aria-label="' . esc_attr__( 'Footer Menu', 'marianne' ) . '">';
 
 					wp_nav_menu(
 						array(
