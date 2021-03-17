@@ -160,9 +160,17 @@ function marianneExpandMobileMenu( el ) {
 			$( '#menu-mobile-button' ).attr( 'aria-haspopup', 'true' ).attr( 'aria-expanded', 'false' );
 
 			// When esc key is pressed, hide menu.
-			document.addEventListener( 'keydown', function( event ) {
-				var escKey = event.keyCode === 27;
+			$( document ).keydown( function( e ) {
+				var escKey = e.keyCode === 27;
 				if ( escKey ) {
+					$( '#menu-mobile-button' ).attr( 'aria-expanded', 'false' );
+				}
+			});
+
+			$( document ).mouseup( function( e ) {
+				var container = $( '#menu-primary-container' );
+
+				if ( ! container.is( e.target ) && container.has( e.target ).length === 0) {
 					$( '#menu-mobile-button' ).attr( 'aria-expanded', 'false' );
 				}
 			});

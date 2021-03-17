@@ -551,16 +551,23 @@ button:focus {
 		margin-bottom: 0;
 	}
 	#menu-mobile-button {
+		background-color: #eaeaea;
+		border: 1px solid #000;
+		color: inherit;
 		display: block;
-		margin-top: 1em;
 	}
-	#menu-mobile-button ~ #menu-primary-container {
+	#menu-mobile-button[aria-expanded="true"] {
+		border-color: #0057B7;
+		background-color: transparent;
+		color: #0057B7;
+	}
+	#menu-mobile-button ~ #menu-primary {
 		display: none;
 	}
-	#menu-mobile-button[aria-expanded="true"] ~ #menu-primary-container {
+	#menu-mobile-button[aria-expanded="true"] ~ #menu-primary {
 		display: block;
 	}
-	#menu-primary-container {
+	#menu-primary {
 		border-left: 1px solid #aaa;
 		margin-top: .5em;
 		padding-left: .5em;
@@ -614,7 +621,6 @@ button:focus {
 		margin: 0 0 .5em;
 		padding: 0;
 	}
-	
 	#menu-primary .sub-menu .menu-item a::before {
 		content: "— ";
 	}

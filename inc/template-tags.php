@@ -92,10 +92,10 @@ if ( ! function_exists( 'marianne_menu_primary' ) ) {
 	 * @return void
 	 */
 	function marianne_menu_primary() {
-		echo '<button id="menu-mobile-button" onclick="marianneExpandMobileMenu(this)">' . esc_html__( 'Menu', 'marianne' ) . '</button>';
-
 		if ( has_nav_menu( 'primary' ) ) {
 			echo '<nav id="menu-primary-container" role="navigation" aria-label="' . esc_attr__( 'Primary Menu', 'marianne' ) . '">';
+
+			echo '<button id="menu-mobile-button" onclick="marianneExpandMobileMenu(this)">' . esc_html__( 'Menu', 'marianne' ) . '</button>';
 
 			wp_nav_menu(
 				array(
