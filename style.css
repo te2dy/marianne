@@ -355,7 +355,7 @@ input,
 optgroup,
 select,
 textarea {
-	border: 1px solid #aaa;
+	border: 0;
 	box-sizing: border-box;
 	display: block;
 	font-family: inherit;
@@ -364,6 +364,12 @@ textarea {
 	margin: .5em 0;
 	padding: .5em;
 	max-width: 100%;
+
+	box-shadow:
+		0 0 transparent,
+		0 0 transparent,
+		inset 3px 3px 5px rgba(0, 0, 0, 0.1),
+		inset -3px -3px 5px #404040;
 }
 textarea {
 	width: 100%;
@@ -378,22 +384,29 @@ input[type="checkbox"] {
 }
 input[type="submit"],
 button {
-	background-color: #eaeaea;
-	border: 1px solid #000;
+	border: 0;
 	color: inherit;
 	padding: .5em;
 	position: relative;
-	transition: all .2s ease-in-out .1s;
+	transition: all .2s ease-in-out;
+
+	background-color: #eaeaea;
+	border-radius: 2px;
+	box-shadow:
+		1px 1px 4px rgb(170, 170, 170, 0.6),
+		-1px -1px 4px rgba(0, 0, 0, 0.1);
 }
 input[type="submit"]:hover,
 input[type="submit"]:focus,
 button:hover,
 button:focus {
-	background-color: transparent;
-	border-color: #0057B7;
-	color: #0057B7;
 	cursor: pointer;
-	transition: all .2s ease-in-out .1s;
+	transition: all .2s ease-in-out;
+	box-shadow:
+		1px 1px 4px rgb(170, 170, 170, 0.6),
+		-1px -1px 4px rgba(255, 255, 255, 0.5),
+		inset -1px -1px 4px rgba(0, 0, 0, 0.1),
+		inset 1px 1px 2px rgb(170, 170, 170, 0.6);
 }
 .button-inline {
 	background-color: transparent;
