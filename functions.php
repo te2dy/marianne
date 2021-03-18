@@ -136,17 +136,17 @@ if ( ! function_exists( 'marianne_styles_scripts' ) ) {
 	 */
 	function marianne_styles_scripts() {
 		$theme_version = wp_get_theme()->get( 'Version' );
-		$min           = esc_attr( marianne_minify() );
+		$min           = marianne_minify();
 
 		// The main stylesheet.
-		wp_enqueue_style( 'marianne-stylesheet', esc_url( get_template_directory_uri() . "/style$min.css" ), array(), esc_attr( $theme_version ) );
+		wp_enqueue_style( 'marianne-stylesheet', get_template_directory_uri() . "/style$min.css", array(), $theme_version );
 
 		/**
 		 * The main menu navigation script.
 		 *
 		 * @since Marianne 1.2
 		 */
-		wp_enqueue_script( 'marianne-navigation', esc_url( get_template_directory_uri() . "/assets/js/navigation$min.js" ), array( 'jquery' ), esc_attr( $theme_version ), true );
+		wp_enqueue_script( 'marianne-navigation', get_template_directory_uri() . "/assets/js/navigation$min.js", array( 'jquery' ), $theme_version, true );
 
 		// Threaded comment reply styles.
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
