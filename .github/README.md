@@ -4,7 +4,7 @@
 
 **Marianne.**
 
-A minimalist theme ideal for writers, journalists and all bloggers who want to showcase their texts.
+A minimalist theme ideal for writers, journalists and all bloggers who want to share their texts.
 
 ## Description
 
