@@ -28,7 +28,8 @@ Il est disponible en anglais et en français.
 Marianne est en plein développement. Prochainement, vous devriez pouvoir y apporter de nombreuses personnalisations, comme changer de police, de couleurs, mais aussi modifier la disposition des éléments de la page.
 
 ### Installer Marianne
-Le thème Marianne peut être téléchargé depuis n’importe quel installation de WordPress à partir du répertoire officiel de thème.
+Le thème Marianne peut être téléchargé depuis n’importe quel installation de WordPress à partir du [répertoire officiel des thèmes WordPress](https://wordpress.org/themes/marianne/).
+
 Pour l’installer :
 - Connectez-vous à l’interface d’administration de votre site.
 - Cliquez sur Apparence \> Thèmes \> Ajouter.
@@ -37,9 +38,6 @@ Pour l’installer :
 - Quand l’installation est terminée, cliquez sur Activer.
 
 Vous pouvez également télécharger la dernière version de Marianne depuis GitHub en suivant [ce lien](https://github.com/te2dy/marianne/releases/latest).
-
-### Installation
-Bientôt.
 
 ## Contribuer
 Bientôt.
