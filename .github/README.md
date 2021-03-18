@@ -29,7 +29,7 @@ It is available in English and French.
 
 Marianne is in full development. Soon, you should be able to make many customizations, such as changing fonts, colors, but also change the layout of the page elements.
 
-### Install Marianne
+## Install Marianne
 The Marianne theme can be downloaded from any WordPress installation from the [official WordPress theme directory](https://wordpress.org/themes/marianne/).
 
 To install it:
