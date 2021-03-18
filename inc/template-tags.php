@@ -137,9 +137,7 @@ if ( ! function_exists( 'marianne_the_date' ) ) {
 	 */
 	function marianne_the_date( $class = 'entry-date' ) {
 		?>
-			<time class="<?php echo esc_attr( $class ); ?>" datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>">
-				<?php the_date(); ?>
-			</time>
+			<time class="<?php echo esc_attr( $class ); ?>" datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>"><?php the_date(); ?></time>
 		<?php
 	}
 }

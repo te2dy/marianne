@@ -26,6 +26,7 @@ It is the perfect theme for writers, journalists and intellectuals who want to p
 - Fixed: hide mobile menu on click outside.
 - Fixed: wrong mobile menu button color when the menu is expanded.
 - Fixed: too large width (100%) of the date link in the loop.
+- Updated: documentation and syntax of a lot of functions.
 - Updated: theme description.
 - Removed: README.md file.
 
