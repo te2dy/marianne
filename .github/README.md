@@ -41,8 +41,8 @@ To install it:
 You can also download the latest version of Marianne from GitHub by following [this link](https://github.com/te2dy/marianne/releases/latest).
 
 ## Contribute
-Bientôt.
+Soon.
 
 ## Support
-Bientôt.
+Soon.
 
