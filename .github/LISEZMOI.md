@@ -22,6 +22,7 @@ Marianne dispose de fonctionnalités simples :
 - Articles mis en avant.
 - Images mises en avant.
 - Menus.
+- Widgets.
 
 Il est disponible en anglais et en français.
 

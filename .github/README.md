@@ -23,6 +23,7 @@ Marianne has some simple features:
 - Featured posts.
 - Featured images.
 - Menus.
+- Widgets.
 
 It is available in English and French.
 
