@@ -1,9 +1,9 @@
 <?php
 /**
- * The template for displaying comments
+ * The template for displaying comments.
  *
- * Displays an area that contains both the current comments
- * and the comment form.
+ * Displays an area that contains both
+ * the current comments and the comment form.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -26,14 +26,12 @@ if ( post_password_required() ) {
 <?php if ( have_comments() ) : ?>
 	<div id="comments" class="comments-area">
 		<?php
-		$marianne_comments_number = absint( get_comments_number() );
-
 		$marianne_comment_title = sprintf(
 			esc_html(
 				/* translators: %d: comment count number. */
-				_n( '%d comment', '%d comments', $marianne_comments_number, 'marianne' )
+				_n( '%d comment', '%d comments', absint( get_comments_number() ), 'marianne' )
 			),
-			number_format_i18n( $marianne_comments_number )
+			number_format_i18n( get_comments_number() )
 		);
 		?>
 
@@ -45,6 +43,7 @@ if ( post_password_required() ) {
 			'prev_text' => esc_html__( 'Older comments &rsaquo;', 'marianne' ),
 			'next_text' => esc_html__( '&lsaquo; Newer comments', 'marianne' ),
 		);
+
 		the_comments_navigation( $marianne_nav_args );
 		?>
 

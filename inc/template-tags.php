@@ -16,20 +16,25 @@ if ( ! function_exists( 'marianne_logo' ) ) {
 	 */
 	function marianne_logo() {
 		if ( has_custom_logo() ) {
-			echo '<div class="site-logo">';
-			the_custom_logo();
-			echo '</div>';
+			?>
+				<div class="site-logo">
+					<?php the_custom_logo(); ?>
+				</div>
+			<?php
 		}
 	}
 }
 
 if ( ! function_exists( 'marianne_site_title' ) ) {
 	/**
-	 * The title of the site
+	 * The title of the site.
 	 *
 	 * Puts the title in a h1 or a p tag depending on the context.
 	 *
 	 * @param string $class The class of the title.
+	 *                      To set multiple classes,
+	 *                      separate them with a space.
+	 *                      Example: $class = "class-1 class-2".
 	 *
 	 * @return void
 	 */
@@ -65,6 +70,9 @@ if ( ! function_exists( 'marianne_site_description' ) ) {
 	 * Puts the description in a h2 or a p tag depending on the context.
 	 *
 	 * @param string $class The class of the description.
+	 *                      To set multiple classes,
+	 *                      separate them with a space.
+	 *                      Example: $class = "class-1 class-2".
 	 *
 	 * @return void
 	 */
@@ -93,38 +101,44 @@ if ( ! function_exists( 'marianne_menu_primary' ) ) {
 	 */
 	function marianne_menu_primary() {
 		if ( has_nav_menu( 'primary' ) ) {
-			echo '<nav id="menu-primary-container" role="navigation" aria-label="' . esc_attr__( 'Primary Menu', 'marianne' ) . '">';
+			?>
+				<nav id="menu-primary-container" role="navigation" aria-label="<?php echo esc_attr__( 'Primary Menu', 'marianne' ); ?>">
+					<button id="menu-mobile-button" onclick="marianneExpandMobileMenu(this)"><?php esc_html_e( 'Menu', 'marianne' ); ?></button>
 
-			echo '<button id="menu-mobile-button" onclick="marianneExpandMobileMenu(this)">' . esc_html__( 'Menu', 'marianne' ) . '</button>';
-
-			wp_nav_menu(
-				array(
-					'container'      => '',
-					'depth'          => 2,
-					'item_spacing'   => 'discard',
-					'menu_class'     => 'navigation-menu',
-					'menu_id'        => 'menu-primary',
-					'theme_location' => 'primary',
-				)
-			);
-
-			echo '</nav>';
+					<?php
+					wp_nav_menu(
+						array(
+							'container'      => '',
+							'depth'          => 2,
+							'item_spacing'   => 'discard',
+							'menu_class'     => 'navigation-menu',
+							'menu_id'        => 'menu-primary',
+							'theme_location' => 'primary',
+						)
+					);
+					?>
+				</nav>
+			<?php
 		}
 	}
 }
 
 if ( ! function_exists( 'marianne_the_date' ) ) {
 	/**
-	 * Displays the publish date of a post
 	 *
-	 * @param string $class If a class is set, the date will be displayed within a <div>.
+	 * The date on which the post was published.
+	 *
+	 * @param string $class The class of the date.
+	 *                      To set multiple classes,
+	 *                      separate them with a space.
+	 *                      Example: $class = "class-1 class-2".
 	 *
 	 * @return void
 	 */
 	function marianne_the_date( $class = 'entry-date' ) {
 		?>
 			<time class="<?php echo esc_attr( $class ); ?>" datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>">
-				<?php echo esc_html( get_the_date() ); ?>
+				<?php the_date(); ?>
 			</time>
 		<?php
 	}
@@ -132,29 +146,34 @@ if ( ! function_exists( 'marianne_the_date' ) ) {
 
 if ( ! function_exists( 'marianne_loop_comments' ) ) {
 	/**
-	 * Link to comments
+	 * The link to comments.
 	 *
-	 * @param string $container Wrap the link in a 'div' or 'footer' block… or nothing (default).
-	 * @param string $class     The class added to the container.
+	 * @param string $container Wrap the link in a 'div' or 'footer' block.
+	 *                          This parameter can be empty.
+	 * @param string $class     The class of the container.
+	 *                          To set multiple classes,
+	 *                          separate them with a space.
+	 *                          Example: $class = "class-1 class-2".
 	 *
 	 * @return void
 	 */
 	function marianne_loop_comments( $container = '', $class = '' ) {
 		$comments_number = get_comments_number();
 
-		$allowed_containers = array( 'div', 'footer' );
-		$container_open     = '';
-		$container_close    = '';
-
+		// Displays the comment link it there is at least one comment.
 		if ( $comments_number && 0 < $comments_number ) :
-			?>
+			// 'div' and 'footer' are the only arguments that can be defined through $container.
+			$allowed_containers = array( 'div', 'footer' );
+			$container_open     = '';
+			$container_close    = '';
 
-			<?php
 			if ( $container && in_array( $container, $allowed_containers, true ) ) {
 				$container_open = '<' . esc_attr( $container );
+
 				if ( $class ) {
 					$container_open .= ' class="' . esc_attr( $class ) . '"';
 				}
+
 				$container_open .= '>';
 
 				$container_close = '</' . esc_attr( $container ) . '>';
@@ -165,7 +184,7 @@ if ( ! function_exists( 'marianne_loop_comments' ) ) {
 				<a href="<?php echo esc_url( get_comments_link() ); ?>">
 					<?php
 					printf(
-						/* translators: %d: comment count number. */
+						/* translators: %d: Comment count number. */
 						esc_html( _n( '%d comment', '%d comments', absint( $comments_number ), 'marianne' ) ),
 						absint( $comments_number )
 					);
@@ -207,7 +226,6 @@ if ( ! function_exists( 'marianne_loop_navigation' ) ) {
 							<?php esc_html_e( 'Next page &rsaquo;', 'marianne' ); ?>
 						</a>
 					<?php } ?>
-
 				</div>
 			<?php
 		}
@@ -216,14 +234,16 @@ if ( ! function_exists( 'marianne_loop_navigation' ) ) {
 
 if ( ! function_exists( 'marianne_the_categories' ) ) {
 	/**
-	 * The list of categories of a post
+	 * The list of categories of a post.
 	 *
-	 * @param string $class Add a class to the list.
+	 * @param string $class The class of the list of categories.
+	 *                      To set multiple classes,
+	 *                      separate them with a space.
+	 *                      Example: $class = "class-1 class-2".
 	 *
 	 * @return void
 	 */
 	function marianne_the_categories( $class = '' ) {
-		// If a class is set, create the attribute with its value.
 		$class = 'list-inline ' . $class;
 
 		$categories = get_the_category( get_the_ID() );
@@ -233,22 +253,19 @@ if ( ! function_exists( 'marianne_the_categories' ) ) {
 			$i         = 0;
 			?>
 				<ul class="<?php echo esc_attr( $class ); ?>">
-					<?php
-					foreach ( $categories as $category ) {
-						$i++;
-						?>
-							<li>
-								<a href="<?php echo esc_url( get_category_link( $category->cat_ID ) ); ?>"><?php echo esc_html( $category->cat_name ); ?></a>
+					<?php foreach ( $categories as $category ) : ?>
+						<li>
+							<a href="<?php echo esc_url( get_category_link( $category->cat_ID ) ); ?>"><?php echo esc_html( $category->cat_name ); ?></a>
 
-								<?php
-								if ( $i !== $cat_count ) {
-									' &middot;';
-								}
-								?>
-							</li>
-						<?php
-					}
-					?>
+							<?php
+							$i++;
+
+							if ( $i !== $cat_count ) {
+								' &middot;';
+							}
+							?>
+						</li>
+					<?php endforeach; ?>
 				</ul>
 			<?php
 		}
@@ -259,55 +276,53 @@ if ( ! function_exists( 'marianne_the_post_thumbnail' ) ) {
 	/**
 	 * The post thumbnail.
 	 *
-	 * @param string       $class The class of the figure.
-	 * @param string|array $args  Options to activate.
-	 *                            'link' adds a clickable permalink to the image.
-	 *                            'caption' displays the caption below the image.
+	 * @param string $class The class of the list of categories.
+	 *                      To set multiple classes,
+	 *                      separate them with a space.
+	 *                      Example: $class = "class-1 class-2".
+	 * @param array  $args  Options to activate:
+	 *                          - 'link' adds a clickable permalink to the image.
+	 *                          - 'caption' displays the caption below the image.
 	 *
 	 * @return void
 	 */
-	function marianne_the_post_thumbnail( $class = '', $args = '' ) {
-		if ( has_post_thumbnail() ) :
+	function marianne_the_post_thumbnail( $class = '', $args = array() ) {
+		if ( has_post_thumbnail() ) {
 
 			// If a class is set, create the attribute with its value.
-			if ( esc_attr( $class ) ) {
+			if ( $class ) {
 				$class = ' class="' . esc_attr( $class ) . '"';
 			}
 
 			// Options available.
-			$allowed_args = array( 'link', 'caption' );
+			$allowed_options = array( 'link', 'caption' );
+
+			$before = '';
+			$after  = '';
+			if ( in_array( 'link', $allowed_options, true ) ) {
+				$before = '<a href="' . esc_url( get_the_permalink() ) . '">';
+				$after  = '</a>';
+			}
 
 			// Put the option(s) defined with $args in the array $options.
 			$options = array();
-
-			if ( ! is_array( $args ) ) {
-				if ( in_array( $args, $allowed_args, true ) ) {
-					$options[] = $args;
-				}
-			} else {
-				foreach ( $args as $option ) {
-					$options[] = $option;
-				}
-			}
 			?>
 				<figure<?php echo $class; ?>>
-					<?php if ( in_array( 'link', $options, true ) ) : ?>
-						<a href="<?php the_permalink(); ?>">
-					<?php endif; ?>
+					<?php
+					echo $before;
 
-					<?php the_post_thumbnail( 'marianne-thumbnails' ); ?>
+					the_post_thumbnail( 'marianne-thumbnails' );
 
-					<?php if ( in_array( 'link', $options, true ) ) : ?>
-						</a>
-					<?php endif; ?>
+					echo $after;
+					?>
 
-					<?php if ( in_array( 'caption', $options, true ) && wp_get_attachment_caption( get_post_thumbnail_id() ) ) : ?>
+					<?php if ( in_array( 'caption', $allowed_options, true ) && wp_get_attachment_caption( get_post_thumbnail_id() ) ) : ?>
 						<figcaption class="wp-caption-text text-secondary">
 							<?php echo wp_kses_post( wp_get_attachment_caption( get_post_thumbnail_id() ) ); ?>
 						</figcaption>
 					<?php endif; ?>
 				</figure>
 			<?php
-		endif;
+		}
 	}
 }

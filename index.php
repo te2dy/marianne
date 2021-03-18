@@ -1,6 +1,6 @@
 <?php
 /**
- * The main template file
+ * The main template file.
  *
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -23,11 +23,11 @@ get_header();
 				<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 
-				$marianne_archive_description = get_the_archive_description();
-				if ( $marianne_archive_description ) {
+				$description = get_the_archive_description();
+				if ( $description ) {
 					?>
 						<div class="archive-description">
-							<?php echo wp_kses_post( wpautop( $marianne_archive_description ) ); ?>
+							<?php echo wp_kses_post( wpautop( $description ) ); ?>
 						</div>
 					<?php
 				}

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts
+ * Template part for displaying posts.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -25,7 +25,7 @@
 
 		the_title( '<h1 class="entry-title post-title">', '</h1>' );
 
-		marianne_the_post_thumbnail( 'entry-thumbnail post-thumbnail', 'caption' );
+		marianne_the_post_thumbnail( 'entry-thumbnail post-thumbnail', array( 'caption' ) );
 		?>
 	</header>
 

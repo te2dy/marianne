@@ -1,6 +1,6 @@
 <?php
 /**
- * The loop
+ * The loop.
  *
  * The loop displays the list of posts.
  *

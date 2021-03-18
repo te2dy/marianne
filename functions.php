@@ -1,6 +1,6 @@
 <?php
 /**
- * Functions and definitions
+ * Functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
@@ -109,16 +109,17 @@ if ( ! function_exists( 'marianne_environment_type' ) ) {
 
 if ( ! function_exists( 'marianne_minify' ) ) {
 	/**
-	 * Display ".min" if the environment is set to "production".
+	 * Displays ".min" if the environment is set to "production".
 	 *
 	 * @return string Returns ".min" or nothing.
 	 */
 	function marianne_minify() {
 		$environment_type = marianne_environment_type();
 
-		$min = '';
 		if ( 'production' === $environment_type ) {
 			$min = '.min';
+		} else {
+			$min = '';
 		}
 
 		return $min;
@@ -129,28 +130,19 @@ if ( ! function_exists( 'marianne_styles_scripts' ) ) {
 	/**
 	 * Enqueue scripts and styles.
 	 *
+	 * On production, minified files are enqueued.
+	 *
 	 * @return void
 	 */
 	function marianne_styles_scripts() {
-		$theme_info    = wp_get_theme();
-		$theme_version = $theme_info->get( 'Version' );
-		$min           = marianne_minify();
+		$theme_version = wp_get_theme()->get( 'Version' );
+		$min           = esc_attr( marianne_minify() );
 
-		/**
-		 * The main stylesheet.
-		 *
-		 * On production, the minified stylesheet is enqueued.
-		 *
-		 * @see marianne_minify()
-		 */
+		// The main stylesheet.
 		wp_enqueue_style( 'marianne-stylesheet', esc_url( get_template_directory_uri() . "/style$min.css" ), array(), esc_attr( $theme_version ) );
 
 		/**
 		 * The main menu navigation script.
-		 *
-		 * On production, the minified script is enqueued.
-		 *
-		 * @see marianne_minify()
 		 *
 		 * @since Marianne 1.2
 		 */
@@ -203,32 +195,35 @@ if ( ! function_exists( 'marianne_widgets' ) ) {
 	add_action( 'widgets_init', 'marianne_widgets' );
 }
 
-/**
- * Add a button to top-level menu items that has sub-menus.
- * An icon is added using CSS depending on the value of aria-expanded.
- *
- * Based on the work of the WordPress team in the Twenty Twenty-One Theme.
- *
- * @param string $output Nav menu item start element.
- * @param object $item   Nav menu item.
- * @param int    $depth  Depth.
- * @param object $args   Nav menu args.
- *
- * @return string Nav menu item start element.
- */
-function marianne_add_sub_menu_toggle( $output, $item, $depth, $args ) {
-	if ( 0 === $depth && in_array( 'menu-item-has-children', $item->classes, true ) && 'primary' === $args->theme_location ) {
+if ( ! function_exists( 'marianne_add_sub_menu_toggle' ) ) {
+	/**
+	 * Add a button to top-level menu items that has sub-menus.
+	 * An icon is added using CSS depending on the value of aria-expanded.
+	 *
+	 * Based on the work of the WordPress team in the Twenty Twenty-One Theme.
+	 *
+	 * @param string $output Nav menu item start element.
+	 * @param object $item   Nav menu item.
+	 * @param int    $depth  Depth.
+	 * @param object $args   Nav menu args.
+	 *
+	 * @return string Nav menu item start element.
+	 */
+	function marianne_add_sub_menu_toggle( $output, $item, $depth, $args ) {
+		if ( 0 === $depth && in_array( 'menu-item-has-children', $item->classes, true ) && 'primary' === $args->theme_location ) {
 
-		// Add toggle button.
-		$output .= '<button class="sub-menu-toggle" aria-haspopup="true" aria-expanded="false" onClick="marianneExpandSubMenu(this)">';
-		$output .= '+';
-		$output .= '<span class="screen-reader-text">' . esc_html__( 'Open submenu', 'marianne' ) . '</span>';
-		$output .= '</button>';
+			// Add toggle button.
+			$output .= '<button class="sub-menu-toggle" aria-haspopup="true" aria-expanded="false" onClick="marianneExpandSubMenu(this)">';
+			$output .= '+';
+			$output .= '<span class="screen-reader-text">' . esc_html__( 'Open submenu', 'marianne' ) . '</span>';
+			$output .= '</button>';
+		}
+
+		return $output;
 	}
 
-	return $output;
+	add_filter( 'walker_nav_menu_start_el', 'marianne_add_sub_menu_toggle', 10, 4 );
 }
-add_filter( 'walker_nav_menu_start_el', 'marianne_add_sub_menu_toggle', 10, 4 );
 
 // Load required files.
-require_once get_template_directory() . '/inc/template-tags.php';
+require_once( get_template_directory() . '/inc/template-tags.php' );

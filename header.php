@@ -1,6 +1,6 @@
 <?php
 /**
- * The header
+ * The template for displaying the header.
  *
  * This is the template that displays all of the <head> section,
  * the site branding (logo, title, description) and the main menu.
@@ -12,6 +12,7 @@
  */
 
 ?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 	<head>
@@ -25,9 +26,7 @@
 		}
 		?>
 
-		<a class="skip-link screen-reader-text" href="#content">
-			<?php esc_html_e( 'Skip to content', 'marianne' ); ?>
-		</a>
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'marianne' ); ?></a>
 
 		<div id="page" class="site">
 			<header id="header" class="site-header" role="banner">

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying a message that posts cannot be found
+ * Template part for displaying a message that posts cannot be found.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -18,9 +18,7 @@
 	</header>
 
 	<section class="entry-content page-content">
-		<p>
-			<?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'marianne' ); ?>
-		</p>
+		<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'marianne' ); ?></p>
 
 		<?php get_search_form(); ?>
 	</section>
