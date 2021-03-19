@@ -28,7 +28,7 @@ get_header();
 				<div class="archive-description">
 					<p>
 						<?php
-						$description = sprintf(
+						printf(
 							esc_html(
 								/* translators: %d: the number of search results. */
 								_nx(

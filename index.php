@@ -23,11 +23,11 @@ get_header();
 				<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 
-				$description = get_the_archive_description();
-				if ( $description ) {
+				$marianne_description = get_the_archive_description();
+				if ( $marianne_description ) {
 					?>
 						<div class="archive-description">
-							<?php echo wp_kses_post( wpautop( $description ) ); ?>
+							<?php echo wp_kses_post( wpautop( $marianne_description ) ); ?>
 						</div>
 					<?php
 				}

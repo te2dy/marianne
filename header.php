@@ -20,10 +20,10 @@
 	</head>
 
 	<?php
-	$classes  = '';
-	$classes .= 'font-family-' . esc_attr( marianne_get_theme_mod( 'marianne_fonts_family' ) );
+	$marianne_body_class  = '';
+	$marianne_body_class .= 'font-family-' . esc_attr( marianne_get_theme_mod( 'marianne_fonts_family' ) );
 	?>
-	<body <?php body_class( $classes ); ?>>
+	<body <?php body_class( $marianne_body_class ); ?>>
 		<?php
 		if ( function_exists( 'wp_body_open' ) ) {
 			wp_body_open();
