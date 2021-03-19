@@ -23,8 +23,7 @@ and intellectuals who want to present their work.
 
 PLANED UPDATE:
 === 1.3 – April 1st, 2021 ===
-(- Added: options to customize the theme.)
-=> Don't forget to update theme tags in style.css.
+- Added: options to customize the theme.
 (- Added: theme page.)
 => Are donate links allowed?
 (- Added: print info.)

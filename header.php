@@ -20,8 +20,11 @@
 	</head>
 
 	<?php
-	$marianne_body_class  = '';
-	$marianne_body_class .= 'font-family-' . esc_attr( marianne_get_theme_mod( 'marianne_fonts_family' ) );
+	$marianne_body_class = 'font-family-' . esc_attr( marianne_get_theme_mod( 'marianne_fonts_family' ) );
+
+	if ( false !== marianne_get_theme_mod( 'marianne_fonts_text_shadow' ) ) {
+		$marianne_body_class .= ' text-shadow';
+	}
 	?>
 	<body <?php body_class( $marianne_body_class ); ?>>
 		<?php

@@ -60,7 +60,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		 * To simplify the code, all new options are pushed in an array.
 		 *
 		 * @return array  $marianne_customizer_options An array of options that follows this pattern:
-		 *                                             $marianne_customizer_options['the_section'] = array(
+		 *                                             $marianne_customizer_options[] = array(
 		 *                                                 'id'          => 'The option id',
 		 *                                                 'title'       => 'The title of the option',
 		 *                                                 'description' => 'The description of the option',
@@ -82,6 +82,14 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 				'serif'      => __( 'Serif', 'marianne' ),
 				'monospace'  => __( 'Monospaced', 'marianne' ),
 			),
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_fonts',
+			'id'          => 'text_shadow',
+			'title'       => __( 'Text Shadow', 'marianne' ),
+			'description' => __( 'Give some relief to the text so that it becomes less flat.', 'marianne' ),
+			'type'        => 'checkbox',
 		);
 
 		/**
@@ -183,7 +191,8 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 		 */
 		$options_default = array(
 			// Fonts.
-			'marianne_fonts_family' => 'sans-serif',
+			'marianne_fonts_family'      => 'sans-serif',
+			'marianne_fonts_text_shadow' => false,
 		);
 
 		$option = sanitize_key( $option );
