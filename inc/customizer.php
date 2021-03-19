@@ -70,6 +70,33 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		 */
 		$marianne_customizer_options = array();
 
+		// Colors.
+		$marianne_customizer_options[] = array(
+			'section'     => 'colors',
+			'id'          => 'theme',
+			'title'       => __( 'Theme', 'marianne' ),
+			'description' => __( 'Default: light.', 'marianne' ),
+			'type'        => 'radio',
+			'value'       => array(
+				'light' => __( 'Light', 'marianne' ),
+				'dark'  => __( 'Dark', 'marianne' ),
+			),
+		);
+		$marianne_customizer_options[] = array(
+			'section'     => 'colors',
+			'id'          => 'link_hover',
+			'title'       => __( 'Hovered links', 'marianne' ),
+			'description' => __( 'Default: blue.', 'marianne' ),
+			'type'        => 'radio',
+			'value'       => array(
+				'blue'   => __( 'Blue', 'marianne' ),
+				'red'    => __( 'Red', 'marianne' ),
+				'green'  => __( 'Green', 'marianne' ),
+				'orange' => __( 'Orange', 'marianne' ),
+				'purple' => __( 'Purple', 'marianne' ),
+			),
+		);
+
 		// Fonts.
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_fonts',
@@ -190,6 +217,10 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 		 * );
 		 */
 		$options_default = array(
+			// Colors.
+			'colors_theme'      => 'light',
+			'colors_link_hover' => 'blue',
+
 			// Fonts.
 			'marianne_fonts_family'      => 'sans-serif',
 			'marianne_fonts_text_shadow' => false,

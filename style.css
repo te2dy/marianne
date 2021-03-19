@@ -23,9 +23,17 @@ html {
 	line-height: 1.2;
 	-webkit-text-size-adjust: 100%;
 }
+.theme-light {
+	--color-body-background: #fff;
+	--color-body-text: #000;
+}
+.theme-dark {
+	--color-body-background: #16161D;
+	--color-body-text: #e0e0e0;
+}
 body {
-	background-color: #fff;
-	color: #000;
+	background-color: var(--color-body-background, #fff);
+	color: var(--color-body-text, #000);
 	font-size: 12pt;
 	margin: 0;
 }
@@ -72,6 +80,21 @@ section {
 .text-shadow {
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
+.link-hover-blue {
+	--color-link-hover: #0057B7;
+}
+.link-hover-red {
+	--color-link-hover: #de0000;
+}
+.link-hover-green {
+	--color-link-hover: green;
+}
+.link-hover-orange {
+	--color-link-hover: orange;
+}
+.link-hover-purple {
+	--color-link-hover: purple;
+}
 
  /* Text */
 a {
@@ -82,7 +105,7 @@ a {
 }
 a:hover,
 a:focus {
-	color: #0057B7;
+	color: var(--color-link-hover, #0057B7);
 	cursor: pointer;
 	text-decoration: inherit;
 	transition: all .2s ease-in-out;
@@ -406,8 +429,8 @@ input[type="submit"]:focus,
 button:hover,
 button:focus {
 	background-color: transparent;
-	border-color: #0057B7;
-	color: #0057B7;
+	border-color: var(--color-link-hover, #0057B7);
+	color: var(--color-link-hover, #0057B7);
 	cursor: pointer;
 	transition: all .2s ease-in-out .1s;
 }
@@ -482,7 +505,7 @@ button:focus {
 	position: relative;
 }
 #menu-primary > .menu-item > a::before {
-	background-color: #0057B7;
+	background-color: var(--color-link-hover, #0057B7);
 	content: "";
 	position: absolute;
 	top: 1.25em;
@@ -573,9 +596,9 @@ button:focus {
 		display: block;
 	}
 	#menu-mobile-button[aria-expanded="true"] {
-		border-color: #0057B7;
+		border-color: var(--color-link-hover, #0057B7);
 		background-color: transparent;
-		color: #0057B7;
+		color: var(--color-link-hover, #0057B7);
 	}
 	#menu-mobile-button ~ #menu-primary {
 		display: none;
@@ -598,7 +621,7 @@ button:focus {
 	}
 	#menu-primary .menu-item a:hover,
 	#menu-primary .menu-item a:focus {
-		color: #0057B7;
+		color: var(--color-link-hover, #0057B7);
 	}
 	#menu-primary .menu-item:last-of-type {
 		border: 0;
@@ -646,7 +669,7 @@ button:focus {
 	#menu-primary .sub-menu > .menu-item > a:hover,
 	#menu-primary .sub-menu > .menu-item > a:focus {
 		background-color: transparent;
-		color: #0057B7;
+		color: var(--color-link-hover, #0057B7);
 	}
 }
 
@@ -757,7 +780,7 @@ button:focus {
 .post-content a:hover,
 .page-content a:hover,
 .comment-content a:hover {
-	color: #0057B7;
+	color: var(--color-link-hover, #0057B7);
 }
 .post-page-numbers {
 	border: 1px solid #aaa;
