@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: "
 "Marianne\n"
 "POT-Creation-Date: "
-"2021-03-17 20:28+0100\n"
+"2021-03-19 19:15+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Teddy\n"
 "Language-Team: Teddy\n"
@@ -42,7 +42,7 @@ msgstr ""
 "SearchPath-0: .\n"
 
 #: comments.php:32
-#: inc/template-tags.php:188
+#: inc/template-tags.php:186
 #, php-format
 msgid "%d comment"
 msgid_plural "%d comments"
@@ -90,20 +90,56 @@ msgstr ""
 msgid "Open submenu"
 msgstr ""
 
-#: header.php:29
+#: header.php:33
 msgid "Skip to content"
+msgstr ""
+
+#: inc/customizer.php:53
+msgid "Fonts"
+msgstr ""
+
+#: inc/customizer.php:77
+msgid "Font Family"
+msgstr ""
+
+#: inc/customizer.php:78
+msgid ""
+"Choose the font family "
+"you want to apply to "
+"your site. Your readers' "
+"device will render their "
+"system font or, if it "
+"doesn't work, their "
+"browers' own font. In "
+"any case, rendering may "
+"vary from device to "
+"device, but it will load "
+"way faster. Default: "
+"Sans serif."
+msgstr ""
+
+#: inc/customizer.php:81
+msgid "Sans serif"
+msgstr ""
+
+#: inc/customizer.php:82
+msgid "Serif"
+msgstr ""
+
+#: inc/customizer.php:83
+msgid "Monospaced"
 msgstr ""
 
 #: inc/template-tags.php:106
 msgid "Menu"
 msgstr ""
 
-#: inc/template-tags.php:220
+#: inc/template-tags.php:218
 msgid ""
 "&lsaquo; Previous page"
 msgstr ""
 
-#: inc/template-tags.php:226
+#: inc/template-tags.php:224
 msgid "Next page &rsaquo;"
 msgstr ""
 

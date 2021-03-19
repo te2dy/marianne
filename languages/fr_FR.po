@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marianne\n"
-"POT-Creation-Date: 2021-03-17 20:28+0100\n"
-"PO-Revision-Date: 2021-03-17 20:29+0100\n"
+"POT-Creation-Date: 2021-03-19 19:15+0100\n"
+"PO-Revision-Date: 2021-03-19 19:17+0100\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #. translators: %d: comment count number.
 #. translators: %d: Comment count number.
-#: comments.php:32 inc/template-tags.php:188
+#: comments.php:32 inc/template-tags.php:186
 #, php-format
 msgid "%d comment"
 msgid_plural "%d comments"
@@ -64,19 +64,52 @@ msgstr "Widgets"
 msgid "Open submenu"
 msgstr "Ouvrir le sous-menu"
 
-#: header.php:29
+#: header.php:33
 msgid "Skip to content"
 msgstr "Aller au contenu"
+
+#: inc/customizer.php:53
+msgid "Fonts"
+msgstr "Polices"
+
+#: inc/customizer.php:77
+msgid "Font Family"
+msgstr "Famille de police"
+
+#: inc/customizer.php:78
+msgid ""
+"Choose the font family you want to apply to your site. Your readers' device "
+"will render their system font or, if it doesn't work, their browers' own "
+"font. In any case, rendering may vary from device to device, but it will "
+"load way faster. Default: Sans serif."
+msgstr ""
+"Choisissez la famille de polices que vous souhaitez appliquer à votre site. "
+"L’appareil de vos lecteurs affichera les police de leur système ou, si cela "
+"ne fonctionne pas, les polices propres à leur navigateur. Dans tous les cas, "
+"le rendu devrait varier d’un appareil à l’autre, mais il s’affichera bien "
+"plus vite. Par défaut&nbsp;: sans empattement."
+
+#: inc/customizer.php:81
+msgid "Sans serif"
+msgstr "Sans empattement"
+
+#: inc/customizer.php:82
+msgid "Serif"
+msgstr "Avec empattement"
+
+#: inc/customizer.php:83
+msgid "Monospaced"
+msgstr "Police à espacement fixe"
 
 #: inc/template-tags.php:106
 msgid "Menu"
 msgstr "Menu"
 
-#: inc/template-tags.php:220
+#: inc/template-tags.php:218
 msgid "&lsaquo; Previous page"
 msgstr "&lsaquo; Page précédente"
 
-#: inc/template-tags.php:226
+#: inc/template-tags.php:224
 msgid "Next page &rsaquo;"
 msgstr "Page suivante &rsaquo;"
 

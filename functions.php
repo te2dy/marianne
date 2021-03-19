@@ -227,3 +227,4 @@ if ( ! function_exists( 'marianne_add_sub_menu_toggle' ) ) {
 
 // Load required files.
 require get_template_directory() . '/inc/template-tags.php';
+require get_template_directory() . '/inc/customizer.php';

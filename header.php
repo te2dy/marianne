@@ -2,7 +2,7 @@
 /**
  * The template for displaying the header.
  *
- * This is the template that displays all of the <head> section,
+ * This is the template that displays all of the head section,
  * the site branding (logo, title, description) and the main menu.
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
@@ -19,7 +19,11 @@
 		<?php wp_head(); ?>
 	</head>
 
-	<body <?php body_class(); ?>>
+	<?php
+	$classes  = '';
+	$classes .= 'font-family-' . esc_attr( marianne_get_theme_mod( 'marianne_fonts_family' ) );
+	?>
+	<body <?php body_class( $classes ); ?>>
 		<?php
 		if ( function_exists( 'wp_body_open' ) ) {
 			wp_body_open();

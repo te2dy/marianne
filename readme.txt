@@ -27,6 +27,8 @@ PLANED UPDATE:
 => Don't forget to update theme tags in style.css.
 (- Added: theme page.)
 => Are donate links allowed?
+(- Added: print info.)
+=> Are shortlinks allowed?
 - Added: .pot file for a more easily translatable theme.
 - Added: RSS widget styles.
 - Fixed: hide mobile menu on click outside.
@@ -34,6 +36,7 @@ PLANED UPDATE:
 - Fixed: too large width (100%) of the date link in the loop.
 - Updated: documentation and syntax of a lot of functions.
 (- Updated: print styles.)
+(- Updated: main styles structure.)
 - Updated: theme description.
 - Removed: README.md file.
 
