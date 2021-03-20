@@ -18,14 +18,51 @@ Text Domain: marianne
  * Variables
  */
 
+:root {
+	--font-size: 12pt;
+	--color-blue: #0057B7;
+	--color-red: #de0000;
+	--color-green: #006400;
+	--color-orange: #ff8c00;
+	--color-purple: #800080;
+	--color-border: #aaa;
+	--color-lightgray: #878787;
+	--color-gray: #595959;
+	--color-darkgray: #222;
+}
+
 /* Themes */
 .theme-light {
 	--color-body-background: #fff;
-	--color-body-text: #000;
+	--color-body-text-primary: #000;
+	--color-body-text-secondary: var(--color-gray);
+	--color-input-background: var(--color-body-background);
+	--color-input-text: var(--color-body-text-primary);
+}
+@media (prefers-color-scheme: light) {
+  .theme-os {
+		--color-body-background: #fff;
+		--color-body-text-primary: #000;
+		--color-body-text-secondary: var(--color-gray);
+		--color-input-background: var(--color-body-background);
+		--color-input-text: var(--color-body-text-primary);
+	}
 }
 .theme-dark {
 	--color-body-background: #16161D;
-	--color-body-text: #e0e0e0;
+	--color-body-text-primary: rgb(255, 255, 255, 0.85);
+	--color-body-text-secondary: var(--color-lightgray);
+	--color-input-background: var(--color-darkgray);
+	--color-input-text: var(--color-body-text-primary);
+}
+@media (prefers-color-scheme: dark) {
+  .theme-os {
+		--color-body-background: #16161D;
+		--color-body-text-primary: rgb(255, 255, 255, 0.85);
+		--color-body-text-secondary: var(--color-lightgray);
+		--color-input-background: var(--color-darkgray);
+		--color-input-text: var(--color-body-text-primary);
+	}
 }
 
 /* Fonts */
@@ -38,6 +75,21 @@ Text Domain: marianne
 .font-family-monospace {
 	--font-family: Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console", monospace;
 }
+.font-size-120 {
+	--font-size-calc: calc(var(--font-size) * 1.2);
+}
+.font-size-110 {
+	--font-size-calc: calc(var(--font-size) * 1.1);
+}
+.font-size-100 {
+	--font-size-calc: calc(var(--font-size));
+}
+.font-size-90 {
+	--font-size-calc: calc(var(--font-size) * 0.9);
+}
+.font-size-80 {
+	--font-size-calc: calc(var(--font-size) * 0.8);
+}
 
 /* Body */
 .text-shadow {
@@ -46,19 +98,19 @@ Text Domain: marianne
 
 /* Links */
 .link-hover-blue {
-	--color-link-hover: #0057B7;
+	--color-link-hover: var(--color-blue);
 }
 .link-hover-red {
-	--color-link-hover: #de0000;
+	--color-link-hover: var(--color-red);
 }
 .link-hover-green {
- 	--color-link-hover: green;
+ 	--color-link-hover: var(--color-green);
 }
 .link-hover-orange {
- 	--color-link-hover: orange;
+ 	--color-link-hover: var(--color-orange);
 }
 .link-hover-purple {
- 	--color-link-hover: purple;
+ 	--color-link-hover: var(--color-purple);
 }
 
 /* Content */
@@ -92,9 +144,9 @@ html {
 }
 body {
 	background-color: var(--color-body-background, #fff);
-	color: var(--color-body-text, #000);
+	color: var(--color-body-text-primary, #000);
 	font-family: var(--font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
-	font-size: 12pt;
+	font-size: var(--font-size-calc);
 	margin: 0;
 	text-shadow: var(--text-shadow, unset);
 }
@@ -146,7 +198,7 @@ figure {
 	margin: 1em 0;
 }
 .text-secondary {
-	color: #595959;
+	color: var(--color-body-text-secondary);
 }
 
 /* Titles */
@@ -355,7 +407,7 @@ dd {
 
 /* Separators */
 hr {
-	border-top: 1px solid #aaa;
+	border-top: 1px solid var(--color-border);
 	border-bottom: 0;
 	box-sizing: content-box; /* @source normalize.css */
 	display: block;
@@ -426,8 +478,10 @@ input,
 optgroup,
 select,
 textarea {
-	border: 1px solid #aaa;
+	background-color: var(--color-input-background);
+	border: 1px solid var(--color-border);
 	box-sizing: border-box;
+	color: var(--color-input-text);
 	display: block;
 	font-family: inherit;
 	font-size: 1em;
@@ -449,9 +503,9 @@ input[type="checkbox"] {
 }
 input[type="submit"],
 button {
-	background-color: #eaeaea;
-	border: 1px solid #000;
-	color: inherit;
+	background-color: var(--color-input-background);
+	border: 1px solid var(--color-border);
+	color: var(--color-input-text);
 	padding: .5em;
 	position: relative;
 	transition: all .2s ease-in-out .1s;
@@ -482,7 +536,7 @@ button:focus {
 	padding: 0;
 }
 .navigation-menu .menu-item {
-	border-right: 1px solid #aaa;
+	border-right: 1px solid var(--color-border);
 	display: inline-block;
 	margin-right: .5rem;
 	padding-right: .5rem;
@@ -526,32 +580,11 @@ button:focus {
 #menu-primary-container {
 	margin: 2em 0;
 }
-#menu-primary a:hover,
-#menu-primary a:focus {
-	color: #000;
-}
 #menu-primary > .menu-item {
 	margin-bottom: .5em;
 }
 #menu-primary > .menu-item > a {
 	position: relative;
-}
-#menu-primary > .menu-item > a::before {
-	background-color: var(--color-link-hover, #0057B7);
-	content: "";
-	position: absolute;
-	top: 1.25em;
-	bottom: 0;
-	left: 0;
-	width: 0;
-	height: 2px;
-	visibility: hidden;
-	transition: all .2s ease-in-out .1s;
-}
-#menu-primary > .menu-item:not(.menu-item-has-children) > a:hover::before,
-#menu-primary > .menu-item > a:focus::before {
-	visibility: visible;
-	width: 100%;
 }
 #menu-primary .menu-item-has-children {
 	position: relative;
@@ -559,7 +592,6 @@ button:focus {
 #menu-primary .sub-menu-toggle {
 	background-color: transparent;
 	border: 0;
-	color: #000;
 	display: inline-block;
 	margin: 0 0 0 .25rem;
 	padding: 0;
@@ -639,7 +671,7 @@ button:focus {
 		display: block;
 	}
 	#menu-primary {
-		border-left: 1px solid #aaa;
+		border-left: 1px solid var(--color-border);
 		margin-top: .5em;
 		padding-left: .5em;
 	}
@@ -712,7 +744,7 @@ button:focus {
 	margin-bottom: 4em;
 }
 .entry-loop.sticky {
-	border: 1px solid #aaa;
+	border: 1px solid var(--color-border);
 	padding: 1rem;
 }
 .entry-loop.sticky figure {
@@ -836,7 +868,7 @@ button:focus {
 	color: var(--color-link-hover, #0057B7);
 }
 .post-page-numbers {
-	border: 1px solid #aaa;
+	border: 1px solid var(--color-border);
 	padding: .25em;
 }
 .post-content .post-page-numbers,
@@ -870,7 +902,7 @@ button:focus {
 	font-size: .9em;
 }
 .comment-content {
-	border: 1px solid #aaa;
+	border: 1px solid var(--color-border);
 	margin-top: .5em;
 	padding: 0 1em;
 }
@@ -891,7 +923,7 @@ button:focus {
 	content: " ";
 }
 .comment-list .parent .comment {
-	border-left: 1px solid #aaa;
+	border-left: 1px solid var(--color-border);
 	padding: 1em 0 0 1em;
 }
 .children {

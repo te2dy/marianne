@@ -21,6 +21,7 @@
 
 	<?php
 	$marianne_body_class  = 'font-family-' . esc_attr( marianne_get_theme_mod( 'marianne_fonts_family' ) );
+	$marianne_body_class .= ' font-size-' . esc_attr( marianne_get_theme_mod( 'marianne_fonts_size' ) );
 	$marianne_body_class .= ' theme-' . esc_attr( marianne_get_theme_mod( 'colors_theme' ) );
 	$marianne_body_class .= ' link-hover-' . esc_attr( marianne_get_theme_mod( 'colors_link_hover' ) );
 
