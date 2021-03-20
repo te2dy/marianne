@@ -573,8 +573,8 @@ button:focus {
 	margin: 0 0 1em;
 }
 .site-logo img {
-	height: auto;
-	max-width: 140px;
+	max-height: 150px;
+	max-width: 150px;
 }
 .custom-logo-link {
 	display: inline-block;
@@ -588,6 +588,9 @@ button:focus {
 	font-size:1em;
 	font-weight: 400;
 	margin: .5em 0 0;
+}
+.site-header-image-container {
+	margin: 1em 0;
 }
 
 /* Primary menu */

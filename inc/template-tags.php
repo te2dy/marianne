@@ -93,6 +93,47 @@ if ( ! function_exists( 'marianne_site_description' ) ) {
 	}
 }
 
+if ( ! function_exists( 'marianne_header_image' ) ) {
+	/**
+	 * The header image of the site.
+	 *
+	 * @return void
+	 *
+	 * @since Marianne 1.3
+	 */
+	function marianne_header_image() {
+		if ( has_header_image() ) {
+			$header_img_src  = get_header_image();
+			$header_img_id   = attachment_url_to_postid( get_header_image() );
+			$header_img_data = wp_get_attachment_metadata( $header_img_id );
+
+			$header_img_width  = absint( $header_img_data['width'] );
+			$header_img_height = absint( $header_img_data['height'] );
+
+			$header_img_alt = get_post_meta( $header_img_id, '_wp_attachment_image_alt', true );
+
+			$header_img_responsive_attr = '';
+
+			if ( $header_img_width && $header_img_height ) {
+				$header_img_size_array = array( $header_img_width, $header_img_height );
+
+				$header_img_srcset_value = wp_calculate_image_srcset( $header_img_size_array, $header_img_src, $header_img_data );
+
+				$header_img_sizes_value = wp_calculate_image_sizes( $header_img_size_array, $header_img_src, $header_img_data );
+
+				if ( $header_img_srcset_value && $header_img_sizes_value ) {
+					$header_img_responsive_attr = 'srcset="' . esc_attr( $header_img_srcset_value ) . '" sizes="' . esc_attr( $header_img_sizes_value ) . '"';
+				}
+			}
+			?>
+				<div class="site-header-image-container">
+					<img class="site-header-image" src="<?php header_image(); ?>" alt="<?php echo esc_attr( $header_img_alt ); ?>" aria-label="<?php esc_attr_e( 'Header Image', 'marianne' ); ?>" loading="lazy" <?php echo $header_img_responsive_attr; ?>>
+				</div>
+			<?php
+		}
+	}
+}
+
 if ( ! function_exists( 'marianne_menu_primary' ) ) {
 	/**
 	 * The primary menu of the site.

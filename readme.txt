@@ -24,12 +24,14 @@ and intellectuals who want to present their work.
 PLANED UPDATE:
 === 1.3 – April 1st, 2021 ===
 - Added: options to customize the theme.
+- Added: responsive header image.
 (- Added: theme page.)
 => Are donate links allowed?
 (- Added: print info.)
 => Are shortlinks allowed?
 - Added: .pot file for a more easily translatable theme.
 - Added: RSS widget styles.
+- Fixed: wrong content width.
 - Fixed: hide mobile menu on click outside.
 - Fixed: wrong mobile menu button color when the menu is expanded.
 - Fixed: too large width (100%) of the date link in the loop.
