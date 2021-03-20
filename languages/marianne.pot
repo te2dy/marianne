@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: "
 "Marianne\n"
 "POT-Creation-Date: "
-"2021-03-19 19:15+0100\n"
+"2021-03-20 21:17+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Teddy\n"
 "Language-Team: Teddy\n"
@@ -42,7 +42,7 @@ msgstr ""
 "SearchPath-0: .\n"
 
 #: comments.php:32
-#: inc/template-tags.php:186
+#: inc/template-tags.php:252
 #, php-format
 msgid "%d comment"
 msgid_plural "%d comments"
@@ -59,7 +59,7 @@ msgid ""
 "&lsaquo; Newer comments"
 msgstr ""
 
-#: footer.php:19
+#: footer.php:20
 #, php-format
 msgctxt "Site footer text"
 msgid ""
@@ -67,30 +67,36 @@ msgid ""
 "by %2$s and %3$s"
 msgstr ""
 
-#: footer.php:21
+#: footer.php:22
 msgid ""
 "https://wordpress.org/"
 msgstr ""
 
-#: footer.php:28
-#: functions.php:55
+#: footer.php:23
+msgid ""
+"https://wordpress.org/"
+"themes/marianne/"
+msgstr ""
+
+#: footer.php:41
+#: functions.php:66
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:54
-#: inc/template-tags.php:105
+#: functions.php:65
+#: inc/template-tags.php:171
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:185
+#: functions.php:196
 msgid "Widgets"
 msgstr ""
 
-#: functions.php:218
+#: functions.php:229
 msgid "Open submenu"
 msgstr ""
 
-#: header.php:33
+#: header.php:43
 msgid "Skip to content"
 msgstr ""
 
@@ -98,48 +104,234 @@ msgstr ""
 msgid "Fonts"
 msgstr ""
 
-#: inc/customizer.php:77
+#: inc/customizer.php:60
+msgid "Content Formatting"
+msgstr ""
+
+#: inc/customizer.php:61
+msgid ""
+"The following settings "
+"apply to the main "
+"content of posts and "
+"pages."
+msgstr ""
+
+#: inc/customizer.php:68
+msgid "Footer Settings"
+msgstr ""
+
+#: inc/customizer.php:92
+msgid "Color Scheme"
+msgstr ""
+
+#: inc/customizer.php:93
+msgid ""
+"The automatic mode "
+"chooses between light "
+"and dark color scheme "
+"depending on the "
+"settings of the "
+"operating system or "
+"browser of your "
+"visitors. The background "
+"color of the dark color "
+"scheme is \"intrinsic "
+"gray\", which is the "
+"color seen by the human "
+"eye in total darkness. "
+"Default: light."
+msgstr ""
+
+#: inc/customizer.php:96
+msgid "Light"
+msgstr ""
+
+#: inc/customizer.php:97
+msgid "Dark"
+msgstr ""
+
+#: inc/customizer.php:98
+msgid "Auto"
+msgstr ""
+
+#: inc/customizer.php:104
+msgid "Hovered elements."
+msgstr ""
+
+#: inc/customizer.php:105
+msgid ""
+"Color used for link and "
+"button hovers. Default: "
+"blue."
+msgstr ""
+
+#: inc/customizer.php:108
+msgid "Blue"
+msgstr ""
+
+#: inc/customizer.php:109
+msgid "Red"
+msgstr ""
+
+#: inc/customizer.php:110
+msgid "Green"
+msgstr ""
+
+#: inc/customizer.php:111
+msgid "Orange"
+msgstr ""
+
+#: inc/customizer.php:112
+msgid "Purple"
+msgstr ""
+
+#: inc/customizer.php:120
 msgid "Font Family"
 msgstr ""
 
-#: inc/customizer.php:78
+#: inc/customizer.php:121
 msgid ""
 "Choose the font family "
 "you want to apply to "
 "your site. Your readers' "
-"device will render their "
-"system font or, if it "
-"doesn't work, their "
-"browers' own font. In "
-"any case, rendering may "
-"vary from device to "
-"device, but it will load "
-"way faster. Default: "
-"Sans serif."
+"device will render the "
+"pages with their system "
+"font. Please note that "
+"the rendering may vary "
+"from device to device. "
+"Default: Sans serif."
 msgstr ""
 
-#: inc/customizer.php:81
+#: inc/customizer.php:124
 msgid "Sans serif"
 msgstr ""
 
-#: inc/customizer.php:82
+#: inc/customizer.php:125
 msgid "Serif"
 msgstr ""
 
-#: inc/customizer.php:83
+#: inc/customizer.php:126
 msgid "Monospaced"
 msgstr ""
 
-#: inc/template-tags.php:106
+#: inc/customizer.php:133
+msgid "Font Size"
+msgstr ""
+
+#: inc/customizer.php:134
+msgid ""
+"The main font size. "
+"Default: 100%."
+msgstr ""
+
+#: inc/customizer.php:146
+msgid ""
+"Enable anti-aliasing."
+msgstr ""
+
+#: inc/customizer.php:147
+msgid ""
+"Allows smoothing of "
+"fonts. It is not "
+"necessarily recommended "
+"when the light color "
+"scheme is enabled. "
+"Default: disabled."
+msgstr ""
+
+#: inc/customizer.php:154
+msgid "Enable text shadow."
+msgstr ""
+
+#: inc/customizer.php:155
+msgid ""
+"Give some relief to your "
+"texts. Default: disabled."
+msgstr ""
+
+#: inc/customizer.php:163
+msgid "Text Align"
+msgstr ""
+
+#: inc/customizer.php:164
+msgid ""
+"It does not prevent to "
+"choose a particular "
+"alignment in the text "
+"editor. Default: left."
+msgstr ""
+
+#: inc/customizer.php:167
+msgid "Left"
+msgstr ""
+
+#: inc/customizer.php:168
+msgid "Center"
+msgstr ""
+
+#: inc/customizer.php:169
+msgid "Right"
+msgstr ""
+
+#: inc/customizer.php:170
+msgid "Justify"
+msgstr ""
+
+#: inc/customizer.php:177
+msgid "Enable hyphenation."
+msgstr ""
+
+#: inc/customizer.php:178
+msgid ""
+"Break some words in half "
+"so that they continue on "
+"another line rather than "
+"moving them entirely to "
+"the next line. "
+"Especially useful when "
+"the text alignment is "
+"set to \"justify\". "
+"Default: disabled."
+msgstr ""
+
+#: inc/customizer.php:186
+msgid ""
+"Display the default "
+"footer mention."
+msgstr ""
+
+#: inc/customizer.php:187
+msgid ""
+"Useful to promote "
+"WordPress and Marianne "
+"to your readers. "
+"Default: displayed."
+msgstr ""
+
+#: inc/customizer.php:194
+msgid "Footer Text"
+msgstr ""
+
+#: inc/customizer.php:195
+msgid ""
+"You can write any text "
+"to add in the footer."
+msgstr ""
+
+#: inc/template-tags.php:155
+msgid "Header Image"
+msgstr ""
+
+#: inc/template-tags.php:172
 msgid "Menu"
 msgstr ""
 
-#: inc/template-tags.php:218
+#: inc/template-tags.php:284
 msgid ""
 "&lsaquo; Previous page"
 msgstr ""
 
-#: inc/template-tags.php:224
+#: inc/template-tags.php:290
 msgid "Next page &rsaquo;"
 msgstr ""
 
@@ -175,7 +367,7 @@ msgstr ""
 msgid "Nothing here"
 msgstr ""
 
-#: template-parts/content-none.php:21
+#: template-parts/content-none.php:29
 msgid ""
 "It looks like nothing "
 "was found at this "
