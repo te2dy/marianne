@@ -17,7 +17,6 @@ Text Domain: marianne
 /**
  * Variables
  */
-
 :root {
 	--font-size: 12pt;
 	--color-blue: #0057B7;
@@ -99,18 +98,23 @@ Text Domain: marianne
 /* Links */
 .link-hover-blue {
 	--color-link-hover: var(--color-blue);
+	--color-button-background: rbga(var(--color-blue), 0.1);
 }
 .link-hover-red {
 	--color-link-hover: var(--color-red);
+	--color-button-background: rbga(var(--color-red), 0.1);
 }
 .link-hover-green {
  	--color-link-hover: var(--color-green);
+	--color-button-background: rbga(var(--color-green), 0.1);
 }
 .link-hover-orange {
  	--color-link-hover: var(--color-orange);
+	--color-button-background: rbga(var(--color-orange), 0.1);
 }
 .link-hover-purple {
  	--color-link-hover: var(--color-purple);
+	--color-button-background: rbga(var(--color-purple), 0.1);
 }
 
 /* Content */
@@ -503,7 +507,7 @@ input[type="checkbox"] {
 }
 input[type="submit"],
 button {
-	background-color: var(--color-input-background);
+	background-color: var(--color-button-background);
 	border: 1px solid var(--color-border);
 	color: var(--color-input-text);
 	padding: .5em;

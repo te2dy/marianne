@@ -170,7 +170,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'type'        => 'checkbox',
 		);
 
-		// Footer Settings
+		// Footer Settings.
 		$marianne_customizer_options[] = array(
 			'section' => 'marianne_footer',
 			'id'      => 'mention',
@@ -259,7 +259,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 				// Add the control.
 				$others_controles = array( 'marianne_slider' );
 
-				if ( ! in_array( $type, $others_controles ) ) {
+				if ( ! in_array( $type, $others_controles, true ) ) {
 					$wp_customize->add_control(
 						new WP_Customize_Control(
 							$wp_customize,
@@ -392,13 +392,13 @@ if ( ! function_exists( 'marianne_sanitize_radio_select' ) ) {
 
 if ( ! function_exists( 'marianne_sanitize_checkbox' ) ) {
 	/** Checkbox sanitization.
-	*
-	* @param string $input Checkbox value to be sanitized.
-	*
-	* @return bool Sanitized value.
-	*/
+	 *
+	 * @param string $input Checkbox value to be sanitized.
+	 *
+	 * @return bool Sanitized value.
+	 */
 	function marianne_sanitize_checkbox( $input ) {
-		return ( isset( $input ) && true == $input ) ? true : false;
+		return ( isset( $input ) && true === $input ) ? true : false;
 	}
 }
 
@@ -415,12 +415,12 @@ if ( ! function_exists( 'marianne_sanitize_slider' ) ) {
 	 * @author Anthony Hortin <http://maddisondesigns.com>
 	 * @license http://www.gnu.org/licenses/gpl-2.0.html
 	 * @link https://github.com/maddisondesigns
- 	 */
+	 */
 	function marianne_sanitize_slider( $input, $setting ) {
 		$attrs = $setting->manager->get_control( $setting->id )->input_attrs;
 
-		$min = ( isset( $attrs['min'] ) ? $attrs['min'] : $input );
-		$max = ( isset( $attrs['max'] ) ? $attrs['max'] : $input );
+		$min  = ( isset( $attrs['min'] ) ? $attrs['min'] : $input );
+		$max  = ( isset( $attrs['max'] ) ? $attrs['max'] : $input );
 		$step = ( isset( $attrs['step'] ) ? $attrs['step'] : 1 );
 
 		$number = floor( $input / $attrs['step'] ) * $attrs['step'];
@@ -433,18 +433,18 @@ if ( ! function_exists( 'marianne_in_range' ) ) {
 	/**
 	 * Only allow values between a certain minimum & maxmium range
 	 *
-	 * @param  number $input Input to be sanitized.
-	 * @param  number	$max   The max value of the input.
-	 * @param  number	$min   The min value of the input.
+	 * @param number $input Input to be sanitized.
+	 * @param number $min   The min value of the input.
+	 * @param number $max   The max value of the input.
 	 *
-	 * @return number	Sanitized input.
+	 * @return number Sanitized input.
 	 *
 	 * Based on the work of:
 	 * @author Anthony Hortin <http://maddisondesigns.com>
 	 * @license http://www.gnu.org/licenses/gpl-2.0.html
 	 * @link https://github.com/maddisondesigns
 	 */
-	function skyrocket_in_range( $input, $min, $max ){
+	function marianne_in_range( $input, $min, $max ) {
 		if ( $input < $min ) {
 			$input = $min;
 		}
@@ -457,17 +457,19 @@ if ( ! function_exists( 'marianne_in_range' ) ) {
 	}
 }
 
+/**
+ * Custom Controls.
+ *
+ * Based on the work of:
+ *
+ * @author Anthony Hortin <http://maddisondesigns.com>
+ * @license http://www.gnu.org/licenses/gpl-2.0.html
+ * @link https://github.com/maddisondesigns
+ */
 if ( class_exists( 'WP_Customize_Control' ) ) {
 	/**
-	 * Custom Controls.
-	 *
-	 * Based on the work of:
-	 * @author Anthony Hortin <http://maddisondesigns.com>
-	 * @license http://www.gnu.org/licenses/gpl-2.0.html
-	 * @link https://github.com/maddisondesigns
+	 * Slider Custom Control.
 	 */
-
-	// Slider.
 	class Marianne_Customizer_Control_Slider extends WP_Customize_Control {
 		/**
 		 * The type of control being rendered
@@ -478,23 +480,23 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 * Render the control in the customizer
 		 */
 		public function render_content() {
-		?>
-			<div class="slider-custom-control">
-				<span class="customize-control-title">
-					<?php echo esc_html( $this->label ); ?>
-				</span>
+			?>
+				<div class="slider-custom-control">
+					<span class="customize-control-title">
+						<?php echo esc_html( $this->label ); ?>
+					</span>
 
-				<input type="number" id="<?php echo esc_attr( $this->id ); ?>" name="<?php echo esc_attr( $this->id ); ?>" value="<?php echo esc_attr( $this->value() ); ?>" class="customize-control-slider-value" <?php $this->link(); ?> />
+					<input type="number" id="<?php echo esc_attr( $this->id ); ?>" name="<?php echo esc_attr( $this->id ); ?>" value="<?php echo esc_attr( $this->value() ); ?>" class="customize-control-slider-value" <?php $this->link(); ?> />
 
-				<span class="customize-control-description">
-					<?php echo esc_html( $this->description ); ?>
-				</span>
+					<span class="customize-control-description">
+						<?php echo esc_html( $this->description ); ?>
+					</span>
 
-				<div class="slider" slider-min-value="<?php echo esc_attr( $this->input_attrs['min'] ); ?>" slider-max-value="<?php echo esc_attr( $this->input_attrs['max'] ); ?>" slider-step-value="<?php echo esc_attr( $this->input_attrs['step'] ); ?>"></div>
+					<div class="slider" slider-min-value="<?php echo esc_attr( $this->input_attrs['min'] ); ?>" slider-max-value="<?php echo esc_attr( $this->input_attrs['max'] ); ?>" slider-step-value="<?php echo esc_attr( $this->input_attrs['step'] ); ?>"></div>
 
-				<span class="slider-reset dashicons dashicons-image-rotate" slider-reset-value="<?php echo esc_attr( $this->settings['default']->default ); ?>"></span>
-			</div>
-		<?php
+					<span class="slider-reset dashicons dashicons-image-rotate" slider-reset-value="<?php echo esc_attr( $this->settings['default']->default ); ?>"></span>
+				</div>
+			<?php
 		}
 	}
 }

@@ -20,7 +20,7 @@
 							esc_html_x( '%1$s is proudly powered by %2$s and %3$s', 'Site footer text', 'marianne' ),
 							get_bloginfo( 'name', 'display' ),
 							'<a href="' . esc_url( __( 'https://wordpress.org/', 'marianne' ) ) . '">WordPress</a>',
-							'<a href="' . esc_url( __( 'https://wordpress.org/themes/marianne/', 'marianne' ) ) . '">' . esc_html( wp_get_theme()->get( 'Name' ) ) . '</a>',
+							'<a href="' . esc_url( __( 'https://wordpress.org/themes/marianne/', 'marianne' ) ) . '">' . esc_html( wp_get_theme()->get( 'Name' ) ) . '</a>'
 						);
 						?>
 					</div>

@@ -18,7 +18,7 @@
 	</header>
 
 	<?php
-	$marianne_single_classes  = "entry-content page-content";
+	$marianne_single_classes  = 'entry-content page-content';
 	$marianne_single_classes .= ' text-align-' . marianne_get_theme_mod( 'marianne_content_text_align' );
 
 	if ( false !== marianne_get_theme_mod( 'marianne_content_hyphens' ) ) {
