@@ -16,10 +16,21 @@ if ( ! function_exists( 'marianne_logo' ) ) {
 	 */
 	function marianne_logo() {
 		if ( has_custom_logo() ) {
+			if ( true === display_header_text() ) {
+				$container = 'div';
+			} else {
+				if ( is_front_page() && ! is_paged() ) {
+					$container = 'h1';
+				} elseif ( is_front_page() || is_home() ) {
+					$container = 'h1';
+				} else {
+					$container = 'div';
+				}
+			}
 			?>
-				<div class="site-logo">
+				<<?php echo esc_html( $container ); ?> class="site-logo">
 					<?php the_custom_logo(); ?>
-				</div>
+				</<?php echo esc_html( $container ); ?>>
 			<?php
 		}
 	}
@@ -110,8 +121,6 @@ if ( ! function_exists( 'marianne_header_image' ) ) {
 			$header_img_width  = absint( $header_img_data['width'] );
 			$header_img_height = absint( $header_img_data['height'] );
 
-			$header_img_alt = get_post_meta( $header_img_id, '_wp_attachment_image_alt', true );
-
 			$header_img_responsive_attr = '';
 
 			if ( $header_img_width && $header_img_height ) {
@@ -125,10 +134,26 @@ if ( ! function_exists( 'marianne_header_image' ) ) {
 					$header_img_responsive_attr = 'srcset="' . esc_attr( $header_img_srcset_value ) . '" sizes="' . esc_attr( $header_img_sizes_value ) . '"';
 				}
 			}
+
+			if ( true === display_header_text() || has_custom_logo() ) {
+				$container = 'div';
+
+				$header_img_alt = get_post_meta( $header_img_id, '_wp_attachment_image_alt', true );
+			} else {
+				if ( is_front_page() && ! is_paged() ) {
+					$container = 'h1';
+				} elseif ( is_front_page() || is_home() ) {
+					$container = 'h1';
+				} else {
+					$container = 'div';
+				}
+
+				$header_img_alt = get_bloginfo( 'name' );
+			}
 			?>
-				<div class="site-header-image-container">
+				<<?php echo esc_html( $container ); ?> class="site-header-image-container">
 					<img class="site-header-image" src="<?php header_image(); ?>" alt="<?php echo esc_attr( $header_img_alt ); ?>" aria-label="<?php esc_attr_e( 'Header Image', 'marianne' ); ?>" loading="lazy" <?php echo $header_img_responsive_attr; ?>>
-				</div>
+				</<?php echo esc_html( $container ); ?>>
 			<?php
 		}
 	}

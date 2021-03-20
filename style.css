@@ -573,6 +573,7 @@ button:focus {
 	margin: 0 0 1em;
 }
 .site-logo img {
+	display: block;
 	max-height: 150px;
 	max-width: 150px;
 }
