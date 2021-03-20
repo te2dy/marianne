@@ -33,7 +33,7 @@ Text Domain: marianne
 }
 
 /* Themes */
-.theme-light {
+.color-scheme-light {
 	--color-body-background: #fff;
 	--color-body-text-primary: #000;
 	--color-body-text-secondary: var(--color-gray);
@@ -41,7 +41,7 @@ Text Domain: marianne
 	--color-input-text: var(--color-body-text-primary);
 }
 @media (prefers-color-scheme: light) {
-  .theme-auto {
+  .color-scheme-auto {
 		--color-body-background: #fff;
 		--color-body-text-primary: #000;
 		--color-body-text-secondary: var(--color-gray);
@@ -49,7 +49,7 @@ Text Domain: marianne
 		--color-input-text: var(--color-body-text-primary);
 	}
 }
-.theme-dark {
+.color-scheme-dark {
 	--color-body-background: #16161D;
 	--color-body-text-primary: rgb(255, 255, 255, 0.85);
 	--color-body-text-secondary: var(--color-lightgray);
@@ -57,7 +57,7 @@ Text Domain: marianne
 	--color-input-text: var(--color-body-text-primary);
 }
 @media (prefers-color-scheme: dark) {
-  .theme-auto {
+  .color-scheme-auto {
 		--color-body-background: #16161D;
 		--color-body-text-primary: rgb(255, 255, 255, 0.85);
 		--color-body-text-secondary: var(--color-lightgray);

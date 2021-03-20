@@ -22,13 +22,32 @@ if ( ! function_exists( 'marianne_customizer_scripts_styles' ) ) {
 		$theme_version = wp_get_theme()->get( 'Version' );
 		$min           = marianne_minify();
 
-		wp_enqueue_style( 'marianne-customizer', esc_url( get_template_directory_uri() . "/assets/css/customizer-controls$min.css" ), array(), $theme_version );
+		// Enqueue custom controls files.
+		wp_enqueue_style( 'marianne-customizer-controls', esc_url( get_template_directory_uri() . "/assets/css/customizer-controls$min.css" ), array(), $theme_version );
 
-		wp_enqueue_script( 'marianne-customizer', esc_url( get_template_directory_uri() . "/assets/js/customizer-controls$min.js" ), array( 'jquery', 'jquery-ui-slider', 'customize-preview' ), $theme_version, true );
+		wp_enqueue_script( 'marianne-customizer-controls', esc_url( get_template_directory_uri() . "/assets/js/customizer-controls$min.js" ), array( 'jquery', 'jquery-ui-slider', 'customize-preview' ), $theme_version, true );
 	}
 
 	add_action( 'customize_controls_enqueue_scripts', 'marianne_customizer_scripts_styles' );
 }
+
+if ( ! function_exists( 'marianne_customizer_script_live' ) ) {
+	/**
+	 * Enqueue Theme Customizer live preview script.
+	 *
+	 * @return void
+	 *
+	 * @since Marianne 1.3
+	 */
+	 function marianne_customizer_script_live() {
+		$theme_version = wp_get_theme()->get( 'Version' );
+ 		$min           = marianne_minify();
+
+		 wp_enqueue_script( 'marianne-customizer-live', esc_url( get_template_directory_uri() . "/assets/js/customizer-live-preview$min.js" ), array( 'jquery', 'customize-preview' ), $theme_version, true );
+	 }
+
+	 add_action( 'customize_preview_init', 'marianne_customizer_script_live' );
+ }
 
 if ( ! function_exists( 'marianne_customize_register' ) ) {
 	/**
@@ -69,6 +88,11 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			)
 		);
 
+
+		// Adds live preview to the site's name and description.
+		$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
+		$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
+
 		/**
 		 * List new options to add to the Customizer.
 		 *
@@ -81,6 +105,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		 *                                                 'description' => 'The description of the option',
 		 *                                                 'type'        => 'The type of the option (text, checkbox…)',
 		 *                                                 'value'       => 'The value of the option',
+		 *                                                 'live'        => (bool) Enable/disable live preview.
 		 *                                             );
 		 */
 		$marianne_customizer_options = array();
@@ -88,7 +113,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		// Colors.
 		$marianne_customizer_options[] = array(
 			'section'     => 'colors',
-			'id'          => 'theme',
+			'id'          => 'scheme',
 			'title'       => __( 'Color Scheme', 'marianne' ),
 			'description' => __( 'The automatic mode chooses between light and dark color scheme depending on the settings of the operating system or browser of your visitors. The background color of the dark color scheme is "intrinsic gray", which is the color seen by the human eye in total darkness. Default: light.', 'marianne' ),
 			'type'        => 'select',
@@ -97,6 +122,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 				'dark'  => __( 'Dark', 'marianne' ),
 				'auto'  => __( 'Auto', 'marianne' ),
 			),
+			'live'        => true,
 		);
 		$marianne_customizer_options[] = array(
 			'section'     => 'colors',
@@ -111,6 +137,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 				'orange' => __( 'Orange', 'marianne' ),
 				'purple' => __( 'Purple', 'marianne' ),
 			),
+			'live'        => true,
 		);
 
 		// Fonts.
@@ -218,6 +245,12 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			$value       = ! empty( $option['value'] ) ? $option['value'] : '';
 			$input_attrs = ! empty( $option['input_attrs'] ) ? $option['input_attrs'] : null;
 
+			if ( ! empty( $option['live'] ) && true === $option['live'] ) {
+				$live = 'postMessage';
+			} else {
+				$live = 'refresh';
+			}
+
 			if ( $section && $id ) {
 				$option_id = $section . '_' . $id;
 			} else {
@@ -258,6 +291,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 						'default'           => sanitize_key( $option_default ),
 						'capability'        => 'edit_theme_options',
 						'sanitize_callback' => $sanitize_callback,
+						'transport'         => $live,
 					)
 				);
 
@@ -325,7 +359,7 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 		 */
 		$options_default = array(
 			// Colors.
-			'colors_theme'      => 'light',
+			'colors_scheme'     => 'light',
 			'colors_link_hover' => 'blue',
 
 			// Fonts.
