@@ -57,7 +57,8 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		$wp_customize->add_section(
 			'marianne_content',
 			array(
-				'title' => __( 'Content Formatting', 'marianne' ),
+				'title'       => __( 'Content Formatting', 'marianne' ),
+				'description' => __( 'The following settings apply to the main content of posts and pages.', 'marianne' ),
 			)
 		);
 
@@ -88,20 +89,20 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		$marianne_customizer_options[] = array(
 			'section'     => 'colors',
 			'id'          => 'theme',
-			'title'       => __( 'Theme', 'marianne' ),
-			'description' => __( 'Default: light.', 'marianne' ),
+			'title'       => __( 'Color Scheme', 'marianne' ),
+			'description' => __( 'The automatic mode chooses between light and dark color scheme depending on the settings of the operating system or browser of your visitors. The background color of the dark color scheme is "intrinsic gray", which is the color seen by the human eye in total darkness. Default: light.', 'marianne' ),
 			'type'        => 'select',
 			'value'       => array(
 				'light' => __( 'Light', 'marianne' ),
 				'dark'  => __( 'Dark', 'marianne' ),
-				'os'    => __( 'Operating system color scheme (light or dark)', 'marianne' ),
+				'auto'  => __( 'Auto', 'marianne' ),
 			),
 		);
 		$marianne_customizer_options[] = array(
 			'section'     => 'colors',
 			'id'          => 'link_hover',
-			'title'       => __( 'Hovered links', 'marianne' ),
-			'description' => __( 'Default: blue.', 'marianne' ),
+			'title'       => __( 'Hovered elements.', 'marianne' ),
+			'description' => __( 'Color used for link and button hovers. Default: blue.', 'marianne' ),
 			'type'        => 'select',
 			'value'       => array(
 				'blue'   => __( 'Blue', 'marianne' ),
@@ -117,7 +118,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_fonts',
 			'id'          => 'family',
 			'title'       => __( 'Font Family', 'marianne' ),
-			'description' => __( "Choose the font family you want to apply to your site. Your readers' device will render their system font or, if it doesn't work, their browers' own font. In any case, rendering may vary from device to device, but it will load way faster. Default: Sans serif.", 'marianne' ),
+			'description' => __( "Choose the font family you want to apply to your site. Your readers' device will render the pages with their system font. Please note that the rendering may vary from device to device. Default: Sans serif.", 'marianne' ),
 			'type'        => 'select',
 			'value'       => array(
 				'sans-serif' => __( 'Sans serif', 'marianne' ),
@@ -141,9 +142,17 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_fonts',
+			'id'          => 'smooth',
+			'title'       => __( 'Enable anti-aliasing.', 'marianne' ),
+			'description' => __( 'Allows smoothing of fonts. It is not necessarily recommended when the light color scheme is enabled. Default: disabled.', 'marianne' ),
+			'type'        => 'checkbox',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_fonts',
 			'id'          => 'text_shadow',
-			'title'       => __( 'Text Shadow', 'marianne' ),
-			'description' => __( 'Give some relief to the text so that it becomes less flat.', 'marianne' ),
+			'title'       => __( 'Enable text shadow.', 'marianne' ),
+			'description' => __( 'Give some relief to your texts. Default: disabled.', 'marianne' ),
 			'type'        => 'checkbox',
 		);
 
@@ -165,24 +174,25 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_content',
 			'id'          => 'hyphens',
-			'title'       => __( 'Enable hyphenation', 'marianne' ),
-			'description' => __( 'Break some words in half so that they continue on another line rather than moving them entirely to the next line. Especially useful when the text alignment is set to "justify".', 'marianne' ),
+			'title'       => __( 'Enable hyphenation.', 'marianne' ),
+			'description' => __( 'Break some words in half so that they continue on another line rather than moving them entirely to the next line. Especially useful when the text alignment is set to "justify". Default: disabled.', 'marianne' ),
 			'type'        => 'checkbox',
 		);
 
 		// Footer Settings.
 		$marianne_customizer_options[] = array(
-			'section' => 'marianne_footer',
-			'id'      => 'mention',
-			'title'   => __( 'Display the default footer mention to WordPress and Marianne. Default: checked.', 'marianne' ),
-			'type'    => 'checkbox',
+			'section'     => 'marianne_footer',
+			'id'          => 'mention',
+			'title'       => __( 'Display the default footer mention.', 'marianne' ),
+			'description' => __( 'Useful to promote WordPress and Marianne to your readers. Default: displayed.', 'marianne' ),
+			'type'        => 'checkbox',
 		);
 
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_footer',
 			'id'          => 'text',
 			'title'       => __( 'Footer Text', 'marianne' ),
-			'description' => __( 'Add a text you want to display in the footer.', 'marianne' ),
+			'description' => __( 'You can write any text to add in the footer.', 'marianne' ),
 			'type'        => 'textarea',
 		);
 
@@ -321,6 +331,7 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			// Fonts.
 			'marianne_fonts_family'      => 'sans-serif',
 			'marianne_fonts_size'        => 100,
+			'marianne_fonts_smooth'      => false,
 			'marianne_fonts_text_shadow' => false,
 
 			// Content Formatting.

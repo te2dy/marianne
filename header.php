@@ -25,6 +25,10 @@
 	$marianne_body_class .= ' theme-' . esc_attr( marianne_get_theme_mod( 'colors_theme' ) );
 	$marianne_body_class .= ' link-hover-' . esc_attr( marianne_get_theme_mod( 'colors_link_hover' ) );
 
+	if ( false !== marianne_get_theme_mod( 'marianne_fonts_smooth' ) ) {
+		$marianne_body_class .= ' font-smooth';
+	}
+
 	if ( false !== marianne_get_theme_mod( 'marianne_fonts_text_shadow' ) ) {
 		$marianne_body_class .= ' text-shadow';
 	}

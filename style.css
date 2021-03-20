@@ -19,12 +19,14 @@ Text Domain: marianne
  */
 :root {
 	--font-size: 12pt;
+
 	--color-blue: #0057B7;
 	--color-red: #de0000;
 	--color-green: #006400;
 	--color-orange: #ff8c00;
 	--color-purple: #800080;
 	--color-border: #aaa;
+
 	--color-lightgray: #878787;
 	--color-gray: #595959;
 	--color-darkgray: #222;
@@ -39,7 +41,7 @@ Text Domain: marianne
 	--color-input-text: var(--color-body-text-primary);
 }
 @media (prefers-color-scheme: light) {
-  .theme-os {
+  .theme-auto {
 		--color-body-background: #fff;
 		--color-body-text-primary: #000;
 		--color-body-text-secondary: var(--color-gray);
@@ -55,7 +57,7 @@ Text Domain: marianne
 	--color-input-text: var(--color-body-text-primary);
 }
 @media (prefers-color-scheme: dark) {
-  .theme-os {
+  .theme-auto {
 		--color-body-background: #16161D;
 		--color-body-text-primary: rgb(255, 255, 255, 0.85);
 		--color-body-text-secondary: var(--color-lightgray);
@@ -88,6 +90,11 @@ Text Domain: marianne
 }
 .font-size-80 {
 	--font-size-calc: calc(var(--font-size) * 0.8);
+}
+.font-smooth {
+	--font-smooth-moz: grayscale;
+	--font-smooth-webkit: antialiased;
+	--font-smooth: auto;
 }
 
 /* Body */
@@ -151,6 +158,9 @@ body {
 	color: var(--color-body-text-primary, #000);
 	font-family: var(--font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
 	font-size: var(--font-size-calc);
+	-moz-osx-font-smoothing: var(--font-smooth-moz, auto);
+	 -webkit-font-smoothing: var(--font-smooth-webkit, none);
+	            font-smooth: var(--font-smooth, auto);
 	margin: 0;
 	text-shadow: var(--text-shadow, unset);
 }
@@ -803,7 +813,7 @@ button:focus {
 	margin: .5em 0;
 }
 .entry-sticky {
-	border-left: 4px solid #595959;
+	border-left: 4px solid var(--color-border);
 	display: inline-block;
 	padding-left: .25em;
 	margin: 1em 0 .5em;
@@ -902,7 +912,7 @@ button:focus {
 }
 .comment-metadata {
 	clear: none;
-	color: #595959;
+	color: var(--color-body-text-secondary);
 	font-size: .9em;
 }
 .comment-content {
@@ -918,7 +928,7 @@ button:focus {
 	background-color: #dadada;
 }
 .reply {
-	color: #595959;
+	color: var(--color-body-text-secondary);
 	font-size: .9em;
 	margin-top: .25em;
 	text-align: right;
@@ -994,7 +1004,7 @@ button:focus {
 	font-weight: 700;
 }
 .rss-date {
-	color: #595959;
+	color: var(--color-body-text-secondary);
 	font-size: .9em;
 }
 .rssSummary {
@@ -1011,7 +1021,7 @@ button:focus {
 	font-weight: 700;
 }
 .wp-calendar-table tbody td {
-	color: #595959;
+	color: var(--color-body-text-secondary);
 }
 .wp-calendar-table tbody td a {
 	color: #000;
