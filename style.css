@@ -15,14 +15,10 @@ Text Domain: marianne
 */
 
 /**
- * Structure
+ * Variables
  */
 
-/* @source normalize.css */
-html {
-	line-height: 1.2;
-	-webkit-text-size-adjust: 100%;
-}
+/* Themes */
 .theme-light {
 	--color-body-background: #fff;
 	--color-body-text: #000;
@@ -31,11 +27,76 @@ html {
 	--color-body-background: #16161D;
 	--color-body-text: #e0e0e0;
 }
+
+/* Fonts */
+.font-family-sans-serif {
+	--font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+.font-family-serif {
+	--font-family: "Iowan Old Style", "Apple Garamond", Baskerville, "Times New Roman", "Droid Serif", Times, "Source Serif Pro", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.font-family-monospace {
+	--font-family: Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console", monospace;
+}
+
+/* Body */
+.text-shadow {
+	--text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Links */
+.link-hover-blue {
+	--color-link-hover: #0057B7;
+}
+.link-hover-red {
+	--color-link-hover: #de0000;
+}
+.link-hover-green {
+ 	--color-link-hover: green;
+}
+.link-hover-orange {
+ 	--color-link-hover: orange;
+}
+.link-hover-purple {
+ 	--color-link-hover: purple;
+}
+
+/* Content */
+.text-align-left {
+	--content-text-align: left;
+}
+.text-align-center {
+	--content-text-align: center;
+}
+.text-align-right {
+	--content-text-align: right;
+}
+.text-align-justify {
+	--content-text-align: justify;
+}
+.text-hyphens {
+ --content-hyphens: auto;
+ --content-hyphens-limit-chars: 5 2 2;
+ --content-hyphens-limit-lines: 2;
+ --content-hyphens-limit-last: always;
+}
+
+/**
+ * Structure
+ */
+
+/* @source normalize.css */
+html {
+	line-height: 1.2;
+	-webkit-text-size-adjust: 100%;
+}
 body {
 	background-color: var(--color-body-background, #fff);
 	color: var(--color-body-text, #000);
+	font-family: var(--font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
 	font-size: 12pt;
 	margin: 0;
+	text-shadow: var(--text-shadow, unset);
 }
 .site {
 	margin: 0 auto;
@@ -66,35 +127,6 @@ section {
 /**
  * Formatting
  */
-
-/* Page */
-.font-family-sans-serif {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-}
-.font-family-serif {
-	font-family: "Iowan Old Style", "Apple Garamond", Baskerville, "Times New Roman", "Droid Serif", Times, "Source Serif Pro", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-.font-family-monospace {
-	font-family: Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console", monospace;
-}
-.text-shadow {
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-}
-.link-hover-blue {
-	--color-link-hover: #0057B7;
-}
-.link-hover-red {
-	--color-link-hover: #de0000;
-}
-.link-hover-green {
-	--color-link-hover: green;
-}
-.link-hover-orange {
-	--color-link-hover: orange;
-}
-.link-hover-purple {
-	--color-link-hover: purple;
-}
 
  /* Text */
 a {
@@ -752,6 +784,27 @@ button:focus {
 .entry-content,
 .comment-content {
 	line-height: 1.4;
+	text-align: var(--content-text-align, left);
+
+	/* Hyphens */
+	-webkit-hyphens: var(--content-hyphens, none);
+	-moz-hyphens: var(--content-hyphens, none);
+	-ms-hyphens: var(--content-hyphens, none);
+	hyphens: var(--content-hyphens, none);
+
+	-webkit-hyphenate-limit-chars: var(--content-hyphens-limit-chats, auto);
+	-moz-hyphenate-limit-chars: var(--content-hyphens-limit-chars, auto);
+	-ms-hyphenate-limit-chars: var(--content-hyphens-limit-chars, auto);
+
+	-webkit-hyphenate-limit-lines: var(--content-hyphens-limit-lines, no-limit);
+	-moz-hyphenate-limit-lines: var(--content-hyphens-limit-lines, no-limit);
+	-ms-hyphenate-limit-lines: var(--content-hyphens-limit-lines, no-limit);
+	hyphenate-limit-lines: var(--content-hyphens-limit-lines, no-limit);
+
+	-webkit-hyphenate-limit-last: var(--content-hyphens-limit-last, none);
+	-moz-hyphenate-limit-last: var(--content-hyphens-limit-last, none);
+	-ms-hyphenate-limit-last: var(--content-hyphens-limit-last, none);
+	hyphenate-limit-last: var(--content-hyphens-limit-last, none);
 }
 .entry-footer {
 	margin-top: 2em;

@@ -31,7 +31,15 @@
 		<?php marianne_the_post_thumbnail( 'entry-thumbnail loop-thumbnail', array( 'link' ) ); ?>
 	</header>
 
-	<section class="entry-content loop-content">
+	<?php
+	$marianne_single_classes  = "entry-content loop-content";
+	$marianne_single_classes .= ' text-align-' . marianne_get_theme_mod( 'marianne_content_text_align' );
+
+	if ( false !== marianne_get_theme_mod( 'marianne_content_hyphens' ) ) {
+		$marianne_single_classes .= ' text-hyphens';
+	}
+	?>
+	<section <?php marianne_add_class( $marianne_single_classes ); ?>>
 		<a href="<?php the_permalink(); ?>">
 			<?php the_excerpt(); ?>
 		</a>

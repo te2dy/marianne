@@ -29,7 +29,15 @@
 		?>
 	</header>
 
-	<section class="entry-content post-content">
+	<?php
+	$marianne_single_classes  = "entry-content post-content";
+	$marianne_single_classes .= ' text-align-' . marianne_get_theme_mod( 'marianne_content_text_align' );
+
+	if ( false !== marianne_get_theme_mod( 'marianne_content_hyphens' ) ) {
+		$marianne_single_classes .= ' text-hyphens';
+	}
+	?>
+	<section <?php marianne_add_class( $marianne_single_classes ); ?>>
 		<?php
 		the_content();
 

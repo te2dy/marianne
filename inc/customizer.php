@@ -54,6 +54,13 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			)
 		);
 
+		$wp_customize->add_section(
+			'marianne_content',
+			array(
+				'title' => __( 'Content Formatting', 'marianne' ),
+			)
+		);
+
 		/**
 		 * List new options to add to the Customizer.
 		 *
@@ -119,6 +126,29 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'type'        => 'checkbox',
 		);
 
+		// Content Formatting.
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_content',
+			'id'          => 'text_align',
+			'title'       => __( 'Text Align', 'marianne' ),
+			'description' => __( 'It does not prevent to choose a particular alignment in the text editor. Default: left.', 'marianne' ),
+			'type'        => 'select',
+			'value'       => array(
+				'left'    => __( 'Left', 'marianne' ),
+				'center'  => __( 'Center', 'marianne' ),
+				'right'   => __( 'Right', 'marianne' ),
+				'justify' => __( 'Justify', 'marianne' ),
+			),
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_content',
+			'id'          => 'hyphens',
+			'title'       => __( 'Enable hyphenation', 'marianne' ),
+			'description' => __( 'Break some words in half so that they continue on another line rather than moving them entirely to the next line. Especially useful when the text alignment is set to "justify".', 'marianne' ),
+			'type'        => 'checkbox',
+		);
+
 		/**
 		 * Add settings and controls to the Theme Customizer.
 		 *
@@ -154,6 +184,10 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 					case 'radio':
 					case 'select':
 						$sanitize_callback = 'marianne_sanitize_radio_select';
+						break;
+
+					case 'checkbox':
+						$sanitize_callback = 'marianne_sanitize_checkbox';
 						break;
 
 					default:
@@ -224,6 +258,10 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			// Fonts.
 			'marianne_fonts_family'      => 'sans-serif',
 			'marianne_fonts_text_shadow' => false,
+
+			// Content Formatting.
+			'marianne_content_text_align' => 'left',
+			'marianne_content_hyphens'    => false,
 		);
 
 		$option = sanitize_key( $option );
@@ -281,5 +319,17 @@ if ( ! function_exists( 'marianne_sanitize_radio_select' ) ) {
 		} else {
 			return sanitize_key( $setting->default );
 		}
+	}
+}
+
+if ( ! function_exists( 'marianne_sanitize_checkbox' ) ) {
+	/** Checkbox sanitization.
+	*
+	* @param string $input Checkbox value.
+	*
+	* @return bool Sanitized value.
+	*/
+	function marianne_sanitize_checkbox( $input ) {
+		return ( isset( $input ) && true == $input ) ? true : false;
 	}
 }

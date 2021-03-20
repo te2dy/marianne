@@ -17,7 +17,11 @@
 		</h1>
 	</header>
 
-	<section class="entry-content page-content">
+	<?php
+	$marianne_single_classes  = "entry-content page-content";
+	$marianne_single_classes .= ' text-align-' . marianne_get_theme_mod( 'marianne_content_text_align' );
+	?>
+	<section <?php marianne_add_class( $marianne_single_classes ); ?>>
 		<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'marianne' ); ?></p>
 
 		<?php get_search_form(); ?>
