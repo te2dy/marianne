@@ -324,3 +324,18 @@ if ( ! function_exists( 'marianne_the_post_thumbnail' ) ) {
 		}
 	}
 }
+
+if ( ! function_exists( 'marianne_add_class' ) ) {
+	/**
+	 * Add class attribute.
+	 *
+	 * @param string $classes Classes to add.
+	 *
+	 * @return void
+	 *
+	 * @since Marianne 1.3
+	 */
+	function marianne_add_class( $classes = '' ) {
+		echo 'class="' . esc_attr( $classes ) . '"';
+	}
+}
