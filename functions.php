@@ -37,11 +37,11 @@ if ( ! function_exists( 'marianne_setup' ) ) {
 		add_theme_support(
 			'custom-logo',
 			array(
-				'width'       => 300,
-				'height'      => 300,
-				'flex-width'  => false,
-				'flex-height' => false,
-				'header-text' => array(
+				'width'                => 300,
+				'height'               => 300,
+				'flex-width'           => false,
+				'flex-height'          => false,
+				'header-text'          => array(
 					'site-title',
 					'site-description',
 				),
@@ -52,11 +52,10 @@ if ( ! function_exists( 'marianne_setup' ) ) {
 		add_theme_support(
 			'custom-header',
 			array(
-		        'default-text-color' => '000',
-		        'width'              => 960,
-		        'height'             => 721,
-		        'flex-width'         => false,
-		        'flex-height'        => true,
+				'width'       => 960,
+				'height'      => 721,
+				'flex-width'  => false,
+				'flex-height' => true,
 			)
 		);
 
