@@ -20,7 +20,7 @@ if ( ! function_exists( 'marianne_setup' ) ) {
 
 		// Set content-width.
 		if ( ! isset( $content_width ) ) {
-			$content_width = 600;
+			$content_width = 480;
 		}
 
 		// Add default posts and comments RSS feed links to head.
