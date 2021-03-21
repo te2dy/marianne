@@ -45,7 +45,13 @@
 		<div id="page" class="site">
 			<header id="header" class="site-header" role="banner">
 				<?php
-				marianne_logo();
+				$marianne_logo_class = 'site-logo';
+
+				if ( true === marianne_get_theme_mod( 'title_tagline_logo_circular' ) ) {
+					$marianne_logo_class .= ' image-circular';
+				}
+
+				marianne_logo( $marianne_logo_class );
 
 				marianne_site_title();
 

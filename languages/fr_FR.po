@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marianne\n"
-"POT-Creation-Date: 2021-03-20 21:17+0100\n"
-"PO-Revision-Date: 2021-03-20 21:23+0100\n"
+"POT-Creation-Date: 2021-03-21 18:19+0100\n"
+"PO-Revision-Date: 2021-03-21 18:20+0100\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #. translators: %d: comment count number.
 #. translators: %d: Comment count number.
-#: comments.php:32 inc/template-tags.php:252
+#: comments.php:32 inc/template-tags.php:191
 #, php-format
 msgid "%d comment"
 msgid_plural "%d comments"
@@ -38,33 +38,33 @@ msgid "&lsaquo; Newer comments"
 msgstr "&lsaquo; Commentaires plus récents"
 
 #. translators: $1%s: Site name. $2%s: WordPress. $3%s: Marianne.
-#: footer.php:20
+#: footer.php:31
 #, php-format
 msgctxt "Site footer text"
 msgid "%1$s is proudly powered by %2$s and %3$s"
 msgstr "%1$s est fièrement propulsé par %2$s et %3$s"
 
-#: footer.php:22
+#: footer.php:33
 msgid "https://wordpress.org/"
 msgstr "https://fr.wordpress.org/"
 
-#: footer.php:23
+#: footer.php:34
 msgid "https://wordpress.org/themes/marianne/"
 msgstr "https://wordpress.org/themes/marianne/"
 
-#: footer.php:41 functions.php:66
+#: footer.php:41 functions.php:56
 msgid "Footer Menu"
 msgstr "Menu du pied de page"
 
-#: functions.php:65 inc/template-tags.php:171
+#: functions.php:55 inc/template-tags.php:110
 msgid "Primary Menu"
 msgstr "Menu principal"
 
-#: functions.php:196
+#: functions.php:186
 msgid "Widgets"
 msgstr "Widgets"
 
-#: functions.php:229
+#: functions.php:219
 msgid "Open submenu"
 msgstr "Ouvrir le sous-menu"
 
@@ -72,29 +72,37 @@ msgstr "Ouvrir le sous-menu"
 msgid "Skip to content"
 msgstr "Aller au contenu"
 
-#: inc/customizer.php:53
+#: inc/customizer.php:72
 msgid "Fonts"
 msgstr "Polices"
 
-#: inc/customizer.php:60
+#: inc/customizer.php:79
 msgid "Content Formatting"
 msgstr "Mise en forme du contenu"
 
-#: inc/customizer.php:61
+#: inc/customizer.php:80
 msgid "The following settings apply to the main content of posts and pages."
 msgstr ""
 "Les paramètres suivants s’appliquent au contenu principal des articles et "
 "des pages."
 
-#: inc/customizer.php:68
+#: inc/customizer.php:87
 msgid "Footer Settings"
 msgstr "Réglages du pied de page"
 
-#: inc/customizer.php:92
+#: inc/customizer.php:117
+msgid "Circular Logo."
+msgstr "Logo circulaire"
+
+#: inc/customizer.php:118
+msgid "Default: unckecked."
+msgstr "Par défaut&nbsp;: non coché."
+
+#: inc/customizer.php:126
 msgid "Color Scheme"
 msgstr "Schéma de couleurs"
 
-#: inc/customizer.php:93
+#: inc/customizer.php:127
 msgid ""
 "The automatic mode chooses between light and dark color scheme depending on "
 "the settings of the operating system or browser of your visitors. The "
@@ -107,53 +115,53 @@ msgstr ""
 "«&nbsp;gris intrinsèque&nbsp;», qui est la couleur perçue par l’œil humain "
 "dans l’obscurité totale. Valeur par défaut : clair."
 
-#: inc/customizer.php:96
+#: inc/customizer.php:130
 msgid "Light"
 msgstr "Clair"
 
-#: inc/customizer.php:97
+#: inc/customizer.php:131
 msgid "Dark"
 msgstr "Sombre"
 
-#: inc/customizer.php:98
+#: inc/customizer.php:132
 msgid "Auto"
 msgstr "Auto"
 
-#: inc/customizer.php:104
+#: inc/customizer.php:139
 msgid "Hovered elements."
 msgstr "Éléments survolés"
 
-#: inc/customizer.php:105
+#: inc/customizer.php:140
 msgid "Color used for link and button hovers. Default: blue."
 msgstr ""
 "Couleur utilisée pour les survols des liens et des boutons. Par défaut : "
 "bleu."
 
-#: inc/customizer.php:108
+#: inc/customizer.php:143
 msgid "Blue"
 msgstr "Bleu"
 
-#: inc/customizer.php:109
+#: inc/customizer.php:144
 msgid "Red"
 msgstr "Rouge"
 
-#: inc/customizer.php:110
+#: inc/customizer.php:145
 msgid "Green"
 msgstr "Vert"
 
-#: inc/customizer.php:111
+#: inc/customizer.php:146
 msgid "Orange"
 msgstr "Orange"
 
-#: inc/customizer.php:112
+#: inc/customizer.php:147
 msgid "Purple"
 msgstr "Violet"
 
-#: inc/customizer.php:120
+#: inc/customizer.php:156
 msgid "Font Family"
 msgstr "Famille de police"
 
-#: inc/customizer.php:121
+#: inc/customizer.php:157
 msgid ""
 "Choose the font family you want to apply to your site. Your readers' device "
 "will render the pages with their system font. Please note that the rendering "
@@ -164,51 +172,53 @@ msgstr ""
 "Veuillez noter que le rendu peut varier d’un appareil à l’autre. Par "
 "défaut&nbsp;: sans empattement."
 
-#: inc/customizer.php:124
+#: inc/customizer.php:160
 msgid "Sans serif"
 msgstr "Sans empattement"
 
-#: inc/customizer.php:125
+#: inc/customizer.php:161
 msgid "Serif"
 msgstr "Avec empattement"
 
-#: inc/customizer.php:126
+#: inc/customizer.php:162
 msgid "Monospaced"
 msgstr "Police à espacement fixe"
 
-#: inc/customizer.php:133
+#: inc/customizer.php:170
 msgid "Font Size"
 msgstr "Taille de la police"
 
-#: inc/customizer.php:134
+#: inc/customizer.php:171
 msgid "The main font size. Default: 100%."
 msgstr "La taille de la police principale. Par défaut&nbsp;: 100&nbsp;%"
 
-#: inc/customizer.php:146
-msgid "Enable anti-aliasing."
+#: inc/customizer.php:184
+msgid "Force anti-aliasing."
 msgstr "Activer l’anticrénelage."
 
-#: inc/customizer.php:147
+#: inc/customizer.php:185
 msgid ""
-"Allows smoothing of fonts. It is not necessarily recommended when the light "
-"color scheme is enabled. Default: disabled."
+"By default, the browser automatically chooses whether or not to smooth the "
+"fonts. By checking this box, you will ask it to smooth them. Default: "
+"unckecked."
 msgstr ""
-"Permet le lissage des polices. Il n’est pas forcément recommandé lorsque le "
-"schéma de couleurs claires est activé. Par défaut : désactivé."
+"Par défaut, le navigateur choisit automatiquement de lisser ou non les "
+"polices. En cochant cette case, vous lui demanderez de les lisser. Par "
+"défaut&nbsp;: non coché."
 
-#: inc/customizer.php:154
+#: inc/customizer.php:192
 msgid "Enable text shadow."
 msgstr "Activez l’ombre du texte."
 
-#: inc/customizer.php:155
+#: inc/customizer.php:193
 msgid "Give some relief to your texts. Default: disabled."
 msgstr "Donne un peu de relief à vos textes. Par défaut : désactivé."
 
-#: inc/customizer.php:163
+#: inc/customizer.php:202
 msgid "Text Align"
 msgstr "Alignement du texte"
 
-#: inc/customizer.php:164
+#: inc/customizer.php:203
 msgid ""
 "It does not prevent to choose a particular alignment in the text editor. "
 "Default: left."
@@ -216,27 +226,27 @@ msgstr ""
 "Cela n’empêche pas de choisir un alignement particulier dans l’éditeur de "
 "texte. Par défaut : gauche."
 
-#: inc/customizer.php:167
+#: inc/customizer.php:206
 msgid "Left"
 msgstr "Gauche"
 
-#: inc/customizer.php:168
+#: inc/customizer.php:207
 msgid "Center"
 msgstr "Centré"
 
-#: inc/customizer.php:169
+#: inc/customizer.php:208
 msgid "Right"
 msgstr "Droite"
 
-#: inc/customizer.php:170
+#: inc/customizer.php:209
 msgid "Justify"
 msgstr "Justifié"
 
-#: inc/customizer.php:177
+#: inc/customizer.php:217
 msgid "Enable hyphenation."
 msgstr "Activer les césures"
 
-#: inc/customizer.php:178
+#: inc/customizer.php:218
 msgid ""
 "Break some words in half so that they continue on another line rather than "
 "moving them entirely to the next line. Especially useful when the text "
@@ -247,39 +257,35 @@ msgstr ""
 "Particulièrement utile lorsque l’alignement du texte est défini sur «&nbsp;"
 "justifié&nbsp;». Par défaut : désactivé."
 
-#: inc/customizer.php:186
+#: inc/customizer.php:227
 msgid "Display the default footer mention."
 msgstr "Afficher la mention de pied de page par défaut."
 
-#: inc/customizer.php:187
+#: inc/customizer.php:228
 msgid ""
 "Useful to promote WordPress and Marianne to your readers. Default: displayed."
 msgstr ""
 "Utile pour promouvoir WordPress et Marianne auprès de vos lecteurs. Par "
 "défaut : affiché."
 
-#: inc/customizer.php:194
+#: inc/customizer.php:236
 msgid "Footer Text"
 msgstr "Texte du pied de page"
 
-#: inc/customizer.php:195
+#: inc/customizer.php:237
 msgid "You can write any text to add in the footer."
 msgstr ""
 "Vous pouvez écrire n’importe quel texte à ajouter dans le pied de page."
 
-#: inc/template-tags.php:155
-msgid "Header Image"
-msgstr "Image d’en-tête"
-
-#: inc/template-tags.php:172
+#: inc/template-tags.php:111
 msgid "Menu"
 msgstr "Menu"
 
-#: inc/template-tags.php:284
+#: inc/template-tags.php:223
 msgid "&lsaquo; Previous page"
 msgstr "&lsaquo; Page précédente"
 
-#: inc/template-tags.php:290
+#: inc/template-tags.php:229
 msgid "Next page &rsaquo;"
 msgstr "Page suivante &rsaquo;"
 
@@ -317,3 +323,13 @@ msgstr "Il n’y a rien ici"
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 "On dirait que rien n’a été trouvé ici. Essayez peut-être une recherche&nbsp;?"
+
+#~ msgid ""
+#~ "Allows smoothing of fonts. It is not necessarily recommended when the "
+#~ "light color scheme is enabled. Default: disabled."
+#~ msgstr ""
+#~ "Permet le lissage des polices. Il n’est pas forcément recommandé lorsque "
+#~ "le schéma de couleurs claires est activé. Par défaut : désactivé."
+
+#~ msgid "Header Image"
+#~ msgstr "Image d’en-tête"

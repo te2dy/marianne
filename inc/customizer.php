@@ -39,15 +39,15 @@ if ( ! function_exists( 'marianne_customizer_script_live' ) ) {
 	 *
 	 * @since Marianne 1.3
 	 */
-	 function marianne_customizer_script_live() {
+	function marianne_customizer_script_live() {
 		$theme_version = wp_get_theme()->get( 'Version' );
- 		$min           = marianne_minify();
+		$min           = marianne_minify();
 
-		 wp_enqueue_script( 'marianne-customizer-live', esc_url( get_template_directory_uri() . "/assets/js/customizer-live-preview$min.js" ), array( 'jquery', 'customize-preview' ), $theme_version, true );
-	 }
+		wp_enqueue_script( 'marianne-customizer-live', esc_url( get_template_directory_uri() . "/assets/js/customizer-live-preview$min.js" ), array( 'jquery', 'customize-preview' ), $theme_version, true );
+	}
 
-	 add_action( 'customize_preview_init', 'marianne_customizer_script_live' );
- }
+	add_action( 'customize_preview_init', 'marianne_customizer_script_live' );
+}
 
 if ( ! function_exists( 'marianne_customize_register' ) ) {
 	/**
@@ -109,6 +109,15 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		 *                                             );
 		 */
 		$marianne_customizer_options = array();
+
+		// Site Identity.
+		$marianne_customizer_options[] = array(
+			'section'     => 'title_tagline',
+			'id'          => 'logo_circular',
+			'title'       => __( 'Circular Logo.', 'marianne' ),
+			'description' => __( 'Default: unckecked.', 'marianne' ),
+			'type'        => 'checkbox',
+		);
 
 		// Colors.
 		$marianne_customizer_options[] = array(
@@ -175,7 +184,6 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'title'       => __( 'Force anti-aliasing.', 'marianne' ),
 			'description' => __( 'By default, the browser automatically chooses whether or not to smooth the fonts. By checking this box, you will ask it to smooth them. Default: unckecked.', 'marianne' ),
 			'type'        => 'checkbox',
-			'live'        => false, // Live preview does not not work.
 		);
 
 		$marianne_customizer_options[] = array(
@@ -366,6 +374,9 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 		 * );
 		 */
 		$options_default = array(
+			// Site Identity.
+			'title_tagline_logo_circular' => false,
+
 			// Colors.
 			'colors_scheme'     => 'light',
 			'colors_link_hover' => 'blue',
@@ -507,49 +518,5 @@ if ( ! function_exists( 'marianne_in_range' ) ) {
 		}
 
 		return $input;
-	}
-}
-
-/**
- * Custom Controls.
- *
- * Based on the work of:
- *
- * @author Anthony Hortin <http://maddisondesigns.com>
- * @license http://www.gnu.org/licenses/gpl-2.0.html
- * @link https://github.com/maddisondesigns
- */
-if ( class_exists( 'WP_Customize_Control' ) ) {
-	/**
-	 * Slider Custom Control.
-	 */
-	class Marianne_Customizer_Control_Slider extends WP_Customize_Control {
-		/**
-		 * The type of control being rendered
-		 */
-		public $type = 'marianne_slider';
-
-		/**
-		 * Render the control in the customizer
-		 */
-		public function render_content() {
-			?>
-				<div class="slider-custom-control">
-					<span class="customize-control-title">
-						<?php echo esc_html( $this->label ); ?>
-					</span>
-
-					<input type="number" id="<?php echo esc_attr( $this->id ); ?>" name="<?php echo esc_attr( $this->id ); ?>" value="<?php echo esc_attr( $this->value() ); ?>" class="customize-control-slider-value" <?php $this->link(); ?> />
-
-					<span class="customize-control-description">
-						<?php echo esc_html( $this->description ); ?>
-					</span>
-
-					<div class="slider" slider-min-value="<?php echo esc_attr( $this->input_attrs['min'] ); ?>" slider-max-value="<?php echo esc_attr( $this->input_attrs['max'] ); ?>" slider-step-value="<?php echo esc_attr( $this->input_attrs['step'] ); ?>"></div>
-
-					<span class="slider-reset dashicons dashicons-image-rotate" slider-reset-value="<?php echo esc_attr( $this->settings['default']->default ); ?>"></span>
-				</div>
-			<?php
-		}
 	}
 }

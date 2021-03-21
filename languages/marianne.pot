@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: "
 "Marianne\n"
 "POT-Creation-Date: "
-"2021-03-20 21:17+0100\n"
+"2021-03-21 18:19+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Teddy\n"
 "Language-Team: Teddy\n"
@@ -42,7 +42,7 @@ msgstr ""
 "SearchPath-0: .\n"
 
 #: comments.php:32
-#: inc/template-tags.php:252
+#: inc/template-tags.php:191
 #, php-format
 msgid "%d comment"
 msgid_plural "%d comments"
@@ -59,7 +59,7 @@ msgid ""
 "&lsaquo; Newer comments"
 msgstr ""
 
-#: footer.php:20
+#: footer.php:31
 #, php-format
 msgctxt "Site footer text"
 msgid ""
@@ -67,32 +67,32 @@ msgid ""
 "by %2$s and %3$s"
 msgstr ""
 
-#: footer.php:22
+#: footer.php:33
 msgid ""
 "https://wordpress.org/"
 msgstr ""
 
-#: footer.php:23
+#: footer.php:34
 msgid ""
 "https://wordpress.org/"
 "themes/marianne/"
 msgstr ""
 
 #: footer.php:41
-#: functions.php:66
+#: functions.php:56
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:65
-#: inc/template-tags.php:171
+#: functions.php:55
+#: inc/template-tags.php:110
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:196
+#: functions.php:186
 msgid "Widgets"
 msgstr ""
 
-#: functions.php:229
+#: functions.php:219
 msgid "Open submenu"
 msgstr ""
 
@@ -100,15 +100,15 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/customizer.php:53
+#: inc/customizer.php:72
 msgid "Fonts"
 msgstr ""
 
-#: inc/customizer.php:60
+#: inc/customizer.php:79
 msgid "Content Formatting"
 msgstr ""
 
-#: inc/customizer.php:61
+#: inc/customizer.php:80
 msgid ""
 "The following settings "
 "apply to the main "
@@ -116,15 +116,23 @@ msgid ""
 "pages."
 msgstr ""
 
-#: inc/customizer.php:68
+#: inc/customizer.php:87
 msgid "Footer Settings"
 msgstr ""
 
-#: inc/customizer.php:92
+#: inc/customizer.php:117
+msgid "Circular Logo."
+msgstr ""
+
+#: inc/customizer.php:118
+msgid "Default: unckecked."
+msgstr ""
+
+#: inc/customizer.php:126
 msgid "Color Scheme"
 msgstr ""
 
-#: inc/customizer.php:93
+#: inc/customizer.php:127
 msgid ""
 "The automatic mode "
 "chooses between light "
@@ -142,54 +150,54 @@ msgid ""
 "Default: light."
 msgstr ""
 
-#: inc/customizer.php:96
+#: inc/customizer.php:130
 msgid "Light"
 msgstr ""
 
-#: inc/customizer.php:97
+#: inc/customizer.php:131
 msgid "Dark"
 msgstr ""
 
-#: inc/customizer.php:98
+#: inc/customizer.php:132
 msgid "Auto"
 msgstr ""
 
-#: inc/customizer.php:104
+#: inc/customizer.php:139
 msgid "Hovered elements."
 msgstr ""
 
-#: inc/customizer.php:105
+#: inc/customizer.php:140
 msgid ""
 "Color used for link and "
 "button hovers. Default: "
 "blue."
 msgstr ""
 
-#: inc/customizer.php:108
+#: inc/customizer.php:143
 msgid "Blue"
 msgstr ""
 
-#: inc/customizer.php:109
+#: inc/customizer.php:144
 msgid "Red"
 msgstr ""
 
-#: inc/customizer.php:110
+#: inc/customizer.php:145
 msgid "Green"
 msgstr ""
 
-#: inc/customizer.php:111
+#: inc/customizer.php:146
 msgid "Orange"
 msgstr ""
 
-#: inc/customizer.php:112
+#: inc/customizer.php:147
 msgid "Purple"
 msgstr ""
 
-#: inc/customizer.php:120
+#: inc/customizer.php:156
 msgid "Font Family"
 msgstr ""
 
-#: inc/customizer.php:121
+#: inc/customizer.php:157
 msgid ""
 "Choose the font family "
 "you want to apply to "
@@ -202,58 +210,59 @@ msgid ""
 "Default: Sans serif."
 msgstr ""
 
-#: inc/customizer.php:124
+#: inc/customizer.php:160
 msgid "Sans serif"
 msgstr ""
 
-#: inc/customizer.php:125
+#: inc/customizer.php:161
 msgid "Serif"
 msgstr ""
 
-#: inc/customizer.php:126
+#: inc/customizer.php:162
 msgid "Monospaced"
 msgstr ""
 
-#: inc/customizer.php:133
+#: inc/customizer.php:170
 msgid "Font Size"
 msgstr ""
 
-#: inc/customizer.php:134
+#: inc/customizer.php:171
 msgid ""
 "The main font size. "
 "Default: 100%."
 msgstr ""
 
-#: inc/customizer.php:146
+#: inc/customizer.php:184
 msgid ""
-"Enable anti-aliasing."
+"Force anti-aliasing."
 msgstr ""
 
-#: inc/customizer.php:147
+#: inc/customizer.php:185
 msgid ""
-"Allows smoothing of "
-"fonts. It is not "
-"necessarily recommended "
-"when the light color "
-"scheme is enabled. "
-"Default: disabled."
+"By default, the browser "
+"automatically chooses "
+"whether or not to smooth "
+"the fonts. By checking "
+"this box, you will ask "
+"it to smooth them. "
+"Default: unckecked."
 msgstr ""
 
-#: inc/customizer.php:154
+#: inc/customizer.php:192
 msgid "Enable text shadow."
 msgstr ""
 
-#: inc/customizer.php:155
+#: inc/customizer.php:193
 msgid ""
 "Give some relief to your "
 "texts. Default: disabled."
 msgstr ""
 
-#: inc/customizer.php:163
+#: inc/customizer.php:202
 msgid "Text Align"
 msgstr ""
 
-#: inc/customizer.php:164
+#: inc/customizer.php:203
 msgid ""
 "It does not prevent to "
 "choose a particular "
@@ -261,27 +270,27 @@ msgid ""
 "editor. Default: left."
 msgstr ""
 
-#: inc/customizer.php:167
+#: inc/customizer.php:206
 msgid "Left"
 msgstr ""
 
-#: inc/customizer.php:168
+#: inc/customizer.php:207
 msgid "Center"
 msgstr ""
 
-#: inc/customizer.php:169
+#: inc/customizer.php:208
 msgid "Right"
 msgstr ""
 
-#: inc/customizer.php:170
+#: inc/customizer.php:209
 msgid "Justify"
 msgstr ""
 
-#: inc/customizer.php:177
+#: inc/customizer.php:217
 msgid "Enable hyphenation."
 msgstr ""
 
-#: inc/customizer.php:178
+#: inc/customizer.php:218
 msgid ""
 "Break some words in half "
 "so that they continue on "
@@ -294,13 +303,13 @@ msgid ""
 "Default: disabled."
 msgstr ""
 
-#: inc/customizer.php:186
+#: inc/customizer.php:227
 msgid ""
 "Display the default "
 "footer mention."
 msgstr ""
 
-#: inc/customizer.php:187
+#: inc/customizer.php:228
 msgid ""
 "Useful to promote "
 "WordPress and Marianne "
@@ -308,30 +317,26 @@ msgid ""
 "Default: displayed."
 msgstr ""
 
-#: inc/customizer.php:194
+#: inc/customizer.php:236
 msgid "Footer Text"
 msgstr ""
 
-#: inc/customizer.php:195
+#: inc/customizer.php:237
 msgid ""
 "You can write any text "
 "to add in the footer."
 msgstr ""
 
-#: inc/template-tags.php:155
-msgid "Header Image"
-msgstr ""
-
-#: inc/template-tags.php:172
+#: inc/template-tags.php:111
 msgid "Menu"
 msgstr ""
 
-#: inc/template-tags.php:284
+#: inc/template-tags.php:223
 msgid ""
 "&lsaquo; Previous page"
 msgstr ""
 
-#: inc/template-tags.php:290
+#: inc/template-tags.php:229
 msgid "Next page &rsaquo;"
 msgstr ""
 
