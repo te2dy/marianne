@@ -1,12 +1,74 @@
 ( function( $ ) {
 	"use strict";
 
+	/**
+	 * Toggles class (or multiple ones) to an element (or multiple ones).
+	 *
+	 * Function used for select and radio options in the Theme Customizer.
+	 *
+	 * @param {string|array} target  The element to which toggle the class.
+	 * @param {array}        classes The classes to toogle.
+	 * @param {string}       newval  The value sent by the Customizer.
+	 *
+	 * @since Marianne 1.3
+	 */
+	function marianneSelectRadioToggleClass( target, classes, newval ) {
+		if ( target && classes && newval ) {
+			$.each( classes, function( key, theClass ) {
+				if ( ! Array.isArray( target ) ) {
+					if ( $( target ).hasClass( theClass ) ) {
+						$( target ).removeClass( theClass );
+					}
+
+					if ( key === newval ) {
+						$( target ).addClass( theClass );
+					}
+				} else {
+					$.each( target, function( index, value ) {
+						if ( $( value ).hasClass( theClass ) ) {
+							$( value ).removeClass( theClass );
+						}
+
+						if ( key === newval ) {
+							$( value ).addClass( theClass );
+						}
+					} );
+				}
+			} );
+		}
+	}
+
+	/**
+	 * Toggles class (or multiple ones) to an element (or multiple ones).
+	 *
+	 * Function used for checkbox options in the Theme Customizer.
+	 *
+	 * @param {string|array} target  The element to which toggle the class.
+	 * @param {array}        classes The classes to toogle.
+	 * @param {string}       newval  The value sent by the Customizer.
+	 *
+	 * @since Marianne 1.3
+	 */
+	function marianneCheckboxToggleClass( target, classToAdd, checked ) {
+		if ( target && classToAdd ) {
+			if ( checked === true ) {
+				if ( ! $( target ).hasClass( classToAdd ) ) {
+					$( target ).addClass( classToAdd );
+				}
+			} else {
+				if ( $( target ).hasClass( classToAdd ) ) {
+					$( target ).removeClass( classToAdd );
+				}
+			}
+		}
+	}
+
 	$( document ).ready( function( $ ) {
 		/**
-		 * Configure live preview in the Theme Customizer.
+		 * Sets up live preview for the Theme Customizer.
 		 */
 
-		// Site title.
+		// Site Identity > Site Title.
 		wp.customize( 'blogname', function( value ) {
 			value.bind( function( newval ) {
 				if ( $( '.site-title' ).children( 'a' ).length === 0 ) {
@@ -17,71 +79,133 @@
 			} );
 		} );
 
-		// Site description.
+		// Site Identity > Site description.
 		wp.customize( 'blogdescription', function( value ) {
 			value.bind( function( newval ) {
 				$( '.site-description' ).html( newval );
 			} );
 		} );
 
-		// Color scheme.
+		// Colors > Color Scheme.
 		wp.customize( 'colors_scheme', function( value ) {
 			value.bind( function( newval ) {
-				if ( $( 'body' ).hasClass( 'color-scheme-light' ) ) {
-					$( 'body' ).removeClass( 'color-scheme-light' );
-				}
+				var target = 'body',
+					classes = {
+						'light': 'color-scheme-light',
+						'dark': 'color-scheme-dark',
+					};
 
-				if ( $( 'body' ).hasClass( 'color-scheme-dark' ) ) {
-					$( 'body' ).removeClass( 'color-scheme-dark' );
-				}
+				marianneSelectRadioToggleClass( target, classes, newval );
+			} );
+		} );
 
-				if ( $( 'body' ).hasClass( 'color-scheme-auto' ) ) {
-					$( 'body' ).removeClass( 'color-scheme-auto' );
-				}
+		// Colors > Hovered Elements.
+		wp.customize( 'colors_link_hover', function( value ) {
+			value.bind( function( newval ) {
+				var target = 'body',
+					classes = {
+						'blue': 'link-hover-blue',
+						'red': 'link-hover-red',
+						'green': 'link-hover-green',
+						'orange': 'link-hover-orange',
+						'purple': 'link-hover-purple'
+					};
 
-				if ( newval === 'light' ) {
-					$( 'body' ).addClass( 'color-scheme-light' );
-				} else if ( newval === 'dark' ) {
-					$( 'body' ).addClass( 'color-scheme-dark' );
-				} else if ( newval === 'auto' ) {
-					$( 'body' ).addClass( 'color-scheme-auto' );
+				marianneSelectRadioToggleClass( target, classes, newval );
+			} );
+		} );
+
+		// Fonts > Font Family.
+		wp.customize( 'marianne_fonts_family', function( value ) {
+			value.bind( function( newval ) {
+				var target = 'body',
+					classes = {
+						'sans-serif': 'font-family-sans-serif',
+						'serif': 'font-family-serif',
+						'monospace': 'font-family-monospace'
+					};
+
+				marianneSelectRadioToggleClass( target, classes, newval );
+			} );
+		} );
+
+		// Fonts > Font Size.
+		wp.customize( 'marianne_fonts_size', function( value ) {
+			value.bind( function( newval ) {
+				var target = 'body',
+					classes = {
+						80: 'font-size-80',
+						90: 'font-size-90',
+						100: 'font-size-100',
+						110: 'font-size-110',
+						120: 'font-size-120'
+					};
+
+				marianneSelectRadioToggleClass( target, classes, newval );
+			} );
+		} );
+
+		// Fonts > Text Shadow.
+		wp.customize( 'marianne_fonts_text_shadow', function( value ) {
+			value.bind( function( newval ) {
+				var target = 'body',
+					classToAdd = 'text-shadow';
+
+				marianneCheckboxToggleClass( target, classToAdd, newval );
+			} );
+		} );
+
+		// Content Formatting > Text Align.
+		wp.customize( 'marianne_content_text_align', function( value ) {
+			value.bind( function( newval ) {
+				var target = [
+						'.entry-content',
+						'.comment-content'
+					],
+					classes = {
+						left: 'text-align-left',
+						center: 'text-align-center',
+						right: 'text-align-right',
+						justify: 'text-align-justify'
+					};
+
+				marianneSelectRadioToggleClass( target, classes, newval );
+			} );
+		} );
+
+		// Content Formatting > Hyphenation.
+		wp.customize( 'marianne_content_hyphens', function( value ) {
+			value.bind( function( newval ) {
+				var target = '.entry-content',
+					classToAdd = 'text-hyphens';
+
+				marianneCheckboxToggleClass( target, classToAdd, newval );
+			} );
+		} );
+
+		// Footer Settings > Footer Text.
+		wp.customize( 'marianne_footer_text', function( value ) {
+			value.bind( function( newval ) {
+				if ( $( '#site-footer-text' ).length ) {
+					$( '#site-footer-text' ).html( newval );
+				} else {
+					$( '.site-footer' )
+						.prepend(
+							'<div id="site-footer-text" class="site-footer-block">'
+							+ newval
+							+ '</div>'
+						);
 				}
 			} );
 		} );
 
-		// Hovered elements.
-		wp.customize( 'colors_link_hover', function( value ) {
+		// Footer Settings > Default footer mention.
+		wp.customize( 'marianne_footer_mention', function( value ) {
 			value.bind( function( newval ) {
-				if ( $( 'body' ).hasClass( 'link-hover-blue' ) ) {
-					$( 'body' ).removeClass( 'link-hover-blue' );
-				}
-
-				if ( $( 'body' ).hasClass( 'link-hover-red' ) ) {
-					$( 'body' ).removeClass( 'link-hover-red' );
-				}
-
-				if ( $( 'body' ).hasClass( 'link-hover-green' ) ) {
-					$( 'body' ).removeClass( 'link-hover-green' );
-				}
-
-				if ( $( 'body' ).hasClass( 'link-hover-orange' ) ) {
-					$( 'body' ).removeClass( 'link-hover-orange' );
-				}
-
-				if ( $( 'body' ).hasClass( 'link-hover-purple' ) ) {
-					$( 'body' ).removeClass( 'link-hover-purple' );
-				}
-
-				if ( newval === 'blue' ) {
-					$( 'body' ).addClass( 'link-hover-blue' );
-				} else if ( newval === 'red' ) {
-					$( 'body' ).addClass( 'link-hover-red' );
-				} else if ( newval === 'green' ) {
-					$( 'body' ).addClass( 'link-hover-green' );
-				} else if ( newval === 'orange' ) {
-					$( 'body' ).addClass( 'link-hover-orange' );
-				} else if ( newval === 'purple' ) {
-					$( 'body' ).addClass( 'link-hover-purple' );
+				if ( newval === true ) {
+					$( '#site-footer-mention' ).show();
+				} else {
+					$( '#site-footer-mention' ).hide();
 				}
 			} );
 		} );

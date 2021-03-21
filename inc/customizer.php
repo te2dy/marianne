@@ -152,6 +152,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 				'serif'      => __( 'Serif', 'marianne' ),
 				'monospace'  => __( 'Monospaced', 'marianne' ),
 			),
+			'live'        => true,
 		);
 
 		$marianne_customizer_options[] = array(
@@ -165,14 +166,16 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 				'max'  => 120,
 				'step' => 10,
 			),
+			'live'        => true,
 		);
 
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_fonts',
 			'id'          => 'smooth',
-			'title'       => __( 'Enable anti-aliasing.', 'marianne' ),
-			'description' => __( 'Allows smoothing of fonts. It is not necessarily recommended when the light color scheme is enabled. Default: disabled.', 'marianne' ),
+			'title'       => __( 'Force anti-aliasing.', 'marianne' ),
+			'description' => __( 'By default, the browser automatically chooses whether or not to smooth the fonts. By checking this box, you will ask it to smooth them. Default: unckecked.', 'marianne' ),
 			'type'        => 'checkbox',
+			'live'        => false, // Live preview does not not work.
 		);
 
 		$marianne_customizer_options[] = array(
@@ -181,6 +184,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'title'       => __( 'Enable text shadow.', 'marianne' ),
 			'description' => __( 'Give some relief to your texts. Default: disabled.', 'marianne' ),
 			'type'        => 'checkbox',
+			'live'        => true,
 		);
 
 		// Content Formatting.
@@ -196,6 +200,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 				'right'   => __( 'Right', 'marianne' ),
 				'justify' => __( 'Justify', 'marianne' ),
 			),
+			'live'        => true,
 		);
 
 		$marianne_customizer_options[] = array(
@@ -204,6 +209,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'title'       => __( 'Enable hyphenation.', 'marianne' ),
 			'description' => __( 'Break some words in half so that they continue on another line rather than moving them entirely to the next line. Especially useful when the text alignment is set to "justify". Default: disabled.', 'marianne' ),
 			'type'        => 'checkbox',
+			'live'        => true,
 		);
 
 		// Footer Settings.
@@ -213,6 +219,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'title'       => __( 'Display the default footer mention.', 'marianne' ),
 			'description' => __( 'Useful to promote WordPress and Marianne to your readers. Default: displayed.', 'marianne' ),
 			'type'        => 'checkbox',
+			'live'        => true,
 		);
 
 		$marianne_customizer_options[] = array(
@@ -221,6 +228,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'title'       => __( 'Footer Text', 'marianne' ),
 			'description' => __( 'You can write any text to add in the footer.', 'marianne' ),
 			'type'        => 'textarea',
+			'live'        => true,
 		);
 
 		/**

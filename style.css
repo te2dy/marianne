@@ -94,7 +94,7 @@ Text Domain: marianne
 .font-smooth {
 	--font-smooth-moz: grayscale;
 	--font-smooth-webkit: antialiased;
-	--font-smooth: auto;
+	--font-smooth: always;
 }
 
 /* Body */
@@ -159,7 +159,7 @@ body {
 	font-family: var(--font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
 	font-size: var(--font-size-calc);
 	-moz-osx-font-smoothing: var(--font-smooth-moz, auto);
-	 -webkit-font-smoothing: var(--font-smooth-webkit, none);
+	 -webkit-font-smoothing: var(--font-smooth-webkit, auto);
 	            font-smooth: var(--font-smooth, auto);
 	margin: 0;
 	text-shadow: var(--text-shadow, unset);

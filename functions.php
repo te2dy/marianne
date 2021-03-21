@@ -49,6 +49,13 @@ if ( ! function_exists( 'marianne_setup' ) ) {
 			)
 		);
 
+		/**
+		 * Add support for custom header.
+		 *
+		 * @link https://codex.wordpress.org/Custom_Headers
+		 *
+		 * @since Marianne 1.3
+		 */
 		add_theme_support(
 			'custom-header',
 			array(
