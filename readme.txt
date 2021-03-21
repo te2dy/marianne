@@ -24,8 +24,7 @@ and intellectuals who want to present their work.
 PLANED UPDATE:
 === 1.3 – April 1st, 2021 ===
 - Added: options to customize the theme.
-- Added: responsive header image.
-(- Added: theme page.)
+- Added: theme page.
 => Are donate links allowed?
 (- Added: print info.)
 => Are shortlinks allowed?
