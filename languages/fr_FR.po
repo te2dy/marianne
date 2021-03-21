@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marianne\n"
-"POT-Creation-Date: 2021-03-21 19:02+0100\n"
-"PO-Revision-Date: 2021-03-21 19:04+0100\n"
+"POT-Creation-Date: 2021-03-21 19:08+0100\n"
+"PO-Revision-Date: 2021-03-21 19:09+0100\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -293,6 +293,11 @@ msgstr "Page suivante &rsaquo;"
 msgid "About Marianne"
 msgstr "À propos de Marianne"
 
+#: inc/theme-page.php:57
+msgctxt "Link to Marianne on WordPress Theme Directory"
+msgid "https://wordpress.org/themes/marianne/"
+msgstr "https://fr.wordpress.org/themes/marianne/"
+
 #: inc/theme-page.php:81
 msgctxt "The title of the theme page."
 msgid "Marianne"
@@ -345,7 +350,7 @@ msgstr "FAQ"
 
 #: inc/theme-page.php:174
 msgid "How can I set up a logo?"
-msgstr "Comment puis-je ajouter un log&nbsp;?"
+msgstr "Comment puis-je ajouter un logo&nbsp;?"
 
 #. translators: %s: The URL of the Theme Customizer.
 #: inc/theme-page.php:181

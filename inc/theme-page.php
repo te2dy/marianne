@@ -54,7 +54,7 @@ function marianne_theme_page() {
 	// The variables used in the page.
 	$theme_info        = wp_get_theme();
 	$theme_version     = $theme_info->get( 'Version' );
-	$theme_wp_link     = 'https://wordpress.org/themes/marianne/';
+	$theme_wp_link     = _x( 'https://wordpress.org/themes/marianne/', 'Link to Marianne on WordPress Theme Directory', 'marianne' );
 	$support_wp_link   = 'https://wordpress.org/support/theme/marianne';
 	$gh_link           = 'https://github.com/te2dy/marianne';
 	$gh_link_issues    = 'https://github.com/te2dy/marianne/issues';
