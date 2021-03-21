@@ -47,13 +47,9 @@
 				<?php
 				marianne_logo();
 
-				if ( true === display_header_text() ) {
-					marianne_site_title();
+				marianne_site_title();
 
-					marianne_site_description();
-				}
-
-				marianne_header_image();
+				marianne_site_description();
 
 				marianne_menu_primary();
 				?>
