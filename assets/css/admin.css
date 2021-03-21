@@ -1,0 +1,79 @@
+/**
+ * Theme page styles.
+ */
+.marianne-admin h1,
+.marianne-admin h2,
+.marianne-admin h3 {
+	margin: 1rem 0;
+	padding: 0 0 .25em;
+}
+.marianne-admin .marianne-admin-block {
+	background-color: #fff;
+	border: 1px solid #c3c4c7;
+	box-shadow: 0 1px 1px rgba(0,0,0,.04);
+	padding: 1rem 2rem;
+	margin: 2em 0;
+}
+.marianne-admin .marianne-admin-header {
+	border-bottom: 1px solid #c3c4c7;
+}
+.marianne-admin .marianne-admin-title {
+	font-weight: 900;
+}
+.marianne-admin p {
+	margin: 1rem 0;
+}
+.marianne-admin .list-inline {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.marianne-admin .list-inline li {
+	display: inline-block;
+}
+
+/* Update */
+.marianne-admin .thickbox,
+.marianne-admin #update-theme {
+	color: #de0000;
+}
+.marianne-admin .thickbox:hover,
+.marianne-admin .thickbox:focus,
+.marianne-admin #update-theme:hover,
+.marianne-admin #update-theme:focus {
+	color: #900000;
+}
+
+/* Donate section */
+.marianne-admin-margins {
+	margin: 1rem 0;
+}
+.marianne-admin #marianne-button-btc {
+	background-color: #f7931a;
+	border-color: #f7931a;
+	color: #fff;
+}
+.marianne-admin #marianne-button-btc:hover {
+	background-color: #e8840c;
+	border-color: #e8840c;
+}
+#marianne-button-btc[aria-expanded="false"] ~ #marianne-btc-donate-container {
+	display: none;
+}
+#marianne-button-btc[aria-expanded="true"] ~ #marianne-btc-donate-container {
+	display: block;
+}
+#marianne-btc-donate {
+	background-color: #f0f0f1;
+	display: inline-block;
+	margin-top: 1rem;
+	padding: 1rem 2rem;
+}
+.marianne-admin #btc-qr {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+}
+.marianne-admin #btc-address a {
+	word-break: break-all;
+}
