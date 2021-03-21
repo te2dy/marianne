@@ -437,7 +437,8 @@ if ( ! function_exists( 'marianne_sanitize_radio_select' ) ) {
 	/**
 	 * Radio and select sanitization.
 	 *
-	 * Base on the work of the WordPress Theme Review Team.
+	 * Based on the work of the WordPress Theme Review Team.
+	 *
 	 * @link https://github.com/WPTT/code-examples/blob/master/customizer/sanitization-callbacks.php
 	 *
 	 * @see sanitize_key()               https://developer.wordpress.org/reference/functions/sanitize_key/

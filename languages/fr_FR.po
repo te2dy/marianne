@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marianne\n"
-"POT-Creation-Date: 2021-03-21 18:41+0100\n"
-"PO-Revision-Date: 2021-03-21 18:42+0100\n"
+"POT-Creation-Date: 2021-03-21 19:02+0100\n"
+"PO-Revision-Date: 2021-03-21 19:04+0100\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -60,7 +60,7 @@ msgstr "Menu du pied de page"
 msgid "Primary Menu"
 msgstr "Menu principal"
 
-#: functions.php:186
+#: functions.php:186 inc/theme-page.php:110
 msgid "Widgets"
 msgstr "Widgets"
 
@@ -289,6 +289,156 @@ msgstr "&lsaquo; Page précédente"
 msgid "Next page &rsaquo;"
 msgstr "Page suivante &rsaquo;"
 
+#: inc/theme-page.php:39 inc/theme-page.php:40
+msgid "About Marianne"
+msgstr "À propos de Marianne"
+
+#: inc/theme-page.php:81
+msgctxt "The title of the theme page."
+msgid "Marianne"
+msgstr "Marianne"
+
+#. translators: %s: The version number of the theme.
+#: inc/theme-page.php:89
+#, php-format
+msgid "Version %s"
+msgstr "Version %s"
+
+#: inc/theme-page.php:106
+msgid "Customize"
+msgstr "Personnaliser"
+
+#: inc/theme-page.php:108
+msgid "Menus"
+msgstr "Menus"
+
+#: inc/theme-page.php:112
+msgid "Donate ₿"
+msgstr "Faire un don ₿"
+
+#: inc/theme-page.php:116 inc/theme-page.php:132
+msgid "Donate Bitcoin"
+msgstr "Faire un don en Bitcoin"
+
+#. translators: %1$s: Bitcoin scheme followed by address. %2$s: Bitcoin address.
+#: inc/theme-page.php:123
+#, php-format
+msgctxt "The bitcoin address link."
+msgid "Address: <a href=\"%1$s\">%2$s</a>"
+msgstr "Adresse&nbsp;: <a href=\"%1$s\">%2$s</a>"
+
+#: inc/theme-page.php:142
+msgid "WordPress Theme Directory"
+msgstr "Répertoire de thèmes WordPress"
+
+#: inc/theme-page.php:146
+msgid "WordPress Support Forum"
+msgstr "Forum d’assistance de WordPress"
+
+#: inc/theme-page.php:150
+msgid "GitHub Repository"
+msgstr "Répertoire GitHub"
+
+#: inc/theme-page.php:172
+msgid "FAQ"
+msgstr "FAQ"
+
+#: inc/theme-page.php:174
+msgid "How can I set up a logo?"
+msgstr "Comment puis-je ajouter un log&nbsp;?"
+
+#. translators: %s: The URL of the Theme Customizer.
+#: inc/theme-page.php:181
+#, php-format
+msgid ""
+"Open to the <a href=\"%s\">Theme Customizer</a>. Then, go to Site Identity "
+"and select a logo. Do not forget to press Publish for the logo to go live."
+msgstr ""
+"Ouvrez la <a href=\"%s\">page de personnalisation du thème</a>. Ensuite, "
+"allez dans Identité du site et sélectionnez un logo. N’oubliez pas d'appuyer "
+"sur Publier pour que le logo soit mis en ligne."
+
+#: inc/theme-page.php:189
+msgid "Where can I download the pro/premium version of Marianne?"
+msgstr "Où puis-je télécharger la version pro/premium de Marianne&nbsp;?"
+
+#: inc/theme-page.php:191
+msgid ""
+"There is no paid version of Marianne. You already have everything this theme "
+"can provide without restrictions."
+msgstr ""
+"Il n’existe pas de version payante de Marianne. Vous disposez déjà de tout "
+"ce que ce thème peut fournir sans restrictions."
+
+#: inc/theme-page.php:193
+msgid "I'm having issues with this theme, I can't get it to work properly."
+msgstr ""
+"J’ai des problèmes avec ce thème, je n’arrive pas à le faire fonctionner "
+"correctement."
+
+#. translators: %s: The URL of the support forum of the theme on WordPress.org
+#: inc/theme-page.php:200
+#, php-format
+msgid ""
+"Please visit the <a href=\"%s\" target=\"_blank\">support forum</a> and post "
+"your questions."
+msgstr ""
+"Veuillez visiter le <a href=\"%s\" target=\"_blank\">forum d’assistance</a> "
+"et poser vos questions."
+
+#: inc/theme-page.php:210
+msgid "Contribute"
+msgstr "Contribuer"
+
+#: inc/theme-page.php:212
+msgid "Issues & Feature Requests"
+msgstr "Problèmes et suggestions de fonctionnalités"
+
+#. translators: %1$s: The URL of the GitHub Issues page of the Marianne repository. %2$s: The URL of the support forum of the theme on WordPress.org
+#: inc/theme-page.php:219
+#, php-format
+msgid ""
+"Please report issues or make feature requests on <a href=\"%1$s\" target="
+"\"_blank\">GitHub</a> or, if you do not have an account, on the <a href="
+"\"%2$s\" target=\"_blank\">support forum</a>."
+msgstr ""
+"Veuillez signaler les problèmes ou faire des suggestions de fonctionnalités "
+"sur <a href=\"%1$s\" target=\"_blank\">GitHub</a> ou, si vous n’avez pas de "
+"compte, sur le <a href=\"%2$s\" target=\"_blank\">forum d’assistance</a>."
+
+#: inc/theme-page.php:228
+msgid "Translate"
+msgstr "Traduire"
+
+#. translators: %1$s: The URL of the Marianne repository on GitHub. %2$s: The URL of the support forum of the theme on WordPress.org
+#: inc/theme-page.php:235
+#, php-format
+msgid ""
+"You want to use Marianne in your language? You can help me to translate it "
+"on <a href=\"%1$s\" target=\"_blank\">GitHub</a> where a .pot file is "
+"available, or the <a href=\"%2$s\" target=\"_blank\">WordPress translating "
+"platform</a>."
+msgstr ""
+"Vous souhaitez utiliser Marianne dans votre langue&nbsp;? Vous pouvez "
+"m’aider à le traduire sur <a href=\"%1$s\" target=\"_blank\">GitHub</a> où "
+"un fichier .pot est disponible, ou sur la <a href=\"%2$s\" target=\"_blank"
+"\">plateforme de traduction de WordPress</a>."
+
+#: inc/theme-page.php:244
+msgid "Development"
+msgstr "Développement"
+
+#. translators: %s: The URL of the Marianne repository on GitHub.
+#: inc/theme-page.php:251
+#, php-format
+msgid ""
+"There are probably many technical improvements to be made to this theme. You "
+"can help me by <a href=\"%s\" target=\"_blank\">contributing on GitHub</a>."
+msgstr ""
+"Il y a probablement de nombreuses améliorations techniques à apporter à ce "
+"thème. Vous pouvez m’aider en <a href=\"%s\" target=\"_blank\">contribuant "
+"sur GitHub</a>."
+
 #. translators: %s: search term.
 #: search.php:22 search.php:64
 #, php-format
@@ -323,16 +473,3 @@ msgstr "Il n’y a rien ici"
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 "On dirait que rien n’a été trouvé ici. Essayez peut-être une recherche&nbsp;?"
-
-#~ msgid "Circular Logo."
-#~ msgstr "Logo circulaire"
-
-#~ msgid ""
-#~ "Allows smoothing of fonts. It is not necessarily recommended when the "
-#~ "light color scheme is enabled. Default: disabled."
-#~ msgstr ""
-#~ "Permet le lissage des polices. Il n’est pas forcément recommandé lorsque "
-#~ "le schéma de couleurs claires est activé. Par défaut : désactivé."
-
-#~ msgid "Header Image"
-#~ msgstr "Image d’en-tête"

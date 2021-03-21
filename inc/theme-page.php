@@ -21,7 +21,7 @@ if ( ! function_exists( 'marianne_admin_styles_scripts' ) ) {
 		$min           = marianne_minify();
 
 		wp_enqueue_style( 'marianne-admin-page', get_template_directory_uri() . "/assets/css/admin$min.css", array(), $theme_version );
-		wp_enqueue_script( 'marianne-admin-scripts', get_template_directory_uri() . "/assets/js/admin$min.js", array(), $theme_version );
+		wp_enqueue_script( 'marianne-admin-scripts', get_template_directory_uri() . "/assets/js/admin$min.js", array(), $theme_version, true );
 	}
 
 	add_action( 'admin_enqueue_scripts', 'marianne_admin_styles_scripts' );
@@ -70,7 +70,7 @@ function marianne_theme_page() {
 	 */
 	$kses_allowed_html = array(
 		'a' => array(
-			'href' => array(),
+			'href'   => array(),
 			'target' => array(),
 		),
 	);
@@ -85,8 +85,9 @@ function marianne_theme_page() {
 					<strong>
 						<?php
 						printf(
-							esc_html_x( 'Version %s', 'The version number of the theme.', 'marianne' ),
-							esc_html( $theme_version ),
+							/* translators: %s: The version number of the theme. */
+							esc_html__( 'Version %s', 'marianne' ),
+							esc_html( $theme_version )
 						);
 						?>
 					</strong>
@@ -123,12 +124,12 @@ function marianne_theme_page() {
 										$kses_allowed_html
 									),
 									esc_attr( $bitcoin_href ),
-									esc_html( $bitcoin_address ),
+									esc_html( $bitcoin_address )
 								);
 								?>
 							</p>
 
-							<p><a href="<?php echo esc_attr( $bitcoin_href ); ?>"><img id="btc-qr" src="<?php echo esc_attr( $btc_qr ); ?>" alt="<?php esc_html_e( 'Donate Bitcoins', 'marianne' ); ?>" /></a><p>
+							<p><a href="<?php echo esc_attr( $bitcoin_href ); ?>"><img id="btc-qr" src="<?php echo esc_attr( $btc_qr ); ?>" alt="<?php esc_html_e( 'Donate Bitcoin', 'marianne' ); ?>" /></a><p>
 						</div>
 					</div>
 				</div>
@@ -176,6 +177,7 @@ function marianne_theme_page() {
 					<?php
 					printf(
 						wp_kses(
+							/* translators: %s: The URL of the Theme Customizer. */
 							__( 'Open to the <a href="%s">Theme Customizer</a>. Then, go to Site Identity and select a logo. Do not forget to press Publish for the logo to go live.', 'marianne' ),
 							$kses_allowed_html
 						),
@@ -194,6 +196,7 @@ function marianne_theme_page() {
 					<?php
 					printf(
 						wp_kses(
+							/* translators: %s: The URL of the support forum of the theme on WordPress.org */
 							__( 'Please visit the <a href="%s" target="_blank">support forum</a> and post your questions.', 'marianne' ),
 							$kses_allowed_html
 						),
@@ -204,7 +207,7 @@ function marianne_theme_page() {
 			</div>
 
 			<div class="marianne-admin-block">
-				<h2 class="marianne-admin-header"><?php echo esc_html_x( 'Contribute', 'The title of the theme page in the dashboard.', 'marianne' ); ?></h2>
+				<h2 class="marianne-admin-header"><?php echo esc_html__( 'Contribute', 'marianne' ); ?></h2>
 
 				<p><strong><?php esc_html_e( 'Issues & Feature Requests', 'marianne' ); ?></strong></p>
 
@@ -212,6 +215,7 @@ function marianne_theme_page() {
 					<?php
 					printf(
 						wp_kses(
+							/* translators: %1$s: The URL of the GitHub Issues page of the Marianne repository. %2$s: The URL of the support forum of the theme on WordPress.org */
 							__( 'Please report issues or make feature requests on <a href="%1$s" target="_blank">GitHub</a> or, if you do not have an account, on the <a href="%2$s" target="_blank">support forum</a>.', 'marianne' ),
 							$kses_allowed_html
 						),
@@ -227,7 +231,8 @@ function marianne_theme_page() {
 					<?php
 					printf(
 						wp_kses(
-							__( 'You want to use Marianne in your language? You can help me to translate it on <a href="%1$s" target="_blank">GitHut</a> where a .pot file is available, or the <a href="%2$s" target="_blank">WordPress translating platform</a>.', 'marianne' ),
+							/* translators: %1$s: The URL of the Marianne repository on GitHub. %2$s: The URL of the support forum of the theme on WordPress.org */
+							__( 'You want to use Marianne in your language? You can help me to translate it on <a href="%1$s" target="_blank">GitHub</a> where a .pot file is available, or the <a href="%2$s" target="_blank">WordPress translating platform</a>.', 'marianne' ),
 							$kses_allowed_html
 						),
 						esc_url( $gh_link ),
@@ -242,6 +247,7 @@ function marianne_theme_page() {
 					<?php
 					printf(
 						wp_kses(
+							/* translators: %s: The URL of the Marianne repository on GitHub. */
 							__( 'There are probably many technical improvements to be made to this theme. You can help me by <a href="%s" target="_blank">contributing on GitHub</a>.', 'marianne' ),
 							$kses_allowed_html
 						),

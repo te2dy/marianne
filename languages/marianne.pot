@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: "
 "Marianne\n"
 "POT-Creation-Date: "
-"2021-03-21 18:41+0100\n"
+"2021-03-21 19:02+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Teddy\n"
 "Language-Team: Teddy\n"
@@ -89,6 +89,7 @@ msgid "Primary Menu"
 msgstr ""
 
 #: functions.php:186
+#: inc/theme-page.php:110
 msgid "Widgets"
 msgstr ""
 
@@ -339,6 +340,175 @@ msgstr ""
 
 #: inc/template-tags.php:229
 msgid "Next page &rsaquo;"
+msgstr ""
+
+#: inc/theme-page.php:39
+#: inc/theme-page.php:40
+msgid "About Marianne"
+msgstr ""
+
+#: inc/theme-page.php:81
+msgctxt ""
+"The title of the theme "
+"page."
+msgid "Marianne"
+msgstr ""
+
+#: inc/theme-page.php:89
+#, php-format
+msgid "Version %s"
+msgstr ""
+
+#: inc/theme-page.php:106
+msgid "Customize"
+msgstr ""
+
+#: inc/theme-page.php:108
+msgid "Menus"
+msgstr ""
+
+#: inc/theme-page.php:112
+msgid "Donate ₿"
+msgstr ""
+
+#: inc/theme-page.php:116
+#: inc/theme-page.php:132
+msgid "Donate Bitcoin"
+msgstr ""
+
+#: inc/theme-page.php:123
+#, php-format
+msgctxt ""
+"The bitcoin address link."
+msgid ""
+"Address: <a href=\"%1$s"
+"\">%2$s</a>"
+msgstr ""
+
+#: inc/theme-page.php:142
+msgid ""
+"WordPress Theme Directory"
+msgstr ""
+
+#: inc/theme-page.php:146
+msgid ""
+"WordPress Support Forum"
+msgstr ""
+
+#: inc/theme-page.php:150
+msgid "GitHub Repository"
+msgstr ""
+
+#: inc/theme-page.php:172
+msgid "FAQ"
+msgstr ""
+
+#: inc/theme-page.php:174
+msgid ""
+"How can I set up a logo?"
+msgstr ""
+
+#: inc/theme-page.php:181
+#, php-format
+msgid ""
+"Open to the <a href=\"%s"
+"\">Theme Customizer</a>. "
+"Then, go to Site "
+"Identity and select a "
+"logo. Do not forget to "
+"press Publish for the "
+"logo to go live."
+msgstr ""
+
+#: inc/theme-page.php:189
+msgid ""
+"Where can I download the "
+"pro/premium version of "
+"Marianne?"
+msgstr ""
+
+#: inc/theme-page.php:191
+msgid ""
+"There is no paid version "
+"of Marianne. You already "
+"have everything this "
+"theme can provide "
+"without restrictions."
+msgstr ""
+
+#: inc/theme-page.php:193
+msgid ""
+"I'm having issues with "
+"this theme, I can't get "
+"it to work properly."
+msgstr ""
+
+#: inc/theme-page.php:200
+#, php-format
+msgid ""
+"Please visit the <a href="
+"\"%s\" target=\"_blank"
+"\">support forum</a> and "
+"post your questions."
+msgstr ""
+
+#: inc/theme-page.php:210
+msgid "Contribute"
+msgstr ""
+
+#: inc/theme-page.php:212
+msgid ""
+"Issues & Feature Requests"
+msgstr ""
+
+#: inc/theme-page.php:219
+#, php-format
+msgid ""
+"Please report issues or "
+"make feature requests on "
+"<a href=\"%1$s\" target="
+"\"_blank\">GitHub</a> "
+"or, if you do not have "
+"an account, on the <a "
+"href=\"%2$s\" target="
+"\"_blank\">support "
+"forum</a>."
+msgstr ""
+
+#: inc/theme-page.php:228
+msgid "Translate"
+msgstr ""
+
+#: inc/theme-page.php:235
+#, php-format
+msgid ""
+"You want to use Marianne "
+"in your language? You "
+"can help me to translate "
+"it on <a href=\"%1$s\" "
+"target=\"_blank"
+"\">GitHub</a> where a ."
+"pot file is available, "
+"or the <a href=\"%2$s\" "
+"target=\"_blank"
+"\">WordPress translating "
+"platform</a>."
+msgstr ""
+
+#: inc/theme-page.php:244
+msgid "Development"
+msgstr ""
+
+#: inc/theme-page.php:251
+#, php-format
+msgid ""
+"There are probably many "
+"technical improvements "
+"to be made to this "
+"theme. You can help me "
+"by <a href=\"%s\" target="
+"\"_blank\">contributing "
+"on GitHub</a>."
 msgstr ""
 
 #: search.php:22
