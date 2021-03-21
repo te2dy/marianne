@@ -94,7 +94,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 
 		/**
-		 * List new options to add to the Customizer.
+		 * Lists new options to add to the Customizer.
 		 *
 		 * To simplify the code, all new options are pushed in an array.
 		 *
@@ -114,7 +114,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		$marianne_customizer_options[] = array(
 			'section'     => 'title_tagline',
 			'id'          => 'logo_circular',
-			'title'       => __( 'Circular Logo.', 'marianne' ),
+			'title'       => __( 'Make the logo round.', 'marianne' ),
 			'description' => __( 'Default: unckecked.', 'marianne' ),
 			'type'        => 'checkbox',
 		);
@@ -437,27 +437,30 @@ if ( ! function_exists( 'marianne_sanitize_radio_select' ) ) {
 	/**
 	 * Radio and select sanitization.
 	 *
-	 * @param string               $input   Radio or select value to be sanitized.
+	 * Base on the work of the WordPress Theme Review Team.
+	 * @link https://github.com/WPTT/code-examples/blob/master/customizer/sanitization-callbacks.php
+	 *
+	 * @see sanitize_key()               https://developer.wordpress.org/reference/functions/sanitize_key/
+	 * @see $wp_customize->get_control() https://developer.wordpress.org/reference/classes/wp_customize_manager/get_control/
+	 *
+	 * @param string               $input   Radio or select value to sanitize.
 	 * @param WP_Customize_Setting $setting WP_Customize_Setting instance.
 	 *
 	 * @return integer Sanitized value.
 	 */
 	function marianne_sanitize_radio_select( $input, $setting ) {
-		// Get the list of select options.
+		$input   = sanitize_key( $input );
 		$choices = $setting->manager->get_control( $setting->id )->choices;
 
-		if ( array_key_exists( $input, $choices ) ) {
-			return sanitize_key( $input );
-		} else {
-			return sanitize_key( $setting->default );
-		}
+		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 	}
 }
 
 if ( ! function_exists( 'marianne_sanitize_checkbox' ) ) {
-	/** Checkbox sanitization.
+	/**
+	 * Checkbox sanitization.
 	 *
-	 * @param string $input Checkbox value to be sanitized.
+	 * @param string $input Checkbox value to sanitize.
 	 *
 	 * @return bool Sanitized value.
 	 */
@@ -470,7 +473,7 @@ if ( ! function_exists( 'marianne_sanitize_slider' ) ) {
 	/**
 	 * Slider sanitization.
 	 *
-	 * @param number               $input   Slider value to be sanitized.
+	 * @param number               $input   Slider value to sanitize.
 	 * @param WP_Customize_Setting $setting WP_Customize_Setting instance.
 	 *
 	 * @return number Sanitized value.

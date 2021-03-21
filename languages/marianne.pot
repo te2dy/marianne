@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: "
 "Marianne\n"
 "POT-Creation-Date: "
-"2021-03-21 18:19+0100\n"
+"2021-03-21 18:41+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Teddy\n"
 "Language-Team: Teddy\n"
@@ -121,7 +121,8 @@ msgid "Footer Settings"
 msgstr ""
 
 #: inc/customizer.php:117
-msgid "Circular Logo."
+msgid ""
+"Make the logo round."
 msgstr ""
 
 #: inc/customizer.php:118

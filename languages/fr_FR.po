@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marianne\n"
-"POT-Creation-Date: 2021-03-21 18:19+0100\n"
-"PO-Revision-Date: 2021-03-21 18:20+0100\n"
+"POT-Creation-Date: 2021-03-21 18:41+0100\n"
+"PO-Revision-Date: 2021-03-21 18:42+0100\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -91,8 +91,8 @@ msgid "Footer Settings"
 msgstr "Réglages du pied de page"
 
 #: inc/customizer.php:117
-msgid "Circular Logo."
-msgstr "Logo circulaire"
+msgid "Make the logo round."
+msgstr "Rendre le logo rond."
 
 #: inc/customizer.php:118
 msgid "Default: unckecked."
@@ -129,7 +129,7 @@ msgstr "Auto"
 
 #: inc/customizer.php:139
 msgid "Hovered elements."
-msgstr "Éléments survolés"
+msgstr "Éléments survolés."
 
 #: inc/customizer.php:140
 msgid "Color used for link and button hovers. Default: blue."
@@ -190,7 +190,7 @@ msgstr "Taille de la police"
 
 #: inc/customizer.php:171
 msgid "The main font size. Default: 100%."
-msgstr "La taille de la police principale. Par défaut&nbsp;: 100&nbsp;%"
+msgstr "La taille de la police principale. Par défaut&nbsp;: 100&nbsp;%."
 
 #: inc/customizer.php:184
 msgid "Force anti-aliasing."
@@ -244,7 +244,7 @@ msgstr "Justifié"
 
 #: inc/customizer.php:217
 msgid "Enable hyphenation."
-msgstr "Activer les césures"
+msgstr "Activer les césures."
 
 #: inc/customizer.php:218
 msgid ""
@@ -323,6 +323,9 @@ msgstr "Il n’y a rien ici"
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 "On dirait que rien n’a été trouvé ici. Essayez peut-être une recherche&nbsp;?"
+
+#~ msgid "Circular Logo."
+#~ msgstr "Logo circulaire"
 
 #~ msgid ""
 #~ "Allows smoothing of fonts. It is not necessarily recommended when the "
