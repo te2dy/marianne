@@ -53,7 +53,8 @@
 	border-color: #f7931a;
 	color: #fff;
 }
-.marianne-admin #marianne-button-btc:hover {
+.marianne-admin #marianne-button-btc:hover,
+.marianne-admin #marianne-button-btc:focus {
 	background-color: #e8840c;
 	border-color: #e8840c;
 }
@@ -76,4 +77,14 @@
 }
 .marianne-admin #btc-address a {
 	word-break: break-all;
+}
+#marianne-admin-button-thanks {
+	background-color: green;
+	border-color: green;
+	color: #fff;
+}
+#marianne-admin-button-thanks:hover,
+#marianne-admin-button-thanks:focus {
+	background-color: #006400;
+	border-color: #006400;
 }

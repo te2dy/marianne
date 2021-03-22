@@ -2,7 +2,8 @@
 /**
  * The page of the theme.
  *
- * This file displays an "About Marianne" page in WordPress administration section.
+ * This file displays an "About Marianne" page
+ * in the WordPress administration section.
  *
  * @package Marianne
  * @since Marianne 1.3
@@ -10,7 +11,7 @@
 
 if ( ! function_exists( 'marianne_admin_styles_scripts' ) ) {
 	/**
-	 * Enqueue theme page scripts and styles.
+	 * Enqueues theme page scripts and styles.
 	 *
 	 * On production, minified files are enqueued.
 	 *
@@ -28,7 +29,7 @@ if ( ! function_exists( 'marianne_admin_styles_scripts' ) ) {
 }
 
 /**
- * Creates the page of the theme to build in another function.
+ * Adds submenu page to the Appearance main menu.
  *
  * @link https://developer.wordpress.org/reference/functions/add_theme_page/
  *
@@ -46,7 +47,9 @@ function marianne_add_theme_page() {
 add_action( 'admin_menu', 'marianne_add_theme_page' );
 
 /**
- * Build the page of the theme.
+ * Outputs the content of the page.
+ *
+ * @link https://developer.wordpress.org/reference/functions/add_theme_page/
  *
  * @return void
  */
@@ -65,6 +68,8 @@ function marianne_theme_page() {
 
 	/**
 	 * Allows some html elements in paragraphs.
+	 *
+	 * @see wp_kses()
 	 *
 	 * @link https://developer.wordpress.org/reference/functions/wp_kses/
 	 */
@@ -95,7 +100,8 @@ function marianne_theme_page() {
 
 				<?php
 				/**
-				 * If an update is available, displays a message in a paragraph.
+				 * If an update is available, displays a message
+				 * and a link to update.
 				 *
 				 * @link https://developer.wordpress.org/reference/functions/theme_update_available/
 				 */
@@ -103,11 +109,13 @@ function marianne_theme_page() {
 				?>
 
 				<div class="marianne-admin-margins">
-					<a href="<?php echo esc_url( admin_url( 'customize.php' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Customize', 'marianne' ); ?></a>
+					<a href="<?php echo esc_url( admin_url( 'customize.php' ) ); ?>" class="button button-primary"><?php echo esc_html_x( 'Customize', 'Verb. Point to the Theme Customizer.' , 'marianne' ); ?></a>
 
 					<a href="<?php echo esc_url( admin_url( 'nav-menus.php' ) ); ?>" class="button"><?php esc_html_e( 'Menus', 'marianne' ); ?></a>
 
 					<a href="<?php echo esc_url( admin_url( 'widgets.php' ) ); ?>" class="button"><?php esc_html_e( 'Widgets', 'marianne' ); ?></a>
+
+					<a href="mailto:teddytheme@laposte.net" id="marianne-admin-button-thanks" class="button"><?php esc_html_e( 'Say thank you 🙏', 'marianne' ); ?></a>
 
 					<button id="marianne-button-btc" class="button" aria-haspopup="true" aria-expanded="false" onclick="marianneAdminDonateButton(this)"><?php esc_html_e( 'Donate ₿', 'marianne' ); ?></button>
 
@@ -136,7 +144,9 @@ function marianne_theme_page() {
 
 				<p>
 					<?php
-					// Displays links related to the theme.
+					/**
+					 * Creates an array of links related to the theme to display.
+					 */
 					$links = array(
 						array(
 							'label' => __( 'WordPress Theme Directory', 'marianne' ),
@@ -155,6 +165,7 @@ function marianne_theme_page() {
 					$i           = 0;
 					$links_count = count( $links );
 
+					// Displays the links.
 					foreach ( $links as $link ) {
 						$i++;
 
