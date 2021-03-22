@@ -162,3 +162,8 @@ Screenshot image: apple-desk-laptop-macbook-pro, by pixellaphoto
 Source: https://www.flickr.com/photos/137643065@N06/23699397893
 License: CC0 1.0 Public Domain Dedication
 License URI: https://creativecommons.org/publicdomain/zero/1.0/
+
+SVG Icons: Bootstrap Icons, Copyright (c) 2019-2020 The Bootstrap Authors
+Source: https://icons.getbootstrap.com/
+License: MIT
+License URI: https://opensource.org/licenses/mit-license.php

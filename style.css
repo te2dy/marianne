@@ -1202,30 +1202,51 @@ button:focus {
 .site-social {
 	margin: 1em auto;
 }
-
-.bi {
-	fill: var(--color-body-text-secondary);
+.feather {
+	border: 0;
+	fill: transparent;
+	stroke: var(--color-body-text-secondary);
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	transition: all .2s ease-in-out;
 }
-.bi:hover,
-.bi:focus {
-	fill: var(--color-link-hover);
+.feather-rss {
+	stroke-linecap: round;
+	stroke-linejoin: butt;
 }
-.social-list li {
+.social-links li:hover .feather,
+.social-links li:focus .feather {
+	stroke: var(--color-body-background);
+	transition: all .2s ease-in-out;
+}
+.social-links li {
 	margin: 0 .25em;
 }
-.social-list li:first-child {
+.social-links li:first-child {
 	margin-left: 0;
 }
-.social-list li:last-child {
+.social-links li:last-child {
 	margin-right: 0;
 }
 .social-icon-container {
-
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--color-input-background);
+	border-radius: 50%;
+	width: 28px;
+	height: 28px;
+	transition: all .2s ease-in-out;
 }
-#site-footer-social .bi {
-	width: 20px;
-	height: auto;
+.social-links-round .social-icon-container {
+	border-radius: 50%;
 }
-#site-footer-social .bi:hover {
-	fill: #000;
+.social-links-square .social-icon-container {
+	border-radius: 4px;
+}
+.social-icon-container:hover,
+.social-icon-container:focus {
+	background-color: var(--color-link-hover);
+	transition: all .2s ease-in-out;
 }

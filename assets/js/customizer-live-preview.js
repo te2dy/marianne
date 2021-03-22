@@ -210,5 +210,16 @@
 				}
 			} );
 		} );
+
+		// Social Links > Style.
+		wp.customize( 'marianne_social_style', function( value ) {
+			value.bind( function( newval ) {
+				if ( newval === true ) {
+					$( '#site-footer-mention' ).show();
+				} else {
+					$( '#site-footer-mention' ).hide();
+				}
+			} );
+		} );
 	} );
 } )( jQuery, wp.customize );

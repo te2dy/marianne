@@ -102,7 +102,6 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			)
 		);
 
-
 		// Adds live preview to the site's name and description.
 		$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
 		$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
@@ -266,7 +265,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_social',
 			'id'          => 'location',
-			'title'       => __( 'Where do you want to display the social links?', 'marianne' ),
+			'title'       => __( 'Where do you want to display your social links?', 'marianne' ),
 			'description' => __( 'Default: footer.', 'marianne' ),
 			'type'        => 'radio',
 			'value'       => array(
@@ -277,9 +276,21 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_social',
+			'id'          => 'style',
+			'title'       => __( 'How do you want to display your social links?', 'marianne' ),
+			'description' => __( 'Default: round.', 'marianne' ),
+			'type'        => 'radio',
+			'value'       => array(
+				'round'  => __( 'Round', 'marianne' ),
+				'square' => __( 'Square', 'marianne' ),
+			),
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
 			'id'          => 'twitter',
 			'title'       => __( 'Twitter', 'marianne' ),
-			'description' => __( 'Type your twitter @username.', 'marianne' ),
+			'description' => __( 'Your Twitter @username. Do not forget the at symbol.', 'marianne' ),
 			'type'        => 'text',
 		);
 
@@ -287,6 +298,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_social',
 			'id'          => 'facebook',
 			'title'       => __( 'Facebook', 'marianne' ),
+			'description' => __( 'Your Facebook profile or page URI.', 'marianne' ),
 			'type'        => 'url',
 		);
 
@@ -294,6 +306,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_social',
 			'id'          => 'instagram',
 			'title'       => __( 'Instagram', 'marianne' ),
+			'description' => __( 'Your Instagram profile URI.', 'marianne' ),
 			'type'        => 'url',
 		);
 
@@ -301,6 +314,84 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_social',
 			'id'          => 'linkedin',
 			'title'       => __( 'LinkedIn', 'marianne' ),
+			'description' => __( 'Your LinkedIn profile URI.', 'marianne' ),
+			'type'        => 'url',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
+			'id'          => 'youtube',
+			'title'       => __( 'YouTube', 'marianne' ),
+			'description' => __( 'Your YouTube channel URI.', 'marianne' ),
+			'type'        => 'url',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
+			'id'          => 'email',
+			'title'       => __( 'Email', 'marianne' ),
+			'description' => __( 'Your email address.', 'marianne' ),
+			'type'        => 'email',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
+			'id'          => 'github',
+			'title'       => __( 'GitHub', 'marianne' ),
+			'description' => __( 'Your GitHub profile URI.', 'marianne' ),
+			'type'        => 'url',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
+			'id'          => 'gitlab',
+			'title'       => __( 'GitLab', 'marianne' ),
+			'description' => __( 'Your GitLab profile URI.', 'marianne' ),
+			'type'        => 'url',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
+			'id'          => 'link',
+			'title'       => __( 'Link', 'marianne' ),
+			'description' => __( 'Another link you want to display.', 'marianne' ),
+			'type'        => 'url',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
+			'id'          => 'phone',
+			'title'       => __( 'Phone', 'marianne' ),
+			'description' => __( 'Your phone number (without spaces).', 'marianne' ),
+			'type'        => 'text',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
+			'id'          => 'phone_type',
+			'title'       => __( 'What type of phone link do you want to display?', 'marianne' ),
+			'description' => __( "This will automatically open the right application on your readers' phones.", 'marianne' ),
+			'type'        => 'select',
+			'value'       => array(
+				'classic'  => __( 'Classic', 'marianne' ),
+				'sms'      => __( 'SMS', 'marianne' ),
+				'whatsapp' => __( 'WhatsApp', 'marianne' ),
+			),
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
+			'id'          => 'rss',
+			'title'       => __( 'Add a link to the RSS feed of your site.', 'marianne' ),
+			'description' => __( 'Default: unckecked.', 'marianne' ),
+			'type'        => 'checkbox',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
+			'id'          => 'twitch',
+			'title'       => __( 'Twitch', 'marianne' ),
+			'description' => __( 'Your Twitch profile URI.', 'marianne' ),
 			'type'        => 'url',
 		);
 
@@ -341,7 +432,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			if ( $option_id ) {
 				$option_default = $options_default[ $option_id ];
 
-				if ( 'marianne_social_twitter' !== $option_id ) {
+				if ( 'marianne_social_twitter' !== $option_id && 'marianne_social_email' !== $option_id && 'marianne_social_phone' !== $option_id ) {
 					// Choose the right sanitize callback.
 					switch ( $type ) {
 						case 'radio':
@@ -365,12 +456,21 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 							$sanitize_callback = 'esc_url_raw';
 							break;
 
+						case 'text':
+							$sanitize_callback = 'wp_filter_nohtml_kses';
+							break;
+
 						default:
 							$sanitize_callback = 'esc_html';
 							break;
 					}
-				} else {
+				} elseif ( 'marianne_social_twitter' === $option_id ) {
 					$sanitize_callback = 'marianne_sanitize_twitter';
+				} elseif ( 'marianne_social_email' === $option_id ) {
+					$sanitize_callback = 'sanitize_email';
+				} elseif ( 'marianne_social_phone' === $option_id ) {
+					$sanitize_callback = 'marianne_sanitize_phone';
+
 				}
 
 				// Add the setting.
@@ -472,11 +572,21 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_footer_text'    => '',
 
 			// Social Links.
-			'marianne_social_location'  => 'footer',
-			'marianne_social_twitter'   => '',
-			'marianne_social_facebook'  => '',
-			'marianne_social_instagram' => '',
-			'marianne_social_linkedin'  => '',
+			'marianne_social_location'   => 'footer',
+			'marianne_social_style'      => 'round',
+			'marianne_social_twitter'    => '',
+			'marianne_social_facebook'   => '',
+			'marianne_social_instagram'  => '',
+			'marianne_social_linkedin'   => '',
+			'marianne_social_youtube'    => '',
+			'marianne_social_email'      => '',
+			'marianne_social_github'     => '',
+			'marianne_social_gitlab'     => '',
+			'marianne_social_link'       => '',
+			'marianne_social_phone'      => '',
+			'marianne_social_phone_type' => 'classic',
+			'marianne_social_rss'        => false,
+			'marianne_social_twitch'     => '',
 		);
 
 		$option = sanitize_key( $option );
@@ -624,6 +734,25 @@ if ( ! function_exists( 'marianne_sanitize_twitter' ) ) {
 			if ( preg_match( '/^\@[A-Za-z0-9_]{1,15}$/', $input ) ) {
 				$output = $input;
 			}
+		}
+
+		return $output;
+	}
+}
+
+if ( ! function_exists( 'marianne_sanitize_phone' ) ) {
+	/**
+	 * Phone number sanitization.
+	 *
+	 * @param string $input The number to sanitize.
+	 *
+	 * @return bool Sanitized number.
+	 */
+	function marianne_sanitize_phone( $input ) {
+		if ( substr( $input, 0, 1 ) === "+" ) {
+			$output = '+' . absint( $input );
+		} else {
+			$output = absint( $input );
 		}
 
 		return $output;

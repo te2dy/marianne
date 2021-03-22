@@ -371,7 +371,7 @@ if ( ! function_exists( 'marianne_get_twitter_username_to_url' ) ) {
 	}
 }
 
-if ( ! function_exists( 'marianne_svg_social_path' ) ) {
+if ( ! function_exists( 'marianne_svg_feather_icons' ) ) {
 	/**
 	 * SVG path for social icons.
 	 *
@@ -379,36 +379,82 @@ if ( ! function_exists( 'marianne_svg_social_path' ) ) {
 	 *
 	 * @return string $path The path of the icon.
 	 */
-	function marianne_svg_social_path( $name = '' ) {
+	function marianne_svg_feather_icons( $name = '' ) {
+		$svg_data = array(
+			'name'    => '',
+			'shapes'  => '',
+			'viewbox' => '0 0 24 24',
+		);
+
 		switch ( $name ) {
-			case 'twitter':
-				$path = '<path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>';
+			case 'email':
+				$svg_data['name']   = __( 'Email', 'marianne' );
+				$svg_data['shapes'] = '<circle cx="12" cy="12" r="4"></circle><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>';
 				break;
 
 			case 'facebook':
-				$path = '<path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>';
+				$svg_data['name']   = __( 'Facebook', 'marianne' );
+				$svg_data['shapes'] = '<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>';
+				break;
+
+			case 'github':
+				$svg_data['name']   = __( 'GitHub', 'marianne' );
+				$svg_data['shapes'] = '<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>';
+				break;
+
+			case 'gitlab':
+				$svg_data['name']   = __( 'GitLab', 'marianne' );
+				$svg_data['shapes'] = '<path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z"></path>';
 				break;
 
 			case 'instagram':
-				$path = '<path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>';
+				$svg_data['name']   = __( 'Instagram', 'marianne' );
+				$svg_data['shapes'] = '<rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>';
+				break;
+
+			case 'link':
+				$svg_data['name']   = __( 'Link', 'marianne' );
+				$svg_data['shapes'] = '<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>';
 				break;
 
 			case 'linkedin':
-				$path = '<path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>';
+				$svg_data['name']   = __( 'LinkedIn', 'marianne' );
+				$svg_data['shapes'] = '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>';
 				break;
 
-			case 'email':
-				$path = '<path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>';
+			case 'phone':
+				$svg_data['name']   = __( 'Phone', 'marianne' );
+				$svg_data['shapes'] = '<rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line>';
+				break;
+
+			case 'rss':
+				$svg_data['name']   = __( 'RSS', 'marianne' );
+				$svg_data['shapes'] = '<path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle>';
+				break;
+
+			case 'youtube':
+				$svg_data['name']   = __( 'YouTube', 'marianne' );
+				$svg_data['shapes'] = '<path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>';
+				break;
+
+			case 'twitch':
+				$svg_data['name']   = __( 'Twitch', 'marianne' );
+				$svg_data['shapes'] = '<path d="M21 2H3v16h5v4l4-4h5l4-4V2zm-10 9V7m5 4V7"></path>';
+				break;
+
+			case 'twitter':
+				$svg_data['name']   = __( 'Twitter', 'marianne' );
+				$svg_data['shapes'] = '<path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>';
 				break;
 		}
 
-		return $path;
+		return $svg_data;
 	}
 }
 
 if ( ! function_exists( 'marianne_esc_svg' ) ) {
 	/**
-	 * Escapes path for SVG image.
+	 * Escapes shapes for SVG image.
 	 *
 	 * Returns allowed SVG path attributes only and remove others.
 	 *
@@ -418,17 +464,39 @@ if ( ! function_exists( 'marianne_esc_svg' ) ) {
 	 *
 	 * @return string $shapes Escaped path.
 	 */
-	function marianne_esc_svg( $path = '' ) {
+	function marianne_esc_svg( $shapes = '' ) {
 		$allowed_path = array(
-			'path'  => array(
+			'circle'  => array(
+				'cx' => true,
+				'cy' => true,
+				'r'  => true,
+			),
+			'line'    => array(
+				'x1' => true,
+				'y1' => true,
+				'x2' => true,
+				'y2' => true,
+			),
+			'path'    => array(
 				'd'    => true,
 				'fill' => true,
 			),
+			'polygon' => array(
+				'points' => true,
+			),
+			'rect'    => array(
+				'x'      => true,
+				'y'      => true,
+				'width'  => true,
+				'height' => true,
+				'rx'     => true,
+				'ry'     => true,
+			),
 		);
 
-		$path = wp_kses( $path, $allowed_path );
+		$shapes = wp_kses( $shapes, $allowed_path );
 
-		return $path;
+		return $shapes;
 	}
 }
 
@@ -442,7 +510,7 @@ if ( ! function_exists( 'marianne_svg' ) ) {
 	 *
 	 * @since Marianne 1.3
 	 */
-	function marianne_svg( $path = '', $class = 'bi', $size = array( 20, 20 ), $viewbox = '0 0 16 16' ) {
+	function marianne_svg( $path = '', $class = 'feather', $size = array( 18, 18 ), $viewbox = '0 0 24 24' ) {
 		?>
 			<svg xmlns="http://www.w3.org/2000/svg" width="<?php echo esc_attr( absint( $size[0] ) ); ?>" height="<?php echo esc_attr( absint( $size[1] ) ); ?>" class="<?php echo esc_attr( $class ); ?>" viewBox="<?php echo esc_attr( $viewbox ); ?>">
 			  <?php
@@ -464,41 +532,138 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 	 * @since Marianne 1.3
 	 */
 	function marianne_social_link( $location = 'footer' ) {
+
 		if ( 'footer' === $location ) {
 			$container_class = 'site-footer-block';
 		} else {
 			$container_class = 'site-social';
 		}
 
-		$social_links = array();
+		$container_class .= ' social-links-' . marianne_get_theme_mod( 'marianne_social_style' );
 
-		$social_links['twitter'] = marianne_get_twitter_username_to_url( marianne_get_theme_mod( 'marianne_social_twitter' ) );
-		$social_links['facebook'] = marianne_get_theme_mod( 'marianne_social_facebook' );
-		$social_links['instagram'] = marianne_get_theme_mod( 'marianne_social_instagram' );
-		$social_links['linkedin'] = marianne_get_theme_mod( 'marianne_social_linkedin' );
+		$option_twitter   = marianne_get_theme_mod( 'marianne_social_twitter' );
+		$option_facebook  = marianne_get_theme_mod( 'marianne_social_facebook' );
+		$option_instagram = marianne_get_theme_mod( 'marianne_social_instagram' );
+		$option_linkedin  = marianne_get_theme_mod( 'marianne_social_linkedin' );
+		$option_youtube   = marianne_get_theme_mod( 'marianne_social_youtube' );
+		$option_email     = marianne_get_theme_mod( 'marianne_social_email' );
+		$option_github    = marianne_get_theme_mod( 'marianne_social_gibhub' );
+		$option_gitlab    = marianne_get_theme_mod( 'marianne_social_gitlab' );
+		$option_link      = marianne_get_theme_mod( 'marianne_social_link' );
+		$option_phone     = marianne_get_theme_mod( 'marianne_social_phone' );
+		$option_rss       = marianne_get_theme_mod( 'marianne_social_rss' );
+		$option_twitch    = marianne_get_theme_mod( 'marianne_social_twitch' );
 
-		if ( ! empty( $social_links ) ) :
-			?>
-				<div id="social-container" class="<?php echo esc_attr( $container_class ); ?>">
-					<ul class="social-list list-inline">
-						<?php
-						foreach( $social_links as $site => $link ) {
-							if ( $link ) {
-								?>
-									<li>
-										<a href="<?php echo esc_url( $link ); ?>">
-											<div class="social-icon-container">
-												<?php marianne_svg( marianne_svg_social_path( $site ), 'bi bi-' . $site ); ?>
-											</div>
-										</a>
-									</li>
-								<?php
+		if ( $option_twitter || $option_facebook || $option_instagram || $option_linkedin || $option_youtube || $option_email || $option_github || $option_gitlab || $option_link || $option_phone || $option_rss || $option_twitch ) {
+			$no_links = false;
+		} else {
+			$no_links = true;
+		}
+
+		if ( false === $no_links ) :
+			$social_links = array();
+
+			if ( $option_twitter ) {
+				$social_links['twitter'] = $option_twitter;
+			}
+
+			if ( $option_facebook ) {
+				$social_links['facebook'] = $option_facebook;
+			}
+
+			if ( $option_instagram ) {
+				$social_links['instagram'] = $option_instagram;
+			}
+
+			if ( $option_linkedin ) {
+				$social_links['linkedin'] = $option_linkedin;
+			}
+
+			if ( $option_youtube ) {
+				$social_links['youtube'] = $option_youtube;
+			}
+
+			if ( $option_github ) {
+				$social_links['github'] = $option_github;
+			}
+
+			if ( $option_gitlab ) {
+				$social_links['gitlab'] = $option_gitlab;
+			}
+
+			if ( $option_link ) {
+				$social_links['link'] = $option_link;
+			}
+
+			if ( $option_phone ) {
+				$social_links['phone'] = $option_phone;
+			}
+
+			if ( $option_rss ) {
+				$social_links['rss'] = $option_rss;
+			}
+
+			if ( $option_twitch ) {
+				$social_links['twitch'] = $option_twitch;
+			}
+
+			if ( ! empty( $social_links ) ) :
+				?>
+					<div id="social-links-container" class="<?php echo esc_attr( $container_class ); ?>">
+						<ul class="social-links list-inline">
+							<?php
+							foreach( $social_links as $site => $link ) {
+								$svg_name    = marianne_svg_feather_icons( $site )['name'];
+								$svg_shapes  = marianne_svg_feather_icons( $site )['shapes'];
+
+								switch ( $site ) {
+									case 'email':
+										if ( $link ) {
+											$link = 'mailto:' . $link;
+										}
+										break;
+
+									case 'phone':
+										if ( $link ) {
+											$phone_type   = marianne_get_theme_mod( 'marianne_social_phone_type' );
+											$phone_prefix = 'tel:';
+
+											if ( 'sms' === $phone_type ) {
+												$phone_prefix = 'sms:';
+											} elseif ( 'whatsapp' === $phone_type ) {
+												$phone_prefix = 'whatsapp:';
+											}
+
+											$link = $phone_prefix . $link;
+										}
+										break;
+
+									case 'rss':
+										if ( true === $link ) {
+											$link = get_bloginfo( 'rss2_url' );
+										} else {
+											$link = '';
+										}
+										break;
+								}
+
+								if ( $link ) {
+									?>
+										<li>
+											<a href="<?php echo esc_attr( $link ); ?>">
+												<div class="social-icon-container">
+													<?php marianne_svg( $svg_shapes, 'feather feather-' . $site ); ?>
+												</div>
+											</a>
+										</li>
+									<?php
+								}
 							}
-						}
-						?>
-					</ul>
-				</div>
-			<?php
+							?>
+						</ul>
+					</div>
+				<?php
+			endif;
 		endif;
 	}
 }
