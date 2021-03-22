@@ -442,9 +442,9 @@ if ( ! function_exists( 'marianne_svg' ) ) {
 	 *
 	 * @since Marianne 1.3
 	 */
-	function marianne_svg( $path = '', $class = 'bi', $viewbox = '0 0 16 16' ) {
+	function marianne_svg( $path = '', $class = 'bi', $size = array( 20, 20 ), $viewbox = '0 0 16 16' ) {
 		?>
-			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="<?php echo esc_attr( $class ); ?>" viewBox="0 0 16 16">
+			<svg xmlns="http://www.w3.org/2000/svg" width="<?php echo esc_attr( absint( $size[0] ) ); ?>" height="<?php echo esc_attr( absint( $size[1] ) ); ?>" fill="currentColor" class="<?php echo esc_attr( $class ); ?>" viewBox="0 0 16 16">
 			  <?php
 			  echo marianne_esc_svg( $path );
 			  ?>

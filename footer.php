@@ -50,17 +50,23 @@
 				if ( ! empty( $social_links ) ) :
 					?>
 						<div id="site-footer-social" class="site-footer-block">
-							<?php
-							foreach( $social_links as $site => $link ) {
-								if ( $link ) {
-									?>
-										<a href="<?php echo esc_url( $link ); ?>">
-											<?php marianne_svg( marianne_svg_social_path( $site ) ); ?>
-										</a>
-									<?php
+							<ul class="social-list list-inline">
+								<?php
+								foreach( $social_links as $site => $link ) {
+									if ( $link ) {
+										?>
+											<li>
+												<a href="<?php echo esc_url( $link ); ?>">
+													<div class="social-icon-container">
+														<?php marianne_svg( marianne_svg_social_path( $site ), 'bi bi-' . $site ); ?>
+													</div>
+												</a>
+											</li>
+										<?php
+									}
 								}
-							}
-							?>
+								?>
+							</ul>
 						</div>
 					<?php
 				endif;
