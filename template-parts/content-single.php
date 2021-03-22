@@ -45,9 +45,38 @@
 		?>
 	</section>
 
-	<?php if ( has_tag() ) : ?>
-		<footer class="entry-footer post-footer text-secondary">
-			<?php the_tags(); ?>
+	<?php if ( has_tag() || true === marianne_get_theme_mod( 'marianne_post_nav' ) ) : ?>
+		<footer class="entry-footer post-footer">
+			<div class="text-secondary">
+				<?php the_tags(); ?>
+			</div>
+
+			<?php
+			if ( true === marianne_get_theme_mod( 'marianne_post_nav' ) ) {
+				$newer_post = get_next_post_link();
+				$older_post = get_previous_post_link();
+
+				if ( $newer_post || $older_post ) {
+					?>
+						<p><strong><?php esc_html_e( 'Continue reading', 'marianne' ); ?></strong></p>
+
+						<nav class="post-navigation">
+							<div class="nav-links">
+								<?php
+								if ( $newer_post ) {
+									next_post_link( '%link', '‹ %title' );
+								}
+
+								if ( $older_post ) {
+									previous_post_link( '%link', '%title ›' );
+								}
+								?>
+							</div>
+						</nav>
+					<?php
+				}
+			}
+			?>
 		</footer>
 	<?php endif; ?>
 </article>

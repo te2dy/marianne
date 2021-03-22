@@ -82,9 +82,23 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		);
 
 		$wp_customize->add_section(
+			'marianne_post',
+			array(
+				'title' => __( 'Post Settings', 'marianne' ),
+			)
+		);
+
+		$wp_customize->add_section(
 			'marianne_footer',
 			array(
 				'title' => __( 'Footer Settings', 'marianne' ),
+			)
+		);
+
+		$wp_customize->add_section(
+			'marianne_social',
+			array(
+				'title' => __( 'Social Links', 'marianne' ),
 			)
 		);
 
@@ -220,6 +234,15 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'live'        => true,
 		);
 
+		// Post Settings.
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_post',
+			'id'          => 'nav',
+			'title'       => __( 'Display links to previous and next posts.', 'marianne' ),
+			'description' => __( 'Default: hidden.', 'marianne' ),
+			'type'        => 'checkbox',
+		);
+
 		// Footer Settings.
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_footer',
@@ -239,6 +262,14 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'live'        => true,
 		);
 
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
+			'id'          => 'twitter',
+			'title'       => __( 'Twitter', 'marianne' ),
+			'description' => __( 'Type your twitter @username.', 'marianne' ),
+			'type'        => 'text',
+		);
+
 		/**
 		 * Add settings and controls to the Theme Customizer.
 		 *
@@ -252,7 +283,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		// Iterates.
 		foreach ( $marianne_customizer_options as $option ) {
 
-			// Variables used to build the settings and controls.
+			// Gets option values.
 			$section     = ! empty( $option['section'] ) ? $option['section'] : '';
 			$id          = ! empty( $option['id'] ) ? $option['id'] : '';
 			$type        = ! empty( $option['type'] ) ? $option['type'] : '';
@@ -276,28 +307,32 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			if ( $option_id ) {
 				$option_default = $options_default[ $option_id ];
 
-				// Choose the right sanitize callback.
-				switch ( $type ) {
-					case 'radio':
-					case 'select':
-						$sanitize_callback = 'marianne_sanitize_radio_select';
-						break;
+				if ( 'marianne_social_twitter' !== $option_id ) {
+					// Choose the right sanitize callback.
+					switch ( $type ) {
+						case 'radio':
+						case 'select':
+							$sanitize_callback = 'marianne_sanitize_radio_select';
+							break;
 
-					case 'checkbox':
-						$sanitize_callback = 'marianne_sanitize_checkbox';
-						break;
+						case 'checkbox':
+							$sanitize_callback = 'marianne_sanitize_checkbox';
+							break;
 
-					case 'textarea':
-						$sanitize_callback = 'sanitize_textarea_field';
-						break;
+						case 'textarea':
+							$sanitize_callback = 'sanitize_textarea_field';
+							break;
 
-					case 'slider':
-						$sanitize_callback = 'marianne_sanitize_slider';
-						break;
+						case 'slider':
+							$sanitize_callback = 'marianne_sanitize_slider';
+							break;
 
-					default:
-						$sanitize_callback = 'esc_html';
-						break;
+						default:
+							$sanitize_callback = 'esc_html';
+							break;
+					}
+				} elseif( 'marianne_social_twitter' === $option_id ) {
+					$sanitize_callback = 'marianne_sanitize_twitter';
 				}
 
 				// Add the setting.
@@ -391,9 +426,15 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_content_text_align' => 'left',
 			'marianne_content_hyphens'    => false,
 
+			// Post Settings
+			'marianne_post_nav' => false,
+
 			// Footer Settings.
 			'marianne_footer_mention' => true,
 			'marianne_footer_text'    => '',
+
+			// Social Links.
+			'marianne_social_twitter' => '',
 		);
 
 		$option = sanitize_key( $option );
@@ -499,7 +540,7 @@ if ( ! function_exists( 'marianne_sanitize_slider' ) ) {
 
 if ( ! function_exists( 'marianne_in_range' ) ) {
 	/**
-	 * Only allow values between a certain minimum & maxmium range
+	 * Only allows values between a certain minimum & maximum range.
 	 *
 	 * @param number $input Input to be sanitized.
 	 * @param number $min   The min value of the input.
@@ -522,5 +563,27 @@ if ( ! function_exists( 'marianne_in_range' ) ) {
 		}
 
 		return $input;
+	}
+}
+
+if ( ! function_exists( 'marianne_sanitize_twitter' ) ) {
+	/**
+	 * Twitter username sanitization.
+	 *
+	 * @param string $input The desired username.
+	 *
+	 * @return string The username, if it matches the regular expression.
+	 */
+	function marianne_sanitize_twitter( $input ) {
+		$input  = esc_attr( $input );
+		$output = '';
+
+		if ( $input ) {
+			if ( preg_match( '/^\@[A-Za-z0-9_]{1,15}$/', $input ) ) {
+				$output = $input;
+			}
+		}
+
+		return $output;
 	}
 }

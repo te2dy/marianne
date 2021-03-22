@@ -907,6 +907,11 @@ button:focus {
 	border-color: #000;
 	color: #fff;
 }
+.post-navigation .nav-links {
+	display: flex;
+	justify-content: space-between;
+	
+}
 
 /**
  * Comments
