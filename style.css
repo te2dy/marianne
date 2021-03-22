@@ -496,6 +496,59 @@ hr {
 	width: 50%;
 }
 
+/* Feather Icons */
+.site-social {
+	margin: 1em auto;
+}
+.site-social .feather {
+	border: 0;
+	fill: transparent;
+	stroke: var(--color-body-text-secondary);
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	transition: all .2s ease-in-out;
+}
+.site-social .feather-rss {
+	stroke-linecap: round;
+	stroke-linejoin: butt;
+}
+.social-links li a:hover .feather,
+.social-links li a:focus .feather {
+	stroke: var(--color-body-background);
+	transition: all .2s ease-in-out;
+}
+.social-links li {
+	margin: 0 .25em;
+}
+.social-links li:first-child {
+	margin-left: 0;
+}
+.social-links li:last-child {
+	margin-right: 0;
+}
+.social-icon-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--color-input-background);
+	border-radius: 50%;
+	width: 28px;
+	height: 28px;
+	transition: all .2s ease-in-out;
+}
+.site-social-round .social-icon-container {
+	border-radius: 50%;
+}
+.site-social-square .social-icon-container {
+	border-radius: 4px;
+}
+.social-links li a:hover .social-icon-container,
+.social-links li a:focus .social-icon-container {
+	background-color: var(--color-link-hover);
+	transition: all .2s ease-in-out;
+}
+
 /* Images */
 .image-circular,
 .image-circular .custom-logo {
@@ -1192,61 +1245,4 @@ button:focus {
 	#menu-footer-container {
 		display: none;
 	}
-}
-
-/* Bootstrap Icons */
-
-/* Social Icons */
-
-/* Header */
-.site-social {
-	margin: 1em auto;
-}
-.feather {
-	border: 0;
-	fill: transparent;
-	stroke: var(--color-body-text-secondary);
-	stroke-width: 2;
-	stroke-linecap: round;
-	stroke-linejoin: round;
-	transition: all .2s ease-in-out;
-}
-.feather-rss {
-	stroke-linecap: round;
-	stroke-linejoin: butt;
-}
-.social-links li:hover .feather,
-.social-links li:focus .feather {
-	stroke: var(--color-body-background);
-	transition: all .2s ease-in-out;
-}
-.social-links li {
-	margin: 0 .25em;
-}
-.social-links li:first-child {
-	margin-left: 0;
-}
-.social-links li:last-child {
-	margin-right: 0;
-}
-.social-icon-container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: var(--color-input-background);
-	border-radius: 50%;
-	width: 28px;
-	height: 28px;
-	transition: all .2s ease-in-out;
-}
-.social-links-round .social-icon-container {
-	border-radius: 50%;
-}
-.social-links-square .social-icon-container {
-	border-radius: 4px;
-}
-.social-icon-container:hover,
-.social-icon-container:focus {
-	background-color: var(--color-link-hover);
-	transition: all .2s ease-in-out;
 }

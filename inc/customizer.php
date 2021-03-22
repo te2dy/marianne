@@ -751,7 +751,6 @@ if ( ! function_exists( 'marianne_sanitize_twitter' ) ) {
 	 * @since Marianne 1.3
 	 */
 	function marianne_sanitize_twitter( $input ) {
-		$input  = esc_attr( $input );
 		$output = '';
 
 		if ( $input ) {
@@ -775,10 +774,10 @@ if ( ! function_exists( 'marianne_sanitize_phone' ) ) {
 	 * @since Marianne 1.3
 	 */
 	function marianne_sanitize_phone( $input ) {
-		if ( substr( $input, 0, 1 ) === "+" ) {
-			$output = '+' . absint( $input );
-		} else {
-			$output = absint( $input );
+		$output = '';
+
+		if ( preg_match( '/\+?[0-9]+/', $input ) ) {
+			$output = $input;
 		}
 
 		return $output;

@@ -378,6 +378,8 @@ if ( ! function_exists( 'marianne_svg_feather_icons' ) ) {
 	 * @param string $name The id of the icon.
 	 *
 	 * @return string $path The path of the icon.
+	 *
+	 * @since Marianne 1.3
 	 */
 	function marianne_svg_feather_icons( $name = '' ) {
 		$svg_data = array(
@@ -463,6 +465,8 @@ if ( ! function_exists( 'marianne_esc_svg' ) ) {
 	 * @param string $path Path to escape.
 	 *
 	 * @return string $shapes Escaped path.
+	 *
+	 * @since Marianne 1.3
 	 */
 	function marianne_esc_svg( $shapes = '' ) {
 		$allowed_path = array(
@@ -532,27 +536,27 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 	 * @since Marianne 1.3
 	 */
 	function marianne_social_link( $location = 'footer' ) {
+		$container_class = 'site-social';
 
 		if ( 'footer' === $location ) {
-			$container_class = 'site-footer-block';
-		} else {
-			$container_class = 'site-social';
+			$container_class .= ' site-footer-block';
 		}
 
-		$container_class .= ' social-links-' . marianne_get_theme_mod( 'marianne_social_style' );
+		$container_class .= ' site-social-' . marianne_get_theme_mod( 'marianne_social_style' );
 
 		$option_twitter   = marianne_get_theme_mod( 'marianne_social_twitter' );
 		$option_facebook  = marianne_get_theme_mod( 'marianne_social_facebook' );
 		$option_instagram = marianne_get_theme_mod( 'marianne_social_instagram' );
-		$option_linkedin  = marianne_get_theme_mod( 'marianne_social_linkedin' );
 		$option_youtube   = marianne_get_theme_mod( 'marianne_social_youtube' );
-		$option_email     = marianne_get_theme_mod( 'marianne_social_email' );
+		$option_twitch    = marianne_get_theme_mod( 'marianne_social_twitch' );
+		$option_linkedin  = marianne_get_theme_mod( 'marianne_social_linkedin' );
 		$option_github    = marianne_get_theme_mod( 'marianne_social_gibhub' );
 		$option_gitlab    = marianne_get_theme_mod( 'marianne_social_gitlab' );
 		$option_link      = marianne_get_theme_mod( 'marianne_social_link' );
 		$option_phone     = marianne_get_theme_mod( 'marianne_social_phone' );
+		$option_email     = marianne_get_theme_mod( 'marianne_social_email' );
 		$option_rss       = marianne_get_theme_mod( 'marianne_social_rss' );
-		$option_twitch    = marianne_get_theme_mod( 'marianne_social_twitch' );
+
 
 		if ( $option_twitter || $option_facebook || $option_instagram || $option_linkedin || $option_youtube || $option_email || $option_github || $option_gitlab || $option_link || $option_phone || $option_rss || $option_twitch ) {
 			$no_links = false;
@@ -609,7 +613,7 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 
 			if ( ! empty( $social_links ) ) :
 				?>
-					<div id="social-links-container" class="<?php echo esc_attr( $container_class ); ?>">
+					<div class="<?php echo esc_attr( $container_class ); ?>">
 						<ul class="social-links list-inline">
 							<?php
 							foreach( $social_links as $site => $link ) {
@@ -617,6 +621,10 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 								$svg_shapes  = marianne_svg_feather_icons( $site )['shapes'];
 
 								switch ( $site ) {
+									case 'twitter':
+										$link = 'https://twitter.com/' . str_replace( '@', '', $link );
+										break;
+
 									case 'email':
 										if ( $link ) {
 											$link = 'mailto:' . $link;
