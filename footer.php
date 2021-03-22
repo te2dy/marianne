@@ -12,6 +12,17 @@
 
 ?>
 			<footer class="site-footer text-secondary" role="contentinfo">
+				<?php
+				$marianne_footer_text = marianne_get_theme_mod( 'marianne_footer_text' );
+				if ( $marianne_footer_text ) {
+					?>
+						<div id="site-footer-text" class="site-footer-block">
+							<?php echo wp_kses_post( wpautop( $marianne_footer_text ) ); ?>
+						</div>
+					<?php
+				}
+				?>
+
 				<?php if ( has_nav_menu( 'footer' ) ) : ?>
 					<nav id="menu-footer-container" class="site-footer-block" role="navigation" aria-label="<?php echo esc_attr__( 'Footer Menu', 'marianne' ); ?>">
 						<?php
@@ -29,14 +40,30 @@
 				<?php endif; ?>
 
 				<?php
-				$marianne_footer_text = marianne_get_theme_mod( 'marianne_footer_text' );
-				if ( $marianne_footer_text ) {
+				$social_links = array();
+
+				$social_links['twitter'] = marianne_get_twitter_username_to_url( marianne_get_theme_mod( 'marianne_social_twitter' ) );
+				$social_links['facebook'] = marianne_get_theme_mod( 'marianne_social_facebook' );
+				$social_links['instagram'] = marianne_get_theme_mod( 'marianne_social_instagram' );
+				$social_links['linkedin'] = marianne_get_theme_mod( 'marianne_social_linkedin' );
+
+				if ( ! empty( $social_links ) ) :
 					?>
-						<div id="site-footer-text" class="site-footer-block">
-							<?php echo wp_kses_post( wpautop( $marianne_footer_text ) ); ?>
+						<div id="site-footer-social" class="site-footer-block">
+							<?php
+							foreach( $social_links as $site => $link ) {
+								if ( $link ) {
+									?>
+										<a href="<?php echo esc_url( $link ); ?>">
+											<?php marianne_svg( marianne_svg_social_path( $site ) ); ?>
+										</a>
+									<?php
+								}
+							}
+							?>
 						</div>
 					<?php
-				}
+				endif;
 				?>
 
 				<?php if ( true === marianne_get_theme_mod( 'marianne_footer_mention' ) ) : ?>

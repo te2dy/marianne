@@ -262,12 +262,34 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'live'        => true,
 		);
 
+		// Social Links
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_social',
 			'id'          => 'twitter',
 			'title'       => __( 'Twitter', 'marianne' ),
 			'description' => __( 'Type your twitter @username.', 'marianne' ),
 			'type'        => 'text',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
+			'id'          => 'facebook',
+			'title'       => __( 'Facebook', 'marianne' ),
+			'type'        => 'url',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
+			'id'          => 'instagram',
+			'title'       => __( 'Instagram', 'marianne' ),
+			'type'        => 'url',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
+			'id'          => 'linkedin',
+			'title'       => __( 'LinkedIn', 'marianne' ),
+			'type'        => 'url',
 		);
 
 		/**
@@ -327,11 +349,15 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 							$sanitize_callback = 'marianne_sanitize_slider';
 							break;
 
+						case 'url':
+							$sanitize_callback = 'esc_url_raw';
+							break;
+
 						default:
 							$sanitize_callback = 'esc_html';
 							break;
 					}
-				} elseif( 'marianne_social_twitter' === $option_id ) {
+				} else {
 					$sanitize_callback = 'marianne_sanitize_twitter';
 				}
 
@@ -434,7 +460,10 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_footer_text'    => '',
 
 			// Social Links.
-			'marianne_social_twitter' => '',
+			'marianne_social_twitter'   => '',
+			'marianne_social_facebook'  => '',
+			'marianne_social_instagram' => '',
+			'marianne_social_linkedin'  => '',
 		);
 
 		$option = sanitize_key( $option );

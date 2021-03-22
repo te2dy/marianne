@@ -20,49 +20,100 @@ Text Domain: marianne
 :root {
 	--font-size: 12pt;
 
-	--color-blue: #0057B7;
-	--color-red: #de0000;
-	--color-green: #006400;
-	--color-orange: #ff8c00;
-	--color-purple: #800080;
+	--color-light-blue: #0057B7;
+	--color-dark-blue: #529ff5;
+
+	--color-light-red: #de0000;
+	--color-dark-red: #f14646;
+
+	--color-light-green: #006400;
+	--color-dark-green: #18af18;
+
+	--color-light-orange: #ff8c00;
+	--color-dark-orange: #ffab2e;
+
+	--color-light-purple: #800080;
+	--color-dark-purple: #9a389a;
+
+	--color-border: #aaa;
 	--color-border: #aaa;
 
-	--color-lightgray: #878787;
-	--color-gray: #595959;
-	--color-darkgray: #222;
+	--color-light-background: #fff;
+	--color-dark-background: #16161D;
+
+	--color-light-text-primary: #000;
+	--color-dark-text-primary: rgb(255, 255, 255, 0.85);
+
+	--color-light-text-secondary: rgb(0, 0, 0, 0.65);
+	--color-dark-text-secondary: rgb(255, 255, 255, 0.55);
+
+	--color-light-input-background: #eaeaea;
+	--color-dark-input-background: #222;
 }
 
 /* Themes */
 .color-scheme-light {
-	--color-body-background: #fff;
-	--color-body-text-primary: #000;
-	--color-body-text-secondary: var(--color-gray);
-	--color-input-background: var(--color-body-background);
-	--color-input-text: var(--color-body-text-primary);
+	--color-body-background: var(--color-light-background);
+	--color-body-text-primary: var(--color-light-text-primary);
+	--color-body-text-secondary: var(--color-light-text-secondary);
+	--color-input-background: var(--color-light-input-background);
+	--color-input-text: var(--color-light-text-primary);
+}
+.color-scheme-light.link-hover-blue {
+	--color-link-hover: var(--color-light-blue);
+}
+.color-scheme-light.link-hover-red {
+	--color-link-hover: var(--color-light-red);
+}
+.color-scheme-light.link-hover-green {
+	--color-link-hover: var(--color-light-green);
+}
+.color-scheme-light.link-hover-orange {
+	--color-link-hover: var(--color-light-orange);
+}
+.color-scheme-light.link-hover-purple {
+	--color-link-hover: var(--color-light-purple);
 }
 @media (prefers-color-scheme: light) {
-  .color-scheme-auto {
-		--color-body-background: #fff;
-		--color-body-text-primary: #000;
-		--color-body-text-secondary: var(--color-gray);
-		--color-input-background: var(--color-body-background);
-		--color-input-text: var(--color-body-text-primary);
+	.color-scheme-auto {
+		--color-body-background: var(--color-light-background);
+		--color-body-text-primary: var(--color-light-text-primary);
+		--color-body-text-secondary: var(--color-light-text-secondary);
+		--color-input-background: var(--color-light-input-background);
+		--color-input-text: var(--color-light-text-primary);
+		--color-button: var(--color-light-button-background);
 	}
 }
 .color-scheme-dark {
-	--color-body-background: #16161D;
-	--color-body-text-primary: rgb(255, 255, 255, 0.85);
-	--color-body-text-secondary: var(--color-lightgray);
-	--color-input-background: var(--color-darkgray);
-	--color-input-text: var(--color-body-text-primary);
+	--color-body-background: var(--color-dark-background);
+	--color-body-text-primary: var(--color-dark-text-primary);
+	--color-body-text-secondary: var(--color-dark-text-secondary);
+	--color-input-background: var(--color-dark-input-background);
+	--color-input-text: var(--color-dark-text-primary);
+	--color-button: var(--color-dark-button-background);
+}
+.color-scheme-dark.link-hover-blue {
+	--color-link-hover: var(--color-dark-blue);
+}
+.color-scheme-dark.link-hover-red {
+	--color-link-hover: var(--color-dark-red);
+}
+.color-scheme-dark.link-hover-green {
+	--color-link-hover: var(--color-dark-green);
+}
+.color-scheme-dark.link-hover-orange {
+	--color-link-hover: var(--color-dark-orange);
+}
+.color-scheme-dark.link-hover-purple {
+	--color-link-hover: var(--color-dark-purple);
 }
 @media (prefers-color-scheme: dark) {
-  .color-scheme-auto {
-		--color-body-background: #16161D;
-		--color-body-text-primary: rgb(255, 255, 255, 0.85);
-		--color-body-text-secondary: var(--color-lightgray);
-		--color-input-background: var(--color-darkgray);
-		--color-input-text: var(--color-body-text-primary);
+	.color-scheme-auto {
+		--color-body-background: var(--color-dark-background);
+		--color-body-text-primary: var(--color-dark-text-primary);
+		--color-body-text-secondary: var(--color-dark-text-secondary);
+		--color-input-background: var(--color-dark-input-background);
+		--color-input-text: var(--color-dark-text-primary);
 	}
 }
 
@@ -100,28 +151,6 @@ Text Domain: marianne
 /* Body */
 .text-shadow {
 	--text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-}
-
-/* Links */
-.link-hover-blue {
-	--color-link-hover: var(--color-blue);
-	--color-button-background: rbga(var(--color-blue), 0.1);
-}
-.link-hover-red {
-	--color-link-hover: var(--color-red);
-	--color-button-background: rbga(var(--color-red), 0.1);
-}
-.link-hover-green {
- 	--color-link-hover: var(--color-green);
-	--color-button-background: rbga(var(--color-green), 0.1);
-}
-.link-hover-orange {
- 	--color-link-hover: var(--color-orange);
-	--color-button-background: rbga(var(--color-orange), 0.1);
-}
-.link-hover-purple {
- 	--color-link-hover: var(--color-purple);
-	--color-button-background: rbga(var(--color-purple), 0.1);
 }
 
 /* Content */
@@ -203,7 +232,7 @@ a {
 }
 a:hover,
 a:focus {
-	color: var(--color-link-hover, #0057B7);
+	color: var(--color-link-hover);
 	cursor: pointer;
 	text-decoration: inherit;
 	transition: all .2s ease-in-out;
@@ -521,9 +550,9 @@ input[type="checkbox"] {
 }
 input[type="submit"],
 button {
-	background-color: var(--color-button-background);
-	border: 1px solid var(--color-border);
-	color: var(--color-input-text);
+	background-color: transparent;
+	border: 1px solid var(--color-body-text-primary);
+	color: var(--color-body-text-primary);
 	padding: .5em;
 	position: relative;
 	transition: all .2s ease-in-out .1s;
@@ -532,9 +561,8 @@ input[type="submit"]:hover,
 input[type="submit"]:focus,
 button:hover,
 button:focus {
-	background-color: transparent;
-	border-color: var(--color-link-hover, #0057B7);
-	color: var(--color-link-hover, #0057B7);
+	border-color: var(--color-link-hover);
+	color: var(--color-link-hover);
 	cursor: pointer;
 	transition: all .2s ease-in-out .1s;
 }
@@ -631,7 +659,7 @@ button:focus {
 	word-wrap: normal !important;
 }
 #menu-primary .menu-item-has-children .sub-menu-toggle[aria-expanded="true"] ~ .sub-menu {
-	background-color: #eaeaea;
+	background-color: var(--color-input-background);
 	clip: auto !important;
 	clip-path: none;
 	display: block;
@@ -644,7 +672,6 @@ button:focus {
 	width: auto;
 	z-index: 100000;
 }
-
 #menu-primary .sub-menu > .menu-item {
 	display: block;
 	width: 100%;
@@ -653,11 +680,6 @@ button:focus {
 #menu-primary .sub-menu > .menu-item > a {
 	display: block;
 	padding: .5em;
-}
-#menu-primary .sub-menu > .menu-item > a:hover,
-#menu-primary .sub-menu > .menu-item > a:focus {
-	background-color: #000;
-	color: #fff;
 }
 #menu-primary .sub-menu .menu-item:last-child {
 	margin-bottom: 0;
@@ -707,7 +729,7 @@ button:focus {
 	}
 	#menu-primary .menu-item a:hover,
 	#menu-primary .menu-item a:focus {
-		color: var(--color-link-hover, #0057B7);
+		color: var(--color-link-hover);
 	}
 	#menu-primary .menu-item:last-of-type {
 		border: 0;
@@ -755,7 +777,7 @@ button:focus {
 	#menu-primary .sub-menu > .menu-item > a:hover,
 	#menu-primary .sub-menu > .menu-item > a:focus {
 		background-color: transparent;
-		color: var(--color-link-hover, #0057B7);
+		color: var(--color-link-hover);
 	}
 }
 
@@ -887,7 +909,7 @@ button:focus {
 .post-content a:hover,
 .page-content a:hover,
 .comment-content a:hover {
-	color: var(--color-link-hover, #0057B7);
+	color: var(--color-link-hover);
 }
 .post-page-numbers {
 	border: 1px solid var(--color-border);
@@ -910,7 +932,7 @@ button:focus {
 .post-navigation .nav-links {
 	display: flex;
 	justify-content: space-between;
-	
+
 }
 
 /**

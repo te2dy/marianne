@@ -93,9 +93,10 @@
 					classes = {
 						'light': 'color-scheme-light',
 						'dark': 'color-scheme-dark',
+						'auto': 'color-scheme-auto',
 					};
 
-				marianneSelectRadioToggleClass( target, classes, newval );
+					marianneSelectRadioToggleClass( target, classes, newval );
 			} );
 		} );
 
