@@ -262,7 +262,19 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'live'        => true,
 		);
 
-		// Social Links
+		// Social Links.
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
+			'id'          => 'location',
+			'title'       => __( 'Where do you want to display the social links?', 'marianne' ),
+			'description' => __( 'Default: footer.', 'marianne' ),
+			'type'        => 'radio',
+			'value'       => array(
+				'header' => __( 'Header', 'marianne' ),
+				'footer' => __( 'Footer', 'marianne' ),
+			),
+		);
+
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_social',
 			'id'          => 'twitter',
@@ -452,7 +464,7 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_content_text_align' => 'left',
 			'marianne_content_hyphens'    => false,
 
-			// Post Settings
+			// Post Settings.
 			'marianne_post_nav' => false,
 
 			// Footer Settings.
@@ -460,6 +472,7 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_footer_text'    => '',
 
 			// Social Links.
+			'marianne_social_location'  => 'footer',
 			'marianne_social_twitter'   => '',
 			'marianne_social_facebook'  => '',
 			'marianne_social_instagram' => '',

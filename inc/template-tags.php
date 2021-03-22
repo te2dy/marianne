@@ -444,11 +444,61 @@ if ( ! function_exists( 'marianne_svg' ) ) {
 	 */
 	function marianne_svg( $path = '', $class = 'bi', $size = array( 20, 20 ), $viewbox = '0 0 16 16' ) {
 		?>
-			<svg xmlns="http://www.w3.org/2000/svg" width="<?php echo esc_attr( absint( $size[0] ) ); ?>" height="<?php echo esc_attr( absint( $size[1] ) ); ?>" fill="currentColor" class="<?php echo esc_attr( $class ); ?>" viewBox="0 0 16 16">
+			<svg xmlns="http://www.w3.org/2000/svg" width="<?php echo esc_attr( absint( $size[0] ) ); ?>" height="<?php echo esc_attr( absint( $size[1] ) ); ?>" class="<?php echo esc_attr( $class ); ?>" viewBox="<?php echo esc_attr( $viewbox ); ?>">
 			  <?php
 			  echo marianne_esc_svg( $path );
 			  ?>
 			</svg>
 		<?php
+	}
+}
+
+if ( ! function_exists( 'marianne_social_link' ) ) {
+	/**
+	 * Displays social links as icons.
+	 *
+	 * @param string $location The location of the icons (header or footer).
+	 *
+	 * @return void
+	 *
+	 * @since Marianne 1.3
+	 */
+	function marianne_social_link( $location = 'footer' ) {
+		if ( 'footer' === $location ) {
+			$container_class = 'site-footer-block';
+		} else {
+			$container_class = 'site-social';
+		}
+
+		$social_links = array();
+
+		$social_links['twitter'] = marianne_get_twitter_username_to_url( marianne_get_theme_mod( 'marianne_social_twitter' ) );
+		$social_links['facebook'] = marianne_get_theme_mod( 'marianne_social_facebook' );
+		$social_links['instagram'] = marianne_get_theme_mod( 'marianne_social_instagram' );
+		$social_links['linkedin'] = marianne_get_theme_mod( 'marianne_social_linkedin' );
+
+		if ( ! empty( $social_links ) ) :
+			?>
+				<div id="social-container" class="<?php echo esc_attr( $container_class ); ?>">
+					<ul class="social-list list-inline">
+						<?php
+						foreach( $social_links as $site => $link ) {
+							if ( $link ) {
+								?>
+									<li>
+										<a href="<?php echo esc_url( $link ); ?>">
+											<div class="social-icon-container">
+												<?php marianne_svg( marianne_svg_social_path( $site ), 'bi bi-' . $site ); ?>
+											</div>
+										</a>
+									</li>
+								<?php
+							}
+						}
+						?>
+					</ul>
+				</div>
+			<?php
+		endif;
 	}
 }

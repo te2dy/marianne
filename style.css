@@ -83,6 +83,21 @@ Text Domain: marianne
 		--color-input-text: var(--color-light-text-primary);
 		--color-button: var(--color-light-button-background);
 	}
+	.color-scheme-auto.link-hover-blue {
+		--color-link-hover: var(--color-light-blue);
+	}
+	.color-scheme-auto.link-hover-red {
+		--color-link-hover: var(--color-light-red);
+	}
+	.color-scheme-auto.link-hover-green {
+		--color-link-hover: var(--color-light-green);
+	}
+	.color-scheme-auto.link-hover-orange {
+		--color-link-hover: var(--color-light-orange);
+	}
+	.color-scheme-auto.link-hover-purple {
+		--color-link-hover: var(--color-light-purple);
+	}
 }
 .color-scheme-dark {
 	--color-body-background: var(--color-dark-background);
@@ -114,6 +129,21 @@ Text Domain: marianne
 		--color-body-text-secondary: var(--color-dark-text-secondary);
 		--color-input-background: var(--color-dark-input-background);
 		--color-input-text: var(--color-dark-text-primary);
+	}
+	.color-scheme-auto.link-hover-blue {
+		--color-link-hover: var(--color-dark-blue);
+	}
+	.color-scheme-auto.link-hover-red {
+		--color-link-hover: var(--color-dark-red);
+	}
+	.color-scheme-auto.link-hover-green {
+		--color-link-hover: var(--color-dark-green);
+	}
+	.color-scheme-auto.link-hover-orange {
+		--color-link-hover: var(--color-dark-orange);
+	}
+	.color-scheme-auto.link-hover-purple {
+		--color-link-hover: var(--color-dark-purple);
 	}
 }
 
@@ -1165,8 +1195,20 @@ button:focus {
 }
 
 /* Bootstrap Icons */
-.bi {
 
+/* Social Icons */
+
+/* Header */
+.site-social {
+	margin: 1em auto;
+}
+
+.bi {
+	fill: var(--color-body-text-secondary);
+}
+.bi:hover,
+.bi:focus {
+	fill: var(--color-link-hover);
 }
 .social-list li {
 	margin: 0 .25em;

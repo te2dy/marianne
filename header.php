@@ -57,6 +57,10 @@
 
 				marianne_site_description();
 
+				if ( 'header' === marianne_get_theme_mod( 'marianne_social_location' ) ) {
+					marianne_social_link( 'header' );
+				}
+
 				marianne_menu_primary();
 				?>
 			</header>

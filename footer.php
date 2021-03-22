@@ -40,36 +40,9 @@
 				<?php endif; ?>
 
 				<?php
-				$social_links = array();
-
-				$social_links['twitter'] = marianne_get_twitter_username_to_url( marianne_get_theme_mod( 'marianne_social_twitter' ) );
-				$social_links['facebook'] = marianne_get_theme_mod( 'marianne_social_facebook' );
-				$social_links['instagram'] = marianne_get_theme_mod( 'marianne_social_instagram' );
-				$social_links['linkedin'] = marianne_get_theme_mod( 'marianne_social_linkedin' );
-
-				if ( ! empty( $social_links ) ) :
-					?>
-						<div id="site-footer-social" class="site-footer-block">
-							<ul class="social-list list-inline">
-								<?php
-								foreach( $social_links as $site => $link ) {
-									if ( $link ) {
-										?>
-											<li>
-												<a href="<?php echo esc_url( $link ); ?>">
-													<div class="social-icon-container">
-														<?php marianne_svg( marianne_svg_social_path( $site ), 'bi bi-' . $site ); ?>
-													</div>
-												</a>
-											</li>
-										<?php
-									}
-								}
-								?>
-							</ul>
-						</div>
-					<?php
-				endif;
+				if ( 'footer' === marianne_get_theme_mod( 'marianne_social_location' ) ) {
+					marianne_social_link();
+				}
 				?>
 
 				<?php if ( true === marianne_get_theme_mod( 'marianne_footer_mention' ) ) : ?>
