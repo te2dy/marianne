@@ -12,7 +12,7 @@
 
 if ( ! function_exists( 'marianne_customizer_scripts_styles' ) ) {
 	/**
-	 * Enqueue Theme Customizer scripts and styles.
+	 * Enqueues Theme Customizer scripts and styles.
 	 *
 	 * @return void
 	 *
@@ -33,7 +33,7 @@ if ( ! function_exists( 'marianne_customizer_scripts_styles' ) ) {
 
 if ( ! function_exists( 'marianne_customizer_script_live' ) ) {
 	/**
-	 * Enqueue Theme Customizer live preview script.
+	 * Enqueues Theme Customizer live preview script.
 	 *
 	 * @return void
 	 *
@@ -56,13 +56,12 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 	 * @link https://developer.wordpress.org/reference/hooks/customize_register/
 	 *
 	 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+	 *
+	 * @since Marianne 1.3
 	 */
 	function marianne_customize_register( $wp_customize ) {
 		/**
-		 * Create new sections in Theme Customizer.
-		 *
-		 * Summary:
-		 * - Fonts.
+		 * Creates new sections in the Theme Customizer.
 		 *
 		 * @link https://developer.wordpress.org/reference/classes/wp_customize_manager/add_section/
 		 */
@@ -109,17 +108,20 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		/**
 		 * Lists new options to add to the Customizer.
 		 *
-		 * To simplify the code, all new options are pushed in an array.
+		 * To simplify the build of the Customizer, all new options are pushed in an array.
+		 * The Customizer will be built later.
 		 *
-		 * @return array  $marianne_customizer_options An array of options that follows this pattern:
-		 *                                             $marianne_customizer_options[] = array(
-		 *                                                 'id'          => 'The option id',
-		 *                                                 'title'       => 'The title of the option',
-		 *                                                 'description' => 'The description of the option',
-		 *                                                 'type'        => 'The type of the option (text, checkbox…)',
-		 *                                                 'value'       => 'The value of the option',
-		 *                                                 'live'        => (bool) Enable/disable live preview.
-		 *                                             );
+		 * @return array $marianne_customizer_options An array of options that follows this pattern:
+		 *                                            $marianne_customizer_options[] = array(
+		 *                                                'section'     => (string) The section of the option,
+		 *                                                'id'          => (string) The option id,
+		 *                                                'title'       => (string) The title of the option,
+		 *                                                'description' => (string) The description of the option,
+		 *                                                'type'        => (string) The type of the option (text, checkbox…),
+		 *                                                'input_attrs' => (array) Some parameters to apply to the control,
+		 *                                                'value'       => (array) The value of the option,
+		 *                                                'live'        => (bool) Enable/disable live preview,
+		 *                                            );
 		 */
 		$marianne_customizer_options = array();
 
@@ -396,9 +398,9 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		);
 
 		/**
-		 * Add settings and controls to the Theme Customizer.
+		 * Finally, adds settings and controls to the Theme Customizer.
 		 *
-		 * Now, iterate the options put in the array $marianne_customizer_settings
+		 * Iterates the options put in the array $marianne_customizer_settings
 		 * to add them in the Customizer.
 		 */
 
@@ -407,7 +409,6 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 
 		// Iterates.
 		foreach ( $marianne_customizer_options as $option ) {
-
 			// Gets option values.
 			$section     = ! empty( $option['section'] ) ? $option['section'] : '';
 			$id          = ! empty( $option['id'] ) ? $option['id'] : '';
@@ -417,23 +418,32 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			$value       = ! empty( $option['value'] ) ? $option['value'] : '';
 			$input_attrs = ! empty( $option['input_attrs'] ) ? $option['input_attrs'] : null;
 
+			// Sets up live preview.
 			if ( ! empty( $option['live'] ) && true === $option['live'] ) {
 				$live = 'postMessage';
 			} else {
 				$live = 'refresh';
 			}
 
+			/**
+			 * Sets the option name.
+			 *
+			 * Options add to new settings will be named this way:
+			 * 'marianne_customesection_option'
+			 *
+			 */
 			if ( $section && $id ) {
-				$option_id = $section . '_' . $id;
+				$option_name = $section . '_' . $id;
 			} else {
-				$option_id = '';
+				$option_name = '';
 			}
 
-			if ( $option_id ) {
-				$option_default = $options_default[ $option_id ];
+			if ( $option_name ) {
+				// Gets the default value of the option.
+				$option_default = $options_default[ $option_name ];
 
-				if ( 'marianne_social_twitter' !== $option_id && 'marianne_social_email' !== $option_id && 'marianne_social_phone' !== $option_id ) {
-					// Choose the right sanitize callback.
+				// Gets the right sanitization function depending on the type of the option.
+				if ( 'marianne_social_twitter' !== $option_name && 'marianne_social_email' !== $option_name && 'marianne_social_phone' !== $option_name ) {
 					switch ( $type ) {
 						case 'radio':
 						case 'select':
@@ -464,18 +474,18 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 							$sanitize_callback = 'esc_html';
 							break;
 					}
-				} elseif ( 'marianne_social_twitter' === $option_id ) {
+				} elseif ( 'marianne_social_twitter' === $option_name ) {
 					$sanitize_callback = 'marianne_sanitize_twitter';
-				} elseif ( 'marianne_social_email' === $option_id ) {
+				} elseif ( 'marianne_social_email' === $option_name ) {
 					$sanitize_callback = 'sanitize_email';
-				} elseif ( 'marianne_social_phone' === $option_id ) {
+				} elseif ( 'marianne_social_phone' === $option_name ) {
 					$sanitize_callback = 'marianne_sanitize_phone';
 
 				}
 
-				// Add the setting.
+				// Creates the setting.
 				$wp_customize->add_setting(
-					esc_html( $option_id ),
+					esc_html( $option_name ),
 					array(
 						'default'           => sanitize_key( $option_default ),
 						'capability'        => 'edit_theme_options',
@@ -489,14 +499,14 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 					$value_type = 'choices';
 				}
 
-				// Add the control.
+				// Creates the control.
 				$others_controles = array( 'marianne_slider' );
 
 				if ( ! in_array( $type, $others_controles, true ) ) {
 					$wp_customize->add_control(
 						new WP_Customize_Control(
 							$wp_customize,
-							sanitize_key( $option_id ),
+							sanitize_key( $option_name ),
 							array(
 								'label'       => esc_html( $title ),
 								'description' => esc_html( $description ),
@@ -510,7 +520,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 					$wp_customize->add_control(
 						new Marianne_Customizer_Control_Slider(
 							$wp_customize,
-							esc_html( $option_id ),
+							esc_html( $option_name ),
 							array(
 								'label'       => esc_html( $title ),
 								'description' => esc_html( $description ),
@@ -529,12 +539,14 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 
 if ( ! function_exists( 'marianne_options_default' ) ) {
 	/**
-	 * The default option values.
+	 * Sets the default option values.
 	 *
 	 * @param string $option The option to retrieve the default value (optional).
 	 *
 	 * @return string|array $output If an option is set, return the value of its default options.
 	 *                              Otherwise, return an array with the default values of all the options.
+	 *
+	 * @since Marianne 1.3
 	 */
 	function marianne_options_default( $option = '' ) {
 		$output = '';
@@ -543,7 +555,7 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 		 * The array of default values.
 		 *
 		 * $options_default = array(
-		 *     'the_id_of_the_option' => 'Its default value',
+		 *     'the_name_of_the_option' => 'Its default value',
 		 * );
 		 */
 		$options_default = array(
@@ -603,13 +615,15 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 
 if ( ! function_exists( 'marianne_get_theme_mod' ) ) {
 	/**
-	 * A Custom get_theme_mod() function.
+	 * A custom get_theme_mod() function.
 	 *
-	 * Get automatically the default value of the option.
+	 * It gets automatically the default value of the option.
 	 *
 	 * @param string $id The id of the option.
 	 *
 	 * @return string The value of the option.
+	 *
+	 * @since Marianne 1.3
 	 */
 	function marianne_get_theme_mod( $id ) {
 		$output = '';
@@ -641,6 +655,8 @@ if ( ! function_exists( 'marianne_sanitize_radio_select' ) ) {
 	 * @param WP_Customize_Setting $setting WP_Customize_Setting instance.
 	 *
 	 * @return integer Sanitized value.
+	 *
+	 * @since Marianne 1.3
 	 */
 	function marianne_sanitize_radio_select( $input, $setting ) {
 		$input   = sanitize_key( $input );
@@ -657,6 +673,8 @@ if ( ! function_exists( 'marianne_sanitize_checkbox' ) ) {
 	 * @param string $input Checkbox value to sanitize.
 	 *
 	 * @return bool Sanitized value.
+	 *
+	 * @since Marianne 1.3
 	 */
 	function marianne_sanitize_checkbox( $input ) {
 		return ( isset( $input ) && true === $input ) ? true : false;
@@ -676,6 +694,8 @@ if ( ! function_exists( 'marianne_sanitize_slider' ) ) {
 	 * @author Anthony Hortin <http://maddisondesigns.com>
 	 * @license http://www.gnu.org/licenses/gpl-2.0.html
 	 * @link https://github.com/maddisondesigns
+	 *
+	 * @since Marianne 1.3
 	 */
 	function marianne_sanitize_slider( $input, $setting ) {
 		$attrs = $setting->manager->get_control( $setting->id )->input_attrs;
@@ -704,6 +724,8 @@ if ( ! function_exists( 'marianne_in_range' ) ) {
 	 * @author Anthony Hortin <http://maddisondesigns.com>
 	 * @license http://www.gnu.org/licenses/gpl-2.0.html
 	 * @link https://github.com/maddisondesigns
+	 *
+	 * @since Marianne 1.3
 	 */
 	function marianne_in_range( $input, $min, $max ) {
 		if ( $input < $min ) {
@@ -725,6 +747,8 @@ if ( ! function_exists( 'marianne_sanitize_twitter' ) ) {
 	 * @param string $input The desired username.
 	 *
 	 * @return string The username, if it matches the regular expression.
+	 *
+	 * @since Marianne 1.3
 	 */
 	function marianne_sanitize_twitter( $input ) {
 		$input  = esc_attr( $input );
@@ -747,6 +771,8 @@ if ( ! function_exists( 'marianne_sanitize_phone' ) ) {
 	 * @param string $input The number to sanitize.
 	 *
 	 * @return bool Sanitized number.
+	 *
+	 * @since Marianne 1.3
 	 */
 	function marianne_sanitize_phone( $input ) {
 		if ( substr( $input, 0, 1 ) === "+" ) {
