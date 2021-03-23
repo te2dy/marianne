@@ -1,5 +1,5 @@
 # Thème Marianne pour WordPress
-- 🇬🇧 [English](/.github/README.md)
+- 🇬🇧 [English](#)(/.github/README.md)
 - 🇫🇷 **Français**
 
 **Marianne.**
@@ -22,14 +22,12 @@ Marianne dispose de fonctionnalités simples :
 - Articles mis en avant.
 - Images mises en avant.
 - Menus.
-- Widgets.
 
 Il est disponible en anglais et en français.
 
-Marianne est en plein développement. Prochainement, vous devriez pouvoir y apporter de nombreuses personnalisations, comme changer de police, de couleurs, mais aussi modifier la disposition des éléments de la page.
-
-## Installer Marianne
-Le thème Marianne peut être téléchargé depuis n’importe quel installation de WordPress à partir du [répertoire officiel des thèmes WordPress](https://wordpress.org/themes/marianne/).
+Marianne est en plein développement. Prochainement, vous devriez pouvoir y apporter de nombreuses personnalisations, comme changer de police, de couleurs. Vous pouvez télécharger la version beta en suivant [ce lien](https://github.com/te2dy/marianne/releases/tag/1.3-beta) pour l’essayer.
+### Installer Marianne
+Le thème Marianne peut être téléchargé depuis n’importe quel installation de WordPress à partir du [répertoire officiel des thèmes WordPress](#)(https://wordpress.org/themes/marianne/).
 
 Pour l’installer :
 - Connectez-vous à l’interface d’administration de votre site.
@@ -38,11 +36,10 @@ Pour l’installer :
 - Une fois le thème affiché, cliquez sur Installer.
 - Quand l’installation est terminée, cliquez sur Activer.
 
-Vous pouvez également télécharger la dernière version de Marianne depuis GitHub en suivant [ce lien](https://github.com/te2dy/marianne/releases/latest).
+Vous pouvez également télécharger la dernière version de Marianne depuis GitHub en suivant [ce lien](#)(https://github.com/te2dy/marianne/releases/latest).
 
 ## Contribuer
 Bientôt.
 
 ## Soutenir
 Bientôt.
-
