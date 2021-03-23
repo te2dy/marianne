@@ -21,9 +21,6 @@ and intellectuals who want to present their work.
 
 == Changelog ==
 
-=== 1.3.1-beta – March 23th, 2021 ===
-Fixed: PHP error when social links are displayed.
-
 === 1.3-beta – March 23th, 2021 ===
 - Added: options to customize the theme.
 - Added: theme page.
