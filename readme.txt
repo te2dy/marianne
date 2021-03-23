@@ -7,7 +7,7 @@ Requires PHP: 5.2
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-A minimal, lightweight and eco-friendly theme, perfect for writers.
+A minimalist theme ideal for writers, journalists and all bloggers who want to share their texts.
 
 == Description ==
 Marianne is a minimalist WordPress theme.
@@ -20,6 +20,9 @@ It is the perfect theme for writers, journalists
 and intellectuals who want to present their work.
 
 == Changelog ==
+
+=== 1.3.1-beta – March 23th, 2021 ===
+Fixed: PHP error when social links are displayed.
 
 === 1.3-beta – March 23th, 2021 ===
 - Added: options to customize the theme.
@@ -161,7 +164,7 @@ Source: https://www.flickr.com/photos/137643065@N06/23699397893
 License: CC0 1.0 Public Domain Dedication
 License URI: https://creativecommons.org/publicdomain/zero/1.0/
 
-SVG Icons: Bootstrap Icons, Copyright (c) 2019-2020 The Bootstrap Authors
+SVG Icons: Feather Icons, Copyright (c) 2013-2017 Cole Bemis
 Source: https://icons.getbootstrap.com/
 License: MIT
 License URI: https://opensource.org/licenses/mit-license.php

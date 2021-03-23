@@ -371,11 +371,11 @@ if ( ! function_exists( 'marianne_get_twitter_username_to_url' ) ) {
 
 if ( ! function_exists( 'marianne_svg_feather_icons' ) ) {
 	/**
-	 * SVG path for social icons.
+	 * SVG date for social icons.
 	 *
 	 * @param string $name The id of the icon.
 	 *
-	 * @return string $path The path of the icon.
+	 * @return array $svg_data The SVG image data.
 	 *
 	 * @since Marianne 1.3
 	 */
@@ -520,9 +520,9 @@ if ( ! function_exists( 'marianne_svg' ) ) {
 	 */
 	function marianne_svg( $shapes = '', $class = 'feather', $size = array( 18, 18 ), $viewbox = '0 0 24 24' ) {
 		?>
-			<svg xmlns="http://www.w3.org/2000/svg" width="<?php echo esc_attr( absint( $size[0] ) ); ?>" height="<?php echo esc_attr( absint( $size[1] ) ); ?>" class="<?php echo esc_attr( $class ); ?>" viewBox="<?php echo esc_attr( $viewbox ); ?>">
+			<svg xmlns="http://www.w3.org/2000/svg" width="<?php echo esc_attr( absint( $size[0] ) ); ?>" height="<?php echo esc_attr( absint( $size[1] ) ); ?>" <?php marianne_add_class( $class, false ); ?> viewBox="<?php echo esc_attr( $viewbox ); ?>">
 				<?php
-				echo marianne_esc_svg( $path );
+				echo marianne_esc_svg( $shapes );
 				?>
 			</svg>
 		<?php

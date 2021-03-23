@@ -212,7 +212,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_fonts',
 			'id'          => 'text_shadow',
-			'title'       => __( 'Enable text shadow.', 'marianne' ),
+			'title'       => __( 'Enable text shadow. Default: disabled.', 'marianne' ),
 			'description' => __( 'Give some relief to your texts. Default: disabled.', 'marianne' ),
 			'type'        => 'checkbox',
 			'live'        => true,
