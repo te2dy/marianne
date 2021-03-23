@@ -259,7 +259,6 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'title'       => __( 'Display the default footer mention.', 'marianne' ),
 			'description' => __( 'Useful to promote WordPress and Marianne to your readers. Default: displayed.', 'marianne' ),
 			'type'        => 'checkbox',
-			'live'        => true,
 		);
 
 		$marianne_customizer_options[] = array(
@@ -294,6 +293,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 				'round'  => __( 'Round', 'marianne' ),
 				'square' => __( 'Square', 'marianne' ),
 			),
+			'live'        => true,
 		);
 
 		$marianne_customizer_options[] = array(

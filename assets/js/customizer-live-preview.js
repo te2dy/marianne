@@ -164,10 +164,10 @@
 						'.comment-content'
 					],
 					classes = {
-						left: 'text-align-left',
-						center: 'text-align-center',
-						right: 'text-align-right',
-						justify: 'text-align-justify'
+						'left': 'text-align-left',
+						'center': 'text-align-center',
+						'right': 'text-align-right',
+						'justify': 'text-align-justify'
 					};
 
 				marianneSelectRadioToggleClass( target, classes, newval );
@@ -192,21 +192,8 @@
 				} else {
 					$( '.site-footer' )
 						.prepend(
-							'<div id="site-footer-text" class="site-footer-block">'
-							+ newval
-							+ '</div>'
+							'<div id="site-footer-text" class="site-footer-block">' + newval + '</div>'
 						);
-				}
-			} );
-		} );
-
-		// Footer Settings > Default footer mention.
-		wp.customize( 'marianne_footer_mention', function( value ) {
-			value.bind( function( newval ) {
-				if ( newval === true ) {
-					$( '#site-footer-mention' ).show();
-				} else {
-					$( '#site-footer-mention' ).hide();
 				}
 			} );
 		} );
@@ -214,11 +201,13 @@
 		// Social Links > Style.
 		wp.customize( 'marianne_social_style', function( value ) {
 			value.bind( function( newval ) {
-				if ( newval === true ) {
-					$( '#site-footer-mention' ).show();
-				} else {
-					$( '#site-footer-mention' ).hide();
-				}
+				var target = '.site-social',
+					classes = {
+						'round': 'site-social-round',
+						'square': 'site-social-square'
+					};
+
+				marianneSelectRadioToggleClass( target, classes, newval );
 			} );
 		} );
 	} );
