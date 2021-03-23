@@ -25,7 +25,7 @@ and intellectuals who want to present their work.
 - Added: options to customize the theme.
 - Added: theme page.
 => Are donate links allowed?
-Added: print info.
+- Added: print info.
 => Are shortlinks allowed?
 - Added: .pot file for a more easily translatable theme.
 - Added: RSS widget styles.

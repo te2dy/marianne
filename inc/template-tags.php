@@ -554,7 +554,7 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 		$option_youtube   = marianne_get_theme_mod( 'marianne_social_youtube' );
 		$option_twitch    = marianne_get_theme_mod( 'marianne_social_twitch' );
 		$option_linkedin  = marianne_get_theme_mod( 'marianne_social_linkedin' );
-		$option_github    = marianne_get_theme_mod( 'marianne_social_gibhub' );
+		$option_github    = marianne_get_theme_mod( 'marianne_social_github' );
 		$option_gitlab    = marianne_get_theme_mod( 'marianne_social_gitlab' );
 		$option_link      = marianne_get_theme_mod( 'marianne_social_link' );
 		$option_phone     = marianne_get_theme_mod( 'marianne_social_phone' );
