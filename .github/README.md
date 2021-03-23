@@ -23,18 +23,17 @@ Marianne has some simple features:
 - Featured posts.
 - Featured images.
 - Menus.
-- Widgets.
 
 It is available in English and French.
 
-Marianne is in full development. Soon, you should be able to make many customizations, such as changing fonts, colors, but also change the layout of the page elements.
+Marianne is in full development. Soon, you should be able to make many customizations, such as changing fonts, colors. You can download the beta version by following [this link](https://github.com/te2dy/marianne/releases/tag/1.3-beta) to try it.
 
-## Install Marianne
+### Install Marianne
 The Marianne theme can be downloaded from any WordPress installation from the [official WordPress theme directory](https://wordpress.org/themes/marianne/).
 
 To install it:
 - Log in to the administration interface of your site.
-- Click on Appearance \> Themes \> Add.
+- Click on Appearance \> Themes \> Add New.
 - In the search field, type Marianne.
 - Once the theme is displayed, click on Install.
 - When the installation is complete, click on Activate.
@@ -46,4 +45,3 @@ Soon.
 
 ## Support
 Soon.
-
