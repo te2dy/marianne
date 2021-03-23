@@ -39,7 +39,7 @@
 		$marianne_single_classes .= ' text-hyphens';
 	}
 	?>
-	<section <?php marianne_add_class( $marianne_single_classes ); ?>>
+	<section <?php marianne_add_class( $marianne_single_classes, false ); ?>>
 		<a href="<?php the_permalink(); ?>">
 			<?php the_excerpt(); ?>
 		</a>

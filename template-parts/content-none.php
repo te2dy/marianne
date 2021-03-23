@@ -24,8 +24,12 @@
 	if ( false !== marianne_get_theme_mod( 'marianne_content_hyphens' ) ) {
 		$marianne_single_classes .= ' text-hyphens';
 	}
+
+	if ( true === marianne_get_theme_mod( 'marianne_print_url' ) ) {
+		$marianne_single_classes .= ' print-url-show';
+	}
 	?>
-	<section <?php marianne_add_class( $marianne_single_classes ); ?>>
+	<section <?php marianne_add_class( $marianne_single_classes, false ); ?>>
 		<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'marianne' ); ?></p>
 
 		<?php get_search_form(); ?>

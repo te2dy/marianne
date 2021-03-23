@@ -29,7 +29,7 @@
 		$marianne_single_classes .= ' print-url-show';
 	}
 	?>
-	<section <?php marianne_add_class( $marianne_single_classes ); ?>>
+	<section <?php marianne_add_class( $marianne_single_classes, false ); ?>>
 		<?php
 		the_content();
 
