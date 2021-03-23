@@ -101,6 +101,14 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			)
 		);
 
+		$wp_customize->add_section(
+			'marianne_print',
+			array(
+				'title'       => __( 'Print Settings', 'marianne' ),
+				'description' => __( 'These settings only apply to the printing of your pages.', 'marianne' ),
+			)
+		);
+
 		// Adds live preview to the site's name and description.
 		$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
 		$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
@@ -397,6 +405,38 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'type'        => 'url',
 		);
 
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_print',
+			'id'          => 'comments_hide',
+			'title'       => __( 'Hide comments.', 'marianne' ),
+			'description' => __( 'Check to hide comments when priting a post or page. In any case, the comment form will be hidden. Default: checked.', 'marianne' ),
+			'type'        => 'checkbox',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_print',
+			'id'          => 'widgets_hide',
+			'title'       => __( 'Hide widgets.', 'marianne' ),
+			'description' => __( 'Check to hide your widgets when priting a post or page. Default: checked.', 'marianne' ),
+			'type'        => 'checkbox',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_print',
+			'id'          => 'url',
+			'title'       => __( 'Display URL of links.', 'marianne' ),
+			'description' => __( 'URLs will be visible on print so that readers can visit them. Default: checked.', 'marianne' ),
+			'type'        => 'checkbox',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_print',
+			'id'          => 'info',
+			'title'       => __( 'Display information related to printing.', 'marianne' ),
+			'description' => __( 'Adds the date the post or page was retrieved and the short link to access the content. Default: checked.', 'marianne' ),
+			'type'        => 'checkbox',
+		);
+
 		/**
 		 * Finally, adds settings and controls to the Theme Customizer.
 		 *
@@ -599,6 +639,12 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_social_phone_type' => 'classic',
 			'marianne_social_rss'        => false,
 			'marianne_social_twitch'     => '',
+
+			// Print Settings.
+			'marianne_print_comments_hide' => true,
+			'marianne_print_info'          => true,
+			'marianne_print_url'           => true,
+			'marianne_print_widgets_hide'  => true,
 		);
 
 		$option = sanitize_key( $option );

@@ -36,6 +36,10 @@
 	if ( false !== marianne_get_theme_mod( 'marianne_content_hyphens' ) ) {
 		$marianne_single_classes .= ' text-hyphens';
 	}
+
+	if ( true === marianne_get_theme_mod( 'marianne_print_url' ) ) {
+		$marianne_single_classes .= ' print-url-show';
+	}
 	?>
 	<section <?php marianne_add_class( $marianne_single_classes ); ?>>
 		<?php
@@ -47,7 +51,7 @@
 
 	<?php if ( has_tag() || true === marianne_get_theme_mod( 'marianne_post_nav' ) ) : ?>
 		<footer class="entry-footer post-footer">
-			<div class="text-secondary">
+			<div class="entry-tags post-tags text-secondary">
 				<?php the_tags(); ?>
 			</div>
 
@@ -58,23 +62,31 @@
 
 				if ( $marianne_newer_post || $marianne_older_post ) {
 					?>
-						<p><strong><?php esc_html_e( 'Continue reading', 'marianne' ); ?></strong></p>
+						<div class="entry-links post-links">
+							<p><strong><?php esc_html_e( 'Continue reading', 'marianne' ); ?></strong></p>
 
-						<nav class="post-navigation">
-							<div class="nav-links">
-								<?php
-								if ( $marianne_newer_post ) {
-									next_post_link( '%link', '‹ %title' );
-								}
+							<nav class="post-navigation">
+								<div class="nav-links">
+									<?php
+									if ( $marianne_newer_post ) {
+										next_post_link( '%link', '‹ %title' );
+									}
 
-								if ( $marianne_older_post ) {
-									previous_post_link( '%link', '%title ›' );
-								}
-								?>
-							</div>
-						</nav>
+									if ( $marianne_older_post ) {
+										previous_post_link( '%link', '%title ›' );
+									}
+									?>
+								</div>
+							</nav>
+						</div>
 					<?php
 				}
+			}
+			?>
+
+			<?php
+			if ( true === marianne_get_theme_mod( 'marianne_print_info' ) ) {
+				marianne_print_info();
 			}
 			?>
 		</footer>

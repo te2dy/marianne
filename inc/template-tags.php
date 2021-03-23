@@ -22,7 +22,7 @@ if ( ! function_exists( 'marianne_logo' ) ) {
 	function marianne_logo( $class = 'site-logo' ) {
 		if ( has_custom_logo() ) {
 			?>
-				<div class="<?php echo esc_attr( $class ); ?>">
+				<div<?php marianne_add_class( $class ); ?>>
 					<?php the_custom_logo(); ?>
 				</div>
 			<?php
@@ -47,17 +47,17 @@ if ( ! function_exists( 'marianne_site_title' ) ) {
 		?>
 
 		<?php if ( is_front_page() && ! is_paged() ) : ?>
-			<h1 class="<?php echo esc_attr( $class ); ?>">
+			<h1<?php marianne_add_class( $class ); ?>>
 				<?php bloginfo( 'name' ); ?>
 			</h1>
 		<?php elseif ( is_front_page() || is_home() ) : ?>
-			<h1 class="<?php echo esc_attr( $class ); ?>">
+			<h1<?php marianne_add_class( $class ); ?>>
 				<a href="<?php echo esc_url( home_url() ); ?>">
 					<?php bloginfo( 'name' ); ?>
 				</a>
 			</h1>
 		<?php else : ?>
-			<p class="<?php echo esc_attr( $class ); ?>">
+			<p<?php marianne_add_class( $class ); ?>>
 				<a href="<?php echo esc_url( home_url() ); ?>">
 					<?php bloginfo( 'name' ); ?>
 				</a>
@@ -85,11 +85,11 @@ if ( ! function_exists( 'marianne_site_description' ) ) {
 		?>
 
 		<?php if ( is_front_page() || is_home() ) : ?>
-			<h2 class="<?php echo esc_attr( $class ); ?>">
+			<h2<?php marianne_add_class( $class ); ?>>
 				<?php bloginfo( 'description' ); ?>
 			</h2>
 		<?php else : ?>
-			<p class="<?php echo esc_attr( $class ); ?>">
+			<p<?php marianne_add_class( $class ); ?>>
 				<?php bloginfo( 'description' ); ?>
 			</p>
 		<?php endif; ?>
@@ -107,7 +107,7 @@ if ( ! function_exists( 'marianne_menu_primary' ) ) {
 	function marianne_menu_primary() {
 		if ( has_nav_menu( 'primary' ) ) {
 			?>
-				<nav id="menu-primary-container" role="navigation" aria-label="<?php echo esc_attr__( 'Primary Menu', 'marianne' ); ?>">
+				<nav id="menu-primary-container" class="button" role="navigation" aria-label="<?php echo esc_attr__( 'Primary Menu', 'marianne' ); ?>">
 					<button id="menu-mobile-button" onclick="marianneExpandMobileMenu(this)"><?php esc_html_e( 'Menu', 'marianne' ); ?></button>
 
 					<?php
@@ -142,7 +142,7 @@ if ( ! function_exists( 'marianne_the_date' ) ) {
 	 */
 	function marianne_the_date( $class = 'entry-date' ) {
 		?>
-			<time class="<?php echo esc_attr( $class ); ?>" datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>"><?php the_date(); ?></time>
+			<time<?php marianne_add_class( $class ); ?> datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>"><?php the_date(); ?></time>
 		<?php
 	}
 }
@@ -217,7 +217,7 @@ if ( ! function_exists( 'marianne_loop_navigation' ) ) {
 
 		if ( $nav_prev || $nav_next ) {
 			?>
-				<div class="<?php echo esc_attr( $class ); ?>">
+				<div<?php marianne_add_class( $class ); ?>>
 					<?php if ( $nav_prev ) { ?>
 						<a href="<?php echo esc_url( get_previous_posts_page_link() ); ?>">
 							<?php esc_html_e( '&lsaquo; Previous page', 'marianne' ); ?>
@@ -255,7 +255,7 @@ if ( ! function_exists( 'marianne_the_categories' ) ) {
 			$cat_count = count( $categories );
 			$i         = 0;
 			?>
-				<ul class="<?php echo esc_attr( $class ); ?>">
+				<ul<?php marianne_add_class( $class ); ?>>
 					<?php foreach ( $categories as $category ) : ?>
 						<li>
 							<a href="<?php echo esc_url( get_category_link( $category->cat_ID ) ); ?>"><?php echo esc_html( $category->cat_name ); ?></a>
@@ -291,12 +291,6 @@ if ( ! function_exists( 'marianne_the_post_thumbnail' ) ) {
 	 */
 	function marianne_the_post_thumbnail( $class = '', $args = array() ) {
 		if ( has_post_thumbnail() ) {
-
-			// If a class is set, create the attribute with its value.
-			if ( $class ) {
-				$class = ' class="' . esc_attr( $class ) . '"';
-			}
-
 			// Options available.
 			$allowed_options = array( 'link', 'caption' );
 
@@ -310,7 +304,7 @@ if ( ! function_exists( 'marianne_the_post_thumbnail' ) ) {
 			// Put the option(s) defined with $args in the array $options.
 			$options = array();
 			?>
-				<figure<?php echo $class; ?>>
+				<figure<?php marianne_add_class( $class ); ?>>
 					<?php
 					echo $before;
 
@@ -340,7 +334,10 @@ if ( ! function_exists( 'marianne_add_class' ) ) {
 	 *
 	 * @since Marianne 1.3
 	 */
-	function marianne_add_class( $classes = '' ) {
+	function marianne_add_class( $classes = '', $space_before = true ) {
+		if ( true === $space_before ) {
+			echo ' ';
+		}
 		echo 'class="' . esc_attr( $classes ) . '"';
 	}
 }
@@ -673,5 +670,56 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 				<?php
 			endif;
 		endif;
+	}
+}
+
+if ( ! function_exists( 'marianne_print_info' ) ) {
+	/**
+	 * Displays print information on posts and pages on print only.
+	 *
+	 * @param string $class The class of the title.
+	 *                      To set multiple classes,
+	 *                      separate them with a space.
+	 *                      Example: $class = "class-1 class-2".
+	 */
+	function marianne_print_info( $class = 'text-secondary' ) {
+		$today_date = current_time( get_option( 'date_format' ) );
+		$today_time = current_time( get_option( 'time_format' ) );
+		?>
+			<div id="print-info"<?php marianne_add_class( $class ); ?>>
+				<p>
+					<?php
+					printf(
+						/* translators: %1$s: The retrieve date. %1$s: The retrieve time. */
+						esc_html_x( 'Retrieved %1$s at %2$s (website time).', 'Use only on print.', 'marianne' ),
+						esc_html( $today_date ),
+						esc_html( $today_time )
+					);
+					?>
+				</p>
+
+				<?php
+				$site_short_url   = wp_get_shortlink();
+				$site_scheme      = parse_url( $site_short_url, PHP_URL_SCHEME ) . '://';
+				$site_scheme_len  = strlen( $site_scheme );
+
+				$site_short_url = substr_replace( $site_short_url, '', 0, $site_scheme_len );
+
+				if ( $site_short_url ) :
+					?>
+						<p>
+							<?php
+							printf(
+								/* translators: %s: The short link of the post. */
+								esc_html_x( 'Available at: %s', 'Use only on print.', 'marianne' ),
+								esc_html( $site_short_url )
+							);
+							?>
+						</p>
+					<?php
+				endif;
+				?>
+			</div>
+		<?php
 	}
 }

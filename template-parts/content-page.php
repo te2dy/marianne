@@ -24,6 +24,10 @@
 	if ( false !== marianne_get_theme_mod( 'marianne_content_hyphens' ) ) {
 		$marianne_single_classes .= ' text-hyphens';
 	}
+
+	if ( true === marianne_get_theme_mod( 'marianne_print_url' ) ) {
+		$marianne_single_classes .= ' print-url-show';
+	}
 	?>
 	<section <?php marianne_add_class( $marianne_single_classes ); ?>>
 		<?php
@@ -32,4 +36,10 @@
 		wp_link_pages();
 		?>
 	</section>
+
+	<?php if ( true === marianne_get_theme_mod( 'marianne_print_info' ) ) : ?>
+		<footer class="entry-footer post-footer">
+			<?php marianne_print_info(); ?>
+		</footer>
+	<?php endif; ?>
 </article>
