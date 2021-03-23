@@ -650,6 +650,12 @@ button:focus {
 	padding: 0;
 }
 
+/* Frames */
+iframe {
+	max-width: 100%;
+	box-sizing: border-box;
+}
+
 /* Menus */
 .navigation-menu {
 	list-style-type: none;
