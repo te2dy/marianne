@@ -470,7 +470,6 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			 *
 			 * Options add to new settings will be named this way:
 			 * 'marianne_customesection_option'
-			 *
 			 */
 			if ( $section && $id ) {
 				$option_name = $section . '_' . $id;
@@ -642,9 +641,9 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 
 			// Print Settings.
 			'marianne_print_comments_hide' => true,
-			'marianne_print_info'          => true,
-			'marianne_print_url'           => true,
 			'marianne_print_widgets_hide'  => true,
+			'marianne_print_url'           => true,
+			'marianne_print_info'          => true,
 		);
 
 		$option = sanitize_key( $option );

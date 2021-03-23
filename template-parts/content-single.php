@@ -49,7 +49,7 @@
 		?>
 	</section>
 
-	<?php if ( has_tag() || true === marianne_get_theme_mod( 'marianne_post_nav' ) ) : ?>
+	<?php if ( has_tag() || true === marianne_get_theme_mod( 'marianne_post_nav' ) || true === marianne_get_theme_mod( 'marianne_print_info' ) ) : ?>
 		<footer class="entry-footer post-footer">
 			<div class="entry-tags post-tags text-secondary">
 				<?php the_tags(); ?>

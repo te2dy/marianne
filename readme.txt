@@ -21,12 +21,11 @@ and intellectuals who want to present their work.
 
 == Changelog ==
 
-PLANED UPDATE:
-=== 1.3 – April 1st, 2021 ===
+=== 1.3-beta – March 23th, 2021 ===
 - Added: options to customize the theme.
 - Added: theme page.
 => Are donate links allowed?
-(- Added: print info.)
+Added: print info.
 => Are shortlinks allowed?
 - Added: .pot file for a more easily translatable theme.
 - Added: RSS widget styles.
@@ -35,8 +34,7 @@ PLANED UPDATE:
 - Fixed: wrong mobile menu button color when the menu is expanded.
 - Fixed: too large width (100%) of the date link in the loop.
 - Updated: documentation and syntax of a lot of functions.
-(- Updated: print styles.)
-(- Updated: main styles structure.)
+- Updated: print styles.
 - Updated: theme description.
 - Removed: README.md file.
 

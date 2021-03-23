@@ -328,7 +328,8 @@ if ( ! function_exists( 'marianne_add_class' ) ) {
 	/**
 	 * Adds class attribute.
 	 *
-	 * @param string $classes Classes to add.
+	 * @param string $classes      Classes to add.
+	 * @param bool   $space_before If true, adds a space before the attribute.
 	 *
 	 * @return void
 	 *
@@ -346,7 +347,7 @@ if ( ! function_exists( 'marianne_get_twitter_username_to_url' ) ) {
 	/**
 	 * Converts a Twitter username into a Twitter URL.
 	 *
-	 * @param string $username
+	 * @param string $username The Twitter username.
 	 *
 	 * @return string $url The Twitter URL associated to the username.
 	 *
@@ -459,7 +460,7 @@ if ( ! function_exists( 'marianne_esc_svg' ) ) {
 	 *
 	 * @link https://www.w3.org/TR/SVG2/shapes.html
 	 *
-	 * @param string $path Path to escape.
+	 * @param string $shapes Path to escape.
 	 *
 	 * @return string $shapes Escaped path.
 	 *
@@ -505,18 +506,24 @@ if ( ! function_exists( 'marianne_svg' ) ) {
 	/**
 	 * Converts a Twitter username into a Twitter URL.
 	 *
-	 * @param string $username
+	 * @param string $shapes  SVG shapes to displays.
+	 * @param string $class   The class of the container.
+	 *                        To set multiple classes,
+	 *                        separate them with a space.
+	 *                        Example: $class = "class-1 class-2".
+	 * @param array  $size    The size of the image (width, height).
+	 * @param string $viewbox The viewBox attribute to add to the image.
 	 *
-	 * @return string $url The Twitter URL associated to the username.
+	 * @return void
 	 *
 	 * @since Marianne 1.3
 	 */
-	function marianne_svg( $path = '', $class = 'feather', $size = array( 18, 18 ), $viewbox = '0 0 24 24' ) {
+	function marianne_svg( $shapes = '', $class = 'feather', $size = array( 18, 18 ), $viewbox = '0 0 24 24' ) {
 		?>
 			<svg xmlns="http://www.w3.org/2000/svg" width="<?php echo esc_attr( absint( $size[0] ) ); ?>" height="<?php echo esc_attr( absint( $size[1] ) ); ?>" class="<?php echo esc_attr( $class ); ?>" viewBox="<?php echo esc_attr( $viewbox ); ?>">
-			  <?php
-			  echo marianne_esc_svg( $path );
-			  ?>
+				<?php
+				echo marianne_esc_svg( $path );
+				?>
 			</svg>
 		<?php
 	}
@@ -613,9 +620,10 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 					<div class="<?php echo esc_attr( $container_class ); ?>">
 						<ul class="social-links list-inline">
 							<?php
-							foreach( $social_links as $site => $link ) {
-								$svg_name    = marianne_svg_feather_icons( $site )['name'];
-								$svg_shapes  = marianne_svg_feather_icons( $site )['shapes'];
+							foreach ( $social_links as $site => $link ) {
+								$svg_icons  = marianne_svg_feather_icons( $site );
+								$svg_name   = $svg_icons['name'];
+								$svg_shapes = $svg_icons['shapes'];
 
 								switch ( $site ) {
 									case 'twitter':
@@ -699,9 +707,9 @@ if ( ! function_exists( 'marianne_print_info' ) ) {
 				</p>
 
 				<?php
-				$site_short_url   = wp_get_shortlink();
-				$site_scheme      = parse_url( $site_short_url, PHP_URL_SCHEME ) . '://';
-				$site_scheme_len  = strlen( $site_scheme );
+				$site_short_url  = wp_get_shortlink();
+				$site_scheme     = wp_parse_url( $site_short_url, PHP_URL_SCHEME ) . '://';
+				$site_scheme_len = strlen( $site_scheme );
 
 				$site_short_url = substr_replace( $site_short_url, '', 0, $site_scheme_len );
 

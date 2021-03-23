@@ -109,7 +109,7 @@ function marianne_theme_page() {
 				?>
 
 				<div class="marianne-admin-margins">
-					<a href="<?php echo esc_url( admin_url( 'customize.php' ) ); ?>" class="button button-primary"><?php echo esc_html_x( 'Customize', 'Verb. Point to the Theme Customizer.' , 'marianne' ); ?></a>
+					<a href="<?php echo esc_url( admin_url( 'customize.php' ) ); ?>" class="button button-primary"><?php echo esc_html_x( 'Customize', 'Verb. Point to the Theme Customizer.', 'marianne' ); ?></a>
 
 					<a href="<?php echo esc_url( admin_url( 'nav-menus.php' ) ); ?>" class="button"><?php esc_html_e( 'Menus', 'marianne' ); ?></a>
 
