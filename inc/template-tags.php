@@ -689,6 +689,10 @@ if ( ! function_exists( 'marianne_print_info' ) ) {
 	 *                      To set multiple classes,
 	 *                      separate them with a space.
 	 *                      Example: $class = "class-1 class-2".
+	 *
+	 * @return void
+	 *
+	 * @since Marianne 1.3
 	 */
 	function marianne_print_info( $class = 'text-secondary' ) {
 		$today_date = current_time( get_option( 'date_format' ) );
