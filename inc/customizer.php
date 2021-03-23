@@ -105,7 +105,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'marianne_print',
 			array(
 				'title'       => __( 'Print Settings', 'marianne' ),
-				'description' => __( 'These settings only apply to the printing of your pages.', 'marianne' ),
+				'description' => __( 'These settings only apply to the printing of the pages of your site.', 'marianne' ),
 			)
 		);
 
@@ -308,7 +308,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_social',
 			'id'          => 'facebook',
 			'title'       => __( 'Facebook', 'marianne' ),
-			'description' => __( 'Your Facebook profile or page URI.', 'marianne' ),
+			'description' => __( 'Your Facebook profile or page URL.', 'marianne' ),
 			'type'        => 'url',
 		);
 
@@ -316,7 +316,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_social',
 			'id'          => 'instagram',
 			'title'       => __( 'Instagram', 'marianne' ),
-			'description' => __( 'Your Instagram profile URI.', 'marianne' ),
+			'description' => __( 'Your Instagram profile URL.', 'marianne' ),
 			'type'        => 'url',
 		);
 
@@ -324,7 +324,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_social',
 			'id'          => 'linkedin',
 			'title'       => __( 'LinkedIn', 'marianne' ),
-			'description' => __( 'Your LinkedIn profile URI.', 'marianne' ),
+			'description' => __( 'Your LinkedIn profile URL.', 'marianne' ),
 			'type'        => 'url',
 		);
 
@@ -332,7 +332,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_social',
 			'id'          => 'youtube',
 			'title'       => __( 'YouTube', 'marianne' ),
-			'description' => __( 'Your YouTube channel URI.', 'marianne' ),
+			'description' => __( 'Your YouTube channel URL.', 'marianne' ),
 			'type'        => 'url',
 		);
 
@@ -348,7 +348,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_social',
 			'id'          => 'github',
 			'title'       => __( 'GitHub', 'marianne' ),
-			'description' => __( 'Your GitHub profile URI.', 'marianne' ),
+			'description' => __( 'Your GitHub profile URL.', 'marianne' ),
 			'type'        => 'url',
 		);
 
@@ -356,7 +356,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_social',
 			'id'          => 'gitlab',
 			'title'       => __( 'GitLab', 'marianne' ),
-			'description' => __( 'Your GitLab profile URI.', 'marianne' ),
+			'description' => __( 'Your GitLab profile URL.', 'marianne' ),
 			'type'        => 'url',
 		);
 
@@ -380,7 +380,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_social',
 			'id'          => 'phone_type',
 			'title'       => __( 'What type of phone link do you want to display?', 'marianne' ),
-			'description' => __( "This will automatically open the right application on your readers' phones.", 'marianne' ),
+			'description' => __( "This will automatically open the right application on your readers' phone.", 'marianne' ),
 			'type'        => 'select',
 			'value'       => array(
 				'classic'  => __( 'Classic', 'marianne' ),
@@ -401,7 +401,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_social',
 			'id'          => 'twitch',
 			'title'       => __( 'Twitch', 'marianne' ),
-			'description' => __( 'Your Twitch profile URI.', 'marianne' ),
+			'description' => __( 'Your Twitch profile URL.', 'marianne' ),
 			'type'        => 'url',
 		);
 
@@ -425,7 +425,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_print',
 			'id'          => 'url',
 			'title'       => __( 'Display URL of links.', 'marianne' ),
-			'description' => __( 'URLs will be visible on print so that readers can visit them. Default: checked.', 'marianne' ),
+			'description' => __( 'URLs will be visible on print so that readers can see them and visit them. Default: checked.', 'marianne' ),
 			'type'        => 'checkbox',
 		);
 
