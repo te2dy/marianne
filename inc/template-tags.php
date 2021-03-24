@@ -291,12 +291,9 @@ if ( ! function_exists( 'marianne_the_post_thumbnail' ) ) {
 	 */
 	function marianne_the_post_thumbnail( $class = '', $args = array() ) {
 		if ( has_post_thumbnail() ) {
-			// Options available.
-			$allowed_options = array( 'link', 'caption' );
-
 			$before = '';
 			$after  = '';
-			if ( in_array( 'link', $allowed_options, true ) ) {
+			if ( in_array( 'link', $args, true ) ) {
 				$before = '<a href="' . esc_url( get_the_permalink() ) . '">';
 				$after  = '</a>';
 			}
@@ -313,7 +310,7 @@ if ( ! function_exists( 'marianne_the_post_thumbnail' ) ) {
 					echo $after;
 					?>
 
-					<?php if ( in_array( 'caption', $allowed_options, true ) && wp_get_attachment_caption( get_post_thumbnail_id() ) ) : ?>
+					<?php if ( in_array( 'caption', $args, true ) && wp_get_attachment_caption( get_post_thumbnail_id() ) ) : ?>
 						<figcaption class="wp-caption-text text-secondary">
 							<?php echo wp_kses_post( wp_get_attachment_caption( get_post_thumbnail_id() ) ); ?>
 						</figcaption>
