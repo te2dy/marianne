@@ -264,7 +264,7 @@ if ( ! function_exists( 'marianne_the_categories' ) ) {
 							$i++;
 
 							if ( $i !== $cat_count ) {
-								' &middot;';
+								echo '&middot;';
 							}
 							?>
 						</li>
