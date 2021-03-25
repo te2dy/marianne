@@ -238,7 +238,7 @@ body {
 }
 .site {
 	margin: 0 auto;
-	max-width: var(--page-width, initial);
+	max-width: var(--page-width);
 	word-wrap: break-word;
 }
 .site-header {

@@ -119,23 +119,14 @@
 		// Global > Page Width.
 		wp.customize( 'marianne_global_page_width', function( value ) {
 			value.bind( function( newval ) {
-				var target = '.site',
+				var target = '#page',
 					classes = {
 						'480': 'page-width-480',
 						'600': 'page-width-600',
-						'720': 'page-width-720',
-						'custom': 'page-width-custom'
+						'720': 'page-width-720'
 					};
 
 				marianneSelectRadioToggleClass( target, classes, newval );
-			} );
-		} );
-
-		wp.customize( 'marianne_global_page_width_custom', function( value ) {
-			value.bind( function( newval ) {
-				if ( 'custom' === wp.customize( 'marianne_global_page_width' ).get() ) {
-					$( '#page' ).css( 'max-width', newval + 'px' );
-				}
 			} );
 		} );
 

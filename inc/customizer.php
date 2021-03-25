@@ -179,27 +179,12 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_global',
 			'id'          => 'page_width',
 			'title'       => __( 'Page Width', 'marianne' ),
-			'description' => __( 'We suggest you three size but you can choose your own. Default: 480px.', 'marianne' ),
+			'description' => __( 'Default: 480px.', 'marianne' ),
 			'type'        => 'radio',
 			'value'       => array(
 				'480'    => __( '480px', 'marianne' ),
 				'600'    => __( '600px', 'marianne' ),
 				'720'    => __( '720px', 'marianne' ),
-				'custom' => __( 'Custom width', 'marianne'),
-			),
-			'live'        => true,
-		);
-
-		$marianne_customizer_options[] = array(
-			'section'     => 'marianne_global',
-			'id'          => 'page_width_custom',
-			'title'       => __( 'Custom Page Width', 'marianne' ),
-			'description' => __( '', 'marianne' ),
-			'type'        => 'marianne_slider',
-			'input_attrs' => array(
-				'min'  => 400,
-				'max'  => 1440,
-				'step' => 10,
 			),
 			'live'        => true,
 		);
@@ -638,7 +623,6 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 
 			// Global.
 			'marianne_global_page_width'        => 480,
-			'marianne_global_page_width_custom' => 480,
 			'marianne_global_font_family'       => 'sans-serif',
 			'marianne_global_font_size'         => 100,
 			'marianne_global_font_smooth'       => false,

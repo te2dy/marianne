@@ -2,6 +2,11 @@
 	"use strict";
 
 	$( document ).ready( function( $ ) {
+		/*
+		 *
+		 * UNUSED AND NOT MINIFIED YET
+		 *
+		 */
 		// The speed of animations.
 		var speed = 200;
 
@@ -13,7 +18,6 @@
 		}
 
 		$( '#customize-control-marianne_global_page_width input[type=radio]' ).change( function () {
-			console.log( "change" );
 			if ( $( 'input[id="_customize-input-marianne_global_page_width-radio-custom"]' ).is( ':checked' ) ) {
 				$( '#customize-control-marianne_global_page_width_custom' ).show( speed );
 			} else {
