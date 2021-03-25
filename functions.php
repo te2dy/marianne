@@ -18,9 +18,11 @@ if ( ! function_exists( 'marianne_setup' ) ) {
 		// Load translation files.
 		load_theme_textdomain( 'marianne', get_template_directory() . '/languages' );
 
+		$marianne_page_width = marianne_get_theme_mod( 'marianne_global_page_width' );
+
 		// Set content-width.
 		if ( ! isset( $content_width ) ) {
-			$content_width = 480;
+			$content_width = absint( $marianne_page_width );
 		}
 
 		// Add default posts and comments RSS feed links to head.
@@ -65,7 +67,8 @@ if ( ! function_exists( 'marianne_setup' ) ) {
 		 * @since Marianne 1.1
 		 */
 		add_theme_support( 'post-thumbnails' );
-		add_image_size( 'marianne-thumbnails', 480 );
+		add_image_size( 'marianne-thumbnails', absint( $marianne_page_width ) );
+		add_image_size( 'marianne-thumbnails-retina', ( absint( $marianne_page_width ) * 2 ) );
 
 		// Add support for responsive oEmbed content.
 		add_theme_support( 'responsive-embeds' );

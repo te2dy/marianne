@@ -66,9 +66,9 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		 * @link https://developer.wordpress.org/reference/classes/wp_customize_manager/add_section/
 		 */
 		$wp_customize->add_section(
-			'marianne_fonts',
+			'marianne_global',
 			array(
-				'title' => __( 'Fonts', 'marianne' ),
+				'title' => __( 'Global', 'marianne' ),
 			)
 		);
 
@@ -172,10 +172,32 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'live'        => true,
 		);
 
-		// Fonts.
+		// Global.
 		$marianne_customizer_options[] = array(
-			'section'     => 'marianne_fonts',
-			'id'          => 'family',
+			'section'     => 'marianne_global',
+			'id'          => 'page_width',
+			'title'       => __( 'Page Width', 'marianne' ),
+			'description' => __( 'Default: 480px.', 'marianne' ),
+			'type'        => 'marianne_slider',
+			'input_attrs' => array(
+				'min'  => 480,
+				'max'  => 1080,
+				'step' => 120,
+			),
+			'value'       => array(
+				480  => __( '480px', 'marianne' ),
+				600  => __( '600px', 'marianne' ),
+				720  => __( '720px', 'marianne' ),
+				840  => __( '840px', 'marianne' ),
+				960  => __( '960px', 'marianne' ),
+				1080 => __( '1080px', 'marianne' ),
+			),
+			'live'        => true,
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_global',
+			'id'          => 'font_family',
 			'title'       => __( 'Font Family', 'marianne' ),
 			'description' => __( "Choose the font family you want to apply to your site. Your readers' device will render the pages with their system font. Please note that the rendering may vary from device to device. Default: Sans serif.", 'marianne' ),
 			'type'        => 'select',
@@ -188,8 +210,8 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		);
 
 		$marianne_customizer_options[] = array(
-			'section'     => 'marianne_fonts',
-			'id'          => 'size',
+			'section'     => 'marianne_global',
+			'id'          => 'font_size',
 			'title'       => __( 'Font Size', 'marianne' ),
 			'description' => __( 'The main font size. Default: 100%.', 'marianne' ),
 			'type'        => 'marianne_slider',
@@ -202,17 +224,17 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		);
 
 		$marianne_customizer_options[] = array(
-			'section'     => 'marianne_fonts',
-			'id'          => 'smooth',
+			'section'     => 'marianne_global',
+			'id'          => 'font_smooth',
 			'title'       => __( 'Force anti-aliasing.', 'marianne' ),
 			'description' => __( 'By default, the browser automatically chooses whether or not to smooth the fonts. By checking this box, you will ask it to smooth them. Default: unckecked.', 'marianne' ),
 			'type'        => 'checkbox',
 		);
 
 		$marianne_customizer_options[] = array(
-			'section'     => 'marianne_fonts',
+			'section'     => 'marianne_global',
 			'id'          => 'text_shadow',
-			'title'       => __( 'Enable text shadow. Default: disabled.', 'marianne' ),
+			'title'       => __( 'Enable text shadow.', 'marianne' ),
 			'description' => __( 'Give some relief to your texts. Default: disabled.', 'marianne' ),
 			'type'        => 'checkbox',
 			'live'        => true,
@@ -605,11 +627,12 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'colors_scheme'     => 'light',
 			'colors_link_hover' => 'blue',
 
-			// Fonts.
-			'marianne_fonts_family'      => 'sans-serif',
-			'marianne_fonts_size'        => 100,
-			'marianne_fonts_smooth'      => false,
-			'marianne_fonts_text_shadow' => false,
+			// Global.
+			'marianne_global_page_width'  => 480,
+			'marianne_global_font_family' => 'sans-serif',
+			'marianne_global_font_size'   => 100,
+			'marianne_global_font_smooth' => false,
+			'marianne_global_text_shadow' => false,
 
 			// Content Formatting.
 			'marianne_content_text_align' => 'left',

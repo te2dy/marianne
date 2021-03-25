@@ -182,6 +182,26 @@ Text Domain: marianne
 	--text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
+/* Site */
+.page-width-480 {
+	--page-width: 480px;
+}
+.page-width-600 {
+	--page-width: 600px;
+}
+.page-width-720 {
+	--page-width: 720px;
+}
+.page-width-840 {
+	--page-width: 840px;
+}
+.page-width-960 {
+	--page-width: 960px;
+}
+.page-width-1080 {
+	--page-width: 1080px;
+}
+
 /* Content */
 .text-align-left {
 	--content-text-align: left;
@@ -224,7 +244,7 @@ body {
 }
 .site {
 	margin: 0 auto;
-	max-width: 480px;
+	max-width: var(--page-width);
 	word-wrap: break-word;
 }
 .site-header {
@@ -419,16 +439,16 @@ dd {
 .alignwide {
 	width: 75vw;
 	margin-top: 2em;
-	margin-right: calc(-75vw / 2 + 480px / 2);
+	margin-right: calc(-75vw / 2 + var(--page-width) / 2);
 	margin-bottom: 2em;
-	margin-left: calc(-75vw / 2 + 480px / 2);
+	margin-left: calc(-75vw / 2 + var(--page-width) / 2);
 }
 .alignfull {
 	width: 100vw;
 	margin-top: 2em;
-	margin-right: calc(-100vw / 2 + 480px / 2);
+	margin-right: calc(-100vw / 2 + var(--page-width) / 2);
 	margin-bottom: 2em;
-	margin-left: calc(-100vw / 2 + 480px / 2);
+	margin-left: calc(-100vw / 2 + var(--page-width) / 2);
 }
 @media all and (max-width: 500px) {
 	.alignwide,
@@ -777,6 +797,8 @@ iframe {
 	#menu-mobile-button {
 		display: block;
 	}
+	#menu-mobile-button:hover,
+	#menu-mobile-button:focus,
 	#menu-mobile-button[aria-expanded="true"] {
 		border-color: var(--color-link-hover);
 		background-color: transparent;

@@ -20,16 +20,16 @@
 	</head>
 
 	<?php
-	$marianne_body_class  = 'font-family-' . esc_attr( marianne_get_theme_mod( 'marianne_fonts_family' ) );
-	$marianne_body_class .= ' font-size-' . esc_attr( marianne_get_theme_mod( 'marianne_fonts_size' ) );
+	$marianne_body_class  = 'font-family-' . esc_attr( marianne_get_theme_mod( 'marianne_global_font_family' ) );
+	$marianne_body_class .= ' font-size-' . esc_attr( marianne_get_theme_mod( 'marianne_global_font_size' ) );
 	$marianne_body_class .= ' color-scheme-' . esc_attr( marianne_get_theme_mod( 'colors_scheme' ) );
 	$marianne_body_class .= ' link-hover-' . esc_attr( marianne_get_theme_mod( 'colors_link_hover' ) );
 
-	if ( true === marianne_get_theme_mod( 'marianne_fonts_smooth' ) ) {
+	if ( true === marianne_get_theme_mod( 'marianne_global_font_smooth' ) ) {
 		$marianne_body_class .= ' font-smooth';
 	}
 
-	if ( true === marianne_get_theme_mod( 'marianne_fonts_text_shadow' ) ) {
+	if ( true === marianne_get_theme_mod( 'marianne_global_text_shadow' ) ) {
 		$marianne_body_class .= ' text-shadow';
 	}
 	?>
@@ -42,7 +42,11 @@
 
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'marianne' ); ?></a>
 
-		<div id="page" class="site">
+		<?php
+		$marianne_page_class  = 'site';
+		$marianne_page_class .= ' page-width-' . absint( marianne_get_theme_mod( 'marianne_global_page_width' ) );
+		?>
+		<div id="page" <?php marianne_add_class( $marianne_page_class, false ); ?>>
 			<header id="header" class="site-header" role="banner">
 				<?php
 				$marianne_logo_class = 'site-logo';

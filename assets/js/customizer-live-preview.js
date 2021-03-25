@@ -116,8 +116,25 @@
 			} );
 		} );
 
-		// Fonts > Font Family.
-		wp.customize( 'marianne_fonts_family', function( value ) {
+		// Global > Page Width.
+		wp.customize( 'marianne_global_page_width', function( value ) {
+			value.bind( function( newval ) {
+				var target = '.site',
+					classes = {
+						480: 'page-width-480',
+						600: 'page-width-600',
+						720: 'page-width-720',
+						840: 'page-width-840',
+						960: 'page-width-960',
+						1080: 'page-width-1080'
+					};
+
+				marianneSelectRadioToggleClass( target, classes, newval );
+			} );
+		} );
+
+		// Global > Font Family.
+		wp.customize( 'marianne_global_font_family', function( value ) {
 			value.bind( function( newval ) {
 				var target = 'body',
 					classes = {
@@ -130,8 +147,8 @@
 			} );
 		} );
 
-		// Fonts > Font Size.
-		wp.customize( 'marianne_fonts_size', function( value ) {
+		// Global > Font Size.
+		wp.customize( 'marianne_global_font_size', function( value ) {
 			value.bind( function( newval ) {
 				var target = 'body',
 					classes = {
@@ -146,8 +163,8 @@
 			} );
 		} );
 
-		// Fonts > Text Shadow.
-		wp.customize( 'marianne_fonts_text_shadow', function( value ) {
+		// Global > Text Shadow.
+		wp.customize( 'marianne_global_text_shadow', function( value ) {
 			value.bind( function( newval ) {
 				var target = 'body',
 					classToAdd = 'text-shadow';
