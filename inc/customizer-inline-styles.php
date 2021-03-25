@@ -1,4 +1,6 @@
 <?php
+// UNUSED YET.
+
 if ( ! function_exists( 'marianne_array_to_css' ) ) {
 	/**
 	 * Generates a CSS string from a multidimensional array of CSS rules.

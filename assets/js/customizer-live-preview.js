@@ -170,6 +170,20 @@
 			} );
 		} );
 
+		// Header Settings > Align.
+		wp.customize( 'marianne_header_align', function( value ) {
+			value.bind( function( newval ) {
+				var target = '.site-header',
+					classes = {
+						'left': 'site-header-align-left',
+						'center': 'site-header-align-center',
+						'right': 'site-header-align-right'
+				};
+
+				marianneSelectRadioToggleClass( target, classes, newval );
+			} );
+		} );
+
 		// Content Formatting > Text Align.
 		wp.customize( 'marianne_content_text_align', function( value ) {
 			value.bind( function( newval ) {

@@ -75,6 +75,13 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		);
 
 		$wp_customize->add_section(
+			'marianne_header',
+			array(
+				'title' => __( 'Header Settings', 'marianne' ),
+			)
+		);
+
+		$wp_customize->add_section(
 			'marianne_content',
 			array(
 				'title'       => __( 'Content Formatting', 'marianne' ),
@@ -231,6 +238,21 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'title'       => __( 'Enable text shadow.', 'marianne' ),
 			'description' => __( 'Give some relief to your texts. Default: disabled.', 'marianne' ),
 			'type'        => 'checkbox',
+			'live'        => true,
+		);
+
+		// Header Settings.
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_header',
+			'id'          => 'align',
+			'title'       => __( 'Header Align', 'marianne' ),
+			'description' => __( 'Default: left.', 'marianne' ),
+			'type'        => 'radio',
+			'value'       => array(
+				'left'    => __( 'Left', 'marianne' ),
+				'center'  => __( 'Center', 'marianne' ),
+				'right'   => __( 'Right', 'marianne' ),
+			),
 			'live'        => true,
 		);
 
@@ -627,6 +649,9 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_global_font_size'         => 100,
 			'marianne_global_font_smooth'       => false,
 			'marianne_global_text_shadow'       => false,
+
+			// Header Settings.
+			'marianne_header_align' => 'left',
 
 			// Content Formatting.
 			'marianne_content_text_align' => 'left',

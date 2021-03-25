@@ -196,6 +196,17 @@ Text Domain: marianne
 	--page-width: inherit;
 }
 
+/* Header */
+.site-header-align-left {
+	--site-header-align: left;
+}
+.site-header-align-center {
+	--site-header-align: center;
+}
+.site-header-align-right {
+	--site-header-align: right;
+}
+
 /* Content */
 .text-align-left {
 	--content-text-align: left;
@@ -243,6 +254,7 @@ body {
 }
 .site-header {
 	margin: 2em 0 4em;
+	text-align: var(--site-header-align);
 }
 .site-content {
 	margin: 4em 0;
