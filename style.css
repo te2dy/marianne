@@ -192,14 +192,8 @@ Text Domain: marianne
 .page-width-720 {
 	--page-width: 720px;
 }
-.page-width-840 {
-	--page-width: 840px;
-}
-.page-width-960 {
-	--page-width: 960px;
-}
-.page-width-1080 {
-	--page-width: 1080px;
+.page-width-custom {
+	--page-width: inherit;
 }
 
 /* Content */
@@ -244,7 +238,7 @@ body {
 }
 .site {
 	margin: 0 auto;
-	max-width: var(--page-width);
+	max-width: var(--page-width, initial);
 	word-wrap: break-word;
 }
 .site-header {

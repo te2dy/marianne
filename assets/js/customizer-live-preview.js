@@ -121,15 +121,21 @@
 			value.bind( function( newval ) {
 				var target = '.site',
 					classes = {
-						480: 'page-width-480',
-						600: 'page-width-600',
-						720: 'page-width-720',
-						840: 'page-width-840',
-						960: 'page-width-960',
-						1080: 'page-width-1080'
+						'480': 'page-width-480',
+						'600': 'page-width-600',
+						'720': 'page-width-720',
+						'custom': 'page-width-custom'
 					};
 
 				marianneSelectRadioToggleClass( target, classes, newval );
+			} );
+		} );
+
+		wp.customize( 'marianne_global_page_width_custom', function( value ) {
+			value.bind( function( newval ) {
+				if ( 'custom' === wp.customize( 'marianne_global_page_width' ).get() ) {
+					$( '#page' ).css( 'max-width', newval + 'px' );
+				}
 			} );
 		} );
 

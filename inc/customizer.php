@@ -24,8 +24,10 @@ if ( ! function_exists( 'marianne_customizer_scripts_styles' ) ) {
 
 		// Enqueue custom controls files.
 		wp_enqueue_style( 'marianne-customizer-controls', esc_url( get_template_directory_uri() . "/assets/css/customizer-controls$min.css" ), array(), $theme_version );
-
 		wp_enqueue_script( 'marianne-customizer-controls', esc_url( get_template_directory_uri() . "/assets/js/customizer-controls$min.js" ), array( 'jquery', 'jquery-ui-slider', 'customize-preview' ), $theme_version, true );
+
+		// Enqueue live controls
+		wp_enqueue_script( 'marianne-customizer-controls-change', esc_url( get_template_directory_uri() . "/assets/js/customizer-controls-change$min.js" ), array( 'jquery', 'customize-preview' ), $theme_version, true );
 	}
 
 	add_action( 'customize_controls_enqueue_scripts', 'marianne_customizer_scripts_styles' );
@@ -177,20 +179,27 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_global',
 			'id'          => 'page_width',
 			'title'       => __( 'Page Width', 'marianne' ),
-			'description' => __( 'Default: 480px.', 'marianne' ),
+			'description' => __( 'We suggest you three size but you can choose your own. Default: 480px.', 'marianne' ),
+			'type'        => 'radio',
+			'value'       => array(
+				'480'    => __( '480px', 'marianne' ),
+				'600'    => __( '600px', 'marianne' ),
+				'720'    => __( '720px', 'marianne' ),
+				'custom' => __( 'Custom width', 'marianne'),
+			),
+			'live'        => true,
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_global',
+			'id'          => 'page_width_custom',
+			'title'       => __( 'Custom Page Width', 'marianne' ),
+			'description' => __( '', 'marianne' ),
 			'type'        => 'marianne_slider',
 			'input_attrs' => array(
-				'min'  => 480,
-				'max'  => 1080,
-				'step' => 120,
-			),
-			'value'       => array(
-				480  => __( '480px', 'marianne' ),
-				600  => __( '600px', 'marianne' ),
-				720  => __( '720px', 'marianne' ),
-				840  => __( '840px', 'marianne' ),
-				960  => __( '960px', 'marianne' ),
-				1080 => __( '1080px', 'marianne' ),
+				'min'  => 400,
+				'max'  => 1440,
+				'step' => 10,
 			),
 			'live'        => true,
 		);
@@ -628,11 +637,12 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'colors_link_hover' => 'blue',
 
 			// Global.
-			'marianne_global_page_width'  => 480,
-			'marianne_global_font_family' => 'sans-serif',
-			'marianne_global_font_size'   => 100,
-			'marianne_global_font_smooth' => false,
-			'marianne_global_text_shadow' => false,
+			'marianne_global_page_width'        => 480,
+			'marianne_global_page_width_custom' => 480,
+			'marianne_global_font_family'       => 'sans-serif',
+			'marianne_global_font_size'         => 100,
+			'marianne_global_font_smooth'       => false,
+			'marianne_global_text_shadow'       => false,
 
 			// Content Formatting.
 			'marianne_content_text_align' => 'left',
