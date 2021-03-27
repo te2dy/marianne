@@ -1,5 +1,5 @@
 # Thème Marianne pour WordPress
-- 🇬🇧 [English](#)(/.github/README.md)
+- 🇬🇧 [English](/.github/README.md)
 - 🇫🇷 **Français**
 
 **Marianne.**
