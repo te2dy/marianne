@@ -56,37 +56,12 @@
 			</div>
 
 			<?php
-			if ( true === marianne_get_theme_mod( 'marianne_post_nav' ) ) {
-				$marianne_newer_post = get_next_post_link();
-				$marianne_older_post = get_previous_post_link();
-
-				if ( $marianne_newer_post || $marianne_older_post ) {
-					?>
-						<div class="entry-links post-links">
-							<p><strong><?php esc_html_e( 'Continue reading', 'marianne' ); ?></strong></p>
-
-							<nav class="post-navigation">
-								<div class="nav-links">
-									<?php
-									if ( $marianne_newer_post ) {
-										next_post_link( '%link', '‹ %title' );
-									}
-
-									if ( $marianne_older_post ) {
-										previous_post_link( '%link', '%title ›' );
-									}
-									?>
-								</div>
-							</nav>
-						</div>
-					<?php
-				}
-			}
-			?>
-
-			<?php
 			if ( true === marianne_get_theme_mod( 'marianne_print_info' ) ) {
 				marianne_print_info();
+			}
+
+			if ( true === marianne_get_theme_mod( 'marianne_post_nav' ) ) {
+				marianne_post_links();
 			}
 			?>
 		</footer>

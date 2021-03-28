@@ -732,3 +732,49 @@ if ( ! function_exists( 'marianne_print_info' ) ) {
 		<?php
 	}
 }
+
+if ( ! function_exists( 'marianne_post_links' ) ) {
+	/**
+	 * Displays links to the previous and next posts if they exist.
+	 *
+	 * @param string $class The class of the title.
+	 *                      To set multiple classes,
+	 *                      separate them with a space.
+	 *                      Example: $class = "class-1 class-2".
+	 *
+	 * @return void
+	 *
+	 * @since Marianne 1.3
+	 */
+	function marianne_post_links( $class = 'entry-links post-links text-secondary' ) {
+		$marianne_newer_post = get_next_post_link();
+		$marianne_older_post = get_previous_post_link();
+
+		if ( $marianne_newer_post || $marianne_older_post ) {
+			?>
+				<div<?php marianne_add_class( $class ); ?>>
+					<nav class="post-navigation">
+						<?php if ( $marianne_newer_post ) : ?>
+							<div class="nav-links">
+						<?php else : ?>
+							<div class="nav-links-previous-only">
+						<?php endif; ?>
+
+							<?php if ( $marianne_newer_post ) : ?>
+								<div class="nav-link-next">
+									<?php next_post_link( '%link', '‹ %title' ); ?>
+								</div>
+							<?php endif; ?>
+
+							<?php if ( $marianne_older_post ) : ?>
+								<div class="nav-link-previous">
+									<?php previous_post_link( '%link', '%title ›' ); ?>
+								</div>
+							<?php endif; ?>
+						</div>
+					</nav>
+				</div>
+			<?php
+		}
+	}
+}

@@ -1024,9 +1024,15 @@ iframe {
 .post-page-numbers:hover {
 	border-color: var(--color-links-hover);
 }
+.post-navigation {
+	margin: 2em 0;
+}
 .post-navigation .nav-links {
 	display: flex;
 	justify-content: space-between;
+}
+.post-navigation .nav-links-previous-only .nav-link-previous {
+	text-align: right;
 }
 
 /**
@@ -1064,7 +1070,8 @@ iframe {
 #cancel-comment-reply-link::before {
 	content: " ";
 }
-.children {
+.children,
+.comment .comment-respond {
 	border-left: 1px solid var(--color-border);
 	padding-left: 1em;
 }
