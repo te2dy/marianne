@@ -1033,7 +1033,7 @@ iframe {
  * Comments
  */
 .comment {
-	margin-bottom: 2em;
+	margin: 2em 0;
 }
 .comment-author .avatar {
 	float: left;
@@ -1060,22 +1060,13 @@ iframe {
 	color: var(--color-body-text-secondary);
 	font-size: .9em;
 	margin-top: .25em;
-	text-align: right;
 }
 #cancel-comment-reply-link::before {
 	content: " ";
 }
-.comment-list .parent .comment {
-	border-left: 1px solid var(--color-border);
-	padding: 1em 0 0 1em;
-}
 .children {
-	padding: 0;
-}
-.children .comment {
-	margin-bottom: 0;
-	padding-top: 1em;
-	padding-bottom: 0;
+	border-left: 1px solid var(--color-border);
+	padding-left: 1em;
 }
 
 /**
