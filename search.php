@@ -66,17 +66,11 @@ get_header();
 					);
 					?>
 				</h1>
-
-				<div class="archive-description">
-					<p><?php esc_html_e( 'No results.', 'marianne' ); ?></p>
-				</div>
 			</header>
 
 			<article <?php post_class( 'entry-page' ); ?>>
 				<section class="entry-content page-content">
-					<p><?php esc_html_e( 'Maybe try a search?', 'marianne' ); ?></p>
-
-					<?php get_search_form(); ?>
+					<p><?php esc_html_e( 'This search did not return any results.', 'marianne' ); ?></p>
 				</section>
 			</article>
 		<?php endif; ?>
