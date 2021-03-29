@@ -428,7 +428,7 @@ if ( ! function_exists( 'marianne_svg_feather_icons' ) ) {
 		switch ( $name ) {
 			case 'email':
 				$svg_data['name']   = __( 'Email', 'marianne' );
-				$svg_data['shapes'] = '<circle cx="12" cy="12" r="4"></circle><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>';
+				$svg_data['shapes'] = '<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline>';
 				break;
 
 			case 'facebook':
@@ -525,6 +525,9 @@ if ( ! function_exists( 'marianne_esc_svg' ) ) {
 			'polygon' => array(
 				'points' => true,
 			),
+			'polyline' => array(
+				'points' => true,
+			),
 			'rect'    => array(
 				'x'      => true,
 				'y'      => true,
@@ -591,17 +594,16 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 		$option_facebook  = marianne_get_theme_mod( 'marianne_social_facebook' );
 		$option_instagram = marianne_get_theme_mod( 'marianne_social_instagram' );
 		$option_youtube   = marianne_get_theme_mod( 'marianne_social_youtube' );
-		$option_twitch    = marianne_get_theme_mod( 'marianne_social_twitch' );
 		$option_linkedin  = marianne_get_theme_mod( 'marianne_social_linkedin' );
 		$option_github    = marianne_get_theme_mod( 'marianne_social_github' );
 		$option_gitlab    = marianne_get_theme_mod( 'marianne_social_gitlab' );
-		$option_link      = marianne_get_theme_mod( 'marianne_social_link' );
-		$option_phone     = marianne_get_theme_mod( 'marianne_social_phone' );
+		$option_twitch    = marianne_get_theme_mod( 'marianne_social_twitch' );
 		$option_email     = marianne_get_theme_mod( 'marianne_social_email' );
+		$option_phone     = marianne_get_theme_mod( 'marianne_social_phone' );
+		$option_link      = marianne_get_theme_mod( 'marianne_social_link' );
 		$option_rss       = marianne_get_theme_mod( 'marianne_social_rss' );
 
-
-		if ( $option_twitter || $option_facebook || $option_instagram || $option_linkedin || $option_youtube || $option_email || $option_github || $option_gitlab || $option_link || $option_phone || $option_rss || $option_twitch ) {
+		if ( $option_twitter || $option_facebook || $option_instagram || $option_youtube || $option_linkedin || $option_github || $option_gitlab || $option_twitch || $option_email || $option_phone || $option_link || $option_rss ) {
 			$no_links = false;
 		} else {
 			$no_links = true;
@@ -622,12 +624,12 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 				$social_links['instagram'] = $option_instagram;
 			}
 
-			if ( $option_linkedin ) {
-				$social_links['linkedin'] = $option_linkedin;
-			}
-
 			if ( $option_youtube ) {
 				$social_links['youtube'] = $option_youtube;
+			}
+
+			if ( $option_linkedin ) {
+				$social_links['linkedin'] = $option_linkedin;
 			}
 
 			if ( $option_github ) {
@@ -638,20 +640,24 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 				$social_links['gitlab'] = $option_gitlab;
 			}
 
-			if ( $option_link ) {
-				$social_links['link'] = $option_link;
+			if ( $option_twitch ) {
+				$social_links['twitch'] = $option_twitch;
+			}
+
+			if ( $option_email ) {
+				$social_links['email'] = $option_email;
 			}
 
 			if ( $option_phone ) {
 				$social_links['phone'] = $option_phone;
 			}
 
-			if ( $option_rss ) {
-				$social_links['rss'] = $option_rss;
+			if ( $option_link ) {
+				$social_links['link'] = $option_link;
 			}
 
-			if ( $option_twitch ) {
-				$social_links['twitch'] = $option_twitch;
+			if ( $option_rss ) {
+				$social_links['rss'] = $option_rss;
 			}
 
 			if ( ! empty( $social_links ) ) :

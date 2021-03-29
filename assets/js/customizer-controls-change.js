@@ -11,17 +11,32 @@
 		var speed = 200;
 
 		// Show Custom Page Width only when 'Custom' is checked.
-		if ( $( 'input[id="_customize-input-marianne_global_page_width-radio-custom"]' ).is( ':checked' ) ) {
-			$( '#customize-control-marianne_global_page_width_custom' ).show();
+		if ( $( '#customize-control-custom_logo .remove-button' ).length > 0 ) {
+			$( '#customize-control-marianne_header_logo_round' ).show();
 		} else {
-			$( '#customize-control-marianne_global_page_width_custom' ).hide();
+			$( '#customize-control-marianne_header_logo_round' ).hide();
 		}
 
-		$( '#customize-control-marianne_global_page_width input[type=radio]' ).change( function () {
-			if ( $( 'input[id="_customize-input-marianne_global_page_width-radio-custom"]' ).is( ':checked' ) ) {
-				$( '#customize-control-marianne_global_page_width_custom' ).show( speed );
+		$( '#customize-control-custom_logo' ).on( 'DOMSubtreeModified', function () {
+			if ( $( '#customize-control-custom_logo .remove-button' ).length > 0 ) {
+				$( '#customize-control-marianne_header_logo_round' ).show( speed );
 			} else {
-				$( '#customize-control-marianne_global_page_width_custom' ).hide( speed );
+				$( '#customize-control-marianne_header_logo_round' ).hide( speed );
+			}
+		});
+
+		// Show Custom Page Width only when 'Custom' is checked.
+		if ( $( '#_customize-input-marianne_social_phone' ).length > 0 ) {
+			$( '#customize-control-marianne_social_phone_type' ).show();
+		} else {
+			$( '#customize-control-marianne_social_phone_type' ).hide();
+		}
+
+		$( '#_customize-input-marianne_social_phone' ).on( 'input', function () {
+			if ( $( this ).val() ) {
+				$( '#customize-control-marianne_social_phone_type' ).show( speed );
+			} else {
+				$( '#customize-control-marianne_social_phone_type' ).hide( speed );
 			}
 		});
 	} );

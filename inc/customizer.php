@@ -23,11 +23,11 @@ if ( ! function_exists( 'marianne_customizer_scripts_styles' ) ) {
 		$min           = marianne_minify();
 
 		// Enqueue custom controls files.
-		wp_enqueue_style( 'marianne-customizer-controls', esc_url( get_template_directory_uri() . "/assets/css/customizer-controls$min.css" ), array(), $theme_version );
-		wp_enqueue_script( 'marianne-customizer-controls', esc_url( get_template_directory_uri() . "/assets/js/customizer-controls$min.js" ), array( 'jquery', 'jquery-ui-slider', 'customize-preview' ), $theme_version, true );
+		wp_enqueue_style( 'marianne-customizer-controls', get_template_directory_uri() . "/assets/css/customizer-controls$min.css", array(), $theme_version );
+		wp_enqueue_script( 'marianne-customizer-controls', get_template_directory_uri() . "/assets/js/customizer-controls$min.js", array( 'jquery', 'jquery-ui-slider', 'customize-preview' ), $theme_version, true );
 
-		// Enqueue live controls.
-		wp_enqueue_script( 'marianne-customizer-controls-change', esc_url( get_template_directory_uri() . "/assets/js/customizer-controls-change$min.js" ), array( 'jquery', 'customize-preview' ), $theme_version, true );
+		// Enqueue the script that shows/hides other controls depending on the context.
+		wp_enqueue_script( 'marianne-customizer-controls-change', get_template_directory_uri() . "/assets/js/customizer-controls-change$min.js", array( 'jquery', 'customize-preview' ), $theme_version, true );
 	}
 
 	add_action( 'customize_controls_enqueue_scripts', 'marianne_customizer_scripts_styles' );
@@ -45,7 +45,7 @@ if ( ! function_exists( 'marianne_customizer_script_live' ) ) {
 		$theme_version = wp_get_theme()->get( 'Version' );
 		$min           = marianne_minify();
 
-		wp_enqueue_script( 'marianne-customizer-live', esc_url( get_template_directory_uri() . "/assets/js/customizer-live-preview$min.js" ), array( 'jquery', 'customize-preview' ), $theme_version, true );
+		wp_enqueue_script( 'marianne-customizer-live', get_template_directory_uri() . "/assets/js/customizer-live-preview$min.js", array( 'jquery', 'customize-preview' ), $theme_version, true );
 	}
 
 	add_action( 'customize_preview_init', 'marianne_customizer_script_live' );
@@ -53,7 +53,7 @@ if ( ! function_exists( 'marianne_customizer_script_live' ) ) {
 
 if ( ! function_exists( 'marianne_customize_register' ) ) {
 	/**
-	 * Add various options to the theme.
+	 * Adds various options to the theme.
 	 *
 	 * @link https://developer.wordpress.org/reference/hooks/customize_register/
 	 *
@@ -70,7 +70,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		$wp_customize->add_section(
 			'marianne_global',
 			array(
-				'title' => __( 'Global', 'marianne' ),
+				'title' => __( 'Global Settings', 'marianne' ),
 			)
 		);
 
@@ -128,28 +128,20 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		 * To simplify the build of the Customizer, all new options are pushed in an array.
 		 * The Customizer will be built later.
 		 *
-		 * @return array $marianne_customizer_options An array of options that follows this pattern:
+		 * @return array $marianne_customizer_options An array of new options that follows this pattern:
 		 *                                            $marianne_customizer_options[] = array(
 		 *                                                'section'     => (string) The section of the option,
 		 *                                                'id'          => (string) The option id,
 		 *                                                'title'       => (string) The title of the option,
 		 *                                                'description' => (string) The description of the option,
 		 *                                                'type'        => (string) The type of the option (text, checkbox…),
-		 *                                                'input_attrs' => (array) Some parameters to apply to the control,
-		 *                                                'value'       => (array) The value of the option,
-		 *                                                'live'        => (bool) Enable/disable live preview,
+		 *                                                'input_attrs' => (array)  Some parameters to apply to the control
+		 *                                                                          Required for the type ’marianne_slider’,
+		 *                                                'value'       => (array)  The value of the option,
+		 *                                                'live'        => (bool)   Enable/disable live preview,
 		 *                                            );
 		 */
 		$marianne_customizer_options = array();
-
-		// Site Identity.
-		$marianne_customizer_options[] = array(
-			'section'     => 'title_tagline',
-			'id'          => 'logo_circular',
-			'title'       => __( 'Make the logo round.', 'marianne' ),
-			'description' => __( 'Default: unckecked.', 'marianne' ),
-			'type'        => 'checkbox',
-		);
 
 		// Colors.
 		$marianne_customizer_options[] = array(
@@ -258,6 +250,14 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_header',
+			'id'          => 'logo_round',
+			'title'       => __( 'Make the logo round.', 'marianne' ),
+			'description' => __( 'Only applies if a logo is set (see the Site Identity section). Default: unckecked.', 'marianne' ),
+			'type'        => 'checkbox',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_header',
 			'id'          => 'menu_search',
 			'title'       => __( 'Add a search button.', 'marianne' ),
 			'description' => __( 'It will be added as a primary menu item if a menu is set.', 'marianne' ),
@@ -301,10 +301,16 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		// Footer Settings.
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_footer',
-			'id'          => 'mention',
-			'title'       => __( 'Display the default footer mention.', 'marianne' ),
-			'description' => __( 'Useful to promote WordPress and Marianne to your readers. Default: displayed.', 'marianne' ),
-			'type'        => 'checkbox',
+			'id'          => 'align',
+			'title'       => __( 'Footer Align', 'marianne' ),
+			'description' => __( 'Default: left.', 'marianne' ),
+			'type'        => 'radio',
+			'value'       => array(
+				'left'    => __( 'Left', 'marianne' ),
+				'center'  => __( 'Center', 'marianne' ),
+				'right'   => __( 'Right', 'marianne' ),
+			),
+			'live'        => true,
 		);
 
 		$marianne_customizer_options[] = array(
@@ -314,6 +320,14 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'description' => __( 'You can write any text to add in the footer.', 'marianne' ),
 			'type'        => 'textarea',
 			'live'        => true,
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_footer',
+			'id'          => 'mention',
+			'title'       => __( 'Display the default footer mention.', 'marianne' ),
+			'description' => __( 'Useful to promote WordPress and Marianne to your readers. Default: displayed.', 'marianne' ),
+			'type'        => 'checkbox',
 		);
 
 		// Social Links.
@@ -368,14 +382,6 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_social',
-			'id'          => 'linkedin',
-			'title'       => __( 'LinkedIn', 'marianne' ),
-			'description' => __( 'Your LinkedIn profile URL.', 'marianne' ),
-			'type'        => 'url',
-		);
-
-		$marianne_customizer_options[] = array(
-			'section'     => 'marianne_social',
 			'id'          => 'youtube',
 			'title'       => __( 'YouTube', 'marianne' ),
 			'description' => __( 'Your YouTube channel URL.', 'marianne' ),
@@ -384,10 +390,10 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_social',
-			'id'          => 'email',
-			'title'       => __( 'Email', 'marianne' ),
-			'description' => __( 'Your email address.', 'marianne' ),
-			'type'        => 'email',
+			'id'          => 'linkedin',
+			'title'       => __( 'LinkedIn', 'marianne' ),
+			'description' => __( 'Your LinkedIn profile URL.', 'marianne' ),
+			'type'        => 'url',
 		);
 
 		$marianne_customizer_options[] = array(
@@ -408,10 +414,18 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_social',
-			'id'          => 'link',
-			'title'       => __( 'Link', 'marianne' ),
-			'description' => __( 'Another link you want to display.', 'marianne' ),
+			'id'          => 'twitch',
+			'title'       => __( 'Twitch', 'marianne' ),
+			'description' => __( 'Your Twitch profile URL.', 'marianne' ),
 			'type'        => 'url',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
+			'id'          => 'email',
+			'title'       => __( 'Email', 'marianne' ),
+			'description' => __( 'Your email address.', 'marianne' ),
+			'type'        => 'email',
 		);
 
 		$marianne_customizer_options[] = array(
@@ -425,8 +439,8 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_social',
 			'id'          => 'phone_type',
-			'title'       => __( 'What type of phone link do you want to display?', 'marianne' ),
-			'description' => __( "This will automatically open the right application on your readers' phone.", 'marianne' ),
+			'title'       => __( 'What type of phone link do you want to add?', 'marianne' ),
+			'description' => __( "This will automatically open the right application on your readers' phone when they will click on it.", 'marianne' ),
 			'type'        => 'select',
 			'value'       => array(
 				'classic'  => __( 'Classic', 'marianne' ),
@@ -437,20 +451,21 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_social',
+			'id'          => 'link',
+			'title'       => __( 'Link', 'marianne' ),
+			'description' => __( 'Another link you want to display.', 'marianne' ),
+			'type'        => 'url',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
 			'id'          => 'rss',
 			'title'       => __( 'Add a link to the RSS feed of your site.', 'marianne' ),
 			'description' => __( 'Default: unckecked.', 'marianne' ),
 			'type'        => 'checkbox',
 		);
 
-		$marianne_customizer_options[] = array(
-			'section'     => 'marianne_social',
-			'id'          => 'twitch',
-			'title'       => __( 'Twitch', 'marianne' ),
-			'description' => __( 'Your Twitch profile URL.', 'marianne' ),
-			'type'        => 'url',
-		);
-
+		// Print Settings.
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_print',
 			'id'          => 'comments_hide',
@@ -644,22 +659,20 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 		 * );
 		 */
 		$options_default = array(
-			// Site Identity.
-			'title_tagline_logo_circular' => false,
-
 			// Colors.
 			'colors_scheme'     => 'light',
 			'colors_link_hover' => 'blue',
 
 			// Global.
-			'marianne_global_page_width'        => 480,
-			'marianne_global_font_family'       => 'sans-serif',
-			'marianne_global_font_size'         => 100,
-			'marianne_global_font_smooth'       => false,
-			'marianne_global_text_shadow'       => false,
+			'marianne_global_page_width'  => '480',
+			'marianne_global_font_family' => 'sans-serif',
+			'marianne_global_font_size'   => 100,
+			'marianne_global_font_smooth' => false,
+			'marianne_global_text_shadow' => false,
 
 			// Header Settings.
 			'marianne_header_align'       => 'left',
+			'marianne_header_logo_round'  => false,
 			'marianne_header_menu_search' => true,
 
 			// Content Formatting.
@@ -670,6 +683,7 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_post_nav' => false,
 
 			// Footer Settings.
+			'marianne_footer_align'   => 'left',
 			'marianne_footer_mention' => true,
 			'marianne_footer_text'    => '',
 

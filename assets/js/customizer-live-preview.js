@@ -127,6 +127,11 @@
 					};
 
 				marianneSelectRadioToggleClass( target, classes, newval );
+
+				$( '.entry-thumbnail img' )
+					.removeAttr( 'sizes' )
+					.removeAttr( 'width' )
+					.removeAttr( 'height' );
 			} );
 		} );
 
@@ -209,6 +214,20 @@
 					classToAdd = 'text-hyphens';
 
 				marianneCheckboxToggleClass( target, classToAdd, newval );
+			} );
+		} );
+
+		// Footer Settings > Align.
+		wp.customize( 'marianne_footer_align', function( value ) {
+			value.bind( function( newval ) {
+				var target = '.site-footer',
+					classes = {
+						'left': 'site-footer-align-left',
+						'center': 'site-footer-align-center',
+						'right': 'site-footer-align-right'
+				};
+
+				marianneSelectRadioToggleClass( target, classes, newval );
 			} );
 		} );
 

@@ -11,7 +11,11 @@
  */
 
 ?>
-			<footer class="site-footer text-secondary" role="contentinfo">
+			<?php
+			$marianne_footer_class  = 'site-footer text-secondary';
+			$marianne_footer_class .= ' site-footer-align-' . esc_attr( marianne_get_theme_mod( 'marianne_footer_align' ) );
+			?>
+			<footer <?php marianne_add_class( $marianne_footer_class, false ); ?> role="contentinfo">
 				<?php
 				if ( 'footer' === marianne_get_theme_mod( 'marianne_social_location' ) ) {
 					marianne_social_link();
@@ -52,7 +56,7 @@
 							/* translators: $1%s: WordPress. $2%s: Marianne. */
 							esc_html_x( 'Powered by %1$s and %2$s', 'Site footer text', 'marianne' ),
 							'<a href="' . esc_url( __( 'https://wordpress.org/', 'marianne' ) ) . '">WordPress</a>',
-							'<a href="' . esc_url( __( 'https://wordpress.org/themes/marianne/', 'marianne' ) ) . '">' . esc_html( wp_get_theme()->get( 'Name' ) ) . '</a>'
+							'<a href="' . esc_url( __( 'https://wordpress.org/themes/marianne/', 'marianne' ) ) . '">' . esc_attr( wp_get_theme()->get( 'Name' ) ) . '</a>'
 						);
 						?>
 					</div>

@@ -21,12 +21,11 @@ and intellectuals who want to present their work.
 
 == Changelog ==
 
-=== 1.3-beta – March 23th, 2021 ===
+=== 1.3 – April 1st, 2021 ===
 - Added: options to customize the theme.
 - Added: theme page.
 => Are donate links allowed?
 - Added: print info.
-=> Are shortlinks allowed?
 - Added: .pot file for a more easily translatable theme.
 - Added: RSS widget styles.
 - Fixed: wrong content width.

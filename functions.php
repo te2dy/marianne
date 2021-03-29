@@ -132,7 +132,7 @@ if ( ! function_exists( 'marianne_minify' ) ) {
 
 if ( ! function_exists( 'marianne_styles_scripts' ) ) {
 	/**
-	 * Enqueue scripts and styles.
+	 * Enqueues scripts and styles.
 	 *
 	 * On production, minified files are enqueued.
 	 *
@@ -201,7 +201,7 @@ if ( ! function_exists( 'marianne_widgets' ) ) {
 
 if ( ! function_exists( 'marianne_add_sub_menu_toggle' ) ) {
 	/**
-	 * Add a button to top-level menu items that has sub-menus.
+	 * Adds a button to top-level menu items that has sub-menus.
 	 * An icon is added using CSS depending on the value of aria-expanded.
 	 *
 	 * Based on the work of the WordPress team in the Twenty Twenty-One Theme.
@@ -229,7 +229,7 @@ if ( ! function_exists( 'marianne_add_sub_menu_toggle' ) ) {
 	add_filter( 'walker_nav_menu_start_el', 'marianne_add_sub_menu_toggle', 10, 4 );
 }
 
-// Load required files.
+// Loads required files.
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/theme-page.php';

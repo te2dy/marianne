@@ -56,7 +56,7 @@
 				<?php
 				$marianne_logo_class = 'site-logo';
 
-				if ( true === marianne_get_theme_mod( 'title_tagline_logo_circular' ) ) {
+				if ( true === marianne_get_theme_mod( 'marianne_header_logo_round' ) ) {
 					$marianne_logo_class .= ' image-circular';
 				}
 

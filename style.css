@@ -227,6 +227,17 @@ Text Domain: marianne
 	--content-hyphens-limit-last: always;
 }
 
+/* Footer */
+.site-footer-align-left {
+	--site-footer-align: left;
+}
+.site-footer-align-center {
+	--site-footer-align: center;
+}
+.site-footer-align-right {
+	--site-footer-align: right;
+}
+
 /**
  * Structure
  */
@@ -925,7 +936,6 @@ iframe {
 	margin: 0;
 }
 .loop-footer {
-	font-size: .9em;
 	margin-top: 1em;
 }
 .loop-pagination {
@@ -996,7 +1006,7 @@ iframe {
 	hyphenate-limit-last: var(--content-hyphens-limit-last, none);
 }
 .entry-footer {
-	margin-top: 2em;
+	font-size: .9em;
 }
 
 /**
@@ -1020,6 +1030,9 @@ iframe {
 .page-content a:hover,
 .comment-content a:hover {
 	color: var(--color-link-hover);
+}
+.post-footer {
+	margin-top: 2em;
 }
 .post-page-numbers {
 	border: 1px solid var(--color-border);
@@ -1107,6 +1120,7 @@ iframe {
 .site-footer {
 	font-size: .9em;
 	margin: 6em 0 2em;
+	text-align: var(--site-footer-align);
 }
 .site-footer-block {
 	margin-top: 1em;
@@ -1267,7 +1281,6 @@ iframe {
 	#print-info {
 		border-left: 1px solid var(--color-border);
 		display: block;
-		font-size: .9em;
 		margin: 2em 0;
 		padding-left: 1em;
 	}
@@ -1326,6 +1339,7 @@ iframe {
 	.comment-respond,
 	.separator,
 	.print-widgets-hide,
+	#site-footer-mention,
 	#menu-footer {
 		display: none;
 	}
