@@ -26,7 +26,7 @@ if ( ! function_exists( 'marianne_customizer_scripts_styles' ) ) {
 		wp_enqueue_style( 'marianne-customizer-controls', esc_url( get_template_directory_uri() . "/assets/css/customizer-controls$min.css" ), array(), $theme_version );
 		wp_enqueue_script( 'marianne-customizer-controls', esc_url( get_template_directory_uri() . "/assets/js/customizer-controls$min.js" ), array( 'jquery', 'jquery-ui-slider', 'customize-preview' ), $theme_version, true );
 
-		// Enqueue live controls
+		// Enqueue live controls.
 		wp_enqueue_script( 'marianne-customizer-controls-change', esc_url( get_template_directory_uri() . "/assets/js/customizer-controls-change$min.js" ), array( 'jquery', 'customize-preview' ), $theme_version, true );
 	}
 

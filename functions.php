@@ -232,6 +232,5 @@ if ( ! function_exists( 'marianne_add_sub_menu_toggle' ) ) {
 // Load required files.
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/customizer.php';
-require get_template_directory() . '/inc/customizer-inline-styles.php';
 require get_template_directory() . '/inc/theme-page.php';
 require get_template_directory() . '/inc/classes/class-marianne-customizer-control-slider.php';
