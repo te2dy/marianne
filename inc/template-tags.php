@@ -147,7 +147,7 @@ if ( ! function_exists( 'marianne_menu_primary' ) ) {
 			?>
 				<nav id="menu-primary-container" class="button" role="navigation" aria-label="<?php echo esc_attr__( 'Primary Menu', 'marianne' ); ?>">
 					<ul id="menu-primary" class="navigation-menu">
-						<?php echo $search_button; ?>
+						<?php echo wp_kses_post( $search_button ); ?>
 					</ul>
 				</nav>
 			<?php
@@ -193,8 +193,6 @@ if ( ! function_exists( 'marianne_loop_comments' ) ) {
 	/**
 	 * The link to comments.
 	 *
-	 * @param string $container Wrap the link in a 'div' or 'footer' block.
-	 *                          This parameter can be empty.
 	 * @param string $class     The class of the container.
 	 *                          To set multiple classes,
 	 *                          separate them with a space.
@@ -202,41 +200,23 @@ if ( ! function_exists( 'marianne_loop_comments' ) ) {
 	 *
 	 * @return void
 	 */
-	function marianne_loop_comments( $container = '', $class = '' ) {
+	function marianne_loop_comments( $class = '' ) {
 		$comments_number = get_comments_number();
 
 		// Displays the comment link it there is at least one comment.
 		if ( $comments_number && 0 < $comments_number ) :
-			// 'div' and 'footer' are the only arguments that can be defined through $container.
-			$allowed_containers = array( 'div', 'footer' );
-			$container_open     = '';
-			$container_close    = '';
-
-			if ( $container && in_array( $container, $allowed_containers, true ) ) {
-				$container_open = '<' . esc_attr( $container );
-
-				if ( $class ) {
-					$container_open .= ' class="' . esc_attr( $class ) . '"';
-				}
-
-				$container_open .= '>';
-
-				$container_close = '</' . esc_attr( $container ) . '>';
-			}
 			?>
-
-			<?php echo $container_open; ?>
-				<a href="<?php echo esc_url( get_comments_link() ); ?>">
-					<?php
-					printf(
-						/* translators: %d: Comment count number. */
-						esc_html( _n( '%d comment', '%d comments', absint( $comments_number ), 'marianne' ) ),
-						absint( $comments_number )
-					);
-					?>
-				</a>
-			<?php echo $container_close; ?>
-
+				<footer<?php marianne_add_class( $class ); ?>>
+					<a href="<?php echo esc_url( get_comments_link() ); ?>">
+						<?php
+						printf(
+							/* translators: %d: Comment count number. */
+							esc_html( _n( '%d comment', '%d comments', absint( $comments_number ), 'marianne' ) ),
+							absint( $comments_number )
+						);
+						?>
+					</a>
+				<footer>
 			<?php
 		endif;
 	}
@@ -333,24 +313,15 @@ if ( ! function_exists( 'marianne_the_post_thumbnail' ) ) {
 	 */
 	function marianne_the_post_thumbnail( $class = '', $args = array() ) {
 		if ( has_post_thumbnail() ) {
-			$before = '';
-			$after  = '';
-			if ( in_array( 'link', $args, true ) ) {
-				$before = '<a href="' . esc_url( get_the_permalink() ) . '">';
-				$after  = '</a>';
-			}
-
-			// Put the option(s) defined with $args in the array $options.
-			$options = array();
 			?>
 				<figure<?php marianne_add_class( $class ); ?>>
-					<?php
-					echo $before;
-
-					the_post_thumbnail( 'marianne-thumbnails' );
-
-					echo $after;
-					?>
+					<?php if ( ! in_array( 'link', $args, true ) ) : ?>
+						<?php the_post_thumbnail( 'marianne-thumbnails' ); ?>
+					<?php else : ?>
+						<a href="<?php echo esc_url( get_the_permalink() ); ?>">
+							<?php the_post_thumbnail( 'marianne-thumbnails' ); ?>
+						</a>
+					<?php endif; ?>
 
 					<?php if ( in_array( 'caption', $args, true ) && wp_get_attachment_caption( get_post_thumbnail_id() ) ) : ?>
 						<figcaption class="wp-caption-text text-secondary">
@@ -378,33 +349,8 @@ if ( ! function_exists( 'marianne_add_class' ) ) {
 		if ( true === $space_before ) {
 			echo ' ';
 		}
+
 		echo 'class="' . esc_attr( $classes ) . '"';
-	}
-}
-
-if ( ! function_exists( 'marianne_get_twitter_username_to_url' ) ) {
-	/**
-	 * Converts a Twitter username into a Twitter URL.
-	 *
-	 * @param string $username The Twitter username.
-	 *
-	 * @return string $url The Twitter URL associated to the username.
-	 *
-	 * @since Marianne 1.3
-	 */
-	function marianne_get_twitter_username_to_url( $username = '' ) {
-		$username = marianne_sanitize_twitter( $username );
-		$url      = '';
-
-		if ( $username ) {
-			if ( '@' === substr( $username, 0, 1 ) ) {
-				$username = substr( $username, 1 );
-			}
-
-			$url = 'https://twitter.com/' . $username;
-		}
-
-		return $url;
 	}
 }
 
@@ -467,7 +413,7 @@ if ( ! function_exists( 'marianne_svg_feather_icons' ) ) {
 				break;
 
 			case 'rss':
-				$svg_data['name']   = __( 'RSS', 'marianne' );
+				$svg_data['name']   = __( 'RSS Feed', 'marianne' );
 				$svg_data['shapes'] = '<path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle>';
 				break;
 
@@ -500,35 +446,36 @@ if ( ! function_exists( 'marianne_esc_svg' ) ) {
 	 * @link https://www.w3.org/TR/SVG2/shapes.html
 	 *
 	 * @param string $shapes Path to escape.
+	 * @param bool   $echo   Echo or return the value.
 	 *
 	 * @return string $shapes Escaped path.
 	 *
 	 * @since Marianne 1.3
 	 */
-	function marianne_esc_svg( $shapes = '' ) {
+	function marianne_esc_svg( $shapes = '', $echo = true ) {
 		$allowed_path = array(
-			'circle'  => array(
+			'circle'   => array(
 				'cx' => true,
 				'cy' => true,
 				'r'  => true,
 			),
-			'line'    => array(
+			'line'     => array(
 				'x1' => true,
 				'y1' => true,
 				'x2' => true,
 				'y2' => true,
 			),
-			'path'    => array(
+			'path'     => array(
 				'd'    => true,
 				'fill' => true,
 			),
-			'polygon' => array(
+			'polygon'  => array(
 				'points' => true,
 			),
 			'polyline' => array(
 				'points' => true,
 			),
-			'rect'    => array(
+			'rect'     => array(
 				'x'      => true,
 				'y'      => true,
 				'width'  => true,
@@ -538,9 +485,11 @@ if ( ! function_exists( 'marianne_esc_svg' ) ) {
 			),
 		);
 
-		$shapes = wp_kses( $shapes, $allowed_path );
-
-		return $shapes;
+		if ( true === $echo ) {
+			echo wp_kses( $shapes, $allowed_path );
+		} else {
+			return wp_kses( $shapes, $allowed_path );
+		}
 	}
 }
 
@@ -563,9 +512,7 @@ if ( ! function_exists( 'marianne_svg' ) ) {
 	function marianne_svg( $shapes = '', $class = 'feather', $size = array( 18, 18 ), $viewbox = '0 0 24 24' ) {
 		?>
 			<svg xmlns="http://www.w3.org/2000/svg" width="<?php echo esc_attr( absint( $size[0] ) ); ?>" height="<?php echo esc_attr( absint( $size[1] ) ); ?>" <?php marianne_add_class( $class, false ); ?> viewBox="<?php echo esc_attr( $viewbox ); ?>">
-				<?php
-				echo marianne_esc_svg( $shapes );
-				?>
+				<?php marianne_esc_svg( $shapes ); ?>
 			</svg>
 		<?php
 	}
@@ -662,7 +609,7 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 
 			if ( ! empty( $social_links ) ) :
 				?>
-					<div class="<?php echo esc_attr( $container_class ); ?>">
+					<div<?php marianne_add_class( $container_class ); ?>>
 						<ul class="social-links list-inline">
 							<?php
 							foreach ( $social_links as $site => $link ) {
@@ -706,9 +653,15 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 								}
 
 								if ( $link ) {
+									if ( false === marianne_get_theme_mod( 'marianne_social_target_blank' ) ) {
+										$target = '_self';
+									} else {
+										$target = '_blank';
+									}
+
 									?>
 										<li>
-											<a href="<?php echo esc_attr( $link ); ?>">
+											<a href="<?php echo esc_attr( $link ); ?>" target="<?php echo esc_attr( $target ); ?>" title="<?php echo esc_attr( $svg_name ); ?>" aria-label="<?php echo esc_attr( $svg_name ); ?>">
 												<div class="social-icon-container">
 													<?php marianne_svg( $svg_shapes, 'feather feather-' . $site ); ?>
 												</div>

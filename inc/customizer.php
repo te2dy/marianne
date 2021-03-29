@@ -181,9 +181,9 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'description' => __( 'Default: 480px.', 'marianne' ),
 			'type'        => 'radio',
 			'value'       => array(
-				'480'    => __( '480px', 'marianne' ),
-				'600'    => __( '600px', 'marianne' ),
-				'720'    => __( '720px', 'marianne' ),
+				'480' => __( '480px', 'marianne' ),
+				'600' => __( '600px', 'marianne' ),
+				'720' => __( '720px', 'marianne' ),
 			),
 			'live'        => true,
 		);
@@ -241,9 +241,9 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'description' => __( 'Default: left.', 'marianne' ),
 			'type'        => 'radio',
 			'value'       => array(
-				'left'    => __( 'Left', 'marianne' ),
-				'center'  => __( 'Center', 'marianne' ),
-				'right'   => __( 'Right', 'marianne' ),
+				'left'   => __( 'Left', 'marianne' ),
+				'center' => __( 'Center', 'marianne' ),
+				'right'  => __( 'Right', 'marianne' ),
 			),
 			'live'        => true,
 		);
@@ -306,9 +306,9 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'description' => __( 'Default: left.', 'marianne' ),
 			'type'        => 'radio',
 			'value'       => array(
-				'left'    => __( 'Left', 'marianne' ),
-				'center'  => __( 'Center', 'marianne' ),
-				'right'   => __( 'Right', 'marianne' ),
+				'left'   => __( 'Left', 'marianne' ),
+				'center' => __( 'Center', 'marianne' ),
+				'right'  => __( 'Right', 'marianne' ),
 			),
 			'live'        => true,
 		);
@@ -336,7 +336,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'id'          => 'location',
 			'title'       => __( 'Where do you want to display your social links?', 'marianne' ),
 			'description' => __( 'Default: footer.', 'marianne' ),
-			'type'        => 'radio',
+			'type'        => 'select',
 			'value'       => array(
 				'header' => __( 'Header', 'marianne' ),
 				'footer' => __( 'Footer', 'marianne' ),
@@ -347,13 +347,21 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_social',
 			'id'          => 'style',
 			'title'       => __( 'How do you want to display your social links?', 'marianne' ),
-			'description' => __( 'Default: round.', 'marianne' ),
-			'type'        => 'radio',
+			'description' => __( 'Default: square.', 'marianne' ),
+			'type'        => 'select',
 			'value'       => array(
-				'round'  => __( 'Round', 'marianne' ),
 				'square' => __( 'Square', 'marianne' ),
+				'round'  => __( 'Round', 'marianne' ),
 			),
 			'live'        => true,
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
+			'id'          => 'target_blank',
+			'title'       => __( 'Open links in a new tab.', 'marianne' ),
+			'description' => __( 'Default: unckecked.', 'marianne' ),
+			'type'        => 'checkbox',
 		);
 
 		$marianne_customizer_options[] = array(
@@ -688,21 +696,22 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_footer_text'    => '',
 
 			// Social Links.
-			'marianne_social_location'   => 'footer',
-			'marianne_social_style'      => 'round',
-			'marianne_social_twitter'    => '',
-			'marianne_social_facebook'   => '',
-			'marianne_social_instagram'  => '',
-			'marianne_social_linkedin'   => '',
-			'marianne_social_youtube'    => '',
-			'marianne_social_email'      => '',
-			'marianne_social_github'     => '',
-			'marianne_social_gitlab'     => '',
-			'marianne_social_link'       => '',
-			'marianne_social_phone'      => '',
-			'marianne_social_phone_type' => 'classic',
-			'marianne_social_rss'        => false,
-			'marianne_social_twitch'     => '',
+			'marianne_social_location'     => 'footer',
+			'marianne_social_style'        => 'square',
+			'marianne_social_target_blank' => false,
+			'marianne_social_twitter'      => '',
+			'marianne_social_facebook'     => '',
+			'marianne_social_instagram'    => '',
+			'marianne_social_linkedin'     => '',
+			'marianne_social_youtube'      => '',
+			'marianne_social_email'        => '',
+			'marianne_social_github'       => '',
+			'marianne_social_gitlab'       => '',
+			'marianne_social_link'         => '',
+			'marianne_social_phone'        => '',
+			'marianne_social_phone_type'   => 'classic',
+			'marianne_social_rss'          => false,
+			'marianne_social_twitch'       => '',
 
 			// Print Settings.
 			'marianne_print_comments_hide' => true,

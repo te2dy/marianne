@@ -2,11 +2,8 @@
 	"use strict";
 
 	$( document ).ready( function( $ ) {
-		/*
-		 *
-		 * UNUSED AND NOT MINIFIED YET
-		 *
-		 */
+		/* Show/hide controls depending on other control values. */
+
 		// The speed of animations.
 		var speed = 200;
 
@@ -25,7 +22,7 @@
 			}
 		});
 
-		// Show Custom Page Width only when 'Custom' is checked.
+		// Show Phone Type only when a phone number is typed.
 		if ( $( '#_customize-input-marianne_social_phone' ).length > 0 ) {
 			$( '#customize-control-marianne_social_phone_type' ).show();
 		} else {

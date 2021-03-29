@@ -45,5 +45,5 @@
 		</a>
 	</section>
 
-	<?php marianne_loop_comments( 'footer', 'entry-footer loop-footer text-secondary' ); ?>
+	<?php marianne_loop_comments( 'entry-footer loop-footer text-secondary' ); ?>
 </article>

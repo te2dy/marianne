@@ -21,8 +21,8 @@ if ( ! function_exists( 'marianne_admin_styles_scripts' ) ) {
 		$theme_version = wp_get_theme()->get( 'Version' );
 		$min           = marianne_minify();
 
-		wp_enqueue_style( 'marianne-admin-page', get_template_directory_uri() . "/assets/css/admin$min.css", array(), $theme_version );
-		wp_enqueue_script( 'marianne-admin-scripts', get_template_directory_uri() . "/assets/js/admin$min.js", array(), $theme_version, true );
+		wp_enqueue_style( 'marianne-admin-page', get_template_directory_uri() . "/assets/css/theme-page$min.css", array(), $theme_version );
+		wp_enqueue_script( 'marianne-admin-scripts', get_template_directory_uri() . "/assets/js/theme-page$min.js", array(), $theme_version, true );
 	}
 
 	add_action( 'admin_enqueue_scripts', 'marianne_admin_styles_scripts' );
@@ -137,7 +137,7 @@ function marianne_theme_page() {
 								?>
 							</p>
 
-							<p><a href="<?php echo esc_attr( $bitcoin_href ); ?>"><img id="btc-qr" src="<?php echo esc_attr( $btc_qr ); ?>" alt="<?php esc_html_e( 'Donate Bitcoin', 'marianne' ); ?>" /></a><p>
+							<p><a href="<?php echo esc_attr( $bitcoin_href ); ?>"><img id="btc-qr" src="<?php echo esc_attr( $btc_qr ); ?>" alt="<?php esc_attr_e( 'Donate Bitcoin', 'marianne' ); ?>" /></a><p>
 						</div>
 					</div>
 				</div>

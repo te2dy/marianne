@@ -250,8 +250,8 @@
 			value.bind( function( newval ) {
 				var target = '.site-social',
 					classes = {
-						'round': 'site-social-round',
-						'square': 'site-social-square'
+						'square': 'site-social-square',
+						'round': 'site-social-round'
 					};
 
 				marianneSelectRadioToggleClass( target, classes, newval );
