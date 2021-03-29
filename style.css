@@ -741,6 +741,10 @@ iframe {
 #menu-primary > .menu-item {
 	margin-bottom: .5em;
 }
+#menu-primary > .menu-item:last-child {
+	margin-right: 0;
+	padding-right: 0;
+}
 #menu-primary > .menu-item > a {
 	position: relative;
 }
@@ -794,6 +798,17 @@ iframe {
 }
 #menu-mobile-button {
 	display: none;
+}
+#header-search-box {
+	display: none;
+	margin-top: 2em;
+}
+.search #header-search-box {
+	display: block;
+}
+#header-search-box .search-field,
+#header-search-box .search-submit {
+	margin: 0;
 }
 
 @media (hover: none), (max-width: 500px) {

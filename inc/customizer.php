@@ -256,6 +256,14 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'live'        => true,
 		);
 
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_header',
+			'id'          => 'menu_search',
+			'title'       => __( 'Add a search button.', 'marianne' ),
+			'description' => __( 'It will be added as a primary menu item if a menu is set.', 'marianne' ),
+			'type'        => 'checkbox',
+		);
+
 		// Content Formatting.
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_content',
@@ -651,7 +659,8 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_global_text_shadow'       => false,
 
 			// Header Settings.
-			'marianne_header_align' => 'left',
+			'marianne_header_align'       => 'left',
+			'marianne_header_menu_search' => true,
 
 			// Content Formatting.
 			'marianne_content_text_align' => 'left',

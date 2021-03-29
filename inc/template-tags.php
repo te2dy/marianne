@@ -105,17 +105,36 @@ if ( ! function_exists( 'marianne_menu_primary' ) ) {
 	 * @return void
 	 */
 	function marianne_menu_primary() {
+		$search_button  = '<li class="menu-item">';
+		$search_button .= '<button id="header-search-button" class="button-inline button-expand" aria-haspopup="true" aria-expanded="false">';
+		$search_button .= esc_html_x( 'Search', 'The search button in the header.', 'marianne' );
+		$search_button .= '<span class="screen-reader-text">';
+		$search_button .= esc_html__( 'Open the search form', 'marianne' );
+		$search_button .= '</span>';
+		$search_button .= '</button>';
+		$search_button .= '</li>';
+
 		if ( has_nav_menu( 'primary' ) ) {
 			?>
 				<nav id="menu-primary-container" class="button" role="navigation" aria-label="<?php echo esc_attr__( 'Primary Menu', 'marianne' ); ?>">
-					<button id="menu-mobile-button" onclick="marianneExpandMobileMenu(this)"><?php esc_html_e( 'Menu', 'marianne' ); ?></button>
+					<button id="menu-mobile-button" onclick="marianneAriaExpand(this)"><?php esc_html_e( 'Menu', 'marianne' ); ?></button>
 
 					<?php
+					$items_wrap  = '<ul id="%1$s" class="%2$s">';
+					$items_wrap .= '%3$s';
+
+					if ( ! is_search() && true === marianne_get_theme_mod( 'marianne_header_menu_search' ) ) {
+						$items_wrap .= $search_button;
+					}
+
+					$items_wrap .= '</ul>';
+
 					wp_nav_menu(
 						array(
 							'container'      => '',
 							'depth'          => 2,
 							'item_spacing'   => 'discard',
+							'items_wrap'     => $items_wrap,
 							'menu_class'     => 'navigation-menu',
 							'menu_id'        => 'menu-primary',
 							'theme_location' => 'primary',
@@ -124,7 +143,30 @@ if ( ! function_exists( 'marianne_menu_primary' ) ) {
 					?>
 				</nav>
 			<?php
+		} elseif ( ! is_search() && true === marianne_get_theme_mod( 'marianne_header_menu_search' ) ) {
+			?>
+				<nav id="menu-primary-container" class="button" role="navigation" aria-label="<?php echo esc_attr__( 'Primary Menu', 'marianne' ); ?>">
+					<ul id="menu-primary" class="navigation-menu">
+						<?php echo $search_button; ?>
+					</ul>
+				</nav>
+			<?php
 		}
+		?>
+
+		<?php if ( true === marianne_get_theme_mod( 'marianne_header_menu_search' ) ) : ?>
+			<div id="header-search-box">
+				<?php
+				get_search_form(
+					array(
+						'aria_label' => esc_html__( 'Search the site', 'marianne' ),
+					)
+				);
+				?>
+			</div>
+		<?php endif; ?>
+
+		<?php
 	}
 }
 
@@ -754,12 +796,14 @@ if ( ! function_exists( 'marianne_post_links' ) ) {
 			?>
 				<div<?php marianne_add_class( $class ); ?>>
 					<nav class="post-navigation">
-						<?php if ( $marianne_newer_post ) : ?>
-							<div class="nav-links">
-						<?php else : ?>
-							<div class="nav-links-previous-only">
-						<?php endif; ?>
-
+						<?php
+						if ( $marianne_newer_post ) {
+							$nav_links_class = 'nav-links';
+						} else {
+							$nav_links_class = 'nav-links-previous-only';
+						}
+						?>
+						<div<?php marianne_add_class( $nav_links_class ); ?>>
 							<?php if ( $marianne_newer_post ) : ?>
 								<div class="nav-link-next">
 									<?php next_post_link( '%link', '‹ %title' ); ?>

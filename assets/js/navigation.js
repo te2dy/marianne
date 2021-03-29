@@ -72,11 +72,11 @@ function marianneExpandSubMenu( el ) {
 }
 
 /**
- * Handle clicks on mobile menu button.
+ * Handles aria changes on click.
  *
  * @param {Element} el - The element.
  */
-function marianneExpandMobileMenu( el ) {
+function marianneAriaExpand( el ) {
 	if ( "true" !== el.getAttribute( "aria-expanded" ) ) {
 		el.setAttribute( "aria-expanded", "true" );
 	} else {
@@ -217,4 +217,14 @@ function marianneExpandMobileMenu( el ) {
 		marianneAriaMenu( "#menu-primary" );
 	} );
 
+	// Enabled search form toggling in the header.
+	if ( ! $( 'body' ).hasClass( 'search' ) ) {
+		$( '#header-search-button' ).click( function() {
+			$( '#header-search-box' ).toggle();
+
+			$( this ).attr( 'aria-expanded', function( index, attr ) {
+				return attr === 'false' ? 'true' : 'false';
+			} );
+		} );
+	}
 } )( jQuery );
