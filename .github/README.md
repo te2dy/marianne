@@ -1,4 +1,5 @@
 # Marianne Theme for WordPress
+
 - 🇬🇧 **English**
 - 🇫🇷 [Français](/.github/LISEZMOI.md)
 
@@ -14,21 +15,12 @@ Its design is sober and modern, without frills. The small width of its pages and
 
 Marianne uses the system fonts. In concrete terms, it does not load new files to display your texts and thus gains in speed. In addition, the use of such fonts brings an appreciable graphic continuity to your digital ecosystem.
 
-Finally, this theme adapts to all formats. It keeps its characteristics on tablet and mobile.
+This is a customizable theme. You can add a logo, switch from a light to a dark color scheme, change the font, add links to your social accounts… It’s up to you!
 
-## Features
-Marianne has some simple features:
-
-- Logo.
-- Featured posts.
-- Featured images.
-- Menus.
-
-It is available in English and French.
-
-Marianne is in full development. Soon, you should be able to make many customizations, such as changing fonts, colors. You can download the beta version by following [this link](https://github.com/te2dy/marianne/releases/tag/1.3-beta) to try it.
+Finally, Marianne theme adapts to all formats. It keeps its characteristics on tablet and mobile.
 
 ### Install Marianne
+
 The Marianne theme can be downloaded from any WordPress installation from the [official WordPress theme directory](https://wordpress.org/themes/marianne/).
 
 To install it:
@@ -41,7 +33,9 @@ To install it:
 You can also download the latest version of Marianne from GitHub by following [this link](https://github.com/te2dy/marianne/releases/latest).
 
 ## Contribute
+
 Soon.
 
 ## Support
+
 Soon.
