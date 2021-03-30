@@ -61,4 +61,20 @@
 			$( this ).parent().find( '.slider' ).slider( 'value', resetValue );
 		} );
 	} );
+
+	/**
+	 * About Marianne link.
+	 *
+	 *
+	 */
+	wp.customize.sectionConstructor['marianne-about'] = wp.customize.Section.extend( {
+		// No events for this type of section.
+		attachEvents: () => {},
+
+		// Always make the section active.
+		isContextuallyActive: () => {
+			return true;
+		}
+	} );
+
 } )( jQuery, wp.customize );

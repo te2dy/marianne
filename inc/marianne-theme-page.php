@@ -21,8 +21,8 @@ if ( ! function_exists( 'marianne_admin_styles_scripts' ) ) {
 		$theme_version = wp_get_theme()->get( 'Version' );
 		$min           = marianne_minify();
 
-		wp_enqueue_style( 'marianne-admin-page', get_template_directory_uri() . "/assets/css/theme-page$min.css", array(), $theme_version );
-		wp_enqueue_script( 'marianne-admin-scripts', get_template_directory_uri() . "/assets/js/theme-page$min.js", array(), $theme_version, true );
+		wp_enqueue_style( 'marianne-admin-page', get_template_directory_uri() . "/assets/css/marianne-theme-page$min.css", array(), $theme_version );
+		wp_enqueue_script( 'marianne-admin-scripts', get_template_directory_uri() . "/assets/js/marianne-theme-page$min.js", array(), $theme_version, true );
 	}
 
 	add_action( 'admin_enqueue_scripts', 'marianne_admin_styles_scripts' );
@@ -40,7 +40,7 @@ function marianne_add_theme_page() {
 		esc_html__( 'About Marianne', 'marianne' ),
 		esc_html__( 'About Marianne', 'marianne' ),
 		'edit_theme_options',
-		'marianne-page',
+		'marianne-theme-page',
 		'marianne_theme_page'
 	);
 }

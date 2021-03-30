@@ -422,5 +422,6 @@ if ( ! function_exists( 'marianne_svg' ) ) {
 // Loads required files.
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/customizer.php';
-require get_template_directory() . '/inc/theme-page.php';
+require get_template_directory() . '/inc/marianne-theme-page.php';
 require get_template_directory() . '/inc/classes/class-marianne-customizer-control-slider.php';
+require get_template_directory() . '/inc/classes/class-marianne-customizer-section-about.php';

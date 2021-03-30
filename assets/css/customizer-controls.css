@@ -138,3 +138,14 @@
 .slider-custom-control .dashicons-image-rotate:hover {
 	color: #a7a7a7;
 }
+
+/* Theme Upsell */
+#accordion-section-marianne_about a {
+	color: #50575e;
+	text-decoration: none;
+}
+
+#accordion-section-marianne_about a:hover,
+#accordion-section-marianne_about a:focus {
+	color: #2271b1;
+}

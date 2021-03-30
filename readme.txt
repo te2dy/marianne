@@ -22,7 +22,7 @@ and intellectuals who want to present their work.
 == Changelog ==
 
 === 1.3 – April 1st, 2021 ===
-- Added: options to customize the theme.
+- Added: varous options to customize the theme.
 - Added: theme page.
 => Are donate links allowed?
 - Added: print info.

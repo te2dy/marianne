@@ -15,18 +15,13 @@
 if ( class_exists( 'WP_Customize_Control' ) ) {
 	/**
 	 * Instantiate the object.
-	 *
-	 * @access public
-	 *
-	 * @since Twenty Twenty-One 1.0
 	 */
 	class Marianne_Customizer_Control_Slider extends WP_Customize_Control {
 		/**
 		 * The control type.
 		 *
-		 * @since Marianne 1.3
-		 *
-		 * @var string
+		 * @access public
+		 * @var    string
 		 */
 		public $type = 'marianne_slider';
 
@@ -36,9 +31,6 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 * This simply prints the notice we need.
 		 *
 		 * @access public
-		 *
-		 * @since Marianne 1.3
-		 *
 		 * @return void
 		 */
 		public function render_content() {

@@ -118,6 +118,31 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			)
 		);
 
+		/**
+		 * Creates a new section linked to the About Marianne page.
+		 *
+		 * Based on the work of:
+		 *
+		 * @author    WPTRT <themes@wordpress.org>
+		 * @copyright 2019 WPTRT
+		 * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
+		 * @link      https://github.com/WPTRT/customize-section-button
+		 *
+		 * @since Marianne 1.3
+		 */
+		$wp_customize->register_section_type( 'Marianne_Customizer_Section_About' );
+
+		$wp_customize->add_section(
+			new Marianne_Customizer_Section_About(
+				$wp_customize,
+				'marianne_about',
+				array(
+					'title' => __( 'About Marianne', 'marianne' ),
+					'url'   => admin_url( 'themes.php?page=marianne-theme-page' ),
+				)
+			)
+		);
+
 		// Adds live preview to the site's name and description.
 		$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
 		$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
@@ -756,9 +781,10 @@ if ( ! function_exists( 'marianne_sanitize_radio_select' ) ) {
 	/**
 	 * Radio and select sanitization.
 	 *
-	 * Based on the work of the WordPress Theme Review Team.
+	 * Based on the work of the WordPress Theme Review Team:
 	 *
-	 * @link https://github.com/WPTT/code-examples/blob/master/customizer/sanitization-callbacks.php
+	 * @copyright Copyright (c) 2015, WordPress Theme Review Team
+	 * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU General Public License, v2 (or newer)
 	 *
 	 * @see sanitize_key()               https://developer.wordpress.org/reference/functions/sanitize_key/
 	 * @see $wp_customize->get_control() https://developer.wordpress.org/reference/classes/wp_customize_manager/get_control/
