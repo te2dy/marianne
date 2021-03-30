@@ -1064,7 +1064,7 @@ iframe {
 	display: flex;
 	justify-content: space-between;
 }
-.post-navigation .nav-links-previous-only .nav-link-previous {
+.post-navigation .nav-link-previous {
 	text-align: right;
 }
 
