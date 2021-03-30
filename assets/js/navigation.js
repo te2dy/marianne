@@ -21,7 +21,7 @@ function marianneCollapseMenuOnClickOutside( event ) {
 }
 
 /**
- * Toggle an attribute's value
+ * Toggle an attribute"s value
  *
  * @param {Element} el - The element.
  */
@@ -206,6 +206,11 @@ function marianneAriaExpand( el ) {
 					$( "#menu-mobile-button" ).attr( "aria-expanded", "false" );
 				}
 			} );
+
+			$( "#menu-mobile-button" ).click( function () {
+				$( "#header-search-button" ).attr( "aria-expanded", "false" );
+				$( "#header-search-box" ).hide();
+			} );
 		}
 	}
 
@@ -218,12 +223,12 @@ function marianneAriaExpand( el ) {
 	} );
 
 	// Enabled search form toggling in the header.
-	if ( ! $( 'body' ).hasClass( 'search' ) ) {
-		$( '#header-search-button' ).click( function() {
-			$( '#header-search-box' ).toggle();
+	if ( ! $( "body" ).hasClass( "search" ) ) {
+		$( "#header-search-button" ).click( function() {
+			$( "#header-search-box" ).toggle();
 
-			$( this ).attr( 'aria-expanded', function( index, attr ) {
-				return attr === 'false' ? 'true' : 'false';
+			$( this ).attr( "aria-expanded", function( index, attr ) {
+				return attr === "false" ? "true" : "false";
 			} );
 		} );
 	}

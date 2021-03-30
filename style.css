@@ -812,7 +812,7 @@ iframe {
 }
 #header-search-box {
 	display: none;
-	margin-top: 2em;
+	margin-top: -1em;
 }
 .search #header-search-box {
 	display: block;
@@ -902,6 +902,11 @@ iframe {
 	#menu-primary .sub-menu > .menu-item > a:hover,
 	#menu-primary .sub-menu > .menu-item > a:focus {
 		color: var(--color-link-hover);
+	}
+	#header-search-box {
+		margin-top: -2em;
+		border-left: 1px solid var(--color-border);
+		padding: 1em 0 0 .5em;
 	}
 }
 

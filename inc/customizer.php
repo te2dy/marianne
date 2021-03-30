@@ -260,7 +260,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_header',
 			'id'          => 'menu_search',
 			'title'       => __( 'Add a search button.', 'marianne' ),
-			'description' => __( 'It will be added as a primary menu item if a menu is set.', 'marianne' ),
+			'description' => __( 'It will be added as a primary menu item if a menu is set. Default: unchecked.', 'marianne' ),
 			'type'        => 'checkbox',
 		);
 
@@ -547,10 +547,10 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			}
 
 			if ( $option_name ) {
-				// Gets the default value of the option.
+				// Gets the default values of options.
 				$option_default = $options_default[ $option_name ];
 
-				// Gets the right sanitization function depending on the type of the option.
+				// Calls the right sanitization function depending on the type of the option.
 				if ( 'marianne_social_twitter' !== $option_name && 'marianne_social_email' !== $option_name && 'marianne_social_phone' !== $option_name ) {
 					switch ( $type ) {
 						case 'radio':
@@ -593,7 +593,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 
 				// Creates the setting.
 				$wp_customize->add_setting(
-					esc_html( $option_name ),
+					sanitize_key( $option_name ),
 					array(
 						'default'           => sanitize_key( $option_default ),
 						'capability'        => 'edit_theme_options',
@@ -602,8 +602,9 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 					)
 				);
 
-				$value_type = 'value';
-				if ( 'select' === $type || 'radio' === $type ) {
+				if ( 'select' !== $type && 'radio' !== $type ) {
+					$value_type = 'value';
+				} else {
 					$value_type = 'choices';
 				}
 
@@ -647,7 +648,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 
 if ( ! function_exists( 'marianne_options_default' ) ) {
 	/**
-	 * Sets the default option values.
+	 * Sets the default values of options.
 	 *
 	 * @param string $option The option to retrieve the default value (optional).
 	 *
@@ -659,13 +660,7 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 	function marianne_options_default( $option = '' ) {
 		$output = '';
 
-		/**
-		 * The array of default values.
-		 *
-		 * $options_default = array(
-		 *     'the_name_of_the_option' => 'Its default value',
-		 * );
-		 */
+		// The array of default values.
 		$options_default = array(
 			// Colors.
 			'colors_scheme'     => 'light',
@@ -681,7 +676,7 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			// Header Settings.
 			'marianne_header_align'       => 'left',
 			'marianne_header_logo_round'  => false,
-			'marianne_header_menu_search' => true,
+			'marianne_header_menu_search' => false,
 
 			// Content Formatting.
 			'marianne_content_text_align' => 'left',
@@ -719,8 +714,6 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_print_url'           => true,
 			'marianne_print_info'          => true,
 		);
-
-		$option = sanitize_key( $option );
 
 		if ( ! $option ) {
 			$output = $options_default;

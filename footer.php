@@ -17,12 +17,6 @@
 			?>
 			<footer <?php marianne_add_class( $marianne_footer_class, false ); ?> role="contentinfo">
 				<?php
-				if ( 'footer' === marianne_get_theme_mod( 'marianne_social_location' ) ) {
-					marianne_social_link();
-				}
-				?>
-
-				<?php
 				$marianne_footer_text = marianne_get_theme_mod( 'marianne_footer_text' );
 				if ( $marianne_footer_text ) {
 					?>
@@ -48,6 +42,12 @@
 						?>
 					</nav>
 				<?php endif; ?>
+
+				<?php
+				if ( 'footer' === marianne_get_theme_mod( 'marianne_social_location' ) ) {
+					marianne_social_link();
+				}
+				?>
 
 				<?php if ( false !== marianne_get_theme_mod( 'marianne_footer_mention' ) ) : ?>
 					<div id="site-footer-mention" class="site-footer-block">
