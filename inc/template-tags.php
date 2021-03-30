@@ -44,6 +44,7 @@ if ( ! function_exists( 'marianne_site_title' ) ) {
 	 * @return void
 	 */
 	function marianne_site_title( $class = 'site-title' ) {
+		$class .= ' site-title-weight-' . marianne_get_theme_mod( 'marianne_header_title_weight' );
 		?>
 
 		<?php if ( is_front_page() && ! is_paged() ) : ?>
@@ -82,6 +83,8 @@ if ( ! function_exists( 'marianne_site_description' ) ) {
 	 * @return void
 	 */
 	function marianne_site_description( $class = 'site-description text-secondary' ) {
+		$class .= ' site-desc-style-' . marianne_get_theme_mod( 'marianne_header_desc_style' );
+		$class .= ' site-desc-weight-' . marianne_get_theme_mod( 'marianne_header_desc_weight' );
 		?>
 
 		<?php if ( is_front_page() || is_home() ) : ?>

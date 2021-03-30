@@ -189,6 +189,46 @@
 			} );
 		} );
 
+		// Header Settings > Site Title Weight.
+		wp.customize( 'marianne_header_title_weight', function( value ) {
+			value.bind( function( newval ) {
+				var target = '.site-title',
+					classes = {
+						'normal': 'site-title-weight-normal',
+						'bold': 'site-title-weight-bold',
+						'bolder': 'site-title-weight-bolder'
+				};
+
+				marianneSelectRadioToggleClass( target, classes, newval );
+			} );
+		} );
+
+		// Header Settings > Site Description Weight.
+		wp.customize( 'marianne_header_desc_weight', function( value ) {
+			value.bind( function( newval ) {
+				var target = '.site-description',
+					classes = {
+						'thin': 'site-desc-weight-thin',
+						'normal': 'site-desc-weight-normal'
+				};
+
+				marianneSelectRadioToggleClass( target, classes, newval );
+			} );
+		} );
+
+		// Header Settings > Site Description Style.
+		wp.customize( 'marianne_header_desc_style', function( value ) {
+			value.bind( function( newval ) {
+				var target = '.site-description',
+					classes = {
+						'normal': 'site-desc-style-normal',
+						'italic': 'site-desc-style-italic'
+				};
+
+				marianneSelectRadioToggleClass( target, classes, newval );
+			} );
+		} );
+
 		// Content Formatting > Text Align.
 		wp.customize( 'marianne_content_text_align', function( value ) {
 			value.bind( function( newval ) {

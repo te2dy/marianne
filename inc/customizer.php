@@ -283,6 +283,46 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_header',
+			'id'          => 'title_weight',
+			'title'       => __( 'Font Weight of Site Title', 'marianne' ),
+			'description' => __( 'Default: bolder.', 'marianne' ),
+			'type'        => 'select',
+			'value'       => array(
+				'normal' => __( 'Normal', 'marianne' ),
+				'bold'   => __( 'Bold', 'marianne' ),
+				'bolder' => __( 'Bolder', 'marianne' ),
+			),
+			'live'        => true,
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_header',
+			'id'          => 'desc_weight',
+			'title'       => __( 'Font Weight of Site Description', 'marianne' ),
+			'description' => __( 'Default: normal.', 'marianne' ),
+			'type'        => 'select',
+			'value'       => array(
+				'thin'   => __( 'Thin', 'marianne' ),
+				'normal' => __( 'Normal', 'marianne' ),
+			),
+			'live'        => true,
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_header',
+			'id'          => 'desc_style',
+			'title'       => __( 'Font Style of Site Description', 'marianne' ),
+			'description' => __( 'Default: normal.', 'marianne' ),
+			'type'        => 'select',
+			'value'       => array(
+				'normal' => __( 'Normal', 'marianne' ),
+				'italic' => __( 'Italic', 'marianne' ),
+			),
+			'live'        => true,
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_header',
 			'id'          => 'menu_search',
 			'title'       => __( 'Add a search button.', 'marianne' ),
 			'description' => __( 'It will be added as a primary menu item if a menu is set. Default: unchecked.', 'marianne' ),
@@ -699,9 +739,12 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_global_text_shadow' => false,
 
 			// Header Settings.
-			'marianne_header_align'       => 'left',
-			'marianne_header_logo_round'  => false,
-			'marianne_header_menu_search' => false,
+			'marianne_header_align'        => 'left',
+			'marianne_header_title_weight' => '900',
+			'marianne_header_desc_weight'  => '400',
+			'marianne_header_desc_style'   => 'normal',
+			'marianne_header_logo_round'   => false,
+			'marianne_header_menu_search'  => false,
 
 			// Content Formatting.
 			'marianne_content_text_align' => 'left',

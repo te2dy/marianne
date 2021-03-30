@@ -206,6 +206,27 @@ Text Domain: marianne
 .site-header-align-right {
 	--site-header-align: right;
 }
+.site-title-weight-bolder {
+	--site-title-weight: 900;
+}
+.site-title-weight-bold {
+	--site-title-weight: 700;
+}
+.site-title-weight-normal {
+	--site-title-weight: 400;
+}
+.site-desc-weight-normal {
+	--site-desc-weight: 400;
+}
+.site-desc-weight-thin {
+	--site-desc-weight: 200;
+}
+.site-desc-style-normal {
+	--site-desc-style: normal;
+}
+.site-desc-style-italic {
+	--site-desc-style: italic;
+}
 
 /* Content */
 .text-align-left {
@@ -736,12 +757,13 @@ iframe {
 }
 .site-title {
 	font-size: 1.5em;
-	font-weight: 900;
+	font-weight: var(--site-title-weight);
 	margin: 0;
 }
 .site-description {
-	font-size:1em;
-	font-weight: 400;
+	font-size: 1em;
+	font-style: var(--site-desc-style);
+	font-weight: var(--site-desc-weight);
 	margin: .5em 0 0;
 }
 

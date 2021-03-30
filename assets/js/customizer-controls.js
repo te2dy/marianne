@@ -64,8 +64,6 @@
 
 	/**
 	 * About Marianne link.
-	 *
-	 *
 	 */
 	wp.customize.sectionConstructor['marianne-about'] = wp.customize.Section.extend( {
 		// No events for this type of section.
