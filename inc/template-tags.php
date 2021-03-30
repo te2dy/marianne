@@ -255,7 +255,6 @@ if ( ! function_exists( 'marianne_loop_navigation' ) ) {
 							<?php esc_html_e( 'Next page &rsaquo;', 'marianne' ); ?>
 						</a>
 					<?php } ?>
-					<?php next_posts_link(); ?>
 				</div>
 			<?php
 		}
