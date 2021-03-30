@@ -7,6 +7,8 @@
 
 Un thème minimaliste idéal pour les écrivains, les journalistes et tous les blogueurs qui souhaitent mettre leurs textes en valeur.
 
+[Démo](https://chezteddy.fr) | [Télécharger depuis WordPress.org](https://fr.wordpress.org/themes/marianne/) | [Télécharger depuis GitHub](https://github.com/te2dy/marianne/releases/latest)
+
 ## Présentation
 
 Marianne est un thème à la fois minimaliste, lisible, rapide et flexible.
@@ -19,7 +21,7 @@ C’est un thème personnalisable. Vous pouvez notamment ajouter un logo, bascul
 
 Enfin, Marianne s’adapte à tous les supports. Il conserve ses caractéristiques sur tablette et mobile.
 
-### Installer Marianne
+## Installer Marianne
 
 Le thème Marianne peut être téléchargé depuis n’importe quel installation de WordPress à partir du [répertoire officiel des thèmes WordPress](#)(https://wordpress.org/themes/marianne/).
 

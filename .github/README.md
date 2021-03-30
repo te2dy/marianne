@@ -7,6 +7,8 @@
 
 A minimalist theme ideal for writers, journalists and all bloggers who want to share their texts.
 
+[Demo](https://chezteddy.fr) | [Download from WordPress.org](https://wordpress.org/themes/marianne/) | [Download from GitHub](https://github.com/te2dy/marianne/releases/latest)
+
 ## Description
 
 Marianne is a minimalist, readable, fast and flexible theme.
@@ -19,7 +21,7 @@ This is a customizable theme. You can add a logo, switch from a light to a dark 
 
 Finally, Marianne theme adapts to all formats. It keeps its characteristics on tablet and mobile.
 
-### Install Marianne
+## Install Marianne
 
 The Marianne theme can be downloaded from any WordPress installation from the [official WordPress theme directory](https://wordpress.org/themes/marianne/).
 
