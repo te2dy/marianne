@@ -21,11 +21,12 @@ and intellectuals who want to present their work.
 
 == Changelog ==
 
-=== 1.3 – April 1st, 2021 ===
-- Added: varous options to customize the theme.
+=== 1.3 – March 30th, 2021 ===
+- Added: various options to customize the theme such as:
+   - colors;
+   - fonts;
+   - social links.
 - Added: theme page.
-=> Are donate links allowed?
-- Added: print info.
 - Added: .pot file for a more easily translatable theme.
 - Added: RSS widget styles.
 - Fixed: wrong content width.
@@ -33,9 +34,15 @@ and intellectuals who want to present their work.
 - Fixed: wrong mobile menu button color when the menu is expanded.
 - Fixed: too large width (100%) of the date link in the loop.
 - Updated: documentation and syntax of a lot of functions.
-- Updated: print styles.
+- Updated: styles.
 - Updated: theme description.
 - Removed: README.md file.
+
+=== 1.2.16 – March 24th, 2021 ===
+- Fixed: space missing between category names.
+
+=== 1.2.15 – March 21th, 2021 ===
+- Fixed: wrong $content_width value.
 
 === 1.2.14 – March 15th, 2021 ===
 - Fixed: unwanted message in the console.
@@ -148,6 +155,8 @@ GNU General Public License for more details.
 Marianne is based on the work of:
 - Twenty Twenty-One WordPress Theme, 2020 WordPress.org
   Twenty Twenty-One is distributed under the terms of the GNU GPL.
+- The WordPress Themes Team on GitHub
+  https://github.com/WPTT
 - neptune Wordpress Theme, 2020 Kairos Agency
   neptune is distributed under the terms of the MIT License
   https://github.com/neptune-greentech/neptune
