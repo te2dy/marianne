@@ -586,15 +586,27 @@ if ( ! function_exists( 'marianne_post_links' ) ) {
 						}
 						?>
 						<div<?php marianne_add_class( $nav_links_class ); ?>>
-							<?php if ( $marianne_newer_post ) : ?>
-								<div class="nav-link-next">
-									<?php next_post_link( '%link', '‹ %title' ); ?>
+							<?php if ( $marianne_older_post ) : ?>
+								<div class="nav-link-previous">
+									<div>
+										<strong><?php esc_html_e( 'Previous', 'marianne' ); ?></strong>
+									</div>
+
+									<div>
+										<?php previous_post_link( '%link', '‹ %title' ); ?>
+									</div>
 								</div>
 							<?php endif; ?>
 
-							<?php if ( $marianne_older_post ) : ?>
-								<div class="nav-link-previous">
-									<?php previous_post_link( '%link', '%title ›' ); ?>
+							<?php if ( $marianne_newer_post ) : ?>
+								<div class="nav-link-next">
+									<div>
+										<strong><?php esc_html_e( 'Next', 'marianne' ); ?></strong>
+									</div>
+
+									<div>
+										<?php next_post_link( '%link', '%title ›' ); ?>
+									</div>
 								</div>
 							<?php endif; ?>
 						</div>

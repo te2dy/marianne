@@ -1082,11 +1082,19 @@ iframe {
 .post-navigation {
 	margin: 2em 0;
 }
-.post-navigation .nav-links {
+.nav-links {
 	display: flex;
 	justify-content: space-between;
 }
-.post-navigation .nav-link-previous {
+.nav-link-previous,
+.nav-link-next {
+	max-width: 50%;
+}
+.nav-link-previous {
+	padding-right: .5em;
+}
+.nav-link-next {
+	padding-left: .5em;
 	text-align: right;
 }
 

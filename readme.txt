@@ -21,6 +21,10 @@ and intellectuals who want to present their work.
 
 == Changelog ==
 
+=== 1.3.1 – March 31th, 2021 ===
+- Added: new formatting options for the site's title and description.
+- Fixed: bug in the display of an option.
+
 === 1.3 – March 30th, 2021 ===
 - Added: various options to customize the theme such as:
    - colors;
