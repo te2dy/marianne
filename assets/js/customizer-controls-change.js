@@ -23,7 +23,7 @@
 		});
 
 		// Show Phone Type only when a phone number is typed.
-		if ( $( '#_customize-input-marianne_social_phone' ).length > 0 ) {
+		if ( $( '#_customize-input-marianne_social_phone' ).val() ) {
 			$( '#customize-control-marianne_social_phone_type' ).show();
 		} else {
 			$( '#customize-control-marianne_social_phone_type' ).hide();
