@@ -7,7 +7,7 @@ Requires PHP: 5.2
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-A minimal, lightweight and eco-friendly theme, perfect for writers.
+A minimalist theme ideal for writers, journalists and all bloggers who want to share their texts.
 
 == Description ==
 Marianne is a minimalist WordPress theme.
@@ -21,15 +21,28 @@ and intellectuals who want to present their work.
 
 == Changelog ==
 
-=== 1.2.15 – ? ===
+=== 1.3 – March 30th, 2021 ===
+- Added: various options to customize the theme such as:
+   - colors;
+   - fonts;
+   - social links.
+- Added: theme page.
 - Added: .pot file for a more easily translatable theme.
 - Added: RSS widget styles.
+- Fixed: wrong content width.
 - Fixed: hide mobile menu on click outside.
 - Fixed: wrong mobile menu button color when the menu is expanded.
 - Fixed: too large width (100%) of the date link in the loop.
 - Updated: documentation and syntax of a lot of functions.
+- Updated: styles.
 - Updated: theme description.
 - Removed: README.md file.
+
+=== 1.2.16 – March 24th, 2021 ===
+- Fixed: space missing between category names.
+
+=== 1.2.15 – March 21th, 2021 ===
+- Fixed: wrong $content_width value.
 
 === 1.2.14 – March 15th, 2021 ===
 - Fixed: unwanted message in the console.
@@ -142,6 +155,8 @@ GNU General Public License for more details.
 Marianne is based on the work of:
 - Twenty Twenty-One WordPress Theme, 2020 WordPress.org
   Twenty Twenty-One is distributed under the terms of the GNU GPL.
+- The WordPress Themes Team on GitHub
+  https://github.com/WPTT
 - neptune Wordpress Theme, 2020 Kairos Agency
   neptune is distributed under the terms of the MIT License
   https://github.com/neptune-greentech/neptune
@@ -153,3 +168,8 @@ Screenshot image: apple-desk-laptop-macbook-pro, by pixellaphoto
 Source: https://www.flickr.com/photos/137643065@N06/23699397893
 License: CC0 1.0 Public Domain Dedication
 License URI: https://creativecommons.org/publicdomain/zero/1.0/
+
+SVG Icons: Feather Icons, Copyright (c) 2013-2017 Cole Bemis
+Source: https://icons.getbootstrap.com/
+License: MIT
+License URI: https://opensource.org/licenses/mit-license.php

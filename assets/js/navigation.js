@@ -21,7 +21,7 @@ function marianneCollapseMenuOnClickOutside( event ) {
 }
 
 /**
- * Toggle an attribute's value
+ * Toggle an attribute"s value
  *
  * @param {Element} el - The element.
  */
@@ -72,11 +72,11 @@ function marianneExpandSubMenu( el ) {
 }
 
 /**
- * Handle clicks on mobile menu button.
+ * Handles aria changes on click.
  *
  * @param {Element} el - The element.
  */
-function marianneExpandMobileMenu( el ) {
+function marianneAriaExpand( el ) {
 	if ( "true" !== el.getAttribute( "aria-expanded" ) ) {
 		el.setAttribute( "aria-expanded", "true" );
 	} else {
@@ -206,6 +206,11 @@ function marianneExpandMobileMenu( el ) {
 					$( "#menu-mobile-button" ).attr( "aria-expanded", "false" );
 				}
 			} );
+
+			$( "#menu-mobile-button" ).click( function () {
+				$( "#header-search-button" ).attr( "aria-expanded", "false" );
+				$( "#header-search-box" ).hide();
+			} );
 		}
 	}
 
@@ -217,4 +222,14 @@ function marianneExpandMobileMenu( el ) {
 		marianneAriaMenu( "#menu-primary" );
 	} );
 
+	// Enabled search form toggling in the header.
+	if ( ! $( "body" ).hasClass( "search" ) ) {
+		$( "#header-search-button" ).click( function() {
+			$( "#header-search-box" ).toggle();
+
+			$( this ).attr( "aria-expanded", function( index, attr ) {
+				return attr === "false" ? "true" : "false";
+			} );
+		} );
+	}
 } )( jQuery );

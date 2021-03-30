@@ -29,7 +29,19 @@
 		?>
 	</header>
 
-	<section class="entry-content post-content">
+	<?php
+	$marianne_single_classes  = 'entry-content post-content';
+	$marianne_single_classes .= ' text-align-' . marianne_get_theme_mod( 'marianne_content_text_align' );
+
+	if ( false !== marianne_get_theme_mod( 'marianne_content_hyphens' ) ) {
+		$marianne_single_classes .= ' text-hyphens';
+	}
+
+	if ( true === marianne_get_theme_mod( 'marianne_print_url' ) ) {
+		$marianne_single_classes .= ' print-url-show';
+	}
+	?>
+	<section <?php marianne_add_class( $marianne_single_classes, false ); ?>>
 		<?php
 		the_content();
 
@@ -37,9 +49,21 @@
 		?>
 	</section>
 
-	<?php if ( has_tag() ) : ?>
-		<footer class="entry-footer post-footer text-secondary">
-			<?php the_tags(); ?>
+	<?php if ( has_tag() || true === marianne_get_theme_mod( 'marianne_post_nav' ) || true === marianne_get_theme_mod( 'marianne_print_info' ) ) : ?>
+		<footer class="entry-footer post-footer">
+			<div class="entry-tags post-tags text-secondary">
+				<?php the_tags(); ?>
+			</div>
+
+			<?php
+			if ( true === marianne_get_theme_mod( 'marianne_print_info' ) ) {
+				marianne_print_info();
+			}
+
+			if ( true === marianne_get_theme_mod( 'marianne_post_nav' ) ) {
+				marianne_post_links();
+			}
+			?>
 		</footer>
 	<?php endif; ?>
 </article>

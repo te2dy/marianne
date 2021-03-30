@@ -24,7 +24,14 @@ if ( post_password_required() ) {
 <hr class="separator">
 
 <?php if ( have_comments() ) : ?>
-	<div id="comments" class="comments-area">
+	<?php
+	$marianne_comment_class = 'comments-area';
+
+	if ( true === marianne_get_theme_mod( 'marianne_print_comments_hide' ) ) {
+		$marianne_comment_class .= ' comments-print-hide';
+	}
+	?>
+	<div id="comments"<?php marianne_add_class( $marianne_comment_class ); ?>>
 		<?php
 		$marianne_comment_title = sprintf(
 			esc_html(
