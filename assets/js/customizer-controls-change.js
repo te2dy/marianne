@@ -23,14 +23,14 @@
 		});
 
 		// Show Phone Type only when a phone number is typed.
-		if ( $( '#_customize-input-marianne_social_phone' ).val() ) {
+		if ( $( '#_customize-input-marianne_social_phone' ).val().length > 0 ) {
 			$( '#customize-control-marianne_social_phone_type' ).show();
 		} else {
 			$( '#customize-control-marianne_social_phone_type' ).hide();
 		}
 
 		$( '#_customize-input-marianne_social_phone' ).on( 'input', function () {
-			if ( $( this ).val() ) {
+			if ( $( this ).val().length > 0 ) {
 				$( '#customize-control-marianne_social_phone_type' ).show( speed );
 			} else {
 				$( '#customize-control-marianne_social_phone_type' ).hide( speed );
