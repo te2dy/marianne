@@ -1086,15 +1086,18 @@ iframe {
 	display: flex;
 	justify-content: space-between;
 }
-.nav-link-previous,
-.nav-link-next {
+.nav-links .nav-link-previous,
+.nav-links .nav-link-next {
 	max-width: 50%;
 }
-.nav-link-previous {
+.nav-links .nav-link-previous {
 	padding-right: .5em;
 }
-.nav-link-next {
+.nav-links .nav-link-next {
 	padding-left: .5em;
+	text-align: right;
+}
+.nav-links-one .nav-link-next {
 	text-align: right;
 }
 
@@ -1274,7 +1277,21 @@ iframe {
 /**
  * On small screens
  */
-@media all and (max-width: 500px) {
+@media all and (max-width: 848px) {
+	.page-width-720 {
+		margin-right: 4em;
+		margin-left: 4em;
+	}
+}
+
+@media all and (max-width: 664px) {
+	.page-width-600 {
+		margin-right: 2em;
+		margin-left: 2em;
+	}
+}
+
+@media all and (max-width: 532px) {
 	.site {
 		margin-right: 1em;
 		margin-left: 1em;
@@ -1293,6 +1310,25 @@ iframe {
 	.entry-loop.sticky figure {
 		margin-right: -.5rem;
 		margin-left: -.5rem;
+	}
+	.nav-links {
+		display: block;
+		justify-content: unset;
+	}
+	.nav-links .nav-link-previous,
+	.nav-links .nav-link-next {
+		max-width: unset;
+	}
+	.nav-links .nav-link-previous {
+		padding-right: 0;
+	}
+	.nav-links .nav-link-next {
+		padding-top: .5em;
+		padding-left: 0;
+		text-align: right;
+	}
+	.nav-links-one .nav-link-next {
+		text-align: right;
 	}
 	.comment-list .parent .comment {
 		padding: .5em 0 0 .5em;

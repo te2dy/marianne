@@ -264,7 +264,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'id'          => 'align',
 			'title'       => __( 'Header Align', 'marianne' ),
 			'description' => __( 'Default: left.', 'marianne' ),
-			'type'        => 'radio',
+			'type'        => 'select',
 			'value'       => array(
 				'left'   => __( 'Left', 'marianne' ),
 				'center' => __( 'Center', 'marianne' ),
@@ -369,7 +369,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'id'          => 'align',
 			'title'       => __( 'Footer Align', 'marianne' ),
 			'description' => __( 'Default: left.', 'marianne' ),
-			'type'        => 'radio',
+			'type'        => 'select',
 			'value'       => array(
 				'left'   => __( 'Left', 'marianne' ),
 				'center' => __( 'Center', 'marianne' ),

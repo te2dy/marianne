@@ -579,10 +579,10 @@ if ( ! function_exists( 'marianne_post_links' ) ) {
 				<div<?php marianne_add_class( $class ); ?>>
 					<nav class="post-navigation">
 						<?php
-						if ( $marianne_newer_post ) {
+						if ( $marianne_newer_post && $marianne_older_post ) {
 							$nav_links_class = 'nav-links';
 						} else {
-							$nav_links_class = 'nav-links-previous-only';
+							$nav_links_class = 'nav-links-one';
 						}
 						?>
 						<div<?php marianne_add_class( $nav_links_class ); ?>>
