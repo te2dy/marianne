@@ -24,6 +24,8 @@ and intellectuals who want to present their work.
 === 1.3.1 – March 31th, 2021 ===
 - Added: new formatting options for the site's title and description.
 - Fixed: bug in the display of an option.
+- Updated: next/previous post link style.
+- Updated: page width on mobile.
 
 === 1.3 – March 30th, 2021 ===
 - Added: various options to customize the theme such as:
