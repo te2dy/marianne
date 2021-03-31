@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: "
 "Marianne\n"
 "POT-Creation-Date: "
-"2021-03-30 11:49+0200\n"
+"2021-03-31 09:04+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Teddy\n"
 "Language-Team: Teddy\n"
@@ -42,7 +42,7 @@ msgstr ""
 "SearchPath-0: .\n"
 
 #: comments.php:39
-#: inc/template-tags.php:218
+#: inc/template-tags.php:221
 #, php-format
 msgid "%d comment"
 msgid_plural "%d comments"
@@ -83,8 +83,8 @@ msgid ""
 msgstr ""
 
 #: functions.php:57
-#: inc/template-tags.php:123
-#: inc/template-tags.php:152
+#: inc/template-tags.php:126
+#: inc/template-tags.php:155
 msgid "Primary Menu"
 msgstr ""
 
@@ -98,42 +98,42 @@ msgid "Open submenu"
 msgstr ""
 
 #: functions.php:277
-#: inc/customizer.php:459
+#: inc/customizer.php:499
 msgid "Email"
 msgstr ""
 
 #: functions.php:282
-#: inc/customizer.php:403
+#: inc/customizer.php:443
 msgid "Facebook"
 msgstr ""
 
 #: functions.php:287
-#: inc/customizer.php:435
+#: inc/customizer.php:475
 msgid "GitHub"
 msgstr ""
 
 #: functions.php:292
-#: inc/customizer.php:443
+#: inc/customizer.php:483
 msgid "GitLab"
 msgstr ""
 
 #: functions.php:297
-#: inc/customizer.php:411
+#: inc/customizer.php:451
 msgid "Instagram"
 msgstr ""
 
 #: functions.php:302
-#: inc/customizer.php:488
+#: inc/customizer.php:528
 msgid "Link"
 msgstr ""
 
 #: functions.php:307
-#: inc/customizer.php:427
+#: inc/customizer.php:467
 msgid "LinkedIn"
 msgstr ""
 
 #: functions.php:312
-#: inc/customizer.php:467
+#: inc/customizer.php:507
 msgid "Phone"
 msgstr ""
 
@@ -142,17 +142,17 @@ msgid "RSS Feed"
 msgstr ""
 
 #: functions.php:322
-#: inc/customizer.php:419
+#: inc/customizer.php:459
 msgid "YouTube"
 msgstr ""
 
 #: functions.php:327
-#: inc/customizer.php:451
+#: inc/customizer.php:491
 msgid "Twitch"
 msgstr ""
 
 #: functions.php:332
-#: inc/customizer.php:395
+#: inc/customizer.php:435
 msgid "Twitter"
 msgstr ""
 
@@ -364,25 +364,25 @@ msgid "Header Align"
 msgstr ""
 
 #: inc/customizer.php:266
-#: inc/customizer.php:331
+#: inc/customizer.php:371
 msgid "Default: left."
 msgstr ""
 
 #: inc/customizer.php:269
-#: inc/customizer.php:300
-#: inc/customizer.php:334
+#: inc/customizer.php:340
+#: inc/customizer.php:374
 msgid "Left"
 msgstr ""
 
 #: inc/customizer.php:270
-#: inc/customizer.php:301
-#: inc/customizer.php:335
+#: inc/customizer.php:341
+#: inc/customizer.php:375
 msgid "Center"
 msgstr ""
 
 #: inc/customizer.php:271
-#: inc/customizer.php:302
-#: inc/customizer.php:336
+#: inc/customizer.php:342
+#: inc/customizer.php:376
 msgid "Right"
 msgstr ""
 
@@ -401,10 +401,58 @@ msgstr ""
 
 #: inc/customizer.php:287
 msgid ""
-"Add a search button."
+"Font Weight of Site Title"
 msgstr ""
 
 #: inc/customizer.php:288
+msgid "Default: bolder."
+msgstr ""
+
+#: inc/customizer.php:291
+#: inc/customizer.php:306
+#: inc/customizer.php:318
+msgid "Normal"
+msgstr ""
+
+#: inc/customizer.php:292
+msgid "Bold"
+msgstr ""
+
+#: inc/customizer.php:293
+msgid "Bolder"
+msgstr ""
+
+#: inc/customizer.php:301
+msgid ""
+"Font Weight of Site "
+"Description"
+msgstr ""
+
+#: inc/customizer.php:302
+#: inc/customizer.php:315
+msgid "Default: normal."
+msgstr ""
+
+#: inc/customizer.php:305
+msgid "Thin"
+msgstr ""
+
+#: inc/customizer.php:314
+msgid ""
+"Font Style of Site "
+"Description"
+msgstr ""
+
+#: inc/customizer.php:319
+msgid "Italic"
+msgstr ""
+
+#: inc/customizer.php:327
+msgid ""
+"Add a search button."
+msgstr ""
+
+#: inc/customizer.php:328
 msgid ""
 "It will be added as a "
 "primary menu item if a "
@@ -412,11 +460,11 @@ msgid ""
 "unchecked."
 msgstr ""
 
-#: inc/customizer.php:296
+#: inc/customizer.php:336
 msgid "Text Align"
 msgstr ""
 
-#: inc/customizer.php:297
+#: inc/customizer.php:337
 msgid ""
 "It does not prevent to "
 "choose a particular "
@@ -424,15 +472,15 @@ msgid ""
 "editor. Default: left."
 msgstr ""
 
-#: inc/customizer.php:303
+#: inc/customizer.php:343
 msgid "Justify"
 msgstr ""
 
-#: inc/customizer.php:311
+#: inc/customizer.php:351
 msgid "Enable hyphenation."
 msgstr ""
 
-#: inc/customizer.php:312
+#: inc/customizer.php:352
 msgid ""
 "Break some words in half "
 "so that they continue on "
@@ -445,37 +493,37 @@ msgid ""
 "Default: disabled."
 msgstr ""
 
-#: inc/customizer.php:321
+#: inc/customizer.php:361
 msgid ""
 "Display links to "
 "previous and next posts."
 msgstr ""
 
-#: inc/customizer.php:322
+#: inc/customizer.php:362
 msgid "Default: hidden."
 msgstr ""
 
-#: inc/customizer.php:330
+#: inc/customizer.php:370
 msgid "Footer Align"
 msgstr ""
 
-#: inc/customizer.php:344
+#: inc/customizer.php:384
 msgid "Footer Text"
 msgstr ""
 
-#: inc/customizer.php:345
+#: inc/customizer.php:385
 msgid ""
 "You can write any text "
 "to add in the footer."
 msgstr ""
 
-#: inc/customizer.php:353
+#: inc/customizer.php:393
 msgid ""
 "Display the default "
 "footer mention."
 msgstr ""
 
-#: inc/customizer.php:354
+#: inc/customizer.php:394
 msgid ""
 "Useful to promote "
 "WordPress and Marianne "
@@ -483,116 +531,116 @@ msgid ""
 "Default: displayed."
 msgstr ""
 
-#: inc/customizer.php:362
+#: inc/customizer.php:402
 msgid ""
 "Where do you want to "
 "display your social "
 "links?"
 msgstr ""
 
-#: inc/customizer.php:363
+#: inc/customizer.php:403
 msgid "Default: footer."
 msgstr ""
 
-#: inc/customizer.php:366
+#: inc/customizer.php:406
 msgid "Header"
 msgstr ""
 
-#: inc/customizer.php:367
+#: inc/customizer.php:407
 msgid "Footer"
 msgstr ""
 
-#: inc/customizer.php:374
+#: inc/customizer.php:414
 msgid ""
 "How do you want to "
 "display your social "
 "links?"
 msgstr ""
 
-#: inc/customizer.php:375
+#: inc/customizer.php:415
 msgid "Default: square."
 msgstr ""
 
-#: inc/customizer.php:378
+#: inc/customizer.php:418
 msgid "Square"
 msgstr ""
 
-#: inc/customizer.php:379
+#: inc/customizer.php:419
 msgid "Round"
 msgstr ""
 
-#: inc/customizer.php:387
+#: inc/customizer.php:427
 msgid ""
 "Open links in a new tab."
 msgstr ""
 
-#: inc/customizer.php:388
-#: inc/customizer.php:497
+#: inc/customizer.php:428
+#: inc/customizer.php:537
 msgid "Default: unckecked."
 msgstr ""
 
-#: inc/customizer.php:396
+#: inc/customizer.php:436
 msgid ""
 "Your Twitter @username. "
 "Do not forget the at "
 "symbol."
 msgstr ""
 
-#: inc/customizer.php:404
+#: inc/customizer.php:444
 msgid ""
 "Your Facebook profile or "
 "page URL."
 msgstr ""
 
-#: inc/customizer.php:412
+#: inc/customizer.php:452
 msgid ""
 "Your Instagram profile "
 "URL."
 msgstr ""
 
-#: inc/customizer.php:420
+#: inc/customizer.php:460
 msgid ""
 "Your YouTube channel URL."
 msgstr ""
 
-#: inc/customizer.php:428
+#: inc/customizer.php:468
 msgid ""
 "Your LinkedIn profile "
 "URL."
 msgstr ""
 
-#: inc/customizer.php:436
+#: inc/customizer.php:476
 msgid ""
 "Your GitHub profile URL."
 msgstr ""
 
-#: inc/customizer.php:444
+#: inc/customizer.php:484
 msgid ""
 "Your GitLab profile URL."
 msgstr ""
 
-#: inc/customizer.php:452
+#: inc/customizer.php:492
 msgid ""
 "Your Twitch profile URL."
 msgstr ""
 
-#: inc/customizer.php:460
+#: inc/customizer.php:500
 msgid "Your email address."
 msgstr ""
 
-#: inc/customizer.php:468
+#: inc/customizer.php:508
 msgid ""
 "Your phone number "
 "(without spaces)."
 msgstr ""
 
-#: inc/customizer.php:475
+#: inc/customizer.php:515
 msgid ""
 "What type of phone link "
 "do you want to add?"
 msgstr ""
 
-#: inc/customizer.php:476
+#: inc/customizer.php:516
 msgid ""
 "This will automatically "
 "open the right "
@@ -601,35 +649,35 @@ msgid ""
 "will click on it."
 msgstr ""
 
-#: inc/customizer.php:479
+#: inc/customizer.php:519
 msgid "Classic"
 msgstr ""
 
-#: inc/customizer.php:480
+#: inc/customizer.php:520
 msgid "SMS"
 msgstr ""
 
-#: inc/customizer.php:481
+#: inc/customizer.php:521
 msgid "WhatsApp"
 msgstr ""
 
-#: inc/customizer.php:489
+#: inc/customizer.php:529
 msgid ""
 "Another link you want to "
 "display."
 msgstr ""
 
-#: inc/customizer.php:496
+#: inc/customizer.php:536
 msgid ""
 "Add a link to the RSS "
 "feed of your site."
 msgstr ""
 
-#: inc/customizer.php:505
+#: inc/customizer.php:545
 msgid "Hide comments."
 msgstr ""
 
-#: inc/customizer.php:506
+#: inc/customizer.php:546
 msgid ""
 "Check to hide comments "
 "when priting a post or "
@@ -638,11 +686,11 @@ msgid ""
 "hidden. Default: checked."
 msgstr ""
 
-#: inc/customizer.php:513
+#: inc/customizer.php:553
 msgid "Hide widgets."
 msgstr ""
 
-#: inc/customizer.php:514
+#: inc/customizer.php:554
 msgid ""
 "Check to hide your "
 "widgets when priting a "
@@ -650,12 +698,12 @@ msgid ""
 "checked."
 msgstr ""
 
-#: inc/customizer.php:521
+#: inc/customizer.php:561
 msgid ""
 "Display URL of links."
 msgstr ""
 
-#: inc/customizer.php:522
+#: inc/customizer.php:562
 msgid ""
 "URLs will be visible on "
 "print so that readers "
@@ -663,13 +711,13 @@ msgid ""
 "them. Default: checked."
 msgstr ""
 
-#: inc/customizer.php:529
+#: inc/customizer.php:569
 msgid ""
 "Display information "
 "related to printing."
 msgstr ""
 
-#: inc/customizer.php:530
+#: inc/customizer.php:570
 msgid ""
 "Adds the date the post "
 "or page was retrieved "
@@ -858,36 +906,36 @@ msgid ""
 "on GitHub</a>."
 msgstr ""
 
-#: inc/template-tags.php:114
+#: inc/template-tags.php:117
 msgctxt ""
 "The search button in the "
 "header."
 msgid "Search"
 msgstr ""
 
-#: inc/template-tags.php:116
+#: inc/template-tags.php:119
 msgid ""
 "Open the search form"
 msgstr ""
 
-#: inc/template-tags.php:124
+#: inc/template-tags.php:127
 msgid "Menu"
 msgstr ""
 
-#: inc/template-tags.php:166
+#: inc/template-tags.php:169
 msgid "Search the site"
 msgstr ""
 
-#: inc/template-tags.php:249
+#: inc/template-tags.php:252
 msgid ""
 "&lsaquo; Previous page"
 msgstr ""
 
-#: inc/template-tags.php:255
+#: inc/template-tags.php:258
 msgid "Next page &rsaquo;"
 msgstr ""
 
-#: inc/template-tags.php:524
+#: inc/template-tags.php:527
 #, php-format
 msgctxt ""
 "Use only on print."
@@ -896,11 +944,24 @@ msgid ""
 "(website time)."
 msgstr ""
 
-#: inc/template-tags.php:544
+#: inc/template-tags.php:547
 #, php-format
 msgctxt ""
 "Use only on print."
 msgid "Available at: %s"
+msgstr ""
+
+#: inc/template-tags.php:592
+msgctxt ""
+"Link to the previous "
+"post."
+msgid "Previous"
+msgstr ""
+
+#: inc/template-tags.php:604
+msgctxt ""
+"Link to the next post."
+msgid "Next"
 msgstr ""
 
 #: search.php:22
