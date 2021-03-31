@@ -740,8 +740,8 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 
 			// Header Settings.
 			'marianne_header_align'        => 'left',
-			'marianne_header_title_weight' => '900',
-			'marianne_header_desc_weight'  => '400',
+			'marianne_header_title_weight' => 'bolder',
+			'marianne_header_desc_weight'  => 'normal',
 			'marianne_header_desc_style'   => 'normal',
 			'marianne_header_logo_round'   => false,
 			'marianne_header_menu_search'  => false,
