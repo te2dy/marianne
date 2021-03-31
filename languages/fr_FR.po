@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marianne\n"
-"POT-Creation-Date: 2021-03-31 09:03+0200\n"
-"PO-Revision-Date: 2021-03-31 09:03+0200\n"
+"POT-Creation-Date: 2021-03-31 09:42+0200\n"
+"PO-Revision-Date: 2021-03-31 09:42+0200\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -734,26 +734,24 @@ msgstr ""
 msgid "Translate"
 msgstr "Traduire"
 
-#. translators: %1$s: The URL of the Marianne repository on GitHub. %2$s: The URL of the support forum of the theme on WordPress.org
+#. translators: %s: The URL of the language repository on GitHub.
 #: inc/marianne-theme-page.php:246
 #, php-format
 msgid ""
 "You want to use Marianne in your language? You can help me to translate it "
 "on <a href=\"%1$s\" target=\"_blank\">GitHub</a> where a .pot file is "
-"available, or the <a href=\"%2$s\" target=\"_blank\">WordPress translating "
-"platform</a>."
+"available."
 msgstr ""
 "Vous souhaitez utiliser Marianne dans votre langue&nbsp;? Vous pouvez "
-"m’aider à le traduire sur <a href=\"%1$s\" target=\"_blank\">GitHub</a> où "
-"un fichier .pot est disponible, ou sur la <a href=\"%2$s\" target=\"_blank"
-"\">plateforme de traduction de WordPress</a>."
+"m’aider à le traduire sur <a href=\"%s\" target=\"_blank\">GitHub</a> où un "
+"fichier .pot est disponible."
 
-#: inc/marianne-theme-page.php:255
+#: inc/marianne-theme-page.php:254
 msgid "Development"
 msgstr "Développement"
 
 #. translators: %s: The URL of the Marianne repository on GitHub.
-#: inc/marianne-theme-page.php:262
+#: inc/marianne-theme-page.php:261
 #, php-format
 msgid ""
 "There are probably many technical improvements to be made to this theme. You "

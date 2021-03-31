@@ -813,11 +813,7 @@ if ( ! function_exists( 'marianne_get_theme_mod' ) ) {
 		if ( $id && array_key_exists( $id, $options_default ) ) {
 			$default = $options_default[ $id ];
 
-			if ( get_theme_mod( $id, $default ) ) {
-				$output = get_theme_mod( $id, $default );
-			} else {
-				$output = $default;
-			}
+			$output = get_theme_mod( $id, $default );
 		}
 
 		return $output;
@@ -862,7 +858,7 @@ if ( ! function_exists( 'marianne_sanitize_checkbox' ) ) {
 	 * @since Marianne 1.3
 	 */
 	function marianne_sanitize_checkbox( $input ) {
-		return ( isset( $input ) && true === $input ) ? true : false;
+		return ( isset( $input ) && false !== $input ) ? true : false;
 	}
 }
 

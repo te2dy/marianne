@@ -61,7 +61,7 @@ function marianne_theme_page() {
 	$support_wp_link   = 'https://wordpress.org/support/theme/marianne';
 	$gh_link           = 'https://github.com/te2dy/marianne';
 	$gh_link_issues    = 'https://github.com/te2dy/marianne/issues';
-	$translate_wp_link = 'https://translate.wordpress.org/projects/wp-themes/marianne/';
+	$gh_link_translate = 'https://github.com/te2dy/marianne/tree/main/languages';
 	$bitcoin_address   = '1BTUsDokaDRsqn4dsyAY6bc2rCLes4Vssb';
 	$bitcoin_href      = 'bitcoin:' . $bitcoin_address;
 	$btc_qr            = ' data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASIAAAEiCAYAAABdvt+2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAGEUlEQVR4nO3dQZLaQBAAQXD4/1/GL7DHjvGoWiLzviABWzGHjtb78/l8XgChH/UFAAgRkBMiICdEQE6IgJwQATkhAnJCBOSECMgJEZATIiAnREBOiICcEAE5IQJyQgTkhAjICRGQEyIgJ0RAToiAnBABOSECckIE5IQIyAkRkPt55Zu93+8r3+5y9dO7dz/f3euvv9/Tn399f6eVv18nIiAnREBOiICcEAE5IQJyQgTkhAjIXTpHtFLP4aycniO5+xzQ6v3N4bQmf/5OREBOiICcEAE5IQJyQgTkhAjICRGQGzVHtHJ6DqKeA5m+T2d3Tqi+v/r7ffrvd4cTEZATIiAnREBOiICcEAE5IQJyQgTkbjVHdHfT51x237/eRzR9zonfcyICckIE5IQIyAkRkBMiICdEQE6IgJw5okFOz7nU+4BW6uey0XEiAnJCBOSECMgJEZATIiAnREBOiIDcreaI7r4v5ulzPLuvP/36d02/vpITEZATIiAnREBOiICcEAE5IQJyQgTkRs0RPX2fzO6+odN/v/Lt17/7+vyeExGQEyIgJ0RAToiAnBABOSECckIE5C6dI/r2fSz1PqL6/U87/f7f/vs9yYkIyAkRkBMiICdEQE6IgJwQATkhAnKXzhFNf25VPYdS7+tZqT//u+8Lmv77LzkRATkhAnJCBOSECMgJEZATIiAnREDu/blwOKGe41iZPqdSX9/p96/vb6We4zqtnFNyIgJyQgTkhAjICRGQEyIgJ0RAToiA3Kjnmp3ex1PPqdRzOLuf3+n7n/76u+rf72ROREBOiICcEAE5IQJyQgTkhAjICRGQu3Qf0bebPoe0+/71HNfdX3/lyf+qTkRAToiAnBABOSECckIE5IQIyAkRkLt0H9FK/VyqlXqfzcrTr+/0HM3pOal6DmjyviMnIiAnREBOiICcEAE5IQJyQgTkhAjIXTpHNHmO4W9M33cz/fNb8dy72b+vk5yIgJwQATkhAnJCBOSECMgJEZATIiBnH9E/mD6HsqueM6nvf1f9/dff3w4nIiAnREBOiICcEAE5IQJyQgTkhAjIjZojWnn6nMbuPp3d1689/fruPid1khMRkBMiICdEQE6IgJwQATkhAnJCBOQunSOq50R253ROz/GYMzmrfm7ayvR9WSc5EQE5IQJyQgTkhAjICRGQEyIgJ0RA7v25cLjg7s8FO/1RmVPa8/T7nzwHtMuJCMgJEZATIiAnREBOiICcEAE5IQJyo55rVu9zWZm+r6beR3P686nvv55Dmv757HAiAnJCBOSECMgJEZATIiAnREBOiIDcqDmi088d252TOD1nUc/ZrNz9/nfV+46mfz47nIiAnBABOSECckIE5IQIyAkRkBMiIDdqjmjXt8/h7Dp9//U+pumefn9/4kQE5IQIyAkRkBMiICdEQE6IgJwQAbn3Z/pwy4PcfQ6pvv5638+ueo6q/v38iRMRkBMiICdEQE6IgJwQATkhAnJCBOQu3Uf05H0qr9f556bVczTTr+/0+9dzOk/+/3EiAnJCBOSECMgJEZATIiAnREBOiIDcqOeaTd6X8nrNn1M5Pedy+rlm07//+vpOf3/l/TkRATkhAnJCBOSECMgJEZATIiAnREBu1BzRSr3v5vTrr+5v+pzQSj2Hs3L3fT93vn4nIiAnREBOiICcEAE5IQJyQgTkhAjI3WqO6Onu/lysel/SafU+oNN/X3IiAnJCBOSECMgJEZATIiAnREBOiICcOaIb2Z0jOT1nUs+5nJ7zqZ9rt/v3k+e0nIiAnBABOSECckIE5IQIyAkRkBMiIHerOaLJcxB/o94HU+8jOv33d56j+R/uvA/KiQjICRGQEyIgJ0RAToiAnBABOSECcqPmiOo5m+lOz3nszqE8/fur55zqfU0nOREBOSECckIE5IQIyAkRkBMiICdEQO79mTxcAHwFJyIgJ0RAToiAnBABOSECckIE5IQIyAkRkBMiICdEQE6IgJwQATkhAnJCBOSECMgJEZATIiAnREBOiICcEAE5IQJyQgTkhAjICRGQEyIgJ0RAToiAnBABOSECckIE5H4BBWAhU9cs+JgAAAAASUVORK5CYII=';
@@ -242,12 +242,11 @@ function marianne_theme_page() {
 					<?php
 					printf(
 						wp_kses(
-							/* translators: %1$s: The URL of the Marianne repository on GitHub. %2$s: The URL of the support forum of the theme on WordPress.org */
-							__( 'You want to use Marianne in your language? You can help me to translate it on <a href="%1$s" target="_blank">GitHub</a> where a .pot file is available, or the <a href="%2$s" target="_blank">WordPress translating platform</a>.', 'marianne' ),
+							/* translators: %s: The URL of the language repository on GitHub. */
+							__( 'You want to use Marianne in your language? You can help me to translate it on <a href="%1$s" target="_blank">GitHub</a> where a .pot file is available.', 'marianne' ),
 							$kses_allowed_html
 						),
-						esc_url( $gh_link ),
-						esc_url( $translate_wp_link )
+						esc_url( $gh_link_translate )
 					);
 					?>
 				</p>
