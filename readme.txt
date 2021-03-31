@@ -21,6 +21,11 @@ and intellectuals who want to present their work.
 
 == Changelog ==
 
+=== 1.3.2 – March 31th, 2021 ===
+- Fixed: default value of title and description's font weight.
+- Fixed: default hyphenation option value.
+- Updated: translation files.
+
 === 1.3.1 – March 31th, 2021 ===
 - Added: new formatting options for the site's title and description.
 - Fixed: bug in the display of an option.
