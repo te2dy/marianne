@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: "
 "Marianne\n"
 "POT-Creation-Date: "
-"2021-03-31 09:41+0200\n"
+"2021-03-31 14:19+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Teddy\n"
 "Language-Team: Teddy\n"
@@ -806,7 +806,7 @@ msgstr ""
 #: inc/marianne-theme-page.php:192
 #, php-format
 msgid ""
-"Open to the <a href=\"%s"
+"Open the <a href=\"%s"
 "\">Theme Customizer</a>. "
 "Then, go to Site "
 "Identity and select a "
@@ -817,12 +817,46 @@ msgstr ""
 
 #: inc/marianne-theme-page.php:200
 msgid ""
+"How can I set change "
+"fonts?"
+msgstr ""
+
+#: inc/marianne-theme-page.php:207
+#, php-format
+msgid ""
+"Open the <a href=\"%s"
+"\">Theme Customizer</a>. "
+"Then, go to Global "
+"Settings and select your "
+"favorite font family. Do "
+"not forget to press "
+"Publish."
+msgstr ""
+
+#: inc/marianne-theme-page.php:215
+msgid ""
+"Can I display social "
+"links with this theme?"
+msgstr ""
+
+#: inc/marianne-theme-page.php:222
+#, php-format
+msgid ""
+"Yes, you can! Open the "
+"<a href=\"%s\">Theme "
+"Customizer</a>. Then, go "
+"to Social Links. "
+"Everything is in there."
+msgstr ""
+
+#: inc/marianne-theme-page.php:230
+msgid ""
 "Where can I download the "
 "pro/premium version of "
 "Marianne?"
 msgstr ""
 
-#: inc/marianne-theme-page.php:202
+#: inc/marianne-theme-page.php:232
 msgid ""
 "There is no paid version "
 "of Marianne. You already "
@@ -831,32 +865,30 @@ msgid ""
 "without restrictions."
 msgstr ""
 
-#: inc/marianne-theme-page.php:204
+#: inc/marianne-theme-page.php:234
 msgid ""
-"I'm having issues with "
-"this theme, I can't get "
-"it to work properly."
+"I have other questions."
 msgstr ""
 
-#: inc/marianne-theme-page.php:211
+#: inc/marianne-theme-page.php:241
 #, php-format
 msgid ""
 "Please visit the <a href="
 "\"%s\" target=\"_blank"
 "\">support forum</a> and "
-"post your questions."
+"post them."
 msgstr ""
 
-#: inc/marianne-theme-page.php:221
+#: inc/marianne-theme-page.php:251
 msgid "Contribute"
 msgstr ""
 
-#: inc/marianne-theme-page.php:223
+#: inc/marianne-theme-page.php:253
 msgid ""
 "Issues & Feature Requests"
 msgstr ""
 
-#: inc/marianne-theme-page.php:230
+#: inc/marianne-theme-page.php:260
 #, php-format
 msgid ""
 "Please report issues or "
@@ -870,11 +902,11 @@ msgid ""
 "forum</a>."
 msgstr ""
 
-#: inc/marianne-theme-page.php:239
+#: inc/marianne-theme-page.php:269
 msgid "Translate"
 msgstr ""
 
-#: inc/marianne-theme-page.php:246
+#: inc/marianne-theme-page.php:276
 #, php-format
 msgid ""
 "You want to use Marianne "
@@ -886,11 +918,11 @@ msgid ""
 "pot file is available."
 msgstr ""
 
-#: inc/marianne-theme-page.php:254
+#: inc/marianne-theme-page.php:284
 msgid "Development"
 msgstr ""
 
-#: inc/marianne-theme-page.php:261
+#: inc/marianne-theme-page.php:291
 #, php-format
 msgid ""
 "There are probably many "
@@ -900,6 +932,14 @@ msgid ""
 "by <a href=\"%s\" target="
 "\"_blank\">contributing "
 "on GitHub</a>."
+msgstr ""
+
+#: inc/marianne-theme-page.php:314
+#, php-format
+msgid ""
+"Made in France by <a "
+"href=\"%s\" target="
+"\"_blank\">Teddy</a>"
 msgstr ""
 
 #: inc/template-tags.php:117

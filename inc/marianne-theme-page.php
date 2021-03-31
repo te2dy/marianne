@@ -189,7 +189,37 @@ function marianne_theme_page() {
 					printf(
 						wp_kses(
 							/* translators: %s: The URL of the Theme Customizer. */
-							__( 'Open to the <a href="%s">Theme Customizer</a>. Then, go to Site Identity and select a logo. Do not forget to press Publish for the logo to go live.', 'marianne' ),
+							__( 'Open the <a href="%s">Theme Customizer</a>. Then, go to Site Identity and select a logo. Do not forget to press Publish for the logo to go live.', 'marianne' ),
+							$kses_allowed_html
+						),
+						esc_url( admin_url( 'customize.php' ) )
+					);
+					?>
+				</p>
+
+				<p><strong><?php esc_html_e( 'How can I set change fonts?', 'marianne' ); ?></strong></p>
+
+				<p>
+					<?php
+					printf(
+						wp_kses(
+							/* translators: %s: The URL of the Theme Customizer. */
+							__( 'Open the <a href="%s">Theme Customizer</a>. Then, go to Global Settings and select your favorite font family. Do not forget to press Publish.', 'marianne' ),
+							$kses_allowed_html
+						),
+						esc_url( admin_url( 'customize.php' ) )
+					);
+					?>
+				</p>
+
+				<p><strong><?php esc_html_e( 'Can I display social links with this theme?', 'marianne' ); ?></strong></p>
+
+				<p>
+					<?php
+					printf(
+						wp_kses(
+							/* translators: %s: The URL of the Theme Customizer. */
+							__( 'Yes, you can! Open the <a href="%s">Theme Customizer</a>. Then, go to Social Links. Everything is in there.', 'marianne' ),
 							$kses_allowed_html
 						),
 						esc_url( admin_url( 'customize.php' ) )
@@ -201,14 +231,14 @@ function marianne_theme_page() {
 
 				<p><?php esc_html_e( 'There is no paid version of Marianne. You already have everything this theme can provide without restrictions.', 'marianne' ); ?></p>
 
-				<p><strong><?php esc_html_e( "I'm having issues with this theme, I can't get it to work properly.", 'marianne' ); ?></strong></p>
+				<p><strong><?php esc_html_e( 'I have other questions.', 'marianne' ); ?></strong></p>
 
 				<p>
 					<?php
 					printf(
 						wp_kses(
 							/* translators: %s: The URL of the support forum of the theme on WordPress.org */
-							__( 'Please visit the <a href="%s" target="_blank">support forum</a> and post your questions.', 'marianne' ),
+							__( 'Please visit the <a href="%s" target="_blank">support forum</a> and post them.', 'marianne' ),
 							$kses_allowed_html
 						),
 						esc_url( $support_wp_link )
@@ -266,6 +296,30 @@ function marianne_theme_page() {
 					?>
 				</p>
 			</div>
+
+
+			<footer class="marianne-admin-footer">
+				<div class="marianne-mif">
+					<div class="marianne-flag">
+						<span class="marianne-flag-blue"></span>
+						<span class="marianne-flag-white"></span>
+						<span class="marianne-flag-red"></span>
+					</div>
+
+					<div>
+						<?php
+						printf(
+							wp_kses(
+								/* translators: %s: The URL of the personal website of Teddy. */
+								__( 'Made in France by <a href="%s" target="_blank">Teddy</a>', 'marianne' ),
+								$kses_allowed_html
+							),
+							esc_url( 'https://chezteddy.fr/' )
+						);
+						?>
+					</div>
+				</div>
+			</footer>
 		</div>
 	<?php
 }

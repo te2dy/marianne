@@ -21,6 +21,10 @@ and intellectuals who want to present their work.
 
 == Changelog ==
 
+=== 1.3.3 – April 1st, 2021 ===
+- Fixed: various bugs in the Theme Customizer.
+- Updated: About Marianne page.
+
 === 1.3.2 – March 31th, 2021 ===
 - Fixed: default value of title and description's font weight.
 - Fixed: default hyphenation option value.
