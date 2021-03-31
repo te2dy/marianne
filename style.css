@@ -80,7 +80,6 @@ Text Domain: marianne
 		--color-body-text-secondary: var(--color-light-text-secondary);
 		--color-input-background: var(--color-light-input-background);
 		--color-input-text: var(--color-light-text-primary);
-		--color-button: var(--color-light-button-background);
 	}
 	.color-scheme-auto.link-hover-blue {
 		--color-link-hover: var(--color-light-blue);
@@ -104,7 +103,6 @@ Text Domain: marianne
 	--color-body-text-secondary: var(--color-dark-text-secondary);
 	--color-input-background: var(--color-dark-input-background);
 	--color-input-text: var(--color-dark-text-primary);
-	--color-button: var(--color-dark-button-background);
 }
 .color-scheme-dark.link-hover-blue {
 	--color-link-hover: var(--color-dark-blue);
