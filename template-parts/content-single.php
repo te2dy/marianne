@@ -33,7 +33,7 @@
 	$marianne_single_classes  = 'entry-content post-content';
 	$marianne_single_classes .= ' text-align-' . marianne_get_theme_mod( 'marianne_content_text_align' );
 
-	if ( false !== marianne_get_theme_mod( 'marianne_content_hyphens' ) ) {
+	if ( true === marianne_get_theme_mod( 'marianne_content_hyphens' ) ) {
 		$marianne_single_classes .= ' text-hyphens';
 	}
 

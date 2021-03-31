@@ -589,7 +589,7 @@ if ( ! function_exists( 'marianne_post_links' ) ) {
 							<?php if ( $marianne_older_post ) : ?>
 								<div class="nav-link-previous">
 									<div>
-										<strong><?php echo esc_html_x( 'Previous', 'Link to the previous post.' 'marianne' ); ?></strong>
+										<strong><?php echo esc_html_x( 'Previous', 'Link to the previous post.', 'marianne' ); ?></strong>
 									</div>
 
 									<div>
@@ -601,7 +601,7 @@ if ( ! function_exists( 'marianne_post_links' ) ) {
 							<?php if ( $marianne_newer_post ) : ?>
 								<div class="nav-link-next">
 									<div>
-										<strong><?php echo esc_html_x( 'Next', 'Link to the next post.' 'marianne' ); ?></strong>
+										<strong><?php echo esc_html_x( 'Next', 'Link to the next post.', 'marianne' ); ?></strong>
 									</div>
 
 									<div>

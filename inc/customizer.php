@@ -813,7 +813,11 @@ if ( ! function_exists( 'marianne_get_theme_mod' ) ) {
 		if ( $id && array_key_exists( $id, $options_default ) ) {
 			$default = $options_default[ $id ];
 
-			$output = get_theme_mod( $id, $default );
+			if ( get_theme_mod( $id, $default ) ) {
+				$output = get_theme_mod( $id, $default );
+			} else {
+				$output = $default;
+			}
 		}
 
 		return $output;
