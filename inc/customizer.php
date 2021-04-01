@@ -203,7 +203,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_global',
 			'id'          => 'page_width',
 			'title'       => __( 'Page Width', 'marianne' ),
-			'description' => __( 'Default: 480px.', 'marianne' ),
+			'description' => __( 'If you increase the width of the page, your featured images may become too small. In this case, you should regenerate their thumbnails. Plugins exist to do this easily. Default: 480px.', 'marianne' ),
 			'type'        => 'radio',
 			'value'       => array(
 				'480' => __( '480px', 'marianne' ),

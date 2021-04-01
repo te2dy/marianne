@@ -127,11 +127,6 @@
 					};
 
 				marianneSelectRadioToggleClass( target, classes, newval );
-
-				$( '.entry-thumbnail img' )
-					.removeAttr( 'sizes' )
-					.removeAttr( 'width' )
-					.removeAttr( 'height' );
 			} );
 		} );
 
