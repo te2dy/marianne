@@ -117,6 +117,8 @@ function marianne_theme_page() {
 
 					<a href="mailto:teddytheme@laposte.net" id="marianne-admin-button-thanks" class="button"><?php esc_html_e( 'Say thank you 🙏', 'marianne' ); ?></a>
 
+					<a href="https://wordpress.org/support/theme/marianne/reviews/" target="_blank" id="marianne-admin-button-rate" class="button"><?php esc_html_e( 'Rate this theme with ⭐', 'marianne' ); ?></a>
+
 					<button id="marianne-button-btc" class="button" aria-haspopup="true" aria-expanded="false" onclick="marianneAdminDonateButton(this)"><?php esc_html_e( 'Donate ₿', 'marianne' ); ?></button>
 
 					<div id="marianne-btc-donate-container">

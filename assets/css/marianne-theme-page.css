@@ -78,13 +78,16 @@
 .marianne-admin #btc-address a {
 	word-break: break-all;
 }
-#marianne-admin-button-thanks {
+#marianne-admin-button-thanks,
+#marianne-admin-button-rate {
 	background-color: green;
 	border-color: green;
 	color: #fff;
 }
 #marianne-admin-button-thanks:hover,
-#marianne-admin-button-thanks:focus {
+#marianne-admin-button-thanks:focus,
+#marianne-admin-button-rate:hover,
+#marianne-admin-button-rate:focus {
 	background-color: #006400;
 	border-color: #006400;
 }
