@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marianne\n"
-"POT-Creation-Date: 2021-04-02 14:05+0200\n"
-"PO-Revision-Date: 2021-04-02 14:06+0200\n"
+"POT-Creation-Date: 2021-04-02 14:43+0200\n"
+"PO-Revision-Date: 2021-04-02 14:44+0200\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #. translators: %d: comment count number.
 #. translators: %d: Comment count number.
-#: comments.php:39 inc/template-tags.php:221
+#: comments.php:39 inc/template-tags.php:229
 #, php-format
 msgid "%d comment"
 msgid_plural "%d comments"
@@ -56,7 +56,7 @@ msgstr "https://fr.wordpress.org/"
 msgid "https://wordpress.org/themes/marianne/"
 msgstr "https://wordpress.org/themes/marianne/"
 
-#: functions.php:57 inc/template-tags.php:126 inc/template-tags.php:155
+#: functions.php:57 inc/template-tags.php:115
 msgid "Primary Menu"
 msgstr "Menu principal"
 
@@ -822,51 +822,52 @@ msgstr "Conçu en France"
 msgid "by <a href=\"%s\">Teddy</a>"
 msgstr "par <a href=\"%s\">Teddy</a>"
 
-#: inc/template-tags.php:117
+#: inc/template-tags.php:116
+msgid "Menu"
+msgstr "Menu"
+
+#: inc/template-tags.php:125 inc/template-tags.php:153
 msgctxt "The search button in the header."
 msgid "Search"
 msgstr "Rechercher"
 
-#: inc/template-tags.php:119
+#: inc/template-tags.php:127 inc/template-tags.php:151
+#: inc/template-tags.php:156
 msgid "Open the search form"
 msgstr "Ouvre le formulaire de recherche"
 
-#: inc/template-tags.php:127
-msgid "Menu"
-msgstr "Menu"
-
-#: inc/template-tags.php:169
+#: inc/template-tags.php:177
 msgid "Search the site"
 msgstr "Recherche sur le site"
 
-#: inc/template-tags.php:252
+#: inc/template-tags.php:260
 msgid "&lsaquo; Previous page"
 msgstr "&lsaquo; Page précédente"
 
-#: inc/template-tags.php:258
+#: inc/template-tags.php:266
 msgid "Next page &rsaquo;"
 msgstr "Page suivante &rsaquo;"
 
 #. translators: %1$s: The retrieve date. %1$s: The retrieve time.
-#: inc/template-tags.php:527
+#: inc/template-tags.php:535
 #, php-format
 msgctxt "Use only on print."
 msgid "Retrieved %1$s at %2$s (website time)."
 msgstr "Consulté le %1$s à %2$s (heure du site)."
 
 #. translators: %s: The short link of the post.
-#: inc/template-tags.php:547
+#: inc/template-tags.php:555
 #, php-format
 msgctxt "Use only on print."
 msgid "Available at: %s"
 msgstr "Accessible sur&nbsp;: %s"
 
-#: inc/template-tags.php:592
+#: inc/template-tags.php:600
 msgctxt "Link to the previous post."
 msgid "Previous"
 msgstr "Précédent"
 
-#: inc/template-tags.php:604
+#: inc/template-tags.php:612
 msgctxt "Link to the next post."
 msgid "Next"
 msgstr "Suivant"
@@ -901,7 +902,3 @@ msgstr "Il n’y a rien ici"
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 "On dirait que rien n’a été trouvé ici. Essayez peut-être une recherche&nbsp;?"
-
-#, php-format
-#~ msgid "Made in France by <a href=\"%s\" target=\"_blank\">Teddy</a>"
-#~ msgstr "Conçu en France par <a href=\"%s\" target=\"_blank\">Teddy</a>"

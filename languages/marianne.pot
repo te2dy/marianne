@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: "
 "Marianne\n"
 "POT-Creation-Date: "
-"2021-04-02 14:05+0200\n"
+"2021-04-02 14:44+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Teddy\n"
 "Language-Team: Teddy\n"
@@ -42,7 +42,7 @@ msgstr ""
 "SearchPath-0: .\n"
 
 #: comments.php:39
-#: inc/template-tags.php:221
+#: inc/template-tags.php:229
 #, php-format
 msgid "%d comment"
 msgid_plural "%d comments"
@@ -83,8 +83,7 @@ msgid ""
 msgstr ""
 
 #: functions.php:57
-#: inc/template-tags.php:126
-#: inc/template-tags.php:155
+#: inc/template-tags.php:115
 msgid "Primary Menu"
 msgstr ""
 
@@ -976,36 +975,39 @@ msgid ""
 "a>"
 msgstr ""
 
-#: inc/template-tags.php:117
+#: inc/template-tags.php:116
+msgid "Menu"
+msgstr ""
+
+#: inc/template-tags.php:125
+#: inc/template-tags.php:153
 msgctxt ""
 "The search button in the "
 "header."
 msgid "Search"
 msgstr ""
 
-#: inc/template-tags.php:119
+#: inc/template-tags.php:127
+#: inc/template-tags.php:151
+#: inc/template-tags.php:156
 msgid ""
 "Open the search form"
 msgstr ""
 
-#: inc/template-tags.php:127
-msgid "Menu"
-msgstr ""
-
-#: inc/template-tags.php:169
+#: inc/template-tags.php:177
 msgid "Search the site"
 msgstr ""
 
-#: inc/template-tags.php:252
+#: inc/template-tags.php:260
 msgid ""
 "&lsaquo; Previous page"
 msgstr ""
 
-#: inc/template-tags.php:258
+#: inc/template-tags.php:266
 msgid "Next page &rsaquo;"
 msgstr ""
 
-#: inc/template-tags.php:527
+#: inc/template-tags.php:535
 #, php-format
 msgctxt ""
 "Use only on print."
@@ -1014,21 +1016,21 @@ msgid ""
 "(website time)."
 msgstr ""
 
-#: inc/template-tags.php:547
+#: inc/template-tags.php:555
 #, php-format
 msgctxt ""
 "Use only on print."
 msgid "Available at: %s"
 msgstr ""
 
-#: inc/template-tags.php:592
+#: inc/template-tags.php:600
 msgctxt ""
 "Link to the previous "
 "post."
 msgid "Previous"
 msgstr ""
 
-#: inc/template-tags.php:604
+#: inc/template-tags.php:612
 msgctxt ""
 "Link to the next post."
 msgid "Next"
