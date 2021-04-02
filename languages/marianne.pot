@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: "
 "Marianne\n"
 "POT-Creation-Date: "
-"2021-04-02 12:59+0200\n"
+"2021-04-02 14:05+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Teddy\n"
 "Language-Team: Teddy\n"
@@ -940,11 +940,20 @@ msgid ""
 "pot file is available."
 msgstr ""
 
-#: inc/marianne-theme-page.php:284
+#: inc/marianne-theme-page.php:287
+msgid ""
+"As I am not a native "
+"English speaker, you can "
+"also help me to improve "
+"all the default text "
+"strings of the theme."
+msgstr ""
+
+#: inc/marianne-theme-page.php:293
 msgid "Development"
 msgstr ""
 
-#: inc/marianne-theme-page.php:291
+#: inc/marianne-theme-page.php:300
 #, php-format
 msgid ""
 "There are probably many "
@@ -956,12 +965,15 @@ msgid ""
 "on GitHub</a>."
 msgstr ""
 
-#: inc/marianne-theme-page.php:314
+#: inc/marianne-theme-page.php:313
+msgid "Made in France"
+msgstr ""
+
+#: inc/marianne-theme-page.php:327
 #, php-format
 msgid ""
-"Made in France by <a "
-"href=\"%s\" target="
-"\"_blank\">Teddy</a>"
+"by <a href=\"%s\">Teddy</"
+"a>"
 msgstr ""
 
 #: inc/template-tags.php:117

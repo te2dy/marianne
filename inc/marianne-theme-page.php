@@ -281,6 +281,15 @@ function marianne_theme_page() {
 					?>
 				</p>
 
+				<p>
+					<?php
+					echo wp_kses(
+						__( 'As I am not a native English speaker, you can also help me to improve all the default text strings of the theme.', 'marianne' ),
+						$kses_allowed_html
+					);
+					?>
+				</p>
+
 				<p><strong><?php esc_html_e( 'Development', 'marianne' ); ?></strong></p>
 
 				<p>
@@ -300,6 +309,10 @@ function marianne_theme_page() {
 
 			<footer class="marianne-admin-footer">
 				<div class="marianne-mif">
+					<div>
+						<?php esc_html_e( 'Made in France', 'marianne' ); ?>
+					</div>
+
 					<div class="marianne-flag">
 						<span class="marianne-flag-blue"></span>
 						<span class="marianne-flag-white"></span>
@@ -311,7 +324,7 @@ function marianne_theme_page() {
 						printf(
 							wp_kses(
 								/* translators: %s: The URL of the personal website of Teddy. */
-								__( 'Made in France by <a href="%s" target="_blank">Teddy</a>', 'marianne' ),
+								__( 'by <a href="%s">Teddy</a>', 'marianne' ),
 								$kses_allowed_html
 							),
 							esc_url( 'https://chezteddy.fr/' )

@@ -110,17 +110,6 @@ if ( ! function_exists( 'marianne_menu_primary' ) ) {
 	 * @since Marianne 1.3
 	 */
 	function marianne_menu_primary() {
-
-		// The search button to display if the option is enabled in the Theme Customizer.
-		$search_button  = '<li class="menu-item">';
-		$search_button .= '<button id="header-search-button" class="button-inline button-expand" aria-haspopup="true" aria-expanded="false">';
-		$search_button .= esc_html_x( 'Search', 'The search button in the header.', 'marianne' );
-		$search_button .= '<span class="screen-reader-text">';
-		$search_button .= esc_html__( 'Open the search form', 'marianne' );
-		$search_button .= '</span>';
-		$search_button .= '</button>';
-		$search_button .= '</li>';
-
 		if ( has_nav_menu( 'primary' ) ) {
 			?>
 				<nav id="menu-primary-container" class="button" role="navigation" aria-label="<?php echo esc_attr__( 'Primary Menu', 'marianne' ); ?>">
@@ -131,7 +120,14 @@ if ( ! function_exists( 'marianne_menu_primary' ) ) {
 					$items_wrap .= '%3$s';
 
 					if ( ! is_search() && true === marianne_get_theme_mod( 'marianne_header_menu_search' ) ) {
-						$items_wrap .= $search_button;
+						$items_wrap .= '<li class="menu-item">';
+						$items_wrap .= '<button id="header-search-button" class="button-inline button-expand" aria-haspopup="true" aria-expanded="false">';
+						$items_wrap .= esc_html_x( 'Search', 'The search button in the header.', 'marianne' );
+						$items_wrap .= '<span class="screen-reader-text">';
+						$items_wrap .= esc_html__( 'Open the search form', 'marianne' );
+						$items_wrap .= '</span>';
+						$items_wrap .= '</button>';
+						$items_wrap .= '</li>';
 					}
 
 					$items_wrap .= '</ul>';
@@ -152,17 +148,29 @@ if ( ! function_exists( 'marianne_menu_primary' ) ) {
 			<?php
 		} elseif ( ! is_search() && true === marianne_get_theme_mod( 'marianne_header_menu_search' ) ) {
 			?>
-				<nav id="menu-primary-container" class="button" role="navigation" aria-label="<?php echo esc_attr__( 'Primary Menu', 'marianne' ); ?>">
-					<ul class="navigation-menu">
-						<?php echo $search_button; ?>
-					</ul>
-				</nav>
+				<div id="menu-primary-container" aria-label="<?php echo esc_attr__( 'Open the search form', 'marianne' ); ?>">
+					<button id="header-search-button" class="button-inline button-expand" aria-haspopup="true" aria-expanded="false">
+						<?php echo esc_html_x( 'Search', 'The search button in the header.', 'marianne' ); ?>
+
+						<span class="screen-reader-text">
+							<?php esc_html_e( 'Open the search form', 'marianne' ); ?>
+						</span>
+					</button>
+				</div>
 			<?php
 		}
 		?>
 
 		<?php if ( true === marianne_get_theme_mod( 'marianne_header_menu_search' ) ) : ?>
-			<div id="header-search-box">
+			<?php
+				if ( has_nav_menu( 'primary' ) ) {
+					$marianne_search_id = 'header-search-with-menu';
+				} else {
+					$marianne_search_id = 'header-search-without-menu';
+				}
+			?>
+
+			<div id="<?php echo esc_attr( $marianne_search_id ); ?>" class="header-search-box">
 				<?php
 				get_search_form(
 					array(

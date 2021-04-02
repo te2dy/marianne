@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marianne\n"
-"POT-Creation-Date: 2021-04-02 12:59+0200\n"
-"PO-Revision-Date: 2021-04-02 13:01+0200\n"
+"POT-Creation-Date: 2021-04-02 14:05+0200\n"
+"PO-Revision-Date: 2021-04-02 14:06+0200\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -789,12 +789,20 @@ msgstr ""
 "m’aider à le traduire sur <a href=\"%s\" target=\"_blank\">GitHub</a> où un "
 "fichier .pot est disponible."
 
-#: inc/marianne-theme-page.php:284
+#: inc/marianne-theme-page.php:287
+msgid ""
+"As I am not a native English speaker, you can also help me to improve all "
+"the default text strings of the theme."
+msgstr ""
+"Comme ma langue maternelle n’est pas l’anglais, vous pouvez aussi m’aider à "
+"améliorer l’ensemble des chaînes de texte par défaut de ce thème."
+
+#: inc/marianne-theme-page.php:293
 msgid "Development"
 msgstr "Développement"
 
 #. translators: %s: The URL of the Marianne repository on GitHub.
-#: inc/marianne-theme-page.php:291
+#: inc/marianne-theme-page.php:300
 #, php-format
 msgid ""
 "There are probably many technical improvements to be made to this theme. You "
@@ -804,11 +812,15 @@ msgstr ""
 "thème. Vous pouvez m’aider en <a href=\"%s\" target=\"_blank\">contribuant "
 "sur GitHub</a>."
 
+#: inc/marianne-theme-page.php:313
+msgid "Made in France"
+msgstr "Conçu en France"
+
 #. translators: %s: The URL of the personal website of Teddy.
-#: inc/marianne-theme-page.php:314
+#: inc/marianne-theme-page.php:327
 #, php-format
-msgid "Made in France by <a href=\"%s\" target=\"_blank\">Teddy</a>"
-msgstr "Conçu en France par <a href=\"%s\" target=\"_blank\">Teddy</a>"
+msgid "by <a href=\"%s\">Teddy</a>"
+msgstr "par <a href=\"%s\">Teddy</a>"
 
 #: inc/template-tags.php:117
 msgctxt "The search button in the header."
@@ -889,3 +901,7 @@ msgstr "Il n’y a rien ici"
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 "On dirait que rien n’a été trouvé ici. Essayez peut-être une recherche&nbsp;?"
+
+#, php-format
+#~ msgid "Made in France by <a href=\"%s\" target=\"_blank\">Teddy</a>"
+#~ msgstr "Conçu en France par <a href=\"%s\" target=\"_blank\">Teddy</a>"

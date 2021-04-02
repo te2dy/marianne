@@ -209,7 +209,7 @@ function marianneAriaExpand( el ) {
 
 			$( "#menu-mobile-button" ).click( function () {
 				$( "#header-search-button" ).attr( "aria-expanded", "false" );
-				$( "#header-search-box" ).hide();
+				$( ".header-search-box" ).hide();
 			} );
 		}
 	}
@@ -220,12 +220,13 @@ function marianneAriaExpand( el ) {
 
 	$( window ).on( "resize", function() {
 		marianneAriaMenu( "#menu-primary" );
+		$( ".header-search-box" ).hide();
 	} );
 
 	// Enabled search form toggling in the header.
 	if ( ! $( "body" ).hasClass( "search" ) ) {
 		$( "#header-search-button" ).click( function() {
-			$( "#header-search-box" ).toggle();
+			$( ".header-search-box" ).toggle();
 
 			$( this ).attr( "aria-expanded", function( index, attr ) {
 				return attr === "false" ? "true" : "false";
