@@ -217,7 +217,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_global',
 			'id'          => 'images_expand',
 			'title'       => __( 'Expand featured images that are not wide enough.', 'marianne' ),
-			'description' => __( 'This can make the images a bit blurry.', 'marianne' ),
+			'description' => __( 'This can make the images a bit blurry. Default: unchecked.', 'marianne' ),
 			'type'        => 'checkbox',
 			'live'        => true,
 		);
