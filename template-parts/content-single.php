@@ -25,7 +25,13 @@
 
 		the_title( '<h1 class="entry-title post-title">', '</h1>' );
 
-		marianne_the_post_thumbnail( 'entry-thumbnail post-thumbnail', array( 'caption' ) );
+		$marianne_thumbnail_class = 'entry-thumbnail post-thumbnail';
+
+		if ( false !== marianne_get_theme_mod( 'marianne_global_images_expand' ) ) {
+			$marianne_thumbnail_class .= ' entry-thumbnail-wide';
+		}
+
+		marianne_the_post_thumbnail( $marianne_thumbnail_class, array( 'caption' ) );
 		?>
 	</header>
 

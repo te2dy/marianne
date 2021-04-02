@@ -203,13 +203,22 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_global',
 			'id'          => 'page_width',
 			'title'       => __( 'Page Width', 'marianne' ),
-			'description' => __( 'If you increase the width of the page, your featured images may become too small. In this case, you should regenerate their thumbnails. Plugins exist to do this easily. Default: 480px.', 'marianne' ),
+			'description' => __( 'If you increase the width of the page, your featured images may become too small. In this case, you should try to regenerate their thumbnails. Plugins exist to do this easily. Default: 480px.', 'marianne' ),
 			'type'        => 'radio',
 			'value'       => array(
 				'480' => __( '480px', 'marianne' ),
 				'600' => __( '600px', 'marianne' ),
 				'720' => __( '720px', 'marianne' ),
 			),
+			'live'        => true,
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_global',
+			'id'          => 'images_expand',
+			'title'       => __( 'Expand featured images that are not wide enough.', 'marianne' ),
+			'description' => __( 'This can make the images a bit blurry.', 'marianne' ),
+			'type'        => 'checkbox',
 			'live'        => true,
 		);
 
@@ -732,11 +741,12 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'colors_link_hover' => 'blue',
 
 			// Global.
-			'marianne_global_page_width'  => '480',
-			'marianne_global_font_family' => 'sans-serif',
-			'marianne_global_font_size'   => 100,
-			'marianne_global_font_smooth' => false,
-			'marianne_global_text_shadow' => false,
+			'marianne_global_page_width'    => '480',
+			'marianne_global_images_expand' => false,
+			'marianne_global_font_family'   => 'sans-serif',
+			'marianne_global_font_size'     => 100,
+			'marianne_global_font_smooth'   => false,
+			'marianne_global_text_shadow'   => false,
 
 			// Header Settings.
 			'marianne_header_align'        => 'left',

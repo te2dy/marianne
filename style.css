@@ -190,9 +190,6 @@ Text Domain: marianne
 .page-width-720 {
 	--page-width: 720px;
 }
-.page-width-custom {
-	--page-width: inherit;
-}
 
 /* Header */
 .site-header-align-left {
@@ -991,6 +988,9 @@ iframe {
 .page-title {
 	font-size: 1.5em;
 	margin: 1em 0;
+}
+.entry-thumbnail-wide .wp-post-image {
+	width: var(--page-width);
 }
 .post-content p,
 .page-content p {

@@ -28,7 +28,15 @@
 			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 		</h3>
 
-		<?php marianne_the_post_thumbnail( 'entry-thumbnail loop-thumbnail', array( 'link' ) ); ?>
+		<?php
+		$marianne_thumbnail_class = 'entry-thumbnail loop-thumbnail';
+
+		if ( false !== marianne_get_theme_mod( 'marianne_global_images_expand' ) ) {
+			$marianne_thumbnail_class .= ' entry-thumbnail-wide';
+		}
+
+		marianne_the_post_thumbnail( $marianne_thumbnail_class, array( 'link' ) );
+		?>
 	</header>
 
 	<?php

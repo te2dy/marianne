@@ -130,6 +130,16 @@
 			} );
 		} );
 
+		// Global > Expand images.
+		wp.customize( 'marianne_global_images_expand', function( value ) {
+			value.bind( function( newval ) {
+				var target = '.entry-thumbnail',
+					classToAdd = 'entry-thumbnail-wide';
+
+				marianneCheckboxToggleClass( target, classToAdd, newval );
+			} );
+		} );
+
 		// Global > Font Family.
 		wp.customize( 'marianne_global_font_family', function( value ) {
 			value.bind( function( newval ) {
