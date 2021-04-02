@@ -22,8 +22,8 @@ if ( ! function_exists( 'marianne_customizer_scripts_styles' ) ) {
 		$theme_version = wp_get_theme()->get( 'Version' );
 		$min           = marianne_minify();
 
-		// Enqueue custom controls files.
-		wp_enqueue_style( 'marianne-customizer-controls', get_template_directory_uri() . "/assets/css/customizer-controls$min.css", array(), $theme_version );
+		// Enqueue custom sections and controls files.
+		wp_enqueue_style( 'marianne-customizer-controls', get_template_directory_uri() . "/assets/css/customizer-controls$min.css", array( 'dashicons' ), $theme_version );
 		wp_enqueue_script( 'marianne-customizer-controls', get_template_directory_uri() . "/assets/js/customizer-controls$min.js", array( 'jquery', 'jquery-ui-slider', 'customize-preview' ), $theme_version, true );
 
 		// Enqueue the script that shows/hides other controls depending on the context.

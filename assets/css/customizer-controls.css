@@ -140,11 +140,26 @@
 }
 
 /* Theme Upsell */
+#accordion-section-marianne_about .accordion-section-title {
+	padding-left: 30px;
+}
+#accordion-section-marianne_about .accordion-section-title::before {
+	content: "\f341";
+	color: #a7aaad;
+	top: calc(50% - 10px);
+	position: absolute;
+	left: 10px;
+	float: left;
+	font: normal 20px/1 dashicons;
+	display: block;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-decoration: none;
+}
 #accordion-section-marianne_about a {
 	color: #50575e;
 	text-decoration: none;
 }
-
 #accordion-section-marianne_about a:hover,
 #accordion-section-marianne_about a:focus {
 	color: #2271b1;

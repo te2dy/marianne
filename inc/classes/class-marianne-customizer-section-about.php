@@ -77,11 +77,12 @@ if ( class_exists( 'WP_Customize_Section' ) ) {
 		protected function render_template() {
 			?>
 				<li id="accordion-section-{{ data.id }}" class="accordion-section control-section control-section-{{ data.type }} cannot-expand">
+
 					<h3 class="accordion-section-title">
-						<a href="{{ data.url }}">
+						<a href="{{ data.url }}" title="<?php esc_html_e( 'Close the Customizer and go to About Marianne page', 'marianne' ); ?>">
 							{{ data.title }}
 
-							<span class="dashicons dashicons-admin-links"></span>
+							<span class="screen-reader-text"><?php esc_html_e( 'Close the Customizer and go to About Marianne page', 'marianne' ); ?></span>
 						</a>
 					</h3>
 				</li>
