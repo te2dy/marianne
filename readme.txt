@@ -25,6 +25,7 @@ and intellectuals who want to present their work.
 - Added: option to expand to small featured images.
 - Fixed: various bugs in the Theme Customizer.
 - Updated: About Marianne page.
+- Updated: search button.
 - Removed: unused CSS rules.
 
 === 1.3.2 – March 31th, 2021 ===
