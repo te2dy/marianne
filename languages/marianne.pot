@@ -1,438 +1,94 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: "
-"Marianne\n"
-"POT-Creation-Date: "
-"2021-04-02 14:44+0200\n"
-"PO-Revision-Date: \n"
-"Last-Translator: Teddy\n"
-"Language-Team: Teddy\n"
+"Project-Id-Version: Marianne\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-02 15:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/"
-"plain; charset=UTF-8\n"
-"Content-Transfer-"
-"Encoding: 8bit\n"
-"Plural-Forms: "
-"nplurals=2; plural=n != "
-"1;\n"
-"X-Textdomain-Support: "
-"yesX-Generator: Poedit "
-"1.6.4\n"
-"X-Poedit-SourceCharset: "
-"UTF-8\n"
-"X-Poedit-KeywordsList: "
-"__;_e;esc_html_e;"
-"esc_html_x:1,2c;"
-"esc_html__;esc_attr_e;"
-"esc_attr_x:1,2c;"
-"esc_attr__;_ex:1,2c;"
-"_nx:4c,1,2;"
-"_nx_noop:4c,1,2;_x:1,2c;"
-"_n:1,2;_n_noop:1,2;"
-"__ngettext:1,2;"
-"__ngettext_noop:1,2;_c,"
-"_nc:4c,1,2\n"
-"X-Poedit-Basepath: ..\n"
-"Language: en_US\n"
-"X-Generator: Poedit "
-"2.4.2\n"
-"X-Poedit-"
-"SearchPath-0: .\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.2; wp-5.7\n"
+"X-Domain: marianne"
 
-#: comments.php:39
-#: inc/template-tags.php:229
+#. %d: comment count number.
+#. %d: Comment count number.
+#: comments.php:39 inc/template-tags.php:229
 #, php-format
 msgid "%d comment"
 msgid_plural "%d comments"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:50
-msgid ""
-"Older comments &rsaquo;"
-msgstr ""
-
 #: comments.php:51
+msgid "&lsaquo; Newer comments"
+msgstr ""
+
+#: inc/template-tags.php:260
+msgid "&lsaquo; Previous page"
+msgstr ""
+
+#. Description of the theme
 msgid ""
-"&lsaquo; Newer comments"
+"A minimalist theme ideal for writers, journalists and all bloggers who want "
+"to share their texts."
 msgstr ""
 
-#: footer.php:31
-#: functions.php:58
-msgid "Footer Menu"
+#: inc/customizer.php:209
+msgctxt "A width in pixels"
+msgid "480px"
 msgstr ""
 
-#: footer.php:57
-#, php-format
-msgctxt "Site footer text"
-msgid ""
-"Powered by %1$s and %2$s"
+#: inc/customizer.php:210
+msgctxt "A width in pixels"
+msgid "600px"
 msgstr ""
 
-#: footer.php:58
-msgid ""
-"https://wordpress.org/"
+#: inc/customizer.php:211
+msgctxt "A width in pixels"
+msgid "720px"
 msgstr ""
 
-#: footer.php:59
-msgid ""
-"https://wordpress.org/"
-"themes/marianne/"
-msgstr ""
-
-#: functions.php:57
-#: inc/template-tags.php:115
-msgid "Primary Menu"
-msgstr ""
-
-#: functions.php:189
-#: inc/marianne-theme-page.php:116
-msgid "Widgets"
-msgstr ""
-
-#: functions.php:222
-msgid "Open submenu"
-msgstr ""
-
-#: functions.php:277
-#: inc/customizer.php:508
-msgid "Email"
-msgstr ""
-
-#: functions.php:282
-#: inc/customizer.php:452
-msgid "Facebook"
-msgstr ""
-
-#: functions.php:287
-#: inc/customizer.php:484
-msgid "GitHub"
-msgstr ""
-
-#: functions.php:292
-#: inc/customizer.php:492
-msgid "GitLab"
-msgstr ""
-
-#: functions.php:297
-#: inc/customizer.php:460
-msgid "Instagram"
-msgstr ""
-
-#: functions.php:302
-#: inc/customizer.php:537
-msgid "Link"
-msgstr ""
-
-#: functions.php:307
-#: inc/customizer.php:476
-msgid "LinkedIn"
-msgstr ""
-
-#: functions.php:312
-#: inc/customizer.php:516
-msgid "Phone"
-msgstr ""
-
-#: functions.php:317
-msgid "RSS Feed"
-msgstr ""
-
-#: functions.php:322
-#: inc/customizer.php:468
-msgid "YouTube"
-msgstr ""
-
-#: functions.php:327
-#: inc/customizer.php:500
-msgid "Twitch"
-msgstr ""
-
-#: functions.php:332
-#: inc/customizer.php:444
-msgid "Twitter"
-msgstr ""
-
-#: header.php:43
-msgid "Skip to content"
-msgstr ""
-
-#: inc/customizer.php:73
-msgid "Global Settings"
-msgstr ""
-
-#: inc/customizer.php:80
-msgid "Header Settings"
-msgstr ""
-
-#: inc/customizer.php:87
-msgid "Content Formatting"
-msgstr ""
-
-#: inc/customizer.php:88
-msgid ""
-"The following settings "
-"apply to the main "
-"content of posts and "
-"pages."
-msgstr ""
-
-#: inc/customizer.php:95
-msgid "Post Settings"
-msgstr ""
-
-#: inc/customizer.php:102
-msgid "Footer Settings"
-msgstr ""
-
-#: inc/customizer.php:109
-msgid "Social Links"
-msgstr ""
-
-#: inc/customizer.php:116
-msgid "Print Settings"
-msgstr ""
-
-#: inc/customizer.php:117
-msgid ""
-"These settings only "
-"apply to the printing of "
-"the pages of your site."
-msgstr ""
-
+#: inc/marianne-theme-page.php:40 inc/marianne-theme-page.php:41
 #: inc/customizer.php:140
-#: inc/marianne-theme-page.php:40
-#: inc/marianne-theme-page.php:41
 msgid "About Marianne"
 msgstr ""
 
-#: inc/customizer.php:175
-msgid "Color Scheme"
+#: inc/customizer.php:545
+msgid "Add a link to the RSS feed of your site."
 msgstr ""
 
-#: inc/customizer.php:176
+#: inc/customizer.php:336
+msgid "Add a search button."
+msgstr ""
+
+#: inc/customizer.php:579
 msgid ""
-"The automatic mode "
-"chooses between light "
-"and dark color scheme "
-"depending on the "
-"settings of the "
-"operating system or "
-"browser of your "
-"visitors. The background "
-"color of the dark color "
-"scheme is \"intrinsic "
-"gray\", which is the "
-"color seen by the human "
-"eye in total darkness. "
-"Default: light."
+"Adds the date the post or page was retrieved and a short link to access the "
+"content. Default: checked."
 msgstr ""
 
-#: inc/customizer.php:179
-msgid "Light"
+#: inc/customizer.php:538
+msgid "Any link you want to display."
 msgstr ""
 
-#: inc/customizer.php:180
-msgid "Dark"
+#: inc/marianne-theme-page.php:289
+msgid ""
+"As my native language is not English, you can also help me to improve all "
+"the default text strings of the theme."
 msgstr ""
 
 #: inc/customizer.php:181
 msgid "Auto"
 msgstr ""
 
-#: inc/customizer.php:188
-msgid "Hovered elements."
-msgstr ""
-
-#: inc/customizer.php:189
-msgid ""
-"Color used for link and "
-"button hovers. Default: "
-"blue."
-msgstr ""
-
 #: inc/customizer.php:192
 msgid "Blue"
-msgstr ""
-
-#: inc/customizer.php:193
-msgid "Red"
-msgstr ""
-
-#: inc/customizer.php:194
-msgid "Green"
-msgstr ""
-
-#: inc/customizer.php:195
-msgid "Orange"
-msgstr ""
-
-#: inc/customizer.php:196
-msgid "Purple"
-msgstr ""
-
-#: inc/customizer.php:205
-msgid "Page Width"
-msgstr ""
-
-#: inc/customizer.php:206
-msgid ""
-"If you increase the "
-"width of the page, your "
-"featured images may "
-"become too small. In "
-"this case, you should "
-"try to regenerate their "
-"thumbnails. Plugins "
-"exist to do this easily. "
-"Default: 480px."
-msgstr ""
-
-#: inc/customizer.php:209
-msgid "480px"
-msgstr ""
-
-#: inc/customizer.php:210
-msgid "600px"
-msgstr ""
-
-#: inc/customizer.php:211
-msgid "720px"
-msgstr ""
-
-#: inc/customizer.php:219
-msgid ""
-"Expand featured images "
-"that are not wide enough."
-msgstr ""
-
-#: inc/customizer.php:220
-msgid ""
-"This can make the images "
-"a bit blurry. Default: "
-"unchecked."
-msgstr ""
-
-#: inc/customizer.php:228
-msgid "Font Family"
-msgstr ""
-
-#: inc/customizer.php:229
-msgid ""
-"Choose the font family "
-"you want to apply to "
-"your site. Your readers' "
-"device will render the "
-"pages with their system "
-"font. Please note that "
-"the rendering may vary "
-"from device to device. "
-"Default: Sans serif."
-msgstr ""
-
-#: inc/customizer.php:232
-msgid "Sans serif"
-msgstr ""
-
-#: inc/customizer.php:233
-msgid "Serif"
-msgstr ""
-
-#: inc/customizer.php:234
-msgid "Monospaced"
-msgstr ""
-
-#: inc/customizer.php:242
-msgid "Font Size"
-msgstr ""
-
-#: inc/customizer.php:243
-msgid ""
-"The main font size. "
-"Default: 100%."
-msgstr ""
-
-#: inc/customizer.php:256
-msgid ""
-"Force anti-aliasing."
-msgstr ""
-
-#: inc/customizer.php:257
-msgid ""
-"By default, the browser "
-"automatically chooses "
-"whether or not to smooth "
-"the fonts. By checking "
-"this box, you will ask "
-"it to smooth them. "
-"Default: unckecked."
-msgstr ""
-
-#: inc/customizer.php:264
-msgid "Enable text shadow."
-msgstr ""
-
-#: inc/customizer.php:265
-msgid ""
-"Give some relief to your "
-"texts. Default: disabled."
-msgstr ""
-
-#: inc/customizer.php:274
-msgid "Header Align"
-msgstr ""
-
-#: inc/customizer.php:275
-#: inc/customizer.php:380
-msgid "Default: left."
-msgstr ""
-
-#: inc/customizer.php:278
-#: inc/customizer.php:349
-#: inc/customizer.php:383
-msgid "Left"
-msgstr ""
-
-#: inc/customizer.php:279
-#: inc/customizer.php:350
-#: inc/customizer.php:384
-msgid "Center"
-msgstr ""
-
-#: inc/customizer.php:280
-#: inc/customizer.php:351
-#: inc/customizer.php:385
-msgid "Right"
-msgstr ""
-
-#: inc/customizer.php:288
-msgid ""
-"Make the logo round."
-msgstr ""
-
-#: inc/customizer.php:289
-msgid ""
-"Only applies if a logo "
-"is set (see the Site "
-"Identity section). "
-"Default: unckecked."
-msgstr ""
-
-#: inc/customizer.php:296
-msgid ""
-"Font Weight of Site Title"
-msgstr ""
-
-#: inc/customizer.php:297
-msgid "Default: bolder."
-msgstr ""
-
-#: inc/customizer.php:300
-#: inc/customizer.php:315
-#: inc/customizer.php:327
-msgid "Normal"
 msgstr ""
 
 #: inc/customizer.php:301
@@ -443,633 +99,761 @@ msgstr ""
 msgid "Bolder"
 msgstr ""
 
-#: inc/customizer.php:310
-msgid ""
-"Font Weight of Site "
-"Description"
-msgstr ""
-
-#: inc/customizer.php:311
-#: inc/customizer.php:324
-msgid "Default: normal."
-msgstr ""
-
-#: inc/customizer.php:314
-msgid "Thin"
-msgstr ""
-
-#: inc/customizer.php:323
-msgid ""
-"Font Style of Site "
-"Description"
-msgstr ""
-
-#: inc/customizer.php:328
-msgid "Italic"
-msgstr ""
-
-#: inc/customizer.php:336
-msgid ""
-"Add a search button."
-msgstr ""
-
-#: inc/customizer.php:337
-msgid ""
-"It will be added as a "
-"primary menu item if a "
-"menu is set. Default: "
-"unchecked."
-msgstr ""
-
-#: inc/customizer.php:345
-msgid "Text Align"
-msgstr ""
-
-#: inc/customizer.php:346
-msgid ""
-"It does not prevent to "
-"choose a particular "
-"alignment in the text "
-"editor. Default: left."
-msgstr ""
-
-#: inc/customizer.php:352
-msgid "Justify"
-msgstr ""
-
-#: inc/customizer.php:360
-msgid "Enable hyphenation."
-msgstr ""
-
 #: inc/customizer.php:361
 msgid ""
-"Break some words in half "
-"so that they continue on "
-"another line rather than "
-"moving them entirely to "
-"the next line. "
-"Especially useful when "
-"the text alignment is "
-"set to \"justify\". "
-"Default: disabled."
+"Breaks some words in half so that they continue on another line rather than "
+"moving them entirely to the next line. Especially useful when the text "
+"alignment is set to \"justify\". Default: disabled."
 msgstr ""
 
-#: inc/customizer.php:370
+#. %s: The URL of the personal website of Teddy.
+#: inc/marianne-theme-page.php:329
+#, php-format
+msgid "by <a href=\"%s\">Teddy</a>"
+msgstr ""
+
+#: inc/customizer.php:257
 msgid ""
-"Display links to "
-"previous and next posts."
+"By default, the browser automatically chooses whether or not to smooth the "
+"fonts. By checking this box, you will ask it to smooth them. Default: "
+"unckecked."
 msgstr ""
 
-#: inc/customizer.php:371
-msgid "Default: hidden."
+#: inc/marianne-theme-page.php:217
+msgid "Can I display social links with this theme?"
 msgstr ""
 
-#: inc/customizer.php:379
-msgid "Footer Align"
+#: inc/customizer.php:279 inc/customizer.php:350 inc/customizer.php:384
+msgid "Center"
 msgstr ""
 
-#: inc/customizer.php:393
-msgid "Footer Text"
-msgstr ""
-
-#: inc/customizer.php:394
+#: inc/customizer.php:555
 msgid ""
-"You can write any text "
-"to add in the footer."
+"Check to hide comments when priting a post or page. In any case, the comment "
+"form will be hidden. Default: checked."
 msgstr ""
 
-#: inc/customizer.php:402
+#: inc/customizer.php:563
 msgid ""
-"Display the default "
-"footer mention."
+"Check to hide your widgets when priting a post or page. Default: checked."
 msgstr ""
 
-#: inc/customizer.php:403
+#: inc/customizer.php:229
 msgid ""
-"Useful to promote "
-"WordPress and Marianne "
-"to your readers. "
-"Default: displayed."
-msgstr ""
-
-#: inc/customizer.php:411
-msgid ""
-"Where do you want to "
-"display your social "
-"links?"
-msgstr ""
-
-#: inc/customizer.php:412
-msgid "Default: footer."
-msgstr ""
-
-#: inc/customizer.php:415
-msgid "Header"
-msgstr ""
-
-#: inc/customizer.php:416
-msgid "Footer"
-msgstr ""
-
-#: inc/customizer.php:423
-msgid ""
-"How do you want to "
-"display your social "
-"links?"
-msgstr ""
-
-#: inc/customizer.php:424
-msgid "Default: square."
-msgstr ""
-
-#: inc/customizer.php:427
-msgid "Square"
-msgstr ""
-
-#: inc/customizer.php:428
-msgid "Round"
-msgstr ""
-
-#: inc/customizer.php:436
-msgid ""
-"Open links in a new tab."
-msgstr ""
-
-#: inc/customizer.php:437
-#: inc/customizer.php:546
-msgid "Default: unckecked."
-msgstr ""
-
-#: inc/customizer.php:445
-msgid ""
-"Your Twitter @username. "
-"Do not forget the at "
-"symbol."
-msgstr ""
-
-#: inc/customizer.php:453
-msgid ""
-"Your Facebook profile or "
-"page URL."
-msgstr ""
-
-#: inc/customizer.php:461
-msgid ""
-"Your Instagram profile "
-"URL."
-msgstr ""
-
-#: inc/customizer.php:469
-msgid ""
-"Your YouTube channel URL."
-msgstr ""
-
-#: inc/customizer.php:477
-msgid ""
-"Your LinkedIn profile "
-"URL."
-msgstr ""
-
-#: inc/customizer.php:485
-msgid ""
-"Your GitHub profile URL."
-msgstr ""
-
-#: inc/customizer.php:493
-msgid ""
-"Your GitLab profile URL."
-msgstr ""
-
-#: inc/customizer.php:501
-msgid ""
-"Your Twitch profile URL."
-msgstr ""
-
-#: inc/customizer.php:509
-msgid "Your email address."
-msgstr ""
-
-#: inc/customizer.php:517
-msgid ""
-"Your phone number "
-"(without spaces)."
-msgstr ""
-
-#: inc/customizer.php:524
-msgid ""
-"What type of phone link "
-"do you want to add?"
-msgstr ""
-
-#: inc/customizer.php:525
-msgid ""
-"This will automatically "
-"open the right "
-"application on your "
-"readers' phone when they "
-"will click on it."
+"Choose the font family you want to apply to your site. Your readers' device "
+"will render the pages with its own system font. Please note that the "
+"rendering may vary from device to device. Default: Sans serif."
 msgstr ""
 
 #: inc/customizer.php:528
 msgid "Classic"
 msgstr ""
 
-#: inc/customizer.php:529
-msgid "SMS"
+#: inc/customizer.php:175
+msgid "Color Scheme"
 msgstr ""
 
-#: inc/customizer.php:530
-msgid "WhatsApp"
+#: inc/customizer.php:189
+msgid "Color used for link and button hovering. Default: blue."
 msgstr ""
 
-#: inc/customizer.php:538
-msgid ""
-"Another link you want to "
-"display."
+#: inc/customizer.php:87
+msgid "Content Formatting"
 msgstr ""
 
-#: inc/customizer.php:545
-msgid ""
-"Add a link to the RSS "
-"feed of your site."
+#: inc/marianne-theme-page.php:253
+msgid "Contribute"
+msgstr ""
+
+#: inc/customizer.php:180
+msgid "Dark"
+msgstr ""
+
+#: inc/customizer.php:297
+msgid "Default: bolder."
+msgstr ""
+
+#: inc/customizer.php:412
+msgid "Default: footer."
+msgstr ""
+
+#: inc/customizer.php:371
+msgid "Default: hidden."
+msgstr ""
+
+#: inc/customizer.php:275 inc/customizer.php:380
+msgid "Default: left."
+msgstr ""
+
+#: inc/customizer.php:311 inc/customizer.php:324
+msgid "Default: normal."
+msgstr ""
+
+#: inc/customizer.php:424
+msgid "Default: square."
+msgstr ""
+
+#: inc/customizer.php:437 inc/customizer.php:546
+msgid "Default: unckecked."
+msgstr ""
+
+#: inc/marianne-theme-page.php:295
+msgid "Development"
+msgstr ""
+
+#: inc/customizer.php:370
+msgid "Display a link to the next and the previous post."
+msgstr ""
+
+#: inc/customizer.php:578
+msgid "Display information related to printing."
+msgstr ""
+
+#: inc/customizer.php:402
+msgid "Display the default footer mention."
+msgstr ""
+
+#: inc/customizer.php:570
+msgid "Display URL of links."
+msgstr ""
+
+#: inc/marianne-theme-page.php:126 inc/marianne-theme-page.php:142
+msgid "Donate Bitcoin"
+msgstr ""
+
+#: inc/marianne-theme-page.php:122
+msgid "Donate ₿"
+msgstr ""
+
+#: functions.php:277 inc/customizer.php:508
+msgid "Email"
+msgstr ""
+
+#: inc/customizer.php:360
+msgid "Enable hyphenation."
+msgstr ""
+
+#: inc/customizer.php:264
+msgid "Enable text shadow."
+msgstr ""
+
+#: inc/customizer.php:219
+msgid "Expand featured images that are not wide enough."
+msgstr ""
+
+#: functions.php:282 inc/customizer.php:452
+msgid "Facebook"
+msgstr ""
+
+#: inc/marianne-theme-page.php:185
+msgid "FAQ"
+msgstr ""
+
+#: inc/customizer.php:228
+msgid "Font Family"
+msgstr ""
+
+#: inc/customizer.php:242
+msgid "Font Size"
+msgstr ""
+
+#: inc/customizer.php:323
+msgid "Font style of the site description"
+msgstr ""
+
+#: inc/customizer.php:310
+msgid "Font weight of the site description"
+msgstr ""
+
+#: inc/customizer.php:296
+msgid "Font weight of the site title"
+msgstr ""
+
+#: inc/customizer.php:416
+msgid "Footer"
+msgstr ""
+
+#: inc/customizer.php:379
+msgid "Footer Align"
+msgstr ""
+
+#: functions.php:58 footer.php:31
+msgid "Footer Menu"
+msgstr ""
+
+#: inc/customizer.php:102
+msgid "Footer Settings"
+msgstr ""
+
+#: inc/customizer.php:393
+msgid "Footer Text"
+msgstr ""
+
+#: inc/customizer.php:256
+msgid "Force anti-aliasing."
+msgstr ""
+
+#: functions.php:287 inc/customizer.php:484
+msgid "GitHub"
+msgstr ""
+
+#: inc/marianne-theme-page.php:162
+msgid "GitHub Repository"
+msgstr ""
+
+#: functions.php:292 inc/customizer.php:492
+msgid "GitLab"
+msgstr ""
+
+#: inc/customizer.php:265
+msgid "Give some relief to your texts. Default: disabled."
+msgstr ""
+
+#: inc/customizer.php:73
+msgid "Global Settings"
+msgstr ""
+
+#: inc/customizer.php:194
+msgid "Green"
+msgstr ""
+
+#: inc/customizer.php:415
+msgid "Header"
+msgstr ""
+
+#: inc/customizer.php:274
+msgid "Header Align"
+msgstr ""
+
+#: inc/customizer.php:80
+msgid "Header Settings"
 msgstr ""
 
 #: inc/customizer.php:554
 msgid "Hide comments."
 msgstr ""
 
-#: inc/customizer.php:555
-msgid ""
-"Check to hide comments "
-"when priting a post or "
-"page. In any case, the "
-"comment form will be "
-"hidden. Default: checked."
-msgstr ""
-
 #: inc/customizer.php:562
 msgid "Hide widgets."
 msgstr ""
 
-#: inc/customizer.php:563
-msgid ""
-"Check to hide your "
-"widgets when priting a "
-"post or page. Default: "
-"checked."
+#: inc/customizer.php:188
+msgid "Hovered elements."
 msgstr ""
 
-#: inc/customizer.php:570
-msgid ""
-"Display URL of links."
+#: inc/marianne-theme-page.php:202
+msgid "How can I change fonts?"
 msgstr ""
 
-#: inc/customizer.php:571
-msgid ""
-"URLs will be visible on "
-"print so that readers "
-"can see them and visit "
-"them. Default: checked."
+#: inc/marianne-theme-page.php:187
+msgid "How can I set up a logo?"
 msgstr ""
 
-#: inc/customizer.php:578
-msgid ""
-"Display information "
-"related to printing."
+#: inc/customizer.php:423
+msgid "How do you want to display your social links?"
 msgstr ""
 
-#: inc/customizer.php:579
+#. Author URI of the theme
+msgid "https://chezteddy.fr/"
+msgstr ""
+
+#. URI of the theme
+msgid "https://github.com/te2dy/marianne"
+msgstr ""
+
+#: footer.php:58
+msgid "https://wordpress.org/"
+msgstr ""
+
+#: footer.php:59
+msgid "https://wordpress.org/themes/marianne/"
+msgstr ""
+
+#: inc/marianne-theme-page.php:236
+msgid "I have other questions."
+msgstr ""
+
+#: inc/customizer.php:206
 msgid ""
-"Adds the date the post "
-"or page was retrieved "
-"and the short link to "
-"access the content. "
-"Default: checked."
+"If you increase the width of the page, your featured images may become too "
+"small. In this case, you should try to regenerate their thumbnails. Plugins "
+"exist to do this easily. Default: 480px."
+msgstr ""
+
+#: functions.php:297 inc/customizer.php:460
+msgid "Instagram"
+msgstr ""
+
+#: inc/marianne-theme-page.php:255
+msgid "Issues & Feature Requests"
+msgstr ""
+
+#: inc/customizer.php:346
+msgid ""
+"It does not prevent to choose a particular alignment in the text editor. "
+"Default: left."
+msgstr ""
+
+#: template-parts/content-none.php:33
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: inc/customizer.php:337
+msgid ""
+"It will be added as a primary menu item if a menu is set. Default: unchecked."
+msgstr ""
+
+#: inc/customizer.php:328
+msgid "Italic"
+msgstr ""
+
+#: inc/customizer.php:352
+msgid "Justify"
+msgstr ""
+
+#: inc/customizer.php:278 inc/customizer.php:349 inc/customizer.php:383
+msgid "Left"
+msgstr ""
+
+#: inc/customizer.php:179
+msgid "Light"
+msgstr ""
+
+#: functions.php:302 inc/customizer.php:537
+msgid "Link"
 msgstr ""
 
 #: inc/marianne-theme-page.php:60
-msgctxt ""
-"Link to Marianne on "
-"WordPress Theme Directory"
-msgid ""
-"https://wordpress.org/"
-"themes/marianne/"
+msgctxt "Link to Marianne on WordPress Theme Directory"
+msgid "https://wordpress.org/themes/marianne/"
 msgstr ""
 
-#: inc/marianne-theme-page.php:86
-msgctxt ""
-"The title of the theme "
-"page."
-msgid "Marianne"
+#: inc/template-tags.php:612
+msgctxt "Link to the next post."
+msgid "Next"
 msgstr ""
 
-#: inc/marianne-theme-page.php:94
-#, php-format
-msgid "Version %s"
+#: inc/template-tags.php:600
+msgctxt "Link to the previous post."
+msgid "Previous"
 msgstr ""
 
-#: inc/marianne-theme-page.php:112
-msgctxt ""
-"Verb. Point to the Theme "
-"Customizer."
-msgid "Customize"
+#: functions.php:307 inc/customizer.php:476
+msgid "LinkedIn"
 msgstr ""
 
-#: inc/marianne-theme-page.php:114
-msgid "Menus"
-msgstr ""
-
-#: inc/marianne-theme-page.php:118
-msgid "Say thank you 🙏"
-msgstr ""
-
-#: inc/marianne-theme-page.php:120
-msgid "Donate ₿"
-msgstr ""
-
-#: inc/marianne-theme-page.php:124
-#: inc/marianne-theme-page.php:140
-msgid "Donate Bitcoin"
-msgstr ""
-
-#: inc/marianne-theme-page.php:131
-#, php-format
-msgctxt ""
-"The bitcoin address link."
-msgid ""
-"Address: <a href=\"%1$s"
-"\">%2$s</a>"
-msgstr ""
-
-#: inc/marianne-theme-page.php:152
-msgid ""
-"WordPress Theme Directory"
-msgstr ""
-
-#: inc/marianne-theme-page.php:156
-msgid ""
-"WordPress Support Forum"
-msgstr ""
-
-#: inc/marianne-theme-page.php:160
-msgid "GitHub Repository"
-msgstr ""
-
-#: inc/marianne-theme-page.php:183
-msgid "FAQ"
-msgstr ""
-
-#: inc/marianne-theme-page.php:185
-msgid ""
-"How can I set up a logo?"
-msgstr ""
-
-#: inc/marianne-theme-page.php:192
-#, php-format
-msgid ""
-"Open the <a href=\"%s"
-"\">Theme Customizer</a>. "
-"Then, go to Site "
-"Identity and select a "
-"logo. Do not forget to "
-"press Publish for the "
-"logo to go live."
-msgstr ""
-
-#: inc/marianne-theme-page.php:200
-msgid ""
-"How can I set change "
-"fonts?"
-msgstr ""
-
-#: inc/marianne-theme-page.php:207
-#, php-format
-msgid ""
-"Open the <a href=\"%s"
-"\">Theme Customizer</a>. "
-"Then, go to Global "
-"Settings and select your "
-"favorite font family. Do "
-"not forget to press "
-"Publish."
-msgstr ""
-
-#: inc/marianne-theme-page.php:215
-msgid ""
-"Can I display social "
-"links with this theme?"
-msgstr ""
-
-#: inc/marianne-theme-page.php:222
-#, php-format
-msgid ""
-"Yes, you can! Open the "
-"<a href=\"%s\">Theme "
-"Customizer</a>. Then, go "
-"to Social Links. "
-"Everything is in there."
-msgstr ""
-
-#: inc/marianne-theme-page.php:230
-msgid ""
-"Where can I download the "
-"pro/premium version of "
-"Marianne?"
-msgstr ""
-
-#: inc/marianne-theme-page.php:232
-msgid ""
-"There is no paid version "
-"of Marianne. You already "
-"have everything this "
-"theme can provide "
-"without restrictions."
-msgstr ""
-
-#: inc/marianne-theme-page.php:234
-msgid ""
-"I have other questions."
-msgstr ""
-
-#: inc/marianne-theme-page.php:241
-#, php-format
-msgid ""
-"Please visit the <a href="
-"\"%s\" target=\"_blank"
-"\">support forum</a> and "
-"post them."
-msgstr ""
-
-#: inc/marianne-theme-page.php:251
-msgid "Contribute"
-msgstr ""
-
-#: inc/marianne-theme-page.php:253
-msgid ""
-"Issues & Feature Requests"
-msgstr ""
-
-#: inc/marianne-theme-page.php:260
-#, php-format
-msgid ""
-"Please report issues or "
-"make feature requests on "
-"<a href=\"%1$s\" target="
-"\"_blank\">GitHub</a> "
-"or, if you do not have "
-"an account, on the <a "
-"href=\"%2$s\" target="
-"\"_blank\">support "
-"forum</a>."
-msgstr ""
-
-#: inc/marianne-theme-page.php:269
-msgid "Translate"
-msgstr ""
-
-#: inc/marianne-theme-page.php:276
-#, php-format
-msgid ""
-"You want to use Marianne "
-"in your language? You "
-"can help me to translate "
-"it on <a href=\"%1$s\" "
-"target=\"_blank"
-"\">GitHub</a> where a ."
-"pot file is available."
-msgstr ""
-
-#: inc/marianne-theme-page.php:287
-msgid ""
-"As I am not a native "
-"English speaker, you can "
-"also help me to improve "
-"all the default text "
-"strings of the theme."
-msgstr ""
-
-#: inc/marianne-theme-page.php:293
-msgid "Development"
-msgstr ""
-
-#: inc/marianne-theme-page.php:300
-#, php-format
-msgid ""
-"There are probably many "
-"technical improvements "
-"to be made to this "
-"theme. You can help me "
-"by <a href=\"%s\" target="
-"\"_blank\">contributing "
-"on GitHub</a>."
-msgstr ""
-
-#: inc/marianne-theme-page.php:313
+#: inc/marianne-theme-page.php:315
 msgid "Made in France"
 msgstr ""
 
-#: inc/marianne-theme-page.php:327
-#, php-format
-msgid ""
-"by <a href=\"%s\">Teddy</"
-"a>"
+#: inc/customizer.php:288
+msgid "Make the logo round."
+msgstr ""
+
+#. Name of the theme
+msgid "Marianne"
 msgstr ""
 
 #: inc/template-tags.php:116
 msgid "Menu"
 msgstr ""
 
-#: inc/template-tags.php:125
-#: inc/template-tags.php:153
-msgctxt ""
-"The search button in the "
-"header."
-msgid "Search"
+#: inc/marianne-theme-page.php:114
+msgid "Menus"
 msgstr ""
 
-#: inc/template-tags.php:127
-#: inc/template-tags.php:151
-#: inc/template-tags.php:156
-msgid ""
-"Open the search form"
-msgstr ""
-
-#: inc/template-tags.php:177
-msgid "Search the site"
-msgstr ""
-
-#: inc/template-tags.php:260
-msgid ""
-"&lsaquo; Previous page"
+#: inc/customizer.php:234
+msgid "Monospaced"
 msgstr ""
 
 #: inc/template-tags.php:266
 msgid "Next page &rsaquo;"
 msgstr ""
 
-#: inc/template-tags.php:535
-#, php-format
-msgctxt ""
-"Use only on print."
-msgid ""
-"Retrieved %1$s at %2$s "
-"(website time)."
-msgstr ""
-
-#: inc/template-tags.php:555
-#, php-format
-msgctxt ""
-"Use only on print."
-msgid "Available at: %s"
-msgstr ""
-
-#: inc/template-tags.php:600
-msgctxt ""
-"Link to the previous "
-"post."
-msgid "Previous"
-msgstr ""
-
-#: inc/template-tags.php:612
-msgctxt ""
-"Link to the next post."
-msgid "Next"
-msgstr ""
-
-#: search.php:22
-#: search.php:64
-#, php-format
-msgid "Search for \"%s\""
-msgstr ""
-
-#: search.php:35
-#, php-format
-msgctxt "Search results"
-msgid "%d result found:"
-msgid_plural ""
-"%d results found:"
-msgstr[0] ""
-msgstr[1] ""
-
-#: search.php:73
-msgid ""
-"This search did not "
-"return any results."
-msgstr ""
-
-#: template-parts/content-loop.php:17
-#: template-parts/content-single.php:17
-msgid "Sticky post"
+#: inc/customizer.php:300 inc/customizer.php:315 inc/customizer.php:327
+msgid "Normal"
 msgstr ""
 
 #: template-parts/content-none.php:16
 msgid "Nothing here"
 msgstr ""
 
-#: template-parts/content-none.php:33
+#: comments.php:50
+msgid "Older comments &rsaquo;"
+msgstr ""
+
+#: inc/customizer.php:289
 msgid ""
-"It looks like nothing "
-"was found at this "
-"location. Maybe try a "
-"search?"
+"Only applies if a logo is set (see the Site Identity section). Default: "
+"unckecked."
+msgstr ""
+
+#: inc/customizer.php:436
+msgid "Open links in a new tab."
+msgstr ""
+
+#: functions.php:222
+msgid "Open submenu"
+msgstr ""
+
+#. %s: The URL of the Theme Customizer.
+#: inc/marianne-theme-page.php:209
+#, php-format
+msgid ""
+"Open the <a href=\"%s\">Theme Customizer</a>. Then, go to Global Settings "
+"and select your favorite font family. Do not forget to press Publish."
+msgstr ""
+
+#. %s: The URL of the Theme Customizer.
+#: inc/marianne-theme-page.php:194
+#, php-format
+msgid ""
+"Open the <a href=\"%s\">Theme Customizer</a>. Then, go to Site Identity and "
+"select a logo. Do not forget to press Publish for the logo to go live."
+msgstr ""
+
+#: inc/template-tags.php:127 inc/template-tags.php:151
+#: inc/template-tags.php:156
+msgid "Open the search form"
+msgstr ""
+
+#: inc/customizer.php:195
+msgid "Orange"
+msgstr ""
+
+#: inc/customizer.php:205
+msgid "Page Width"
+msgstr ""
+
+#: functions.php:312 inc/customizer.php:516
+msgid "Phone"
+msgstr ""
+
+#. %1$s: The URL of the GitHub Issues page of the Marianne repository. %2$s: The URL of the support forum of the theme on WordPress.org
+#: inc/marianne-theme-page.php:262
+#, php-format
+msgid ""
+"Please report issues or make feature requests on <a href=\"%1$s\" "
+"target=\"_blank\">GitHub</a> or, if you do not have an account, on the <a "
+"href=\"%2$s\" target=\"_blank\">support forum</a>."
+msgstr ""
+
+#. %s: The URL of the support forum of the theme on WordPress.org
+#: inc/marianne-theme-page.php:243
+#, php-format
+msgid ""
+"Please visit the <a href=\"%s\" target=\"_blank\">support forum</a> and post "
+"them."
+msgstr ""
+
+#: inc/customizer.php:95
+msgid "Post Settings"
+msgstr ""
+
+#: functions.php:57 inc/template-tags.php:115
+msgid "Primary Menu"
+msgstr ""
+
+#: inc/customizer.php:116
+msgid "Print Settings"
+msgstr ""
+
+#: inc/customizer.php:196
+msgid "Purple"
+msgstr ""
+
+#: inc/marianne-theme-page.php:120
+msgid "Rate this theme with ⭐"
+msgstr ""
+
+#: inc/customizer.php:193
+msgid "Red"
+msgstr ""
+
+#: inc/customizer.php:280 inc/customizer.php:351 inc/customizer.php:385
+msgid "Right"
+msgstr ""
+
+#: inc/customizer.php:428
+msgid "Round"
+msgstr ""
+
+#: functions.php:317
+msgid "RSS Feed"
+msgstr ""
+
+#: inc/customizer.php:232
+msgid "Sans serif"
+msgstr ""
+
+#: inc/marianne-theme-page.php:118
+msgid "Say thank you 🙏"
+msgstr ""
+
+#. %s: search term.
+#: search.php:22 search.php:64
+#, php-format
+msgid "Search for \"%s\""
+msgstr ""
+
+#. %d: the number of search results.
+#: search.php:34
+#, php-format
+msgctxt "Search results"
+msgid "%d result found:"
+msgid_plural "%d results found:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/template-tags.php:177
+msgid "Search the site"
+msgstr ""
+
+#: inc/customizer.php:233
+msgid "Serif"
+msgstr ""
+
+#. $1%s: WordPress. $2%s: Marianne.
+#: footer.php:57
+#, php-format
+msgctxt "Site footer text"
+msgid "Powered by %1$s and %2$s"
+msgstr ""
+
+#: header.php:43
+msgid "Skip to content"
+msgstr ""
+
+#: inc/customizer.php:529
+msgid "SMS"
+msgstr ""
+
+#: inc/customizer.php:109
+msgid "Social Links"
+msgstr ""
+
+#: inc/customizer.php:427
+msgid "Square"
+msgstr ""
+
+#: template-parts/content-single.php:17 template-parts/content-loop.php:17
+msgid "Sticky post"
+msgstr ""
+
+#. Author of the theme
+msgid "Teddy"
+msgstr ""
+
+#: inc/customizer.php:345
+msgid "Text Align"
+msgstr ""
+
+#: inc/customizer.php:176
+msgid ""
+"The automatic mode chooses between light and dark color scheme depending on "
+"the settings of the operating system or browser of your visitors. The "
+"background color of the dark color scheme is \"intrinsic gray\", which is "
+"the color seen by the human eye in total darkness. Default: light."
+msgstr ""
+
+#. %1$s: Bitcoin scheme followed by address. %2$s: Bitcoin address.
+#: inc/marianne-theme-page.php:133
+#, php-format
+msgctxt "The bitcoin address link."
+msgid "Address: <a href=\"%1$s\">%2$s</a>"
+msgstr ""
+
+#: inc/customizer.php:88
+msgid "The following settings apply to the main content of posts and pages."
+msgstr ""
+
+#: inc/customizer.php:243
+msgid "The main font size. Default: 100%."
+msgstr ""
+
+#: inc/template-tags.php:125 inc/template-tags.php:153
+msgctxt "The search button in the header."
+msgid "Search"
+msgstr ""
+
+#: inc/marianne-theme-page.php:86
+msgctxt "The title of the theme page."
+msgid "Marianne"
+msgstr ""
+
+#. %s: The URL of the Marianne repository on GitHub.
+#: inc/marianne-theme-page.php:302
+#, php-format
+msgid ""
+"There are probably many technical improvements to be made to this theme. You "
+"can help me by <a href=\"%s\" target=\"_blank\">contributing on GitHub</a>."
+msgstr ""
+
+#: inc/marianne-theme-page.php:234
+msgid ""
+"There is no paid version of Marianne. You already have everything this theme "
+"can provide without restrictions."
+msgstr ""
+
+#: inc/customizer.php:117
+msgid "These settings only apply to the printing of the pages of your site."
+msgstr ""
+
+#: inc/customizer.php:314
+msgid "Thin"
+msgstr ""
+
+#: inc/customizer.php:220
+msgid "This can make the images a bit blurry. Default: unchecked."
+msgstr ""
+
+#: search.php:73
+msgid "This search did not return any results."
+msgstr ""
+
+#: inc/customizer.php:525
+msgid ""
+"This will automatically open the right application on your readers' phone "
+"when they will click on it."
+msgstr ""
+
+#: inc/marianne-theme-page.php:271
+msgid "Translate"
+msgstr ""
+
+#: functions.php:327 inc/customizer.php:500
+msgid "Twitch"
+msgstr ""
+
+#: functions.php:332 inc/customizer.php:444
+msgid "Twitter"
+msgstr ""
+
+#: inc/customizer.php:571
+msgid ""
+"URLs will be visible on print so that readers can see them and visit them. "
+"Default: checked."
+msgstr ""
+
+#. %s: The short link of the post.
+#: inc/template-tags.php:555
+#, php-format
+msgctxt "Use only on print."
+msgid "Available at: %s"
+msgstr ""
+
+#. %1$s: The retrieve date. %1$s: The retrieve time.
+#: inc/template-tags.php:535
+#, php-format
+msgctxt "Use only on print."
+msgid "Retrieved %1$s at %2$s (website time)."
+msgstr ""
+
+#: inc/customizer.php:403
+msgid ""
+"Useful to promote WordPress and Marianne to your readers. Default: displayed."
+msgstr ""
+
+#: inc/marianne-theme-page.php:112
+msgctxt "Verb. Point to the Theme Customizer."
+msgid "Customize"
+msgstr ""
+
+#. %s: The version number of the theme.
+#: inc/marianne-theme-page.php:94
+#, php-format
+msgid "Version %s"
+msgstr ""
+
+#: inc/customizer.php:524
+msgid "What type of phone link do you want to add?"
+msgstr ""
+
+#: inc/customizer.php:530
+msgid "WhatsApp"
+msgstr ""
+
+#: inc/marianne-theme-page.php:232
+msgid "Where can I download the pro/premium version of Marianne?"
+msgstr ""
+
+#: inc/customizer.php:411
+msgid "Where do you want to display your social links?"
+msgstr ""
+
+#: functions.php:189 inc/marianne-theme-page.php:116
+msgid "Widgets"
+msgstr ""
+
+#: inc/marianne-theme-page.php:158
+msgid "WordPress Support Forum"
+msgstr ""
+
+#: inc/marianne-theme-page.php:154
+msgid "WordPress Theme Directory"
+msgstr ""
+
+#. %s: The URL of the Theme Customizer.
+#: inc/marianne-theme-page.php:224
+#, php-format
+msgid ""
+"Yes, you can! Open the <a href=\"%s\">Theme Customizer</a>. Then, go to "
+"Social Links. Everything is in there."
+msgstr ""
+
+#: inc/customizer.php:394
+msgid "You can write any text to add in the footer."
+msgstr ""
+
+#. %s: The URL of the language repository on GitHub.
+#: inc/marianne-theme-page.php:278
+#, php-format
+msgid ""
+"You want to use Marianne in your language? You can help me to translate it "
+"on <a href=\"%1$s\" target=\"_blank\">GitHub</a> where a .pot file is "
+"available."
+msgstr ""
+
+#: inc/customizer.php:509
+msgid "Your email address."
+msgstr ""
+
+#: inc/customizer.php:453
+msgid "Your Facebook profile or page URL."
+msgstr ""
+
+#: inc/customizer.php:485
+msgid "Your GitHub profile URL."
+msgstr ""
+
+#: inc/customizer.php:493
+msgid "Your GitLab profile URL."
+msgstr ""
+
+#: inc/customizer.php:461
+msgid "Your Instagram profile URL."
+msgstr ""
+
+#: inc/customizer.php:477
+msgid "Your LinkedIn profile URL."
+msgstr ""
+
+#: inc/customizer.php:517
+msgid "Your phone number (without spaces)."
+msgstr ""
+
+#: inc/customizer.php:501
+msgid "Your Twitch profile URL."
+msgstr ""
+
+#: inc/customizer.php:445
+msgid "Your Twitter @username. Do not forget the at symbol."
+msgstr ""
+
+#: inc/customizer.php:469
+msgid "Your YouTube channel URL."
+msgstr ""
+
+#: functions.php:322 inc/customizer.php:468
+msgid "YouTube"
 msgstr ""

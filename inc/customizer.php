@@ -186,7 +186,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'colors',
 			'id'          => 'link_hover',
 			'title'       => __( 'Hovered elements.', 'marianne' ),
-			'description' => __( 'Color used for link and button hovers. Default: blue.', 'marianne' ),
+			'description' => __( 'Color used for link and button hovering. Default: blue.', 'marianne' ),
 			'type'        => 'select',
 			'value'       => array(
 				'blue'   => __( 'Blue', 'marianne' ),
@@ -206,9 +206,9 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'description' => __( 'If you increase the width of the page, your featured images may become too small. In this case, you should try to regenerate their thumbnails. Plugins exist to do this easily. Default: 480px.', 'marianne' ),
 			'type'        => 'radio',
 			'value'       => array(
-				'480' => __( '480px', 'marianne' ),
-				'600' => __( '600px', 'marianne' ),
-				'720' => __( '720px', 'marianne' ),
+				'480' => _x( '480px', 'A width in pixels', 'marianne' ),
+				'600' => _x( '600px', 'A width in pixels', 'marianne' ),
+				'720' => _x( '720px', 'A width in pixels', 'marianne' ),
 			),
 			'live'        => true,
 		);
@@ -226,7 +226,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_global',
 			'id'          => 'font_family',
 			'title'       => __( 'Font Family', 'marianne' ),
-			'description' => __( "Choose the font family you want to apply to your site. Your readers' device will render the pages with their system font. Please note that the rendering may vary from device to device. Default: Sans serif.", 'marianne' ),
+			'description' => __( "Choose the font family you want to apply to your site. Your readers' device will render the pages with its own system font. Please note that the rendering may vary from device to device. Default: Sans serif.", 'marianne' ),
 			'type'        => 'select',
 			'value'       => array(
 				'sans-serif' => __( 'Sans serif', 'marianne' ),
@@ -293,7 +293,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_header',
 			'id'          => 'title_weight',
-			'title'       => __( 'Font Weight of Site Title', 'marianne' ),
+			'title'       => __( 'Font weight of the site title', 'marianne' ),
 			'description' => __( 'Default: bolder.', 'marianne' ),
 			'type'        => 'select',
 			'value'       => array(
@@ -307,7 +307,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_header',
 			'id'          => 'desc_weight',
-			'title'       => __( 'Font Weight of Site Description', 'marianne' ),
+			'title'       => __( 'Font weight of the site description', 'marianne' ),
 			'description' => __( 'Default: normal.', 'marianne' ),
 			'type'        => 'select',
 			'value'       => array(
@@ -320,7 +320,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_header',
 			'id'          => 'desc_style',
-			'title'       => __( 'Font Style of Site Description', 'marianne' ),
+			'title'       => __( 'Font style of the site description', 'marianne' ),
 			'description' => __( 'Default: normal.', 'marianne' ),
 			'type'        => 'select',
 			'value'       => array(
@@ -358,7 +358,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_content',
 			'id'          => 'hyphens',
 			'title'       => __( 'Enable hyphenation.', 'marianne' ),
-			'description' => __( 'Break some words in half so that they continue on another line rather than moving them entirely to the next line. Especially useful when the text alignment is set to "justify". Default: disabled.', 'marianne' ),
+			'description' => __( 'Breaks some words in half so that they continue on another line rather than moving them entirely to the next line. Especially useful when the text alignment is set to "justify". Default: disabled.', 'marianne' ),
 			'type'        => 'checkbox',
 			'live'        => true,
 		);
@@ -367,7 +367,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_post',
 			'id'          => 'nav',
-			'title'       => __( 'Display links to previous and next posts.', 'marianne' ),
+			'title'       => __( 'Display a link to the next and the previous post.', 'marianne' ),
 			'description' => __( 'Default: hidden.', 'marianne' ),
 			'type'        => 'checkbox',
 		);
@@ -535,7 +535,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_social',
 			'id'          => 'link',
 			'title'       => __( 'Link', 'marianne' ),
-			'description' => __( 'Another link you want to display.', 'marianne' ),
+			'description' => __( 'Any link you want to display.', 'marianne' ),
 			'type'        => 'url',
 		);
 
@@ -576,7 +576,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_print',
 			'id'          => 'info',
 			'title'       => __( 'Display information related to printing.', 'marianne' ),
-			'description' => __( 'Adds the date the post or page was retrieved and the short link to access the content. Default: checked.', 'marianne' ),
+			'description' => __( 'Adds the date the post or page was retrieved and a short link to access the content. Default: checked.', 'marianne' ),
 			'type'        => 'checkbox',
 		);
 

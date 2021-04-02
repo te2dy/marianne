@@ -199,7 +199,7 @@ function marianne_theme_page() {
 					?>
 				</p>
 
-				<p><strong><?php esc_html_e( 'How can I set change fonts?', 'marianne' ); ?></strong></p>
+				<p><strong><?php esc_html_e( 'How can I change fonts?', 'marianne' ); ?></strong></p>
 
 				<p>
 					<?php
@@ -286,7 +286,7 @@ function marianne_theme_page() {
 				<p>
 					<?php
 					echo wp_kses(
-						__( 'As I am not a native English speaker, you can also help me to improve all the default text strings of the theme.', 'marianne' ),
+						__( 'As my native language is not English, you can also help me to improve all the default text strings of the theme.', 'marianne' ),
 						$kses_allowed_html
 					);
 					?>
