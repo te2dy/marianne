@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Marianne\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-02 14:22+0000\n"
-"PO-Revision-Date: 2021-04-02 15:19+0000\n"
+"PO-Revision-Date: 2021-04-02 15:32+0000\n"
 "Last-Translator: Teddy\n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -195,7 +195,7 @@ msgstr ""
 
 #: inc/customizer.php:87
 msgid "Content Formatting"
-msgstr "Formatage du contenu"
+msgstr "Mise en forme du contenu"
 
 #: inc/marianne-theme-page.php:253
 msgid "Contribute"
@@ -223,7 +223,7 @@ msgstr "Par défaut&nbsp;: gauche."
 
 #: inc/customizer.php:311 inc/customizer.php:324
 msgid "Default: normal."
-msgstr "Par défaut&nbsp;: normal"
+msgstr "Par défaut&nbsp;: normal."
 
 #: inc/customizer.php:424
 msgid "Default: square."
