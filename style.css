@@ -1134,7 +1134,7 @@ iframe {
 .comment-content ol li {
 	list-style: inherit;
 }
-.bypostauthor .comment-content {
+.bypostauthor > .comment-body > .comment-content {
 	background-color: var(--color-input-background);
 }
 .reply {
@@ -1247,6 +1247,13 @@ iframe {
 }
 #commentform label {
 	font-size: .9em;
+}
+.comment-awaiting-moderation {
+	display: block;
+	font-size: .9em;
+	margin: 1em 0;
+	border-left: 2px solid #de0000;
+	padding-left: .5em;
 }
 
 /**
