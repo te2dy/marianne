@@ -21,6 +21,9 @@ and intellectuals who want to present their work.
 
 == Changelog ==
 
+=== 1.3.4.2 – April 3nd, 2021 ===
+- Fixed: critical error. Sorry for the inconvenience.
+
 === 1.3.4.1 – April 3nd, 2021 ===
 - Fixed: warning about non escaped strings.
 

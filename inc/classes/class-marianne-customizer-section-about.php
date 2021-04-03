@@ -79,7 +79,7 @@ if ( class_exists( 'WP_Customize_Section' ) ) {
 				<li id="accordion-section-{{ data.id }}" class="accordion-section control-section control-section-{{ data.type }} cannot-expand">
 
 					<h3 class="accordion-section-title">
-						<a href="<?php echo esc_url( {{ data.url }} ); ?>" title="<?php esc_attr_e( 'Close the Customizer and go to About Marianne page', 'marianne' ); ?>">
+						<a href="{{ data.url }}" title="<?php esc_attr_e( 'Close the Customizer and go to About Marianne page', 'marianne' ); ?>">
 							{{ data.title }}
 
 							<span class="screen-reader-text"><?php esc_html_e( 'Close the Customizer and go to About Marianne page', 'marianne' ); ?></span>
