@@ -98,12 +98,12 @@
 /* Footer */
 .marianne-mif {
 	display: inline-block;
-	margin-top: .5em;
 	text-align: center;
 }
 .marianne-flag {
 	display: flex;
 	justify-content: space-between;
+	margin-top: .1em;
 }
 .marianne-flag-blue,
 .marianne-flag-white,

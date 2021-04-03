@@ -320,19 +320,6 @@ function marianne_theme_page() {
 						<span class="marianne-flag-white"></span>
 						<span class="marianne-flag-red"></span>
 					</div>
-
-					<div>
-						<?php
-						printf(
-							wp_kses(
-								/* translators: %s: The URL of the personal website of Teddy. */
-								__( 'by <a href="%s">Teddy</a>', 'marianne' ),
-								$kses_allowed_html
-							),
-							esc_url( 'https://chezteddy.fr/' )
-						);
-						?>
-					</div>
 				</div>
 			</footer>
 		</div>
