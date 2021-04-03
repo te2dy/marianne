@@ -21,8 +21,15 @@ and intellectuals who want to present their work.
 
 == Changelog ==
 
+=== 1.3.4 – April 3nd, 2021 ===
+- Added: translation of the Theme Description.
+- Fixed: various bugs in the Theme Customizer.
+- Fixed: wrong styles on comments.
+- Updated: About Marianne page and link in the Customizer.
+- Updated: translation files.
+
 === 1.3.3 – April 2nd, 2021 ===
-- Added: option to expand to small featured images.
+- Added: option to expand small featured images.
 - Fixed: various bugs in the Theme Customizer.
 - Updated: About Marianne page.
 - Updated: search button.
@@ -191,3 +198,7 @@ SVG Icons: Feather Icons, Copyright (c) 2013-2017 Cole Bemis
 Source: https://icons.getbootstrap.com/
 License: MIT
 License URI: https://opensource.org/licenses/mit-license.php
+
+Admin icons: Dashicons, Copyright Wordpress
+License: GPLv2
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
