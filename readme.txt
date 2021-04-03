@@ -21,6 +21,9 @@ and intellectuals who want to present their work.
 
 == Changelog ==
 
+=== 1.3.4.1 – April 3nd, 2021 ===
+- Fixed: warning about non escaped strings.
+
 === 1.3.4 – April 3nd, 2021 ===
 - Added: translation of the Theme Description.
 - Fixed: various bugs in the Theme Customizer.
