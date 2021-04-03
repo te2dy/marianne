@@ -185,7 +185,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		$marianne_customizer_options[] = array(
 			'section'     => 'colors',
 			'id'          => 'link_hover',
-			'title'       => __( 'Hovered elements.', 'marianne' ),
+			'title'       => __( 'Hovered elements', 'marianne' ),
 			'description' => __( 'Color used for link and button hovering. Default: blue.', 'marianne' ),
 			'type'        => 'select',
 			'value'       => array(
@@ -203,7 +203,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_global',
 			'id'          => 'page_width',
 			'title'       => __( 'Page Width', 'marianne' ),
-			'description' => __( 'If you increase the width of the page, your featured images may become too small. In this case, you should try to regenerate their thumbnails. Plugins exist to do this easily. Default: 480px.', 'marianne' ),
+			'description' => __( 'If you increase the width of the page, your featured images may become too small. In this case, you should regenerate their thumbnails with a plugins (recommended). Or you can enable the next option. Default: 480px.', 'marianne' ),
 			'type'        => 'radio',
 			'value'       => array(
 				'480' => _x( '480px', 'A width in pixels', 'marianne' ),
@@ -217,7 +217,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_global',
 			'id'          => 'images_expand',
 			'title'       => __( 'Expand featured images that are not wide enough.', 'marianne' ),
-			'description' => __( 'This can make the images a bit blurry. Default: unchecked.', 'marianne' ),
+			'description' => __( 'This can make the images a bit blurry. This is less efficient than regenerating the images. Default: unchecked.', 'marianne' ),
 			'type'        => 'checkbox',
 			'live'        => true,
 		);

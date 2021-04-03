@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marianne\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-02 15:07+0000\n"
+"POT-Creation-Date: 2021-04-03 09:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -106,12 +106,6 @@ msgid ""
 "alignment is set to \"justify\". Default: disabled."
 msgstr ""
 
-#. %s: The URL of the personal website of Teddy.
-#: inc/marianne-theme-page.php:329
-#, php-format
-msgid "by <a href=\"%s\">Teddy</a>"
-msgstr ""
-
 #: inc/customizer.php:257
 msgid ""
 "By default, the browser automatically chooses whether or not to smooth the "
@@ -147,6 +141,11 @@ msgstr ""
 
 #: inc/customizer.php:528
 msgid "Classic"
+msgstr ""
+
+#: inc/classes/class-marianne-customizer-section-about.php:82
+#: inc/classes/class-marianne-customizer-section-about.php:85
+msgid "Close the Customizer and go to About Marianne page"
 msgstr ""
 
 #: inc/customizer.php:175
@@ -338,7 +337,7 @@ msgid "Hide widgets."
 msgstr ""
 
 #: inc/customizer.php:188
-msgid "Hovered elements."
+msgid "Hovered elements"
 msgstr ""
 
 #: inc/marianne-theme-page.php:202
@@ -376,8 +375,8 @@ msgstr ""
 #: inc/customizer.php:206
 msgid ""
 "If you increase the width of the page, your featured images may become too "
-"small. In this case, you should try to regenerate their thumbnails. Plugins "
-"exist to do this easily. Default: 480px."
+"small. In this case, you should regenerate their thumbnails with a plugins "
+"(recommended). Or you can enable the next option. Default: 480px."
 msgstr ""
 
 #: functions.php:297 inc/customizer.php:460
@@ -704,7 +703,9 @@ msgid "Thin"
 msgstr ""
 
 #: inc/customizer.php:220
-msgid "This can make the images a bit blurry. Default: unchecked."
+msgid ""
+"This can make the images a bit blurry. This is less efficient than "
+"regenerating the images. Default: unchecked."
 msgstr ""
 
 #: search.php:73
