@@ -40,18 +40,36 @@
 	</header>
 
 	<?php
-	$marianne_single_classes  = 'entry-content loop-content';
-	$marianne_single_classes .= ' text-align-' . marianne_get_theme_mod( 'marianne_content_text_align' );
+	if ( 'excerpt' === marianne_get_theme_mod( 'marianne_loop_content_type' ) ) :
+		$marianne_single_classes  = 'entry-content loop-content';
+		$marianne_single_classes .= ' text-align-' . marianne_get_theme_mod( 'marianne_content_text_align' );
 
-	if ( true === marianne_get_theme_mod( 'marianne_content_hyphens' ) ) {
-		$marianne_single_classes .= ' text-hyphens';
-	}
+		if ( true === marianne_get_theme_mod( 'marianne_content_hyphens' ) ) {
+			$marianne_single_classes .= ' text-hyphens';
+		}
+		?>
+
+		<section <?php marianne_add_class( $marianne_single_classes, false ); ?>>
+			<a href="<?php the_permalink(); ?>">
+				<?php the_excerpt(); ?>
+			</a>
+		</section>
+		<?php
+	elseif ( 'content' === marianne_get_theme_mod( 'marianne_loop_content_type' ) ) :
+		$marianne_single_classes  = 'entry-content post-content';
+		$marianne_single_classes .= ' text-align-' . marianne_get_theme_mod( 'marianne_content_text_align' );
+
+		if ( true === marianne_get_theme_mod( 'marianne_content_hyphens' ) ) {
+			$marianne_single_classes .= ' text-hyphens';
+		}
+		?>
+
+		<section <?php marianne_add_class( $marianne_single_classes, false ); ?>>
+			<?php the_content(); ?>
+		</section>
+		<?php
+	endif;
 	?>
-	<section <?php marianne_add_class( $marianne_single_classes, false ); ?>>
-		<a href="<?php the_permalink(); ?>">
-			<?php the_excerpt(); ?>
-		</a>
-	</section>
 
 	<?php marianne_loop_comments( 'entry-footer loop-footer text-secondary' ); ?>
 </article>

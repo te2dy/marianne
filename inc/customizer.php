@@ -90,6 +90,13 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		);
 
 		$wp_customize->add_section(
+			'marianne_loop',
+			array(
+				'title' => __( 'Post List Settings', 'marianne' ),
+			)
+		);
+
+		$wp_customize->add_section(
 			'marianne_post',
 			array(
 				'title' => __( 'Post Settings', 'marianne' ),
@@ -361,6 +368,20 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'description' => __( 'Breaks some words in half so that they continue on another line rather than moving them entirely to the next line. Especially useful when the text alignment is set to "justify". Default: disabled.', 'marianne' ),
 			'type'        => 'checkbox',
 			'live'        => true,
+		);
+
+		// Post List Settings.
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_loop',
+			'id'          => 'content_type',
+			'title'       => __( 'How do you want to display the content?', 'marianne' ),
+			'description' => __( '', 'marianne' ),
+			'type'        => 'radio',
+			'value'       => array(
+				'none'    => __( 'No content', 'marianne' ),
+				'excerpt' => __( 'The excerpt only', 'marianne' ),
+				'content' => __( 'The whole content', 'marianne' ),
+			),
 		);
 
 		// Post Settings.
@@ -759,6 +780,9 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			// Content Formatting.
 			'marianne_content_text_align' => 'left',
 			'marianne_content_hyphens'    => false,
+
+			// Post List Settings.
+			'marianne_loop_content_type' => 'excerpt',
 
 			// Post Settings.
 			'marianne_post_nav' => false,
