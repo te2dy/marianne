@@ -1000,6 +1000,17 @@ iframe {
 	font-size: 1.5em;
 	margin: 1em 0;
 }
+.post-format-icon-container {
+	display: inline-block;
+	vertical-align: middle;
+}
+.post-format-icon-container .feather {
+	fill: transparent;
+	stroke: var(--color-body-text-primary);
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
 .entry-thumbnail-wide .wp-post-image {
 	width: var(--page-width);
 }
