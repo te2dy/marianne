@@ -216,9 +216,20 @@ if ( ! function_exists( 'marianne_add_sub_menu_toggle' ) ) {
 	function marianne_add_sub_menu_toggle( $output, $item, $depth, $args ) {
 		if ( 0 === $depth && in_array( 'menu-item-has-children', $item->classes, true ) && 'primary' === $args->theme_location ) {
 
-			// Add toggle button.
+			// Adds toggle button.
 			$output .= '<button class="sub-menu-toggle" aria-haspopup="true" aria-expanded="false" onClick="marianneExpandSubMenu(this)">';
-			$output .= '+';
+
+			// Displays the chevron SVG.
+			$svg_chevron_data   = marianne_svg_feather_icons( 'chevron-down' );
+			$svg_chevron_shapes = $svg_chevron_data['shapes'];
+			$svg_chevron_args   = array(
+				'class' => 'feather sub-menu-toggle-icon',
+				'size'  => array( 12, 12 ),
+				'echo'  => false,
+			);
+
+			$output .= marianne_svg( $svg_chevron_shapes, $svg_chevron_args );
+
 			$output .= '<span class="screen-reader-text">' . esc_html__( 'Open submenu', 'marianne' ) . '</span>';
 			$output .= '</button>';
 		}
@@ -273,6 +284,11 @@ if ( ! function_exists( 'marianne_svg_feather_icons' ) ) {
 		);
 
 		switch ( $name ) {
+			case 'chevron-down':
+				$svg_data['name']   = 'chevron-down';
+				$svg_data['shapes'] = '<polyline points="6 9 12 15 18 9"></polyline>';
+				break;
+
 			case 'email':
 				$svg_data['name']   = __( 'Email', 'marianne' );
 				$svg_data['shapes'] = '<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline>';
@@ -347,13 +363,12 @@ if ( ! function_exists( 'marianne_esc_svg' ) ) {
 	 * @link https://www.w3.org/TR/SVG2/shapes.html
 	 *
 	 * @param string $shapes Path to escape.
-	 * @param bool   $echo   Echo or return the value.
 	 *
 	 * @return string $shapes Escaped path.
 	 *
 	 * @since Marianne 1.3
 	 */
-	function marianne_esc_svg( $shapes = '', $echo = true ) {
+	function marianne_esc_svg( $shapes = '' ) {
 		$allowed_path = array(
 			'circle'   => array(
 				'cx' => array(),
@@ -386,11 +401,7 @@ if ( ! function_exists( 'marianne_esc_svg' ) ) {
 			),
 		);
 
-		if ( true === $echo ) {
-			echo wp_kses( $shapes, $allowed_path );
-		} else {
-			return wp_kses( $shapes, $allowed_path );
-		}
+		return wp_kses( $shapes, $allowed_path );
 	}
 }
 
@@ -398,24 +409,44 @@ if ( ! function_exists( 'marianne_svg' ) ) {
 	/**
 	 * Converts a Twitter username into a Twitter URL.
 	 *
-	 * @param string $shapes  SVG shapes to displays.
-	 * @param string $class   The class of the container.
-	 *                        To set multiple classes,
-	 *                        separate them with a space.
-	 *                        Example: $class = "class-1 class-2".
-	 * @param array  $size    The size of the image (width, height).
-	 * @param string $viewbox The viewBox attribute to add to the image.
+	 * @param string $shapes SVG shapes to displays.
+	 * @param array  $args   Parameters to set.
+	 *                       $args = array(
+	 *                           'class'   => 'string' The class of the SVG image.
+	 *                                        Default: 'feather'.
+	 *                           'size'    => (array) The size of the image (width, height).
+	 *                                        Default: array( 18, 18 ).
+	 *                           'viewbox' => (string) The viewBox attribute to add to the image.
+	 *                                        Default: '0 0 24 24'.
+	 *                           'echo'    => (bool) Whether to return or echo the SVG image.
+	 *                                        Default: true.
 	 *
-	 * @return void
+	 * @return string|void $svg The SVG HTML.
 	 *
 	 * @since Marianne 1.3
 	 */
-	function marianne_svg( $shapes = '', $class = 'feather', $size = array( 18, 18 ), $viewbox = '0 0 24 24' ) {
-		?>
-			<svg xmlns="http://www.w3.org/2000/svg" width="<?php echo esc_attr( absint( $size[0] ) ); ?>" height="<?php echo esc_attr( absint( $size[1] ) ); ?>" <?php marianne_add_class( $class, false ); ?> viewBox="<?php echo esc_attr( $viewbox ); ?>">
-				<?php marianne_esc_svg( $shapes ); ?>
-			</svg>
-		<?php
+	function marianne_svg( $shapes = '', $args = array() ) {
+		if ( is_array( $args ) && ! empty( $args ) ) {
+			$class   = isset( $args['class'] ) ? $args['class'] : 'feather';
+			$size    = isset( $args['size'] ) ? $args['size'] : array( 18, 18 );
+			$viewbox = isset( $args['viewbox'] ) ? $args['viewbox'] : '0 0 24 24';
+
+			if ( isset( $args['echo'] ) && is_bool( $args['echo'] ) ) {
+				$echo = $args['echo'];
+			} else {
+				$echo = true;
+			}
+		}
+
+		$svg  = '<svg xmlns="http://www.w3.org/2000/svg" width="' . esc_attr( absint( $size[0] ) ) . '" height="' . esc_attr( absint( $size[1] ) ) . '" class="' . esc_attr( $class ) . '" viewBox="' . esc_attr( $viewbox ) . '">';
+		$svg .= marianne_esc_svg( $shapes );
+		$svg .= '</svg>';
+
+		if ( true === $echo ) {
+			echo $svg;
+		} else {
+			return $svg;
+		}
 	}
 }
 

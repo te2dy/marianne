@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Marianne\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-02 14:22+0000\n"
-"PO-Revision-Date: 2021-04-03 09:03+0000\n"
+"PO-Revision-Date: 2021-04-04 09:48+0000\n"
 "Last-Translator: Teddy\n"
 "Language-Team: French (France)\n"
 "Language: fr_FR\n"
@@ -32,26 +32,15 @@ msgstr "&lsaquo; Commentaires plus récents"
 msgid "&lsaquo; Previous page"
 msgstr "&lsaquo; Page précédente"
 
-#. Description of the theme
-msgid ""
-"A minimalist theme ideal for writers, journalists and all bloggers who want "
-"to share their texts."
-msgstr ""
-"Un thème minimaliste idéal pour les écrivains, les journalistes et les "
-"blogueurs qui veulent partager leurs textes."
-
 #: inc/customizer.php:209
-msgctxt "A width in pixels"
 msgid "480px"
 msgstr "480&nbsp;px"
 
 #: inc/customizer.php:210
-msgctxt "A width in pixels"
 msgid "600px"
 msgstr "600&nbsp;px"
 
 #: inc/customizer.php:211
-msgctxt "A width in pixels"
 msgid "720px"
 msgstr "720&nbsp;px"
 
@@ -79,6 +68,25 @@ msgstr ""
 #: inc/customizer.php:538
 msgid "Any link you want to display."
 msgstr "Autre lien que vous souhaitez afficher."
+
+#. Description of the theme
+msgid ""
+"Are you looking for a simple theme to highlight your writings? Marianne is a "
+"rare minimalist theme in an ocean of maximalism. If you believe that less "
+"graphism complexity means less distraction and more focus on content, this "
+"theme is made for you. It gives a touch of old school blogging brought up to "
+"date, with many customization options. Whether you are a simple blogger, a "
+"writer, a journalist or an intellectual, this theme will delight you… and "
+"your readers."
+msgstr ""
+"Vous êtes à la recherche d’un thème simple pour mettre en valeur vos écrits ?"
+" Marianne est un thème minimaliste rare dans un océan de maximalisme. Si "
+"vous pensez que moins de complexité graphique signifie moins de distraction "
+"et plus de concentration sur le contenu, ce thème est fait pour vous. Il "
+"donne une touche de blog à l’ancienne remis au goût du jour, avec de "
+"nombreuses options de personnalisation. Que vous soyez simple blogueur, "
+"écrivain, journaliste ou intellectuel, ce thème vous ravira... vous et vos "
+"lecteurs."
 
 #: inc/marianne-theme-page.php:289
 msgid ""

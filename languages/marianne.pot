@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marianne\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-03 19:56+0000\n"
+"POT-Creation-Date: 2021-04-04 09:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -33,24 +33,15 @@ msgstr ""
 msgid "&lsaquo; Previous page"
 msgstr ""
 
-#. Description of the theme
-msgid ""
-"A minimalist theme ideal for writers, journalists and all bloggers who want "
-"to share their texts."
-msgstr ""
-
 #: inc/customizer.php:209
-msgctxt "A width in pixels"
 msgid "480px"
 msgstr ""
 
 #: inc/customizer.php:210
-msgctxt "A width in pixels"
 msgid "600px"
 msgstr ""
 
 #: inc/customizer.php:211
-msgctxt "A width in pixels"
 msgid "720px"
 msgstr ""
 
@@ -75,6 +66,17 @@ msgstr ""
 
 #: inc/customizer.php:538
 msgid "Any link you want to display."
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"Are you looking for a simple theme to highlight your writings? Marianne is a "
+"rare minimalist theme in an ocean of maximalism. If you believe that less "
+"graphism complexity means less distraction and more focus on content, this "
+"theme is made for you. It gives a touch of old school blogging brought up to "
+"date, with many customization options. Whether you are a simple blogger, a "
+"writer, a journalist or an intellectual, this theme will delight you… and "
+"your readers."
 msgstr ""
 
 #: inc/marianne-theme-page.php:289

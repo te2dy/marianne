@@ -163,11 +163,11 @@ if ( ! function_exists( 'marianne_menu_primary' ) ) {
 
 		<?php if ( true === marianne_get_theme_mod( 'marianne_header_menu_search' ) ) : ?>
 			<?php
-				if ( has_nav_menu( 'primary' ) ) {
-					$marianne_search_id = 'header-search-with-menu';
-				} else {
-					$marianne_search_id = 'header-search-without-menu';
-				}
+			if ( has_nav_menu( 'primary' ) ) {
+				$marianne_search_id = 'header-search-with-menu';
+			} else {
+				$marianne_search_id = 'header-search-without-menu';
+			}
 			?>
 
 			<div id="<?php echo esc_attr( $marianne_search_id ); ?>" class="header-search-box">
@@ -494,7 +494,13 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 										<li>
 											<a href="<?php echo esc_attr( $link ); ?>" target="<?php echo esc_attr( $target ); ?>" title="<?php echo esc_attr( $svg_name ); ?>" aria-label="<?php echo esc_attr( $svg_name ); ?>">
 												<div class="social-icon-container">
-													<?php marianne_svg( $svg_shapes, 'feather feather-' . $site ); ?>
+													<?php
+													$svg_args = array(
+														'class' => 'feather feather-' . $site,
+													);
+
+													marianne_svg( $svg_shapes, $svg_args );
+													?>
 												</div>
 											</a>
 										</li>
