@@ -1434,3 +1434,28 @@ iframe {
 		margin-top: 4em;
 	}
 }
+
+.site-grid-hl-sl {
+	display: grid;
+	grid-template-areas:
+		"header content"
+		"sidebar content"
+		"sidebar footer";
+	max-width: calc( var(--page-width) + 220px );
+}
+.site-grid-hl-sl .site-header {
+	grid-area: header;
+	margin-top: 4em;
+	padding-right: 1em;
+	width: 220px;
+}
+.site-grid-hl-sl .site-content {
+	grid-area: content;
+	width: var(--page-width);
+}
+.site-grid-hl-sl .site-secondary {
+	grid-area: sidebar;
+}
+.site-grid-hl-sl .site-footer {
+	grid-area: footer;
+}
