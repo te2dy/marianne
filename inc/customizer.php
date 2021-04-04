@@ -206,9 +206,9 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'description' => __( 'If you increase the width of the page, your featured images may become too small. In this case, you should regenerate their thumbnails with a plugins (recommended). Or you can enable the next option. Default: 480px.', 'marianne' ),
 			'type'        => 'radio',
 			'value'       => array(
-				'480' => _x( '480px', 'A width in pixels', 'marianne' ),
-				'600' => _x( '600px', 'A width in pixels', 'marianne' ),
-				'720' => _x( '720px', 'A width in pixels', 'marianne' ),
+				'480' => __( '480px', 'marianne' ),
+				'600' => __( '600px', 'marianne' ),
+				'720' => __( '720px', 'marianne' ),
 			),
 			'live'        => true,
 		);
