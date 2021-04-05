@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marianne\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-04 09:45+0000\n"
+"POT-Creation-Date: 2021-04-05 09:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -62,6 +62,13 @@ msgstr ""
 msgid ""
 "Adds the date the post or page was retrieved and a short link to access the "
 "content. Default: checked."
+msgstr ""
+
+#. %s. The name of the social site.
+#: inc/template-tags.php:446
+#, php-format
+msgctxt "Alternative text for social icon images"
+msgid "%s icon"
 msgstr ""
 
 #: inc/customizer.php:538
@@ -226,7 +233,7 @@ msgstr ""
 msgid "Donate ₿"
 msgstr ""
 
-#: functions.php:277 inc/customizer.php:508
+#: functions.php:294 inc/customizer.php:508
 msgid "Email"
 msgstr ""
 
@@ -242,7 +249,7 @@ msgstr ""
 msgid "Expand featured images that are not wide enough."
 msgstr ""
 
-#: functions.php:282 inc/customizer.php:452
+#: functions.php:299 inc/customizer.php:452
 msgid "Facebook"
 msgstr ""
 
@@ -294,7 +301,7 @@ msgstr ""
 msgid "Force anti-aliasing."
 msgstr ""
 
-#: functions.php:287 inc/customizer.php:484
+#: functions.php:304 inc/customizer.php:484
 msgid "GitHub"
 msgstr ""
 
@@ -302,7 +309,7 @@ msgstr ""
 msgid "GitHub Repository"
 msgstr ""
 
-#: functions.php:292 inc/customizer.php:492
+#: functions.php:309 inc/customizer.php:492
 msgid "GitLab"
 msgstr ""
 
@@ -381,7 +388,7 @@ msgid ""
 "(recommended). Or you can enable the next option. Default: 480px."
 msgstr ""
 
-#: functions.php:297 inc/customizer.php:460
+#: functions.php:314 inc/customizer.php:460
 msgid "Instagram"
 msgstr ""
 
@@ -412,6 +419,13 @@ msgstr ""
 msgid "Justify"
 msgstr ""
 
+#. %s. The name of the social site.
+#: inc/template-tags.php:438
+#, php-format
+msgctxt "Label for links to social sites."
+msgid "Link to %s"
+msgstr ""
+
 #: inc/customizer.php:278 inc/customizer.php:349 inc/customizer.php:383
 msgid "Left"
 msgstr ""
@@ -420,8 +434,16 @@ msgstr ""
 msgid "Light"
 msgstr ""
 
-#: functions.php:302 inc/customizer.php:537
+#: functions.php:319 inc/customizer.php:537
 msgid "Link"
+msgstr ""
+
+#: inc/template-tags.php:462
+msgid "Link icon"
+msgstr ""
+
+#: inc/template-tags.php:458
+msgid "Link to a custom URL"
 msgstr ""
 
 #: inc/marianne-theme-page.php:60
@@ -429,17 +451,25 @@ msgctxt "Link to Marianne on WordPress Theme Directory"
 msgid "https://wordpress.org/themes/marianne/"
 msgstr ""
 
-#: inc/template-tags.php:612
+#: inc/template-tags.php:590
 msgctxt "Link to the next post."
 msgid "Next"
 msgstr ""
 
-#: inc/template-tags.php:600
+#: inc/template-tags.php:451
+msgid "Link to the phone number"
+msgstr ""
+
+#: inc/template-tags.php:578
 msgctxt "Link to the previous post."
 msgid "Previous"
 msgstr ""
 
-#: functions.php:307 inc/customizer.php:476
+#: inc/template-tags.php:465
+msgid "Link to the RSS feed"
+msgstr ""
+
+#: functions.php:324 inc/customizer.php:476
 msgid "LinkedIn"
 msgstr ""
 
@@ -493,7 +523,7 @@ msgstr ""
 msgid "Open links in a new tab."
 msgstr ""
 
-#: functions.php:222
+#: functions.php:234
 msgid "Open submenu"
 msgstr ""
 
@@ -526,8 +556,12 @@ msgstr ""
 msgid "Page Width"
 msgstr ""
 
-#: functions.php:312 inc/customizer.php:516
+#: functions.php:329 inc/customizer.php:516
 msgid "Phone"
+msgstr ""
+
+#: inc/template-tags.php:455
+msgid "Phone icon"
 msgstr ""
 
 #. %1$s: The URL of the GitHub Issues page of the Marianne repository. %2$s: The URL of the support forum of the theme on WordPress.org
@@ -579,8 +613,12 @@ msgstr ""
 msgid "Round"
 msgstr ""
 
-#: functions.php:317
+#: functions.php:334
 msgid "RSS Feed"
+msgstr ""
+
+#: inc/template-tags.php:469
+msgid "RSS icon"
 msgstr ""
 
 #: inc/customizer.php:232
@@ -639,6 +677,10 @@ msgstr ""
 
 #: template-parts/content-single.php:17 template-parts/content-loop.php:17
 msgid "Sticky post"
+msgstr ""
+
+#: functions.php:229
+msgid "Submenu opening icon"
 msgstr ""
 
 #. Author of the theme
@@ -724,11 +766,11 @@ msgstr ""
 msgid "Translate"
 msgstr ""
 
-#: functions.php:327 inc/customizer.php:500
+#: functions.php:344 inc/customizer.php:500
 msgid "Twitch"
 msgstr ""
 
-#: functions.php:332 inc/customizer.php:444
+#: functions.php:349 inc/customizer.php:444
 msgid "Twitter"
 msgstr ""
 
@@ -739,14 +781,14 @@ msgid ""
 msgstr ""
 
 #. %s: The short link of the post.
-#: inc/template-tags.php:555
+#: inc/template-tags.php:533
 #, php-format
 msgctxt "Use only on print."
 msgid "Available at: %s"
 msgstr ""
 
 #. %1$s: The retrieve date. %1$s: The retrieve time.
-#: inc/template-tags.php:535
+#: inc/template-tags.php:513
 #, php-format
 msgctxt "Use only on print."
 msgid "Retrieved %1$s at %2$s (website time)."
@@ -857,6 +899,6 @@ msgstr ""
 msgid "Your YouTube channel URL."
 msgstr ""
 
-#: functions.php:322 inc/customizer.php:468
+#: functions.php:339 inc/customizer.php:468
 msgid "YouTube"
 msgstr ""
