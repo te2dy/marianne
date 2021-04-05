@@ -502,8 +502,8 @@ if ( ! function_exists( 'marianne_print_info' ) ) {
 	 * @since Marianne 1.3
 	 */
 	function marianne_print_info( $class = 'text-secondary' ) {
-		$today_date = current_time( get_option( 'date_format' ) );
-		$today_time = current_time( get_option( 'time_format' ) );
+		$today_date = date_i18n( get_option( 'date_format' ) );
+		$today_time = date_i18n( get_option( 'time_format' ) );
 		?>
 			<div id="print-info"<?php marianne_add_class( $class ); ?>>
 				<p>
