@@ -21,7 +21,18 @@ and intellectuals who want to present their work.
 
 == Changelog ==
 
-=== 1.3.4.2 – April 3nd, 2021 ===
+=== 1.3.5 – April 9st, 2021 ===
+- Added: ARIA labels for SVG icons for accessibility.
+- Fixed: featured images were always expanded to full site's width.
+- Fixed: retrieved date for printing was not localized.
+- Fixed: the category separator vas inside the list item.
+- Updated: theme description.
+- Updated: toggle menu button.
+- Updated: SVG icon function.
+- Updated: translation files.
+- Updated: styles.
+
+=== 1.3.4.2 – April 3rd, 2021 ===
 - Fixed: critical error. Sorry for the inconvenience.
 
 === 1.3.4.1 – April 3nd, 2021 ===

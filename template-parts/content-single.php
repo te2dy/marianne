@@ -27,7 +27,7 @@
 
 		$marianne_thumbnail_class = 'entry-thumbnail post-thumbnail';
 
-		if ( false === marianne_get_theme_mod( 'marianne_global_images_expand' ) ) {
+		if ( true === marianne_get_theme_mod( 'marianne_global_images_expand' ) ) {
 			$marianne_thumbnail_class .= ' entry-thumbnail-wide';
 		}
 
