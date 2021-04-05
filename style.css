@@ -1149,6 +1149,10 @@ iframe {
 	font-size: .9em;
 	margin-top: .25em;
 }
+#cancel-comment-reply-link {
+	color: var(--color-body-text-secondary);
+	font-weight: normal;
+}
 #cancel-comment-reply-link::before {
 	content: " ";
 }
