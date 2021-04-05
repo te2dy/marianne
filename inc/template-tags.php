@@ -360,86 +360,32 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 
 		$container_class .= ' site-social-' . marianne_get_theme_mod( 'marianne_social_style' );
 
-		$option_twitter   = marianne_get_theme_mod( 'marianne_social_twitter' );
-		$option_facebook  = marianne_get_theme_mod( 'marianne_social_facebook' );
-		$option_instagram = marianne_get_theme_mod( 'marianne_social_instagram' );
-		$option_youtube   = marianne_get_theme_mod( 'marianne_social_youtube' );
-		$option_linkedin  = marianne_get_theme_mod( 'marianne_social_linkedin' );
-		$option_github    = marianne_get_theme_mod( 'marianne_social_github' );
-		$option_gitlab    = marianne_get_theme_mod( 'marianne_social_gitlab' );
-		$option_twitch    = marianne_get_theme_mod( 'marianne_social_twitch' );
-		$option_email     = marianne_get_theme_mod( 'marianne_social_email' );
-		$option_phone     = marianne_get_theme_mod( 'marianne_social_phone' );
-		$option_link      = marianne_get_theme_mod( 'marianne_social_link' );
-		$option_rss       = marianne_get_theme_mod( 'marianne_social_rss' );
+		$social_links = array();
 
-		if ( $option_twitter || $option_facebook || $option_instagram || $option_youtube || $option_linkedin || $option_github || $option_gitlab || $option_twitch || $option_email || $option_phone || $option_link || $option_rss ) {
-			$no_links = false;
-		} else {
-			$no_links = true;
-		}
+		$social_links['twitter']   = marianne_get_theme_mod( 'marianne_social_twitter' ) ? marianne_get_theme_mod( 'marianne_social_twitter' ) : '' ;
+		$social_links['facebook']  = marianne_get_theme_mod( 'marianne_social_facebook' ) ? marianne_get_theme_mod( 'marianne_social_facebook' ) : '' ;
+		$social_links['instagram'] = marianne_get_theme_mod( 'marianne_social_instagram' ) ? marianne_get_theme_mod( 'marianne_social_instagram' ) : '' ;
+		$social_links['youtube']   = marianne_get_theme_mod( 'marianne_social_youtube' ) ? marianne_get_theme_mod( 'marianne_social_youtube' ) : '' ;
+		$social_links['linkedin']  = marianne_get_theme_mod( 'marianne_social_linkedin' ) ? marianne_get_theme_mod( 'marianne_social_linkedin' ) : '' ;
+		$social_links['github']    = marianne_get_theme_mod( 'marianne_social_github' ) ? marianne_get_theme_mod( 'marianne_social_github' ) : '' ;
+		$social_links['gitlab']    = marianne_get_theme_mod( 'marianne_social_gitlab' ) ? marianne_get_theme_mod( 'marianne_social_gitlab' ) : '' ;
+		$social_links['twitch']    = marianne_get_theme_mod( 'marianne_social_twitch' ) ? marianne_get_theme_mod( 'marianne_social_twitch' ) : '' ;
+		$social_links['email']     = marianne_get_theme_mod( 'marianne_social_email' ) ? marianne_get_theme_mod( 'marianne_social_email' ) : '' ;
+		$social_links['phone']     = marianne_get_theme_mod( 'marianne_social_phone' ) ? marianne_get_theme_mod( 'marianne_social_phone' ) : '' ;
+		$social_links['link']      = marianne_get_theme_mod( 'marianne_social_link' ) ? marianne_get_theme_mod( 'marianne_social_link' ) : '' ;
+		$social_links['rss']       = marianne_get_theme_mod( 'marianne_social_rss' ) ? marianne_get_theme_mod( 'marianne_social_rss' ) : '' ;
 
-		if ( false === $no_links ) :
-			$social_links = array();
+		if ( ! empty( $social_links ) ) :
+			?>
+				<div<?php marianne_add_class( $container_class ); ?>>
+					<ul class="social-links list-inline">
+						<?php
+						foreach ( $social_links as $site => $link ) {
+							$svg_icons  = marianne_svg_feather_icons( $site );
+							$svg_name   = $svg_icons['name'];
+							$svg_shapes = $svg_icons['shapes'];
 
-			if ( $option_twitter ) {
-				$social_links['twitter'] = $option_twitter;
-			}
-
-			if ( $option_facebook ) {
-				$social_links['facebook'] = $option_facebook;
-			}
-
-			if ( $option_instagram ) {
-				$social_links['instagram'] = $option_instagram;
-			}
-
-			if ( $option_youtube ) {
-				$social_links['youtube'] = $option_youtube;
-			}
-
-			if ( $option_linkedin ) {
-				$social_links['linkedin'] = $option_linkedin;
-			}
-
-			if ( $option_github ) {
-				$social_links['github'] = $option_github;
-			}
-
-			if ( $option_gitlab ) {
-				$social_links['gitlab'] = $option_gitlab;
-			}
-
-			if ( $option_twitch ) {
-				$social_links['twitch'] = $option_twitch;
-			}
-
-			if ( $option_email ) {
-				$social_links['email'] = $option_email;
-			}
-
-			if ( $option_phone ) {
-				$social_links['phone'] = $option_phone;
-			}
-
-			if ( $option_link ) {
-				$social_links['link'] = $option_link;
-			}
-
-			if ( $option_rss ) {
-				$social_links['rss'] = $option_rss;
-			}
-
-			if ( ! empty( $social_links ) ) :
-				?>
-					<div<?php marianne_add_class( $container_class ); ?>>
-						<ul class="social-links list-inline">
-							<?php
-							foreach ( $social_links as $site => $link ) {
-								$svg_icons  = marianne_svg_feather_icons( $site );
-								$svg_name   = $svg_icons['name'];
-								$svg_shapes = $svg_icons['shapes'];
-
+							if ( $link ) {
 								switch ( $site ) {
 									case 'twitter':
 										$link = 'https://twitter.com/' . str_replace( '@', '', $link );
@@ -474,49 +420,70 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 										}
 										break;
 								}
+							}
 
-								if ( $link ) {
-									if ( false === marianne_get_theme_mod( 'marianne_social_target_blank' ) ) {
-										$target = '_self';
-									} else {
-										$target = '_blank';
-									}
+							if ( $link ) {
+								if ( false === marianne_get_theme_mod( 'marianne_social_target_blank' ) ) {
+									$target = '_self';
+								} else {
+									$target = '_blank';
+								}
 
-									?>
-										<li>
-											<?php
+								?>
+									<li>
+										<?php
+										if ( 'phone' !== $link && 'link' !== $site && 'rss' !== $site ) {
 											$link_aria_label = sprintf(
 												/* translators: %s. The name of the social site. */
 												_x( 'Link to %s', 'Label for links to social sites.', 'marianne' ),
 												ucfirst( $site )
 											);
-											?>
 
-											<a href="<?php echo esc_attr( $link ); ?>" target="<?php echo esc_attr( $target ); ?>" aria-label="<?php echo esc_attr( $link_aria_label ); ?>">
-												<div class="social-icon-container">
-													<?php
-													$svg_args = array(
-														'class'      => 'feather feather-' . $site,
-														'aria-label' => sprintf(
-															/* translators: %s. The name of the social site. */
-															_x( '%s icon', 'Alternative text for social icon images', 'marianne' ),
-															ucfirst( $site )
-														),
-													);
+											$svg_args = array(
+												'class'      => 'feather feather-' . $site,
+												'aria-label' => sprintf(
+													/* translators: %s. The name of the social site. */
+													_x( '%s icon', 'Alternative text for social icon images', 'marianne' ),
+													ucfirst( $site )
+												),
+											);
+										} elseif ( 'phone' === $site ) {
+											$link_aria_label = __( 'Link to the phone number', 'marianne' );
 
-													marianne_svg( $svg_shapes, $svg_args );
-													?>
-												</div>
-											</a>
-										</li>
-									<?php
-								}
+											$svg_args = array(
+												'class'      => 'feather feather-' . $site,
+												'aria-label' => __( 'Phone icon', 'marianne' ),
+											);
+										} elseif ( 'link' === $site ) {
+											$link_aria_label = __( 'Link to a custom URL', 'marianne' );
+
+											$svg_args = array(
+												'class'      => 'feather feather-' . $site,
+												'aria-label' => __( 'Link icon', 'marianne' ),
+											);
+										} elseif ( 'rss' === $site ) {
+											$link_aria_label = __( 'Link to the RSS feed', 'marianne' );
+
+											$svg_args = array(
+												'class'      => 'feather feather-' . $site,
+												'aria-label' => __( 'RSS icon', 'marianne' ),
+											);
+										}
+										?>
+
+										<a href="<?php echo esc_attr( $link ); ?>" target="<?php echo esc_attr( $target ); ?>" aria-label="<?php echo esc_attr( $link_aria_label ); ?>">
+											<div class="social-icon-container">
+												<?php marianne_svg( $svg_shapes, $svg_args ); ?>
+											</div>
+										</a>
+									</li>
+								<?php
 							}
-							?>
-						</ul>
-					</div>
-				<?php
-			endif;
+						}
+						?>
+					</ul>
+				</div>
+			<?php
 		endif;
 	}
 }
