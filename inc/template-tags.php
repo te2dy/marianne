@@ -484,11 +484,24 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 
 									?>
 										<li>
-											<a href="<?php echo esc_attr( $link ); ?>" target="<?php echo esc_attr( $target ); ?>" title="<?php echo esc_attr( $svg_name ); ?>" aria-label="<?php echo esc_attr( $svg_name ); ?>">
+											<?php
+											$link_aria_label = sprintf(
+												/* translators: %s. The name of the social site. */
+												_x( 'Link to %s', 'Label for links to social sites.', 'marianne' ),
+												ucfirst( $site )
+											);
+											?>
+
+											<a href="<?php echo esc_attr( $link ); ?>" target="<?php echo esc_attr( $target ); ?>" aria-label="<?php echo esc_attr( $link_aria_label ); ?>">
 												<div class="social-icon-container">
 													<?php
 													$svg_args = array(
-														'class' => 'feather feather-' . $site,
+														'class'      => 'feather feather-' . $site,
+														'aria-label' => sprintf(
+															/* translators: %s. The name of the social site. */
+															_x( '%s icon', 'Alternative text for social icon images', 'marianne' ),
+															ucfirst( $site )
+														),
 													);
 
 													marianne_svg( $svg_shapes, $svg_args );

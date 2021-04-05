@@ -223,9 +223,10 @@ if ( ! function_exists( 'marianne_add_sub_menu_toggle' ) ) {
 			$svg_chevron_data   = marianne_svg_feather_icons( 'chevron-down' );
 			$svg_chevron_shapes = $svg_chevron_data['shapes'];
 			$svg_chevron_args   = array(
-				'class' => 'feather sub-menu-toggle-icon',
-				'size'  => array( 12, 12 ),
-				'echo'  => false,
+				'class'      => 'feather sub-menu-toggle-icon',
+				'size'       => array( 12, 12 ),
+				'echo'       => false,
+				'aria-label' => __( 'Submenu opening icon', 'marianne' ),
 			);
 
 			$output .= marianne_svg( $svg_chevron_shapes, $svg_chevron_args );
@@ -412,14 +413,16 @@ if ( ! function_exists( 'marianne_svg' ) ) {
 	 * @param string $shapes SVG shapes to displays.
 	 * @param array  $args   Parameters to set.
 	 *                       $args = array(
-	 *                           'class'   => 'string' The class of the SVG image.
-	 *                                        Default: 'feather'.
-	 *                           'size'    => (array) The size of the image (width, height).
-	 *                                        Default: array( 18, 18 ).
-	 *                           'viewbox' => (string) The viewBox attribute to add to the image.
-	 *                                        Default: '0 0 24 24'.
-	 *                           'echo'    => (bool) Whether to return or echo the SVG image.
-	 *                                        Default: true.
+	 *                           'class'      => 'string' The class of the SVG image.
+	 *                                           Default: 'feather'.
+	 *                           'size'       => (array) The size of the image (width, height).
+	 *                                           Default: array( 18, 18 ).
+	 *                           'viewbox'    => (string) The viewBox attribute to add to the image.
+	 *                                           Default: '0 0 24 24'.
+	 *                           'echo'       => (bool) Whether to return or echo the SVG image.
+	 *                                           Default: true.
+	 *                           'aria_label' => (string) Label the image.
+	 *                                           Default: ''.
 	 *
 	 * @return string|void $svg The SVG HTML.
 	 *
@@ -436,9 +439,11 @@ if ( ! function_exists( 'marianne_svg' ) ) {
 			} else {
 				$echo = true;
 			}
+
+			$aria_label = isset( $args['aria-label'] ) ? $args['aria-label'] : '';
 		}
 
-		$svg  = '<svg xmlns="http://www.w3.org/2000/svg" width="' . esc_attr( absint( $size[0] ) ) . '" height="' . esc_attr( absint( $size[1] ) ) . '" class="' . esc_attr( $class ) . '" viewBox="' . esc_attr( $viewbox ) . '">';
+		$svg  = '<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="' . esc_attr( $aria_label ) . '" width="' . esc_attr( absint( $size[0] ) ) . '" height="' . esc_attr( absint( $size[1] ) ) . '" class="' . esc_attr( $class ) . '" viewBox="' . esc_attr( $viewbox ) . '">';
 		$svg .= marianne_esc_svg( $shapes );
 		$svg .= '</svg>';
 
