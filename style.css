@@ -469,6 +469,25 @@ dd {
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
+.aligncenter {
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+.alignleft {
+	float: left;
+	margin-bottom: 1em !important;
+	margin-right: 1em !important;
+}
+.alignright {
+	float: right;
+	margin-bottom: 1em !important;
+	margin-left: 1em !important;
+}
+.alignnone {
+	height: auto;
+	margin: 0 0 1em;
+}
 .alignwide {
 	width: 75vw;
 	margin-top: 2em;
@@ -626,25 +645,6 @@ img {
 }
 .gallery-caption {
 	display: block;
-}
-.aligncenter {
-	height: auto;
-	margin-left: auto;
-	margin-right: auto;
-}
-.alignleft {
-	float: left;
-	margin-bottom: 1em !important;
-	margin-right: 1em !important;
-}
-.alignright {
-	float: right;
-	margin-bottom: 1em !important;
-	margin-left: 1em !important;
-}
-.alignnone {
-	height: auto;
-	margin: 0 0 1em;
 }
 
 /* Forms */
