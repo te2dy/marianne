@@ -389,9 +389,8 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_loop',
 			'id'          => 'comment_link_text',
 			'title'       => __( 'Text of the comment link when there are no comments yet', 'marianne' ),
-			'description' => __( 'Default: empty.', 'marianne' ),
+			'description' => __( 'For example, "No comments" or "Write a comment". Default: empty.', 'marianne' ),
 			'type'        => 'text',
-			'live'        => true,
 		);
 
 		// Post Settings.

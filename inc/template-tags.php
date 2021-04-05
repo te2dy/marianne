@@ -450,36 +450,36 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 											);
 
 											$svg_args = array(
-												'class'      => 'feather feather-' . $site,
 												'aria-label' => sprintf(
 													/* translators: %s. The name of the social site. */
 													_x( '%s icon', 'Alternative text for social icon images', 'marianne' ),
 													ucfirst( $site )
 												),
+												'class'      => 'feather feather-' . $site,
 												'size'       => array( 16, 16 ),
 											);
 										} elseif ( 'phone' === $site ) {
 											$link_aria_label = __( 'Link to the phone number', 'marianne' );
 
 											$svg_args = array(
-												'class'      => 'feather feather-' . $site,
 												'aria-label' => __( 'Phone icon', 'marianne' ),
+												'class'      => 'feather feather-' . $site,
 												'size'       => array( 16, 16 ),
 											);
 										} elseif ( 'link' === $site ) {
 											$link_aria_label = __( 'Link to a custom URL', 'marianne' );
 
 											$svg_args = array(
-												'class'      => 'feather feather-' . $site,
 												'aria-label' => __( 'Link icon', 'marianne' ),
+												'class'      => 'feather feather-' . $site,
 												'size'       => array( 16, 16 ),
 											);
 										} elseif ( 'rss' === $site ) {
 											$link_aria_label = __( 'Link to the RSS feed', 'marianne' );
 
 											$svg_args = array(
-												'class'      => 'feather feather-' . $site,
 												'aria-label' => __( 'RSS icon', 'marianne' ),
+												'class'      => 'feather feather-' . $site,
 												'size'       => array( 16, 16 ),
 											);
 										}
