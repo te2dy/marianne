@@ -223,20 +223,24 @@ if ( ! function_exists( 'marianne_loop_comments' ) ) {
 	 */
 	function marianne_loop_comments( $class = '' ) {
 		$comments_number = get_comments_number();
-
-		// Displays the comment link it there is at least one comment.
-		if ( $comments_number && 0 < absint( $comments_number ) ) :
+		if ( comments_open() && ( 0 < absint( $comments_number ) || marianne_get_theme_mod( 'marianne_loop_comment_link_text' ) ) ) :
 			?>
 				<footer<?php marianne_add_class( $class ); ?>>
-					<a href="<?php echo esc_url( get_comments_link() ); ?>">
-						<?php
-						printf(
-							/* translators: %d: Comment count number. */
-							esc_html( _n( '%d comment', '%d comments', absint( $comments_number ), 'marianne' ) ),
-							esc_html( $comments_number )
-						);
-						?>
-					</a>
+					<?php if ( 0 < absint( $comments_number ) ) : ?>
+						<a href="<?php echo esc_url( get_comments_link() ); ?>">
+							<?php
+							printf(
+								/* translators: %d: Comment count number. */
+								esc_html( _n( '%d comment', '%d comments', absint( $comments_number ), 'marianne' ) ),
+								esc_html( $comments_number )
+							);
+							?>
+						</a>
+					<?php elseif ( marianne_get_theme_mod( 'marianne_loop_comment_link_text' ) ) : ?>
+						<a href="<?php echo esc_url( get_comments_link() ); ?>" class="loop-comment-link-none">
+							<?php echo esc_html( marianne_get_theme_mod( 'marianne_loop_comment_link_text' ) ); ?>
+						</a>
+					<?php endif; ?>
 				<footer>
 			<?php
 		endif;
