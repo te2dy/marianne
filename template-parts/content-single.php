@@ -21,7 +21,7 @@
 		<?php
 		marianne_the_date( 'entry-meta entry-date post-date text-secondary' );
 
-		marianne_the_categories( 'entry-meta text-secondary' );
+		marianne_the_categories( 'entry-meta entry-categories text-secondary' );
 
 		the_title( '<h1 class="entry-title post-title">', '</h1>' );
 

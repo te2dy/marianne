@@ -999,6 +999,9 @@ iframe {
 	padding-left: .25em;
 	margin: 1em 0 .5em;
 }
+.entry-categories li + li:before {
+    content: "\00B7";
+}
 .post-title,
 .page-title {
 	font-size: 1.5em;

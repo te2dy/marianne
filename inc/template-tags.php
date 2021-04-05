@@ -296,14 +296,6 @@ if ( ! function_exists( 'marianne_the_categories' ) ) {
 					<?php foreach ( $categories as $category ) : ?>
 						<li>
 							<a href="<?php echo esc_url( get_category_link( $category->cat_ID ) ); ?>"><?php echo esc_html( $category->cat_name ); ?></a>
-
-							<?php
-							$i++;
-
-							if ( $i !== $cat_count ) {
-								echo '&middot;';
-							}
-							?>
 						</li>
 					<?php endforeach; ?>
 				</ul>

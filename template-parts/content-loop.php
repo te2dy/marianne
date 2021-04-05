@@ -22,7 +22,7 @@
 			<a href="<?php the_permalink(); ?>"><?php marianne_the_date(); ?></a>
 		</div>
 
-		<?php marianne_the_categories( 'entry-meta text-secondary' ); ?>
+		<?php marianne_the_categories( 'entry-meta entry-categories text-secondary' ); ?>
 
 		<h3 class="entry-title loop-title">
 			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
