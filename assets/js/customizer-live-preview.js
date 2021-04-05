@@ -247,8 +247,6 @@
 			} );
 		} );
 
-		console.log( wp.customize );
-
 		// Content Formatting > Text Align.
 		wp.customize( "marianne_content_text_align", function( value ) {
 			value.bind( function( newval ) {
