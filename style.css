@@ -790,6 +790,9 @@ iframe {
 #menu-primary .menu-item-has-children .sub-menu-toggle[aria-expanded="true"] .feather {
 	stroke: var(--color-link-hover);
 }
+#menu-primary .sub-menu-toggle-icon {
+	stroke-width: 3;
+}
 #menu-primary .sub-menu {
 	clip: rect(1px, 1px, 1px, 1px);
 	clip-path: inset(50%);
