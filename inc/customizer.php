@@ -46,6 +46,12 @@ if ( ! function_exists( 'marianne_customizer_script_live' ) ) {
 		$min           = marianne_minify();
 
 		wp_enqueue_script( 'marianne-customizer-live', get_template_directory_uri() . "/assets/js/customizer-live-preview$min.js", array( 'jquery', 'customize-preview' ), $theme_version, true );
+
+		$marianne_localize_script = array(
+			'default_search_text' => esc_html_x( 'Search', 'The search button text.', 'marianne' ),
+		);
+
+		wp_localize_script( 'marianne-customizer-live', 'marianne_live', $marianne_localize_script );
 	}
 
 	add_action( 'customize_preview_init', 'marianne_customizer_script_live' );
@@ -336,6 +342,15 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'title'       => __( 'Add a search button.', 'marianne' ),
 			'description' => __( 'It will be added as a primary menu item if a menu is set. Default: unchecked.', 'marianne' ),
 			'type'        => 'checkbox',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_header',
+			'id'          => 'menu_search_text',
+			'title'       => __( 'Search button text', 'marianne' ),
+			'description' => __( 'You can customize the button text. Leave blank to use the default text (Search).', 'marianne' ),
+			'type'        => 'text',
+			'live'        => true,
 		);
 
 		// Content Formatting.
@@ -749,12 +764,13 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_global_text_shadow'   => false,
 
 			// Header Settings.
-			'marianne_header_align'        => 'left',
-			'marianne_header_title_weight' => 'bolder',
-			'marianne_header_desc_weight'  => 'normal',
-			'marianne_header_desc_style'   => 'normal',
-			'marianne_header_logo_round'   => false,
-			'marianne_header_menu_search'  => false,
+			'marianne_header_align'            => 'left',
+			'marianne_header_title_weight'     => 'bolder',
+			'marianne_header_desc_weight'      => 'normal',
+			'marianne_header_desc_style'       => 'normal',
+			'marianne_header_logo_round'       => false,
+			'marianne_header_menu_search'      => false,
+			'marianne_header_menu_search_text' => '',
 
 			// Content Formatting.
 			'marianne_content_text_align' => 'left',

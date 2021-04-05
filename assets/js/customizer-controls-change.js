@@ -22,6 +22,21 @@
 			}
 		});
 
+		// Show Search button text only when the search button is enabled.
+		if ( $( '#_customize-input-marianne_header_menu_search' ).is( ':checked' ) ) {
+			$( '#customize-control-marianne_header_menu_search_text' ).show();
+		} else {
+			$( '#customize-control-marianne_header_menu_search_text' ).hide();
+		}
+
+		$( '#_customize-input-marianne_header_menu_search' ).change( function () {
+			if ( $( '#_customize-input-marianne_header_menu_search' ).is( ':checked' ) ) {
+				$( '#customize-control-marianne_header_menu_search_text' ).show( speed );
+			} else {
+				$( '#customize-control-marianne_header_menu_search_text' ).hide( speed );
+			}
+		});
+
 		// Show Phone Type only when a phone number is typed.
 		if ( $( '#_customize-input-marianne_social_phone' ).val().length > 0 ) {
 			$( '#customize-control-marianne_social_phone_type' ).show();

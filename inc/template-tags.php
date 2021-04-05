@@ -122,7 +122,13 @@ if ( ! function_exists( 'marianne_menu_primary' ) ) {
 					if ( ! is_search() && true === marianne_get_theme_mod( 'marianne_header_menu_search' ) ) {
 						$items_wrap .= '<li id="menu-item-search" class="menu-item">';
 						$items_wrap .= '<button id="header-search-button" class="button-inline button-expand" aria-haspopup="true" aria-expanded="false">';
-						$items_wrap .= esc_html_x( 'Search', 'The search button in the header.', 'marianne' );
+
+						if ( ! marianne_get_theme_mod( 'marianne_header_menu_search_text' ) ) {
+							$items_wrap .= esc_html_x( 'Search', 'The search button in the header.', 'marianne' );
+						} else {
+							$items_wrap .= esc_html( marianne_get_theme_mod( 'marianne_header_menu_search_text' ) );
+						}
+
 						$items_wrap .= '<span class="screen-reader-text">';
 						$items_wrap .= esc_html__( 'Open the search form', 'marianne' );
 						$items_wrap .= '</span>';
