@@ -264,7 +264,9 @@ if ( ! function_exists( 'marianne_loop_navigation' ) ) {
 
 		if ( $nav_prev || $nav_next ) {
 			?>
-				<div<?php marianne_add_class( $class ); ?>>
+				<nav<?php marianne_add_class( $class ); ?> role="navigation" aria-label="<?php esc_html_e( 'Posts', 'marianne' ); ?>">
+					<h3 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'marianne' ); ?></h3>
+
 					<?php if ( $nav_prev ) { ?>
 						<a href="<?php echo esc_url( get_previous_posts_page_link() ); ?>" rel="prev">
 							<?php esc_html_e( '&lsaquo; Previous page', 'marianne' ); ?>
@@ -276,7 +278,7 @@ if ( ! function_exists( 'marianne_loop_navigation' ) ) {
 							<?php esc_html_e( 'Next page &rsaquo;', 'marianne' ); ?>
 						</a>
 					<?php } ?>
-				</div>
+				</nav>
 			<?php
 		}
 	}
@@ -574,10 +576,14 @@ if ( ! function_exists( 'marianne_post_links' ) ) {
 		$marianne_newer_post = get_next_post_link();
 		$marianne_older_post = get_previous_post_link();
 
+		the_post_navigation();
+
 		if ( $marianne_newer_post || $marianne_older_post ) {
 			?>
 				<div<?php marianne_add_class( $class ); ?>>
-					<nav class="post-navigation">
+					<nav class="post-navigation" role="navigation" aria-label="<?php esc_html_e( 'Post', 'marianne' ); ?>">
+						<h3 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'marianne' ); ?></h3>
+
 						<?php
 						if ( $marianne_newer_post && $marianne_older_post ) {
 							$nav_links_class = 'nav-links';
