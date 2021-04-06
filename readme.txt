@@ -22,6 +22,7 @@ and intellectuals who want to present their work.
 == Changelog ==
 
 === 1.3.5 – April 9st, 2021 ===
+- Added: option to add a comment link this custom text when there are no comments yet.
 - Added: ARIA labels for SVG icons for accessibility.
 - Fixed: featured images were always expanded to full site's width.
 - Fixed: retrieved date for printing was not localized.
