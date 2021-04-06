@@ -502,20 +502,13 @@ dd {
 	margin-bottom: 2em;
 	margin-left: calc(-100vw / 2 + var(--page-width) / 2);
 }
-@media all and (max-width: 500px) {
-	.alignwide,
-	.alignfull {
-		width: 100%;
-		margin: 2em 0;
-	}
-	.wp-block-media-text {
-		display: block;
-	}
-}
 .blocks-gallery-grid figcaption,
 .wp-block-gallery figcaption {
 	padding-right: 1em;
 	padding-left: 1em;
+}
+.alignfull .wp-block-media-text__content {
+	padding: 1em;
 }
 
 /* Lists */
@@ -1316,6 +1309,10 @@ iframe {
 		margin-right: 4em;
 		margin-left: 4em;
 	}
+	.alignwide {
+		width: 100%;
+		margin: 2em 0;
+	}
 }
 
 @media all and (max-width: 664px) {
@@ -1366,6 +1363,15 @@ iframe {
 	}
 	.comment-list .parent .comment {
 		padding: .5em 0 0 .5em;
+	}
+
+	/* Blocks */
+	.wp-block-media-text {
+		display: block;
+	}
+	.alignfull {
+		margin-right: -1em;
+		margin-left: -1em;
 	}
 }
 

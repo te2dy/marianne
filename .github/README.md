@@ -36,7 +36,7 @@ You can also download the latest version of Marianne from GitHub by following [t
 
 You can contribute to this project directly on GitHub by reporting issues or suggesting improvements. As I'm a very amateur developer, there is probably a lot to do.
 
-New translations are welcome. A [pot file is at your disposal](/languages/marianne.pot) so you can start translating.
+New translations are welcome. A [.pot file is at your disposal](/languages/marianne.pot) so you can start translating.
 
 ## Support
 
