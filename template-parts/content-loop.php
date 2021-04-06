@@ -18,9 +18,17 @@
 			</div>
 		<?php endif; ?>
 
-		<div class="entry-meta text-secondary">
-			<a href="<?php the_permalink(); ?>"><?php marianne_the_date(); ?></a>
-		</div>
+		<?php
+		marianne_the_meta(
+			'entry-meta text-secondary',
+			array(
+				'date'   => true,
+				'time'   => false,
+				'author' => true,
+				'avatar' => true,
+			)
+		);
+		?>
 
 		<?php marianne_the_categories( 'entry-meta entry-categories text-secondary' ); ?>
 

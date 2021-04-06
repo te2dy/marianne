@@ -203,9 +203,107 @@ if ( ! function_exists( 'marianne_the_date' ) ) {
 	 *
 	 * @return void
 	 */
-	function marianne_the_date( $class = 'entry-date' ) {
+	function marianne_the_date( $class = 'entry-date', $args = array() ) {
+		if ( isset( $args['date'] ) && false === $args['date'] ) {
+			$args['date'] = false;
+		} else {
+			$args['date'] = true;
+		}
+
+		if ( isset( $args['time'] ) && true === $args['time'] ) {
+			$args['time'] = true;
+		} else {
+			$args['time'] = false;
+		}
 		?>
-			<time<?php marianne_add_class( $class ); ?> datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>"><?php the_date(); ?></time>
+			<time<?php marianne_add_class( $class ); ?> datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>">
+				<?php
+				if ( true === $args['date'] && false === $args['time'] ) {
+					echo esc_html( get_the_date() );
+				} elseif ( true === $args['date'] && true === $args['time'] ) {
+					printf(
+						esc_html__( '%1$s at %2$s', 'The post date and time', 'marianne' ),
+						esc_html( get_the_date() ),
+						esc_html( get_the_time() ),
+					);
+				} elseif ( false === $args['date'] && true === $args['time'] ) {
+					echo esc_html( get_the_time() );
+				}
+				?>
+			</time>
+		<?php
+	}
+}
+
+if ( ! function_exists( 'marianne_the_meta' ) ) {
+	/**
+	 *
+	 */
+	function marianne_the_meta( $class = '', $args = array() ) {
+		$the_date_args = array();
+
+		if ( isset( $args['date'] ) && false === $args['date'] ) {
+			$args['date']          = false;
+			$the_date_args['date'] = false;
+		} else {
+			$args['date'] = true;
+		}
+
+		if ( isset( $args['time'] ) && true === $args['time'] ) {
+			$args['time']          = true;
+			$the_date_args['time'] = true;
+		} else {
+			$args['time'] = false;
+		}
+
+		if ( isset( $args['author'] ) && true === $args['author'] ) {
+			$args['author'] = true;
+			$class .= ' entry-author';
+		} else {
+			$args['author'] = false;
+		}
+
+		if ( isset( $args['avatar'] ) && true === $args['avatar'] ) {
+			$args['avatar'] = true;
+
+			if ( false === $args['author'] ) {
+				$class .= ' entry-author';
+			}
+		} else {
+			$args['avatar'] = false;
+		}
+		?>
+
+		<div<?php marianne_add_class( $class ); ?>>
+			<?php if ( false === $args['author'] && false === $args['avatar'] ) : ?>
+				<?php marianne_the_date( 'entry-date', $the_date_args ); ?>
+			<?php else : ?>
+				<?php if ( true === $args['avatar'] ) : ?>
+					<div class="entry-author-content">
+						<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
+							<?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ) ?>
+						</a>
+					</div>
+				<?php endif; ?>
+
+				<div class="entry-author-content">
+					<?php if ( true === $args['author'] ) : ?>
+						<div>
+							<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
+								<?php echo get_the_author_meta( 'display_name' ); ?>
+							</a>
+						</div>
+					<?php endif; ?>
+
+					<div>
+						<a href="<?php the_permalink(); ?>">
+							<?php marianne_the_date( 'entry-date', $the_date_args ); ?>
+						</a>
+					</div>
+				</div>
+			<?php endif; ?>
+		</div>
+
 		<?php
 	}
 }
@@ -575,8 +673,6 @@ if ( ! function_exists( 'marianne_post_links' ) ) {
 	function marianne_post_links( $class = 'entry-links post-links text-secondary' ) {
 		$marianne_newer_post = get_next_post_link();
 		$marianne_older_post = get_previous_post_link();
-
-		the_post_navigation();
 
 		if ( $marianne_newer_post || $marianne_older_post ) {
 			?>

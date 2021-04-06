@@ -1004,6 +1004,17 @@ iframe {
 	font-size: 1.5em;
 	margin: 1em 0;
 }
+.entry-author {
+	display: flex;
+	align-items: center;
+}
+.entry-author .avatar {
+	border-radius: 50%;
+	margin-right: .5em;
+}
+.entry-author-name {
+
+}
 .entry-thumbnail-wide .wp-post-image {
 	width: var(--page-width);
 }
