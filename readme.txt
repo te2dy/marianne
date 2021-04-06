@@ -7,17 +7,16 @@ Requires PHP: 5.2
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-A minimalist theme ideal for writers, journalists and all bloggers who want to share their texts.
+Are you looking for a simple theme to highlight your writings? Marianne is a rare minimalistic theme in an ocean of maximalism. It gives a touch of old school blogging to your site, refreshed, with customization options that make it flexible. If you believe that less graphism complexity means less distraction and more readability, this theme is made for you. Whether you are a simple blogger, a writer, a journalist or an intellectual, Marianne will delight you… and your readers.
 
 == Description ==
-Marianne is a minimalist WordPress theme.
-It is mainly designed to make your content very readable
-and to minimize energy consumption of your visitors' device.
+The design of Marianne is sober and modern, without frills. The small width of its pages and the absence of visual pollution (excess of colors and icons) facilitate the reading and emphasize the essential, your contents, for the greatest pleasure of your readers.
 
-Marianne uses system fonts and requires few resources.
-It uses minimal functionalities to focus on your texts.
-It is the perfect theme for writers, journalists
-and intellectuals who want to present their work.
+Marianne uses the system fonts. In concrete terms, it does not load new files to display your texts and thus gains in speed. In addition, the use of such fonts brings an appreciable graphic continuity to your digital ecosystem.
+
+This is a customizable theme. You can add a logo, switch from a light to a dark color scheme, change the font, add links to your social accounts and more… It’s up to you!
+
+Finally, Marianne theme adapts to all formats. It keeps its characteristics on tablet and mobile, and it has been designed to give a good print results.
 
 == Changelog ==
 
