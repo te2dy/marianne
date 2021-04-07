@@ -297,6 +297,14 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_header',
+			'id'          => 'logo_title_inline',
+			'title'       => __( 'Put the logo and the title on the same line.', 'marianne' ),
+			'description' => __( 'Default: unchecked', 'marianne' ),
+			'type'        => 'checkbox',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_header',
 			'id'          => 'logo_round',
 			'title'       => __( 'Make the logo round.', 'marianne' ),
 			'description' => __( 'Only applies if a logo is set (see the Site Identity section). Default: unckecked.', 'marianne' ),
@@ -779,13 +787,14 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_global_text_shadow'   => false,
 
 			// Header Settings.
-			'marianne_header_align'            => 'left',
-			'marianne_header_title_weight'     => 'bolder',
-			'marianne_header_desc_weight'      => 'normal',
-			'marianne_header_desc_style'       => 'normal',
-			'marianne_header_logo_round'       => false,
-			'marianne_header_menu_search'      => false,
-			'marianne_header_menu_search_text' => '',
+			'marianne_header_align'             => 'left',
+			'marianne_header_logo_title_inline' => false,
+			'marianne_header_title_weight'      => 'bolder',
+			'marianne_header_desc_weight'       => 'normal',
+			'marianne_header_desc_style'        => 'normal',
+			'marianne_header_logo_round'        => false,
+			'marianne_header_menu_search'       => false,
+			'marianne_header_menu_search_text'  => '',
 
 			// Content Formatting.
 			'marianne_content_text_align' => 'left',

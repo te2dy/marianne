@@ -755,6 +755,19 @@ iframe {
 	font-weight: var(--site-desc-weight);
 	margin: .5em 0 0;
 }
+.site-identity-inline {
+	display: flex;
+	align-items: center;
+}
+.site-identity-inline .site-logo {
+	margin: 0 1em 0 0;
+}
+.site-identity-inline-content {
+	width: 100%;
+}
+.site-header-image-container {
+	margin: 2em 0;
+}
 
 /* Primary menu */
 #menu-primary-container {

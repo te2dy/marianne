@@ -15,12 +15,12 @@ if ( ! function_exists( 'marianne_setup' ) ) {
 	 * @return void
 	 */
 	function marianne_setup() {
-		// Load translation files.
+		// Loads translation files.
 		load_theme_textdomain( 'marianne', get_template_directory() . '/languages' );
 
 		$marianne_page_width = marianne_get_theme_mod( 'marianne_global_page_width' );
 
-		// Set content-width.
+		// Sets content-width.
 		if ( ! isset( $content_width ) ) {
 			$content_width = absint( $marianne_page_width );
 		}
@@ -28,11 +28,11 @@ if ( ! function_exists( 'marianne_setup' ) ) {
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
 
-		// Let WordPress use default document title.
+		// Lets WordPress use default document title.
 		add_theme_support( 'title-tag' );
 
 		/**
-		 * Add support for custom logo.
+		 * Adds support for custom logo.
 		 *
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
@@ -51,7 +51,7 @@ if ( ! function_exists( 'marianne_setup' ) ) {
 			)
 		);
 
-		// Register the main menu.
+		// Registers the menus.
 		register_nav_menus(
 			array(
 				'primary' => __( 'Primary Menu', 'marianne' ),
@@ -60,7 +60,7 @@ if ( ! function_exists( 'marianne_setup' ) ) {
 		);
 
 		/*
-		 * Enable support for Post Thumbnails on posts and pages
+		 * Enables support for Post Thumbnails on posts and pages
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 *
@@ -70,7 +70,7 @@ if ( ! function_exists( 'marianne_setup' ) ) {
 		add_image_size( 'marianne-thumbnails', absint( $marianne_page_width ) );
 		add_image_size( 'marianne-thumbnails-retina', ( absint( $marianne_page_width ) * 2 ) );
 
-		// Add support for responsive oEmbed content.
+		// Adds support for responsive oEmbed content.
 		add_theme_support( 'responsive-embeds' );
 
 		// HTML5 support.
@@ -85,6 +85,22 @@ if ( ! function_exists( 'marianne_setup' ) ) {
 				'script',
 				'search-form',
 				'style',
+			)
+		);
+
+		/**
+		 * Adds support for header image.
+		 *
+		 * @since Marianne 1.4
+		 */
+		add_theme_support(
+			'custom-header',
+			array(
+				'width'       => absint( $marianne_page_width ),
+				'height'      => 200,
+				'flex-height' => true,
+				'flex-width'  => true,
+				'header-text' => true,
 			)
 		);
 	}
