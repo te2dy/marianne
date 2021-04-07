@@ -190,12 +190,17 @@ function marianneAriaExpand( el ) {
 				.attr( "aria-haspopup", "true" )
 				.attr( "aria-expanded", "false" );
 
+			$( "#header-search-button" ).attr( "aria-expanded", "false" );
+			$( ".header-search-box" ).hide();
+
 			// When esc key is pressed, hide menu.
 			$( document ).keydown( function( e ) {
 				var escKey = e.keyCode === 27;
 
 				if ( escKey ) {
 					$( "#menu-mobile-button" ).attr( "aria-expanded", "false" );
+					$( "#header-search-button" ).attr( "aria-expanded", "false" );
+					$( ".header-search-box" ).hide();
 				}
 			} );
 
@@ -204,6 +209,8 @@ function marianneAriaExpand( el ) {
 
 				if ( ! container.is( e.target ) && container.has( e.target ).length === 0 ) {
 					$( "#menu-mobile-button" ).attr( "aria-expanded", "false" );
+					$( "#header-search-button" ).attr( "aria-expanded", "false" );
+					$( ".header-search-box" ).hide();
 				}
 			} );
 
@@ -220,7 +227,6 @@ function marianneAriaExpand( el ) {
 
 	$( window ).on( "resize", function() {
 		marianneAriaMenu( "#menu-primary" );
-		$( ".header-search-box" ).hide();
 	} );
 
 	// Enabled search form toggling in the header.
