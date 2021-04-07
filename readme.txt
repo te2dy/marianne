@@ -26,8 +26,10 @@ Finally, Marianne theme adapts to all formats. It keeps its characteristics on t
 - Fixed: featured images were always expanded to full site's width.
 - Fixed: retrieved date for printing was not localized.
 - Fixed: the category separator vas inside the list item.
+- Fixed: mobile menu button alignment when the header alignment is not set on left.
 - Updated: theme description.
 - Updated: toggle menu button.
+- Updated: primary menu background color on mobile.
 - Updated: SVG icon function.
 - Updated: translation files.
 - Updated: styles.
