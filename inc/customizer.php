@@ -201,6 +201,24 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		// Global.
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_global',
+			'id'          => 'layout',
+			'title'       => __( 'Layout', 'marianne' ),
+			'description' => __( 'You can choose to display your site in one or two columns, with a left sidebar. Default: one column.', 'marianne' ),
+			'type'        => 'marianne_radio_image',
+			'value'       => array(
+				'sidebar-none' => array(
+					'image' => esc_url( get_template_directory_uri() . '/assets/img/sidebar-none.png' ),
+					'name'  => __( 'One column', 'marianne' ),
+				),
+				'sidebar-left' => array(
+					'image' => esc_url( get_template_directory_uri() . '/assets/img/sidebar-left.png' ),
+					'name'  => __( 'Two columns with a left sidebar', 'marianne' ),
+				),
+			),
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_global',
 			'id'          => 'page_width',
 			'title'       => __( 'Page Width', 'marianne' ),
 			'description' => __( 'If you increase the width of the page, your featured images may become too small. In this case, you should regenerate their thumbnails with a plugins (recommended). Or you can enable the next option. Default: 480px.', 'marianne' ),
@@ -683,7 +701,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 				}
 
 				// Creates the control.
-				$others_controles = array( 'marianne_slider' );
+				$others_controles = array( 'marianne_slider', 'marianne_radio_image' );
 
 				if ( ! in_array( $type, $others_controles, true ) ) {
 					$wp_customize->add_control(
@@ -709,6 +727,19 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 								'description' => esc_html( $description ),
 								'section'     => esc_html( $section ),
 								'input_attrs' => $input_attrs,
+							)
+						)
+					);
+				} elseif ( 'marianne_radio_image' === $type ) {
+					$wp_customize->add_control(
+						new Marianne_Customizer_Control_Radio_Image(
+							$wp_customize,
+							esc_html( $option_name ),
+							array(
+								'label'       => esc_html( $title ),
+								'description' => esc_html( $description ),
+								'section'     => esc_html( $section ),
+								'choices'     => $value,
 							)
 						)
 					);
@@ -741,6 +772,7 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'colors_link_hover' => 'blue',
 
 			// Global.
+			'marianne_global_layout'        => 'sidebar-none',
 			'marianne_global_page_width'    => '480',
 			'marianne_global_images_expand' => false,
 			'marianne_global_font_family'   => 'sans-serif',

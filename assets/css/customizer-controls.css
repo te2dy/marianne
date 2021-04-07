@@ -139,6 +139,27 @@
 	color: #a7a7a7;
 }
 
+/**
+ * Image Radio.
+ *
+ * Based on the work of:
+ * @author Anthony Hortin <http://maddisondesigns.com>
+ * @license http://www.gnu.org/licenses/gpl-2.0.html
+ * @link https://github.com/maddisondesigns
+ */
+.image_radio_button_control .radio-button-label > input {
+	display: none;
+}
+
+.image_radio_button_control .radio-button-label > img {
+	cursor: pointer;
+	border: 3px solid #ddd;
+}
+
+.image_radio_button_control .radio-button-label > input:checked + img {
+	border: 3px solid #2885bb;
+}
+
 /* Theme Upsell */
 #accordion-section-marianne_about .accordion-section-title {
 	padding-left: 30px;

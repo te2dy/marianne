@@ -424,4 +424,5 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/marianne-theme-page.php';
 require get_template_directory() . '/inc/classes/class-marianne-customizer-control-slider.php';
+require get_template_directory() . '/inc/classes/class-marianne-customizer-control-radio-image.php';
 require get_template_directory() . '/inc/classes/class-marianne-customizer-section-about.php';
