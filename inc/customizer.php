@@ -242,6 +242,27 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_global',
+			'id'          => 'sidebar_width',
+			'title'       => __( 'Sidebar Width', 'marianne' ),
+			'description' => __( 'Default: 250px.', 'marianne' ),
+			'type'        => 'radio',
+			'value'       => array(
+				'200' => __( '200px', 'marianne' ),
+				'250' => __( '250px', 'marianne' ),
+				'300' => __( '300px', 'marianne' ),
+			),
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_global',
+			'id'          => 'sidebar_separator',
+			'title'       => __( 'Display a sidebar separator.', 'marianne' ),
+			'description' => __( '', 'marianne' ),
+			'type'        => 'checkbox',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_global',
 			'id'          => 'font_family',
 			'title'       => __( 'Font Family', 'marianne' ),
 			'description' => __( "Choose the font family you want to apply to your site. Your readers' device will render the pages with its own system font. Please note that the rendering may vary from device to device. Default: Sans serif.", 'marianne' ),
@@ -775,6 +796,8 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_global_layout'        => 'sidebar-none',
 			'marianne_global_page_width'    => '480',
 			'marianne_global_images_expand' => false,
+			'marianne_global_sidebar_width' => '250',
+			'marianne_global_sidebar_separator' => false,
 			'marianne_global_font_family'   => 'sans-serif',
 			'marianne_global_font_size'     => 100,
 			'marianne_global_font_smooth'   => false,

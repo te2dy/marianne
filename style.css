@@ -191,6 +191,16 @@ Text Domain: marianne
 	--page-width: 720px;
 }
 
+.sidebar-width-200 {
+	--sidebar-width: 200px;
+}
+.sidebar-width-250 {
+	--sidebar-width: 250px;
+}
+.sidebar-width-300 {
+	--sidebar-width: 300px;
+}
+
 /* Header */
 .site-header-align-left {
 	--site-header-align: left;
@@ -285,6 +295,9 @@ body {
 	margin: 2em 0 4em;
 	text-align: var(--site-header-align);
 }
+.sidebar-width-250 .site-header {
+	width: var(--sidebar-width);
+}
 .site-layout-sidebar-none .site-content {
 	margin: 4em 0;
 }
@@ -299,13 +312,13 @@ body {
 		"sidebar content"
 		"sidebar footer";
 	margin-top: 4em;
-	max-width: calc( var(--page-width) + 220px );
+	max-width: calc( var(--page-width) + var(--sidebar-width) + 50px );
 }
 .site-layout-sidebar-left .site-header {
 	grid-area: header;
 	margin-top: 0;
-	padding-right: 1em;
-	width: 220px;
+	margin-right: 25px;
+	padding-right: 25px;
 }
 .site-layout-sidebar-left .site-content {
 	grid-area: content;
@@ -316,6 +329,9 @@ body {
 }
 .site-layout-sidebar-left .site-footer {
 	grid-area: footer;
+}
+.sidebar-separator .site-header {
+	border-right: 1px solid var(--color-border);
 }
 
 article,
