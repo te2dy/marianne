@@ -191,10 +191,7 @@ function marianneAriaExpand( el ) {
 				.attr( "aria-expanded", "false" );
 
 			$( "#header-search-button" ).attr( "aria-expanded", "false" );
-
-			if ( ! $( "body" ).hasClass( "search" ) ) {
-				$( ".header-search-box" ).hide();
-			}
+			$( ".header-search-box" ).hide();
 
 			// When esc key is pressed, hide menu.
 			$( document ).keydown( function( e ) {
@@ -203,10 +200,7 @@ function marianneAriaExpand( el ) {
 				if ( escKey ) {
 					$( "#menu-mobile-button" ).attr( "aria-expanded", "false" );
 					$( "#header-search-button" ).attr( "aria-expanded", "false" );
-
-					if ( ! $( "body" ).hasClass( "search" ) ) {
-						$( ".header-search-box" ).hide();
-					}
+					$( ".header-search-box" ).hide();
 				}
 			} );
 
@@ -221,19 +215,13 @@ function marianneAriaExpand( el ) {
 				) {
 					$( "#menu-mobile-button" ).attr( "aria-expanded", "false" );
 					$( "#header-search-button" ).attr( "aria-expanded", "false" );
-
-					if ( ! $( "body" ).hasClass( "search" ) ) {
-						$( ".header-search-box" ).hide();
-					}
+					$( ".header-search-box" ).hide();
 				}
 			} );
 
 			$( "#menu-mobile-button" ).click( function () {
 				$( "#header-search-button" ).attr( "aria-expanded", "false" );
-
-				if ( ! $( "body" ).hasClass( "search" ) ) {
-					$( ".header-search-box" ).hide();
-				}
+				$( ".header-search-box" ).hide();
 			} );
 		}
 	}
@@ -255,7 +243,5 @@ function marianneAriaExpand( el ) {
 				return attr === "false" ? "true" : "false";
 			} );
 		} );
-	} else {
-		$( ".header-search-box" ).show();
 	}
 } )( jQuery );
