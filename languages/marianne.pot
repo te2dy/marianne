@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marianne\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-08 07:34+0000\n"
+"POT-Creation-Date: 2021-04-06 09:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -29,7 +29,7 @@ msgstr[1] ""
 msgid "&lsaquo; Newer comments"
 msgstr ""
 
-#: inc/template-tags.php:272
+#: inc/template-tags.php:270
 msgid "&lsaquo; Previous page"
 msgstr ""
 
@@ -65,7 +65,7 @@ msgid ""
 msgstr ""
 
 #. %s. The name of the social site.
-#: inc/template-tags.php:457
+#: inc/template-tags.php:455
 #, php-format
 msgctxt "Alternative text for social icon images"
 msgid "%s icon"
@@ -424,7 +424,7 @@ msgid "Justify"
 msgstr ""
 
 #. %s. The name of the social site.
-#: inc/template-tags.php:450
+#: inc/template-tags.php:448
 #, php-format
 msgctxt "Label for links to social sites."
 msgid "Link to %s"
@@ -442,11 +442,11 @@ msgstr ""
 msgid "Link"
 msgstr ""
 
-#: inc/template-tags.php:475
+#: inc/template-tags.php:473
 msgid "Link icon"
 msgstr ""
 
-#: inc/template-tags.php:472
+#: inc/template-tags.php:470
 msgid "Link to a custom URL"
 msgstr ""
 
@@ -455,21 +455,21 @@ msgctxt "Link to Marianne on WordPress Theme Directory"
 msgid "https://wordpress.org/themes/marianne/"
 msgstr ""
 
-#: inc/template-tags.php:610
+#: inc/template-tags.php:604
 msgctxt "Link to the next post."
 msgid "Next"
 msgstr ""
 
-#: inc/template-tags.php:464
+#: inc/template-tags.php:462
 msgid "Link to the phone number"
 msgstr ""
 
-#: inc/template-tags.php:598
+#: inc/template-tags.php:592
 msgctxt "Link to the previous post."
 msgid "Previous"
 msgstr ""
 
-#: inc/template-tags.php:480
+#: inc/template-tags.php:478
 msgid "Link to the RSS feed"
 msgstr ""
 
@@ -501,7 +501,7 @@ msgstr ""
 msgid "Monospaced"
 msgstr ""
 
-#: inc/template-tags.php:278
+#: inc/template-tags.php:276
 msgid "Next page &rsaquo;"
 msgstr ""
 
@@ -564,7 +564,7 @@ msgstr ""
 msgid "Phone"
 msgstr ""
 
-#: inc/template-tags.php:467
+#: inc/template-tags.php:465
 msgid "Phone icon"
 msgstr ""
 
@@ -585,28 +585,12 @@ msgid ""
 "them."
 msgstr ""
 
-#: inc/template-tags.php:584
-msgid "Post"
-msgstr ""
-
 #: inc/customizer.php:101
 msgid "Post List Settings"
 msgstr ""
 
-#: inc/template-tags.php:585
-msgid "Post navigation"
-msgstr ""
-
 #: inc/customizer.php:108
 msgid "Post Settings"
-msgstr ""
-
-#: inc/template-tags.php:267
-msgid "Posts"
-msgstr ""
-
-#: inc/template-tags.php:268
-msgid "Posts navigation"
 msgstr ""
 
 #: functions.php:57 inc/template-tags.php:115
@@ -641,7 +625,7 @@ msgstr ""
 msgid "RSS Feed"
 msgstr ""
 
-#: inc/template-tags.php:483
+#: inc/template-tags.php:481
 msgid "RSS icon"
 msgstr ""
 
@@ -818,14 +802,14 @@ msgid ""
 msgstr ""
 
 #. %s: The short link of the post.
-#: inc/template-tags.php:549
+#: inc/template-tags.php:547
 #, php-format
 msgctxt "Use only on print."
 msgid "Available at: %s"
 msgstr ""
 
 #. %1$s: The retrieve date. %1$s: The retrieve time.
-#: inc/template-tags.php:529
+#: inc/template-tags.php:527
 #, php-format
 msgctxt "Use only on print."
 msgid "Retrieved %1$s at %2$s (website time)."

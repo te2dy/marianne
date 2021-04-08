@@ -3,9 +3,9 @@ msgstr ""
 "Project-Id-Version: Marianne\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-02 14:22+0000\n"
-"PO-Revision-Date: 2021-04-08 07:35+0000\n"
+"PO-Revision-Date: 2021-04-06 09:21+0000\n"
 "Last-Translator: Teddy\n"
-"Language-Team: French (France)\n"
+"Language-Team: Français\n"
 "Language: fr_FR\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr[1] "%d commentaires"
 msgid "&lsaquo; Newer comments"
 msgstr "&lsaquo; Commentaires plus récents"
 
-#: inc/template-tags.php:272
+#: inc/template-tags.php:270
 msgid "&lsaquo; Previous page"
 msgstr "&lsaquo; Page précédente"
 
@@ -66,7 +66,7 @@ msgstr ""
 "pour accéder au contenu. Par défaut&nbsp;: non coché."
 
 #. %s. The name of the social site.
-#: inc/template-tags.php:457
+#: inc/template-tags.php:455
 #, php-format
 msgctxt "Alternative text for social icon images"
 msgid "%s icon"
@@ -466,7 +466,7 @@ msgid "Justify"
 msgstr "Justifié"
 
 #. %s. The name of the social site.
-#: inc/template-tags.php:450
+#: inc/template-tags.php:448
 #, php-format
 msgctxt "Label for links to social sites."
 msgid "Link to %s"
@@ -484,11 +484,11 @@ msgstr "Clair"
 msgid "Link"
 msgstr "Lien"
 
-#: inc/template-tags.php:475
+#: inc/template-tags.php:473
 msgid "Link icon"
 msgstr "Icône lien"
 
-#: inc/template-tags.php:472
+#: inc/template-tags.php:470
 msgid "Link to a custom URL"
 msgstr "Lien vers une adresse personnalisée"
 
@@ -497,21 +497,21 @@ msgctxt "Link to Marianne on WordPress Theme Directory"
 msgid "https://wordpress.org/themes/marianne/"
 msgstr "https://fr.wordpress.org/themes/marianne/"
 
-#: inc/template-tags.php:610
+#: inc/template-tags.php:604
 msgctxt "Link to the next post."
 msgid "Next"
 msgstr "Suivant"
 
-#: inc/template-tags.php:464
+#: inc/template-tags.php:462
 msgid "Link to the phone number"
 msgstr "Lien vers le numéro de téléphone"
 
-#: inc/template-tags.php:598
+#: inc/template-tags.php:592
 msgctxt "Link to the previous post."
 msgid "Previous"
 msgstr "Précédent"
 
-#: inc/template-tags.php:480
+#: inc/template-tags.php:478
 msgid "Link to the RSS feed"
 msgstr "Lien vers le flux RSS"
 
@@ -543,7 +543,7 @@ msgstr "Menus"
 msgid "Monospaced"
 msgstr "Chasse fixe"
 
-#: inc/template-tags.php:278
+#: inc/template-tags.php:276
 msgid "Next page &rsaquo;"
 msgstr "Page suivante &rsaquo;"
 
@@ -614,7 +614,7 @@ msgstr "Largeur de la page"
 msgid "Phone"
 msgstr "Téléphone"
 
-#: inc/template-tags.php:467
+#: inc/template-tags.php:465
 msgid "Phone icon"
 msgstr "Icône téléphone"
 
@@ -640,29 +640,13 @@ msgstr ""
 "Veuillez visiter le <a href=\"%s\" target=\"_blank\">forum d’assistance</a> "
 "et les publier."
 
-#: inc/template-tags.php:584
-msgid "Post"
-msgstr "Article"
-
 #: inc/customizer.php:101
 msgid "Post List Settings"
 msgstr "Réglages de la liste des articles"
 
-#: inc/template-tags.php:585
-msgid "Post navigation"
-msgstr "Navigation de l’article"
-
 #: inc/customizer.php:108
 msgid "Post Settings"
 msgstr "Réglages des articles"
-
-#: inc/template-tags.php:267
-msgid "Posts"
-msgstr "Articles"
-
-#: inc/template-tags.php:268
-msgid "Posts navigation"
-msgstr "Navigation des articles"
 
 #: functions.php:57 inc/template-tags.php:115
 msgid "Primary Menu"
@@ -696,7 +680,7 @@ msgstr "Rond"
 msgid "RSS Feed"
 msgstr "Flux RSS"
 
-#: inc/template-tags.php:483
+#: inc/template-tags.php:481
 msgid "RSS icon"
 msgstr "Icône RSS"
 
@@ -892,14 +876,14 @@ msgstr ""
 "puissent les voir et les visiter. Par défaut&nbsp;: coché."
 
 #. %s: The short link of the post.
-#: inc/template-tags.php:549
+#: inc/template-tags.php:547
 #, php-format
 msgctxt "Use only on print."
 msgid "Available at: %s"
 msgstr "Disponible sur&nbsp;: %s"
 
 #. %1$s: The retrieve date. %1$s: The retrieve time.
-#: inc/template-tags.php:529
+#: inc/template-tags.php:527
 #, php-format
 msgctxt "Use only on print."
 msgid "Retrieved %1$s at %2$s (website time)."

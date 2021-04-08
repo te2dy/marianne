@@ -7,56 +7,40 @@ Requires PHP: 5.2
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Are you looking for a simple theme to highlight your writings?
-Marianne is a rare minimalistic theme in an ocean of maximalism.
-It gives a touch of old school blogging to your site, refreshed,
-with customization options that make it flexible. If you believe
-that less graphism complexity means less distraction and more readability,
-this theme is made for you. Whether you are a simple blogger,
-a writer, a journalist or an intellectual, Marianne will delight you…
-and your readers.
+Are you looking for a simple theme to highlight your writings? Marianne is a rare minimalistic theme in an ocean of maximalism. It gives a touch of old school blogging to your site, refreshed, with customization options that make it flexible. If you believe that less graphism complexity means less distraction and more readability, this theme is made for you. Whether you are a simple blogger, a writer, a journalist or an intellectual, Marianne will delight you… and your readers.
 
 == Description ==
-The design of Marianne is sober and modern, without frills.
-The small width of its pages and the absence of visual pollution
-(excess of colors and icons) facilitate the reading and emphasize
-the essential, your contents, for the greatest pleasure of your readers.
+The design of Marianne is sober and modern, without frills. The small width of its pages and the absence of visual pollution (excess of colors and icons) facilitate the reading and emphasize the essential, your contents, for the greatest pleasure of your readers.
 
-Marianne uses the system fonts. In concrete terms, it does not load
-new files to display your texts and thus gains in speed. In addition,
-the use of such fonts brings an appreciable graphic continuity
-to your digital ecosystem.
+Marianne uses the system fonts. In concrete terms, it does not load new files to display your texts and thus gains in speed. In addition, the use of such fonts brings an appreciable graphic continuity to your digital ecosystem.
 
-This is a customizable theme. You can add a logo, switch from a light
-to a dark color scheme, change the font, add links to your social accounts
-and more… It’s up to you!
+This is a customizable theme. You can add a logo, switch from a light to a dark color scheme, change the font, add links to your social accounts and more… It’s up to you!
 
-Finally, Marianne theme adapts to all formats. It keeps its characteristics
-on tablet and mobile, and it has been designed to give a good print results.
+Finally, Marianne theme adapts to all formats. It keeps its characteristics on tablet and mobile, and it has been designed to give a good print results.
 
 == Changelog ==
 
-=== 1.3.5 – April 8st, 2021 ===
-- Added: option to add a custom text for comment link when there are no comments yet.
-- Added: ARIA labels for SVG icons (accessibility).
+=== 1.3.5 – April 9st, 2021 ===
+- Added: option to add a comment link this custom text when there are no comments yet.
+- Added: ARIA labels for SVG icons for accessibility.
 - Fixed: featured images were always expanded to full site's width.
 - Fixed: retrieved date for printing was not localized.
 - Fixed: the category separator vas inside the list item.
-- Fixed: mobile menu button alignment when the header alignment is not set to left.
+- Fixed: mobile menu button alignment when the header alignment is not set on left.
 - Updated: theme description.
 - Updated: toggle menu button.
 - Updated: primary menu background color on mobile.
-- Updated: SVG functions.
+- Updated: SVG icon function.
 - Updated: translation files.
 - Updated: styles.
 
 === 1.3.4.2 – April 3rd, 2021 ===
 - Fixed: critical error. Sorry for the inconvenience.
 
-=== 1.3.4.1 – April 3rd, 2021 ===
+=== 1.3.4.1 – April 3nd, 2021 ===
 - Fixed: warning about non escaped strings.
 
-=== 1.3.4 – April 3rd, 2021 ===
+=== 1.3.4 – April 3nd, 2021 ===
 - Added: translation of the Theme Description.
 - Fixed: various bugs in the Theme Customizer.
 - Fixed: wrong styles on comments.
