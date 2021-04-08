@@ -205,9 +205,14 @@ function marianneAriaExpand( el ) {
 			} );
 
 			$( document ).mouseup( function( e ) {
-				var container = $( "#menu-primary-container" );
+				var container = $( "#menu-primary-container" ),
+				    search_box = $( ".header-search-box" );
 
-				if ( ! container.is( e.target ) && container.has( e.target ).length === 0 ) {
+				if ( ! container.is( e.target )
+					&& container.has( e.target ).length === 0
+					&& ! search_box.is( e.target )
+					&& search_box.has( e.target ).length === 0
+				) {
 					$( "#menu-mobile-button" ).attr( "aria-expanded", "false" );
 					$( "#header-search-button" ).attr( "aria-expanded", "false" );
 					$( ".header-search-box" ).hide();

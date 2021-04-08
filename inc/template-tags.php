@@ -264,7 +264,7 @@ if ( ! function_exists( 'marianne_loop_navigation' ) ) {
 
 		if ( $nav_prev || $nav_next ) {
 			?>
-				<nav<?php marianne_add_class( $class ); ?> role="navigation" aria-label="<?php esc_html_e( 'Posts', 'marianne' ); ?>">
+				<nav<?php marianne_add_class( $class ); ?> role="navigation" aria-label="<?php esc_attr_e( 'Posts', 'marianne' ); ?>">
 					<h3 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'marianne' ); ?></h3>
 
 					<?php if ( $nav_prev ) { ?>
@@ -489,7 +489,7 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 
 										<a href="<?php echo esc_attr( $link ); ?>" target="<?php echo esc_attr( $target ); ?>" aria-label="<?php echo esc_attr( $link_aria_label ); ?>">
 											<div class="social-icon-container">
-												<?php marianne_svg( $svg_shapes, $svg_args ); ?>
+												<?php echo marianne_esc_svg( marianne_svg( $svg_shapes, $svg_args ) ); ?>
 											</div>
 										</a>
 									</li>
@@ -581,7 +581,7 @@ if ( ! function_exists( 'marianne_post_links' ) ) {
 		if ( $marianne_newer_post || $marianne_older_post ) {
 			?>
 				<div<?php marianne_add_class( $class ); ?>>
-					<nav class="post-navigation" role="navigation" aria-label="<?php esc_html_e( 'Post', 'marianne' ); ?>">
+					<nav class="post-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Post', 'marianne' ); ?>">
 						<h3 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'marianne' ); ?></h3>
 
 						<?php

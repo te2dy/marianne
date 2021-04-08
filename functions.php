@@ -229,7 +229,7 @@ if ( ! function_exists( 'marianne_add_sub_menu_toggle' ) ) {
 				'aria-label' => __( 'Submenu opening icon', 'marianne' ),
 			);
 
-			$output .= marianne_svg( $svg_chevron_shapes, $svg_chevron_args );
+			$output .= marianne_esc_svg( marianne_svg( $svg_chevron_shapes, $svg_chevron_args ) );
 
 			$output .= '<span class="screen-reader-text">' . esc_html__( 'Open submenu', 'marianne' ) . '</span>';
 			$output .= '</button>';
@@ -363,14 +363,25 @@ if ( ! function_exists( 'marianne_esc_svg' ) ) {
 	 *
 	 * @link https://www.w3.org/TR/SVG2/shapes.html
 	 *
-	 * @param string $shapes Path to escape.
+	 * @param string $input SVG HTML to escape.
 	 *
-	 * @return string $shapes Escaped path.
+	 * @return string $output Escaped SVG.
 	 *
 	 * @since Marianne 1.3
 	 */
-	function marianne_esc_svg( $shapes = '' ) {
-		$allowed_path = array(
+	function marianne_esc_svg( $input = '' ) {
+		$allowed_html = array(
+			'svg'      => array(
+				'xmlns'      => array(),
+				'role'       => array(),
+				'class'      => array(),
+				'id'         => array(),
+				'viewbox'    => array(),
+				'width'      => array(),
+				'height'     => array(),
+				'aria-label' => array(),
+			),
+			'title'    => array(),
 			'circle'   => array(
 				'cx' => array(),
 				'cy' => array(),
@@ -402,7 +413,8 @@ if ( ! function_exists( 'marianne_esc_svg' ) ) {
 			),
 		);
 
-		return wp_kses( $shapes, $allowed_path );
+		$output = wp_kses( $input, $allowed_html );
+		return $output;
 	}
 }
 
@@ -444,14 +456,11 @@ if ( ! function_exists( 'marianne_svg' ) ) {
 		}
 
 		$svg  = '<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="' . esc_attr( $aria_label ) . '" width="' . esc_attr( absint( $size[0] ) ) . '" height="' . esc_attr( absint( $size[1] ) ) . '" class="' . esc_attr( $class ) . '" viewBox="' . esc_attr( $viewbox ) . '">';
-		$svg .= marianne_esc_svg( $shapes );
+		$svg .= $shapes;
 		$svg .= '</svg>';
 
-		if ( true === $echo ) {
-			echo $svg;
-		} else {
-			return $svg;
-		}
+
+		return $svg;
 	}
 }
 
