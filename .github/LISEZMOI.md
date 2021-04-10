@@ -40,4 +40,6 @@ Bientôt.
 
 ## Soutenir
 
-Bientôt.
+Donner en Bitcoin : 1BTUsDokaDRsqn4dsyAY6bc2rCLes4Vssb
+
+![Code QR Bitcoin](/.github/btc-qr-code.png)
