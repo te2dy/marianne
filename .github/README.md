@@ -42,4 +42,4 @@ New translations are welcome. A [.pot file is at your disposal](/languages/maria
 
 Donate Bitcoin: 1BTUsDokaDRsqn4dsyAY6bc2rCLes4Vssb
 
-![Bitcoin QR Code](/.github/btc-qr-code.md)
+![Bitcoin QR Code](/.github/btc-qr-code.png)

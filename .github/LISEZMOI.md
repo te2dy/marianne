@@ -44,4 +44,4 @@ Les nouvelles traductions sont les bienvenues. Un [fichier .pot est à votre dis
 
 Donner des Bitcoin: 1BTUsDokaDRsqn4dsyAY6bc2rCLes4Vssb
 
-![Code QR Bitcoin](/.github/btc-qr-code.md)
+![Code QR Bitcoin](/.github/btc-qr-code.png)
