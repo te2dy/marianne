@@ -40,6 +40,4 @@ Soon.
 
 ## Support
 
-Donate Bitcoin: 1BTUsDokaDRsqn4dsyAY6bc2rCLes4Vssb
-
-![Bitcoin QR Code](/.github/btc-qr-code.png)
+Soon.
