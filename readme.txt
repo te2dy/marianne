@@ -36,6 +36,9 @@ on tablet and mobile, and it has been designed to give a good print results.
 
 == Changelog ==
 
+=== 1.3.5.1 – April 23st, 2021 ===
+- Fixed: footer menu margins when footer align is set to right.
+
 === 1.3.5 – April 8st, 2021 ===
 - Added: option to add a custom text for comment link when there are no comments yet.
 - Added: ARIA labels for SVG icons (accessibility).
