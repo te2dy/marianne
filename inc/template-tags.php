@@ -576,8 +576,6 @@ if ( ! function_exists( 'marianne_post_links' ) ) {
 		$marianne_newer_post = get_next_post_link();
 		$marianne_older_post = get_previous_post_link();
 
-		the_post_navigation();
-
 		if ( $marianne_newer_post || $marianne_older_post ) {
 			?>
 				<div<?php marianne_add_class( $class ); ?>>
