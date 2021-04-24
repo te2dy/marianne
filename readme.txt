@@ -36,8 +36,8 @@ on tablet and mobile, and it has been designed to give a good print results.
 
 == Changelog ==
 
-=== 1.3.5.1 – April 23th, 2021 ===
-- Fixed: footer menu margins when footer align is set to right.
+=== 1.3.5.1 – April 24th, 2021 ===
+- Fixed: post navigation bug.
 
 === 1.3.5.1 – April 23th, 2021 ===
 - Fixed: footer menu margins when footer align is set to right.
