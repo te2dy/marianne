@@ -2,7 +2,7 @@
 
 Contributors: Teddy
 Requires at least: 5.3
-Tested up to: 5.7
+Tested up to: 5.7.1
 Requires PHP: 5.2
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -35,6 +35,10 @@ Finally, Marianne theme adapts to all formats. It keeps its characteristics
 on tablet and mobile, and it has been designed to give a good print results.
 
 == Changelog ==
+
+=== 1.3.6 – May 8th, 2021 ===
+- Fixed: bug on the primary menu on Android.
+- Updated: 'Tested up to' version number (5.7 to 5.7.1).
 
 === 1.3.5.2 – April 24th, 2021 ===
 - Fixed: post navigation bug.
