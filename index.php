@@ -37,9 +37,8 @@ get_header();
 
 		<?php get_template_part( 'loop' ); ?>
 	</main>
-
-	<?php get_sidebar(); ?>
 </div>
 
 <?php
+get_sidebar();
 get_footer();

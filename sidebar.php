@@ -11,7 +11,7 @@
 
 if ( is_active_sidebar( 'widgets' ) ) {
 	?>
-		<hr class="separator">
+		
 
 		<?php
 		$marianne_widgets_class = 'site-secondary';
