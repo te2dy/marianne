@@ -28,10 +28,6 @@
 
 	if ( 'sidebar-none' !== marianne_get_theme_mod( 'marianne_global_layout' ) ) {
 		$marianne_body_class .= ' sidebar-width-' . marianne_get_theme_mod( 'marianne_global_sidebar_width' );
-
-		if ( true === marianne_get_theme_mod( 'marianne_global_sidebar_separator' ) ) {
-			$marianne_body_class .= ' sidebar-separator';
-		}
 	}
 
 	if ( true === marianne_get_theme_mod( 'marianne_global_font_smooth' ) ) {

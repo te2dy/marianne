@@ -251,14 +251,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 				'250' => __( '250px', 'marianne' ),
 				'300' => __( '300px', 'marianne' ),
 			),
-		);
-
-		$marianne_customizer_options[] = array(
-			'section'     => 'marianne_global',
-			'id'          => 'sidebar_separator',
-			'title'       => __( 'Display a sidebar separator.', 'marianne' ),
-			'description' => __( '', 'marianne' ),
-			'type'        => 'checkbox',
+			'live'        => true,
 		);
 
 		$marianne_customizer_options[] = array(
@@ -797,7 +790,6 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_global_page_width'    => '480',
 			'marianne_global_images_expand' => false,
 			'marianne_global_sidebar_width' => '250',
-			'marianne_global_sidebar_separator' => false,
 			'marianne_global_font_family'   => 'sans-serif',
 			'marianne_global_font_size'     => 100,
 			'marianne_global_font_smooth'   => false,

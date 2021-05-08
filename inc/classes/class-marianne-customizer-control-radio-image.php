@@ -46,7 +46,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 
 					<?php foreach ( $this->choices as $key => $value ) { ?>
 						<label class="radio-button-label">
-							<input type="radio" name="<?php echo esc_attr( $this->id ); ?>" value="<?php echo esc_attr( $key ); ?>" <?php $this->link(); ?> <?php checked( esc_attr( $key ), $this->value() ); ?>/>
+							<input type="radio" id="<?php echo esc_attr( $this->id . '_' . $key ); ?>" name="<?php echo esc_attr( $this->id ); ?>" value="<?php echo esc_attr( $key ); ?>" <?php $this->link(); ?> <?php checked( esc_attr( $key ), $this->value() ); ?>/>
 
 							<img src="<?php echo esc_attr( $value['image'] ); ?>" alt="<?php echo esc_attr( $value['name'] ); ?>" title="<?php echo esc_attr( $value['name'] ); ?>" />
 						</label>

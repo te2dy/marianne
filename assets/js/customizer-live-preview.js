@@ -130,6 +130,20 @@
 			} );
 		} );
 
+		// Global > Sidebar Width.
+		wp.customize( 'marianne_global_sidebar_width', function( value ) {
+			value.bind( function( newval ) {
+				var target = '#page',
+					classes = {
+						'200': 'sidebar-width-200',
+						'250': 'sidebar-width-250',
+						'300': 'sidebar-width-300'
+					};
+
+				marianneSelectRadioToggleClass( target, classes, newval );
+			} );
+		} );
+
 		// Global > Expand images.
 		wp.customize( 'marianne_global_images_expand', function( value ) {
 			value.bind( function( newval ) {
