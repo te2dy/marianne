@@ -36,6 +36,9 @@ on tablet and mobile, and it has been designed to give a good print results.
 
 == Changelog ==
 
+=== ? – May ?th, 2021 ===
+- Added: Dutch translation.
+
 === 1.3.6 – May 8th, 2021 ===
 - Fixed: bug on the primary menu on Android.
 - Updated: 'Tested up to' version number (5.7 to 5.7.1).
