@@ -10,34 +10,15 @@
  */
 
 /**
- * Collapse menu when the user clicks outside.
- */
-function marianneCollapseMenuOnClickOutside( event ) {
-	if ( ! document.getElementById( "menu-primary" ).contains( event.target ) ) {
-		document.getElementById( "menu-primary" ).querySelectorAll( ".sub-menu-toggle" ).forEach( function( button ) {
-			button.setAttribute( "aria-expanded", "false" );
-		} );
-	}
-}
-
-/**
  * Toggle an attribute"s value
  *
  * @param {Element} el - The element.
  */
-function marianneToggleAriaExpanded( el, withListeners ) {
+function marianneToggleAriaExpanded( el ) {
 	if ( "true" !== el.getAttribute( "aria-expanded" ) ) {
 		el.setAttribute( "aria-expanded", "true" );
-
-		if ( withListeners ) {
-			document.addEventListener( "click", marianneCollapseMenuOnClickOutside );
-		}
 	} else {
 		el.setAttribute( "aria-expanded", "false" );
-
-		if ( withListeners ) {
-			document.addEventListener( "click", marianneCollapseMenuOnClickOutside );
-		}
 	}
 }
 
@@ -56,7 +37,7 @@ function marianneExpandSubMenu( el ) {
 		} );
 
 		// Toggle aria-expanded on the button.
-		marianneToggleAriaExpanded( el, true );
+		marianneToggleAriaExpanded( el );
 
 		// On tab-away collapse the menu.
 		el.parentNode.querySelectorAll( "ul > li:last-child > a" ).forEach( function( linkEl ) {
@@ -239,10 +220,6 @@ function marianneAriaExpand( el ) {
 	}
 
 	$( window ).on( "load", function() {
-		marianneAriaMenu( "#menu-primary" );
-	} );
-
-	$( window ).on( "resize", function() {
 		marianneAriaMenu( "#menu-primary" );
 	} );
 
