@@ -38,6 +38,7 @@ on tablet and mobile, and it has been designed to give a good print results.
 
 === ? – May ?th, 2021 ===
 - Added: Dutch translation.
+- Added: a list of contributors in the About page.
 
 === 1.3.6 – May 8th, 2021 ===
 - Fixed: bug on the primary menu on Android.
