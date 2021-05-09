@@ -23,12 +23,23 @@
 .marianne-admin p {
 	margin: 1rem 0;
 }
+.marianne-admin blockquote {
+	font-style: italic;
+	margin: 1rem 0;
+}
+.marianne-admin blockquote cite {
+	font-style: normal;
+}
 .marianne-admin .list-inline {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
-.marianne-admin .list-inline li {
+.marianne-admin li {
+	display: inline-block;
+}
+.marianne-admin-list::before {
+	content: "— ";
 	display: inline-block;
 }
 
@@ -98,6 +109,7 @@
 /* Footer */
 .marianne-mif {
 	display: inline-block;
+	font-size: .8em;
 	text-align: center;
 }
 .marianne-flag {

@@ -83,8 +83,31 @@ function marianne_theme_page() {
 		<div class="wrap marianne-admin">
 			<div class="marianne-admin-block">
 				<h1 class="marianne-admin-header marianne-admin-title">
-					<?php echo esc_html_x( 'Marianne', 'The title of the theme page.', 'marianne' ); ?>
+					<?php echo esc_html_x( 'About Marianne', 'The title of the theme page.', 'marianne' ); ?>
 				</h1>
+
+				<p>
+					<blockquote>
+						<?php esc_html_e( "Thank you for using Marianne, a minimalist theme like they don't make anymore.", 'marianne' ); ?>
+
+						<br>
+
+						<cite>
+							<?php
+							printf(
+								wp_kses(
+									/* translators: %1$s: The name of theme author. %2$s: Bitcoin address. */
+									__( '— %1$s, the author of Marianne', 'marianne' ),
+									$kses_allowed_html
+								),
+								'<a href="https://chezteddy.fr/" rel="external" target="_blank">' . esc_html__( 'Teddy', 'marianne' ) . '</a>'
+							);
+							?>
+						</cite>
+					</blockquote>
+				</p>
+
+
 
 				<p>
 					<strong>
@@ -240,7 +263,7 @@ function marianne_theme_page() {
 					printf(
 						wp_kses(
 							/* translators: %s: The URL of the support forum of the theme on WordPress.org */
-							__( 'Please visit the <a href="%s" target="_blank">support forum</a> and post them.', 'marianne' ),
+							__( 'Please visit the <a href="%s" rel="external" target="_blank">support forum</a> and post them.', 'marianne' ),
 							$kses_allowed_html
 						),
 						esc_url( $support_wp_link )
@@ -275,7 +298,7 @@ function marianne_theme_page() {
 					printf(
 						wp_kses(
 							/* translators: %s: The URL of the language repository on GitHub. */
-							__( 'You want to use Marianne in your language? You can help me to translate it on <a href="%1$s" target="_blank">GitHub</a> where a .pot file is available.', 'marianne' ),
+							__( 'You want to use Marianne in your language? You can help me to translate it on <a href="%1$s" rel="external" target="_blank">GitHub</a> where a .pot file is available.', 'marianne' ),
 							$kses_allowed_html
 						),
 						esc_url( $gh_link_translate )
@@ -299,7 +322,7 @@ function marianne_theme_page() {
 					printf(
 						wp_kses(
 							/* translators: %s: The URL of the Marianne repository on GitHub. */
-							__( 'There are probably many technical improvements to be made to this theme. You can help me by <a href="%s" target="_blank">contributing on GitHub</a>.', 'marianne' ),
+							__( 'There are probably many technical improvements to be made to this theme. You can help me by <a href="%s" rel="external" target="_blank">contributing on GitHub</a>.', 'marianne' ),
 							$kses_allowed_html
 						),
 						esc_url( $gh_link )
@@ -308,6 +331,42 @@ function marianne_theme_page() {
 				</p>
 			</div>
 
+			<div class="marianne-admin-block">
+				<h2 class="marianne-admin-header"><?php echo esc_html__( 'Acknowledgements', 'marianne' ); ?></h2>
+
+				<p>
+					<?php esc_html_e( 'Thanks to:', 'marianne' ); ?>
+				</p>
+
+				<?php
+				$contributors = array(
+					array(
+						'name' => 'Peter Pellenaars',
+							'url'  => 'https://www.peterpellenaars.nl/',
+							'text' => '%s for its Dutch translation and its great help in reporting bugs.',
+						)
+					);
+				?>
+
+				<?php if ( $contributors ) : ?>
+					<ul class="marianne-admin-list">
+						<?php foreach ( $contributors as $contributor ) : ?>
+							<li>
+								<?php
+								printf(
+									wp_kses(
+										/* translators: %s: The name of the contributor. */
+										__( $contributor['text'], 'marianne' ),
+										$kses_allowed_html
+									),
+									'<a href="' . esc_url( $contributor['url'] ) . '" rel="external" target="_blank">' . esc_html( $contributor['name'] ) . '</a>'
+								);
+								?>
+							</li>
+						<?php endforeach; ?>
+					</ul>
+				<?php endif; ?>
+			</div>
 
 			<footer class="marianne-admin-footer">
 				<div class="marianne-mif">
