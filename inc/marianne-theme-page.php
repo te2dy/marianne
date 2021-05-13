@@ -341,7 +341,7 @@ function marianne_theme_page() {
 				<?php
 				$contributors = array(
 					array(
-						'name' => 'Peter Pellenaars',
+						'name' => 'Peter',
 							'url'  => 'https://www.peterpellenaars.nl/',
 							'text' => '%s for its Dutch translation and its great help in reporting bugs.',
 						)
