@@ -18,8 +18,6 @@ Text Domain: marianne
  * Variables
  */
 :root {
-	--font-size: 12pt;
-
 	--color-light-blue: #0057B7;
 	--color-dark-blue: #529ff5;
 
@@ -145,21 +143,6 @@ Text Domain: marianne
 }
 
 /* Fonts */
-.font-size-120 {
-	--font-size-calc: calc(var(--font-size) * 1.2);
-}
-.font-size-110 {
-	--font-size-calc: calc(var(--font-size) * 1.1);
-}
-.font-size-100 {
-	--font-size-calc: calc(var(--font-size));
-}
-.font-size-90 {
-	--font-size-calc: calc(var(--font-size) * 0.9);
-}
-.font-size-80 {
-	--font-size-calc: calc(var(--font-size) * 0.8);
-}
 .font-smooth {
 	--font-smooth-moz: grayscale;
 	--font-smooth-webkit: antialiased;
@@ -169,17 +152,6 @@ Text Domain: marianne
 /* Body */
 .text-shadow {
 	--text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-}
-
-/* Site */
-.page-width-480 {
-	--page-width: 480px;
-}
-.page-width-600 {
-	--page-width: 600px;
-}
-.page-width-720 {
-	--page-width: 720px;
 }
 
 /* Header */
@@ -257,7 +229,7 @@ html {
 body {
 	background-color: var(--color-body-background);
 	color: var(--color-body-text-primary);
-	font-size: var(--font-size-calc);
+	font-size: var(--font-size);
 	-moz-osx-font-smoothing: var(--font-smooth-moz, auto);
 	 -webkit-font-smoothing: var(--font-smooth-webkit, auto);
 	            font-smooth: var(--font-smooth, auto);
@@ -266,6 +238,7 @@ body {
 }
 .site {
 	margin: 0 auto;
+	max-width: var(--page-width);
 	word-wrap: break-word;
 }
 .site-header {

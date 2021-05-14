@@ -20,8 +20,7 @@
 	</head>
 
 	<?php
-	$marianne_body_class  = ' font-size-' . esc_attr( marianne_get_theme_mod( 'marianne_global_font_size' ) );
-	$marianne_body_class .= ' color-scheme-' . esc_attr( marianne_get_theme_mod( 'colors_scheme' ) );
+	$marianne_body_class  = ' color-scheme-' . esc_attr( marianne_get_theme_mod( 'colors_scheme' ) );
 	$marianne_body_class .= ' link-hover-' . esc_attr( marianne_get_theme_mod( 'colors_link_hover' ) );
 
 	if ( true === marianne_get_theme_mod( 'marianne_global_font_smooth' ) ) {

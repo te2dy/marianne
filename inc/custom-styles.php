@@ -193,21 +193,23 @@ if ( ! function_exists( 'marianne_custom_css' ) ) {
 	 */
 	function marianne_custom_css() {
 
-		// Font Family.
+		// Global.
+		$font_size                   = 12 * marianne_get_theme_mod( 'marianne_global_font_size' );
+		$css[':root']['--font-size'] = marianne_percents_to_decimals( $font_size, 0 ) . 'pt';
+		$css[':root']['--page-width'] = marianne_get_theme_mod( 'marianne_global_page_width' ) . 'px';
+
 		$font_family = marianne_get_theme_mod( 'marianne_global_font_family' );
 
 		if ( 'sans-serif' === $font_family ) {
 			$css['body']['font-family'] = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif';
 		} elseif ( 'serif' === $font_family ) {
 			$css['body']['font-family'] = '"Iowan Old Style", "Apple Garamond", Baskerville, "Times New Roman", "Droid Serif", Times, "Source Serif Pro", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
-		} elseif ( 'monospace' === $font_family ) {
+		} else {
 			$css['body']['font-family'] = 'Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console", monospace';
 		}
 
-		// Page Width.
-		$css['.site']['max-width'] = marianne_get_theme_mod( 'marianne_global_page_width' ) . 'px';
-
 		// Responsive.
+		// Soon…
 
 		wp_add_inline_style( 'marianne-stylesheet', marianne_array_to_css( $css ) );
 	}
