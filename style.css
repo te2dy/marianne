@@ -145,15 +145,6 @@ Text Domain: marianne
 }
 
 /* Fonts */
-.font-family-sans-serif {
-	--font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-}
-.font-family-serif {
-	--font-family: "Iowan Old Style", "Apple Garamond", Baskerville, "Times New Roman", "Droid Serif", Times, "Source Serif Pro", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-.font-family-monospace {
-	--font-family: Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console", monospace;
-}
 .font-size-120 {
 	--font-size-calc: calc(var(--font-size) * 1.2);
 }
@@ -266,7 +257,6 @@ html {
 body {
 	background-color: var(--color-body-background);
 	color: var(--color-body-text-primary);
-	font-family: var(--font-family);
 	font-size: var(--font-size-calc);
 	-moz-osx-font-smoothing: var(--font-smooth-moz, auto);
 	 -webkit-font-smoothing: var(--font-smooth-webkit, auto);
@@ -276,7 +266,6 @@ body {
 }
 .site {
 	margin: 0 auto;
-	max-width: var(--page-width);
 	word-wrap: break-word;
 }
 .site-header {
