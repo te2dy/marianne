@@ -170,13 +170,26 @@ if ( ! function_exists( 'marianne_color_palette' ) ) {
 	 */
 	function marianne_color_palette( $name ) {
 		$colors = array(
-			'primary'   => '#000000',
-			'secondary' => '#595959',
-			'opposite'  => '#ffffff',
-			'dark'      => '#2e2e2e',
-			'medium'    => '#babab9',
-			'light'     => '#e8e8e8',
-			'contrast'  => '#de0000',
+			'blue'   => array(
+				'light' => '#0057B7',
+				'dark'  => '#529ff5',
+			),
+			'red'    => array(
+				'light' => '#de0000',
+				'dark'  => '#f14646',
+			),
+			'green'  => array(
+				'light' => '#006400',
+				'dark'  => '#18af18',
+			),
+			'orange' => array(
+				'light' => '#ff8c00',
+				'dark'  => '#ffab2e',
+			),
+			'purple' => array(
+				'light' => '#800080',
+				'dark'  => '#9a389a',
+			),
 		);
 
 		if ( true === array_key_exists( $name, $colors ) ) {
@@ -196,6 +209,7 @@ if ( ! function_exists( 'marianne_custom_css' ) ) {
 		// Global.
 		$font_size                   = 12 * marianne_get_theme_mod( 'marianne_global_font_size' );
 		$css[':root']['--font-size'] = marianne_percents_to_decimals( $font_size, 0 ) . 'pt';
+
 		$css[':root']['--page-width'] = marianne_get_theme_mod( 'marianne_global_page_width' ) . 'px';
 
 		$font_family = marianne_get_theme_mod( 'marianne_global_font_family' );
