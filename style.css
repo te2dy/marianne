@@ -553,6 +553,14 @@ hr {
 	stroke: var(--color-body-background);
 	transition: all .2s ease-in-out;
 }
+.site-social .feather-spotify {
+	fill: var(--color-body-text-secondary);
+}
+.social-links li a:hover .feather-spotify,
+.social-links li a:focus .feather-spotify {
+	fill: var(--color-body-background);
+	stroke: var(--color-body-background);
+}
 .social-links li {
 	margin: 0 .25em;
 }

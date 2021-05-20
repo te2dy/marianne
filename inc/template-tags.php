@@ -378,6 +378,7 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 		$social_links['facebook']  = marianne_get_theme_mod( 'marianne_social_facebook' ) ? marianne_get_theme_mod( 'marianne_social_facebook' ) : '';
 		$social_links['instagram'] = marianne_get_theme_mod( 'marianne_social_instagram' ) ? marianne_get_theme_mod( 'marianne_social_instagram' ) : '';
 		$social_links['youtube']   = marianne_get_theme_mod( 'marianne_social_youtube' ) ? marianne_get_theme_mod( 'marianne_social_youtube' ) : '';
+		$social_links['spotify']   = marianne_get_theme_mod( 'marianne_social_spotify' ) ? marianne_get_theme_mod( 'marianne_social_spotify' ) : '';
 		$social_links['linkedin']  = marianne_get_theme_mod( 'marianne_social_linkedin' ) ? marianne_get_theme_mod( 'marianne_social_linkedin' ) : '';
 		$social_links['github']    = marianne_get_theme_mod( 'marianne_social_github' ) ? marianne_get_theme_mod( 'marianne_social_github' ) : '';
 		$social_links['gitlab']    = marianne_get_theme_mod( 'marianne_social_gitlab' ) ? marianne_get_theme_mod( 'marianne_social_gitlab' ) : '';
@@ -444,7 +445,7 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 								?>
 									<li>
 										<?php
-										if ( 'phone' !== $link && 'link' !== $site && 'rss' !== $site ) {
+										if ( 'phone' !== $link && 'link' !== $site && 'rss' !== $site && 'spotify' !== $site ) {
 											$link_aria_label = sprintf(
 												/* translators: %s. The name of the social site. */
 												_x( 'Link to %s', 'Label for links to social sites.', 'marianne' ),
@@ -483,6 +484,13 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 												'aria-label' => __( 'RSS icon', 'marianne' ),
 												'class'      => 'feather feather-' . $site,
 												'size'       => array( 16, 16 ),
+											);
+										} elseif ( 'spotify' === $site ) {
+											$svg_args = array(
+												'aria-label' => __( 'Spotify icon', 'marianne' ),
+												'class'      => 'feather feather-' . $site,
+												'size'       => array( 16, 16 ),
+												'viewbox'    => '0 0 186.845 186.845',
 											);
 										}
 										?>
