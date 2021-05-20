@@ -152,6 +152,25 @@ if ( ! function_exists( 'marianne_styles_scripts' ) ) {
 		 */
 		wp_enqueue_script( 'marianne-navigation', get_template_directory_uri() . "/assets/js/navigation$min.js", array( 'jquery' ), $theme_version, true );
 
+		/**
+		 * The image overflow script.
+		 *
+		 * @since Marianne 1.?
+		 */
+		if ( marianne_get_theme_mod( 'marianne_content_img_overflow' ) ) {
+			wp_register_script( 'marianne-image-overflow', get_template_directory_uri() . "/assets/js/images$min.js", array( 'jquery' ), $theme_version, true );
+
+			$marianne_img_overflow_options = array(
+				'setting'          => marianne_get_theme_mod( 'marianne_content_img_overflow' ),
+				'include_portrait' => marianne_get_theme_mod( 'marianne_content_img_overflow_portrait' ),
+				'content_width'    => marianne_get_theme_mod( 'marianne_global_page_width' ),
+				'overflow_width'   => 200,
+			);
+
+			wp_localize_script( 'marianne-image-overflow', 'marianne_img_options', $marianne_img_overflow_options );
+			wp_enqueue_script( 'marianne-image-overflow' );
+		}
+
 		// Threaded comment reply styles.
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );

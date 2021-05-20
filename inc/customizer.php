@@ -384,6 +384,28 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'live'        => true,
 		);
 
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_content',
+			'id'          => 'img_overflow',
+			'title'       => __( 'Image overflow', 'marianne' ),
+			'description' => __( 'Make the images overflow from the content.', 'marianne' ),
+			'type'        => 'select',
+			'value'       => array(
+				'disabled' => __( 'Disabled', 'marianne' ),
+				'featured' => __( 'Apply to featured images only', 'marianne' ),
+				'all'      => __( 'Apply to all content images', 'marianne' ),
+			),
+			'live'        => false,
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_content',
+			'id'          => 'img_overflow_portrait',
+			'title'       => __( 'Enable image overflow for portrait images.', 'marianne' ),
+			'type'        => 'checkbox',
+			'live'        => false,
+		);
+
 		// Post List Settings.
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_loop',
@@ -788,8 +810,10 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_header_menu_search_text' => '',
 
 			// Content Formatting.
-			'marianne_content_text_align' => 'left',
-			'marianne_content_hyphens'    => false,
+			'marianne_content_text_align'            => 'left',
+			'marianne_content_hyphens'               => false,
+			'marianne_content_img_overflow'          => 'disabled',
+			'marianne_content_img_overflow_portrait' => false,
 
 			// Post List Settings.
 			'marianne_loop_comment_link_text' => '',
