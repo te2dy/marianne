@@ -34,6 +34,7 @@
 							array(
 								'container'      => '',
 								'depth'          => 1,
+								'item_spacing'   => 'discard',
 								'menu_class'     => 'navigation-menu',
 								'menu_id'        => 'menu-footer',
 								'theme_location' => 'footer',
