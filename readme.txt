@@ -36,6 +36,9 @@ on tablet and mobile, and it has been designed to give a good print results.
 
 == Changelog ==
 
+=== 1.4.1 – May 24th, 2021 ===
+- Fixed: .zip error.
+
 === 1.4 – May 24th, 2021 ===
 - Added: inline CSS system for future improvements.
 - Added: new social icons.
