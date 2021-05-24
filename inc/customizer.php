@@ -478,6 +478,14 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_social',
+			'id'          => 'mastodon',
+			'title'       => __( 'Mastodon', 'marianne' ),
+			'description' => __( 'Your Mastodon profile URL.', 'marianne' ),
+			'type'        => 'text',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
 			'id'          => 'facebook',
 			'title'       => __( 'Facebook', 'marianne' ),
 			'description' => __( 'Your Facebook profile or page URL.', 'marianne' ),
@@ -497,6 +505,14 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'id'          => 'youtube',
 			'title'       => __( 'YouTube', 'marianne' ),
 			'description' => __( 'Your YouTube channel URL.', 'marianne' ),
+			'type'        => 'url',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
+			'id'          => 'vimeo',
+			'title'       => __( 'Vimeo', 'marianne' ),
+			'description' => __( 'Your Vimeo page URL.', 'marianne' ),
 			'type'        => 'url',
 		);
 
@@ -815,10 +831,12 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_social_style'        => 'square',
 			'marianne_social_target_blank' => false,
 			'marianne_social_twitter'      => '',
+			'marianne_social_mastodon'     => '',
 			'marianne_social_facebook'     => '',
 			'marianne_social_instagram'    => '',
 			'marianne_social_linkedin'     => '',
 			'marianne_social_youtube'      => '',
+			'marianne_social_vimeo'        => '',
 			'marianne_social_spotify'      => '',
 			'marianne_social_email'        => '',
 			'marianne_social_github'       => '',

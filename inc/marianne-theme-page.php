@@ -342,10 +342,9 @@ function marianne_theme_page() {
 				$contributors = array(
 					array(
 						'name' => 'Peter',
-							'url'  => 'https://www.peterpellenaars.nl/',
-							'text' => '%s for its Dutch translation and its great help in reporting bugs.',
-						)
-					);
+						'url'  => 'https://www.peterpellenaars.nl/',
+					),
+				);
 				?>
 
 				<?php if ( $contributors ) : ?>
@@ -356,7 +355,7 @@ function marianne_theme_page() {
 								printf(
 									wp_kses(
 										/* translators: %s: The name of the contributor. */
-										__( $contributor['text'], 'marianne' ),
+										__( '%s, for its Dutch translation and its great help in reporting bugs.', 'marianne' ),
 										$kses_allowed_html
 									),
 									'<a href="' . esc_url( $contributor['url'] ) . '" rel="external" target="_blank">' . esc_html( $contributor['name'] ) . '</a>'

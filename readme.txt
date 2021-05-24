@@ -36,9 +36,14 @@ on tablet and mobile, and it has been designed to give a good print results.
 
 == Changelog ==
 
-=== ? – May ?th, 2021 ===
+=== 1.4 – May 24th, 2021 ===
+- Added: inline CSS system for future improvements.
+- Added: new social icons.
 - Added: Dutch translation.
 - Added: a list of contributors in the About page.
+- Updated: French translation.
+- Updated: 'Tested up to' version number (5.7.1 to 5.7.2).
+- Removed: unwanted white space in the footer menu.
 
 === 1.3.6 – May 8th, 2021 ===
 - Fixed: bug on the primary menu on Android.
@@ -243,10 +248,15 @@ Source: https://www.flickr.com/photos/137643065@N06/23699397893
 License: CC0 1.0 Public Domain Dedication
 License URI: https://creativecommons.org/publicdomain/zero/1.0/
 
-SVG Icons: Feather Icons, Copyright (c) 2013-2017 Cole Bemis
-Source: https://icons.getbootstrap.com/
-License: MIT
-License URI: https://opensource.org/licenses/mit-license.php
+SVG Icons:
+- Feather Icons, Copyright (c) 2013-2017 Cole Bemis
+  Source: https://icons.getbootstrap.com/
+  License: MIT
+  License URI: https://opensource.org/licenses/mit-license.php
+- Simple Icons
+  Source : https://simpleicons.org/
+  License: CC0
+  License URI: https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md
 
 Admin icons: Dashicons, Copyright Wordpress
 License: GPLv2

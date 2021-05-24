@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Marianne\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-03 09:00+0000\n"
-"PO-Revision-Date: 2021-05-08 19:04+0000\n"
+"PO-Revision-Date: 2021-05-24 09:15+0000\n"
 "Last-Translator: Teddy\n"
 "Language-Team: Dutch\n"
 "Language: nl_NL\n"
@@ -17,58 +17,57 @@ msgstr ""
 
 #. %d: comment count number.
 #. %d: Comment count number.
-#: comments.php:39 inc/template-tags.php:229
+#: comments.php:39 inc/template-tags.php:234
 #, php-format
 msgid "%d comment"
 msgid_plural "%d comments"
 msgstr[0] "%d reactie"
 msgstr[1] "%d reacties"
 
+#. %s: The name of the contributor.
+#: inc/marianne-theme-page.php:358
+#, php-format
+msgid "%s, for its Dutch translation and its great help in reporting bugs."
+msgstr ""
+
 #: comments.php:51
 msgid "&lsaquo; Newer comments"
 msgstr "&lsaquo; Nieuwe reacties"
 
-#: inc/template-tags.php:260
+#: inc/template-tags.php:272
 msgid "&lsaquo; Previous page"
 msgstr "&lsaquo; Vorige pagina"
 
-#. Description of the theme
-msgid ""
-"A minimalist theme ideal for writers, journalists and all bloggers who want "
-"to share their texts."
-msgstr ""
-"Een minimalistisch thema geschikt voor auteurs, journalisten en bloggers die "
-"hun tekst willen delen."
-
-#: inc/customizer.php:209
-msgctxt "A width in pixels"
+#: inc/customizer.php:222
 msgid "480px"
-msgstr "480px"
+msgstr ""
 
-#: inc/customizer.php:210
-msgctxt "A width in pixels"
+#: inc/customizer.php:223
 msgid "600px"
-msgstr "600px"
+msgstr ""
 
-#: inc/customizer.php:211
-msgctxt "A width in pixels"
+#: inc/customizer.php:224
 msgid "720px"
-msgstr "720px"
+msgstr ""
 
 #: inc/marianne-theme-page.php:40 inc/marianne-theme-page.php:41
-#: inc/customizer.php:140
+#: inc/customizer.php:153
 msgid "About Marianne"
 msgstr "Over Marianne"
 
-#: inc/customizer.php:545
+#: inc/marianne-theme-page.php:335
+msgid "Acknowledgements"
+msgstr ""
+
+#: inc/customizer.php:599
 msgid "Add a link to the RSS feed of your site."
 msgstr "Voeg een link toe met de RSS feed van je website."
 
-#: inc/customizer.php:336
+#: inc/customizer.php:349
 msgid "Add a search button."
 msgstr "Voeg een zoek-knop toe."
 
-#: inc/customizer.php:579
+#: inc/customizer.php:633
 msgid ""
 "Adds the date the post or page was retrieved and a short link to access the "
 "content. Default: checked."
@@ -76,11 +75,29 @@ msgstr ""
 "Voegt de printdatum toe van de blogpost of pagina en een korte link om "
 "toegang tot de inhoud te krijgen. Standaard: aangevinkt."
 
-#: inc/customizer.php:538
+#. %s. The name of the social site.
+#: inc/template-tags.php:453
+#, php-format
+msgctxt "Alternative text for social icon images"
+msgid "%s icon"
+msgstr ""
+
+#: inc/customizer.php:592
 msgid "Any link you want to display."
 msgstr "Elke willekeurige link die je wilt tonen."
 
-#: inc/marianne-theme-page.php:289
+#. Description of the theme
+msgid ""
+"Are you looking for a simple theme to highlight your writings? Marianne is a "
+"rare minimalistic theme in an ocean of maximalism. It gives a touch of old "
+"school blogging to your site, refreshed, with customization options that "
+"make it flexible. If you believe that less graphism complexity means less "
+"distraction and more readability, this theme is made for you. Whether you "
+"are a simple blogger, a writer, a journalist or an intellectual, Marianne "
+"will delight you… and your readers."
+msgstr ""
+
+#: inc/marianne-theme-page.php:312
 msgid ""
 "As my native language is not English, you can also help me to improve all "
 "the default text strings of the theme."
@@ -88,23 +105,23 @@ msgstr ""
 "Omdat mijn moedertaal niet Engels is kun je me een dienst bewijzen door de "
 "standaard teksten in het thema waar nodig te verbeteren."
 
-#: inc/customizer.php:181
+#: inc/customizer.php:194
 msgid "Auto"
 msgstr "Automatisch"
 
-#: inc/customizer.php:192
+#: inc/customizer.php:205
 msgid "Blue"
 msgstr "Blauw"
 
-#: inc/customizer.php:301
+#: inc/customizer.php:314
 msgid "Bold"
 msgstr "Vet"
 
-#: inc/customizer.php:302
+#: inc/customizer.php:315
 msgid "Bolder"
 msgstr "Vetter"
 
-#: inc/customizer.php:361
+#: inc/customizer.php:382
 msgid ""
 "Breaks some words in half so that they continue on another line rather than "
 "moving them entirely to the next line. Especially useful when the text "
@@ -113,7 +130,7 @@ msgstr ""
 "Activeer woordafbreking. Handig bij 'uitvullen' als optie voor "
 "tekstuitlijning."
 
-#: inc/customizer.php:257
+#: inc/customizer.php:270
 msgid ""
 "By default, the browser automatically chooses whether or not to smooth the "
 "fonts. By checking this box, you will ask it to smooth them. Default: "
@@ -122,15 +139,15 @@ msgstr ""
 "Via deze optie kun je ervoor kiezen dat een webbrowser vraagt om letters af "
 "te ronden. Standaard: niet geactiveerd."
 
-#: inc/marianne-theme-page.php:217
+#: inc/marianne-theme-page.php:240
 msgid "Can I display social links with this theme?"
 msgstr "Kan ik social media links laten zien met dit thema?"
 
-#: inc/customizer.php:279 inc/customizer.php:350 inc/customizer.php:384
+#: inc/customizer.php:292 inc/customizer.php:371 inc/customizer.php:414
 msgid "Center"
 msgstr "Centreer"
 
-#: inc/customizer.php:555
+#: inc/customizer.php:609
 msgid ""
 "Check to hide comments when priting a post or page. In any case, the comment "
 "form will be hidden. Default: checked."
@@ -139,14 +156,14 @@ msgstr ""
 "pagina. In alle gevallen zal het reactieveld zelf niet geprint geworden. "
 "Standaard: actief."
 
-#: inc/customizer.php:563
+#: inc/customizer.php:617
 msgid ""
 "Check to hide your widgets when priting a post or page. Default: checked."
 msgstr ""
 "Kies er voor om widgets te verbergen bij het printen van een blogpost of "
 "pagina. Standaard: actief."
 
-#: inc/customizer.php:229
+#: inc/customizer.php:242
 msgid ""
 "Choose the font family you want to apply to your site. Your readers' device "
 "will render the pages with its own system font. Please note that the "
@@ -155,7 +172,7 @@ msgstr ""
 "Kies het lettertype dat je wilt toepassen voor je website. Standaard: Sans "
 "serif."
 
-#: inc/customizer.php:528
+#: inc/customizer.php:582
 msgid "Classic"
 msgstr "Klassiek"
 
@@ -164,133 +181,133 @@ msgstr "Klassiek"
 msgid "Close the Customizer and go to About Marianne page"
 msgstr "Sluit de Customizer af en ga naar de Over Marianne pagina"
 
-#: inc/customizer.php:175
+#: inc/customizer.php:188
 msgid "Color Scheme"
 msgstr "Kleurschema"
 
-#: inc/customizer.php:189
+#: inc/customizer.php:202
 msgid "Color used for link and button hovering. Default: blue."
 msgstr ""
 "Kies de kleur voor verwijzingen in de tekst en het met de muis boven een "
 "knop zweven. Standaard: blauw."
 
-#: inc/customizer.php:87
+#: inc/customizer.php:93
 msgid "Content Formatting"
 msgstr "Opmaak inhoud"
 
-#: inc/marianne-theme-page.php:253
+#: inc/marianne-theme-page.php:276
 msgid "Contribute"
 msgstr "Draag bij"
 
-#: inc/customizer.php:180
+#: inc/customizer.php:193
 msgid "Dark"
 msgstr "Donker"
 
-#: inc/customizer.php:297
+#: inc/customizer.php:310
 msgid "Default: bolder."
 msgstr "Standaard: vetter."
 
-#: inc/customizer.php:412
+#: inc/customizer.php:442
 msgid "Default: footer."
 msgstr "Standaard: voettekst."
 
-#: inc/customizer.php:371
+#: inc/customizer.php:401
 msgid "Default: hidden."
 msgstr "Standaard: verborgen."
 
-#: inc/customizer.php:275 inc/customizer.php:380
+#: inc/customizer.php:288 inc/customizer.php:410
 msgid "Default: left."
 msgstr "Standaard: links."
 
-#: inc/customizer.php:311 inc/customizer.php:324
+#: inc/customizer.php:324 inc/customizer.php:337
 msgid "Default: normal."
 msgstr "Standaard: normaal."
 
-#: inc/customizer.php:424
+#: inc/customizer.php:454
 msgid "Default: square."
 msgstr "Standaard: vierkant."
 
-#: inc/customizer.php:437 inc/customizer.php:546
+#: inc/customizer.php:467 inc/customizer.php:600
 msgid "Default: unckecked."
 msgstr "Standaard: niet aangevinkt."
 
-#: inc/marianne-theme-page.php:295
+#: inc/marianne-theme-page.php:318
 msgid "Development"
 msgstr "Ontwikkeling"
 
-#: inc/customizer.php:370
+#: inc/customizer.php:400
 msgid "Display a link to the next and the previous post."
 msgstr "Laat een link zien naar de vorige en volgende blogpost."
 
-#: inc/customizer.php:578
+#: inc/customizer.php:632
 msgid "Display information related to printing."
 msgstr "Toon informatie met betrekking tot het printen."
 
-#: inc/customizer.php:402
+#: inc/customizer.php:432
 msgid "Display the default footer mention."
 msgstr "Toon de standaard voettekst."
 
-#: inc/customizer.php:570
+#: inc/customizer.php:624
 msgid "Display URL of links."
 msgstr "Laat de URL van de verwijzinge zien."
 
-#: inc/marianne-theme-page.php:126 inc/marianne-theme-page.php:142
+#: inc/marianne-theme-page.php:149 inc/marianne-theme-page.php:165
 msgid "Donate Bitcoin"
 msgstr "Doneer Bitcoin"
 
-#: inc/marianne-theme-page.php:122
+#: inc/marianne-theme-page.php:145
 msgid "Donate ₿"
 msgstr "Doneer ₿"
 
-#: functions.php:277 inc/customizer.php:508
+#: functions.php:294 inc/customizer.php:562
 msgid "Email"
 msgstr "Email"
 
-#: inc/customizer.php:360
+#: inc/customizer.php:381
 msgid "Enable hyphenation."
 msgstr "Activeer woordafbreking."
 
-#: inc/customizer.php:264
+#: inc/customizer.php:277
 msgid "Enable text shadow."
 msgstr "Activeer tekstschaduw."
 
-#: inc/customizer.php:219
+#: inc/customizer.php:232
 msgid "Expand featured images that are not wide enough."
 msgstr "Pas de uitgelichte afbeelding aan naar de breedte van de website."
 
-#: functions.php:282 inc/customizer.php:452
+#: functions.php:299 inc/customizer.php:490
 msgid "Facebook"
 msgstr "Facebook"
 
-#: inc/marianne-theme-page.php:185
+#: inc/marianne-theme-page.php:208
 msgid "FAQ"
 msgstr "FAQ"
 
-#: inc/customizer.php:228
+#: inc/customizer.php:241
 msgid "Font Family"
 msgstr "Lettertype familie"
 
-#: inc/customizer.php:242
+#: inc/customizer.php:255
 msgid "Font Size"
 msgstr "Lettergrootte"
 
-#: inc/customizer.php:323
+#: inc/customizer.php:336
 msgid "Font style of the site description"
 msgstr "Lettertype van de website omschrijving"
 
-#: inc/customizer.php:310
+#: inc/customizer.php:323
 msgid "Font weight of the site description"
 msgstr "Letterdikte van de website omschrijving"
 
-#: inc/customizer.php:296
+#: inc/customizer.php:309
 msgid "Font weight of the site title"
 msgstr "Letterdikte van de website titel"
 
-#: inc/customizer.php:416
+#: inc/customizer.php:446
 msgid "Footer"
 msgstr "Voettekst"
 
-#: inc/customizer.php:379
+#: inc/customizer.php:409
 msgid "Footer Align"
 msgstr "Voettekst uitlijning"
 
@@ -298,75 +315,79 @@ msgstr "Voettekst uitlijning"
 msgid "Footer Menu"
 msgstr "Voettekst menu"
 
-#: inc/customizer.php:102
+#: inc/customizer.php:115
 msgid "Footer Settings"
 msgstr "Voettekst instellingen"
 
-#: inc/customizer.php:393
+#: inc/customizer.php:423
 msgid "Footer Text"
 msgstr "Voettekst"
 
-#: inc/customizer.php:256
+#: inc/customizer.php:392
+msgid "For example, \"No comments\" or \"Write a comment\". Default: empty."
+msgstr ""
+
+#: inc/customizer.php:269
 msgid "Force anti-aliasing."
 msgstr "Forceer anti-aliasing."
 
-#: functions.php:287 inc/customizer.php:484
+#: functions.php:304 inc/customizer.php:538
 msgid "GitHub"
 msgstr "Github"
 
-#: inc/marianne-theme-page.php:162
+#: inc/marianne-theme-page.php:185
 msgid "GitHub Repository"
 msgstr "Github Repository"
 
-#: functions.php:292 inc/customizer.php:492
+#: functions.php:309 inc/customizer.php:546
 msgid "GitLab"
 msgstr "Gitlab"
 
-#: inc/customizer.php:265
+#: inc/customizer.php:278
 msgid "Give some relief to your texts. Default: disabled."
 msgstr "Geef de tekst iets meer diepte. Standaard: uitgeschakeld."
 
-#: inc/customizer.php:73
+#: inc/customizer.php:79
 msgid "Global Settings"
 msgstr "Algemene instellingen"
 
-#: inc/customizer.php:194
+#: inc/customizer.php:207
 msgid "Green"
 msgstr "Groen"
 
-#: inc/customizer.php:415
+#: inc/customizer.php:445
 msgid "Header"
 msgstr "Kop"
 
-#: inc/customizer.php:274
+#: inc/customizer.php:287
 msgid "Header Align"
 msgstr "Koptekst uitlijning"
 
-#: inc/customizer.php:80
+#: inc/customizer.php:86
 msgid "Header Settings"
 msgstr "Koptekst instellingen"
 
-#: inc/customizer.php:554
+#: inc/customizer.php:608
 msgid "Hide comments."
 msgstr "Verberg reacties."
 
-#: inc/customizer.php:562
+#: inc/customizer.php:616
 msgid "Hide widgets."
 msgstr "Verberg widgets."
 
-#: inc/customizer.php:188
+#: inc/customizer.php:201
 msgid "Hovered elements"
 msgstr "Hovered elements"
 
-#: inc/marianne-theme-page.php:202
+#: inc/marianne-theme-page.php:225
 msgid "How can I change fonts?"
 msgstr "Hoe kan ik lettertypes aanpassen?"
 
-#: inc/marianne-theme-page.php:187
+#: inc/marianne-theme-page.php:210
 msgid "How can I set up a logo?"
 msgstr "Hoe kan ik een logo instellen?"
 
-#: inc/customizer.php:423
+#: inc/customizer.php:453
 msgid "How do you want to display your social links?"
 msgstr "Hoe wil je de verwijzingen naar je social media profielen weergeven?"
 
@@ -378,19 +399,19 @@ msgstr "https://chezteddy.fr/"
 msgid "https://github.com/te2dy/marianne"
 msgstr "https://github.com/te2dy/marianne"
 
-#: footer.php:58
+#: footer.php:59
 msgid "https://wordpress.org/"
 msgstr "https://wordpress.org/"
 
-#: footer.php:59
+#: footer.php:60
 msgid "https://wordpress.org/themes/marianne/"
 msgstr "https://wordpress.org/themes/marianne/"
 
-#: inc/marianne-theme-page.php:236
+#: inc/marianne-theme-page.php:259
 msgid "I have other questions."
 msgstr "Ik heb andere vragen."
 
-#: inc/customizer.php:206
+#: inc/customizer.php:219
 msgid ""
 "If you increase the width of the page, your featured images may become too "
 "small. In this case, you should regenerate their thumbnails with a plugins "
@@ -401,15 +422,15 @@ msgstr ""
 "thumbnails opnieuw te genereren met een plugin. Maar je kunt ook de hierna "
 "volgende optie gebruiken. Standaard: 480px."
 
-#: functions.php:297 inc/customizer.php:460
+#: functions.php:314 inc/customizer.php:498
 msgid "Instagram"
 msgstr "Instagram"
 
-#: inc/marianne-theme-page.php:255
+#: inc/marianne-theme-page.php:278
 msgid "Issues & Feature Requests"
 msgstr "Hulp en verbeteraanvragen"
 
-#: inc/customizer.php:346
+#: inc/customizer.php:367
 msgid ""
 "It does not prevent to choose a particular alignment in the text editor. "
 "Default: left."
@@ -419,57 +440,80 @@ msgstr "Kies de gewenste uitlijning van de tekst. Standaard: links."
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr "Hier is niets te vinden. Misschien de zoekopdracht gebruiken?"
 
-#: inc/customizer.php:337
+#: inc/customizer.php:350
 msgid ""
 "It will be added as a primary menu item if a menu is set. Default: unchecked."
 msgstr ""
 "Het zal toegevoegd worden als het hoofdmenu indien een menu is geselecteerd. "
 "Standaard: niets geselecteerd."
 
-#: inc/customizer.php:328
+#: inc/customizer.php:341
 msgid "Italic"
 msgstr "Cursief"
 
-#: inc/customizer.php:352
+#: inc/customizer.php:373
 msgid "Justify"
 msgstr "Uitvullen"
 
-#: inc/customizer.php:278 inc/customizer.php:349 inc/customizer.php:383
+#. %s. The name of the social site.
+#: inc/template-tags.php:446
+#, php-format
+msgctxt "Label for links to social sites."
+msgid "Link to %s"
+msgstr ""
+
+#: inc/customizer.php:291 inc/customizer.php:370 inc/customizer.php:413
 msgid "Left"
 msgstr "Links"
 
-#: inc/customizer.php:179
+#: inc/customizer.php:192
 msgid "Light"
 msgstr "Licht"
 
-#: functions.php:302 inc/customizer.php:537
+#: functions.php:319 inc/customizer.php:591
 msgid "Link"
 msgstr "URL"
+
+#: inc/template-tags.php:471
+msgid "Link icon"
+msgstr ""
+
+#: inc/template-tags.php:468
+msgid "Link to a custom URL"
+msgstr ""
 
 #: inc/marianne-theme-page.php:60
 msgctxt "Link to Marianne on WordPress Theme Directory"
 msgid "https://wordpress.org/themes/marianne/"
 msgstr "https://wordpress.org/themes/marianne/"
 
-#: inc/template-tags.php:612
+#: inc/template-tags.php:604
 msgctxt "Link to the next post."
 msgid "Next"
 msgstr "Volgende"
 
-#: inc/template-tags.php:600
+#: inc/template-tags.php:460
+msgid "Link to the phone number"
+msgstr ""
+
+#: inc/template-tags.php:592
 msgctxt "Link to the previous post."
 msgid "Previous"
 msgstr "Vorige"
 
-#: functions.php:307 inc/customizer.php:476
+#: inc/template-tags.php:476
+msgid "Link to the RSS feed"
+msgstr ""
+
+#: functions.php:324 inc/customizer.php:530
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: inc/marianne-theme-page.php:315
+#: inc/marianne-theme-page.php:373
 msgid "Made in France"
 msgstr "Gemaakt in Frankrijk"
 
-#: inc/customizer.php:288
+#: inc/customizer.php:301
 msgid "Make the logo round."
 msgstr "Maak het logo rond."
 
@@ -477,23 +521,27 @@ msgstr "Maak het logo rond."
 msgid "Marianne"
 msgstr "Marianne"
 
+#: functions.php:359 inc/customizer.php:482
+msgid "Mastodon"
+msgstr ""
+
 #: inc/template-tags.php:116
 msgid "Menu"
 msgstr "Menu"
 
-#: inc/marianne-theme-page.php:114
+#: inc/marianne-theme-page.php:137
 msgid "Menus"
 msgstr "Menu's"
 
-#: inc/customizer.php:234
+#: inc/customizer.php:247
 msgid "Monospaced"
 msgstr "Monospaced"
 
-#: inc/template-tags.php:266
+#: inc/template-tags.php:278
 msgid "Next page &rsaquo;"
 msgstr "Volgende pagina &rsaquo;"
 
-#: inc/customizer.php:300 inc/customizer.php:315 inc/customizer.php:327
+#: inc/customizer.php:313 inc/customizer.php:328 inc/customizer.php:340
 msgid "Normal"
 msgstr "Normaal"
 
@@ -505,7 +553,7 @@ msgstr "Er is niets te vinden hier"
 msgid "Older comments &rsaquo;"
 msgstr "Oude reacties &rsaquo;"
 
-#: inc/customizer.php:289
+#: inc/customizer.php:302
 msgid ""
 "Only applies if a logo is set (see the Site Identity section). Default: "
 "unckecked."
@@ -513,16 +561,16 @@ msgstr ""
 "Alleen van toepassing indien een logo is ingesteld. Standaard: niet "
 "aangevinkt."
 
-#: inc/customizer.php:436
+#: inc/customizer.php:466
 msgid "Open links in a new tab."
 msgstr "Open verwijzingen in een nieuwe tab."
 
-#: functions.php:222
+#: functions.php:234
 msgid "Open submenu"
 msgstr "Open submenu"
 
 #. %s: The URL of the Theme Customizer.
-#: inc/marianne-theme-page.php:209
+#: inc/marianne-theme-page.php:232
 #, php-format
 msgid ""
 "Open the <a href=\"%s\">Theme Customizer</a>. Then, go to Global Settings "
@@ -533,7 +581,7 @@ msgstr ""
 "Publiceer te klikken."
 
 #. %s: The URL of the Theme Customizer.
-#: inc/marianne-theme-page.php:194
+#: inc/marianne-theme-page.php:217
 #, php-format
 msgid ""
 "Open the <a href=\"%s\">Theme Customizer</a>. Then, go to Site Identity and "
@@ -542,25 +590,29 @@ msgstr ""
 "Open de <a href=\"%s\">Thema instellingen</a>. Ga vervolgens naar Site "
 "identiteit en selecteer een logo. Vergeet niet om op Publiceren te klikken."
 
-#: inc/template-tags.php:127 inc/template-tags.php:151
-#: inc/template-tags.php:156
+#: inc/template-tags.php:133 inc/template-tags.php:157
+#: inc/template-tags.php:162
 msgid "Open the search form"
 msgstr "Open het zoekformulier"
 
-#: inc/customizer.php:195
+#: inc/customizer.php:208
 msgid "Orange"
 msgstr "Oranje"
 
-#: inc/customizer.php:205
+#: inc/customizer.php:218
 msgid "Page Width"
 msgstr "Pagina breedte"
 
-#: functions.php:312 inc/customizer.php:516
+#: functions.php:329 inc/customizer.php:570
 msgid "Phone"
 msgstr "Telefoon"
 
+#: inc/template-tags.php:463
+msgid "Phone icon"
+msgstr ""
+
 #. %1$s: The URL of the GitHub Issues page of the Marianne repository. %2$s: The URL of the support forum of the theme on WordPress.org
-#: inc/marianne-theme-page.php:262
+#: inc/marianne-theme-page.php:285
 #, php-format
 msgid ""
 "Please report issues or make feature requests on <a href=\"%1$s\" "
@@ -572,58 +624,89 @@ msgstr ""
 "target=\"_blank\">support forum</a>."
 
 #. %s: The URL of the support forum of the theme on WordPress.org
-#: inc/marianne-theme-page.php:243
-#, php-format
+#: inc/marianne-theme-page.php:266
+#, fuzzy, php-format
+#| msgid ""
+#| "Please visit the <a href=\"%s\" target=\"_blank\">support forum</a> and "
+#| "post them."
 msgid ""
-"Please visit the <a href=\"%s\" target=\"_blank\">support forum</a> and post "
-"them."
+"Please visit the <a href=\"%s\" rel=\"external\" target=\"_blank\">support "
+"forum</a> and post them."
 msgstr ""
 "Bezoek het <a href=\"%s\" target=\"_blank\">support forum</a> en stel je "
 "vraag."
 
-#: inc/customizer.php:95
+#: inc/template-tags.php:578
+msgid "Post"
+msgstr ""
+
+#: inc/customizer.php:101
+msgid "Post List Settings"
+msgstr ""
+
+#: inc/template-tags.php:579
+msgid "Post navigation"
+msgstr ""
+
+#: inc/customizer.php:108
 msgid "Post Settings"
 msgstr "Blogpost instellingen"
+
+#: inc/template-tags.php:267
+msgid "Posts"
+msgstr ""
+
+#: inc/template-tags.php:268
+msgid "Posts navigation"
+msgstr ""
 
 #: functions.php:57 inc/template-tags.php:115
 msgid "Primary Menu"
 msgstr "Hoofdmenu"
 
-#: inc/customizer.php:116
+#: inc/customizer.php:129
 msgid "Print Settings"
 msgstr "Print instellingen"
 
-#: inc/customizer.php:196
+#: inc/customizer.php:209
 msgid "Purple"
 msgstr "Paars"
 
-#: inc/marianne-theme-page.php:120
+#: inc/marianne-theme-page.php:143
 msgid "Rate this theme with ⭐"
 msgstr "Geef dit thema een waardering met ⭐"
 
-#: inc/customizer.php:193
+#: inc/customizer.php:206
 msgid "Red"
 msgstr "Rood"
 
-#: inc/customizer.php:280 inc/customizer.php:351 inc/customizer.php:385
+#: inc/customizer.php:293 inc/customizer.php:372 inc/customizer.php:415
 msgid "Right"
 msgstr "Rechts"
 
-#: inc/customizer.php:428
+#: inc/customizer.php:458
 msgid "Round"
 msgstr "Rond"
 
-#: functions.php:317
+#: functions.php:334
 msgid "RSS Feed"
 msgstr "RSS Feed"
 
-#: inc/customizer.php:232
+#: inc/template-tags.php:479
+msgid "RSS icon"
+msgstr ""
+
+#: inc/customizer.php:245
 msgid "Sans serif"
 msgstr "Sans serif"
 
-#: inc/marianne-theme-page.php:118
+#: inc/marianne-theme-page.php:141
 msgid "Say thank you 🙏"
 msgstr "Dank je wel 🙏"
+
+#: inc/customizer.php:357
+msgid "Search button text"
+msgstr ""
 
 #. %s: search term.
 #: search.php:22 search.php:64
@@ -640,34 +723,38 @@ msgid_plural "%d results found:"
 msgstr[0] "%d zoekresultaat gevonden:"
 msgstr[1] "%d zoekresultaten gevonden:"
 
-#: inc/template-tags.php:177
+#: inc/template-tags.php:183
 msgid "Search the site"
 msgstr "Doorzoek de site"
 
-#: inc/customizer.php:233
+#: inc/customizer.php:246
 msgid "Serif"
 msgstr "Serif"
 
 #. $1%s: WordPress. $2%s: Marianne.
-#: footer.php:57
+#: footer.php:58
 #, php-format
 msgctxt "Site footer text"
 msgid "Powered by %1$s and %2$s"
 msgstr "Mogelijk gemaakt door %1$s en %2$s"
 
-#: header.php:43
+#: header.php:41
 msgid "Skip to content"
 msgstr "Ga direct naar inhoud"
 
-#: inc/customizer.php:529
+#: inc/customizer.php:583
 msgid "SMS"
 msgstr "SMS"
 
-#: inc/customizer.php:109
+#: inc/customizer.php:122
 msgid "Social Links"
 msgstr "Social media links"
 
-#: inc/customizer.php:427
+#: functions.php:364 inc/customizer.php:522
+msgid "Spotify"
+msgstr ""
+
+#: inc/customizer.php:457
 msgid "Square"
 msgstr "Vierkant"
 
@@ -675,15 +762,34 @@ msgstr "Vierkant"
 msgid "Sticky post"
 msgstr "Vastgepinde post"
 
+#: functions.php:229
+msgid "Submenu opening icon"
+msgstr ""
+
 #. Author of the theme
+#: inc/marianne-theme-page.php:103
 msgid "Teddy"
 msgstr "Teddy"
 
-#: inc/customizer.php:345
+#: inc/customizer.php:366
 msgid "Text Align"
 msgstr "Tekst uitlijning"
 
-#: inc/customizer.php:176
+#: inc/customizer.php:391
+msgid "Text of the comment link when there are no comments yet"
+msgstr ""
+
+#: inc/marianne-theme-page.php:91
+msgid ""
+"Thank you for using Marianne, a minimalist theme like they don't make "
+"anymore."
+msgstr ""
+
+#: inc/marianne-theme-page.php:338
+msgid "Thanks to:"
+msgstr ""
+
+#: inc/customizer.php:189
 msgid ""
 "The automatic mode chooses between light and dark color scheme depending on "
 "the settings of the operating system or browser of your visitors. The "
@@ -694,44 +800,60 @@ msgstr ""
 "de computer of browser instellingen van de bezoeker. Standaard: licht."
 
 #. %1$s: Bitcoin scheme followed by address. %2$s: Bitcoin address.
-#: inc/marianne-theme-page.php:133
+#: inc/marianne-theme-page.php:156
 #, php-format
 msgctxt "The bitcoin address link."
 msgid "Address: <a href=\"%1$s\">%2$s</a>"
 msgstr "URL: <a href=\"%1$s\">%2$s</a>"
 
-#: inc/customizer.php:88
+#: inc/customizer.php:94
 msgid "The following settings apply to the main content of posts and pages."
 msgstr ""
 "De volgende instellingen zijn alleen van toepassing op de inhoud van "
 "blogposts en pagina's."
 
-#: inc/customizer.php:243
+#: inc/customizer.php:256
 msgid "The main font size. Default: 100%."
 msgstr "De font grootte die overal gebruikt wordt. Standaard: 100%."
 
-#: inc/template-tags.php:125 inc/template-tags.php:153
+#: inc/template-tags.php:127 inc/template-tags.php:159
 msgctxt "The search button in the header."
 msgid "Search"
 msgstr "Zoek"
 
+#: inc/customizer.php:51
+msgctxt "The search button text."
+msgid "Search"
+msgstr ""
+
 #: inc/marianne-theme-page.php:86
+#, fuzzy
+#| msgid "Marianne"
 msgctxt "The title of the theme page."
-msgid "Marianne"
+msgid "About Marianne"
 msgstr "Marianne"
 
+#: inc/customizer.php:523
+msgid "The URL of the Spotify page you want to share."
+msgstr ""
+
 #. %s: The URL of the Marianne repository on GitHub.
-#: inc/marianne-theme-page.php:302
-#, php-format
+#: inc/marianne-theme-page.php:325
+#, fuzzy, php-format
+#| msgid ""
+#| "There are probably many technical improvements to be made to this theme. "
+#| "You can help me by <a href=\"%s\" target=\"_blank\">contributing on "
+#| "GitHub</a>."
 msgid ""
 "There are probably many technical improvements to be made to this theme. You "
-"can help me by <a href=\"%s\" target=\"_blank\">contributing on GitHub</a>."
+"can help me by <a href=\"%s\" rel=\"external\" target=\"_blank\">"
+"contributing on GitHub</a>."
 msgstr ""
 "Er zijn waarschijnlijk vele technische verbeteringen noodzakelijk voor dit "
 "thema. Je kunt me helpen door middel van <a href=\"%s\" target=\"_blank\">"
 "mee te werken op GitHub</a>."
 
-#: inc/marianne-theme-page.php:234
+#: inc/marianne-theme-page.php:257
 msgid ""
 "There is no paid version of Marianne. You already have everything this theme "
 "can provide without restrictions."
@@ -739,17 +861,17 @@ msgstr ""
 "Er is geen premium versie van Marianne. Je hebt reeds de beschikking over "
 "alle mogelijkheden voor dit thema."
 
-#: inc/customizer.php:117
+#: inc/customizer.php:130
 msgid "These settings only apply to the printing of the pages of your site."
 msgstr ""
 "Deze instellingen zijn alleen van toepassing biij het printen van blogposts "
 "of pagina's."
 
-#: inc/customizer.php:314
+#: inc/customizer.php:327
 msgid "Thin"
 msgstr "Dun"
 
-#: inc/customizer.php:220
+#: inc/customizer.php:233
 msgid ""
 "This can make the images a bit blurry. This is less efficient than "
 "regenerating the images. Default: unchecked."
@@ -761,25 +883,25 @@ msgstr ""
 msgid "This search did not return any results."
 msgstr "Deze zoekactie gaf geen resultaat."
 
-#: inc/customizer.php:525
+#: inc/customizer.php:579
 msgid ""
 "This will automatically open the right application on your readers' phone "
 "when they will click on it."
 msgstr "Door hier te klikken zal de juiste applicatie openen op de smartphone."
 
-#: inc/marianne-theme-page.php:271
+#: inc/marianne-theme-page.php:294
 msgid "Translate"
 msgstr "Vertaal"
 
-#: functions.php:327 inc/customizer.php:500
+#: functions.php:349 inc/customizer.php:554
 msgid "Twitch"
 msgstr "Twitch"
 
-#: functions.php:332 inc/customizer.php:444
+#: functions.php:354 inc/customizer.php:474
 msgid "Twitter"
 msgstr "Twitter"
 
-#: inc/customizer.php:571
+#: inc/customizer.php:625
 msgid ""
 "URLs will be visible on print so that readers can see them and visit them. "
 "Default: checked."
@@ -788,67 +910,71 @@ msgstr ""
 "gebruiken. Standaard: aangevinkt."
 
 #. %s: The short link of the post.
-#: inc/template-tags.php:555
+#: inc/template-tags.php:545
 #, php-format
 msgctxt "Use only on print."
 msgid "Available at: %s"
 msgstr "Beschikbaar op: %s"
 
 #. %1$s: The retrieve date. %1$s: The retrieve time.
-#: inc/template-tags.php:535
+#: inc/template-tags.php:525
 #, php-format
 msgctxt "Use only on print."
 msgid "Retrieved %1$s at %2$s (website time)."
 msgstr "Opgevraagd %1$s om %2$s (webpagina tijd)."
 
-#: inc/customizer.php:403
+#: inc/customizer.php:433
 msgid ""
 "Useful to promote WordPress and Marianne to your readers. Default: displayed."
 msgstr ""
 "Handig om Wordpress en Marianne te promoten naar je lezers. Default: "
 "zichtbaar."
 
-#: inc/marianne-theme-page.php:112
+#: inc/marianne-theme-page.php:135
 msgctxt "Verb. Point to the Theme Customizer."
 msgid "Customize"
 msgstr "Pas aan"
 
 #. %s: The version number of the theme.
-#: inc/marianne-theme-page.php:94
+#: inc/marianne-theme-page.php:117
 #, php-format
 msgid "Version %s"
 msgstr "Versie %s"
 
-#: inc/customizer.php:524
+#: functions.php:344 inc/customizer.php:514
+msgid "Vimeo"
+msgstr ""
+
+#: inc/customizer.php:578
 msgid "What type of phone link do you want to add?"
 msgstr "Wat voor soort telefoon nummer formaat wil je toevoegen?"
 
-#: inc/customizer.php:530
+#: inc/customizer.php:584
 msgid "WhatsApp"
 msgstr "Whatsapp"
 
-#: inc/marianne-theme-page.php:232
+#: inc/marianne-theme-page.php:255
 msgid "Where can I download the pro/premium version of Marianne?"
 msgstr "Waar kan ik de premium versie van Marianne downloaden?"
 
-#: inc/customizer.php:411
+#: inc/customizer.php:441
 msgid "Where do you want to display your social links?"
 msgstr "Waar wil je jouw social media links tonen?"
 
-#: functions.php:189 inc/marianne-theme-page.php:116
+#: functions.php:189 inc/marianne-theme-page.php:139
 msgid "Widgets"
 msgstr "Widgets"
 
-#: inc/marianne-theme-page.php:158
+#: inc/marianne-theme-page.php:181
 msgid "WordPress Support Forum"
 msgstr "Wordpress Support Forum"
 
-#: inc/marianne-theme-page.php:154
+#: inc/marianne-theme-page.php:177
 msgid "WordPress Theme Directory"
 msgstr "Wordpress Thema overzicht"
 
 #. %s: The URL of the Theme Customizer.
-#: inc/marianne-theme-page.php:224
+#: inc/marianne-theme-page.php:247
 #, php-format
 msgid ""
 "Yes, you can! Open the <a href=\"%s\">Theme Customizer</a>. Then, go to "
@@ -857,61 +983,85 @@ msgstr ""
 "Ja, het kan! Ga naar <a href=\"%s\">Thema Instellingen</a>en dan naar social "
 "media links. Ze zijn er allemaal."
 
-#: inc/customizer.php:394
+#: inc/customizer.php:358
+msgid ""
+"You can customize the button text. Leave blank to use the default text "
+"(Search)."
+msgstr ""
+
+#: inc/customizer.php:424
 msgid "You can write any text to add in the footer."
 msgstr "Schrijf hier je tekst voor in de voettekst sectie."
 
 #. %s: The URL of the language repository on GitHub.
-#: inc/marianne-theme-page.php:278
-#, php-format
+#: inc/marianne-theme-page.php:301
+#, fuzzy, php-format
+#| msgid ""
+#| "You want to use Marianne in your language? You can help me to translate "
+#| "it on <a href=\"%1$s\" target=\"_blank\">GitHub</a> where a .pot file is "
+#| "available."
 msgid ""
 "You want to use Marianne in your language? You can help me to translate it "
-"on <a href=\"%1$s\" target=\"_blank\">GitHub</a> where a .pot file is "
-"available."
+"on <a href=\"%1$s\" rel=\"external\" target=\"_blank\">GitHub</a> where a ."
+"pot file is available."
 msgstr ""
 "Wil je Marianne in jouw taal gebruiken? Help me dan met het vertalen op <a "
 "href=\"%1$s\" target=\"_blank\">GitHub</a> waar een .pot file beschikbaar is."
 
-#: inc/customizer.php:509
+#: inc/customizer.php:563
 msgid "Your email address."
 msgstr "Je email adres."
 
-#: inc/customizer.php:453
+#: inc/customizer.php:491
 msgid "Your Facebook profile or page URL."
 msgstr "Je Facebook profiel of pagina link."
 
-#: inc/customizer.php:485
+#: inc/customizer.php:539
 msgid "Your GitHub profile URL."
 msgstr "Je GitHub profiel link."
 
-#: inc/customizer.php:493
+#: inc/customizer.php:547
 msgid "Your GitLab profile URL."
 msgstr "Je GitLab profiel link."
 
-#: inc/customizer.php:461
+#: inc/customizer.php:499
 msgid "Your Instagram profile URL."
 msgstr "Je Instagram profiel link."
 
-#: inc/customizer.php:477
+#: inc/customizer.php:531
 msgid "Your LinkedIn profile URL."
 msgstr "Je LinkedIn profiel link."
 
-#: inc/customizer.php:517
+#: inc/customizer.php:483
+msgid "Your Mastodon profile URL."
+msgstr ""
+
+#: inc/customizer.php:571
 msgid "Your phone number (without spaces)."
 msgstr "Je telefoon nummmer (zonder spaties)."
 
-#: inc/customizer.php:501
+#: inc/customizer.php:555
 msgid "Your Twitch profile URL."
 msgstr "Je Twitter profiel link."
 
-#: inc/customizer.php:445
+#: inc/customizer.php:475
 msgid "Your Twitter @username. Do not forget the at symbol."
 msgstr "Je Twitter @gebruikersnaam. Vergeet het @ symbool niet."
 
-#: inc/customizer.php:469
+#: inc/customizer.php:515
+msgid "Your Vimeo page URL."
+msgstr ""
+
+#: inc/customizer.php:507
 msgid "Your YouTube channel URL."
 msgstr "Je YouTube kanaal link."
 
-#: functions.php:322 inc/customizer.php:468
+#: functions.php:339 inc/customizer.php:506
 msgid "YouTube"
 msgstr "YouTube"
+
+#. %1$s: The name of theme author. %2$s: Bitcoin address.
+#: inc/marianne-theme-page.php:100
+#, php-format
+msgid "— %1$s, the author of Marianne"
+msgstr ""

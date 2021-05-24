@@ -374,19 +374,11 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 
 		$social_links = array();
 
-		$social_links['twitter']   = marianne_get_theme_mod( 'marianne_social_twitter' ) ? marianne_get_theme_mod( 'marianne_social_twitter' ) : '';
-		$social_links['facebook']  = marianne_get_theme_mod( 'marianne_social_facebook' ) ? marianne_get_theme_mod( 'marianne_social_facebook' ) : '';
-		$social_links['instagram'] = marianne_get_theme_mod( 'marianne_social_instagram' ) ? marianne_get_theme_mod( 'marianne_social_instagram' ) : '';
-		$social_links['youtube']   = marianne_get_theme_mod( 'marianne_social_youtube' ) ? marianne_get_theme_mod( 'marianne_social_youtube' ) : '';
-		$social_links['spotify']   = marianne_get_theme_mod( 'marianne_social_spotify' ) ? marianne_get_theme_mod( 'marianne_social_spotify' ) : '';
-		$social_links['linkedin']  = marianne_get_theme_mod( 'marianne_social_linkedin' ) ? marianne_get_theme_mod( 'marianne_social_linkedin' ) : '';
-		$social_links['github']    = marianne_get_theme_mod( 'marianne_social_github' ) ? marianne_get_theme_mod( 'marianne_social_github' ) : '';
-		$social_links['gitlab']    = marianne_get_theme_mod( 'marianne_social_gitlab' ) ? marianne_get_theme_mod( 'marianne_social_gitlab' ) : '';
-		$social_links['twitch']    = marianne_get_theme_mod( 'marianne_social_twitch' ) ? marianne_get_theme_mod( 'marianne_social_twitch' ) : '';
-		$social_links['email']     = marianne_get_theme_mod( 'marianne_social_email' ) ? marianne_get_theme_mod( 'marianne_social_email' ) : '';
-		$social_links['phone']     = marianne_get_theme_mod( 'marianne_social_phone' ) ? marianne_get_theme_mod( 'marianne_social_phone' ) : '';
-		$social_links['link']      = marianne_get_theme_mod( 'marianne_social_link' ) ? marianne_get_theme_mod( 'marianne_social_link' ) : '';
-		$social_links['rss']       = marianne_get_theme_mod( 'marianne_social_rss' ) ? marianne_get_theme_mod( 'marianne_social_rss' ) : '';
+		$social_supported = array( 'twitter', 'mastodon', 'facebook', 'instagram', 'youtube', 'vimeo', 'spotify', 'linkedin', 'github', 'gitlab', 'twitch', 'email', 'phone', 'link', 'rss' );
+
+		foreach ( $social_supported as $social ) {
+			$social_links[ $social ] = marianne_get_theme_mod( sanitize_key( 'marianne_social_' . $social ) ) ? marianne_get_theme_mod( sanitize_key( 'marianne_social_' . $social ) ) : '';
+		}
 
 		if ( ! empty( $social_links ) ) :
 			?>
@@ -445,7 +437,10 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 								?>
 									<li>
 										<?php
-										if ( 'phone' !== $link && 'link' !== $site && 'rss' !== $site && 'spotify' !== $site ) {
+
+										$specific_icons = array( 'phone', 'link', 'rss' );
+
+										if ( ! in_array( $site, $specific_icons, true ) ) {
 											$link_aria_label = sprintf(
 												/* translators: %s. The name of the social site. */
 												_x( 'Link to %s', 'Label for links to social sites.', 'marianne' ),
@@ -484,13 +479,6 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 												'aria-label' => __( 'RSS icon', 'marianne' ),
 												'class'      => 'feather feather-' . $site,
 												'size'       => array( 16, 16 ),
-											);
-										} elseif ( 'spotify' === $site ) {
-											$svg_args = array(
-												'aria-label' => __( 'Spotify icon', 'marianne' ),
-												'class'      => 'feather feather-' . $site,
-												'size'       => array( 16, 16 ),
-												'viewbox'    => '0 0 186.845 186.845',
 											);
 										}
 										?>

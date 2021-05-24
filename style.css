@@ -5,7 +5,7 @@ Author: Teddy
 Author URI: https://chezteddy.fr/
 Description: Are you looking for a simple theme to highlight your writings? Marianne is a rare minimalistic theme in an ocean of maximalism. It gives a touch of old school blogging to your site, refreshed, with customization options that make it flexible. If you believe that less graphism complexity means less distraction and more readability, this theme is made for you. Whether you are a simple blogger, a writer, a journalist or an intellectual, Marianne will delight you… and your readers.
 Tags: blog, one-column, custom-logo, custom-menu, featured-images, sticky-post, theme-options, threaded-comments, translation-ready, wide-blocks
-Version: 1.3.6
+Version: 1.4
 Requires at least: 5.3
 Tested up to: 5.7.2
 Requires PHP: 5.2
@@ -553,13 +553,20 @@ hr {
 	stroke: var(--color-body-background);
 	transition: all .2s ease-in-out;
 }
-.site-social .feather-spotify {
+.site-social .feather-mastodon,
+.site-social .feather-spotify,
+.site-social .feather-vimeo {
 	fill: var(--color-body-text-secondary);
+	stroke: transparent;
 }
+.social-links li a:hover .feather-mastodon,
 .social-links li a:hover .feather-spotify,
-.social-links li a:focus .feather-spotify {
+.social-links li a:hover .feather-vimeo,
+.social-links li a:focus .feather-mastodon,
+.social-links li a:focus .feather-spotify,
+.social-links li a:focus .feather-vimeo {
 	fill: var(--color-body-background);
-	stroke: var(--color-body-background);
+	stroke: transparent;
 }
 .social-links li {
 	margin: 0 .25em;
