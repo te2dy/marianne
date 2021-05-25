@@ -18,9 +18,18 @@
 			</div>
 		<?php endif; ?>
 
-		<div class="entry-meta text-secondary">
-			<a href="<?php the_permalink(); ?>"><?php marianne_the_date(); ?></a>
-		</div>
+		<?php
+		// SINCE MARIANNE 1.5
+		marianne_post_info(
+			'entry-meta text-secondary',
+			array(
+				'time'          => false,
+				'author_name'   => true,
+				'author_prefix' => true,
+				'avatar'        => true,
+			)
+		);
+		?>
 
 		<?php marianne_the_categories( 'entry-meta entry-categories text-secondary' ); ?>
 

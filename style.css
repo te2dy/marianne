@@ -1017,6 +1017,27 @@ iframe {
 	font-size: 1.5em;
 	margin: 1em 0;
 }
+.entry-info .entry-info-author,
+.entry-info .entry-info-date {
+	margin: .5em 0;
+}
+.entry-info-with-avatar .entry-info-author {
+	margin-bottom: .25em;
+}
+.entry-info-with-avatar {
+	display: flex;
+	align-items: center;
+}
+.entry-info-avatar .avatar {
+	border-radius: 50%;
+	margin-right: .5em;
+}
+.entry-author-name {
+
+}
+.entry-meta-line {
+	margin: .5em 0;
+}
 .entry-thumbnail-wide .wp-post-image {
 	width: var(--page-width);
 }

@@ -19,7 +19,16 @@
 		<?php endif; ?>
 
 		<?php
-		marianne_the_date( 'entry-meta entry-date post-date text-secondary' );
+		// SINCE MARIANNE 1.5
+		marianne_post_info(
+			'entry-meta text-secondary',
+			array(
+				'time'          => false,
+				'author_name'   => false,
+				'author_prefix' => false,
+				'avatar'        => false,
+			)
+		);
 
 		marianne_the_categories( 'entry-meta entry-categories text-secondary' );
 
