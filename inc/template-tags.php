@@ -372,9 +372,10 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 
 		$container_class .= ' site-social-' . marianne_get_theme_mod( 'marianne_social_style' );
 
-		$social_links = array();
-
 		$social_supported = array( 'twitter', 'mastodon', 'facebook', 'instagram', 'youtube', 'vimeo', 'spotify', 'linkedin', 'github', 'gitlab', 'twitch', 'email', 'phone', 'link', 'rss' );
+
+		// Puts set social links in an array.
+		$social_links = array();
 
 		foreach ( $social_supported as $social ) {
 			$social_links[ $social ] = marianne_get_theme_mod( sanitize_key( 'marianne_social_' . $social ) ) ? marianne_get_theme_mod( sanitize_key( 'marianne_social_' . $social ) ) : '';
@@ -428,6 +429,8 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 							}
 
 							if ( $link ) {
+
+								// Sets a target value for links.
 								if ( false === marianne_get_theme_mod( 'marianne_social_target_blank' ) ) {
 									$target = '_self';
 								} else {
@@ -437,7 +440,6 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 								?>
 									<li>
 										<?php
-
 										$specific_icons = array( 'phone', 'link', 'rss' );
 
 										if ( ! in_array( $site, $specific_icons, true ) ) {
