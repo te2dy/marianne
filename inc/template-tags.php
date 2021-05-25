@@ -235,72 +235,116 @@ if ( ! function_exists( 'marianne_the_date' ) ) {
 	}
 }
 
-if ( ! function_exists( 'marianne_the_meta' ) ) {
+if ( ! function_exists( 'marianne_post_info' ) ) {
 	/**
 	 *
 	 */
-	function marianne_the_meta( $class = '', $args = array() ) {
+	function marianne_post_info( $class = '', $args = array() ) {
+		// Date formatting options.
 		$the_date_args = array();
 
-		if ( isset( $args['date'] ) && false === $args['date'] ) {
-			$args['date']          = false;
-			$the_date_args['date'] = false;
-		} else {
-			$args['date'] = true;
+		// Default option values.
+		$options = array(
+			'date'          => true,
+			'time'          => false,
+			'author_name'   => false,
+			'author_prefix' => false,
+			'avatar'        => false,
+		);
+
+		if ( isset( $args['time'] ) && is_bool( $args['time'] ) ) {
+			$options['time']       = $args['time'];
+			$the_date_args['time'] = $args['time'];
 		}
 
-		if ( isset( $args['time'] ) && true === $args['time'] ) {
-			$args['time']          = true;
-			$the_date_args['time'] = true;
-		} else {
-			$args['time'] = false;
+		if ( isset( $args['author_name'] ) && is_bool( $args['author_name'] ) ) {
+			$options['author_name'] = $args['author_name'];
 		}
 
-		if ( isset( $args['author'] ) && true === $args['author'] ) {
-			$args['author'] = true;
-			$class .= ' entry-author';
-		} else {
-			$args['author'] = false;
+		if ( isset( $args['author_prefix'] ) && is_bool( $args['author_prefix'] ) ) {
+			$options['author_prefix'] = $args['author_prefix'];
 		}
 
-		if ( isset( $args['avatar'] ) && true === $args['avatar'] ) {
-			$args['avatar'] = true;
+		if ( isset( $args['avatar'] ) && is_bool( $args['avatar'] ) ) {
+			$options['avatar'] = $args['avatar'];
+		}
 
-			if ( false === $args['author'] ) {
-				$class .= ' entry-author';
-			}
+		if ( true === $options['avatar'] ) {
+			$class .= ' entry-info-with-avatar';
 		} else {
-			$args['avatar'] = false;
+			$class .= ' entry-info';
 		}
 		?>
 
 		<div<?php marianne_add_class( $class ); ?>>
-			<?php if ( false === $args['author'] && false === $args['avatar'] ) : ?>
-				<?php marianne_the_date( 'entry-date', $the_date_args ); ?>
+			<?php if ( false === $options['author_name'] && false === $options['avatar'] ) : ?>
+				<?php if ( ! is_singular() ) : ?>
+					<a href="<?php the_permalink(); ?>">
+						<?php marianne_the_date( 'entry-date', $the_date_args ); ?>
+					</a>
+				<?php else : ?>
+					<?php marianne_the_date( 'entry-date', $the_date_args ); ?>
+				<?php endif; ?>
 			<?php else : ?>
-				<?php if ( true === $args['avatar'] ) : ?>
-					<div class="entry-author-content">
-						<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
+				<?php if ( true === $options['avatar'] ) : ?>
+					<div class="entry-info-avatar">
+						<?php if ( ! is_author() ) : ?>
+							<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
+								<?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ) ?>
+							</a>
+						<?php else : ?>
 							<?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ) ?>
-						</a>
+						<?php endif; ?>
+					</div>
+
+					<div class="entry-info-content">
+				<?php endif; ?>
+
+				<?php if ( true === $options['author_name'] ) : ?>
+					<div class="entry-info-author">
+						<?php if ( ! is_author() ) : ?>
+							<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
+								<?php
+								if ( false === $options['author_prefix'] ) {
+									echo esc_html( get_the_author_meta( 'display_name' ) );
+								} else {
+									printf(
+										/* translators: %s: The author's name. */
+										esc_html__( 'By %s', 'marianne' ),
+										esc_html( get_the_author_meta( 'display_name' ) )
+									);
+								}
+								?>
+							</a>
+						<?php else : ?>
+							<?php
+							if ( false === $options['author_prefix'] ) {
+								echo esc_html( get_the_author_meta( 'display_name' ) );
+							} else {
+								printf(
+									/* translators: %s: The author's name. */
+									esc_html__( 'By %s', 'marianne' ),
+									esc_html( get_the_author_meta( 'display_name' ) )
+								);
+							}
+							?>
+						<?php endif; ?>
 					</div>
 				<?php endif; ?>
 
-				<div class="entry-author-content">
-					<?php if ( true === $args['author'] ) : ?>
-						<div>
-							<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
-								<?php echo get_the_author_meta( 'display_name' ); ?>
-							</a>
-						</div>
-					<?php endif; ?>
-
-					<div>
+				<div class="entry-info-date">
+					<?php if ( ! is_singular() ) : ?>
 						<a href="<?php the_permalink(); ?>">
 							<?php marianne_the_date( 'entry-date', $the_date_args ); ?>
 						</a>
-					</div>
+					<?php else : ?>
+						<?php marianne_the_date( 'entry-date', $the_date_args ); ?>
+					<?php endif; ?>
 				</div>
+
+				<?php if ( true === $options['avatar'] ) : ?>
+					</div>
+				<?php endif; ?>
 			<?php endif; ?>
 		</div>
 

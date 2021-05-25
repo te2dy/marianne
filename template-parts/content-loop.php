@@ -19,13 +19,14 @@
 		<?php endif; ?>
 
 		<?php
-		marianne_the_meta(
+		// SINCE MARIANNE 1.5
+		marianne_post_info(
 			'entry-meta text-secondary',
 			array(
-				'date'   => true,
-				'time'   => false,
-				'author' => true,
-				'avatar' => true,
+				'time'          => false,
+				'author_name'   => true,
+				'author_prefix' => true,
+				'avatar'        => true,
 			)
 		);
 		?>
