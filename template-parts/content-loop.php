@@ -21,7 +21,6 @@
 		<?php
 		$marianne_post_info_args = array();
 
-
 		if ( 'enabled' === marianne_get_theme_mod( 'marianne_loop_author_name' ) ) {
 			$marianne_post_info_args[] = 'author_name';
 		} elseif ( 'with_prefix' === marianne_get_theme_mod( 'marianne_loop_author_name' ) ) {
