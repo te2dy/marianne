@@ -19,16 +19,25 @@
 		<?php endif; ?>
 
 		<?php
-		// SINCE MARIANNE 1.5
-		marianne_post_info(
-			'entry-meta text-secondary',
-			array(
-				'time'          => false,
-				'author_name'   => true,
-				'author_prefix' => true,
-				'avatar'        => true,
-			)
-		);
+		$marianne_post_info_args = array();
+
+
+		if ( 'enabled' === marianne_get_theme_mod( 'marianne_loop_author_name' ) ) {
+			$marianne_post_info_args[] = 'author_name';
+		} elseif ( 'with_prefix' === marianne_get_theme_mod( 'marianne_loop_author_name' ) ) {
+			$marianne_post_info_args[] = 'author_name';
+			$marianne_post_info_args[] = 'author_prefix';
+		}
+
+		if ( true === marianne_get_theme_mod( 'marianne_loop_author_avatar' ) ) {
+			$marianne_post_info_args[] = 'author_avatar';
+		}
+
+		if ( true === marianne_get_theme_mod( 'marianne_loop_post_time' ) ) {
+			$marianne_post_info_args[] = 'time';
+		}
+
+		marianne_post_info( 'entry-meta text-secondary', $marianne_post_info_args );
 		?>
 
 		<?php marianne_the_categories( 'entry-meta entry-categories text-secondary' ); ?>

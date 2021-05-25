@@ -1032,12 +1032,6 @@ iframe {
 	border-radius: 50%;
 	margin-right: .5em;
 }
-.entry-author-name {
-
-}
-.entry-meta-line {
-	margin: .5em 0;
-}
 .entry-thumbnail-wide .wp-post-image {
 	width: var(--page-width);
 }

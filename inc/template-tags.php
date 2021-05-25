@@ -237,39 +237,37 @@ if ( ! function_exists( 'marianne_the_date' ) ) {
 
 if ( ! function_exists( 'marianne_post_info' ) ) {
 	/**
+	 * The post meta.
 	 *
+	 * Displays the post date and, if enabled, the author's name and avatar.
+	 *
+	 * @param string $class The class of the container.
+	 *                      To set multiple classes,
+	 *                      separate them with a space.
+	 *                      Example: $class = "class-1 class-2".
+	 *
+	 * @param string $args  Options to activate:
+	 *                          - 'time' adds the time of publish after the date.
+	 *                          - 'author_name' displays the author's name.
+	 *                          - 'author_prefix' displays 'By' before the author's name.
+	 *                          - 'avatar' displays the author's avatar.
+	 *
+	 * @return void
+	 *
+	 * @since Marianne 1.5
 	 */
 	function marianne_post_info( $class = '', $args = array() ) {
 		// Date formatting options.
-		$the_date_args = array();
-
-		// Default option values.
-		$options = array(
-			'date'          => true,
-			'time'          => false,
-			'author_name'   => false,
-			'author_prefix' => false,
-			'avatar'        => false,
+		$the_date_args = array(
+			'date' => true,
+			'time' => false,
 		);
 
-		if ( isset( $args['time'] ) && is_bool( $args['time'] ) ) {
-			$options['time']       = $args['time'];
-			$the_date_args['time'] = $args['time'];
+		if ( in_array( 'time', $args, true ) ) {
+			$the_date_args['time'] = true;
 		}
 
-		if ( isset( $args['author_name'] ) && is_bool( $args['author_name'] ) ) {
-			$options['author_name'] = $args['author_name'];
-		}
-
-		if ( isset( $args['author_prefix'] ) && is_bool( $args['author_prefix'] ) ) {
-			$options['author_prefix'] = $args['author_prefix'];
-		}
-
-		if ( isset( $args['avatar'] ) && is_bool( $args['avatar'] ) ) {
-			$options['avatar'] = $args['avatar'];
-		}
-
-		if ( true === $options['avatar'] ) {
+		if ( in_array( 'author_avatar', $args, true ) ) {
 			$class .= ' entry-info-with-avatar';
 		} else {
 			$class .= ' entry-info';
@@ -277,7 +275,7 @@ if ( ! function_exists( 'marianne_post_info' ) ) {
 		?>
 
 		<div<?php marianne_add_class( $class ); ?>>
-			<?php if ( false === $options['author_name'] && false === $options['avatar'] ) : ?>
+			<?php if ( ! in_array( 'author_name', $args, true ) && ! in_array( 'author_avatar', $args, true ) ) : ?>
 				<?php if ( ! is_singular() ) : ?>
 					<a href="<?php the_permalink(); ?>">
 						<?php marianne_the_date( 'entry-date', $the_date_args ); ?>
@@ -286,7 +284,7 @@ if ( ! function_exists( 'marianne_post_info' ) ) {
 					<?php marianne_the_date( 'entry-date', $the_date_args ); ?>
 				<?php endif; ?>
 			<?php else : ?>
-				<?php if ( true === $options['avatar'] ) : ?>
+				<?php if ( in_array( 'author_avatar', $args, true ) ) : ?>
 					<div class="entry-info-avatar">
 						<?php if ( ! is_author() ) : ?>
 							<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
@@ -300,12 +298,12 @@ if ( ! function_exists( 'marianne_post_info' ) ) {
 					<div class="entry-info-content">
 				<?php endif; ?>
 
-				<?php if ( true === $options['author_name'] ) : ?>
+				<?php if ( in_array( 'author_name', $args, true ) ) : ?>
 					<div class="entry-info-author">
 						<?php if ( ! is_author() ) : ?>
 							<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
 								<?php
-								if ( false === $options['author_prefix'] ) {
+								if ( ! in_array( 'author_prefix', $args, true ) ) {
 									echo esc_html( get_the_author_meta( 'display_name' ) );
 								} else {
 									printf(
@@ -318,7 +316,7 @@ if ( ! function_exists( 'marianne_post_info' ) ) {
 							</a>
 						<?php else : ?>
 							<?php
-							if ( false === $options['author_prefix'] ) {
+							if ( ! in_array( 'author_prefix', $args, true ) ) {
 								echo esc_html( get_the_author_meta( 'display_name' ) );
 							} else {
 								printf(
@@ -342,7 +340,7 @@ if ( ! function_exists( 'marianne_post_info' ) ) {
 					<?php endif; ?>
 				</div>
 
-				<?php if ( true === $options['avatar'] ) : ?>
+				<?php if ( in_array( 'author_avatar', $args, true ) ) : ?>
 					</div>
 				<?php endif; ?>
 			<?php endif; ?>

@@ -387,6 +387,32 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		// Post List Settings.
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_loop',
+			'id'          => 'author_name',
+			'title'       => __( 'Multi-author mode', 'marianne' ),
+			'value'      => array(
+				'disabled'    => __( 'Disabled', 'marianne' ),
+				'enabled'     => __( "Display the author's name", 'marianne' ),
+				'with_prefix' => __( "Display the author's name with a prefix", 'marianne' ),
+			),
+			'type'        => 'radio',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_loop',
+			'id'          => 'author_avatar',
+			'title'       => __( "Display the author's avatar.", 'marianne' ),
+			'type'        => 'checkbox',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_loop',
+			'id'          => 'post_time',
+			'title'       => __( 'Display the post published time.', 'marianne' ),
+			'type'        => 'checkbox',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_loop',
 			'id'          => 'comment_link_text',
 			'title'       => __( 'Text of the comment link when there are no comments yet', 'marianne' ),
 			'description' => __( 'For example, "No comments" or "Write a comment". Default: empty.', 'marianne' ),
@@ -394,6 +420,32 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		);
 
 		// Post Settings.
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_post',
+			'id'          => 'author_name',
+			'title'       => __( 'Multi-author mode', 'marianne' ),
+			'value'      => array(
+				'disabled'    => __( 'Disabled', 'marianne' ),
+				'enabled'     => __( "Display the author's name", 'marianne' ),
+				'with_prefix' => __( "Display the author's name with a prefix", 'marianne' ),
+			),
+			'type'        => 'radio',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_post',
+			'id'          => 'author_avatar',
+			'title'       => __( "Display the author's avatar.", 'marianne' ),
+			'type'        => 'checkbox',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_post',
+			'id'          => 'post_time',
+			'title'       => __( 'Display the post published time.', 'marianne' ),
+			'type'        => 'checkbox',
+		);
+
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_post',
 			'id'          => 'nav',
@@ -816,10 +868,16 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_content_hyphens'    => false,
 
 			// Post List Settings.
+			'marianne_loop_author_name'       => 'disabled',
+			'marianne_loop_author_avatar'     => false,
+			'marianne_loop_post_time'         => false,
 			'marianne_loop_comment_link_text' => '',
 
 			// Post Settings.
-			'marianne_post_nav' => false,
+			'marianne_post_author_name'   => 'disabled',
+			'marianne_post_author_avatar' => false,
+			'marianne_post_post_time'     => false,
+			'marianne_post_nav'           => false,
 
 			// Footer Settings.
 			'marianne_footer_align'   => 'left',
