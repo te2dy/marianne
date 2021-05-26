@@ -388,7 +388,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_loop',
 			'id'          => 'author_name',
-			'title'       => __( "Display the author's name", 'marianne' ),
+			'title'       => __( "Display the author's name.", 'marianne' ),
 			'description' => __( 'Default: unchecked.', 'marianne' ),
 			'type'        => 'checkbox',
 		);
@@ -429,7 +429,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_post',
 			'id'          => 'post_time',
-			'title'       => __( 'Display the post published time.', 'marianne' ),
+			'title'       => __( 'Display the post published time after the date.', 'marianne' ),
 			'description' => __( 'Default: unchecked.', 'marianne' ),
 			'type'        => 'checkbox',
 		);
@@ -439,7 +439,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'id'      => 'author_position',
 			'title'   => __( "Position of the author's identity", 'marianne' ),
 			'value'   => array(
-				'none'   => __( 'None (default)', 'marianne' ),
+				'none'   => __( 'Not displayed (default)', 'marianne' ),
 				'top'    => __( 'Post header', 'marianne' ),
 				'bottom' => __( 'Bottom of the post', 'marianne' ),
 			),
