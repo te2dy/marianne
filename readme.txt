@@ -38,7 +38,9 @@ on tablet and mobile, and it has been designed to give a good print results.
 
 === 1.5 – May 27th, 2021 ===
 - Added: the ability to display the author's name in the post list and inside posts.
+- Fixed: social icon margins.
 - Updated: translation files.
+- Updated: Feather Icons mostly replaced by Simple Icons.
 
 === 1.4.1 – May 24th, 2021 ===
 - Fixed: .zip error.
@@ -261,7 +263,7 @@ SVG Icons:
   License: MIT
   License URI: https://opensource.org/licenses/mit-license.php
 - Simple Icons
-  Source : https://simpleicons.org/
+  Source: https://simpleicons.org/
   License: CC0
   License URI: https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md
 
