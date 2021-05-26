@@ -477,8 +477,8 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_post',
 			'id'          => 'author_bio',
-			'title'       => __( "Display the author's biography.", 'marianne' ),
-			'description' => __( 'Default: checked.', 'marianne' ),
+			'title'       => __( "Display the author's biographical info.", 'marianne' ),
+			'description' => __( 'Only if this info is set on the profile of the author. Default: checked.', 'marianne' ),
 			'type'        => 'checkbox',
 		);
 

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Marianne\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-02 14:22+0000\n"
-"PO-Revision-Date: 2021-05-26 20:45+0000\n"
+"PO-Revision-Date: 2021-05-26 21:41+0000\n"
 "Last-Translator: Teddy\n"
 "Language-Team: French (France)\n"
 "Language: fr_FR\n"
@@ -248,7 +248,7 @@ msgstr "Sombre"
 msgid "Default: bolder."
 msgstr "Par défaut&nbsp;: très gras."
 
-#: inc/customizer.php:465 inc/customizer.php:481
+#: inc/customizer.php:465
 msgid "Default: checked."
 msgstr "Par défaut&nbsp;: coché."
 
@@ -294,8 +294,8 @@ msgid "Display the author's avatar."
 msgstr "Afficher l’avatar de l’auteur."
 
 #: inc/customizer.php:480
-msgid "Display the author's biography."
-msgstr "Afficher la biographie de l’auteur."
+msgid "Display the author's biographical info."
+msgstr "Afficher les éléments biographiques de l’auteur."
 
 #: inc/customizer.php:391
 msgid "Display the author's name."
@@ -321,7 +321,7 @@ msgstr "Faire un don en Bitcoin"
 msgid "Donate ₿"
 msgstr "Donner ₿"
 
-#: functions.php:294 inc/customizer.php:650
+#: functions.php:288 inc/customizer.php:650
 msgid "Email"
 msgstr "Courriel"
 
@@ -338,7 +338,7 @@ msgid "Expand featured images that are not wide enough."
 msgstr ""
 "Étendre les images mises en avant quand elles ne sont pas assez larges."
 
-#: functions.php:299 inc/customizer.php:578
+#: functions.php:293 inc/customizer.php:578
 msgid "Facebook"
 msgstr "Facebook"
 
@@ -396,7 +396,7 @@ msgstr ""
 msgid "Force anti-aliasing."
 msgstr "Forcer l’anticrénelage."
 
-#: functions.php:304 inc/customizer.php:626
+#: functions.php:298 inc/customizer.php:626
 msgid "GitHub"
 msgstr "GitHub"
 
@@ -404,7 +404,7 @@ msgstr "GitHub"
 msgid "GitHub Repository"
 msgstr "Répertoire GitHub"
 
-#: functions.php:309 inc/customizer.php:634
+#: functions.php:303 inc/customizer.php:634
 msgid "GitLab"
 msgstr "GitLab"
 
@@ -487,7 +487,7 @@ msgstr ""
 "miniatures avec une extension (recommandé). Ou vous pouvez activer l’option "
 "qui suit. Par défaut&nbsp;: 480&nbsp;px."
 
-#: functions.php:314 inc/customizer.php:586
+#: functions.php:308 inc/customizer.php:586
 msgid "Instagram"
 msgstr "Instagram"
 
@@ -539,7 +539,7 @@ msgstr "Gauche"
 msgid "Light"
 msgstr "Clair"
 
-#: functions.php:319 inc/customizer.php:679
+#: functions.php:313 inc/customizer.php:679
 msgid "Link"
 msgstr "Lien"
 
@@ -574,7 +574,7 @@ msgstr "Précédent"
 msgid "Link to the RSS feed"
 msgstr "Lien vers le flux RSS"
 
-#: functions.php:324 inc/customizer.php:618
+#: functions.php:318 inc/customizer.php:618
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
@@ -590,7 +590,7 @@ msgstr "Afficher le logo rond."
 msgid "Marianne"
 msgstr "Marianne"
 
-#: functions.php:359 inc/customizer.php:570
+#: functions.php:353 inc/customizer.php:570
 msgid "Mastodon"
 msgstr "Mastodon"
 
@@ -642,6 +642,13 @@ msgstr ""
 "S’applique uniquement si un logo est défini (voir la section Identité du "
 "site). Par défaut&nbsp;: non coché."
 
+#: inc/customizer.php:481
+msgid ""
+"Only if this info is set on the profile of the author. Default: checked."
+msgstr ""
+"Seulement si ces informations ont été renseignées dans le profil de l’auteur."
+" Par défaut&nbsp;: non coché."
+
 #: inc/customizer.php:554
 msgid "Open links in a new tab."
 msgstr "Ouvrir les liens dans un nouvel onglet."
@@ -685,7 +692,7 @@ msgstr "Orange"
 msgid "Page Width"
 msgstr "Largeur de la page"
 
-#: functions.php:329 inc/customizer.php:658
+#: functions.php:323 inc/customizer.php:658
 msgid "Phone"
 msgstr "Téléphone"
 
@@ -778,7 +785,7 @@ msgstr "Droite"
 msgid "Round"
 msgstr "Rond"
 
-#: functions.php:334
+#: functions.php:328
 msgid "RSS Feed"
 msgstr "Flux RSS"
 
@@ -840,7 +847,7 @@ msgstr "SMS"
 msgid "Social Links"
 msgstr "Liens sociaux"
 
-#: functions.php:364 inc/customizer.php:610
+#: functions.php:358 inc/customizer.php:610
 msgid "Spotify"
 msgstr "Spotify"
 
@@ -994,11 +1001,11 @@ msgstr ""
 msgid "Translate"
 msgstr "Traduire"
 
-#: functions.php:349 inc/customizer.php:642
+#: functions.php:343 inc/customizer.php:642
 msgid "Twitch"
 msgstr "Twitch"
 
-#: functions.php:354 inc/customizer.php:562
+#: functions.php:348 inc/customizer.php:562
 msgid "Twitter"
 msgstr "Twitter"
 
@@ -1042,7 +1049,7 @@ msgstr "Personnaliser"
 msgid "Version %s"
 msgstr "Version %s"
 
-#: functions.php:344 inc/customizer.php:602
+#: functions.php:338 inc/customizer.php:602
 msgid "Vimeo"
 msgstr "Vimeo"
 
@@ -1161,7 +1168,7 @@ msgstr "L’adresse de votre page Vimeo."
 msgid "Your YouTube channel URL."
 msgstr "L’adresse de votre chaîne YouTube."
 
-#: functions.php:339 inc/customizer.php:594
+#: functions.php:333 inc/customizer.php:594
 msgid "YouTube"
 msgstr "YouTube"
 
