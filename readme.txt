@@ -36,6 +36,10 @@ on tablet and mobile, and it has been designed to give a good print results.
 
 == Changelog ==
 
+=== 1.5 – May 27th, 2021 ===
+- Added: the ability to display the author's name in the post list and inside posts.
+- Updated: translation files.
+
 === 1.4.1 – May 24th, 2021 ===
 - Fixed: .zip error.
 
