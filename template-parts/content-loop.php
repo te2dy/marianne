@@ -21,11 +21,12 @@
 		<?php
 		$marianne_post_info_args = array();
 
-		if ( 'enabled' === marianne_get_theme_mod( 'marianne_loop_author_name' ) ) {
+		if ( true === marianne_get_theme_mod( 'marianne_loop_author_name' ) ) {
 			$marianne_post_info_args[] = 'author_name';
-		} elseif ( 'with_prefix' === marianne_get_theme_mod( 'marianne_loop_author_name' ) ) {
-			$marianne_post_info_args[] = 'author_name';
-			$marianne_post_info_args[] = 'author_prefix';
+
+			if ( true === marianne_get_theme_mod( 'marianne_loop_author_name_prefix' ) ) {
+				$marianne_post_info_args[] = 'author_prefix';
+			}
 		}
 
 		if ( true === marianne_get_theme_mod( 'marianne_loop_author_avatar' ) ) {

@@ -201,6 +201,10 @@ if ( ! function_exists( 'marianne_the_date' ) ) {
 	 *                      separate them with a space.
 	 *                      Example: $class = "class-1 class-2".
 	 *
+	 * @param string $args  Items to display.
+	 *                          - 'date' adds the published date.
+	 *                          - 'time' adds the published time after the date.
+	 *
 	 * @return void
 	 */
 	function marianne_the_date( $class = 'entry-date', $args = array() ) {
@@ -222,9 +226,10 @@ if ( ! function_exists( 'marianne_the_date' ) ) {
 					echo esc_html( get_the_date() );
 				} elseif ( true === $args['date'] && true === $args['time'] ) {
 					printf(
-						esc_html__( '%1$s at %2$s', 'The post date and time', 'marianne' ),
+						/* translators: %1$s: The date. %2$s: The time. */
+						esc_html_x( '%1$s at %2$s', 'The post date and time', 'marianne' ),
 						esc_html( get_the_date() ),
-						esc_html( get_the_time() ),
+						esc_html( get_the_time() )
 					);
 				} elseif ( false === $args['date'] && true === $args['time'] ) {
 					echo esc_html( get_the_time() );
@@ -257,6 +262,8 @@ if ( ! function_exists( 'marianne_post_info' ) ) {
 	 * @since Marianne 1.5
 	 */
 	function marianne_post_info( $class = '', $args = array() ) {
+		$class .= ' entry-info';
+
 		// Date formatting options.
 		$the_date_args = array(
 			'date' => true,
@@ -265,12 +272,6 @@ if ( ! function_exists( 'marianne_post_info' ) ) {
 
 		if ( in_array( 'time', $args, true ) ) {
 			$the_date_args['time'] = true;
-		}
-
-		if ( in_array( 'author_avatar', $args, true ) ) {
-			$class .= ' entry-info-with-avatar';
-		} else {
-			$class .= ' entry-info';
 		}
 		?>
 
@@ -288,14 +289,12 @@ if ( ! function_exists( 'marianne_post_info' ) ) {
 					<div class="entry-info-avatar">
 						<?php if ( ! is_author() ) : ?>
 							<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
-								<?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ) ?>
+								<?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?>
 							</a>
 						<?php else : ?>
-							<?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ) ?>
+							<?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?>
 						<?php endif; ?>
 					</div>
-
-					<div class="entry-info-content">
 				<?php endif; ?>
 
 				<?php if ( in_array( 'author_name', $args, true ) ) : ?>
@@ -328,6 +327,10 @@ if ( ! function_exists( 'marianne_post_info' ) ) {
 							?>
 						<?php endif; ?>
 					</div>
+
+					<div class="entry-info-separator">
+						&middot;
+					</div>
 				<?php endif; ?>
 
 				<div class="entry-info-date">
@@ -339,14 +342,63 @@ if ( ! function_exists( 'marianne_post_info' ) ) {
 						<?php marianne_the_date( 'entry-date', $the_date_args ); ?>
 					<?php endif; ?>
 				</div>
-
-				<?php if ( in_array( 'author_avatar', $args, true ) ) : ?>
-					</div>
-				<?php endif; ?>
 			<?php endif; ?>
 		</div>
 
 		<?php
+	}
+}
+
+if ( ! function_exists( 'marianne_post_signature' ) ) {
+	/**
+	 * The post signature.
+	 *
+	 * @param string $class The class of the container.
+	 *                      To set multiple classes,
+	 *                      separate them with a space.
+	 *                      Example: $class = "class-1 class-2".
+	 *
+	 * @return void
+	 *
+	 * @since Marianne 1.5
+	 */
+	function marianne_post_signature( $class = '' ) {
+		if ( 'bottom' === marianne_get_theme_mod( 'marianne_post_author_position' ) ) {
+			if ( get_the_author_meta( 'description' ) && false !== marianne_get_theme_mod( 'marianne_post_author_bio' ) ) {
+				$class .= ' post-signature-align-top';
+			} else {
+				$class .= ' post-signature-align-center';
+			}
+			?>
+
+			<div<?php marianne_add_class( $class ); ?>>
+				<?php if ( false !== marianne_get_theme_mod( 'marianne_post_author_avatar' ) ) : ?>
+					<div class="post-signature-avatar">
+						<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
+							<?php echo get_avatar( get_the_author_meta( 'ID' ), 56 ); ?>
+						</a>
+					</div>
+				<?php endif; ?>
+
+				<div class="post-signature-content">
+					<h4 class="post-signature-author-name">
+						<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
+							<cite>
+								<?php echo esc_html( get_the_author_meta( 'display_name' ) ); ?>
+							</cite>
+						</a>
+					</h4>
+
+					<?php if ( get_the_author_meta( 'description' ) && false !== marianne_get_theme_mod( 'marianne_post_author_bio' ) ) : ?>
+						<div class="post-signature-author-description text-secondary">
+							<?php echo wp_kses_post( wpautop( get_the_author_meta( 'description' ) ) ); ?>
+						</div>
+					<?php endif; ?>
+				</div>
+			</div>
+
+			<?php
+		}
 	}
 }
 

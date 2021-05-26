@@ -19,24 +19,39 @@
 		<?php endif; ?>
 
 		<?php
-		$marianne_post_info_args = array();
+		if ( 'top' === marianne_get_theme_mod( 'marianne_post_author_position' ) ) {
+			$marianne_post_info_args = array();
 
-		if ( 'enabled' === marianne_get_theme_mod( 'marianne_post_author_name' ) ) {
-			$marianne_post_info_args[] = 'author_name';
-		} elseif ( 'with_prefix' === marianne_get_theme_mod( 'marianne_post_author_name' ) ) {
-			$marianne_post_info_args[] = 'author_name';
-			$marianne_post_info_args[] = 'author_prefix';
+			if ( 'name' === marianne_get_theme_mod( 'marianne_post_author_info' ) ) {
+				$marianne_post_info_args[] = 'author_name';
+			} elseif ( 'avatar' === marianne_get_theme_mod( 'marianne_post_author_info' ) ) {
+				$marianne_post_info_args[] = 'author_avatar';
+			} else {
+				$marianne_post_info_args[] = 'author_name';
+				$marianne_post_info_args[] = 'author_avatar';
+			}
+
+			if ( true === marianne_get_theme_mod( 'marianne_post_author_name_prefix' ) ) {
+				$marianne_post_info_args[] = 'author_prefix';
+			}
+
+			if ( true === marianne_get_theme_mod( 'marianne_post_post_time' ) ) {
+				$marianne_post_info_args[] = 'time';
+			}
+
+			marianne_post_info( 'entry-meta text-secondary', $marianne_post_info_args );
+		} else {
+			$marianne_date_args = array(
+				'date' => true,
+				'time' => false,
+			);
+
+			if ( true === marianne_get_theme_mod( 'marianne_post_post_time' ) ) {
+				$marianne_date_args['time'] = true;
+			}
+
+			marianne_the_date( 'entry-meta entry-date text-secondary', $marianne_date_args );
 		}
-
-		if ( true === marianne_get_theme_mod( 'marianne_post_author_avatar' ) ) {
-			$marianne_post_info_args[] = 'author_avatar';
-		}
-
-		if ( true === marianne_get_theme_mod( 'marianne_post_post_time' ) ) {
-			$marianne_post_info_args[] = 'time';
-		}
-
-		marianne_post_info( 'entry-meta text-secondary', $marianne_post_info_args );
 
 		marianne_the_categories( 'entry-meta entry-categories text-secondary' );
 
@@ -72,8 +87,10 @@
 		?>
 	</section>
 
-	<?php if ( has_tag() || true === marianne_get_theme_mod( 'marianne_post_nav' ) || true === marianne_get_theme_mod( 'marianne_print_info' ) ) : ?>
+	<?php if ( has_tag() || 'bottom' === marianne_get_theme_mod( 'marianne_post_author_position' ) || true === marianne_get_theme_mod( 'marianne_post_nav' ) || true === marianne_get_theme_mod( 'marianne_print_info' ) ) : ?>
 		<footer class="entry-footer post-footer">
+			<?php marianne_post_signature( 'post-signature' ); ?>
+
 			<div class="entry-tags post-tags text-secondary">
 				<?php the_tags(); ?>
 			</div>

@@ -388,26 +388,32 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_loop',
 			'id'          => 'author_name',
-			'title'       => __( 'Multi-author mode', 'marianne' ),
-			'value'      => array(
-				'disabled'    => __( 'Disabled', 'marianne' ),
-				'enabled'     => __( "Display the author's name", 'marianne' ),
-				'with_prefix' => __( "Display the author's name with a prefix", 'marianne' ),
-			),
-			'type'        => 'radio',
+			'title'       => __( "Display the author's name", 'marianne' ),
+			'description' => __( 'Default: unchecked.', 'marianne' ),
+			'type'        => 'checkbox',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_loop',
+			'id'          => 'author_name_prefix',
+			'title'       => __( "Add a prefix to the author's name.", 'marianne' ),
+			'description' => __( 'By John Doe. Default: unchecked.', 'marianne' ),
+			'type'        => 'checkbox',
 		);
 
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_loop',
 			'id'          => 'author_avatar',
 			'title'       => __( "Display the author's avatar.", 'marianne' ),
+			'description' => __( 'Default: unchecked.', 'marianne' ),
 			'type'        => 'checkbox',
 		);
 
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_loop',
 			'id'          => 'post_time',
-			'title'       => __( 'Display the post published time.', 'marianne' ),
+			'title'       => __( 'Display the post published time after the date.', 'marianne' ),
+			'description' => __( 'Default: unchecked.', 'marianne' ),
 			'type'        => 'checkbox',
 		);
 
@@ -422,27 +428,57 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		// Post Settings.
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_post',
-			'id'          => 'author_name',
-			'title'       => __( 'Multi-author mode', 'marianne' ),
-			'value'      => array(
-				'disabled'    => __( 'Disabled', 'marianne' ),
-				'enabled'     => __( "Display the author's name", 'marianne' ),
-				'with_prefix' => __( "Display the author's name with a prefix", 'marianne' ),
+			'id'          => 'post_time',
+			'title'       => __( 'Display the post published time.', 'marianne' ),
+			'description' => __( 'Default: unchecked.', 'marianne' ),
+			'type'        => 'checkbox',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section' => 'marianne_post',
+			'id'      => 'author_position',
+			'title'   => __( "Position of the author's identity", 'marianne' ),
+			'value'   => array(
+				'none'   => __( 'None (default)', 'marianne' ),
+				'top'    => __( 'Post header', 'marianne' ),
+				'bottom' => __( 'Bottom of the post', 'marianne' ),
 			),
-			'type'        => 'radio',
+			'type'    => 'radio',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section' => 'marianne_post',
+			'id'      => 'author_info',
+			'title'   => __( "Author's info to display", 'marianne' ),
+			'value'   => array(
+				'name'        => __( 'Name', 'marianne' ),
+				'avatar'      => __( 'Avatar', 'marianne' ),
+				'name_avatar' => __( 'Name & avatar', 'marianne' ),
+			),
+			'type'    => 'radio',
 		);
 
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_post',
 			'id'          => 'author_avatar',
 			'title'       => __( "Display the author's avatar.", 'marianne' ),
+			'description' => __( 'Default: checked.', 'marianne' ),
 			'type'        => 'checkbox',
 		);
 
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_post',
-			'id'          => 'post_time',
-			'title'       => __( 'Display the post published time.', 'marianne' ),
+			'id'          => 'author_name_prefix',
+			'title'       => __( "Add a prefix to the author's name.", 'marianne' ),
+			'description' => __( 'Default: unchecked.', 'marianne' ),
+			'type'        => 'checkbox',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_post',
+			'id'          => 'author_bio',
+			'title'       => __( "Display the author's biography.", 'marianne' ),
+			'description' => __( 'Default: checked.', 'marianne' ),
 			'type'        => 'checkbox',
 		);
 
@@ -450,7 +486,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_post',
 			'id'          => 'nav',
 			'title'       => __( 'Display a link to the next and the previous post.', 'marianne' ),
-			'description' => __( 'Default: hidden.', 'marianne' ),
+			'description' => __( 'Default: unchecked.', 'marianne' ),
 			'type'        => 'checkbox',
 		);
 
@@ -868,16 +904,20 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_content_hyphens'    => false,
 
 			// Post List Settings.
-			'marianne_loop_author_name'       => 'disabled',
-			'marianne_loop_author_avatar'     => false,
-			'marianne_loop_post_time'         => false,
-			'marianne_loop_comment_link_text' => '',
+			'marianne_loop_author_name'        => false,
+			'marianne_loop_author_name_prefix' => false,
+			'marianne_loop_author_avatar'      => false,
+			'marianne_loop_post_time'          => false,
+			'marianne_loop_comment_link_text'  => '',
 
 			// Post Settings.
-			'marianne_post_author_name'   => 'disabled',
-			'marianne_post_author_avatar' => false,
-			'marianne_post_post_time'     => false,
-			'marianne_post_nav'           => false,
+			'marianne_post_post_time'          => false,
+			'marianne_post_author_position'    => 'none',
+			'marianne_post_author_info'        => 'name',
+			'marianne_post_author_avatar'      => true,
+			'marianne_post_author_name_prefix' => false,
+			'marianne_post_author_bio'         => true,
+			'marianne_post_nav'                => false,
 
 			// Footer Settings.
 			'marianne_footer_align'   => 'left',
