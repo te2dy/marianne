@@ -579,7 +579,7 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 					<ul class="social-links list-inline">
 						<?php
 						foreach ( $social_links as $site => $link ) {
-							$svg_icons  = marianne_svg_feather_icons( $site );
+							$svg_icons  = marianne_svg_icons( $site );
 							$svg_name   = $svg_icons['name'];
 							$svg_shapes = $svg_icons['shapes'];
 
@@ -647,7 +647,7 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 													_x( '%s icon', 'Alternative text for social icon images', 'marianne' ),
 													ucfirst( $site )
 												),
-												'class'      => 'feather feather-' . $site,
+												'class'      => 'icon icon-' . $site,
 												'size'       => array( 16, 16 ),
 											);
 										} elseif ( 'phone' === $site ) {
@@ -655,7 +655,7 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 
 											$svg_args = array(
 												'aria-label' => __( 'Phone icon', 'marianne' ),
-												'class'      => 'feather feather-' . $site,
+												'class'      => 'icon icon-' . $site,
 												'size'       => array( 16, 16 ),
 											);
 										} elseif ( 'link' === $site ) {
@@ -663,7 +663,7 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 
 											$svg_args = array(
 												'aria-label' => __( 'Link icon', 'marianne' ),
-												'class'      => 'feather feather-' . $site,
+												'class'      => 'icon icon-' . $site,
 												'size'       => array( 16, 16 ),
 											);
 										} elseif ( 'rss' === $site ) {
@@ -671,7 +671,7 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 
 											$svg_args = array(
 												'aria-label' => __( 'RSS icon', 'marianne' ),
-												'class'      => 'feather feather-' . $site,
+												'class'      => 'icon icon-' . $site,
 												'size'       => array( 16, 16 ),
 											);
 										}
