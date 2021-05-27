@@ -38,9 +38,10 @@ on tablet and mobile, and it has been designed to give a good print results.
 
 === 1.5 – May 27th, 2021 ===
 - Added: the ability to display the author's name in the post list and inside posts.
+- Added: 500px and Diaspora support.
 - Fixed: social icon margins.
-- Updated: translation files.
 - Updated: Feather Icons mostly replaced by Simple Icons.
+- Updated: translation files.
 
 === 1.4.1 – May 24th, 2021 ===
 - Fixed: .zip error.
