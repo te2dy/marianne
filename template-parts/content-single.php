@@ -50,7 +50,7 @@
 				$marianne_date_args['time'] = true;
 			}
 
-			marianne_the_date( 'entry-meta entry-date text-secondary', $marianne_date_args );
+			marianne_the_date( 'entry-meta entry-date post-date text-secondary', $marianne_date_args );
 		}
 
 		marianne_the_categories( 'entry-meta entry-categories text-secondary' );
