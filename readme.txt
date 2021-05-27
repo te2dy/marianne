@@ -36,6 +36,10 @@ on tablet and mobile, and it has been designed to give a good print results.
 
 == Changelog ==
 
+=== 1.5.1 – May 28th, 2021 ===
+- Added: descriptions to some options.
+- Fixed: Feather Icons display.
+
 === 1.5 – May 27th, 2021 ===
 - Added: the ability to display the author's name in the post list and inside posts.
 - Added: 500px and Diaspora support.
