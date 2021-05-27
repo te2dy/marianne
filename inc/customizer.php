@@ -405,7 +405,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_loop',
 			'id'          => 'author_avatar',
 			'title'       => __( "Display the author's avatar.", 'marianne' ),
-			'description' => __( 'Default: unchecked.', 'marianne' ),
+			'description' => __( 'Make sure avatars are enabled in Settings > Discussion. Default: unchecked.', 'marianne' ),
 			'type'        => 'checkbox',
 		);
 
@@ -447,15 +447,16 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		);
 
 		$marianne_customizer_options[] = array(
-			'section' => 'marianne_post',
-			'id'      => 'author_info',
-			'title'   => __( "Author's info to display", 'marianne' ),
-			'value'   => array(
+			'section'     => 'marianne_post',
+			'id'          => 'author_info',
+			'title'       => __( "Author's info to display", 'marianne' ),
+			'description' => __( 'Before displaying avatars, make sure that they are enabled in Settings > Discussion.', 'marianne' ),
+			'value'       => array(
 				'name'        => __( 'Name', 'marianne' ),
 				'avatar'      => __( 'Avatar', 'marianne' ),
 				'name_avatar' => __( 'Name & avatar', 'marianne' ),
 			),
-			'type'    => 'radio',
+			'type'        => 'radio',
 		);
 
 		$marianne_customizer_options[] = array(
