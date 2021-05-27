@@ -2,7 +2,10 @@
 	"use strict";
 
 	$( document ).ready( function( $ ) {
-		/* Show/hide controls depending on other control values. */
+		/**
+		 * Show/hide controls in the Theme Customizer
+		 * depending on other control values.
+		 */
 
 		// The speed of animations.
 		var speed = 200;
