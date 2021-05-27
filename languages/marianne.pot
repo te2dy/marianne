@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marianne\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-26 21:40+0000\n"
+"POT-Creation-Date: 2021-05-27 08:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -60,7 +60,7 @@ msgstr ""
 msgid "Acknowledgements"
 msgstr ""
 
-#: inc/customizer.php:687
+#: inc/customizer.php:703
 msgid "Add a link to the RSS feed of your site."
 msgstr ""
 
@@ -72,7 +72,7 @@ msgstr ""
 msgid "Add a search button."
 msgstr ""
 
-#: inc/customizer.php:721
+#: inc/customizer.php:737
 msgid ""
 "Adds the date the post or page was retrieved and a short link to access the "
 "content. Default: checked."
@@ -85,7 +85,7 @@ msgctxt "Alternative text for social icon images"
 msgid "%s icon"
 msgstr ""
 
-#: inc/customizer.php:680
+#: inc/customizer.php:696
 msgid "Any link you want to display."
 msgstr ""
 
@@ -166,13 +166,13 @@ msgstr ""
 msgid "Center"
 msgstr ""
 
-#: inc/customizer.php:697
+#: inc/customizer.php:713
 msgid ""
 "Check to hide comments when priting a post or page. In any case, the comment "
 "form will be hidden. Default: checked."
 msgstr ""
 
-#: inc/customizer.php:705
+#: inc/customizer.php:721
 msgid ""
 "Check to hide your widgets when priting a post or page. Default: checked."
 msgstr ""
@@ -184,7 +184,7 @@ msgid ""
 "rendering may vary from device to device. Default: Sans serif."
 msgstr ""
 
-#: inc/customizer.php:670
+#: inc/customizer.php:686
 msgid "Classic"
 msgstr ""
 
@@ -242,7 +242,7 @@ msgstr ""
 msgid "Default: unchecked."
 msgstr ""
 
-#: inc/customizer.php:555 inc/customizer.php:688
+#: inc/customizer.php:555 inc/customizer.php:704
 msgid "Default: unckecked."
 msgstr ""
 
@@ -250,11 +250,15 @@ msgstr ""
 msgid "Development"
 msgstr ""
 
+#: functions.php:303 inc/customizer.php:586
+msgid "Diaspora"
+msgstr ""
+
 #: inc/customizer.php:488
 msgid "Display a link to the next and the previous post."
 msgstr ""
 
-#: inc/customizer.php:720
+#: inc/customizer.php:736
 msgid "Display information related to printing."
 msgstr ""
 
@@ -278,7 +282,7 @@ msgstr ""
 msgid "Display the post published time after the date."
 msgstr ""
 
-#: inc/customizer.php:712
+#: inc/customizer.php:728
 msgid "Display URL of links."
 msgstr ""
 
@@ -290,7 +294,7 @@ msgstr ""
 msgid "Donate ₿"
 msgstr ""
 
-#: functions.php:288 inc/customizer.php:650
+#: functions.php:293 inc/customizer.php:666
 msgid "Email"
 msgstr ""
 
@@ -306,7 +310,7 @@ msgstr ""
 msgid "Expand featured images that are not wide enough."
 msgstr ""
 
-#: functions.php:293 inc/customizer.php:578
+#: functions.php:298 inc/customizer.php:578
 msgid "Facebook"
 msgstr ""
 
@@ -362,7 +366,7 @@ msgstr ""
 msgid "Force anti-aliasing."
 msgstr ""
 
-#: functions.php:298 inc/customizer.php:626
+#: functions.php:308 inc/customizer.php:642
 msgid "GitHub"
 msgstr ""
 
@@ -370,7 +374,7 @@ msgstr ""
 msgid "GitHub Repository"
 msgstr ""
 
-#: functions.php:303 inc/customizer.php:634
+#: functions.php:313 inc/customizer.php:650
 msgid "GitLab"
 msgstr ""
 
@@ -398,11 +402,11 @@ msgstr ""
 msgid "Header Settings"
 msgstr ""
 
-#: inc/customizer.php:696
+#: inc/customizer.php:712
 msgid "Hide comments."
 msgstr ""
 
-#: inc/customizer.php:704
+#: inc/customizer.php:720
 msgid "Hide widgets."
 msgstr ""
 
@@ -449,7 +453,7 @@ msgid ""
 "(recommended). Or you can enable the next option. Default: 480px."
 msgstr ""
 
-#: functions.php:308 inc/customizer.php:586
+#: functions.php:318 inc/customizer.php:594
 msgid "Instagram"
 msgstr ""
 
@@ -495,7 +499,7 @@ msgstr ""
 msgid "Light"
 msgstr ""
 
-#: functions.php:313 inc/customizer.php:679
+#: functions.php:323 inc/customizer.php:695
 msgid "Link"
 msgstr ""
 
@@ -530,7 +534,7 @@ msgstr ""
 msgid "Link to the RSS feed"
 msgstr ""
 
-#: functions.php:318 inc/customizer.php:618
+#: functions.php:328 inc/customizer.php:634
 msgid "LinkedIn"
 msgstr ""
 
@@ -546,7 +550,7 @@ msgstr ""
 msgid "Marianne"
 msgstr ""
 
-#: functions.php:353 inc/customizer.php:570
+#: functions.php:363 inc/customizer.php:570
 msgid "Mastodon"
 msgstr ""
 
@@ -638,7 +642,7 @@ msgstr ""
 msgid "Page Width"
 msgstr ""
 
-#: functions.php:323 inc/customizer.php:658
+#: functions.php:333 inc/customizer.php:674
 msgid "Phone"
 msgstr ""
 
@@ -723,7 +727,7 @@ msgstr ""
 msgid "Round"
 msgstr ""
 
-#: functions.php:328
+#: functions.php:338
 msgid "RSS Feed"
 msgstr ""
 
@@ -777,7 +781,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/customizer.php:671
+#: inc/customizer.php:687
 msgid "SMS"
 msgstr ""
 
@@ -785,7 +789,7 @@ msgstr ""
 msgid "Social Links"
 msgstr ""
 
-#: functions.php:358 inc/customizer.php:610
+#: functions.php:368 inc/customizer.php:626
 msgid "Spotify"
 msgstr ""
 
@@ -847,6 +851,11 @@ msgstr ""
 msgid "The main font size. Default: 100%."
 msgstr ""
 
+#: functions.php:283 inc/customizer.php:602
+msgctxt "The name of the photography site."
+msgid "500px"
+msgstr ""
+
 #. %1$s: The date. %2$s: The time.
 #: inc/template-tags.php:230
 #, php-format
@@ -869,7 +878,7 @@ msgctxt "The title of the theme page."
 msgid "About Marianne"
 msgstr ""
 
-#: inc/customizer.php:611
+#: inc/customizer.php:627
 msgid "The URL of the Spotify page you want to share."
 msgstr ""
 
@@ -906,7 +915,7 @@ msgstr ""
 msgid "This search did not return any results."
 msgstr ""
 
-#: inc/customizer.php:667
+#: inc/customizer.php:683
 msgid ""
 "This will automatically open the right application on your readers' phone "
 "when they will click on it."
@@ -916,15 +925,15 @@ msgstr ""
 msgid "Translate"
 msgstr ""
 
-#: functions.php:343 inc/customizer.php:642
+#: functions.php:353 inc/customizer.php:658
 msgid "Twitch"
 msgstr ""
 
-#: functions.php:348 inc/customizer.php:562
+#: functions.php:358 inc/customizer.php:562
 msgid "Twitter"
 msgstr ""
 
-#: inc/customizer.php:713
+#: inc/customizer.php:729
 msgid ""
 "URLs will be visible on print so that readers can see them and visit them. "
 "Default: checked."
@@ -960,15 +969,15 @@ msgstr ""
 msgid "Version %s"
 msgstr ""
 
-#: functions.php:338 inc/customizer.php:602
+#: functions.php:348 inc/customizer.php:618
 msgid "Vimeo"
 msgstr ""
 
-#: inc/customizer.php:666
+#: inc/customizer.php:682
 msgid "What type of phone link do you want to add?"
 msgstr ""
 
-#: inc/customizer.php:672
+#: inc/customizer.php:688
 msgid "WhatsApp"
 msgstr ""
 
@@ -1019,7 +1028,15 @@ msgid ""
 "pot file is available."
 msgstr ""
 
-#: inc/customizer.php:651
+#: inc/customizer.php:603
+msgid "Your 500px page URL."
+msgstr ""
+
+#: inc/customizer.php:587
+msgid "Your diapora* profile URL."
+msgstr ""
+
+#: inc/customizer.php:667
 msgid "Your email address."
 msgstr ""
 
@@ -1027,19 +1044,19 @@ msgstr ""
 msgid "Your Facebook profile or page URL."
 msgstr ""
 
-#: inc/customizer.php:627
+#: inc/customizer.php:643
 msgid "Your GitHub profile URL."
 msgstr ""
 
-#: inc/customizer.php:635
+#: inc/customizer.php:651
 msgid "Your GitLab profile URL."
 msgstr ""
 
-#: inc/customizer.php:587
+#: inc/customizer.php:595
 msgid "Your Instagram profile URL."
 msgstr ""
 
-#: inc/customizer.php:619
+#: inc/customizer.php:635
 msgid "Your LinkedIn profile URL."
 msgstr ""
 
@@ -1047,11 +1064,11 @@ msgstr ""
 msgid "Your Mastodon profile URL."
 msgstr ""
 
-#: inc/customizer.php:659
+#: inc/customizer.php:675
 msgid "Your phone number (without spaces)."
 msgstr ""
 
-#: inc/customizer.php:643
+#: inc/customizer.php:659
 msgid "Your Twitch profile URL."
 msgstr ""
 
@@ -1059,15 +1076,15 @@ msgstr ""
 msgid "Your Twitter @username. Do not forget the at symbol."
 msgstr ""
 
-#: inc/customizer.php:603
+#: inc/customizer.php:619
 msgid "Your Vimeo page URL."
 msgstr ""
 
-#: inc/customizer.php:595
+#: inc/customizer.php:611
 msgid "Your YouTube channel URL."
 msgstr ""
 
-#: functions.php:333 inc/customizer.php:594
+#: functions.php:343 inc/customizer.php:610
 msgid "YouTube"
 msgstr ""
 
