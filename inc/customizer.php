@@ -582,9 +582,25 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_social',
+			'id'          => 'diaspora',
+			'title'       => __( 'Diaspora', 'marianne' ),
+			'description' => __( 'Your diapora* profile URL.', 'marianne' ),
+			'type'        => 'url',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
 			'id'          => 'instagram',
 			'title'       => __( 'Instagram', 'marianne' ),
 			'description' => __( 'Your Instagram profile URL.', 'marianne' ),
+			'type'        => 'url',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
+			'id'          => '500px',
+			'title'       => _x( '500px', 'The name of the photography site.', 'marianne' ),
+			'description' => __( 'Your 500px page URL.', 'marianne' ),
 			'type'        => 'url',
 		);
 
@@ -931,8 +947,10 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_social_twitter'      => '',
 			'marianne_social_mastodon'     => '',
 			'marianne_social_facebook'     => '',
+			'marianne_social_diaspora'     => '',
 			'marianne_social_instagram'    => '',
 			'marianne_social_linkedin'     => '',
+			'marianne_social_500px'        => '',
 			'marianne_social_youtube'      => '',
 			'marianne_social_vimeo'        => '',
 			'marianne_social_spotify'      => '',

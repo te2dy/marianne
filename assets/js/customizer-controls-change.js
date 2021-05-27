@@ -37,7 +37,7 @@
 			}
 		} );
 
-		// Show the option to add a prefix to the author's name only if displayed.
+		// Show the author prefix when the author's name is displayed.
 		if ( $( "#_customize-input-marianne_loop_author_name" ).is( ":checked" ) ) {
 			$( "#customize-control-marianne_loop_author_name_prefix" ).show();
 		} else {
@@ -55,7 +55,14 @@
 		// Show the author info and prefix options when the position is set to header.
 		if ( $( "#_customize-input-marianne_post_author_position-radio-top" ).is( ":checked" ) ) {
 			$( "#customize-control-marianne_post_author_info" ).show();
-			$( "#customize-control-marianne_post_author_name_prefix" ).show();
+
+			if ( $( "#_customize-input-marianne_post_author_info-radio-name" ).is( ":checked" )
+		 		|| $( "#_customize-input-marianne_post_author_info-radio-name_avatar" ).is( ":checked" )
+			) {
+				$( "#customize-control-marianne_post_author_name_prefix" ).show();
+			} else {
+				$( "#customize-control-marianne_post_author_name_prefix" ).hide();
+			}
 		} else {
 			$( "#customize-control-marianne_post_author_info" ).hide();
 			$( "#customize-control-marianne_post_author_name_prefix" ).hide();
@@ -64,29 +71,25 @@
 		$( "#customize-control-marianne_post_author_position" ).change( function () {
 			if ( $( "#_customize-input-marianne_post_author_position-radio-top" ).is( ":checked" ) ) {
 				$( "#customize-control-marianne_post_author_info" ).show( speed );
-				$( "#customize-control-marianne_post_author_name_prefix" ).show( speed );
+
+				if ( $( "#_customize-input-marianne_post_author_info-radio-name" ).is( ":checked" )
+			 		|| $( "#_customize-input-marianne_post_author_info-radio-name_avatar" ).is( ":checked" )
+				) {
+					$( "#customize-control-marianne_post_author_name_prefix" ).show( speed );
+				} else {
+					$( "#customize-control-marianne_post_author_name_prefix" ).hide( speed );
+				}
 			} else {
 				$( "#customize-control-marianne_post_author_info" ).hide( speed );
 				$( "#customize-control-marianne_post_author_name_prefix" ).hide( speed );
 			}
 		} );
 
-		// Show the author prefix option when the position is set to header and the avatar is hidden.
-		if ( $( "_customize-input-marianne_post_author_position-radio-top" ).is( ":checked" ) ) {
-			if ( $( "#_customize-input-marianne_post_author_info-radio-avatar" ).is( ":checked" ) ) {
-				$( "#customize-control-marianne_post_author_name_prefix" ).hide();
-			} else {
-				$( "#customize-control-marianne_post_author_name_prefix" ).show();
-			}
-		}
-
 		$( "#customize-control-marianne_post_author_info" ).change( function () {
-			if ( $( "_customize-input-marianne_post_author_position-radio-top" ).is( ":checked" ) ) {
-				if ( $( "#_customize-input-marianne_post_author_info-radio-avatar" ).is( ":checked" ) ) {
-					$( "#customize-control-marianne_post_author_name_prefix" ).hide( speed );
-				} else {
-					$( "#customize-control-marianne_post_author_name_prefix" ).show( speed );
-				}
+			if ( $( "#_customize-input-marianne_post_author_info-radio-avatar" ).is( ":checked" ) ) {
+				$( "#customize-control-marianne_post_author_name_prefix" ).hide( speed );
+			} else {
+				$( "#customize-control-marianne_post_author_name_prefix" ).show( speed );
 			}
 		} );
 
