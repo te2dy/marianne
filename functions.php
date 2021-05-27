@@ -223,7 +223,7 @@ if ( ! function_exists( 'marianne_add_sub_menu_toggle' ) ) {
 			$svg_chevron_data   = marianne_svg_icons( 'chevron-down' );
 			$svg_chevron_shapes = $svg_chevron_data['shapes'];
 			$svg_chevron_args   = array(
-				'class'      => 'feather sub-menu-toggle-icon',
+				'class'      => 'feather-icons sub-menu-toggle-icon',
 				'size'       => array( 12, 12 ),
 				'echo'       => false,
 				'aria-label' => __( 'Submenu opening icon', 'marianne' ),
@@ -461,7 +461,7 @@ if ( ! function_exists( 'marianne_svg' ) ) {
 	 */
 	function marianne_svg( $shapes = '', $args = array() ) {
 		if ( is_array( $args ) && ! empty( $args ) ) {
-			$class   = isset( $args['class'] ) ? $args['class'] : 'icon';
+			$class   = isset( $args['class'] ) ? $args['class'] : 'simple-icons';
 			$size    = isset( $args['size'] ) ? $args['size'] : array( 18, 18 );
 			$viewbox = isset( $args['viewbox'] ) ? $args['viewbox'] : '0 0 24 24';
 
