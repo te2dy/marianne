@@ -845,7 +845,6 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 					$sanitize_callback = 'sanitize_email';
 				} elseif ( 'marianne_social_phone' === $option_name ) {
 					$sanitize_callback = 'marianne_sanitize_phone';
-
 				}
 
 				// Creates the setting.
@@ -1171,8 +1170,29 @@ if ( ! function_exists( 'marianne_sanitize_phone' ) ) {
 	function marianne_sanitize_phone( $input ) {
 		$output = '';
 
-		if ( preg_match( '/\+?[0-9]+/', $input ) ) {
-			$output = $input;
+		if ( preg_match( '/\+?[0-9]+/', $input, $match ) ) {
+			$output = $match[0];
+		}
+
+		return $output;
+	}
+}
+
+if ( ! function_exists( 'marianne_sanitize_phone' ) ) {
+	/**
+	 * Email sanitization.
+	 *
+	 * @param string $input The email to sanitize.
+	 *
+	 * @return bool Sanitized email.
+	 *
+	 * @since Marianne 1.?
+	 */
+	function marianne_sanitize_phone( $input ) {
+		$output = '';
+
+		if ( preg_match( '/\+?[0-9]+/', $input, $match ) ) {
+			$output = $match[0];
 		}
 
 		return $output;
