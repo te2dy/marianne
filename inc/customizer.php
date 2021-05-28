@@ -585,7 +585,15 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_social',
 			'id'          => 'diaspora',
 			'title'       => __( 'Diaspora', 'marianne' ),
-			'description' => __( 'Your diapora* profile URL.', 'marianne' ),
+			'description' => __( 'Your Diaspora profile URL.', 'marianne' ),
+			'type'        => 'url',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
+			'id'          => 'vk',
+			'title'       => __( 'VK', 'marianne' ),
+			'description' => __( 'Your VK profile URL.', 'marianne' ),
 			'type'        => 'url',
 		);
 
@@ -594,6 +602,14 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'id'          => 'instagram',
 			'title'       => __( 'Instagram', 'marianne' ),
 			'description' => __( 'Your Instagram profile URL.', 'marianne' ),
+			'type'        => 'url',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
+			'id'          => 'flickr',
+			'title'       => __( 'Flickr', 'marianne' ),
+			'description' => __( 'Your Flickr page URL.', 'marianne' ),
 			'type'        => 'url',
 		);
 
@@ -658,6 +674,14 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'id'          => 'twitch',
 			'title'       => __( 'Twitch', 'marianne' ),
 			'description' => __( 'Your Twitch profile URL.', 'marianne' ),
+			'type'        => 'url',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
+			'id'          => 'reddit',
+			'title'       => __( 'Reddit', 'marianne' ),
+			'description' => __( 'Your Reddit profile URL.', 'marianne' ),
 			'type'        => 'url',
 		);
 
@@ -952,6 +976,7 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_social_instagram'    => '',
 			'marianne_social_linkedin'     => '',
 			'marianne_social_500px'        => '',
+			'marianne_social_flickr'       => '',
 			'marianne_social_youtube'      => '',
 			'marianne_social_vimeo'        => '',
 			'marianne_social_spotify'      => '',
@@ -963,6 +988,8 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_social_phone_type'   => 'classic',
 			'marianne_social_rss'          => false,
 			'marianne_social_twitch'       => '',
+			'marianne_social_reddit'       => '',
+			'marianne_social_vk'           => '',
 
 			// Print Settings.
 			'marianne_print_comments_hide' => true,
