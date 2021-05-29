@@ -35,7 +35,7 @@
 		var img = new Image();
 		img.src = $( $element ).attr( "src" );
 		img.onload = function () {
-			if ( $element.attributes['width'] && $element.attributes['width'].value ) {
+			if ( $element.attributes['width'].value ) {
 				imagewidth = parseInt( $element.attributes['width'].value, 10 );
 			} else {
 				imagewidth = this.width;
@@ -47,11 +47,7 @@
 				imageheight = this.height;
 			}
 
-			console.log( imageoverflow_min );
-
 			if ( imagewidth > imageoverflow_min && ! $( $element ).parents( ".wp-block-gallery" ).length ) {
-
-				console.log( 'ok' );
 
 				if ( imagewidth >= imageheight
 					|| ( imagewidth < imageheight && false !== imageoverflowportrait )
@@ -76,28 +72,28 @@
 								maxwidth_value_calc = '100% + ' + imageoverflowwidth + 'px';
 							}
 
-							$($element).css({
+							$( $element ).css( {
 								'margin': margin_value,
 								'max-width': 'calc(' + maxwidth_value_calc + ')'
 							});
-							$($element).attr('style', $($element).attr('style') + ' max-width: -moz-calc(' + maxwidth_value_calc + ');' + ' max-width: -webkit-calc(' + maxwidth_value_calc + ');');
+							$( $element ).attr('style', $( $element ).attr('style') + ' max-width: -moz-calc(' + maxwidth_value_calc + ');' + ' max-width: -webkit-calc(' + maxwidth_value_calc + ');');
 
 						// If the image width is superior to the page width but inferior to the maximum overflow width.
 						} else {
 							margin_value = '0 calc(50% - 50vw)';
 
-							$($element).css({
+							$( $element ).css({
 								'max-width': '100vw',
 								'margin': margin_value
 							});
-							$($element).attr('style', $($element).attr('style') + ' margin: 0 -moz-calc(50% - 50vw);' + ' margin: 0 -webkit-calc(' + Math.floor($('.site').width() / 2) + 'px - ' + Math.floor($('body').width() / 2) + 'px);');
+							$( $element ).attr('style', $( $element ).attr('style') + ' margin: 0 -moz-calc(50% - 50vw);' + ' margin: 0 -webkit-calc(' + Math.floor( $( '.site' ).width() / 2) + 'px - ' + Math.floor($('body').width() / 2) + 'px);');
 						}
 
 					} else {
-						if ('double' === margin) {
-							margin_value = '0 -' + ((imagewidth - pagewidth) / 2) + 'px';
-						} else if ('simple-right' === margin) {
-							margin_value = '0 -' + ((imagewidth - pagewidth) / 2) + 'px 0 0';
+						if ( 'double' === margin ) {
+							margin_value = '0 -' + ( ( imagewidth - pagewidth ) / 2 ) + 'px';
+						} else if ( 'simple-right' === margin ) {
+							margin_value = '0 -' + ( ( imagewidth - pagewidth) / 2 ) + 'px 0 0';
 
 						} else {
 							margin_value = '0 0 0 -' + ((imagewidth - pagewidth) / 2) + 'px';

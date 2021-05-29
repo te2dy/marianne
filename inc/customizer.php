@@ -406,6 +406,20 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'live'        => false,
 		);
 
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_content',
+			'id'          => 'img_overflow_margin',
+			'title'       => __( 'Image overflow margin', 'marianne' ),
+			'description' => __( 'Set the overflow width in pixels. Default: 100.', 'marianne' ),
+			'input_attrs' => array(
+				'max'  => 300,
+				'min'  => 50,
+				'step' => 25,
+			),
+			'type'        => 'marianne_slider',
+			'live'        => false,
+		);
+
 		// Post List Settings.
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_loop',
@@ -814,6 +828,7 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_content_hyphens'               => false,
 			'marianne_content_img_overflow'          => 'disabled',
 			'marianne_content_img_overflow_portrait' => false,
+			'marianne_content_img_overflow_margin'   => 100,
 
 			// Post List Settings.
 			'marianne_loop_comment_link_text' => '',

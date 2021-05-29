@@ -332,13 +332,18 @@ if ( ! function_exists( 'marianne_the_post_thumbnail' ) ) {
 	 */
 	function marianne_the_post_thumbnail( $class = '', $args = array() ) {
 		if ( has_post_thumbnail() ) {
+			if ( ! in_array( 'overflow', $args, true ) ) {
+				$size = 'marianne-thumbnails';
+			} else {
+				$size = 'marianne-thumbnails-overflow';
+			}
 			?>
 				<figure<?php marianne_add_class( $class ); ?>>
 					<?php if ( ! in_array( 'link', $args, true ) ) : ?>
-						<?php the_post_thumbnail( 'marianne-thumbnails' ); ?>
+						<?php the_post_thumbnail( $size ); ?>
 					<?php else : ?>
 						<a href="<?php echo esc_url( get_the_permalink() ); ?>">
-							<?php the_post_thumbnail( 'marianne-thumbnails' ); ?>
+							<?php the_post_thumbnail( $size ); ?>
 						</a>
 					<?php endif; ?>
 

@@ -163,8 +163,9 @@ if ( ! function_exists( 'marianne_styles_scripts' ) ) {
 			$marianne_img_overflow_options = array(
 				'setting'          => marianne_get_theme_mod( 'marianne_content_img_overflow' ),
 				'include_portrait' => marianne_get_theme_mod( 'marianne_content_img_overflow_portrait' ),
+				//'content_width'    => marianne_get_theme_mod( 'marianne_global_page_width' ),
 				'content_width'    => marianne_get_theme_mod( 'marianne_global_page_width' ),
-				'overflow_width'   => 200,
+				'overflow_width'   => marianne_get_theme_mod( 'marianne_content_img_overflow_margin' ),
 			);
 
 			wp_localize_script( 'marianne-image-overflow', 'marianne_img_options', $marianne_img_overflow_options );

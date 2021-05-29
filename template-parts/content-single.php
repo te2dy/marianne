@@ -29,9 +29,16 @@
 
 		if ( true === marianne_get_theme_mod( 'marianne_global_images_expand' ) ) {
 			$marianne_thumbnail_class .= ' entry-thumbnail-wide';
+
 		}
 
-		marianne_the_post_thumbnail( $marianne_thumbnail_class, array( 'caption' ) );
+		$marianne_thumbnail_options = array( 'caption' );
+
+		if ( 'featured' === marianne_get_theme_mod( 'marianne_content_img_overflow' ) || 'all' === marianne_get_theme_mod( 'marianne_content_img_overflow' ) ) {
+			$marianne_thumbnail_options[] = 'overflow';
+		}
+
+		marianne_the_post_thumbnail( $marianne_thumbnail_class, $marianne_thumbnail_options );
 		?>
 	</header>
 
