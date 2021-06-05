@@ -238,7 +238,6 @@ body {
 }
 .site {
 	margin: 0 auto;
-	max-width: var(--page-width);
 	word-wrap: break-word;
 }
 .site-header {
@@ -459,16 +458,12 @@ dd {
 .alignwide {
 	width: 75vw;
 	margin-top: 2em;
-	margin-right: calc(-75vw / 2 + var(--page-width) / 2);
 	margin-bottom: 2em;
-	margin-left: calc(-75vw / 2 + var(--page-width) / 2);
 }
 .alignfull {
 	width: 100vw;
 	margin-top: 2em;
-	margin-right: calc(-100vw / 2 + var(--page-width) / 2);
 	margin-bottom: 2em;
-	margin-left: calc(-100vw / 2 + var(--page-width) / 2);
 }
 .blocks-gallery-grid figcaption,
 .wp-block-gallery figcaption {
@@ -1043,9 +1038,6 @@ iframe {
 .entry-info-separator {
 	margin: 0 .2em;
 }
-.entry-thumbnail-wide .wp-post-image {
-	width: var(--page-width);
-}
 .post-content p,
 .page-content p {
 	margin: 1em 0;
@@ -1381,80 +1373,6 @@ iframe {
 	top: 5px;
 	width: auto;
 	z-index: 100000;
-}
-
-/**
- * On small screens
- */
-@media all and (max-width: 848px) {
-	.page-width-720 {
-		margin-right: 4em;
-		margin-left: 4em;
-	}
-	.alignwide {
-		width: 100%;
-		margin: 2em 0;
-	}
-}
-
-@media all and (max-width: 664px) {
-	.page-width-600 {
-		margin-right: 2em;
-		margin-left: 2em;
-	}
-}
-
-@media all and (max-width: 532px) {
-	.site {
-		margin-right: 1em;
-		margin-left: 1em;
-	}
-	.site-content {
-		margin: 2em auto;
-	}
-	.site-header {
-		margin-bottom: 1em;
-	}
-	.entry-loop.sticky {
-		margin-right: -.5rem;
-		margin-left: -.5rem;
-		padding: .5rem;
-	}
-	.entry-loop.sticky figure {
-		margin-right: -.5rem;
-		margin-left: -.5rem;
-	}
-	.nav-links {
-		display: block;
-		justify-content: unset;
-	}
-	.nav-links .nav-link-previous,
-	.nav-links .nav-link-next {
-		max-width: unset;
-	}
-	.nav-links .nav-link-previous {
-		padding-right: 0;
-	}
-	.nav-links .nav-link-next {
-		padding-top: .5em;
-		padding-left: 0;
-		text-align: right;
-	}
-	.nav-links-one .nav-link-next {
-		text-align: right;
-	}
-	.comment-list .parent .comment {
-		padding: .5em 0 0 .5em;
-	}
-
-	/* Blocks */
-	.wp-block-media-text {
-		display: block;
-	}
-	.alignfull {
-		margin-right: -1em;
-		margin-left: -1em;
-	}
 }
 
 /**

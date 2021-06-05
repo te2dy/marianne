@@ -116,30 +116,6 @@
 			} );
 		} );
 
-		// Global > Page Width.
-		wp.customize( "marianne_global_page_width", function( value ) {
-			value.bind( function( newval ) {
-				var target = "#page",
-					classes = {
-						"480": "page-width-480",
-						"600": "page-width-600",
-						"720": "page-width-720"
-					};
-
-				marianneSelectRadioToggleClass( target, classes, newval );
-			} );
-		} );
-
-		// Global > Expand images.
-		wp.customize( "marianne_global_images_expand", function( value ) {
-			value.bind( function( newval ) {
-				var target = ".entry-thumbnail",
-					classToAdd = "entry-thumbnail-wide";
-
-				marianneCheckboxToggleClass( target, classToAdd, newval );
-			} );
-		} );
-
 		// Global > Font Family.
 		wp.customize( "marianne_global_font_family", function( value ) {
 			value.bind( function( newval ) {

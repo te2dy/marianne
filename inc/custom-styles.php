@@ -121,8 +121,10 @@ if ( ! function_exists( 'marianne_custom_css' ) ) {
 	 * and inlines them in the head element of pages.
 	 */
 	function marianne_custom_css() {
+		// Variables.
+		$marianne_page_width = marianne_get_theme_mod( 'marianne_global_page_width' );
+
 		$css[':root']['--font-size']  = ( 12 * absint( marianne_get_theme_mod( 'marianne_global_font_size' ) ) / 100 ) . 'pt';
-		$css[':root']['--page-width'] = marianne_get_theme_mod( 'marianne_global_page_width' ) . 'px';
 
 		$font_family = marianne_get_theme_mod( 'marianne_global_font_family' );
 		if ( 'sans-serif' === $font_family ) {
@@ -133,7 +135,69 @@ if ( ! function_exists( 'marianne_custom_css' ) ) {
 			$css['body']['font-family'] = 'Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console", monospace';
 		}
 
+		$css['.site']['max-width'] = absint( $marianne_page_width ) . 'px';
+
+		$css['.entry-thumbnail-wide .wp-post-image']['width'] = absint( $marianne_page_width ) . 'px';
+
+		$css['.alignwide']['margin-right'] = 'calc(-75vw / 2 + ' . absint( $marianne_page_width ) . 'px / 2)';
+		$css['.alignwide']['margin-left']  = 'calc(-75vw / 2 + ' . absint( $marianne_page_width ) . 'px / 2)';
+		$css['.alignfull']['margin-left']  = 'calc(-100vw / 2 + ' . absint( $marianne_page_width ) . 'px / 2)';
+		$css['.alignfull']['margin-left']  = 'calc(-100vw / 2 + ' . absint( $marianne_page_width ) . 'px / 2)';
+
 		wp_add_inline_style( 'marianne-stylesheet', marianne_array_to_css( $css ) );
+
+		// Responsive
+		if ( $marianne_page_width > 480 + ( 480 * 0.1 ) ) {
+			$media_rule = '@media all and (max-width: ' . absint( $marianne_page_width + ( $marianne_page_width * 0.1 ) ) . 'px)';
+
+			$media = array();
+
+			$media['.site']['margin-right'] = '10%';
+			$media['.site']['margin-left'] = '10%';
+
+			wp_add_inline_style( 'marianne-stylesheet', marianne_array_to_css( $media, $media_rule ) );
+		}
+
+		if ( $marianne_page_width > 480 ) {
+			$media_rule = '@media all and (max-width: ' . absint( 480 + ( 480 * 0.1 ) ) . 'px)';
+
+			$media = array();
+
+			$media['.site']['margin-right'] = '5%';
+			$media['.site']['margin-left'] = '5%';
+
+			$media['.site-content']['margin'] = '2em auto';
+
+			$media['.site-header']['margin-bottom'] = '1em';
+
+			$media['.entry-loop.sticky']['margin-right'] = '-.5rem';
+			$media['.entry-loop.sticky']['margin-left'] = '-.5rem';
+			$media['.entry-loop.sticky']['padding'] = '.5rem';
+
+			$media['.entry-loop.sticky figure']['margin-right'] = '-.5rem';
+			$media['.entry-loop.sticky figure']['margin-left'] = '-.5rem';
+
+			$media['.nav-links']['display'] = 'block';
+			$media['.nav-links']['justify-content'] = 'unset';
+
+			$media['.nav-links .nav-link-previous,.nav-links .nav-link-next']['max-width'] = 'unset';
+
+			$media['.nav-links .nav-link-previous']['padding-right'] = '0';
+
+			$media['.nav-links .nav-link-next']['padding-top'] = '.5em';
+			$media['.nav-links .nav-link-next']['padding-left'] = '0';
+			$media['.nav-links .nav-link-next']['text-align'] = 'right';
+
+			$media['.nav-links-one .nav-link-next']['text-align'] = 'right';
+
+			$media['.comment-list .parent .comment']['padding'] = '.5em 0 0 .5em';
+
+			$media['.wp-block-media-text']['display'] = 'block';
+			$media['.alignfull']['margin-right'] = '-1em';
+			$media['.alignfull']['margin-left'] = '-1em';
+
+			wp_add_inline_style( 'marianne-stylesheet', marianne_array_to_css( $media, $media_rule ) );
+		}
 	}
 
 	add_action( 'wp_enqueue_scripts', 'marianne_custom_css' );

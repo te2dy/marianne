@@ -42,7 +42,7 @@
 
 		<?php
 		$marianne_page_class  = 'site';
-		$marianne_page_class .= ' page-width-' . esc_attr( marianne_get_theme_mod( 'marianne_global_page_width' ) );
+		//$marianne_page_class .= ' page-width-' . esc_attr( marianne_get_theme_mod( 'marianne_global_page_width' ) );
 		?>
 		<div id="page" <?php marianne_add_class( $marianne_page_class, false ); ?>>
 

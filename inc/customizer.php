@@ -217,13 +217,13 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'id'          => 'page_width',
 			'title'       => __( 'Page Width', 'marianne' ),
 			'description' => __( 'If you increase the width of the page, your featured images may become too small. In this case, you should regenerate their thumbnails with a plugins (recommended). Or you can enable the next option. Default: 480px.', 'marianne' ),
-			'type'        => 'radio',
-			'value'       => array(
-				'480' => __( '480px', 'marianne' ),
-				'600' => __( '600px', 'marianne' ),
-				'720' => __( '720px', 'marianne' ),
+			'type'        => 'marianne_slider',
+			'input_attrs' => array(
+				'min'  => 480,
+				'max'  => 1080,
+				'step' => 10,
 			),
-			'live'        => true,
+			'live'        => false,
 		);
 
 		$marianne_customizer_options[] = array(
@@ -232,7 +232,6 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'title'       => __( 'Expand featured images that are not wide enough.', 'marianne' ),
 			'description' => __( 'This can make the images a bit blurry. This is less efficient than regenerating the images. Default: unchecked.', 'marianne' ),
 			'type'        => 'checkbox',
-			'live'        => true,
 		);
 
 		$marianne_customizer_options[] = array(
@@ -923,7 +922,7 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'colors_link_hover' => 'blue',
 
 			// Global.
-			'marianne_global_page_width'    => '480',
+			'marianne_global_page_width'    => 480,
 			'marianne_global_images_expand' => false,
 			'marianne_global_font_family'   => 'sans-serif',
 			'marianne_global_font_size'     => 100,
