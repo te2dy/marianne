@@ -214,6 +214,19 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		// Global.
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_global',
+			'id'          => 'layout',
+			'title'       => __( 'Layout', 'marianne' ),
+			'description' => __( 'You can choose to display your site in one or two columns, with a left sidebar. Default: one column.', 'marianne' ),
+			'type'        => 'radio',
+			'value'       => array(
+				'one-column'              => __( 'One column', 'marianne' ),
+				'two-column-left-sidebar' => __( 'Two columns with a left sidebar', 'marianne' ),
+			),
+			'live'        => false,
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_global',
 			'id'          => 'page_width',
 			'title'       => __( 'Page Width', 'marianne' ),
 			'description' => __( 'If you increase the width of the page, your featured images may become too small. In this case, you should regenerate their thumbnails with a plugins (recommended). Or you can enable the next option. Default: 480px.', 'marianne' ),
@@ -922,6 +935,7 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'colors_link_hover' => 'blue',
 
 			// Global.
+			'marianne_global_layout'        => 'one-column',
 			'marianne_global_page_width'    => 480,
 			'marianne_global_images_expand' => false,
 			'marianne_global_font_family'   => 'sans-serif',

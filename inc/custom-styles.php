@@ -135,7 +135,28 @@ if ( ! function_exists( 'marianne_custom_css' ) ) {
 			$css['body']['font-family'] = 'Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console", monospace';
 		}
 
-		$css['.site']['max-width'] = absint( $marianne_page_width ) . 'px';
+		$marianne_layout = marianne_get_theme_mod( 'marianne_global_layout' );
+		if ( 'one-column' === $marianne_layout ) {
+			$css['.site']['max-width'] = absint( $marianne_page_width ) . 'px';
+		} elseif ( 'two-column-left-sidebar' === $marianne_layout ) {
+			$css['.site']['display']             = 'grid';
+			$css['.site']['grid-template-areas'] = '"header content" "sidebar content" "sidebar footer"';
+			$css['.site']['max-width'] = absint( $marianne_page_width + 200 ) . 'px';
+
+			$css['.site-header']['grid-area'] = 'header';
+			$css['.site-header']['margin-right'] = '2em';
+			$css['.site-header']['padding-right'] = '2em';
+
+			$css['.site-content']['grid-area'] = 'content';
+			$css['.site-content']['width'] = absint( $marianne_page_width ) . 'px';
+
+			$css['.site-secondary']['grid-area'] = 'sidebar';
+			$css['.site-secondary']['margin-right'] = '2em';
+			$css['.site-secondary']['padding-right'] = '2em';
+
+			$css['.site-footer']['grid-area'] = 'footer';
+			$css['.site-footer']['width'] = absint( $marianne_page_width ) . 'px';
+		}
 
 		$css['.entry-thumbnail-wide .wp-post-image']['width'] = absint( $marianne_page_width ) . 'px';
 

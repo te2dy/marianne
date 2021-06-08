@@ -75,9 +75,8 @@ get_header();
 			</article>
 		<?php endif; ?>
 	</main>
-
-	<?php get_sidebar(); ?>
 </div>
 
 <?php
+get_sidebar()
 get_footer();
