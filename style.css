@@ -241,7 +241,6 @@ body {
 	word-wrap: break-word;
 }
 .site-header {
-	margin: 2em 0 4em;
 	text-align: var(--site-header-align);
 }
 .site-content {
@@ -749,9 +748,6 @@ iframe {
 }
 
 /* Primary menu */
-#menu-primary-container {
-	margin: 2em 0;
-}
 #menu-primary > .menu-item {
 	margin-bottom: .5em;
 }
@@ -1240,9 +1236,6 @@ iframe {
 }
 .site-footer-block {
 	margin-top: 1em;
-}
-.site-footer-align-center .navigation-menu .menu-item {
-
 }
 .site-footer-align-right .navigation-menu .menu-item {
 	border-right: 0;

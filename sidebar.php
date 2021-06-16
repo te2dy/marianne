@@ -11,8 +11,6 @@
 
 if ( is_active_sidebar( 'widgets' ) ) {
 	?>
-		<hr class="separator">
-
 		<?php
 		$marianne_widgets_class = 'site-secondary';
 
@@ -21,6 +19,8 @@ if ( is_active_sidebar( 'widgets' ) ) {
 		}
 		?>
 		<aside id="secondary"<?php marianne_add_class( $marianne_widgets_class ); ?> role="complementary">
+			<hr class="separator">
+
 			<?php dynamic_sidebar( 'widgets' ); ?>
 		</aside>
 	<?php

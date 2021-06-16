@@ -227,6 +227,20 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_global',
+			'id'          => 'sidebar_width',
+			'title'       => __( 'Sidebar Width', 'marianne' ),
+			'description' => __( 'Default: 250px.', 'marianne' ),
+			'type'        => 'marianne_slider',
+			'input_attrs' => array(
+				'min'  => 180,
+				'max'  => 320,
+				'step' => 10,
+			),
+			'live'        => false,
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_global',
 			'id'          => 'page_width',
 			'title'       => __( 'Page Width', 'marianne' ),
 			'description' => __( 'If you increase the width of the page, your featured images may become too small. In this case, you should regenerate their thumbnails with a plugins (recommended). Or you can enable the next option. Default: 480px.', 'marianne' ),
@@ -936,6 +950,7 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 
 			// Global.
 			'marianne_global_layout'        => 'one-column',
+			'marianne_global_sidebar_width' => 250,
 			'marianne_global_page_width'    => 480,
 			'marianne_global_images_expand' => false,
 			'marianne_global_font_family'   => 'sans-serif',

@@ -36,6 +36,9 @@ on tablet and mobile, and it has been designed to give a good print results.
 
 == Changelog ==
 
+=== 1.6 – ? ===
+
+
 === 1.5.1 – May 28th, 2021 ===
 - Added: descriptions to some options.
 - Fixed: Feather Icons display.

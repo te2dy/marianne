@@ -138,24 +138,37 @@ if ( ! function_exists( 'marianne_custom_css' ) ) {
 		$marianne_layout = marianne_get_theme_mod( 'marianne_global_layout' );
 		if ( 'one-column' === $marianne_layout ) {
 			$css['.site']['max-width'] = absint( $marianne_page_width ) . 'px';
+
+			$css['.site-header']['margin-top'] = '2em';
+			$css['.site-header']['margin-bottom'] = '4em';
+
+			$css['#menu-primary-container']['margin'] = '2em 0';
 		} elseif ( 'two-column-left-sidebar' === $marianne_layout ) {
-			$css['.site']['display']             = 'grid';
-			$css['.site']['grid-template-areas'] = '"header content" "sidebar content" "sidebar footer"';
-			$css['.site']['max-width'] = absint( $marianne_page_width + 200 ) . 'px';
+			$marianne_sidebar_width = marianne_get_theme_mod( 'marianne_global_sidebar_width' );
 
-			$css['.site-header']['grid-area'] = 'header';
-			$css['.site-header']['margin-right'] = '2em';
-			$css['.site-header']['padding-right'] = '2em';
+			$css['.site']['max-width'] = absint( $marianne_page_width ) . 'px';
 
-			$css['.site-content']['grid-area'] = 'content';
-			$css['.site-content']['width'] = absint( $marianne_page_width ) . 'px';
+			$css['.site-header']['width'] = absint( $marianne_sidebar_width ) . 'px';
+			$css['.site-header']['float'] = 'left';
+			$css['.site-header']['margin-left'] = '-' . absint( $marianne_sidebar_width + 50 ) . 'px';
 
-			$css['.site-secondary']['grid-area'] = 'sidebar';
-			$css['.site-secondary']['margin-right'] = '2em';
-			$css['.site-secondary']['padding-right'] = '2em';
+			$css['#menu-primary > .menu-item']['border-right'] = '0';
+			$css['#menu-primary > .menu-item']['border-left'] = '1px solid var(--color-border)';
+			$css['#menu-primary > .menu-item']['display'] = 'block';
+			$css['#menu-primary > .menu-item']['margin'] = '.5rem 0';
+			$css['#menu-primary > .menu-item']['padding-right'] = '0';
+			$css['#menu-primary > .menu-item']['padding-left'] = '.5rem';
 
-			$css['.site-footer']['grid-area'] = 'footer';
-			$css['.site-footer']['width'] = absint( $marianne_page_width ) . 'px';
+			$css['.site-content']['float'] = 'right';
+			$css['.site-content']['position'] = 'relative';
+			$css['.site-content']['margin'] = '0 0 4em 0';
+
+			$css['.site-secondary']['width'] = absint( $marianne_sidebar_width ) . 'px';
+			$css['.site-secondary']['float'] = 'left';
+			$css['.site-secondary']['margin-left'] = '-' . absint( $marianne_sidebar_width + 50 ) . 'px';
+			$css['.site-secondary']['clear'] = 'left';
+
+			$css['.site-secondary .separator']['margin'] = '2em 0';
 		}
 
 		$css['.entry-thumbnail-wide .wp-post-image']['width'] = absint( $marianne_page_width ) . 'px';
@@ -168,6 +181,28 @@ if ( ! function_exists( 'marianne_custom_css' ) ) {
 		wp_add_inline_style( 'marianne-stylesheet', marianne_array_to_css( $css ) );
 
 		// Responsive
+		if ( 'two-column-left-sidebar' === $marianne_layout ) {
+			$marianne_sidebar_width = marianne_get_theme_mod( 'marianne_global_sidebar_width' );
+
+			$media_rule = '@media all and (max-width: ' . absint( $marianne_page_width + ( ( $marianne_sidebar_width + 50 ) * 2 ) + 100 ) . 'px)';
+
+			$media = array();
+
+			$media['.site-header']['width'] = 'auto';
+			$media['.site-header']['float'] = 'non';
+			$media['.site-header']['margin-left'] = '0';
+			$media['.site-header']['margin-bottom'] = '2em';
+
+			$media['#menu-primary > .menu-item']['border-left'] = '0';
+			$media['#menu-primary > .menu-item']['padding-left'] = '0';
+
+			$media['.site-secondary']['width'] = 'auto';
+			$media['.site-secondary']['float'] = 'non';
+			$media['.site-secondary']['margin-left'] = '0';
+
+			wp_add_inline_style( 'marianne-stylesheet', marianne_array_to_css( $media, $media_rule ) );
+		}
+
 		if ( $marianne_page_width > 480 + ( 480 * 0.1 ) ) {
 			$media_rule = '@media all and (max-width: ' . absint( $marianne_page_width + ( $marianne_page_width * 0.1 ) ) . 'px)';
 
