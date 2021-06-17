@@ -139,33 +139,37 @@ if ( ! function_exists( 'marianne_custom_css' ) ) {
 		if ( 'one-column' === $marianne_layout ) {
 			$css['.site']['max-width'] = absint( $marianne_page_width ) . 'px';
 
-			$css['.site-header']['margin-top'] = '2em';
+			$css['.site-header']['margin-top']    = '2em';
 			$css['.site-header']['margin-bottom'] = '4em';
 
 			$css['#menu-primary-container']['margin'] = '2em 0';
+
+			$css['.site-content']['margin-top'] = '4em';
 		} elseif ( 'two-column-left-sidebar' === $marianne_layout ) {
-			$marianne_sidebar_width = marianne_get_theme_mod( 'marianne_global_sidebar_width' );
+			$marianne_sidebar_width  = marianne_get_theme_mod( 'marianne_global_sidebar_width' );
+			$marianne_sidebar_margin = marianne_get_theme_mod( 'marianne_global_sidebar_margin' );
 
-			$css['.site']['max-width'] = absint( $marianne_page_width ) . 'px';
+			$css['.site']['max-width']  = absint( $marianne_page_width ) . 'px';
+			$css['.site']['margin-top'] = '2em';
 
-			$css['.site-header']['width'] = absint( $marianne_sidebar_width ) . 'px';
-			$css['.site-header']['float'] = 'left';
-			$css['.site-header']['margin-left'] = '-' . absint( $marianne_sidebar_width + 50 ) . 'px';
+			$css['.site-header']['width']       = absint( $marianne_sidebar_width ) . 'px';
+			$css['.site-header']['float']       = 'left';
+			$css['.site-header']['margin-left'] = '-' . absint( $marianne_sidebar_width + $marianne_sidebar_margin ) . 'px';
 
-			$css['#menu-primary > .menu-item']['border-right'] = '0';
-			$css['#menu-primary > .menu-item']['border-left'] = '1px solid var(--color-border)';
-			$css['#menu-primary > .menu-item']['display'] = 'block';
-			$css['#menu-primary > .menu-item']['margin'] = '.5rem 0';
+			$css['#menu-primary > .menu-item']['border-right']  = '0';
+			$css['#menu-primary > .menu-item']['border-left']   = '1px solid var(--color-border)';
+			$css['#menu-primary > .menu-item']['display']       = 'block';
+			$css['#menu-primary > .menu-item']['margin']        = '.5rem 0';
 			$css['#menu-primary > .menu-item']['padding-right'] = '0';
-			$css['#menu-primary > .menu-item']['padding-left'] = '.5rem';
+			$css['#menu-primary > .menu-item']['padding-left']  = '.5rem';
 
-			$css['.site-content']['float'] = 'right';
-			$css['.site-content']['position'] = 'relative';
-			$css['.site-content']['margin'] = '0 0 4em 0';
+			$css['.site-content']['float']         = 'right';
+			$css['.site-content']['position']      = 'relative';
+			$css['.site-content']['margin-bottom'] = '4em';
 
-			$css['.site-secondary']['width'] = absint( $marianne_sidebar_width ) . 'px';
-			$css['.site-secondary']['float'] = 'left';
-			$css['.site-secondary']['margin-left'] = '-' . absint( $marianne_sidebar_width + 50 ) . 'px';
+			$css['.site-secondary']['width']       = absint( $marianne_sidebar_width ) . 'px';
+			$css['.site-secondary']['float']       = 'left';
+			$css['.site-secondary']['margin-left'] = '-' . absint( $marianne_sidebar_width + $marianne_sidebar_margin ) . 'px';
 			$css['.site-secondary']['clear'] = 'left';
 
 			$css['.site-secondary .separator']['margin'] = '2em 0';
@@ -182,9 +186,10 @@ if ( ! function_exists( 'marianne_custom_css' ) ) {
 
 		// Responsive
 		if ( 'two-column-left-sidebar' === $marianne_layout ) {
-			$marianne_sidebar_width = marianne_get_theme_mod( 'marianne_global_sidebar_width' );
+			$marianne_sidebar_width  = marianne_get_theme_mod( 'marianne_global_sidebar_width' );
+			$marianne_sidebar_margin = marianne_get_theme_mod( 'marianne_global_sidebar_margin' );
 
-			$media_rule = '@media all and (max-width: ' . absint( $marianne_page_width + ( ( $marianne_sidebar_width + 50 ) * 2 ) + 100 ) . 'px)';
+			$media_rule = '@media all and (max-width: ' . absint( $marianne_page_width + ( ( $marianne_sidebar_width + $marianne_sidebar_margin ) * 2 ) + 100 ) . 'px)';
 
 			$media = array();
 

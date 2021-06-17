@@ -243,9 +243,6 @@ body {
 .site-header {
 	text-align: var(--site-header-align);
 }
-.site-content {
-	margin: 4em 0;
-}
 .site-primary {
 	margin-bottom: 4em;
 }

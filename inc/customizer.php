@@ -216,7 +216,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_global',
 			'id'          => 'layout',
 			'title'       => __( 'Layout', 'marianne' ),
-			'description' => __( 'You can choose to display your site in one or two columns, with a left sidebar. Default: one column.', 'marianne' ),
+			'description' => __( 'You can choose to display your site in one or two columns, with a left sidebar. The sidebar will show up only if the screen is wide enough. Default: one column.', 'marianne' ),
 			'type'        => 'radio',
 			'value'       => array(
 				'one-column'              => __( 'One column', 'marianne' ),
@@ -234,6 +234,20 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'input_attrs' => array(
 				'min'  => 180,
 				'max'  => 320,
+				'step' => 10,
+			),
+			'live'        => false,
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_global',
+			'id'          => 'sidebar_margin',
+			'title'       => __( 'Sidebar Margin Width', 'marianne' ),
+			'description' => __( 'Default: 50px.', 'marianne' ),
+			'type'        => 'marianne_slider',
+			'input_attrs' => array(
+				'min'  => 50,
+				'max'  => 150,
 				'step' => 10,
 			),
 			'live'        => false,
@@ -949,14 +963,15 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'colors_link_hover' => 'blue',
 
 			// Global.
-			'marianne_global_layout'        => 'one-column',
-			'marianne_global_sidebar_width' => 250,
-			'marianne_global_page_width'    => 480,
-			'marianne_global_images_expand' => false,
-			'marianne_global_font_family'   => 'sans-serif',
-			'marianne_global_font_size'     => 100,
-			'marianne_global_font_smooth'   => false,
-			'marianne_global_text_shadow'   => false,
+			'marianne_global_layout'         => 'one-column',
+			'marianne_global_sidebar_width'  => 250,
+			'marianne_global_sidebar_margin' => 50,
+			'marianne_global_page_width'     => 480,
+			'marianne_global_images_expand'  => false,
+			'marianne_global_font_family'    => 'sans-serif',
+			'marianne_global_font_size'      => 100,
+			'marianne_global_font_smooth'    => false,
+			'marianne_global_text_shadow'    => false,
 
 			// Header Settings.
 			'marianne_header_align'            => 'left',

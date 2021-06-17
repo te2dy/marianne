@@ -10,7 +10,26 @@
 		// The speed of animations.
 		var speed = 200;
 
-		// Show Custom Page Width only when 'Custom' is checked.
+		// Show sidebar parameters if a sidebar is set.
+		if ( $( "#_customize-input-marianne_global_layout-radio-two-column-left-sidebar" ).is( ":checked" ) ) {
+			$( "#customize-control-marianne_global_sidebar_width" ).show();
+			$( "#customize-control-marianne_global_sidebar_margin" ).show();
+		} else {
+			$( "#customize-control-marianne_global_sidebar_width" ).hide();
+			$( "#customize-control-marianne_global_sidebar_margin" ).hide();
+		}
+
+		$( "#customize-control-marianne_global_layout input" ).change( function () {
+			if ( $( "_customize-input-marianne_global_layout-radio-two-column-left-sidebar" ).is( ":checked" ) ) {
+				$( "#customize-control-marianne_global_sidebar_width" ).show( speed );
+				$( "#customize-control-marianne_global_sidebar_margin" ).show( speed );
+			} else {
+				$( "#customize-control-marianne_global_sidebar_width" ).hide( speed );
+				$( "#customize-control-marianne_global_sidebar_margin" ).hide( speed );
+			}
+		} );
+
+		// Show Round Logo when a logo is set.
 		if ( $( "#customize-control-custom_logo .remove-button" ).length > 0 ) {
 			$( "#customize-control-marianne_header_logo_round" ).show();
 		} else {

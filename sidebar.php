@@ -19,7 +19,9 @@ if ( is_active_sidebar( 'widgets' ) ) {
 		}
 		?>
 		<aside id="secondary"<?php marianne_add_class( $marianne_widgets_class ); ?> role="complementary">
-			<hr class="separator">
+			<?php if ( 'two-column-left-sidebar' !== marianne_get_theme_mod( 'marianne_global_layout' ) ) : ?>
+				<hr class="separator">
+			<?php endif; ?>
 
 			<?php dynamic_sidebar( 'widgets' ); ?>
 		</aside>
