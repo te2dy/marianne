@@ -129,7 +129,7 @@ if ( ! function_exists( 'marianne_custom_css' ) ) {
 		$marianne_sidebar_margin = marianne_get_theme_mod( 'marianne_global_sidebar_margin' );
 
 		// Set styles.
-		$css[':root']['--font-size']  = ( 12 * absint( marianne_get_theme_mod( 'marianne_global_font_size' ) ) / 100 ) . 'pt';
+		$css[':root']['--font-size'] = ( 12 * absint( marianne_get_theme_mod( 'marianne_global_font_size' ) ) / 100 ) . 'pt';
 
 
 
@@ -152,7 +152,7 @@ if ( ! function_exists( 'marianne_custom_css' ) ) {
 			$css['.site-content']['margin-top'] = '4em';
 
 		} elseif ( 'two-column-left-sidebar' === $marianne_layout ) {
-			$css['.site']['max-width']  = absint( $marianne_page_width ) . 'px';
+			$css['.site']['max-width'] = absint( $marianne_page_width ) . 'px';
 
 			$css['.site-header']['width']       = absint( $marianne_sidebar_width ) . 'px';
 			$css['.site-header']['float']       = 'left';
@@ -172,7 +172,7 @@ if ( ! function_exists( 'marianne_custom_css' ) ) {
 			$css['.site-secondary']['width']       = absint( $marianne_sidebar_width ) . 'px';
 			$css['.site-secondary']['float']       = 'left';
 			$css['.site-secondary']['margin-left'] = '-' . absint( $marianne_sidebar_width + $marianne_sidebar_margin ) . 'px';
-			$css['.site-secondary']['clear'] = 'left';
+			$css['.site-secondary']['clear']       = 'left';
 
 			$css['.site-secondary .separator']['margin'] = '2em 0';
 		}
@@ -205,21 +205,22 @@ if ( ! function_exists( 'marianne_custom_css' ) ) {
 			$media['.site-header']['margin-top']    = '2em';
 			$media['.site-header']['margin-bottom'] = '4em';
 
-			$media['#menu-primary > .menu-item']['border-left'] = '0';
+			$media['#menu-primary > .menu-item']['border-left']  = '0';
 			$media['#menu-primary > .menu-item']['padding-left'] = '0';
 
 			$media['.site-content ']['float'] = 'none';
 
-			$media['.site-secondary']['width'] = 'auto';
-			$media['.site-secondary']['float'] = 'none';
+			$media['.site-secondary']['width']       = 'auto';
+			$media['.site-secondary']['float']       = 'none';
 			$media['.site-secondary']['margin-left'] = '0';
 
 
 
 			wp_add_inline_style( 'marianne-stylesheet', marianne_array_to_css( $media, $media_rule ) );
 
-		// Responsive layout without sidebar, for screen width greater than 480px.
 		} elseif ( $marianne_page_width > absint( 480 + ( 480 * 0.1 ) ) ) {
+			// Responsive layout without sidebar, for screen width greater than 480px.
+
 			$media_rule = '@media all and (max-width: ' . absint( $marianne_page_width + ( $marianne_page_width * 0.1 ) ) . 'px)';
 
 			$media = array();

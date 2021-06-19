@@ -40,16 +40,12 @@
 
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'marianne' ); ?></a>
 
-		<?php
-		$marianne_page_class  = 'site';
-		//$marianne_page_class .= ' page-width-' . esc_attr( marianne_get_theme_mod( 'marianne_global_page_width' ) );
-		?>
-		<div id="page" <?php marianne_add_class( $marianne_page_class, false ); ?>>
-
+		<div id="page" class="site">
 			<?php
 			$marianne_header_class  = 'site-header';
 			$marianne_header_class .= ' site-header-align-' . esc_attr( marianne_get_theme_mod( 'marianne_header_align' ) );
 			?>
+
 			<header id="header" <?php marianne_add_class( $marianne_header_class, false ); ?> role="banner">
 				<?php
 				$marianne_logo_class = 'site-logo';
