@@ -36,8 +36,11 @@ on tablet and mobile, and it has been designed to give a good print results.
 
 == Changelog ==
 
-=== 1.6 – ? ===
-
+=== 1.6 – June 19th, 2021 ===
+Added: option to display the theme with a left sidebar.
+Added: new social links.
+Fixed: phone number sanitization.
+Updated: translation files.
 
 === 1.5.1 – May 28th, 2021 ===
 - Added: descriptions to some options.
