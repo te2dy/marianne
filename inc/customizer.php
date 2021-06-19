@@ -243,11 +243,11 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_global',
 			'id'          => 'sidebar_margin',
 			'title'       => __( 'Sidebar Margin Width', 'marianne' ),
-			'description' => __( 'Default: 50px.', 'marianne' ),
+			'description' => __( 'Default: 100px.', 'marianne' ),
 			'type'        => 'marianne_slider',
 			'input_attrs' => array(
 				'min'  => 50,
-				'max'  => 150,
+				'max'  => 200,
 				'step' => 10,
 			),
 			'live'        => false,
@@ -973,7 +973,7 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			// Global.
 			'marianne_global_layout'         => 'one-column',
 			'marianne_global_sidebar_width'  => 250,
-			'marianne_global_sidebar_margin' => 50,
+			'marianne_global_sidebar_margin' => 100,
 			'marianne_global_page_width'     => 480,
 			'marianne_global_images_expand'  => false,
 			'marianne_global_font_family'    => 'sans-serif',

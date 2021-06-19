@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marianne\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-19 14:35+0000\n"
+"POT-Creation-Date: 2021-06-19 14:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -207,12 +207,12 @@ msgstr ""
 msgid "Dark"
 msgstr ""
 
-#: inc/customizer.php:232
-msgid "Default: 250px."
+#: inc/customizer.php:246
+msgid "Default: 100px."
 msgstr ""
 
-#: inc/customizer.php:246
-msgid "Default: 50px."
+#: inc/customizer.php:232
+msgid "Default: 250px."
 msgstr ""
 
 #: inc/customizer.php:350

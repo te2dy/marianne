@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Marianne\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-02 14:22+0000\n"
-"PO-Revision-Date: 2021-06-19 14:40+0000\n"
+"PO-Revision-Date: 2021-06-19 14:45+0000\n"
 "Last-Translator: Teddy\n"
 "Language-Team: French (France)\n"
 "Language: fr_FR\n"
@@ -240,13 +240,14 @@ msgstr "Contribuer"
 msgid "Dark"
 msgstr "Sombre"
 
+#: inc/customizer.php:246
+#| msgid "Default: 50px."
+msgid "Default: 100px."
+msgstr "Par défaut&nbsp;: 100&nbsp;px."
+
 #: inc/customizer.php:232
 msgid "Default: 250px."
 msgstr "Par défaut&nbsp;: 250&nbsp;px."
-
-#: inc/customizer.php:246
-msgid "Default: 50px."
-msgstr "Par défaut&nbsp;: 50&nbsp;px."
 
 #: inc/customizer.php:350
 msgid "Default: bolder."
@@ -1191,10 +1192,9 @@ msgid "Your 500px page URL."
 msgstr "L’adresse de votre page 500px."
 
 #: inc/customizer.php:628
-#, fuzzy
 #| msgid "Your diapora* profile URL."
 msgid "Your Diaspora profile URL."
-msgstr "L’adresse de votre profil diaspora*."
+msgstr "L’adresse de votre profil Diaspora."
 
 #: inc/customizer.php:740
 msgid "Your email address."
