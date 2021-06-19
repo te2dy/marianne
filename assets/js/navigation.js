@@ -10,7 +10,7 @@
  */
 
 /**
- * Toggle an attribute"s value
+ * Toggle an attribute's value
  *
  * @param {Element} el - The element.
  */

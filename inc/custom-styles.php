@@ -121,21 +121,26 @@ if ( ! function_exists( 'marianne_custom_css' ) ) {
 	 * and inlines them in the head element of pages.
 	 */
 	function marianne_custom_css() {
-		// Variables.
-		$marianne_page_width = marianne_get_theme_mod( 'marianne_global_page_width' );
+		// Set variables.
+		$marianne_page_width     = marianne_get_theme_mod( 'marianne_global_page_width' );
+		$marianne_font_family    = marianne_get_theme_mod( 'marianne_global_font_family' );
+		$marianne_layout         = marianne_get_theme_mod( 'marianne_global_layout' );
+		$marianne_sidebar_width  = marianne_get_theme_mod( 'marianne_global_sidebar_width' );
+		$marianne_sidebar_margin = marianne_get_theme_mod( 'marianne_global_sidebar_margin' );
 
+		// Set styles.
 		$css[':root']['--font-size']  = ( 12 * absint( marianne_get_theme_mod( 'marianne_global_font_size' ) ) / 100 ) . 'pt';
 
-		$font_family = marianne_get_theme_mod( 'marianne_global_font_family' );
-		if ( 'sans-serif' === $font_family ) {
+
+
+		if ( 'sans-serif' === $marianne_font_family ) {
 			$css['body']['font-family'] = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif';
-		} elseif ( 'serif' === $font_family ) {
+		} elseif ( 'serif' === $marianne_font_family ) {
 			$css['body']['font-family'] = '"Iowan Old Style", "Apple Garamond", Baskerville, "Times New Roman", "Droid Serif", Times, "Source Serif Pro", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
 		} else {
 			$css['body']['font-family'] = 'Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console", monospace';
 		}
 
-		$marianne_layout = marianne_get_theme_mod( 'marianne_global_layout' );
 		if ( 'one-column' === $marianne_layout ) {
 			$css['.site']['max-width'] = absint( $marianne_page_width ) . 'px';
 
@@ -145,12 +150,9 @@ if ( ! function_exists( 'marianne_custom_css' ) ) {
 			$css['#menu-primary-container']['margin'] = '2em 0';
 
 			$css['.site-content']['margin-top'] = '4em';
-		} elseif ( 'two-column-left-sidebar' === $marianne_layout ) {
-			$marianne_sidebar_width  = marianne_get_theme_mod( 'marianne_global_sidebar_width' );
-			$marianne_sidebar_margin = marianne_get_theme_mod( 'marianne_global_sidebar_margin' );
 
+		} elseif ( 'two-column-left-sidebar' === $marianne_layout ) {
 			$css['.site']['max-width']  = absint( $marianne_page_width ) . 'px';
-			$css['.site']['margin-top'] = '2em';
 
 			$css['.site-header']['width']       = absint( $marianne_sidebar_width ) . 'px';
 			$css['.site-header']['float']       = 'left';
@@ -197,10 +199,11 @@ if ( ! function_exists( 'marianne_custom_css' ) ) {
 
 			$media = array();
 
-			$media['.site-header']['width'] = 'auto';
-			$media['.site-header']['float'] = 'none';
-			$media['.site-header']['margin-left'] = '0';
-			$media['.site-header']['margin-bottom'] = '2em';
+			$media['.site-header']['width']         = 'auto';
+			$media['.site-header']['float']         = 'none';
+			$media['.site-header']['margin-left']   = '0';
+			$media['.site-header']['margin-top']    = '2em';
+			$media['.site-header']['margin-bottom'] = '4em';
 
 			$media['#menu-primary > .menu-item']['border-left'] = '0';
 			$media['#menu-primary > .menu-item']['padding-left'] = '0';
