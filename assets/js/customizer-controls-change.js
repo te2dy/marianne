@@ -11,7 +11,7 @@
 		var speed = 200;
 
 		// Show sidebar parameters if a sidebar is set.
-		if ( $( "#_customize-input-marianne_global_layout-radio-two-column-left-sidebar" ).is( ":checked" ) ) {
+		if ( $( "#_customize-input-marianne_global_layout-radio-two-column-left-sidebar:checked" ).val() ) {
 			$( "#customize-control-marianne_global_sidebar_width" ).show();
 			$( "#customize-control-marianne_global_sidebar_margin" ).show();
 		} else {
@@ -19,8 +19,8 @@
 			$( "#customize-control-marianne_global_sidebar_margin" ).hide();
 		}
 
-		$( "#customize-control-marianne_global_layout input" ).change( function () {
-			if ( $( "_customize-input-marianne_global_layout-radio-two-column-left-sidebar" ).is( ":checked" ) ) {
+		$( "#customize-control-marianne_global_layout" ).change( function () {
+			if ( $( "#_customize-input-marianne_global_layout-radio-two-column-left-sidebar:checked" ).val() ) {
 				$( "#customize-control-marianne_global_sidebar_width" ).show( speed );
 				$( "#customize-control-marianne_global_sidebar_margin" ).show( speed );
 			} else {
