@@ -679,6 +679,14 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_social',
+			'id'          => 'tiktok',
+			'title'       => __( 'TikTok', 'marianne' ),
+			'description' => __( 'Your TikTok account URL.', 'marianne' ),
+			'type'        => 'url',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
 			'id'          => 'spotify',
 			'title'       => __( 'Spotify', 'marianne' ),
 			'description' => __( 'The URL of the Spotify page you want to share.', 'marianne' ),
@@ -1021,6 +1029,7 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_social_flickr'       => '',
 			'marianne_social_youtube'      => '',
 			'marianne_social_vimeo'        => '',
+			'marianne_social_tiktok'       => '',
 			'marianne_social_spotify'      => '',
 			'marianne_social_email'        => '',
 			'marianne_social_github'       => '',
