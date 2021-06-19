@@ -119,30 +119,20 @@
 		// Global > Font Family.
 		wp.customize( "marianne_global_font_family", function( value ) {
 			value.bind( function( newval ) {
-				var target = "body",
-					classes = {
-						"sans-serif": "font-family-sans-serif",
-						"serif": "font-family-serif",
-						"monospace": "font-family-monospace"
-					};
-
-				marianneSelectRadioToggleClass( target, classes, newval );
+				if ( newval === 'sans-serif' ) {
+					$( "body" ).css( 'font-family', '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif' );
+				} else if ( newval === 'serif' ) {
+					$( "body" ).css( 'font-family', '"Iowan Old Style", "Apple Garamond", Baskerville, "Times New Roman", "Droid Serif", Times, "Source Serif Pro", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"' );
+				} else if ( newval === 'monospace' ) {
+					$( "body" ).css( 'font-family', 'Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console", monospace' );
+				}
 			} );
 		} );
 
 		// Global > Font Size.
 		wp.customize( "marianne_global_font_size", function( value ) {
 			value.bind( function( newval ) {
-				var target = "body",
-					classes = {
-						80: "font-size-80",
-						90: "font-size-90",
-						100: "font-size-100",
-						110: "font-size-110",
-						120: "font-size-120"
-					};
-
-				marianneSelectRadioToggleClass( target, classes, newval );
+				$( "body" ).css( "font-size", ( 12 * Number( newval ) / 100 ) + "pt" );
 			} );
 		} );
 
