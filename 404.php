@@ -15,9 +15,8 @@ get_header();
 	<main id="primary" class="site-primary" role="main">
 		<?php get_template_part( 'template-parts/content', 'none' ); ?>
 	</main>
-
-	<?php get_sidebar(); ?>
 </div>
 
 <?php
+get_sidebar();
 get_footer();

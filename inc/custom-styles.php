@@ -184,7 +184,11 @@ if ( ! function_exists( 'marianne_custom_css' ) ) {
 
 		wp_add_inline_style( 'marianne-stylesheet', marianne_array_to_css( $css ) );
 
-		// Responsive
+		/**
+		 * Support responsive design.
+		 */
+
+		// Responsive layout with left sidebar.
 		if ( 'two-column-left-sidebar' === $marianne_layout ) {
 			$marianne_sidebar_width  = marianne_get_theme_mod( 'marianne_global_sidebar_width' );
 			$marianne_sidebar_margin = marianne_get_theme_mod( 'marianne_global_sidebar_margin' );
@@ -194,71 +198,73 @@ if ( ! function_exists( 'marianne_custom_css' ) ) {
 			$media = array();
 
 			$media['.site-header']['width'] = 'auto';
-			$media['.site-header']['float'] = 'non';
+			$media['.site-header']['float'] = 'none';
 			$media['.site-header']['margin-left'] = '0';
 			$media['.site-header']['margin-bottom'] = '2em';
 
 			$media['#menu-primary > .menu-item']['border-left'] = '0';
 			$media['#menu-primary > .menu-item']['padding-left'] = '0';
 
+			$media['.site-content ']['float'] = 'none';
+
 			$media['.site-secondary']['width'] = 'auto';
-			$media['.site-secondary']['float'] = 'non';
+			$media['.site-secondary']['float'] = 'none';
 			$media['.site-secondary']['margin-left'] = '0';
 
-			wp_add_inline_style( 'marianne-stylesheet', marianne_array_to_css( $media, $media_rule ) );
-		}
 
-		if ( $marianne_page_width > 480 + ( 480 * 0.1 ) ) {
+
+			wp_add_inline_style( 'marianne-stylesheet', marianne_array_to_css( $media, $media_rule ) );
+
+		// Responsive layout without sidebar, for screen width greater than 480px.
+		} elseif ( $marianne_page_width > absint( 480 + ( 480 * 0.1 ) ) ) {
 			$media_rule = '@media all and (max-width: ' . absint( $marianne_page_width + ( $marianne_page_width * 0.1 ) ) . 'px)';
 
 			$media = array();
 
-			$media['.site']['margin-right'] = '10%';
-			$media['.site']['margin-left'] = '10%';
+			$media['.site']['width'] = '80%';
 
 			wp_add_inline_style( 'marianne-stylesheet', marianne_array_to_css( $media, $media_rule ) );
 		}
 
-		if ( $marianne_page_width > 480 ) {
-			$media_rule = '@media all and (max-width: ' . absint( 480 + ( 480 * 0.1 ) ) . 'px)';
+		// Responsive layout for small screens.
+		$media_rule = '@media all and (max-width: ' . absint( 480 + ( 480 * 0.1 ) ) . 'px)';
 
-			$media = array();
+		$media = array();
 
-			$media['.site']['margin-right'] = '5%';
-			$media['.site']['margin-left'] = '5%';
+		$media['.site']['width'] = '90%';
 
-			$media['.site-content']['margin'] = '2em auto';
+		$media['.site-content']['margin'] = '2em auto';
 
-			$media['.site-header']['margin-bottom'] = '1em';
+		$media['.site-header']['margin-bottom'] = '1em';
 
-			$media['.entry-loop.sticky']['margin-right'] = '-.5rem';
-			$media['.entry-loop.sticky']['margin-left'] = '-.5rem';
-			$media['.entry-loop.sticky']['padding'] = '.5rem';
+		$media['.entry-loop.sticky']['margin-right'] = '-.5rem';
+		$media['.entry-loop.sticky']['margin-left']  = '-.5rem';
+		$media['.entry-loop.sticky']['padding']      = '.5rem';
 
-			$media['.entry-loop.sticky figure']['margin-right'] = '-.5rem';
-			$media['.entry-loop.sticky figure']['margin-left'] = '-.5rem';
+		$media['.entry-loop.sticky figure']['margin-right'] = '-.5rem';
+		$media['.entry-loop.sticky figure']['margin-left']  = '-.5rem';
 
-			$media['.nav-links']['display'] = 'block';
-			$media['.nav-links']['justify-content'] = 'unset';
+		$media['.nav-links']['display']         = 'block';
+		$media['.nav-links']['justify-content'] = 'unset';
 
-			$media['.nav-links .nav-link-previous,.nav-links .nav-link-next']['max-width'] = 'unset';
+		$media['.nav-links .nav-link-previous,.nav-links .nav-link-next']['max-width'] = 'unset';
 
-			$media['.nav-links .nav-link-previous']['padding-right'] = '0';
+		$media['.nav-links .nav-link-previous']['padding-right'] = '0';
 
-			$media['.nav-links .nav-link-next']['padding-top'] = '.5em';
-			$media['.nav-links .nav-link-next']['padding-left'] = '0';
-			$media['.nav-links .nav-link-next']['text-align'] = 'right';
+		$media['.nav-links .nav-link-next']['padding-top']  = '.5em';
+		$media['.nav-links .nav-link-next']['padding-left'] = '0';
+		$media['.nav-links .nav-link-next']['text-align']   = 'right';
 
-			$media['.nav-links-one .nav-link-next']['text-align'] = 'right';
+		$media['.nav-links-one .nav-link-next']['text-align'] = 'right';
 
-			$media['.comment-list .parent .comment']['padding'] = '.5em 0 0 .5em';
+		$media['.comment-list .parent .comment']['padding'] = '.5em 0 0 .5em';
 
-			$media['.wp-block-media-text']['display'] = 'block';
-			$media['.alignfull']['margin-right'] = '-1em';
-			$media['.alignfull']['margin-left'] = '-1em';
+		$media['.wp-block-media-text']['display'] = 'block';
 
-			wp_add_inline_style( 'marianne-stylesheet', marianne_array_to_css( $media, $media_rule ) );
-		}
+		$media['.alignfull']['margin-right'] = '-1em';
+		$media['.alignfull']['margin-left']  = '-1em';
+
+		wp_add_inline_style( 'marianne-stylesheet', marianne_array_to_css( $media, $media_rule ) );
 	}
 
 	add_action( 'wp_enqueue_scripts', 'marianne_custom_css' );
