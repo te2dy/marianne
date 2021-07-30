@@ -341,7 +341,7 @@ function marianne_theme_page() {
 					array(
 						'name' => 'Dr. Matthias Kampmann',
 						'url'  => 'https://www.knotenpunkte.net/',
-						'text' => '%s, who allowed me to improve some customization features of the theme with his suggestions.',
+						'text' => '%s, whose suggestions allowed me to improve some customization features of the theme.',
 					),
 					array(
 						'name' => 'Peter Pellenaars',
