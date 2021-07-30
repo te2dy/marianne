@@ -879,7 +879,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 				$option_default = $options_default[ $option_name ];
 
 				// Calls the right sanitization function depending on the type of the option.
-				if ( 'marianne_social_twitter' !== $option_name && 'marianne_social_email' !== $option_name && 'marianne_social_phone' !== $option_name && 'marianne_social_signal' !== $option_name && 'marianne_social_telegram' !== $option_name  && 'marianne_social_whatsapp' !== $option_name ) {
+				if ( 'marianne_social_twitter' !== $option_name && 'marianne_social_email' !== $option_name && 'marianne_social_phone' !== $option_name && 'marianne_social_signal' !== $option_name && 'marianne_social_telegram' !== $option_name && 'marianne_social_whatsapp' !== $option_name ) {
 					switch ( $type ) {
 						case 'radio':
 						case 'select':
