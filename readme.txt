@@ -36,8 +36,10 @@ on tablet and mobile, and it has been designed to give a good print results.
 
 == Changelog ==
 
-=== 1.6.1 – June 19th, 2021 ===
+=== 1.6.1 – July 30th, 2021 ===
+Added: social link to Signal and Telegram.
 Updated: "tested up to" version number (5.7.2 to 5.8).
+Updated: translation files.
 
 === 1.6 – June 19th, 2021 ===
 Added: option to display the theme with a left sidebar.
