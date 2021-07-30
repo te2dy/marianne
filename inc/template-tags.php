@@ -564,7 +564,7 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 
 		$container_class .= ' site-social-' . marianne_get_theme_mod( 'marianne_social_style' );
 
-		$social_supported = array( 'twitter', 'mastodon', 'facebook', 'diaspora', 'vk', 'instagram', 'flickr', '500px', 'youtube', 'vimeo', 'tiktok', 'spotify', 'linkedin', 'github', 'gitlab', 'twitch', 'reddit', 'email', 'phone', 'link', 'rss' );
+		$social_supported = array( 'twitter', 'mastodon', 'facebook', 'diaspora', 'vk', 'instagram', 'flickr', '500px', 'youtube', 'vimeo', 'tiktok', 'spotify', 'linkedin', 'github', 'gitlab', 'twitch', 'reddit', 'email', 'signal', 'telegram', 'whatsapp', 'phone', 'link', 'rss' );
 
 		// Puts set social links in an array.
 		$social_links = array();
@@ -595,6 +595,30 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 										}
 										break;
 
+									case 'signal':
+										if ( $link ) {
+											$phone_number = marianne_get_theme_mod( 'marianne_social_signal' );
+
+											$link = 'https://signal.me/#p/' . $phone_number;
+										}
+										break;
+
+									case 'telegram':
+										if ( $link ) {
+											$telegram_username = marianne_get_theme_mod( 'marianne_social_telegram' );
+
+											$link = 'https://t.me/' . $telegram_username;
+										}
+										break;
+
+									case 'whatsapp':
+										if ( $link ) {
+											$phone_number = marianne_get_theme_mod( 'marianne_social_whatsapp' );
+
+											$link = 'whatsapp:' . $phone_number;
+										}
+										break;
+
 									case 'phone':
 										if ( $link ) {
 											$phone_type   = marianne_get_theme_mod( 'marianne_social_phone_type' );
@@ -602,8 +626,6 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 
 											if ( 'sms' === $phone_type ) {
 												$phone_prefix = 'sms:';
-											} elseif ( 'whatsapp' === $phone_type ) {
-												$phone_prefix = 'whatsapp:';
 											}
 
 											$link = $phone_prefix . $link;

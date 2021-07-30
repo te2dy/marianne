@@ -743,9 +743,33 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_social',
+			'id'          => 'signal',
+			'title'       => __( 'Signal', 'marianne' ),
+			'description' => __( 'The phone number (without spaces, country code required) you registered to use Signal. Only works with the latest versions of Signal.', 'marianne' ),
+			'type'        => 'text',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
+			'id'          => 'telegram',
+			'title'       => __( 'Telegram', 'marianne' ),
+			'description' => __( 'Your Telegram username.', 'marianne' ),
+			'type'        => 'text',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
+			'id'          => 'whatsapp',
+			'title'       => __( 'WhatsApp', 'marianne' ),
+			'description' => __( 'The phone number (without spaces, country code required) you registered to use WhatsApp.', 'marianne' ),
+			'type'        => 'text',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
 			'id'          => 'phone',
 			'title'       => __( 'Phone', 'marianne' ),
-			'description' => __( 'Your phone number (without spaces).', 'marianne' ),
+			'description' => __( 'Your phone number (without spaces, country code required).', 'marianne' ),
 			'type'        => 'text',
 		);
 
@@ -756,9 +780,8 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'description' => __( "This will automatically open the right application on your readers' phone when they will click on it.", 'marianne' ),
 			'type'        => 'select',
 			'value'       => array(
-				'classic'  => __( 'Classic', 'marianne' ),
-				'sms'      => __( 'SMS', 'marianne' ),
-				'whatsapp' => __( 'WhatsApp', 'marianne' ),
+				'call' => __( 'Call', 'marianne' ),
+				'sms'  => __( 'SMS', 'marianne' ),
 			),
 		);
 
@@ -856,7 +879,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 				$option_default = $options_default[ $option_name ];
 
 				// Calls the right sanitization function depending on the type of the option.
-				if ( 'marianne_social_twitter' !== $option_name && 'marianne_social_email' !== $option_name && 'marianne_social_phone' !== $option_name ) {
+				if ( 'marianne_social_twitter' !== $option_name && 'marianne_social_email' !== $option_name && 'marianne_social_phone' !== $option_name && 'marianne_social_signal' !== $option_name && 'marianne_social_telegram' !== $option_name  && 'marianne_social_whatsapp' !== $option_name ) {
 					switch ( $type ) {
 						case 'radio':
 						case 'select':
@@ -891,8 +914,10 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 					$sanitize_callback = 'marianne_sanitize_twitter';
 				} elseif ( 'marianne_social_email' === $option_name ) {
 					$sanitize_callback = 'sanitize_email';
-				} elseif ( 'marianne_social_phone' === $option_name ) {
+				} elseif ( 'marianne_social_signal' === $option_name || 'marianne_social_whatsapp' === $option_name || 'marianne_social_phone' === $option_name ) {
 					$sanitize_callback = 'marianne_sanitize_phone';
+				} elseif ( 'marianne_social_telegram' === $option_name ) {
+					$sanitize_callback = 'marianne_sanitize_telegram';
 				}
 
 				// Creates the setting.
@@ -1035,8 +1060,11 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_social_github'       => '',
 			'marianne_social_gitlab'       => '',
 			'marianne_social_link'         => '',
+			'marianne_social_signal'       => '',
+			'marianne_social_telegram'     => '',
+			'marianne_social_whatsapp'     => '',
 			'marianne_social_phone'        => '',
-			'marianne_social_phone_type'   => 'classic',
+			'marianne_social_phone_type'   => 'call',
 			'marianne_social_rss'          => false,
 			'marianne_social_twitch'       => '',
 			'marianne_social_reddit'       => '',
@@ -1222,7 +1250,7 @@ if ( ! function_exists( 'marianne_sanitize_phone' ) ) {
 	function marianne_sanitize_phone( $input ) {
 		$output = '';
 
-		if ( preg_match( '/\+?[0-9]+/', $input, $match ) ) {
+		if ( preg_match( '/\+[0-9]+/', $input, $match ) ) {
 			$output = $match[0];
 		}
 
@@ -1230,21 +1258,23 @@ if ( ! function_exists( 'marianne_sanitize_phone' ) ) {
 	}
 }
 
-if ( ! function_exists( 'marianne_sanitize_phone' ) ) {
+if ( ! function_exists( 'marianne_sanitize_telegram' ) ) {
 	/**
-	 * Email sanitization.
+	 * Telegram username sanitization.
 	 *
-	 * @param string $input The email to sanitize.
+	 * @param string $input The desired username.
 	 *
-	 * @return bool Sanitized email.
+	 * @return string The username, if it matches the regular expression.
 	 *
-	 * @since Marianne 1.?
+	 * @since Marianne 1.6.1
 	 */
-	function marianne_sanitize_phone( $input ) {
+	function marianne_sanitize_telegram( $input ) {
 		$output = '';
 
-		if ( preg_match( '/\+?[0-9]+/', $input, $match ) ) {
-			$output = $match[0];
+		if ( $input ) {
+			if ( preg_match( '/^[A-Za-z0-9_]{5,50}$/', $input ) ) {
+				$output = $input;
+			}
 		}
 
 		return $output;
