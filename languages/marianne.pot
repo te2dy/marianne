@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marianne\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-19 14:44+0000\n"
+"POT-Creation-Date: 2021-07-30 16:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -25,12 +25,6 @@ msgid_plural "%d comments"
 msgstr[0] ""
 msgstr[1] ""
 
-#. %s: The name of the contributor.
-#: inc/marianne-theme-page.php:358
-#, php-format
-msgid "%s, for its Dutch translation and its great help in reporting bugs."
-msgstr ""
-
 #: comments.php:51
 msgid "&lsaquo; Newer comments"
 msgstr ""
@@ -44,11 +38,11 @@ msgstr ""
 msgid "About Marianne"
 msgstr ""
 
-#: inc/marianne-theme-page.php:335
+#: inc/marianne-theme-page.php:333
 msgid "Acknowledgements"
 msgstr ""
 
-#: inc/customizer.php:776
+#: inc/customizer.php:799
 msgid "Add a link to the RSS feed of your site."
 msgstr ""
 
@@ -60,20 +54,20 @@ msgstr ""
 msgid "Add a search button."
 msgstr ""
 
-#: inc/customizer.php:810
+#: inc/customizer.php:833
 msgid ""
 "Adds the date the post or page was retrieved and a short link to access the "
 "content. Default: checked."
 msgstr ""
 
 #. %s. The name of the social site.
-#: inc/template-tags.php:647
+#: inc/template-tags.php:669
 #, php-format
 msgctxt "Alternative text for social icon images"
 msgid "%s icon"
 msgstr ""
 
-#: inc/customizer.php:769
+#: inc/customizer.php:792
 msgid "Any link you want to display."
 msgstr ""
 
@@ -88,7 +82,7 @@ msgid ""
 "will delight you… and your readers."
 msgstr ""
 
-#: inc/marianne-theme-page.php:312
+#: inc/marianne-theme-page.php:310
 msgid ""
 "As my native language is not English, you can also help me to improve all "
 "the default text strings of the theme."
@@ -152,7 +146,11 @@ msgstr ""
 msgid "By John Doe. Default: unchecked."
 msgstr ""
 
-#: inc/marianne-theme-page.php:240
+#: inc/customizer.php:783
+msgid "Call"
+msgstr ""
+
+#: inc/marianne-theme-page.php:238
 msgid "Can I display social links with this theme?"
 msgstr ""
 
@@ -160,13 +158,13 @@ msgstr ""
 msgid "Center"
 msgstr ""
 
-#: inc/customizer.php:786
+#: inc/customizer.php:809
 msgid ""
 "Check to hide comments when priting a post or page. In any case, the comment "
 "form will be hidden. Default: checked."
 msgstr ""
 
-#: inc/customizer.php:794
+#: inc/customizer.php:817
 msgid ""
 "Check to hide your widgets when priting a post or page. Default: checked."
 msgstr ""
@@ -176,10 +174,6 @@ msgid ""
 "Choose the font family you want to apply to your site. Your readers' device "
 "will render the pages with its own system font. Please note that the "
 "rendering may vary from device to device. Default: Sans serif."
-msgstr ""
-
-#: inc/customizer.php:759
-msgid "Classic"
 msgstr ""
 
 #: inc/classes/class-marianne-customizer-section-about.php:82
@@ -199,7 +193,7 @@ msgstr ""
 msgid "Content Formatting"
 msgstr ""
 
-#: inc/marianne-theme-page.php:276
+#: inc/marianne-theme-page.php:274
 msgid "Contribute"
 msgstr ""
 
@@ -244,11 +238,11 @@ msgstr ""
 msgid "Default: unchecked."
 msgstr ""
 
-#: inc/customizer.php:596 inc/customizer.php:777
+#: inc/customizer.php:596 inc/customizer.php:800
 msgid "Default: unckecked."
 msgstr ""
 
-#: inc/marianne-theme-page.php:318
+#: inc/marianne-theme-page.php:316
 msgid "Development"
 msgstr ""
 
@@ -260,7 +254,7 @@ msgstr ""
 msgid "Display a link to the next and the previous post."
 msgstr ""
 
-#: inc/customizer.php:809
+#: inc/customizer.php:832
 msgid "Display information related to printing."
 msgstr ""
 
@@ -284,15 +278,15 @@ msgstr ""
 msgid "Display the post published time after the date."
 msgstr ""
 
-#: inc/customizer.php:801
+#: inc/customizer.php:824
 msgid "Display URL of links."
 msgstr ""
 
-#: inc/marianne-theme-page.php:149 inc/marianne-theme-page.php:165
+#: inc/marianne-theme-page.php:147 inc/marianne-theme-page.php:163
 msgid "Donate Bitcoin"
 msgstr ""
 
-#: inc/marianne-theme-page.php:145
+#: inc/marianne-theme-page.php:143
 msgid "Donate ₿"
 msgstr ""
 
@@ -316,7 +310,7 @@ msgstr ""
 msgid "Facebook"
 msgstr ""
 
-#: inc/marianne-theme-page.php:208
+#: inc/marianne-theme-page.php:206
 msgid "FAQ"
 msgstr ""
 
@@ -376,7 +370,7 @@ msgstr ""
 msgid "GitHub"
 msgstr ""
 
-#: inc/marianne-theme-page.php:185
+#: inc/marianne-theme-page.php:183
 msgid "GitHub Repository"
 msgstr ""
 
@@ -408,11 +402,11 @@ msgstr ""
 msgid "Header Settings"
 msgstr ""
 
-#: inc/customizer.php:785
+#: inc/customizer.php:808
 msgid "Hide comments."
 msgstr ""
 
-#: inc/customizer.php:793
+#: inc/customizer.php:816
 msgid "Hide widgets."
 msgstr ""
 
@@ -420,11 +414,11 @@ msgstr ""
 msgid "Hovered elements"
 msgstr ""
 
-#: inc/marianne-theme-page.php:225
+#: inc/marianne-theme-page.php:223
 msgid "How can I change fonts?"
 msgstr ""
 
-#: inc/marianne-theme-page.php:210
+#: inc/marianne-theme-page.php:208
 msgid "How can I set up a logo?"
 msgstr ""
 
@@ -448,8 +442,12 @@ msgstr ""
 msgid "https://wordpress.org/themes/marianne/"
 msgstr ""
 
-#: inc/marianne-theme-page.php:259
+#: inc/marianne-theme-page.php:257
 msgid "I have other questions."
+msgstr ""
+
+#: inc/marianne-theme-page.php:336
+msgid "I would like to thank the following people for their contribution:"
 msgstr ""
 
 #: inc/customizer.php:260
@@ -463,7 +461,7 @@ msgstr ""
 msgid "Instagram"
 msgstr ""
 
-#: inc/marianne-theme-page.php:278
+#: inc/marianne-theme-page.php:276
 msgid "Issues & Feature Requests"
 msgstr ""
 
@@ -491,7 +489,7 @@ msgid "Justify"
 msgstr ""
 
 #. %s. The name of the social site.
-#: inc/template-tags.php:640
+#: inc/template-tags.php:662
 #, php-format
 msgctxt "Label for links to social sites."
 msgid "Link to %s"
@@ -509,15 +507,15 @@ msgstr ""
 msgid "Light"
 msgstr ""
 
-#: functions.php:328 inc/customizer.php:768
+#: functions.php:328 inc/customizer.php:791
 msgid "Link"
 msgstr ""
 
-#: inc/template-tags.php:665
+#: inc/template-tags.php:687
 msgid "Link icon"
 msgstr ""
 
-#: inc/template-tags.php:662
+#: inc/template-tags.php:684
 msgid "Link to a custom URL"
 msgstr ""
 
@@ -526,21 +524,21 @@ msgctxt "Link to Marianne on WordPress Theme Directory"
 msgid "https://wordpress.org/themes/marianne/"
 msgstr ""
 
-#: inc/template-tags.php:798
+#: inc/template-tags.php:820
 msgctxt "Link to the next post."
 msgid "Next"
 msgstr ""
 
-#: inc/template-tags.php:654
+#: inc/template-tags.php:676
 msgid "Link to the phone number"
 msgstr ""
 
-#: inc/template-tags.php:786
+#: inc/template-tags.php:808
 msgctxt "Link to the previous post."
 msgid "Previous"
 msgstr ""
 
-#: inc/template-tags.php:670
+#: inc/template-tags.php:692
 msgid "Link to the RSS feed"
 msgstr ""
 
@@ -548,7 +546,7 @@ msgstr ""
 msgid "LinkedIn"
 msgstr ""
 
-#: inc/marianne-theme-page.php:373
+#: inc/marianne-theme-page.php:377
 msgid "Made in France"
 msgstr ""
 
@@ -573,7 +571,7 @@ msgstr ""
 msgid "Menu"
 msgstr ""
 
-#: inc/marianne-theme-page.php:137
+#: inc/marianne-theme-page.php:135
 msgid "Menus"
 msgstr ""
 
@@ -633,7 +631,7 @@ msgid "Open submenu"
 msgstr ""
 
 #. %s: The URL of the Theme Customizer.
-#: inc/marianne-theme-page.php:232
+#: inc/marianne-theme-page.php:230
 #, php-format
 msgid ""
 "Open the <a href=\"%s\">Theme Customizer</a>. Then, go to Global Settings "
@@ -641,7 +639,7 @@ msgid ""
 msgstr ""
 
 #. %s: The URL of the Theme Customizer.
-#: inc/marianne-theme-page.php:217
+#: inc/marianne-theme-page.php:215
 #, php-format
 msgid ""
 "Open the <a href=\"%s\">Theme Customizer</a>. Then, go to Site Identity and "
@@ -661,36 +659,36 @@ msgstr ""
 msgid "Page Width"
 msgstr ""
 
-#: functions.php:343 inc/customizer.php:747
+#: functions.php:343 inc/customizer.php:771
 msgid "Phone"
 msgstr ""
 
-#: inc/template-tags.php:657
+#: inc/template-tags.php:679
 msgid "Phone icon"
 msgstr ""
 
 #. %1$s: The URL of the GitHub Issues page of the Marianne repository. %2$s: The URL of the support forum of the theme on WordPress.org
-#: inc/marianne-theme-page.php:285
+#: inc/marianne-theme-page.php:283
 #, php-format
 msgid ""
 "Please report issues or make feature requests on <a href=\"%1$s\" "
-"target=\"_blank\">GitHub</a> or, if you do not have an account, on the <a "
-"href=\"%2$s\" target=\"_blank\">support forum</a>."
+"rel=\"external\" target=\"_blank\">GitHub</a> or, if you do not have an "
+"account, on the <a href=\"%2$s\" target=\"_blank\">support forum</a>."
 msgstr ""
 
 #. %s: The URL of the support forum of the theme on WordPress.org
-#: inc/marianne-theme-page.php:266
+#: inc/marianne-theme-page.php:264
 #, php-format
 msgid ""
-"Please visit the <a href=\"%s\" rel=\"external\" target=\"_blank\">support "
-"forum</a> and post them."
+"Please visit the <a href=\"%s\" target=\"_blank\">support forum</a> and post "
+"them."
 msgstr ""
 
 #: inc/customizer.php:480
 msgid "Position of the author's identity"
 msgstr ""
 
-#: inc/template-tags.php:772
+#: inc/template-tags.php:794
 msgid "Post"
 msgstr ""
 
@@ -702,7 +700,7 @@ msgstr ""
 msgid "Post List Settings"
 msgstr ""
 
-#: inc/template-tags.php:773
+#: inc/template-tags.php:795
 msgid "Post navigation"
 msgstr ""
 
@@ -730,7 +728,7 @@ msgstr ""
 msgid "Purple"
 msgstr ""
 
-#: inc/marianne-theme-page.php:143
+#: inc/marianne-theme-page.php:141
 msgid "Rate this theme with ⭐"
 msgstr ""
 
@@ -754,7 +752,7 @@ msgstr ""
 msgid "RSS Feed"
 msgstr ""
 
-#: inc/template-tags.php:673
+#: inc/template-tags.php:695
 msgid "RSS icon"
 msgstr ""
 
@@ -762,7 +760,7 @@ msgstr ""
 msgid "Sans serif"
 msgstr ""
 
-#: inc/marianne-theme-page.php:141
+#: inc/marianne-theme-page.php:139
 msgid "Say thank you 🙏"
 msgstr ""
 
@@ -801,6 +799,10 @@ msgstr ""
 msgid "Sidebar Width"
 msgstr ""
 
+#: functions.php:358 inc/customizer.php:747
+msgid "Signal"
+msgstr ""
+
 #. $1%s: WordPress. $2%s: Marianne.
 #: footer.php:58
 #, php-format
@@ -812,7 +814,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/customizer.php:760
+#: inc/customizer.php:784
 msgid "SMS"
 msgstr ""
 
@@ -820,7 +822,7 @@ msgstr ""
 msgid "Social Links"
 msgstr ""
 
-#: functions.php:358 inc/customizer.php:691
+#: functions.php:363 inc/customizer.php:691
 msgid "Spotify"
 msgstr ""
 
@@ -841,6 +843,10 @@ msgstr ""
 msgid "Teddy"
 msgstr ""
 
+#: functions.php:373 inc/customizer.php:755
+msgid "Telegram"
+msgstr ""
+
 #: inc/customizer.php:406
 msgid "Text Align"
 msgstr ""
@@ -855,10 +861,6 @@ msgid ""
 "anymore."
 msgstr ""
 
-#: inc/marianne-theme-page.php:338
-msgid "Thanks to:"
-msgstr ""
-
 #: inc/customizer.php:189
 msgid ""
 "The automatic mode chooses between light and dark color scheme depending on "
@@ -868,7 +870,7 @@ msgid ""
 msgstr ""
 
 #. %1$s: Bitcoin scheme followed by address. %2$s: Bitcoin address.
-#: inc/marianne-theme-page.php:156
+#: inc/marianne-theme-page.php:154
 #, php-format
 msgctxt "The bitcoin address link."
 msgid "Address: <a href=\"%1$s\">%2$s</a>"
@@ -885,6 +887,18 @@ msgstr ""
 #: functions.php:283 inc/customizer.php:659
 msgctxt "The name of the photography site."
 msgid "500px"
+msgstr ""
+
+#: inc/customizer.php:748
+msgid ""
+"The phone number (without spaces, country code required) you registered to "
+"use Signal. Only works with the latest versions of Signal."
+msgstr ""
+
+#: inc/customizer.php:764
+msgid ""
+"The phone number (without spaces, country code required) you registered to "
+"use WhatsApp."
 msgstr ""
 
 #. %1$s: The date. %2$s: The time.
@@ -914,7 +928,7 @@ msgid "The URL of the Spotify page you want to share."
 msgstr ""
 
 #. %s: The URL of the Marianne repository on GitHub.
-#: inc/marianne-theme-page.php:325
+#: inc/marianne-theme-page.php:323
 #, php-format
 msgid ""
 "There are probably many technical improvements to be made to this theme. You "
@@ -922,7 +936,7 @@ msgid ""
 "contributing on GitHub</a>."
 msgstr ""
 
-#: inc/marianne-theme-page.php:257
+#: inc/marianne-theme-page.php:255
 msgid ""
 "There is no paid version of Marianne. You already have everything this theme "
 "can provide without restrictions."
@@ -946,25 +960,25 @@ msgstr ""
 msgid "This search did not return any results."
 msgstr ""
 
-#: inc/customizer.php:756
+#: inc/customizer.php:780
 msgid ""
 "This will automatically open the right application on your readers' phone "
 "when they will click on it."
 msgstr ""
 
-#: functions.php:363 inc/customizer.php:683
+#: functions.php:368 inc/customizer.php:683
 msgid "TikTok"
 msgstr ""
 
-#: inc/marianne-theme-page.php:294
+#: inc/marianne-theme-page.php:292
 msgid "Translate"
 msgstr ""
 
-#: functions.php:368 inc/customizer.php:723
+#: functions.php:378 inc/customizer.php:723
 msgid "Twitch"
 msgstr ""
 
-#: functions.php:373 inc/customizer.php:603
+#: functions.php:383 inc/customizer.php:603
 msgid "Twitter"
 msgstr ""
 
@@ -972,21 +986,21 @@ msgstr ""
 msgid "Two columns with a left sidebar"
 msgstr ""
 
-#: inc/customizer.php:802
+#: inc/customizer.php:825
 msgid ""
 "URLs will be visible on print so that readers can see them and visit them. "
 "Default: checked."
 msgstr ""
 
 #. %s: The short link of the post.
-#: inc/template-tags.php:739
+#: inc/template-tags.php:761
 #, php-format
 msgctxt "Use only on print."
 msgid "Available at: %s"
 msgstr ""
 
 #. %1$s: The retrieve date. %1$s: The retrieve time.
-#: inc/template-tags.php:719
+#: inc/template-tags.php:741
 #, php-format
 msgctxt "Use only on print."
 msgid "Retrieved %1$s at %2$s (website time)."
@@ -997,34 +1011,34 @@ msgid ""
 "Useful to promote WordPress and Marianne to your readers. Default: displayed."
 msgstr ""
 
-#: inc/marianne-theme-page.php:135
+#: inc/marianne-theme-page.php:133
 msgctxt "Verb. Point to the Theme Customizer."
 msgid "Customize"
 msgstr ""
 
 #. %s: The version number of the theme.
-#: inc/marianne-theme-page.php:117
+#: inc/marianne-theme-page.php:115
 #, php-format
 msgid "Version %s"
 msgstr ""
 
-#: functions.php:378 inc/customizer.php:675
+#: functions.php:388 inc/customizer.php:675
 msgid "Vimeo"
 msgstr ""
 
-#: functions.php:383 inc/customizer.php:635
+#: functions.php:393 inc/customizer.php:635
 msgid "VK"
 msgstr ""
 
-#: inc/customizer.php:755
+#: inc/customizer.php:779
 msgid "What type of phone link do you want to add?"
 msgstr ""
 
-#: inc/customizer.php:761
+#: functions.php:398 inc/customizer.php:763
 msgid "WhatsApp"
 msgstr ""
 
-#: inc/marianne-theme-page.php:255
+#: inc/marianne-theme-page.php:253
 msgid "Where can I download the pro/premium version of Marianne?"
 msgstr ""
 
@@ -1032,20 +1046,20 @@ msgstr ""
 msgid "Where do you want to display your social links?"
 msgstr ""
 
-#: functions.php:189 inc/marianne-theme-page.php:139
+#: functions.php:189 inc/marianne-theme-page.php:137
 msgid "Widgets"
 msgstr ""
 
-#: inc/marianne-theme-page.php:181
+#: inc/marianne-theme-page.php:179
 msgid "WordPress Support Forum"
 msgstr ""
 
-#: inc/marianne-theme-page.php:177
+#: inc/marianne-theme-page.php:175
 msgid "WordPress Theme Directory"
 msgstr ""
 
 #. %s: The URL of the Theme Customizer.
-#: inc/marianne-theme-page.php:247
+#: inc/marianne-theme-page.php:245
 #, php-format
 msgid ""
 "Yes, you can! Open the <a href=\"%s\">Theme Customizer</a>. Then, go to "
@@ -1070,7 +1084,7 @@ msgid "You can write any text to add in the footer."
 msgstr ""
 
 #. %s: The URL of the language repository on GitHub.
-#: inc/marianne-theme-page.php:301
+#: inc/marianne-theme-page.php:299
 #, php-format
 msgid ""
 "You want to use Marianne in your language? You can help me to translate it "
@@ -1118,12 +1132,16 @@ msgstr ""
 msgid "Your Mastodon profile URL."
 msgstr ""
 
-#: inc/customizer.php:748
-msgid "Your phone number (without spaces)."
+#: inc/customizer.php:772
+msgid "Your phone number (without spaces, country code required)."
 msgstr ""
 
 #: inc/customizer.php:732
 msgid "Your Reddit profile URL."
+msgstr ""
+
+#: inc/customizer.php:756
+msgid "Your Telegram username."
 msgstr ""
 
 #: inc/customizer.php:684
@@ -1150,7 +1168,7 @@ msgstr ""
 msgid "Your YouTube channel URL."
 msgstr ""
 
-#: functions.php:388 inc/customizer.php:667
+#: functions.php:403 inc/customizer.php:667
 msgid "YouTube"
 msgstr ""
 
