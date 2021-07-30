@@ -336,39 +336,25 @@ function marianne_theme_page() {
 					<?php esc_html_e( 'I would like to thank the following people for their contribution:', 'marianne' ); ?>
 				</p>
 
-				<?php
-				$contributors = array(
-					array(
-						'name' => 'Dr. Matthias Kampmann',
-						'url'  => 'https://www.knotenpunkte.net/',
-						'text' => '%s, whose suggestions allowed me to improve some customization features of the theme.',
-					),
-					array(
-						'name' => 'Peter Pellenaars',
-						'url'  => 'https://www.peterpellenaars.nl/',
-						'text' => '%s, who has been a great help in reporting bugs, improving the text strings, and for its translation into Dutch.',
-					),
-				);
-				?>
+				<ul class="marianne-admin-list">
+					<li>
+						<?php
+						echo wp_kses(
+							__( '<a href="https://www.knotenpunkte.net/" rel="external" target="_blank">Dr. Matthias Kampmann</a>, whose suggestions allowed me to improve some customization features of the theme.', 'marianne' ),
+							$kses_allowed_html
+						);
+						?>
+					</li>
 
-				<?php if ( $contributors ) : ?>
-					<ul class="marianne-admin-list">
-						<?php foreach ( $contributors as $contributor ) : ?>
-							<li>
-								<?php
-								printf(
-									wp_kses(
-										/* translators: %s: The name of the contributor. */
-										__( $contributor['text'], 'marianne' ),
-										$kses_allowed_html
-									),
-									'<a href="' . esc_url( $contributor['url'] ) . '" rel="external" target="_blank">' . esc_html( $contributor['name'] ) . '</a>'
-								);
-								?>
-							</li>
-						<?php endforeach; ?>
-					</ul>
-				<?php endif; ?>
+					<li>
+						<?php
+						echo wp_kses(
+							__( '<a href="https://www.peterpellenaars.nl/" rel="external" target="_blank">Peter Pellenaars</a>, who has been a great help in reporting bugs, improving the text strings, and for its translation into Dutch.', 'marianne' ),
+							$kses_allowed_html
+						);
+						?>
+					</li>
+				</ul>
 			</div>
 
 			<footer class="marianne-admin-footer">

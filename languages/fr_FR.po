@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Marianne\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-02 14:22+0000\n"
-"PO-Revision-Date: 2021-07-30 16:31+0000\n"
+"PO-Revision-Date: 2021-07-30 16:53+0000\n"
 "Last-Translator: Teddy\n"
 "Language-Team: French (France)\n"
 "Language: fr_FR\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.5.2; wp-5.7.2\n"
+"X-Loco-Version: 2.5.3; wp-5.8\n"
 "X-Domain: marianne"
 
 #. %d: comment count number.
@@ -31,6 +31,28 @@ msgstr "&lsaquo; Commentaires plus récents"
 #: inc/template-tags.php:464
 msgid "&lsaquo; Previous page"
 msgstr "&lsaquo; Page précédente"
+
+#: inc/marianne-theme-page.php:343
+msgid ""
+"<a href=\"https://www.knotenpunkte.net/\" rel=\"external\" target=\"_blank\">"
+"Dr. Matthias Kampmann</a>, whose suggestions allowed me to improve some "
+"customization features of the theme."
+msgstr ""
+"<a href=\"https://www.knotenpunkte.net/\" rel=\"external\" target=\"_blank\">"
+"Dr. Matthias Kampmann</a>, dont les suggestions m’ont permis d’améliorer "
+"quelques options de personnalisation du thème."
+
+#: inc/marianne-theme-page.php:352
+msgid ""
+"<a href=\"https://www.peterpellenaars.nl/\" rel=\"external\" "
+"target=\"_blank\">Peter Pellenaars</a>, who has been a great help in "
+"reporting bugs, improving the text strings, and for its translation into "
+"Dutch."
+msgstr ""
+"<a href=\"https://www.peterpellenaars.nl/\" rel=\"external\" "
+"target=\"_blank\">Peter Pellenaars</a>, qui a été d’une grande aide dans le "
+"signalement de bugs, dans l’amélioration des chaînes de texte, ainsi que "
+"dans sa traduction en néerlandais."
 
 #: inc/marianne-theme-page.php:40 inc/marianne-theme-page.php:41
 #: inc/customizer.php:153
@@ -592,7 +614,7 @@ msgstr "Lien vers le flux RSS"
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: inc/marianne-theme-page.php:377
+#: inc/marianne-theme-page.php:363
 msgid "Made in France"
 msgstr "Conçu en France"
 
@@ -744,7 +766,7 @@ msgstr ""
 
 #. %s: The URL of the support forum of the theme on WordPress.org
 #: inc/marianne-theme-page.php:264
-#, fuzzy, php-format
+#, php-format
 #| msgid ""
 #| "Please visit the <a href=\"%s\" rel=\"external\" target=\"_blank\">"
 #| "support forum</a> and post them."
@@ -752,8 +774,8 @@ msgid ""
 "Please visit the <a href=\"%s\" target=\"_blank\">support forum</a> and post "
 "them."
 msgstr ""
-"Veuillez visiter le <a href=\"%s\" rel=\"external\" target=\"_blank\">forum "
-"d’assistance</a> et les publier."
+"Veuillez visiter le <a href=\"%s\" target=\"_blank\">forum d’assistance</a> "
+"et les publier."
 
 #: inc/customizer.php:480
 msgid "Position of the author's identity"

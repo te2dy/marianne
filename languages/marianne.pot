@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marianne\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-30 16:27+0000\n"
+"POT-Creation-Date: 2021-07-30 16:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -31,6 +31,21 @@ msgstr ""
 
 #: inc/template-tags.php:464
 msgid "&lsaquo; Previous page"
+msgstr ""
+
+#: inc/marianne-theme-page.php:343
+msgid ""
+"<a href=\"https://www.knotenpunkte.net/\" rel=\"external\" target=\"_blank\">"
+"Dr. Matthias Kampmann</a>, whose suggestions allowed me to improve some "
+"customization features of the theme."
+msgstr ""
+
+#: inc/marianne-theme-page.php:352
+msgid ""
+"<a href=\"https://www.peterpellenaars.nl/\" rel=\"external\" "
+"target=\"_blank\">Peter Pellenaars</a>, who has been a great help in "
+"reporting bugs, improving the text strings, and for its translation into "
+"Dutch."
 msgstr ""
 
 #: inc/marianne-theme-page.php:40 inc/marianne-theme-page.php:41
@@ -546,7 +561,7 @@ msgstr ""
 msgid "LinkedIn"
 msgstr ""
 
-#: inc/marianne-theme-page.php:377
+#: inc/marianne-theme-page.php:363
 msgid "Made in France"
 msgstr ""
 
