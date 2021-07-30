@@ -38,6 +38,7 @@ on tablet and mobile, and it has been designed to give a good print results.
 
 === 1.6.1 – July 30th, 2021 ===
 Added: social link to Signal and Telegram.
+Added: one contributor in About Marianne page.
 Updated: "tested up to" version number (5.7.2 to 5.8).
 Updated: translation files.
 
