@@ -2,7 +2,7 @@
 
 Contributors: Teddy
 Requires at least: 5.3
-Tested up to: 5.7.2
+Tested up to: 5.8
 Requires PHP: 5.2
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
