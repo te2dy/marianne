@@ -156,7 +156,13 @@ if ( ! function_exists( 'marianne_menu_primary' ) ) {
 			?>
 				<div id="menu-primary-container" aria-label="<?php echo esc_attr__( 'Open the search form', 'marianne' ); ?>">
 					<button id="header-search-button" class="button-inline button-expand" aria-haspopup="true" aria-expanded="false">
-						<?php echo esc_html_x( 'Search', 'The search button in the header.', 'marianne' ); ?>
+						<?php
+						if ( ! marianne_get_theme_mod( 'marianne_header_menu_search_text' ) ) {
+							echo esc_html_x( 'Search', 'The search button in the header.', 'marianne' );
+						} else {
+							echo esc_html( marianne_get_theme_mod( 'marianne_header_menu_search_text' ) );
+						}
+						?>
 
 						<span class="screen-reader-text">
 							<?php esc_html_e( 'Open the search form', 'marianne' ); ?>

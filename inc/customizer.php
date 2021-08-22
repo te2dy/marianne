@@ -397,6 +397,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'title'       => __( 'Search button text', 'marianne' ),
 			'description' => __( 'You can customize the button text. Leave blank to use the default text (Search).', 'marianne' ),
 			'type'        => 'text',
+			'live'        => true,
 		);
 
 		// Content Formatting.
