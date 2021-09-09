@@ -144,7 +144,7 @@ if ( ! function_exists( 'marianne_custom_css' ) ) {
 		if ( 'one-column' === $marianne_layout ) {
 			$css['.site']['max-width'] = absint( $marianne_page_width ) . 'px';
 
-			$css['.site-header']['margin-top']    = '2em';
+			$css['.site-header']['margin-top']    = '4em';
 			$css['.site-header']['margin-bottom'] = '4em';
 
 			$css['#menu-primary-container']['margin'] = '2em 0';
@@ -213,8 +213,6 @@ if ( ! function_exists( 'marianne_custom_css' ) ) {
 			$media['.site-secondary']['width']       = 'auto';
 			$media['.site-secondary']['float']       = 'none';
 			$media['.site-secondary']['margin-left'] = '0';
-
-
 
 			wp_add_inline_style( 'marianne-stylesheet', marianne_array_to_css( $media, $media_rule ) );
 
