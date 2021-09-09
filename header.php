@@ -31,6 +31,7 @@
 		$marianne_body_class .= ' text-shadow';
 	}
 	?>
+
 	<body <?php body_class( $marianne_body_class ); ?>>
 		<?php
 		if ( function_exists( 'wp_body_open' ) ) {
