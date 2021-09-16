@@ -3,9 +3,9 @@ msgstr ""
 "Project-Id-Version: Marianne\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-02 14:22+0000\n"
-"PO-Revision-Date: 2021-07-30 16:53+0000\n"
+"PO-Revision-Date: 2021-09-16 20:54+0000\n"
 "Last-Translator: Teddy\n"
-"Language-Team: French (France)\n"
+"Language-Team: Français\n"
 "Language: fr_FR\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 
 #. %d: comment count number.
 #. %d: Comment count number.
-#: comments.php:39 inc/template-tags.php:426
+#: comments.php:39 inc/template-tags.php:432
 #, php-format
 msgid "%d comment"
 msgid_plural "%d comments"
@@ -28,7 +28,7 @@ msgstr[1] "%d commentaires"
 msgid "&lsaquo; Newer comments"
 msgstr "&lsaquo; Commentaires plus récents"
 
-#: inc/template-tags.php:464
+#: inc/template-tags.php:470
 msgid "&lsaquo; Previous page"
 msgstr "&lsaquo; Page précédente"
 
@@ -63,19 +63,23 @@ msgstr "À propos de Marianne"
 msgid "Acknowledgements"
 msgstr "Remerciements"
 
-#: inc/customizer.php:799
+#: inc/customizer.php:590
+msgid "Add a button to go back to the top of the page."
+msgstr "Ajouter un bouton pour retourner en haut de la page."
+
+#: inc/customizer.php:827
 msgid "Add a link to the RSS feed of your site."
 msgstr "Ajouter un lien vers le flux RSS de votre site."
 
-#: inc/customizer.php:439 inc/customizer.php:513
+#: inc/customizer.php:449 inc/customizer.php:534
 msgid "Add a prefix to the author's name."
 msgstr "Ajouter un préfixe au nom de l’auteur."
 
-#: inc/customizer.php:389
+#: inc/customizer.php:398
 msgid "Add a search button."
 msgstr "Ajouter un bouton de recherche."
 
-#: inc/customizer.php:833
+#: inc/customizer.php:861
 msgid ""
 "Adds the date the post or page was retrieved and a short link to access the "
 "content. Default: checked."
@@ -84,13 +88,13 @@ msgstr ""
 "pour accéder au contenu. Par défaut&nbsp;: non coché."
 
 #. %s. The name of the social site.
-#: inc/template-tags.php:669
+#: inc/template-tags.php:675
 #, php-format
 msgctxt "Alternative text for social icon images"
 msgid "%s icon"
 msgstr "Icône %s"
 
-#: inc/customizer.php:792
+#: inc/customizer.php:820
 msgid "Any link you want to display."
 msgstr "Autre lien que vous souhaitez afficher."
 
@@ -121,7 +125,7 @@ msgstr ""
 "Comme ma langue maternelle n'est pas l’anglais, vous pouvez également "
 "m’aider à améliorer toutes les chaînes de texte par défaut du thème."
 
-#: inc/customizer.php:492
+#: inc/customizer.php:513
 msgid "Author's info to display"
 msgstr "Informations de l’auteur à afficher"
 
@@ -129,11 +133,15 @@ msgstr "Informations de l’auteur à afficher"
 msgid "Auto"
 msgstr "Auto"
 
-#: inc/customizer.php:496
+#: inc/customizer.php:517
 msgid "Avatar"
 msgstr "Avatar"
 
-#: inc/customizer.php:493
+#: footer.php:72 footer.php:79
+msgid "Back to top"
+msgstr "Retour en haut"
+
+#: inc/customizer.php:514
 msgid ""
 "Before displaying avatars, make sure that they are enabled in Settings > "
 "Discussion."
@@ -145,19 +153,19 @@ msgstr ""
 msgid "Blue"
 msgstr "Bleu"
 
-#: inc/customizer.php:354
+#: inc/customizer.php:363
 msgid "Bold"
 msgstr "Gras"
 
-#: inc/customizer.php:355
+#: inc/customizer.php:364
 msgid "Bolder"
 msgstr "Très gras"
 
-#: inc/customizer.php:484
+#: inc/customizer.php:505
 msgid "Bottom of the post"
 msgstr "En bas de l’article"
 
-#: inc/customizer.php:422
+#: inc/customizer.php:432
 msgid ""
 "Breaks some words in half so that they continue on another line rather than "
 "moving them entirely to the next line. Especially useful when the text "
@@ -169,12 +177,12 @@ msgstr ""
 "justifié&nbsp;». Valeur par défaut : désactivé."
 
 #. %s: The author's name.
-#: inc/template-tags.php:310 inc/template-tags.php:323
+#: inc/template-tags.php:316 inc/template-tags.php:329
 #, php-format
 msgid "By %s"
 msgstr "Par %s"
 
-#: inc/customizer.php:310
+#: inc/customizer.php:319
 msgid ""
 "By default, the browser automatically chooses whether or not to smooth the "
 "fonts. By checking this box, you will ask it to smooth them. Default: "
@@ -184,11 +192,11 @@ msgstr ""
 "polices. En cochant cette case, vous lui demander de les lisser. Par "
 "défaut&nbsp;: non coché."
 
-#: inc/customizer.php:440
+#: inc/customizer.php:450
 msgid "By John Doe. Default: unchecked."
 msgstr "Par Jean Dupont. Par défaut&nbsp;: décoché."
 
-#: inc/customizer.php:783
+#: inc/customizer.php:811
 msgid "Call"
 msgstr "Appel"
 
@@ -196,11 +204,11 @@ msgstr "Appel"
 msgid "Can I display social links with this theme?"
 msgstr "Puis-je afficher des liens sociaux avec ce thème&nbsp;?"
 
-#: inc/customizer.php:332 inc/customizer.php:411 inc/customizer.php:543
+#: inc/customizer.php:341 inc/customizer.php:421 inc/customizer.php:564
 msgid "Center"
 msgstr "Centré"
 
-#: inc/customizer.php:809
+#: inc/customizer.php:837
 msgid ""
 "Check to hide comments when priting a post or page. In any case, the comment "
 "form will be hidden. Default: checked."
@@ -209,14 +217,14 @@ msgstr ""
 "page. Dans tous les cas, le formulaire de commentaire sera masqué. Par "
 "défaut&nbsp;: non coché."
 
-#: inc/customizer.php:817
+#: inc/customizer.php:845
 msgid ""
 "Check to hide your widgets when priting a post or page. Default: checked."
 msgstr ""
 "Cocher pour masquer les widgets à l’impression d’un article ou d’une page. "
 "Par défaut&nbsp;: non coché."
 
-#: inc/customizer.php:282
+#: inc/customizer.php:291
 msgid ""
 "Choose the font family you want to apply to your site. Your readers' device "
 "will render the pages with its own system font. Please note that the "
@@ -254,45 +262,45 @@ msgstr "Contribuer"
 msgid "Dark"
 msgstr "Sombre"
 
-#: inc/customizer.php:246
+#: inc/customizer.php:255
 #| msgid "Default: 50px."
 msgid "Default: 100px."
 msgstr "Par défaut&nbsp;: 100&nbsp;px."
 
-#: inc/customizer.php:232
+#: inc/customizer.php:241
 msgid "Default: 250px."
 msgstr "Par défaut&nbsp;: 250&nbsp;px."
 
-#: inc/customizer.php:350
+#: inc/customizer.php:359
 msgid "Default: bolder."
 msgstr "Par défaut&nbsp;: très gras."
 
-#: inc/customizer.php:506
+#: inc/customizer.php:527
 msgid "Default: checked."
 msgstr "Par défaut&nbsp;: coché."
 
-#: inc/customizer.php:571
+#: inc/customizer.php:599
 msgid "Default: footer."
 msgstr "Par défaut&nbsp;: pied de page."
 
-#: inc/customizer.php:328 inc/customizer.php:539
+#: inc/customizer.php:337 inc/customizer.php:560
 msgid "Default: left."
 msgstr "Par défaut&nbsp;: gauche."
 
-#: inc/customizer.php:364 inc/customizer.php:377
+#: inc/customizer.php:373 inc/customizer.php:386
 msgid "Default: normal."
 msgstr "Par défaut&nbsp;: normal."
 
-#: inc/customizer.php:583
+#: inc/customizer.php:611
 msgid "Default: square."
 msgstr "Par défaut&nbsp;: carré."
 
-#: inc/customizer.php:432 inc/customizer.php:456 inc/customizer.php:473
-#: inc/customizer.php:514 inc/customizer.php:530
+#: inc/customizer.php:219 inc/customizer.php:442 inc/customizer.php:466
+#: inc/customizer.php:494 inc/customizer.php:535 inc/customizer.php:551
 msgid "Default: unchecked."
 msgstr "Par défaut&nbsp;: décoché."
 
-#: inc/customizer.php:596 inc/customizer.php:800
+#: inc/customizer.php:624 inc/customizer.php:828
 msgid "Default: unckecked."
 msgstr "Par défaut&nbsp;: non coché."
 
@@ -300,39 +308,47 @@ msgstr "Par défaut&nbsp;: non coché."
 msgid "Development"
 msgstr "Développement"
 
-#: functions.php:293 inc/customizer.php:627
+#: functions.php:298 inc/customizer.php:655
 msgid "Diaspora"
 msgstr "Diaspora"
 
-#: inc/customizer.php:529
+#: inc/customizer.php:550
 msgid "Display a link to the next and the previous post."
 msgstr "Afficher un lien vers l’article suivant et vers l’article précédent."
 
-#: inc/customizer.php:832
+#: inc/customizer.php:860
 msgid "Display information related to printing."
 msgstr "Afficher des informations relatives à l’impression."
 
-#: inc/customizer.php:447 inc/customizer.php:505
+#: inc/customizer.php:473
+msgid "Display of the post content"
+msgstr "Affichage du contenu des articles"
+
+#: inc/customizer.php:457 inc/customizer.php:526
 msgid "Display the author's avatar."
 msgstr "Afficher l’avatar de l’auteur."
 
-#: inc/customizer.php:521
+#: inc/customizer.php:542
 msgid "Display the author's biographical info."
 msgstr "Afficher les éléments biographiques de l’auteur."
 
-#: inc/customizer.php:431
+#: inc/customizer.php:441
 msgid "Display the author's name."
 msgstr "Afficher le nom de l’auteur."
 
-#: inc/customizer.php:561
+#: inc/customizer.php:582
 msgid "Display the default footer mention."
 msgstr "Afficher la mention par défaut dans le pied de page."
 
-#: inc/customizer.php:455 inc/customizer.php:472
+#: inc/customizer.php:465 inc/customizer.php:493
 msgid "Display the post published time after the date."
 msgstr "Afficher l’heure de publication de l’article après la date."
 
-#: inc/customizer.php:824
+#: inc/customizer.php:218
+msgid "Display the title of the front page."
+msgstr "Afficher le titre de la page d’accueil."
+
+#: inc/customizer.php:852
 msgid "Display URL of links."
 msgstr "Afficher les adresses des liens."
 
@@ -344,24 +360,24 @@ msgstr "Faire un don en Bitcoin"
 msgid "Donate ₿"
 msgstr "Donner ₿"
 
-#: functions.php:298 inc/customizer.php:739
+#: functions.php:303 inc/customizer.php:767
 msgid "Email"
 msgstr "Courriel"
 
-#: inc/customizer.php:421
+#: inc/customizer.php:431
 msgid "Enable hyphenation."
 msgstr "Activer les césures."
 
-#: inc/customizer.php:317
+#: inc/customizer.php:326
 msgid "Enable text shadow."
 msgstr "Activer l’ombre des textes."
 
-#: inc/customizer.php:273
+#: inc/customizer.php:282
 msgid "Expand featured images that are not wide enough."
 msgstr ""
 "Étendre les images mises en avant quand elles ne sont pas assez larges."
 
-#: functions.php:303 functions.php:308 inc/customizer.php:619
+#: functions.php:308 functions.php:313 inc/customizer.php:647
 msgid "Facebook"
 msgstr "Facebook"
 
@@ -369,35 +385,35 @@ msgstr "Facebook"
 msgid "FAQ"
 msgstr "FAQ"
 
-#: inc/customizer.php:651
+#: inc/customizer.php:679
 msgid "Flickr"
 msgstr "Flickr"
 
-#: inc/customizer.php:281
+#: inc/customizer.php:290
 msgid "Font Family"
 msgstr "Famille de polices"
 
-#: inc/customizer.php:295
+#: inc/customizer.php:304
 msgid "Font Size"
 msgstr "Taille de la police"
 
-#: inc/customizer.php:376
+#: inc/customizer.php:385
 msgid "Font style of the site description"
 msgstr "Style de police de la description du site"
 
-#: inc/customizer.php:363
+#: inc/customizer.php:372
 msgid "Font weight of the site description"
 msgstr "Poids de la police de la description du site"
 
-#: inc/customizer.php:349
+#: inc/customizer.php:358
 msgid "Font weight of the site title"
 msgstr "Poids de la police du titre du site"
 
-#: inc/customizer.php:575
+#: inc/customizer.php:603
 msgid "Footer"
 msgstr "Pied de page"
 
-#: inc/customizer.php:538
+#: inc/customizer.php:559
 msgid "Footer Align"
 msgstr "Alignement du pied de page"
 
@@ -409,21 +425,21 @@ msgstr "Menu du pied de page"
 msgid "Footer Settings"
 msgstr "Réglages du pied de page"
 
-#: inc/customizer.php:552
+#: inc/customizer.php:573
 msgid "Footer Text"
 msgstr "Texte du pied de page"
 
-#: inc/customizer.php:464
+#: inc/customizer.php:485
 msgid "For example, \"No comments\" or \"Write a comment\". Default: empty."
 msgstr ""
 "Par exemple, «&nbsp;Aucun commentaire&nbsp;» ou «&nbsp;Écrire un "
 "commentaire&nbsp;». Par défaut&nbsp;: vide."
 
-#: inc/customizer.php:309
+#: inc/customizer.php:318
 msgid "Force anti-aliasing."
 msgstr "Forcer l’anticrénelage."
 
-#: functions.php:313 inc/customizer.php:707
+#: functions.php:318 inc/customizer.php:735
 msgid "GitHub"
 msgstr "GitHub"
 
@@ -431,11 +447,11 @@ msgstr "GitHub"
 msgid "GitHub Repository"
 msgstr "Répertoire GitHub"
 
-#: functions.php:318 inc/customizer.php:715
+#: functions.php:323 inc/customizer.php:743
 msgid "GitLab"
 msgstr "GitLab"
 
-#: inc/customizer.php:318
+#: inc/customizer.php:327
 msgid "Give some relief to your texts. Default: disabled."
 msgstr "Donner du relief à vos textes. Par défaut&nbsp;: désactivé."
 
@@ -447,11 +463,11 @@ msgstr "Réglages généraux"
 msgid "Green"
 msgstr "Vert"
 
-#: inc/customizer.php:574
+#: inc/customizer.php:602
 msgid "Header"
 msgstr "En-tête"
 
-#: inc/customizer.php:327
+#: inc/customizer.php:336
 msgid "Header Align"
 msgstr "Alignement de l’en-tête"
 
@@ -459,11 +475,11 @@ msgstr "Alignement de l’en-tête"
 msgid "Header Settings"
 msgstr "Réglages de l’en-tête"
 
-#: inc/customizer.php:808
+#: inc/customizer.php:836
 msgid "Hide comments."
 msgstr "Masquer les commentaires."
 
-#: inc/customizer.php:816
+#: inc/customizer.php:844
 msgid "Hide widgets."
 msgstr "Masquer les widgets."
 
@@ -479,7 +495,7 @@ msgstr "Comment puis-je modifier les polices&nbsp;?"
 msgid "How can I set up a logo?"
 msgstr "Comment puis-je définir un logo&nbsp;?"
 
-#: inc/customizer.php:582
+#: inc/customizer.php:610
 msgid "How do you want to display your social links?"
 msgstr "Comment souhaitez-vous afficher vos liens sociaux&nbsp;?"
 
@@ -508,7 +524,7 @@ msgid "I would like to thank the following people for their contribution:"
 msgstr ""
 "Je souhaite remercier les personnes suivantes pour leur contribution&nbsp;:"
 
-#: inc/customizer.php:260
+#: inc/customizer.php:269
 msgid ""
 "If you increase the width of the page, your featured images may become too "
 "small. In this case, you should regenerate their thumbnails with a plugins "
@@ -519,7 +535,7 @@ msgstr ""
 "miniatures avec une extension (recommandé). Ou vous pouvez activer l’option "
 "qui suit. Par défaut&nbsp;: 480&nbsp;px."
 
-#: functions.php:323 inc/customizer.php:643
+#: functions.php:328 inc/customizer.php:671
 msgid "Instagram"
 msgstr "Instagram"
 
@@ -527,7 +543,7 @@ msgstr "Instagram"
 msgid "Issues & Feature Requests"
 msgstr "Problèmes et suggestions d’améliorations"
 
-#: inc/customizer.php:407
+#: inc/customizer.php:417
 msgid ""
 "It does not prevent to choose a particular alignment in the text editor. "
 "Default: left."
@@ -541,33 +557,33 @@ msgstr ""
 "On dirait que rien n’a été trouvé à cet endroit. Essayez peut-être une "
 "recherche&nbsp;?"
 
-#: inc/customizer.php:390
+#: inc/customizer.php:399
 msgid ""
 "It will be added as a primary menu item if a menu is set. Default: unchecked."
 msgstr ""
 "Il sera ajouté comme élément du menu principal si un menu est défini. Par "
 "défaut&nbsp;: non coché."
 
-#: inc/customizer.php:381
+#: inc/customizer.php:390
 msgid "Italic"
 msgstr "Italique"
 
-#: inc/customizer.php:413
+#: inc/customizer.php:423
 msgid "Justify"
 msgstr "Justifié"
 
 #. %s. The name of the social site.
-#: inc/template-tags.php:662
+#: inc/template-tags.php:668
 #, php-format
 msgctxt "Label for links to social sites."
 msgid "Link to %s"
 msgstr "Liens vers %s"
 
-#: inc/customizer.php:218
+#: inc/customizer.php:227
 msgid "Layout"
 msgstr "Disposition"
 
-#: inc/customizer.php:331 inc/customizer.php:410 inc/customizer.php:542
+#: inc/customizer.php:340 inc/customizer.php:420 inc/customizer.php:563
 msgid "Left"
 msgstr "Gauche"
 
@@ -575,15 +591,15 @@ msgstr "Gauche"
 msgid "Light"
 msgstr "Clair"
 
-#: functions.php:328 inc/customizer.php:791
+#: functions.php:333 inc/customizer.php:819
 msgid "Link"
 msgstr "Lien"
 
-#: inc/template-tags.php:687
+#: inc/template-tags.php:693
 msgid "Link icon"
 msgstr "Icône lien"
 
-#: inc/template-tags.php:684
+#: inc/template-tags.php:690
 msgid "Link to a custom URL"
 msgstr "Lien vers une adresse personnalisée"
 
@@ -592,25 +608,25 @@ msgctxt "Link to Marianne on WordPress Theme Directory"
 msgid "https://wordpress.org/themes/marianne/"
 msgstr "https://fr.wordpress.org/themes/marianne/"
 
-#: inc/template-tags.php:820
+#: inc/template-tags.php:826
 msgctxt "Link to the next post."
 msgid "Next"
 msgstr "Suivant"
 
-#: inc/template-tags.php:676
+#: inc/template-tags.php:682
 msgid "Link to the phone number"
 msgstr "Lien vers le numéro de téléphone"
 
-#: inc/template-tags.php:808
+#: inc/template-tags.php:814
 msgctxt "Link to the previous post."
 msgid "Previous"
 msgstr "Précédent"
 
-#: inc/template-tags.php:692
+#: inc/template-tags.php:698
 msgid "Link to the RSS feed"
 msgstr "Lien vers le flux RSS"
 
-#: functions.php:333 inc/customizer.php:699
+#: functions.php:338 inc/customizer.php:727
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
@@ -618,14 +634,14 @@ msgstr "LinkedIn"
 msgid "Made in France"
 msgstr "Conçu en France"
 
-#: inc/customizer.php:448
+#: inc/customizer.php:458
 msgid ""
 "Make sure avatars are enabled in Settings > Discussion. Default: unchecked."
 msgstr ""
 "Assurez-vous que les avatars soient activés dans Réglages > Discussion. Par "
 "défaut&nbsp;: décoché."
 
-#: inc/customizer.php:341
+#: inc/customizer.php:350
 msgid "Make the logo round."
 msgstr "Afficher le logo rond."
 
@@ -633,7 +649,7 @@ msgstr "Afficher le logo rond."
 msgid "Marianne"
 msgstr "Marianne"
 
-#: functions.php:338 inc/customizer.php:611
+#: functions.php:343 inc/customizer.php:639
 msgid "Mastodon"
 msgstr "Mastodon"
 
@@ -645,27 +661,27 @@ msgstr "Menu"
 msgid "Menus"
 msgstr "Menus"
 
-#: inc/customizer.php:287
+#: inc/customizer.php:296
 msgid "Monospaced"
 msgstr "Chasse fixe"
 
-#: inc/customizer.php:495
+#: inc/customizer.php:516
 msgid "Name"
 msgstr "Nom"
 
-#: inc/customizer.php:497
+#: inc/customizer.php:518
 msgid "Name & avatar"
 msgstr "Nom et avatar"
 
-#: inc/template-tags.php:470
+#: inc/template-tags.php:476
 msgid "Next page &rsaquo;"
 msgstr "Page suivante &rsaquo;"
 
-#: inc/customizer.php:353 inc/customizer.php:368 inc/customizer.php:380
+#: inc/customizer.php:362 inc/customizer.php:377 inc/customizer.php:389
 msgid "Normal"
 msgstr "Normal"
 
-#: inc/customizer.php:482
+#: inc/customizer.php:503
 msgid "Not displayed (default)"
 msgstr "Non affichée (par défaut)"
 
@@ -677,11 +693,11 @@ msgstr "Il n’y a rien ici"
 msgid "Older comments &rsaquo;"
 msgstr "Commentaires plus anciens &rsaquo;"
 
-#: inc/customizer.php:222
+#: inc/customizer.php:231
 msgid "One column"
 msgstr "Une colonne"
 
-#: inc/customizer.php:342
+#: inc/customizer.php:351
 msgid ""
 "Only applies if a logo is set (see the Site Identity section). Default: "
 "unckecked."
@@ -689,14 +705,14 @@ msgstr ""
 "S’applique uniquement si un logo est défini (voir la section Identité du "
 "site). Par défaut&nbsp;: non coché."
 
-#: inc/customizer.php:522
+#: inc/customizer.php:543
 msgid ""
 "Only if this info is set on the profile of the author. Default: checked."
 msgstr ""
 "Seulement si ces informations ont été renseignées dans le profil de l’auteur."
 " Par défaut&nbsp;: non coché."
 
-#: inc/customizer.php:595
+#: inc/customizer.php:623
 msgid "Open links in a new tab."
 msgstr "Ouvrir les liens dans un nouvel onglet."
 
@@ -727,7 +743,7 @@ msgstr ""
 "Publier pour appliquer les changements."
 
 #: inc/template-tags.php:133 inc/template-tags.php:157
-#: inc/template-tags.php:162
+#: inc/template-tags.php:168
 msgid "Open the search form"
 msgstr "Ouvrir le formulaire de recherche"
 
@@ -735,15 +751,15 @@ msgstr "Ouvrir le formulaire de recherche"
 msgid "Orange"
 msgstr "Orange"
 
-#: inc/customizer.php:259
+#: inc/customizer.php:268
 msgid "Page Width"
 msgstr "Largeur de la page"
 
-#: functions.php:343 inc/customizer.php:771
+#: functions.php:348 inc/customizer.php:799
 msgid "Phone"
 msgstr "Téléphone"
 
-#: inc/template-tags.php:679
+#: inc/template-tags.php:685
 msgid "Phone icon"
 msgstr "Icône téléphone"
 
@@ -777,15 +793,15 @@ msgstr ""
 "Veuillez visiter le <a href=\"%s\" target=\"_blank\">forum d’assistance</a> "
 "et les publier."
 
-#: inc/customizer.php:480
+#: inc/customizer.php:501
 msgid "Position of the author's identity"
 msgstr "Position de l’identité de l’auteur"
 
-#: inc/template-tags.php:794
+#: inc/template-tags.php:800
 msgid "Post"
 msgstr "Article"
 
-#: inc/customizer.php:483
+#: inc/customizer.php:504
 msgid "Post header"
 msgstr "En-tête de l’article"
 
@@ -793,7 +809,7 @@ msgstr "En-tête de l’article"
 msgid "Post List Settings"
 msgstr "Réglages de la liste des articles"
 
-#: inc/template-tags.php:795
+#: inc/template-tags.php:801
 msgid "Post navigation"
 msgstr "Navigation dans l‘article"
 
@@ -801,11 +817,11 @@ msgstr "Navigation dans l‘article"
 msgid "Post Settings"
 msgstr "Réglages des articles"
 
-#: inc/template-tags.php:459
+#: inc/template-tags.php:465
 msgid "Posts"
 msgstr "Articles"
 
-#: inc/template-tags.php:460
+#: inc/template-tags.php:466
 msgid "Posts navigation"
 msgstr "Navigation entre les articles"
 
@@ -829,27 +845,27 @@ msgstr "Noter ce thème avec des ⭐"
 msgid "Red"
 msgstr "Rouge"
 
-#: functions.php:348 inc/customizer.php:731
+#: functions.php:353 inc/customizer.php:759
 msgid "Reddit"
 msgstr "Reddit"
 
-#: inc/customizer.php:333 inc/customizer.php:412 inc/customizer.php:544
+#: inc/customizer.php:342 inc/customizer.php:422 inc/customizer.php:565
 msgid "Right"
 msgstr "Droite"
 
-#: inc/customizer.php:587
+#: inc/customizer.php:615
 msgid "Round"
 msgstr "Rond"
 
-#: functions.php:353
+#: functions.php:358
 msgid "RSS Feed"
 msgstr "Flux RSS"
 
-#: inc/template-tags.php:695
+#: inc/template-tags.php:701
 msgid "RSS icon"
 msgstr "Icône RSS"
 
-#: inc/customizer.php:285
+#: inc/customizer.php:294
 msgid "Sans serif"
 msgstr "Sans empattements"
 
@@ -857,7 +873,7 @@ msgstr "Sans empattements"
 msgid "Say thank you 🙏"
 msgstr "Dire merci 🙏"
 
-#: inc/customizer.php:397
+#: inc/customizer.php:406
 msgid "Search button text"
 msgstr "Texte du bouton de recherche"
 
@@ -876,23 +892,23 @@ msgid_plural "%d results found:"
 msgstr[0] "%d résultat trouvé&nbsp;:"
 msgstr[1] "%d résultats trouvés&nbsp;:"
 
-#: inc/template-tags.php:183
+#: inc/template-tags.php:189
 msgid "Search the site"
 msgstr "Rechercher sur le site"
 
-#: inc/customizer.php:286
+#: inc/customizer.php:295
 msgid "Serif"
 msgstr "Avec empattements"
 
-#: inc/customizer.php:245
+#: inc/customizer.php:254
 msgid "Sidebar Margin Width"
 msgstr "Largeur de la marge de la barre latérale"
 
-#: inc/customizer.php:231
+#: inc/customizer.php:240
 msgid "Sidebar Width"
 msgstr "Largeur de la barre latérale"
 
-#: functions.php:358 inc/customizer.php:747
+#: functions.php:363 inc/customizer.php:775
 msgid "Signal"
 msgstr "Signal"
 
@@ -903,11 +919,11 @@ msgctxt "Site footer text"
 msgid "Powered by %1$s and %2$s"
 msgstr "Propulsé par %1$s et %2$s"
 
-#: header.php:41
+#: header.php:42
 msgid "Skip to content"
 msgstr "Aller au contenu"
 
-#: inc/customizer.php:784
+#: inc/customizer.php:812
 msgid "SMS"
 msgstr "SMS"
 
@@ -915,11 +931,11 @@ msgstr "SMS"
 msgid "Social Links"
 msgstr "Liens sociaux"
 
-#: functions.php:363 inc/customizer.php:691
+#: functions.php:368 inc/customizer.php:719
 msgid "Spotify"
 msgstr "Spotify"
 
-#: inc/customizer.php:586
+#: inc/customizer.php:614
 msgid "Square"
 msgstr "Carré"
 
@@ -936,15 +952,15 @@ msgstr "Icône d’ouverture du sous-menu"
 msgid "Teddy"
 msgstr "Teddy"
 
-#: functions.php:373 inc/customizer.php:755
+#: functions.php:378 inc/customizer.php:783
 msgid "Telegram"
 msgstr "Telegram"
 
-#: inc/customizer.php:406
+#: inc/customizer.php:416
 msgid "Text Align"
 msgstr "Alignement du texte"
 
-#: inc/customizer.php:463
+#: inc/customizer.php:484
 msgid "Text of the comment link when there are no comments yet"
 msgstr "Texte du lien vers les commentaires quand il n’y en a pas encore"
 
@@ -975,22 +991,30 @@ msgctxt "The bitcoin address link."
 msgid "Address: <a href=\"%1$s\">%2$s</a>"
 msgstr "Adresse&nbsp;: <a href=\"%1$s\">%2$s</a>"
 
+#: inc/customizer.php:476
+msgid "The excerpt only (default)"
+msgstr "Seulement l’extrait (par défaut)"
+
 #: inc/customizer.php:94
 msgid "The following settings apply to the main content of posts and pages."
 msgstr ""
 "Les réglages suivants s’appliquent à tout le contenu principal des articles "
 "et des pages."
 
-#: inc/customizer.php:296
+#: inc/customizer.php:477
+msgid "The full content"
+msgstr "Le contenu complet"
+
+#: inc/customizer.php:305
 msgid "The main font size. Default: 100%."
 msgstr "La taille de la police principale. Par défaut&nbsp;: 100&nbsp;%."
 
-#: functions.php:283 inc/customizer.php:659
+#: functions.php:283 inc/customizer.php:687
 msgctxt "The name of the photography site."
 msgid "500px"
 msgstr "500px"
 
-#: inc/customizer.php:748
+#: inc/customizer.php:776
 msgid ""
 "The phone number (without spaces, country code required) you registered to "
 "use Signal. Only works with the latest versions of Signal."
@@ -999,7 +1023,7 @@ msgstr ""
 "enregistré pour utiliser Signal. Ne fonctionne qu'avec les dernières "
 "versions de Signal."
 
-#: inc/customizer.php:764
+#: inc/customizer.php:792
 msgid ""
 "The phone number (without spaces, country code required) you registered to "
 "use WhatsApp."
@@ -1008,13 +1032,13 @@ msgstr ""
 "enregistré pour utiliser WhatsApp."
 
 #. %1$s: The date. %2$s: The time.
-#: inc/template-tags.php:230
+#: inc/template-tags.php:236
 #, php-format
 msgctxt "The post date and time"
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
-#: inc/template-tags.php:127 inc/template-tags.php:159
+#: inc/template-tags.php:127 inc/template-tags.php:161
 msgctxt "The search button in the header."
 msgid "Search"
 msgstr "Recherche"
@@ -1030,7 +1054,7 @@ msgctxt "The title of the theme page."
 msgid "About Marianne"
 msgstr "À propos de Marianne"
 
-#: inc/customizer.php:692
+#: inc/customizer.php:720
 msgid "The URL of the Spotify page you want to share."
 msgstr "L’adresse URL de la page Spotify que vous souhaitez partager."
 
@@ -1063,11 +1087,11 @@ msgid "These settings only apply to the printing of the pages of your site."
 msgstr ""
 "Ces réglages s’appliquent seulement à l’impression des pages de votre site."
 
-#: inc/customizer.php:367
+#: inc/customizer.php:376
 msgid "Thin"
 msgstr "Mince"
 
-#: inc/customizer.php:274
+#: inc/customizer.php:283
 msgid ""
 "This can make the images a bit blurry. This is less efficient than "
 "regenerating the images. Default: unchecked."
@@ -1079,7 +1103,7 @@ msgstr ""
 msgid "This search did not return any results."
 msgstr "Cette recherche n’a retourné aucun résultat."
 
-#: inc/customizer.php:780
+#: inc/customizer.php:808
 msgid ""
 "This will automatically open the right application on your readers' phone "
 "when they will click on it."
@@ -1087,7 +1111,7 @@ msgstr ""
 "Cela ouvrira automatiquement la bonne application sur le téléphone de vos "
 "lecteurs quand ils cliqueront dessus."
 
-#: functions.php:368 inc/customizer.php:683
+#: functions.php:373 inc/customizer.php:711
 msgid "TikTok"
 msgstr "TikTok"
 
@@ -1095,19 +1119,19 @@ msgstr "TikTok"
 msgid "Translate"
 msgstr "Traduire"
 
-#: functions.php:378 inc/customizer.php:723
+#: functions.php:383 inc/customizer.php:751
 msgid "Twitch"
 msgstr "Twitch"
 
-#: functions.php:383 inc/customizer.php:603
+#: functions.php:388 inc/customizer.php:631
 msgid "Twitter"
 msgstr "Twitter"
 
-#: inc/customizer.php:223
+#: inc/customizer.php:232
 msgid "Two columns with a left sidebar"
 msgstr "Deux colonnes avec barre latérale gauche"
 
-#: inc/customizer.php:825
+#: inc/customizer.php:853
 msgid ""
 "URLs will be visible on print so that readers can see them and visit them. "
 "Default: checked."
@@ -1116,20 +1140,20 @@ msgstr ""
 "puissent les voir et les visiter. Par défaut&nbsp;: coché."
 
 #. %s: The short link of the post.
-#: inc/template-tags.php:761
+#: inc/template-tags.php:767
 #, php-format
 msgctxt "Use only on print."
 msgid "Available at: %s"
 msgstr "Disponible sur&nbsp;: %s"
 
 #. %1$s: The retrieve date. %1$s: The retrieve time.
-#: inc/template-tags.php:741
+#: inc/template-tags.php:747
 #, php-format
 msgctxt "Use only on print."
 msgid "Retrieved %1$s at %2$s (website time)."
 msgstr "Consulté le %1$s à %2$s (heure du site)."
 
-#: inc/customizer.php:562
+#: inc/customizer.php:583
 msgid ""
 "Useful to promote WordPress and Marianne to your readers. Default: displayed."
 msgstr ""
@@ -1147,19 +1171,19 @@ msgstr "Personnaliser"
 msgid "Version %s"
 msgstr "Version %s"
 
-#: functions.php:388 inc/customizer.php:675
+#: functions.php:393 inc/customizer.php:703
 msgid "Vimeo"
 msgstr "Vimeo"
 
-#: functions.php:393 inc/customizer.php:635
+#: functions.php:398 inc/customizer.php:663
 msgid "VK"
 msgstr "VK"
 
-#: inc/customizer.php:779
+#: inc/customizer.php:807
 msgid "What type of phone link do you want to add?"
 msgstr "Quel type de lien téléphonique voulez-vous ajouter&nbsp;?"
 
-#: functions.php:398 inc/customizer.php:763
+#: functions.php:403 inc/customizer.php:791
 msgid "WhatsApp"
 msgstr "WhatsApp"
 
@@ -1167,7 +1191,7 @@ msgstr "WhatsApp"
 msgid "Where can I download the pro/premium version of Marianne?"
 msgstr "Où puis-je télécharger la version pro/premium de Marianne&nbsp;?"
 
-#: inc/customizer.php:570
+#: inc/customizer.php:598
 msgid "Where do you want to display your social links?"
 msgstr "Où souhaitez-vous afficher vos liens sociaux&nbsp;?"
 
@@ -1193,7 +1217,7 @@ msgstr ""
 "Oui, vous pouvez&nbsp;! Ouvrez la page de <a href=\"%s\">personnalisation du "
 "thème</a>. Puis, allez dans Liens sociaux. Tout est là."
 
-#: inc/customizer.php:219
+#: inc/customizer.php:228
 msgid ""
 "You can choose to display your site in one or two columns, with a left "
 "sidebar. The sidebar will show up only if the screen is wide enough. Default:"
@@ -1203,7 +1227,7 @@ msgstr ""
 "barre latérale à gauche. La barre latérale ne s’affichera que si l’écran est "
 "assez large. Par défaut&nbsp;: une colonne."
 
-#: inc/customizer.php:398
+#: inc/customizer.php:407
 msgid ""
 "You can customize the button text. Leave blank to use the default text "
 "(Search)."
@@ -1211,7 +1235,7 @@ msgstr ""
 "Vous pouvez personnaliser le texte du bouton. Laisser vide pour utiliser le "
 "texte par défaut (Recherche)."
 
-#: inc/customizer.php:553
+#: inc/customizer.php:574
 msgid "You can write any text to add in the footer."
 msgstr ""
 "Vous pouvez écrire n’importe quel texte à ajouter dans le pied de page."
@@ -1232,84 +1256,84 @@ msgstr ""
 "m’aider à le traduire sur <a href=\"%1$s\" rel=\"external\" "
 "target=\"_blank\">GitHub</a> où un fichier .pot est disponible."
 
-#: inc/customizer.php:660
+#: inc/customizer.php:688
 msgid "Your 500px page URL."
 msgstr "L’adresse de votre page 500px."
 
-#: inc/customizer.php:628
+#: inc/customizer.php:656
 #| msgid "Your diapora* profile URL."
 msgid "Your Diaspora profile URL."
 msgstr "L’adresse de votre profil Diaspora."
 
-#: inc/customizer.php:740
+#: inc/customizer.php:768
 msgid "Your email address."
 msgstr "Votre adresse électronique."
 
-#: inc/customizer.php:620
+#: inc/customizer.php:648
 msgid "Your Facebook profile or page URL."
 msgstr "L’adresse de votre profil ou de votre page Facebook."
 
-#: inc/customizer.php:652
+#: inc/customizer.php:680
 msgid "Your Flickr page URL."
 msgstr "L’adresse de votre page Flickr."
 
-#: inc/customizer.php:708
+#: inc/customizer.php:736
 msgid "Your GitHub profile URL."
 msgstr "L’adresse de votre profil GitHub."
 
-#: inc/customizer.php:716
+#: inc/customizer.php:744
 msgid "Your GitLab profile URL."
 msgstr "L’adresse de votre profil GitLab."
 
-#: inc/customizer.php:644
+#: inc/customizer.php:672
 msgid "Your Instagram profile URL."
 msgstr "L’adresse de votre profil Instagram."
 
-#: inc/customizer.php:700
+#: inc/customizer.php:728
 msgid "Your LinkedIn profile URL."
 msgstr "L’adresse de votre profil LinkedIn."
 
-#: inc/customizer.php:612
+#: inc/customizer.php:640
 msgid "Your Mastodon profile URL."
 msgstr "L’adresse de votre profil Mastodon."
 
-#: inc/customizer.php:772
+#: inc/customizer.php:800
 msgid "Your phone number (without spaces, country code required)."
 msgstr "Votre numéro de téléphone (sans espaces, indicatif obligatoire)."
 
-#: inc/customizer.php:732
+#: inc/customizer.php:760
 msgid "Your Reddit profile URL."
 msgstr "L’adresse de votre profil Reddit."
 
-#: inc/customizer.php:756
+#: inc/customizer.php:784
 msgid "Your Telegram username."
 msgstr "Votre nom d’utilisateur Telegram."
 
-#: inc/customizer.php:684
+#: inc/customizer.php:712
 msgid "Your TikTok account URL."
 msgstr "L’adresse de votre compte TikTok."
 
-#: inc/customizer.php:724
+#: inc/customizer.php:752
 msgid "Your Twitch profile URL."
 msgstr "L’adresse de votre profil Twitch."
 
-#: inc/customizer.php:604
+#: inc/customizer.php:632
 msgid "Your Twitter @username. Do not forget the at symbol."
 msgstr "Votre nom d’utilisateur Twitter. N’oublier pas le symbole arobase."
 
-#: inc/customizer.php:676
+#: inc/customizer.php:704
 msgid "Your Vimeo page URL."
 msgstr "L’adresse de votre page Vimeo."
 
-#: inc/customizer.php:636
+#: inc/customizer.php:664
 msgid "Your VK profile URL."
 msgstr "L’adresse de votre profil VK."
 
-#: inc/customizer.php:668
+#: inc/customizer.php:696
 msgid "Your YouTube channel URL."
 msgstr "L’adresse de votre chaîne YouTube."
 
-#: functions.php:403 inc/customizer.php:667
+#: functions.php:408 inc/customizer.php:695
 msgid "YouTube"
 msgstr "YouTube"
 
