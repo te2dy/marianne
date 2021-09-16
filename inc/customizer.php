@@ -575,6 +575,13 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'type'        => 'checkbox',
 		);
 
+		$marianne_customizer_options[] = array(
+			'section' => 'marianne_footer',
+			'id'      => 'go_top',
+			'title'   => __( 'Add a button to go to the top of the page.', 'marianne' ),
+			'type'    => 'checkbox',
+		);
+
 		// Social Links.
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_social',
@@ -1052,6 +1059,7 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_footer_align'   => 'left',
 			'marianne_footer_mention' => true,
 			'marianne_footer_text'    => '',
+			'marianne_footer_go_top'  => false,
 
 			// Social Links.
 			'marianne_social_location'     => 'footer',

@@ -1,8 +1,8 @@
 /**
  * navigation.js
  *
- * Handles dropdown for the primary menu
- * and toggling it for small screens.
+ * Handles dropdown for the primary menu and toggling it for small screens;
+ * and adds a function to scroll to top of the page on click.
  *
  * Based on the work of the WordPress team in the Twenty Twenty-One Theme.
  *
@@ -66,6 +66,12 @@ function marianneAriaExpand( el ) {
 }
 
 ( function( $ ) {
+
+	// Return to the top of the page on click.
+	$( "#go-to-top" ).click( function () {
+		$( "html, body" ).animate( { scrollTop: 0 }, 200 );
+	} );
+
 	// Adds role and tabindex to menu links.
 	var menu_elements = $( "#menu-primary .menu-item" );
 
@@ -77,7 +83,7 @@ function marianneAriaExpand( el ) {
 		$( item )
 			.children( "a" )
 			.attr( "tabindex", "0" );
-	});
+	} );
 
 	/**
 	 * Change aria-expanded value on hover and focus.

@@ -63,6 +63,24 @@
 					</div>
 				<?php endif; ?>
 
+				<?php if ( false !== marianne_get_theme_mod( 'marianne_footer_go_top' ) ) : ?>
+					<div class="site-footer-block">
+						<?php
+						$marianne_svg_chevron_data   = marianne_svg_icons( 'chevron-up' );
+						$marianne_svg_chevron_shapes = $marianne_svg_chevron_data['shapes'];
+						$marianne_svg_chevron_args   = array(
+							'aria-label' => __( 'Go to top', 'marianne' ),
+							'class'      => 'feather-icons',
+							'size'       => array( 12, 12 ),
+						);
+						?>
+
+						<button id="go-to-top">
+							<?php echo marianne_esc_svg( marianne_svg( $marianne_svg_chevron_shapes, $marianne_svg_chevron_args ) . ' ' . esc_html__( 'Go to top', 'marianne' ) ); ?>
+						</button>
+					</div>
+				<?php endif; ?>
+
 				<?php wp_footer(); ?>
 			</footer>
 		</div><!-- #page -->
