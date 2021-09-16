@@ -464,8 +464,8 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'title'       => __( 'Display of the post content', 'marianne' ),
 			'type'        => 'radio',
 			'value'       => array(
-				'excerpt' => 'The excerpt only (default)',
-				'full'    => 'The full content',
+				'excerpt' => __( 'The excerpt only (default)', 'marianne' ),
+				'full'    => __( 'The full content', 'marianne' ),
 			),
 		);
 
