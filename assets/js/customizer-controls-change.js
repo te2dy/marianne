@@ -10,6 +10,21 @@
 		// The speed of animations.
 		var speed = 200;
 
+		//
+		if ( $( "#_customize-input-show_on_front-radio-page:checked" ).val() ) {
+			$( "#customize-control-static_front_page_title" ).show();
+		} else {
+			$( "#customize-control-static_front_page_title" ).hide();
+		}
+
+		$( "#customize-control-show_on_front" ).change( function () {
+			if ( $( "#_customize-input-show_on_front-radio-page:checked" ).val() ) {
+				$( "#customize-control-static_front_page_title" ).show();
+			} else {
+				$( "#customize-control-static_front_page_title" ).hide();
+			}
+		} );
+
 		// Show sidebar parameters if a sidebar is set.
 		if ( $( "#_customize-input-marianne_global_layout-radio-two-column-left-sidebar:checked" ).val() ) {
 			$( "#customize-control-marianne_global_sidebar_width" ).show();

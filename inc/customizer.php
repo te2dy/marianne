@@ -211,6 +211,15 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'live'        => true,
 		);
 
+		// Static Front Page.
+		$marianne_customizer_options[] = array(
+			'section'     => 'static_front_page',
+			'id'          => 'title',
+			'title'       => __( 'Display the title of the front page.', 'marianne' ),
+			'description' => __( 'Default: unchecked.', 'marianne' ),
+			'type'        => 'checkbox',
+		);
+
 		// Global.
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_global',
@@ -1013,6 +1022,9 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			// Colors.
 			'colors_scheme'     => 'light',
 			'colors_link_hover' => 'blue',
+
+			// Static Front Page.
+			'static_front_page_title' => false,
 
 			// Global.
 			'marianne_global_layout'         => 'one-column',

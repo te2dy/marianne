@@ -15,6 +15,10 @@
 		<header class="entry-header">
 			<?php the_title( '<h1 class="entry-title page-title">', '</h1>' ); ?>
 		</header>
+	<?php elseif ( is_front_page() && true === marianne_get_theme_mod( 'static_front_page_title' ) ) : ?>
+		<header class="entry-header">
+			<?php the_title( '<h1 class="entry-title page-title">', '</h1>' ); ?>
+		</header>
 	<?php endif; ?>
 
 	<?php
