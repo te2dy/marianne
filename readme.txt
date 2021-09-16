@@ -2,7 +2,7 @@
 
 Contributors: Teddy
 Requires at least: 5.3
-Tested up to: 5.8
+Tested up to: 5.8.1
 Requires PHP: 5.2
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -35,6 +35,14 @@ Finally, Marianne theme adapts to all formats. It keeps its characteristics
 on tablet and mobile, and it has been designed to give a good print results.
 
 == Changelog ==
+
+=== 1.7 – September 16th, 2021 ===
+Added: option to display the excerpt or the full content of posts in the loop.
+Added: button in the footer to go to the top of the page.
+Added: option to display/hide the title of the front page.
+Fixed: text of the search button bug.
+Updated: "tested up to" version number (5.8 to 5.8.1).
+Updated: translation files.
 
 === 1.6.1 – July 30th, 2021 ===
 Added: social link to Signal and Telegram.
