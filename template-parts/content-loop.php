@@ -60,9 +60,9 @@
 	<?php
 	$marianne_single_classes  = 'entry-content loop-content';
 
-	$loop_content = marianne_get_theme_mod( 'marianne_loop_content' );
+	$marianne_loop_content = marianne_get_theme_mod( 'marianne_loop_content' );
 
-	if ( 'full' !== $loop_content ) {
+	if ( 'full' !== $marianne_loop_content ) {
 		$marianne_single_classes  = 'entry-content loop-content';
 	} else {
 		$marianne_single_classes  = 'entry-content post-content';
@@ -75,7 +75,7 @@
 	}
 	?>
 	<section <?php marianne_add_class( $marianne_single_classes, false ); ?>>
-		<?php if ( 'full' !== $loop_content ) : ?>
+		<?php if ( 'full' !== $marianne_loop_content ) : ?>
 			<a href="<?php the_permalink(); ?>">
 				<?php the_excerpt(); ?>
 			</a>
