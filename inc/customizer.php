@@ -578,7 +578,7 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 		$marianne_customizer_options[] = array(
 			'section' => 'marianne_footer',
 			'id'      => 'go_top',
-			'title'   => __( 'Add a button to go to the top of the page.', 'marianne' ),
+			'title'   => __( 'Add a button to go back to the top of the page.', 'marianne' ),
 			'type'    => 'checkbox',
 		);
 

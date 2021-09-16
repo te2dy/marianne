@@ -68,7 +68,7 @@ function marianneAriaExpand( el ) {
 ( function( $ ) {
 
 	// Return to the top of the page on click.
-	$( "#go-to-top" ).click( function () {
+	$( "#back-to-top" ).click( function () {
 		$( "html, body" ).animate( { scrollTop: 0 }, 200 );
 	} );
 

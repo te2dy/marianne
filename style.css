@@ -1247,13 +1247,13 @@ iframe {
 	margin-left: 0;
 	padding-left: 0;
 }
-#go-to-top {
+#back-to-top {
 	border: 0;
 	color: var(--color-body-text-secondary);
 	padding: 0;
 }
-#go-to-top:hover,
-#go-to-top:focus {
+#back-to-top:hover,
+#back-to-top:focus {
 	color: var(--color-link-hover);
 }
 
