@@ -460,6 +460,17 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_loop',
+			'id'          => 'content',
+			'title'       => __( 'Display of the post content', 'marianne' ),
+			'type'        => 'radio',
+			'value'       => array(
+				'excerpt' => 'The excerpt only (default)',
+				'full'    => 'The full content',
+			),
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_loop',
 			'id'          => 'comment_link_text',
 			'title'       => __( 'Text of the comment link when there are no comments yet', 'marianne' ),
 			'description' => __( 'For example, "No comments" or "Write a comment". Default: empty.', 'marianne' ),
@@ -1025,6 +1036,7 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_loop_author_name_prefix' => false,
 			'marianne_loop_author_avatar'      => false,
 			'marianne_loop_post_time'          => false,
+			'marianne_loop_content'            => 'excerpt',
 			'marianne_loop_comment_link_text'  => '',
 
 			// Post Settings.
