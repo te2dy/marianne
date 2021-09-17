@@ -1250,6 +1250,7 @@ iframe {
 #back-to-top {
 	border: 0;
 	color: var(--color-body-text-secondary);
+	display: inline;
 	padding: 0;
 }
 #back-to-top:hover,
