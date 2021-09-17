@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Marianne\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-02 14:22+0000\n"
-"PO-Revision-Date: 2021-09-16 20:54+0000\n"
+"PO-Revision-Date: 2021-09-17 17:40+0000\n"
 "Last-Translator: Teddy\n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.5.3; wp-5.8\n"
+"X-Loco-Version: 2.5.3; wp-5.8.1\n"
 "X-Domain: marianne"
 
 #. %d: comment count number.
@@ -1319,7 +1319,7 @@ msgstr "L’adresse de votre profil Twitch."
 
 #: inc/customizer.php:632
 msgid "Your Twitter @username. Do not forget the at symbol."
-msgstr "Votre nom d’utilisateur Twitter. N’oublier pas le symbole arobase."
+msgstr "Votre nom d’utilisateur Twitter. N’oubliez pas le symbole arobase."
 
 #: inc/customizer.php:704
 msgid "Your Vimeo page URL."
