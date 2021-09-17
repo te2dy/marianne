@@ -576,7 +576,9 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 		$social_links = array();
 
 		foreach ( $social_supported as $social ) {
-			$social_links[ $social ] = marianne_get_theme_mod( sanitize_key( 'marianne_social_' . $social ) ) ? marianne_get_theme_mod( sanitize_key( 'marianne_social_' . $social ) ) : '';
+			if ( marianne_get_theme_mod( sanitize_key( 'marianne_social_' . $social ) ) ) {
+				$social_links[ $social ] = marianne_get_theme_mod( sanitize_key( 'marianne_social_' . $social ) );
+			}
 		}
 
 		if ( ! empty( $social_links ) ) :
