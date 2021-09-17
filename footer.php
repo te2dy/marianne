@@ -63,7 +63,7 @@
 					</div>
 				<?php endif; ?>
 
-				<?php if ( false !== marianne_get_theme_mod( 'marianne_footer_go_top' ) ) : ?>
+				<?php if ( true === marianne_get_theme_mod( 'marianne_footer_go_top' ) ) : ?>
 					<div class="site-footer-block">
 						<?php
 						$marianne_svg_chevron_data   = marianne_svg_icons( 'chevron-up' );
