@@ -36,6 +36,9 @@ on tablet and mobile, and it has been designed to give a good print results.
 
 == Changelog ==
 
+=== 1.7.1 – September 17th, 2021 ===
+Fixed: "Back to top" button bug in the Theme Customizer.
+
 === 1.7 – September 16th, 2021 ===
 Added: option to display the excerpt or the full content of posts in the loop.
 Added: button in the footer to go to the top of the page.
