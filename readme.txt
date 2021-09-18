@@ -36,6 +36,9 @@ on tablet and mobile, and it has been designed to give a good print results.
 
 == Changelog ==
 
+=== 1.8 – September 18th, 2021 ===
+- Added: custom fonts from Google Fonts.
+
 === 1.7.1 – September 17th, 2021 ===
 Fixed: "Back to top" button bug in the Theme Customizer.
 
@@ -298,3 +301,50 @@ SVG Icons:
 Admin icons: Dashicons, Copyright Wordpress
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Fonts:
+- Lato, Copyright (c) 2010-2011 by tyPoland Lukasz Dziedzic (team@latofonts.com)
+  License: SIL Open Font License, Version 1.1
+  License URI: http://scripts.sil.org/OFL
+- Lora, The Lora Project Authors (https://github.com/cyrealtype/Lora-Cyrillic), with Reserved Font Name "Lora".
+  License: SIL Open Font License, Version 1.1
+  License URI: http://scripts.sil.org/OFL
+- Merriweather, Copyright 2016 The Merriweather Project Authors (https://github.com/EbenSorkin/Merriweather), with Reserved Font Name "Merriweather".
+  License: SIL Open Font License, Version 1.1
+  License URI: http://scripts.sil.org/OFL
+- Noto Sans, Copyright 2012 Google Inc. All Rights Reserved.
+  License: SIL Open Font License, Version 1.1
+  License URI: http://scripts.sil.org/OFL
+- Noto Serif, Copyright 2012 Google Inc. All Rights Reserved.
+  License: SIL Open Font License, Version 1.1
+  License URI: http://scripts.sil.org/OFL
+- Open Sans, Digitized data copyright 2010-2011, Google Corporation.
+  License: Apache License, version 2.0
+  License URI: http://www.apache.org/licenses/LICENSE-2.0.html
+- PT Mono, Copyright © 2010 ParaType Inc., ParaType Ltd. All rights reserved.
+  License: SIL Open Font License, Version 1.1
+  License URI: http://scripts.sil.org/OFL
+- PT Sans, Copyright © 2009 ParaType Ltd. All rights reserved.
+  License: SIL Open Font License, Version 1.1
+  License URI: http://scripts.sil.org/OFL
+- PT Serif, Copyright © 2010 ParaType Ltd. All rights reserved.
+  License: SIL Open Font License, Version 1.1
+  License URI: http://scripts.sil.org/OFL
+- Roboto, Copyright 2011 Google Inc. All Rights Reserved.
+  License: Apache License, version 2.0
+  License URI: http://www.apache.org/licenses/LICENSE-2.0.html
+- Roboto Mono, Copyright 2015 The Roboto Mono Project Authors (https://github.com/googlefonts/robotomono)
+  License: Apache License, version 2.0
+  License URI: http://www.apache.org/licenses/LICENSE-2.0.html
+- Roboto Slab, Copyright 2018 The Roboto Slab Project Authors (https://github.com/googlefonts/robotoslab)
+  License: Apache License, version 2.0
+  License URI: http://www.apache.org/licenses/LICENSE-2.0.html
+- Source Code Pro, Copyright 2010, 2012 Adobe Systems Incorporated. All Rights Reserved.
+  License: SIL Open Font License, Version 1.1
+  License URI: http://scripts.sil.org/OFL
+- Source Sans Pro, Copyright 2010, 2012, 2014 Adobe Systems Incorporated (http://www.adobe.com/), with Reserved Font Name Source.
+  License: SIL Open Font License, Version 1.1
+  License URI: http://scripts.sil.org/OFL
+- Source Serif Pro, Copyright 2014, 2015, 2016 Adobe Systems Incorporated (http://www.adobe.com/), with Reserved Font Name 'Source'.
+  License: SIL Open Font License, Version 1.1
+  License URI: http://scripts.sil.org/OFL
