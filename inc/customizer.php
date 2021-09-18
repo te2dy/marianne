@@ -57,6 +57,168 @@ if ( ! function_exists( 'marianne_customizer_script_live' ) ) {
 	add_action( 'customize_preview_init', 'marianne_customizer_script_live' );
 }
 
+if ( ! function_exists( 'marianne_fonts' ) ) {
+	/**
+	 * An array of all fonts supported by Marianne.
+	 *
+	 * @return array Supported fonts.
+	 *
+	 * @since Marianne 1.8
+	 */
+	function marianne_fonts() {
+		$fonts = array(
+			'sans-serif' => array(
+				'lato' => array(
+					'name' => _x( 'Lato', 'A font name', 'marianne' ),
+					'css'  => '"Lato", sans-serif',
+					'url'  => 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;0,900;1,100;1,400;1,700;1,900',
+				),
+				'noto-sans' => array(
+					'name' => _x( 'Noto Sans', 'A font name', 'marianne' ),
+					'css'  => '"Noto Sans", sans-serif',
+					'url'  => 'https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700',
+				),
+				'open-sans' => array(
+					'name' => _x( 'Open Sans', 'A font name', 'marianne' ),
+					'css'  => '"Open Sans", sans-serif',
+					'url'  => 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400;1,700;1,800',
+				),
+				'pt-sans' => array(
+					'name' => _x( 'PT Sans', 'A font name', 'marianne' ),
+					'css'  => '"PT Sans", sans-serif',
+					'url'  => 'https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700',
+				),
+				'roboto' => array(
+					'name' => _x( 'Roboto', 'A font name', 'marianne' ),
+					'css'  => '"Roboto", sans-serif',
+					'url'  => 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;0,900;1,100;1,400;1,700;1,900',
+				),
+				'source-sans-pro' => array(
+					'name' => _x( 'Source Sans Pro', 'A font name', 'marianne' ),
+					'css'  => '"Source Sans Pro", sans-serif',
+					'url'  => 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,400;0,700;0,900;1,200;1,400;1,700;1,900',
+				),
+				'system' => array(
+					'name' => _x( 'Sans Serif', 'A font name', 'marianne' ),
+					'css'  => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
+					'url'  => 'none',
+				),
+			),
+			'serif' => array(
+				'lora' => array(
+					'name' => _x( 'Lora', 'A font name', 'marianne' ),
+					'css'  => '"Lora", serif',
+					'url'  => 'https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700',
+				),
+				'merriweather' => array(
+					'name' => _x( 'Merriweather', 'A font name', 'marianne' ),
+					'css'  => '"Merriweather", serif',
+					'url'  => 'https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900',
+				),
+				'noto-serif' => array(
+					'name' => _x( 'Noto Serif', 'A font name', 'marianne' ),
+					'css'  => '"Noto Serif", serif',
+					'url'  => 'https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700',
+				),
+				'pt-serif' => array(
+					'name' => _x( 'PT Serif', 'A font name', 'marianne' ),
+					'css'  => '"PT Serif", serif',
+					'url'  => 'https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700',
+				),
+				'roboto-slab' => array(
+					'name' => _x( 'Roboto Slab', 'A font name', 'marianne' ),
+					'css'  => '"Roboto Slab", serif',
+					'url'  => 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;400;700;900',
+				),
+				'source-serif-pro' => array(
+					'name' => _x( 'Source Serif Pro', 'A font name', 'marianne' ),
+					'css'  => '"Source Serif Pro", serif',
+					'url'  => 'https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,400;0,700;0,900;1,200;1,400;1,700;1,900',
+				),
+				'system' => array(
+					'name' => _x( 'Serif', 'A font name', 'marianne' ),
+					'css'  => '"Iowan Old Style", "Apple Garamond", Baskerville, "Times New Roman", "Droid Serif", Times, "Source Serif Pro", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+					'url'  => 'none',
+				),
+			),
+			'monospace' => array(
+				'pt-mono' => array(
+					'name' => _x( 'PT Mono', 'A font name', 'marianne' ),
+					'css'  => '"PT Mono", monospace',
+					'url'  => 'https://fonts.googleapis.com/css2?family=PT+Mono',
+				),
+				'roboto-mono' => array(
+					'name' => _x( 'Roboto Mono', 'A font name', 'marianne' ),
+					'css'  => '"Roboto Mono", monospace',
+					'url'  => 'https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700',
+				),
+				'source-code-pro' => array(
+					'name' => _x( 'Source Code Pro', 'A font name', 'marianne' ),
+					'css'  => '"Source Code Pro", monospace',
+					'url'  => 'https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,400;0,700;0,900;1,200;1,400;1,700;1,900',
+				),
+				'system' => array(
+					'name' => _x( 'Monospace', 'A font name', 'marianne' ),
+					'css'  => 'Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console", monospace',
+					'url'  => 'none',
+				),
+			),
+		);
+
+		return $fonts;
+	}
+}
+
+if ( ! function_exists( 'marianne_font' ) ) {
+	/**
+	 * Retrieves font data from fonts supported by Marianne.
+	 *
+	 * @return array The font data in an array.
+	 *
+	 * @since Marianne 1.8
+	 */
+	function marianne_font() {
+		$font_family = marianne_get_theme_mod( 'marianne_global_font_family' );
+
+		if ( 'sans-serif' === $font_family ) {
+			$font_name = marianne_get_theme_mod( 'marianne_global_fonts_sans_serif' );
+		} elseif ( 'serif' === $font_family ) {
+			$font_name = marianne_get_theme_mod( 'marianne_global_fonts_serif' );
+		} elseif ( 'monospace' === $font_family ) {
+			$font_name = marianne_get_theme_mod( 'marianne_global_fonts_monospace' );
+		} else {
+			$font_name = '';
+		}
+
+		if ( $font_name ) {
+			$marianne_fonts = marianne_fonts();
+			if ( isset( $marianne_fonts[ $font_family ][ $font_name ] ) ) {
+				return $marianne_fonts[ $font_family ][ $font_name ];
+			}
+		}
+	}
+}
+
+if ( ! function_exists( 'marianne_head_fonts' ) ) {
+	/**
+	 * Adds meta in head for Google Fonts.
+	 *
+	 * @return void
+	 */
+	function marianne_head_fonts() {
+		$marianne_font = marianne_font();
+		if ( $marianne_font['url'] && 'none' !== $marianne_font['url'] ) {
+			?>
+				<link rel="preconnect" href="https://fonts.googleapis.com">
+				<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+				<link href="<?php echo esc_url( $marianne_font['url'] ); ?>&display=swap" rel="stylesheet">
+			<?php
+		}
+	}
+
+	add_action( 'wp_head', 'marianne_head_fonts', 10 );
+}
+
 if ( ! function_exists( 'marianne_customize_register' ) ) {
 	/**
 	 * Adds various options to the theme.
@@ -288,14 +450,60 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 			'section'     => 'marianne_global',
 			'id'          => 'font_family',
 			'title'       => __( 'Font Family', 'marianne' ),
-			'description' => __( "Choose the font family you want to apply to your site. Your readers' device will render the pages with its own system font. Please note that the rendering may vary from device to device. Default: Sans serif.", 'marianne' ),
-			'type'        => 'select',
+			'description' => __( 'Default: Sans serif.', 'marianne' ),
+			'type'        => 'radio',
 			'value'       => array(
 				'sans-serif' => __( 'Sans serif', 'marianne' ),
 				'serif'      => __( 'Serif', 'marianne' ),
 				'monospace'  => __( 'Monospaced', 'marianne' ),
 			),
-			'live'        => true,
+		);
+
+		$marianne_fonts            = marianne_fonts();
+		$marianne_fonts_sans_serif = $marianne_fonts['sans-serif'];
+		$marianne_fonts_serif      = $marianne_fonts['serif'];
+		$marianne_fonts_monospace  = $marianne_fonts['monospace'];
+
+		$option_value_sans_serif = array();
+		foreach ( $marianne_fonts_sans_serif as $sanitized_name => $font_data ) {
+			$option_value_sans_serif[ $sanitized_name ] = $font_data['name'];
+		}
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_global',
+			'id'          => 'fonts_sans_serif',
+			'title'       => __( 'Sans Serif Fonts', 'marianne' ),
+			'description' => __( 'System fonts are faster to load, but their rendering may vary from one device to another. Other fonts are retrieved from the Google Fonts service. Default: System.', 'marianne' ),
+			'type'        => 'select',
+			'value'       => $option_value_sans_serif,
+		);
+
+		$option_value_serif = array();
+		foreach ( $marianne_fonts_serif as $sanitized_name => $font_data ) {
+			$option_value_serif[ $sanitized_name ] = $font_data['name'];
+		}
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_global',
+			'id'          => 'fonts_serif',
+			'title'       => __( 'Serif Fonts', 'marianne' ),
+			'description' => __( 'System fonts are faster to load, but their rendering may vary from one device to another. Other fonts are retrieved from the Google Fonts service. Default: System.', 'marianne' ),
+			'type'        => 'select',
+			'value'       => $option_value_serif,
+		);
+
+		$option_value_monospace = array();
+		foreach ( $marianne_fonts_monospace as $sanitized_name => $font_data ) {
+			$option_value_monospace[ $sanitized_name ] = $font_data['name'];
+		}
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_global',
+			'id'          => 'fonts_monospace',
+			'title'       => __( 'Monospace Fonts', 'marianne' ),
+			'description' => __( 'System fonts are faster to load, but their rendering may vary from one device to another. Other fonts are retrieved from the Google Fonts service. Default: System.', 'marianne' ),
+			'type'        => 'select',
+			'value'       => $option_value_monospace,
 		);
 
 		$marianne_customizer_options[] = array(
@@ -1027,15 +1235,18 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'static_front_page_title' => false,
 
 			// Global.
-			'marianne_global_layout'         => 'one-column',
-			'marianne_global_sidebar_width'  => 250,
-			'marianne_global_sidebar_margin' => 100,
-			'marianne_global_page_width'     => 480,
-			'marianne_global_images_expand'  => false,
-			'marianne_global_font_family'    => 'sans-serif',
-			'marianne_global_font_size'      => 100,
-			'marianne_global_font_smooth'    => false,
-			'marianne_global_text_shadow'    => false,
+			'marianne_global_layout'           => 'one-column',
+			'marianne_global_sidebar_width'    => 250,
+			'marianne_global_sidebar_margin'   => 100,
+			'marianne_global_page_width'       => 480,
+			'marianne_global_images_expand'    => false,
+			'marianne_global_font_family'      => 'sans-serif',
+			'marianne_global_fonts_sans_serif' => 'system',
+			'marianne_global_fonts_serif'      => 'system',
+			'marianne_global_fonts_monospace'  => 'system',
+			'marianne_global_font_size'        => 100,
+			'marianne_global_font_smooth'      => false,
+			'marianne_global_text_shadow'      => false,
 
 			// Header Settings.
 			'marianne_header_align'            => 'left',

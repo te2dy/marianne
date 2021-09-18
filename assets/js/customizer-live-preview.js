@@ -116,19 +116,6 @@
 			} );
 		} );
 
-		// Global > Font Family.
-		wp.customize( "marianne_global_font_family", function( value ) {
-			value.bind( function( newval ) {
-				if ( newval === 'sans-serif' ) {
-					$( "body" ).css( 'font-family', '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif' );
-				} else if ( newval === 'serif' ) {
-					$( "body" ).css( 'font-family', '"Iowan Old Style", "Apple Garamond", Baskerville, "Times New Roman", "Droid Serif", Times, "Source Serif Pro", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"' );
-				} else if ( newval === 'monospace' ) {
-					$( "body" ).css( 'font-family', 'Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console", monospace' );
-				}
-			} );
-		} );
-
 		// Global > Font Size.
 		wp.customize( "marianne_global_font_size", function( value ) {
 			value.bind( function( newval ) {

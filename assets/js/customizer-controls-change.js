@@ -10,7 +10,7 @@
 		// The speed of animations.
 		var speed = 200;
 
-		//
+		// Show the front page title displaying if a front page is set.
 		if ( $( "#_customize-input-show_on_front-radio-page:checked" ).val() ) {
 			$( "#customize-control-static_front_page_title" ).show();
 		} else {
@@ -41,6 +41,37 @@
 			} else {
 				$( "#customize-control-marianne_global_sidebar_width" ).hide( speed );
 				$( "#customize-control-marianne_global_sidebar_margin" ).hide( speed );
+			}
+		} );
+
+		// Show the right font list depending on the selected font family.
+		if ( $( "#_customize-input-marianne_global_font_family-radio-sans-serif:checked" ).val() ) {
+			$( "#customize-control-marianne_global_fonts_sans_serif" ).show();
+			$( "#customize-control-marianne_global_fonts_serif" ).hide();
+			$( "#customize-control-marianne_global_fonts_monospace" ).hide();
+		} else if ( $( "#_customize-input-marianne_global_font_family-radio-serif:checked" ).val() ) {
+			$( "#customize-control-marianne_global_fonts_sans_serif" ).hide();
+			$( "#customize-control-marianne_global_fonts_serif" ).show();
+			$( "#customize-control-marianne_global_fonts_monospace" ).hide();
+		} else if ( $( "#_customize-input-marianne_global_font_family-radio-monospace:checked" ).val() ) {
+			$( "#customize-control-marianne_global_fonts_sans_serif" ).hide();
+			$( "#customize-control-marianne_global_fonts_serif" ).hide();
+			$( "#customize-control-marianne_global_fonts_monospace" ).show();
+		}
+
+		$( "#customize-control-marianne_global_font_family" ).change( function () {
+			if ( $( "#_customize-input-marianne_global_font_family-radio-sans-serif:checked" ).val() ) {
+				$( "#customize-control-marianne_global_fonts_sans_serif" ).show();
+				$( "#customize-control-marianne_global_fonts_serif" ).hide();
+				$( "#customize-control-marianne_global_fonts_monospace" ).hide();
+			} else if ( $( "#_customize-input-marianne_global_font_family-radio-serif:checked" ).val() ) {
+				$( "#customize-control-marianne_global_fonts_sans_serif" ).hide();
+				$( "#customize-control-marianne_global_fonts_serif" ).show();
+				$( "#customize-control-marianne_global_fonts_monospace" ).hide();
+			} else if ( $( "#_customize-input-marianne_global_font_family-radio-monospace:checked" ).val() ) {
+				$( "#customize-control-marianne_global_fonts_sans_serif" ).hide();
+				$( "#customize-control-marianne_global_fonts_serif" ).hide();
+				$( "#customize-control-marianne_global_fonts_monospace" ).show();
 			}
 		} );
 

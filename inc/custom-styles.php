@@ -131,14 +131,12 @@ if ( ! function_exists( 'marianne_custom_css' ) ) {
 		// Set styles.
 		$css[':root']['--font-size'] = ( 12 * absint( marianne_get_theme_mod( 'marianne_global_font_size' ) ) / 100 ) . 'pt';
 
+		$marianne_font = marianne_font();
 
+		if ( isset( $marianne_font['css'] ) ) {
+			$marianne_font_value = $marianne_font['css'];
 
-		if ( 'sans-serif' === $marianne_font_family ) {
-			$css['body']['font-family'] = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif';
-		} elseif ( 'serif' === $marianne_font_family ) {
-			$css['body']['font-family'] = '"Iowan Old Style", "Apple Garamond", Baskerville, "Times New Roman", "Droid Serif", Times, "Source Serif Pro", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
-		} else {
-			$css['body']['font-family'] = 'Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console", monospace';
+			$css['body']['font-family'] = $marianne_font_value;
 		}
 
 		if ( 'one-column' === $marianne_layout ) {
