@@ -142,6 +142,17 @@ if ( ! function_exists( 'marianne_styles_scripts' ) ) {
 		$theme_version = wp_get_theme()->get( 'Version' );
 		$min           = marianne_minify();
 
+		/**
+		 * Use Google Fonts stylesheet when a Google Font is selected.
+		 *
+		 * @since Marianne 1.8
+		 */
+		$marianne_font = marianne_font();
+
+		if ( $marianne_font['url'] && 'none' !== $marianne_font['url'] ) {
+			wp_enqueue_style( 'marianne-fonts-google', $marianne_font['url'] . '&display=swap', array(), $theme_version );
+		}
+
 		// The main stylesheet.
 		wp_enqueue_style( 'marianne-stylesheet', get_template_directory_uri() . "/style$min.css", array(), $theme_version );
 
