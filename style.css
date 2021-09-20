@@ -1007,7 +1007,12 @@ iframe {
  */
 .entry-meta {
 	font-size: .9em;
-	margin: .5em 0;
+}
+.entry-header .entry-meta {
+	margin-bottom: .5em;
+}
+.entry-footer .entry-meta {
+	margin-top: .5em;
 }
 .entry-sticky {
 	border-left: 4px solid var(--color-border);
