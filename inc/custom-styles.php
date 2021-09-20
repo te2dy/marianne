@@ -145,8 +145,6 @@ if ( ! function_exists( 'marianne_custom_css' ) ) {
 			$css['.site-header']['margin-top']    = '4em';
 			$css['.site-header']['margin-bottom'] = '4em';
 
-			$css['#menu-primary-container']['margin'] = '2em 0';
-
 			$css['.site-content']['margin-top'] = '4em';
 
 		} elseif ( 'two-column-left-sidebar' === $marianne_layout ) {
@@ -203,8 +201,14 @@ if ( ! function_exists( 'marianne_custom_css' ) ) {
 			$media['.site-header']['margin-top']    = '2em';
 			$media['.site-header']['margin-bottom'] = '4em';
 
-			$media['#menu-primary > .menu-item']['border-left']  = '0';
-			$media['#menu-primary > .menu-item']['padding-left'] = '0';
+			$media['#menu-primary > .menu-item']['border-right']  = '1px solid var(--color-border)';
+			$media['#menu-primary > .menu-item']['border-left']   = '0';
+			$media['#menu-primary > .menu-item']['display']       = 'inline-block';
+			$media['#menu-primary > .menu-item']['margin-right']  = '.5rem';
+			$media['#menu-primary > .menu-item']['padding-right'] = '.5rem';
+			$media['#menu-primary > .menu-item']['padding-left']  = '0';
+
+			$media['#menu-primary > .menu-item:last-child']['border-right'] = '0';
 
 			$media['.site-content ']['float'] = 'none';
 

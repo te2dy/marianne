@@ -745,6 +745,9 @@ iframe {
 }
 
 /* Primary menu */
+#menu-primary-container {
+	margin: 2em 0;
+}
 #menu-primary > .menu-item {
 	margin-bottom: .5em;
 }
