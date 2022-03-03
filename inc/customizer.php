@@ -926,6 +926,14 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_social',
+			'id'          => 'apple_podcasts',
+			'title'       => __( 'Apple Podcasts', 'marianne' ),
+			'description' => __( 'An Apple Podcast URL.', 'marianne' ),
+			'type'        => 'url',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
 			'id'          => 'spotify',
 			'title'       => __( 'Spotify', 'marianne' ),
 			'description' => __( 'The URL of the Spotify page you want to share.', 'marianne' ),
@@ -934,9 +942,25 @@ if ( ! function_exists( 'marianne_customize_register' ) ) {
 
 		$marianne_customizer_options[] = array(
 			'section'     => 'marianne_social',
+			'id'          => 'soundcloud',
+			'title'       => __( 'SoundCloud', 'marianne' ),
+			'description' => __( 'Your SoundCloud profile URL.', 'marianne' ),
+			'type'        => 'url',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
 			'id'          => 'linkedin',
 			'title'       => __( 'LinkedIn', 'marianne' ),
 			'description' => __( 'Your LinkedIn profile URL.', 'marianne' ),
+			'type'        => 'url',
+		);
+
+		$marianne_customizer_options[] = array(
+			'section'     => 'marianne_social',
+			'id'          => 'medium',
+			'title'       => __( 'Medium', 'marianne' ),
+			'description' => __( 'Your Medium profile URL.', 'marianne' ),
 			'type'        => 'url',
 		);
 
@@ -1288,34 +1312,37 @@ if ( ! function_exists( 'marianne_options_default' ) ) {
 			'marianne_footer_go_top'  => false,
 
 			// Social Links.
-			'marianne_social_location'     => 'footer',
-			'marianne_social_style'        => 'square',
-			'marianne_social_target_blank' => false,
-			'marianne_social_twitter'      => '',
-			'marianne_social_mastodon'     => '',
-			'marianne_social_facebook'     => '',
-			'marianne_social_diaspora'     => '',
-			'marianne_social_instagram'    => '',
-			'marianne_social_linkedin'     => '',
-			'marianne_social_500px'        => '',
-			'marianne_social_flickr'       => '',
-			'marianne_social_youtube'      => '',
-			'marianne_social_vimeo'        => '',
-			'marianne_social_tiktok'       => '',
-			'marianne_social_spotify'      => '',
-			'marianne_social_email'        => '',
-			'marianne_social_github'       => '',
-			'marianne_social_gitlab'       => '',
-			'marianne_social_link'         => '',
-			'marianne_social_signal'       => '',
-			'marianne_social_telegram'     => '',
-			'marianne_social_whatsapp'     => '',
-			'marianne_social_phone'        => '',
-			'marianne_social_phone_type'   => 'call',
-			'marianne_social_rss'          => false,
-			'marianne_social_twitch'       => '',
-			'marianne_social_reddit'       => '',
-			'marianne_social_vk'           => '',
+			'marianne_social_location'       => 'footer',
+			'marianne_social_style'          => 'square',
+			'marianne_social_target_blank'   => false,
+			'marianne_social_twitter'        => '',
+			'marianne_social_mastodon'       => '',
+			'marianne_social_facebook'       => '',
+			'marianne_social_diaspora'       => '',
+			'marianne_social_instagram'      => '',
+			'marianne_social_linkedin'       => '',
+			'marianne_social_medium'         => '',
+			'marianne_social_500px'          => '',
+			'marianne_social_flickr'         => '',
+			'marianne_social_youtube'        => '',
+			'marianne_social_vimeo'          => '',
+			'marianne_social_tiktok'         => '',
+			'marianne_social_spotify'        => '',
+			'marianne_social_apple_podcasts' => '',
+			'marianne_social_soundcloud'     => '',
+			'marianne_social_email'          => '',
+			'marianne_social_github'         => '',
+			'marianne_social_gitlab'         => '',
+			'marianne_social_link'           => '',
+			'marianne_social_signal'         => '',
+			'marianne_social_telegram'       => '',
+			'marianne_social_whatsapp'       => '',
+			'marianne_social_phone'          => '',
+			'marianne_social_phone_type'     => 'call',
+			'marianne_social_rss'            => false,
+			'marianne_social_twitch'         => '',
+			'marianne_social_reddit'         => '',
+			'marianne_social_vk'             => '',
 
 			// Print Settings.
 			'marianne_print_comments_hide' => true,

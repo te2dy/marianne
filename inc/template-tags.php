@@ -570,7 +570,7 @@ if ( ! function_exists( 'marianne_social_link' ) ) {
 
 		$container_class .= ' site-social-' . marianne_get_theme_mod( 'marianne_social_style' );
 
-		$social_supported = array( 'twitter', 'mastodon', 'facebook', 'diaspora', 'vk', 'instagram', 'flickr', '500px', 'youtube', 'vimeo', 'tiktok', 'spotify', 'linkedin', 'github', 'gitlab', 'twitch', 'reddit', 'email', 'signal', 'telegram', 'whatsapp', 'phone', 'link', 'rss' );
+		$social_supported = array( 'twitter', 'mastodon', 'facebook', 'diaspora', 'vk', 'instagram', 'flickr', '500px', 'youtube', 'vimeo', 'tiktok', 'apple_podcasts', 'spotify', 'soundcloud', 'linkedin', 'medium', 'github', 'gitlab', 'twitch', 'reddit', 'email', 'signal', 'telegram', 'whatsapp', 'phone', 'link', 'rss' );
 
 		// Puts set social links in an array.
 		$social_links = array();
