@@ -1,5 +1,7 @@
 # Thème Marianne pour WordPress
 
+**⚠️ Ce thème n’est plus maintenu ⚠️**
+
 - 🇬🇧 [English](/.github/README.md)
 - 🇫🇷 **Français**
 
