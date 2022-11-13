@@ -1,5 +1,7 @@
 # Marianne Theme for WordPress
 
+**⚠️ This theme is no longer maintained ⚠️**
+
 - 🇬🇧 **English**
 - 🇫🇷 [Français](/.github/LISEZMOI.md)
 
